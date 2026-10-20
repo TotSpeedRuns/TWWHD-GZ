@@ -1,0 +1,17 @@
+local-assets/
+build/
+dist/
+__pycache__/
+*.pyc
+*.o
+*.elf
+*.rpx
+*.wuhb
+*.sav
+*.wua
+*.wud
+*.wux
+*.key
+keys/
+.env
+.env.*

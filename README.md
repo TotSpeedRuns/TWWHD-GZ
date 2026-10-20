@@ -1,0 +1,44 @@
+# TWWHD-GZ
+
+Practice tools for The Legend of Zelda: The Wind Waker HD (European base game,
+version 0), with route checkpoints, warps, inventory tools and trick trainers.
+
+This repository contains the v125 runtime source, native patcher, Wii U GZ Setup
+source and the current experimental save-state components. **Save states remain
+under development.** Actor recreation, resource ownership, transitions and durable
+slots still have gaps; this is not a claim of full-game coverage.
+
+## Build the native runtime
+
+You need Python 3.10+, Pillow, devkitPPC, your own unmodified EUR v0 `code/cking.rpx`,
+and the practice RPX matching this source revision for its local-only artwork.
+No original game executable, artwork, saves, keys or SDK binaries are distributed
+here. The accepted hashes are recorded in `runtime/local-assets.json`.
+
+```sh
+python -m pip install -r requirements.txt
+python tools/local_assets.py --practice-rpx /path/to/practice/code/cking.rpx
+python build.py --original-rpx /path/to/original/code/cking.rpx --toolchain /path/to/devkitPPC/bin
+```
+
+Outputs go into a new `build/` directory; the original executable is read only.
+The initial source export was rebuilt with devkitPPC and produced exactly the
+shipped v125 RPX and ELF. See [build status](docs/BUILD.md).
+
+## Repository contents
+
+- `runtime/`: maintained assembly template, trainer and captured Morth setup code.
+- `patcher/`: local RPX and extracted-folder patching code.
+- `setup/`: Wii U installer source, vendor sources and notices.
+- `experiments/save-states/`: unfinished integration components, separate from v125.
+- `tools/`: asset separation, build conversion, source audit and publishing tools.
+
+## Source updates
+
+Completed revisions use the [publication command](CONTRIBUTING.md) to refresh this
+curated tree, run its checks, commit and push to this repository. This happens as
+part of preparing a revision; there is no timed task or scheduled chat message.
+Game assets, saves, keys, local paths and diagnostics stay outside publication.
+
+Original project code is MIT licensed. Third-party notices and license scopes are
+listed in [NOTICE.md](NOTICE.md). This is an independent fan practice project.

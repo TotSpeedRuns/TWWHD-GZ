@@ -1,0 +1,9 @@
+{
+  "revision": "v125",
+  "source_sha256": "5a6aa8974b8524a76fd3d485b5b15084966d637fb8f01744e17429109d5e4f33",
+  "ELF_sha256": "b3b6e1ad6227083519d232407c650d38560c75dbe3ff6e51d92c43e6069776ae",
+  "RPX_sha256": "3d177054288b3a695c3f2feba8f62ffbca2b9912f51a58098a43964398ef90b5",
+  "asset_blocks_omitted": 814,
+  "asset_bytes_omitted": 1108068,
+  "hardware_acceptance": "See release notes; compiled checks do not establish full-game correctness."
+}

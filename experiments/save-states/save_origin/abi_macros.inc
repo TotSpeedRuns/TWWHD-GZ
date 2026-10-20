@@ -1,0 +1,54 @@
+/* Offline branch-entry bodies. No native patch/stage operation is performed. */
+.section .text,"ax",@progbits
+.macro SAVE_NATIVE
+ stwu 1,-192(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ stw 14,108(1)
+ mfcr 0
+ stw 0,112(1)
+ mflr 0
+ stw 0,116(1)
+ mfctr 0
+ stw 0,120(1)
+ mfxer 0
+ stw 0,124(1)
+ addi 0,1,192
+ stw 0,128(1)
+ mr 14,1
+ rlwinm 1,1,0,0,27
+ stw 0,0(1)
+.endm
+.macro RESTORE_NATIVE
+ mr 1,14
+ lwz 0,112(1)
+ mtcrf 255,0
+ lwz 0,116(1)
+ mtlr 0
+ lwz 0,120(1)
+ mtctr 0
+ lwz 0,124(1)
+ mtxer 0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 14,108(1)
+ lwz 0,64(1)
+ lwz 1,128(1)
+.endm

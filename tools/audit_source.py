@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse, re, subprocess
 ROOT=Path(__file__).resolve().parents[1]
-DIRECTORIES={'runtime','tools','patcher','setup','experiments','docs','tests','.github'}
+DIRECTORIES={'runtime','tools','patcher','creator','setup','experiments','docs','tests','.github'}
 ROOT_FILES={'.gitignore','LICENSE','README.md','NOTICE.md','requirements.txt','build.py','CONTRIBUTING.md'}
 SUFFIXES={'.py','.c','.cpp','.h','.hpp','.inc','.s','.asm','.in','.json','.md','.txt','.yml','.yaml','.ld'}
 def files(root=ROOT):

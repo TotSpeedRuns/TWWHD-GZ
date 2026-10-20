@@ -11,8 +11,13 @@ source export. Local game artwork is required at build time.
 The shipped v125 candidate passed 346 scoped compiled-code checks in the local
 development harness. That larger harness has not yet been made portable here.
 The tests in this repository cover the source/asset publication boundary only.
-The A-button recovery in v125 still has a reported console failure under
-investigation; the reproducible build does not imply that bug is fixed.
+The v125 console failure was traced to queued actions not being dispatched.
+The v126 candidate adds 298 missing C-object address fixups and rejects omitted
+linked fixups during packaging. Twelve additional moved-DATA PPC checks pass;
+the matching runtime RPX is
+`52f36256f3e89c3f0bce2e0a8416477e61e2ecde27ae408258593bdfc3785918`.
+The compiled ELF and gameplay data are unchanged from v125. Console acceptance
+is still pending; this does not claim the user's failure is hardware-verified fixed.
 
 ## GZ Setup and desktop patcher
 

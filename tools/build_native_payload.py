@@ -7,6 +7,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--build-dir',default='build')
 parser.add_argument('--output',default='build/payload')
 parser.add_argument('--source',default='build/patch_wwhdgz.asm')
+parser.add_argument('--objects',nargs='+',default=['runtime.o','imports.o'],help='Every linked input object that contributes payload code/data')
 args=parser.parse_args()
 root=Path(args.build_dir);out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
 source_path=Path(args.source)
@@ -31,7 +32,7 @@ for name in ('_gz_native_action_copy_control','_gz_native_action_copy_storage','
  symbol=linked_symbols[name];section=linked.sections[symbol['section']]
  if section.header[2]&3!=3 or section.header[2]&4:raise ValueError('Font state targets protected TEXT: '+name)
 imports=[]
-for obj in ('runtime.o','imports.o'):
+for obj in args.objects:
  elf=Elf((root/obj).read_bytes());syms=elf.symbols();by_index={s['index']:s for s in syms}
  for reloc_section in elf.sections:
   if reloc_section.kind!=4:continue
@@ -55,7 +56,14 @@ for hook in json.loads((root/'hooks.json').read_text()):
  after=destination if instruction=='.int' else relative_branch(address,destination,instruction in ('bl','bla'))
  hooks.append(dict(address=address,before=before,after=after,destination=target))
 for name,s in [('text',text),('data',data)]:(out/(name+'.bin')).write_bytes(s.data)
-address_relocations=collect_address_relocations(linked,[Elf((root/name).read_bytes()) for name in ('runtime.o','imports.o')],text,data)
+address_relocations=collect_address_relocations(linked,[Elf((root/name).read_bytes()) for name in args.objects],text,data)
+expected_addresses=set()
+for section in linked.sections:
+ if section.kind!=4 or not linked.sections[section.header[7]].header[2]&2:continue
+ for offset,info,addend in struct.iter_unpack('>IIi',section.data):
+  if info&255 in (1,4,6):expected_addresses.add((offset,info&255))
+actual_addresses={(r['address'],r['kind'])for r in address_relocations}
+if expected_addresses!=actual_addresses:raise ValueError('Linked address relocations are missing: pass every linked input via --objects')
 source_assembly=source_path.read_text()
 record_region=source_assembly.split('_gz_route_records:',1)[1].split('_gz_checkpoint_name0:',1)[0]
 checkpoint_count=len(re.findall(r'^\.int ',record_region,re.M))

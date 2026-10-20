@@ -3,7 +3,7 @@
 Practice tools for The Legend of Zelda: The Wind Waker HD (European base game,
 version 0), with route checkpoints, warps, inventory tools and trick trainers.
 
-This repository contains the v125 runtime source, native patcher, Wii U GZ Setup
+This repository contains the current runtime source, native patcher, Wii U GZ Setup
 source and the current experimental save-state components. **Save states remain
 under development.** Actor recreation, resource ownership, transitions and durable
 slots still have gaps; this is not a claim of full-game coverage.
@@ -22,13 +22,14 @@ python build.py --original-rpx /path/to/original/code/cking.rpx --toolchain /pat
 ```
 
 Outputs go into a new `build/` directory; the original executable is read only.
-The initial source export was rebuilt with devkitPPC and produced exactly the
-shipped v125 RPX and ELF. See [build status](docs/BUILD.md).
+The source export is rebuilt with devkitPPC and compared against the matching
+local candidate. See [build status](docs/BUILD.md).
 
 ## Repository contents
 
 - `runtime/`: maintained assembly template, trainer and captured Morth setup code.
 - `patcher/`: local RPX and extracted-folder patching code.
+- `creator/`: Memfile Creator 0.6 GUI, read-only Cemu/Wii U adapters and capture core.
 - `setup/`: Wii U installer source, vendor sources and notices.
 - `experiments/save-states/`: unfinished integration components, separate from v125.
 - `tools/`: asset separation, build conversion, source audit and publishing tools.

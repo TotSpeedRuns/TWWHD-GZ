@@ -37,7 +37,7 @@ def main():
     for name,path in [('runtime',asm),('imports',ROOT/'runtime/imports.s')]:run([tool('gcc'),'-mcpu=750','-c','-x','assembler',path,'-o',dest/(name+'.o')])
     for name in ('morth_trick','morth_setup','morth_setup_data'):run([tool('gcc'),*FLAGS,'-c',ROOT/'runtime'/(name+'.c'),'-o',dest/(name+'.o')])
     run([tool('ld'),'--emit-relocs','-T',dest/'runtime.ld',*[dest/(n+'.o')for n in ('runtime','morth_trick','morth_setup','morth_setup_data','imports')],'-o',dest/'runtime.elf'])
-    run([sys.executable,ROOT/'tools/build_native_payload.py','--source',source,'--build-dir',dest,'--output',dest/'payload'])
+    run([sys.executable,ROOT/'tools/build_native_payload.py','--source',source,'--build-dir',dest,'--output',dest/'payload','--objects','runtime.o','imports.o','morth_trick.o','morth_setup.o','morth_setup_data.o'])
     patched,proof=patch_rpx(raw,dest/'payload');(dest/'cking.rpx').write_bytes(patched)
     if original.read_bytes()!=raw:raise AssertionError('Input game changed')
     proof.update(original_sha256=digest,RPX_sha256=hashlib.sha256(patched).hexdigest(),ELF_sha256=hashlib.sha256((dest/'runtime.elf').read_bytes()).hexdigest(),input_unchanged=True)

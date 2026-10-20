@@ -38,7 +38,12 @@ def export(candidate,revision):
     # No workspace paths or diagnostic metadata are copied into this export.
     target=ROOT/'runtime';(target/'patch_wwhdgz.asm.in').write_text(text)
     for name in ('trainer.c','trainer.asm','songs.asm','morth_trick.c','morth_setup.c','morth_setup.h','morth_setup_data.c'):shutil.copy2(candidate/name,target/name)
-    meta=dict(format='TWWHD-GZ-local-assets/1',source_revision=revision,accepted_practice_RPX_sha256=[sha(rpx.read_bytes())],assets=assets)
+    accepted=[sha(rpx.read_bytes())]
+    prior=target/'local-assets.json'
+    if prior.exists():
+        old=json.loads(prior.read_text())
+        if old.get('assets')==assets:accepted=list(dict.fromkeys(accepted+old['accepted_practice_RPX_sha256']))
+    meta=dict(format='TWWHD-GZ-local-assets/1',source_revision=revision,accepted_practice_RPX_sha256=accepted,assets=assets)
     (target/'local-assets.json').write_text(json.dumps(meta,indent=2)+'\n')
     public=dict(revision=revision,source_sha256=sha(source.read_bytes()),ELF_sha256=sha(linked.read_bytes()),RPX_sha256=sha(rpx.read_bytes()),asset_blocks_omitted=len(assets),asset_bytes_omitted=sum(a['bytes']for a in assets),hardware_acceptance='See release notes; compiled checks do not establish full-game correctness.')
     (ROOT/'docs/revision.json').write_text(json.dumps(public,indent=2)+'\n')

@@ -1,7 +1,8 @@
 {
   "format": "TWWHD-GZ-local-assets/1",
-  "source_revision": "v125",
+  "source_revision": "v126",
   "accepted_practice_RPX_sha256": [
+    "52f36256f3e89c3f0bce2e0a8416477e61e2ecde27ae408258593bdfc3785918",
     "3d177054288b3a695c3f2feba8f62ffbca2b9912f51a58098a43964398ef90b5"
   ],
   "assets": [

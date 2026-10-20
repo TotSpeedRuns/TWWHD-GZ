@@ -59,6 +59,6 @@ bool patchExecutable(const std::string& input,const std::string& recipePath){
  for(size_t i=count-2;i<count;++i){auto p=64+i*40;if(word(out,p+16)+word(out,p+20)>=4096)throw std::runtime_error("Native loader metadata is outside initial read buffer");}
  for(size_t i=0;i<count;++i){size_t p=64+i*40;auto kind=word(out,p+4),off=word(out,p+16),len=word(out,p+20);uint32_t value=0;if(i!=crcIndex&&kind!=0&&kind!=8){if(off>out.size()||len>out.size()-off)throw std::runtime_error("Output section invalid");value=crc32(0,out.data()+off,len);}if(value!=word(out,ct+4*i))throw std::runtime_error("Patched section CRC mismatch");}
  SHA256 outputHash;outputHash.add(out.data(),out.size());
- if(hashHex(outputHash.getHash())!="24cf85b01722444e3303f14821b1856400120f4b5e6fef66eef3ee9bfe0cbc4b")throw std::runtime_error("Output RPX hash mismatch: "+hashHex(outputHash.getHash()));
+ if(hashHex(outputHash.getHash())!="5029e0daf695bf34baa49df072469a0d1889c0391f64c9578a7f9d3192c840da")throw std::runtime_error("Output RPX hash mismatch: "+hashHex(outputHash.getHash()));
  writeFile(input,out);if(fileHash(input)!=hashHex(outputHash.getHash()))throw std::runtime_error("RPX read-back failed");return true;
 }

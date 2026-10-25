@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R595",
+  "revision": "R612",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -120,8 +120,43 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "905b516b60bc6e12a23f202221537bb87f7f082c0af49a010e9d8d1224976b7c",
-      "bytes": 10069
+      "sha256": "aafe084dfdbaca8c27ebe19389d2752e51989116f733fbb395ee18d2717760d9",
+      "bytes": 13542
+    },
+    {
+      "path": "experiments/maintained-components/save_state/process.h",
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc",
+      "bytes": 2597
+    },
+    {
+      "path": "experiments/maintained-components/save_state/player_role_relation.c",
+      "sha256": "bba45879934cea2c4121073c07bf93bda66a00ba165282cd8521b07d018206a9",
+      "bytes": 1882
+    },
+    {
+      "path": "experiments/maintained-components/save_state/player_core.c",
+      "sha256": "6a5260501fc66f86c1d7d432b43640e0da9fa29481208afe2071f44681604498",
+      "bytes": 22999
+    },
+    {
+      "path": "experiments/maintained-components/save_state/camera_process_identity.c",
+      "sha256": "f793e0a500c8cfb46dfd1f7c1355c4f9b1354163913478e1e542fac0629171e4",
+      "bytes": 2337
+    },
+    {
+      "path": "experiments/maintained-components/save_state/camera_replay.c",
+      "sha256": "fa9e12cd61dad8809826404b126c7c8f58841b4df62fa8765051ca9cdda0e8cf",
+      "bytes": 22694
+    },
+    {
+      "path": "experiments/maintained-components/save_state/light_replay.c",
+      "sha256": "5d5353ab5c548a10fe967706040d050a94585badfca0f3f6bb52c60854ff41b4",
+      "bytes": 10271
+    },
+    {
+      "path": "experiments/maintained-components/save_state/foliage_manager_topology.c",
+      "sha256": "be5bfc6b19b51bbcbe95afb142732c8fe32b4e5fc7ca3b0d64828f568e2be767",
+      "bytes": 6377
     }
   ],
   "excludes": [

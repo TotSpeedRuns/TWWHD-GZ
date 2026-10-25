@@ -5,6 +5,69 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Scene-rebirth preparation (R604) and foliage topology plan (R612)
+
+The player and camera participants keep immutable source identity separate
+from current native roots, complete observed process extents, fresh heaps
+and resources. A newly created player/camera is not treated as the previous
+allocation merely because its address is reused. Source archives are not
+rewritten to match the current process IDs.
+
+`save_state/camera_process_identity.c` adds a versioned96-byte CPI1 process
+audit in unused padding at1760 of the existing2048-byte camera bank. Its
+numeric validator grants no native lifetime or replay authority. Legacy
+records without this evidence retain the same-camera requirement. The
+current camera is independently discovered from the native camera table;
+its source Link reference is rebound to the current native player role.
+The typed inverse still targets the current camera's sealed before-image.
+
+The private integration calls the capture audit from our authored
+`_gz_camera_read`, after its existing UI validation and before its valid
+marker. This is an internal callback, not an additional retail-game hook:
+
+```asm
+mr 3,31
+bl _gz_cct_capture_identity
+cmpwi 3,0
+bne _gz_camera_read_bad
+```
+
+`save_state/light_replay.c` can bind a genuinely empty light bank after a
+scene rebirth using the already prepared player and exact current token/pin.
+It still enumerates the current actor queue; an added light cannot pass as
+an empty bank. Nonempty light lifetimes need separate mapping.
+
+Validation:25 emitted-code camera format/relation checks and790 integrated
+layout/relocation checks pass. One actual Cemu case passed ordinary capture
+and restore, then native drowning return recreated both player and camera.
+Camera, player, face and empty-light preparation all passed from the original
+unchanged source. Whole post-void restoration still refused at foliage root
+identity; no successful whole restore is claimed. Two subsequent native
+placed-bomb explosion/recreation cycles passed with new process IDs, the
+saved fuse and pose, and no scene loading. Wii U testing is pending.
+
+`save_state/foliage_manager_topology.c` is a separate pure serialized-data
+planner. It does not read native objects or grant ownership. It maps the
+registered slot masks and checks placement, internal linked-list indices,
+bounded room membership and duplicates. Unregistered slot payloads remain
+opaque and must not be replayed. Nonzero unregistered state is refused.
+Source and current buffers are never modified.
+
+Matching room membership with changed order returns1607, requiring an
+explicit owned pointer-order writer and inverse before publication. It is
+not an ordinary READY result. In paired actual pre/post-void captures, the
+planner identifies1178 registered entries across four relocated managers;
+one59-member tree-room list requires order replay. It passed22 emitted-code
+metadata cases, including invalid links, cycles, duplicate members, stale
+pointer bases, opaque unused positions and unregistered-state rejection.
+It is not yet integrated into native foliage restoration. Separate plant
+actors and renderer/resource/lifetime closure remain required.
+
+These are reviewed components, not a replacement integrated-runtime export
+or a claim of complete cross-area/death/void restoration. The reproducible
+full build export remains v126. No new native hook, archive-size growth or
+extra heap reservation is introduced by the R604 camera metadata change.
+
 ## Frame advance (R595)
 
 `frame_advance.c` adds an opt-in Frame Advance page. D-pad Down pauses or

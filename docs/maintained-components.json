@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R638",
+  "revision": "R650",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "7e5e21b994457392dae3172ca4e3740b36ba31a371814973f8b21f8a32573dba",
-      "bytes": 20448
+      "sha256": "93ce3ac3e8d11315c26f9988ba624c3b2f7f8597e6528e4224fc7d16f3547dcf",
+      "bytes": 23018
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -195,8 +195,8 @@
     },
     {
       "path": "experiments/maintained-components/save_state/rito_service_prepare.c",
-      "sha256": "7b1939cd4797b8228405de3d14752db987db6cbdbc9107b2b6faa411a9ea7763",
-      "bytes": 19344
+      "sha256": "480756cd6a690a0be4d8eca501c27dfd2b655a97b5bb4d4a418d73b29ded24f4",
+      "bytes": 19380
     },
     {
       "path": "experiments/maintained-components/save_state/rito_body_source.c",
@@ -220,8 +220,8 @@
     },
     {
       "path": "experiments/maintained-components/save_state/rito_physics_state.c",
-      "sha256": "506b0713f3e85c506694545df8bc4e307cb284afefe85c9e650f7db114e5a168",
-      "bytes": 8496
+      "sha256": "fc8044eb947871a87abd85c301398c4856dc25cff4bb33945ea8aba71ea467a8",
+      "bytes": 10913
     },
     {
       "path": "experiments/maintained-components/save_state/rito_transaction.c",
@@ -237,6 +237,26 @@
       "path": "experiments/maintained-components/save_state/rito_result_state.c",
       "sha256": "0ba9002519ce8d3a56c19f45273f75d67d9f3c0e690883b7a8095e2552b75238",
       "bytes": 7716
+    },
+    {
+      "path": "experiments/maintained-components/save_state/rito_wall_metadata.c",
+      "sha256": "188e9565548471c615ba02b73afc3a0c0eba3c3c553bd6c2e07cc120250e063f",
+      "bytes": 840
+    },
+    {
+      "path": "experiments/maintained-components/save_state/rito_bound_physics.c",
+      "sha256": "cc7e8d3353644e7e63eafc476aa9a3a52f58e7051bc59ae44e27ca40cfb724a0",
+      "bytes": 2750
+    },
+    {
+      "path": "experiments/maintained-components/save_state/rito_background_target.c",
+      "sha256": "8664bcd5c4a351da353973dce9e15268562ffb51c91166b5f2ba8b6d254fa531",
+      "bytes": 5796
+    },
+    {
+      "path": "experiments/maintained-components/save_state/background_owner_relation.c",
+      "sha256": "cf95673a3e313f32f9cf4c6671cf21b075c999b817ea825020be24361913a8fd",
+      "bytes": 1922
     }
   ],
   "excludes": [

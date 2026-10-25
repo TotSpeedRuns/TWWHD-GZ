@@ -5,7 +5,50 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
-## Current Rito placement and Tetra dependency preparation (R638)
+## Current logical collision-background projection (R650)
+
+`rito_physics_state.c` records a versioned wall-query tuple in the existing
+28 padding bytes of its832-byte packet. This distinguishes an explicitly
+empty constructor cache from missing historical metadata. Legacy RPH1 keeps
+its original strict path; missing data never gains rebirth admission.
+
+`background_owner_relation.c` finds immutable placement candidates without
+following historical pointers. The native service separately rediscovers the
+current actor queue, process generation/class and BG registration. It requires
+a unique current owner and the exact collision resource signature; wall
+queries additionally retain exact resource, vtable and triangle count checks.
+Relocated or changed geometry remains unsupported by this exact contract.
+
+`rito_background_target.c` projects only a private target copy. Original source
+PID/generation/frame fields and the archived snapshot remain unchanged. The
+typed writer covers four polygon query triples and the working wall-cache
+triple, plus existing named numeric members. Vtables, arbitrary pointers and
+self links are not written. The independent current before-image supports
+source-free undo. Packet, private-region and reserved-heap sizes do not grow.
+
+Validation:32 emitted pure placement-relation cases and26 packet-format cases
+pass without native API doubles. Independent live observations found unique
+recreated island and raft owners with unchanged resources. In the real native
+drowning test, the Rito's four controllers, behavior, model, texture, Tetra
+dependency and collision plan all prepared successfully. Full restoration
+still refuses1182 at the later contact-cohort binding, before forward mutation.
+Reborn collision forward/undo is consequently not claimed tested end-to-end.
+
+The exact R650 image passed two ordinary placed-bomb expiry/recreation cycles,
+with new native actor IDs, exact saved fuse57 and position, no room/route load
+and unchanged native save hashes.811 integrated image/layout checks pass.
+The public edition changes only the four-byte Creator drawing entry. Wii U
+verification and full-game coverage remain incomplete.
+
+The user separately approved the previously blocked foliage late-failure
+diagnostic. Genuine final-service failure reached native rollback; internal
+full-manager/Link/camera before-image checks passed, the owner released, and
+a normal retry succeeded without a room load. A separate unpaused room-order
+read taken outside the held native frame differed, so independent external
+order acceptance remains unresolved. No diagnostic admission is enabled in
+the production R650 image.
+
+## Historical Rito placement and Tetra preparation (R638)
 
 `save_state/rito_service_prepare.c` independently rediscovers a matching Rito
 from the current native actor queue under the existing real NSV heap/source
@@ -73,10 +116,9 @@ refused1433 at the recreated Rito process join, before forward mutation.
 Two matched original-save bomb expiry/recreation cycles then passed with the
 saved fuse59, exact pose and no room loading. Native save hashes stayed intact.
 
-Exact native undo acceptance for the new order writer remains pending. The
-proposed late-failure diagnostic was rejected by automatic approval review
-because its fixture would write an internal fault-control ticket; it has not
-run. Ordinary production code keeps diagnostic fault admission disabled.
+Independent external undo acceptance for the new order writer remains
+pending. The subsequently user-approved native late-failure test is described
+above. Ordinary production code keeps diagnostic fault admission disabled.
 
 The broader tests retain two additional failures: Northern Fairy Island has
 an unimplemented warship profile179 during capture; an Outset travel/bomb

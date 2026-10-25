@@ -176,6 +176,7 @@ static u32 rri_prepare_child(RtvHeader*h,RtvRow*out,const RtbRow*source){
  h->reserved[6]=saved_pid;h->reserved[7]=current_pid;h->reserved[8]=rri_edge_word(out,3);return 0;
 }
 
+#include "rito_background_target.c"
 #include "rito_transaction.c"
 static u32 rtv_archive_same(const ErnResource*a,const ErnResource*b){return a->control==b->control&&a->node==b->node&&a->info==b->info&&a->table==b->table&&
  a->count==b->count&&a->container==b->container&&a->header==b->header&&a->header_bytes==b->header_bytes;}

@@ -27,5 +27,7 @@ def main():
         remote=run(['git','remote','get-url','origin'],capture_output=True,text=True).stdout.strip()
         if remote!='https://github.com/TotSpeedRuns/TWWHD-GZ.git':raise ValueError('Unexpected publication destination')
         run(['git','push','--set-upstream','origin','main'])
-    print('Source publication checks complete for',revision)
+    print('Source publication checks complete. Integrated build export:',revision)
+    components=ROOT/'docs/maintained-components.json'
+    if components.exists():print('Maintained component snapshot:',json.loads(components.read_text())['revision'])
 if __name__=='__main__':main()

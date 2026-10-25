@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R555",
+  "revision": "R559",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -32,6 +32,21 @@
       "path": "experiments/maintained-components/roll_clip_detector.c",
       "sha256": "fe7124eda9522dd58e2c23c09c6a1a199ab3a94613a6fe39078a7c6b3aa5e0ec",
       "bytes": 15352
+    },
+    {
+      "path": "experiments/maintained-components/particle_guard.c",
+      "sha256": "0976bf35380606d6340a4831722140436889ef3bab244e58e4362186e5806fec",
+      "bytes": 17224
+    },
+    {
+      "path": "experiments/maintained-components/particle_guard.h",
+      "sha256": "09b344bceefde5fd6d0281d752343d97075d036eaa25b8e64f46d52b0f2c994a",
+      "bytes": 1125
+    },
+    {
+      "path": "experiments/maintained-components/lite_hud.s",
+      "sha256": "0bc09b78dd538f6813b3c2b6534d0724a9361373e6f1ade6562f64172e1b1736",
+      "bytes": 2421
     }
   ],
   "excludes": [

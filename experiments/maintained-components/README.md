@@ -38,14 +38,36 @@ no player speed or speed gain. Repeated held/trigger samples are not extra
 pause taps, new attempts clear the old label, and an order that cannot be
 distinguished within one input sample remains explicitly unclear.
 `mss_order_wrapper.s` preserves the legacy caller's state, snapshot and input
-counter registers. The component passed 92 emitted-code checks; native user
-testing remains separate.
+counter registers. The component passed 92 emitted-code checks. A real Cemu
+swimming session also classified pause-stick-pause as Slow and
+pause-pause-stick as Fast. Wii U acceptance remains separate.
 
 `roll_clip_detector.c` is the exact earlier root-volume detector restored at
 the user's request. The subsequently added animated-body fallback has been
 removed. Native accepted-roll timing, latching and notification behavior stay
 with that earlier implementation. This rollback does not claim every wall or
 ledge has been newly validated.
+
+## Particle report fast path (R559)
+
+`particle_guard.c` and `particle_guard.h` retain the existing nine-method
+coordination guard. Ordinary particle entry/return now refreshes the changed
+diagnostic lane instead of copying every method's unchanged counters twice.
+Active capture/restore ownership still publishes the complete report. Native
+calls, atomic admission, identity checks, waits and GPU checks are retained.
+No effect is disabled, and speed, physics and heap reservations are unchanged.
+
+Validation: 224 emitted-PPC checks compare report bytes and unchanged authority
+state. The isolated report routine executes 28 instructions instead of 175;
+this is not a whole-game speedup percentage. The integrated Cemu candidate
+passed three placed-bomb expiry/restores and both native pause-order cases.
+Wii U superswim performance is not yet established.
+
+`lite_hud.s` extends the existing timer text fast path to closed-menu Debug/MSS
+text. Native font refusal falls back to the ordinary renderer. Menus, toasts,
+the graphical Input Viewer and other graphical overlays keep the normal path.
+It passed 236 emitted-code checks and actual Cemu native font queue checks.
+It does not explain or claim to fix lag with every overlay off.
 
 ## Source synchronization
 

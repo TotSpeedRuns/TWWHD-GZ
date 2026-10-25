@@ -5,6 +5,31 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## MSS native pause duration (R617)
+
+`mss_pause_frames.c` measures completed frames inside the actual settled
+native Plus-menu state. The existing completed-frame callback calls
+`_gz_mpd_tick`; `_gz_mss_draw` calls `_gz_mpd_text` below its coaching line
+at pixel position16,584 using the existing small native font path.
+
+The live label uses `|| Pause: Nf`; the retained result uses
+`> Last pause: Nf`. Two frames are labeled `Insta`; three frames are marked
+`3f target`, following the runner's requested practice target. The separate
+Slow/Fast event-order classifier and gameplay buffer counter are unchanged.
+Opening `ToMenu` and closing `ToPlay` animation frames are excluded. The
+counter preserves an observed gameplay baseline through the opening, then
+publishes the measured visit at closing. GZ menus, scene changes, unknown
+states and missing callbacks cancel incomplete visits; enabling the trainer
+inside a pause does not invent its beginning.
+
+No native menu, timer, player or save byte is written. The feature adds no
+retail hook or heap reservation. Counting is integer-only and performs no
+allocation. Nineteen emitted-code counting checks and796 integration checks pass.
+Seven actual native menu visits passed on land and while swimming, including
+exact two-frame Insta and three-frame target results, a longer eight-frame
+visit, retained results and GZ-menu exclusion. Native save hashes stayed
+unchanged. Wii U verification is pending.
+
 ## Scene-rebirth preparation (R604) and foliage topology plan (R612)
 
 The player and camera participants keep immutable source identity separate

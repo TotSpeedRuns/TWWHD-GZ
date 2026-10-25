@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R612",
+  "revision": "R617",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "aafe084dfdbaca8c27ebe19389d2752e51989116f733fbb395ee18d2717760d9",
-      "bytes": 13542
+      "sha256": "a7565c6d1bd7f1ed6be376fa27d07d17b658c73a4c8cec1739446495767f42db",
+      "bytes": 14996
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -157,6 +157,11 @@
       "path": "experiments/maintained-components/save_state/foliage_manager_topology.c",
       "sha256": "be5bfc6b19b51bbcbe95afb142732c8fe32b4e5fc7ca3b0d64828f568e2be767",
       "bytes": 6377
+    },
+    {
+      "path": "experiments/maintained-components/mss_pause_frames.c",
+      "sha256": "1dec96e2545020821cb1d676155653be687f3889101e23b607529dfee88fb809",
+      "bytes": 2545
     }
   ],
   "excludes": [

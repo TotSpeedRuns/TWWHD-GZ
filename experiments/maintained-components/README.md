@@ -5,6 +5,48 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Current Rito placement and Tetra dependency preparation (R638)
+
+`save_state/rito_service_prepare.c` independently rediscovers a matching Rito
+from the current native actor queue under the existing real NSV heap/source
+hold. Exact surviving processes retain a separately rechecked strict path.
+A different process lifetime needs a unique immutable placement match, the
+original authenticated source/birth records and the prepared current player
+context. Source packet PID/generation/frame fields remain unchanged.
+
+`rito_source_identity.c` stores a small sealed receipt in existing private
+row metadata. Each skeletal, behavior, model, texture and physics leaf still
+checks the current process, allocation, controller and resource contracts.
+The receipt is not lifetime, heap, writer or publication authority. Original
+source packet joins and copied private target hashes remain intact.
+
+The Rito's Tetra PID reference is independently matched by Tetra placement,
+constructor readiness, current queue membership and process extent. Its new
+PID is retained as a current reference; no old PID or pointer is assigned.
+`rito_child_relation.c` is the pure candidate check. Existing row padding
+holds the dependency receipt, so no archive bank or reserved heap grows.
+
+Validation:33 emitted-code receipt checks and25 emitted Tetra placement cases
+pass using real capture data. The intermediate native R631 test progressed
+from refusal1433 to the child-reference check1391. R635 then passed all four
+controllers, behavior, model and texture preparation after real drowning,
+with Tetra502 matched to825 and Rito505 to828. The original source stayed
+unchanged and no restore-triggered room loading occurred. Full restoration
+still refuses1481 at Rito collision/background-reference qualification.
+
+A subsequent bomb regression exposed a new1430 context refusal: the bomb
+service prepares NPCs before the separate player scene-role plan exists.
+R638 corrects this only for an exact surviving process, with fresh queue,
+PoEntry and native header checks. Two original-save native bomb explosion/
+recreation cycles then passed with new actor IDs532/537, exact fuse60 and
+position, no room loading and unchanged native save hashes. The earlier
+1430 refusal is preserved. No full-game or Wii U acceptance is implied by
+this source export.805 image/layout checks pass.
+
+These are component files from the assembled native runtime, not a complete
+new integrated build export. The full reproducible export remains v126.
+No new hook, reserved heap bank or route checkpoint is added by this change.
+
 ## Foliage native preparation and order replay (R621), Rito candidate (R628)
 
 `save_state/foliage_journal.c` now independently allocation-binds the current

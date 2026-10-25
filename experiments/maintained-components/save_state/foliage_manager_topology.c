@@ -103,3 +103,13 @@ u32 _gz_fgt_manager_topology(const u8*source,const u8*live,u32 bytes,FgtReport*r
  }
  if(!z&&r->order_rooms)z=FGT_ORDER_REPLAY;r->status=z;return z;
 }
+
+/* Pure address arithmetic. Input addresses remain opaque integers. The
+ * caller must separately qualify current native allocations and authority;
+ * this function never reads an old native address or writes a native object. */
+u32 _gz_fgt_relocate_pointer(u32 saved,u32 source_root,u32 current_root,u32 group,u32*out){u32 index;
+ if(group>3||!out||!source_root||!current_root||
+  !fgt_pointer(source_root,fgt_sizes[group])||!fgt_pointer(current_root,fgt_sizes[group]))return FGT_ROOT;
+ if(!fgt_index(saved,source_root,group,&index))return FGT_LINK;
+ *out=index==0xffffffffu?0:current_root+fgt_pool[group]+index*fgt_native_stride[group];return 0;
+}

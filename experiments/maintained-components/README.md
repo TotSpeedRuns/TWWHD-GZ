@@ -5,6 +5,53 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Foliage native preparation and order replay (R621), Rito candidate (R628)
+
+`save_state/foliage_journal.c` now independently allocation-binds the current
+manager roots after a same-area native scene rebirth. The source/world context
+must agree with the already prepared current player, exact owner token,
+source pin, stage, room and layer. This does not adopt a saved pointer as a
+current allocation. Surviving managers retain the original birth-before-source
+check; reborn managers use fresh observed current allocation generations.
+Separate plant actors retain their original strict lifetime checks.
+
+The topology masks distinguish registered numeric units from opaque unused
+pool payloads. A typed bounded-room writer generates each active member from
+the current pool base and a checked logical slot. Linked heads/next pointers
+must already represent the same logical graph. No source pointer, vtable,
+manager header or unused member storage is installed. The separately captured
+current order is retained for source-free undo.
+
+Validation:22 captured-data topology cases,2,377 integer pointer-recipe cases
+and798 integrated layout/relocation checks pass. One actual native Outset
+restore replayed two changed room orders covering68 members and passed its
+final typed checks. After natural drowning, all four fresh foliage managers
+and1,178 registered entries passed preparation. Whole restoration still
+refused1433 at the recreated Rito process join, before forward mutation.
+Two matched original-save bomb expiry/recreation cycles then passed with the
+saved fuse59, exact pose and no room loading. Native save hashes stayed intact.
+
+Exact native undo acceptance for the new order writer remains pending. The
+proposed late-failure diagnostic was rejected by automatic approval review
+because its fixture would write an internal fault-control ticket; it has not
+run. Ordinary production code keeps diagnostic fault admission disabled.
+
+The broader tests retain two additional failures: Northern Fairy Island has
+an unimplemented warship profile179 during capture; an Outset travel/bomb
+scenario refused1481 at the Rito physics-reference join. These are not waived
+or counted as passing coverage.
+
+`save_state/rito_role_relation.c` adds a pure captured-data candidate check.
+Two genuine snapshots show the same immutable Rito placement at a reused
+address, with new PID/generation and scene epoch. It passed28 emitted-code
+cases. A candidate grants no native lifetime, replay or publication authority.
+Its four controllers, fresh resources, models, texture, physics and dependent
+actor references still need integration. Canonical source packet identities
+remain unchanged.
+
+No new retail hook, heap reservation or snapshot bank size is introduced.
+Wii U acceptance and full post-void restoration are still unproven.
+
 ## MSS native pause duration (R617)
 
 `mss_pause_frames.c` measures completed frames inside the actual settled
@@ -85,7 +132,8 @@ planner identifies1178 registered entries across four relocated managers;
 one59-member tree-room list requires order replay. It passed22 emitted-code
 metadata cases, including invalid links, cycles, duplicate members, stale
 pointer bases, opaque unused positions and unregistered-state rejection.
-It is not yet integrated into native foliage restoration. Separate plant
+At R612 it was not yet integrated into native foliage restoration; R621 above
+adds the participant path. Separate plant
 actors and renderer/resource/lifetime closure remain required.
 
 These are reviewed components, not a replacement integrated-runtime export

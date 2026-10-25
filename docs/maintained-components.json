@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R617",
+  "revision": "R628",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "a7565c6d1bd7f1ed6be376fa27d07d17b658c73a4c8cec1739446495767f42db",
-      "bytes": 14996
+      "sha256": "04b29d50d2f4d3464ae6b2246591d90d226df0a510e02be0ca9959726c8409f8",
+      "bytes": 17866
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -155,13 +155,33 @@
     },
     {
       "path": "experiments/maintained-components/save_state/foliage_manager_topology.c",
-      "sha256": "be5bfc6b19b51bbcbe95afb142732c8fe32b4e5fc7ca3b0d64828f568e2be767",
-      "bytes": 6377
+      "sha256": "6b55eecb0d6cb88a4db99b6be3a99a429b965eedf3236c0c856d6ccc003a4a0f",
+      "bytes": 7038
     },
     {
       "path": "experiments/maintained-components/mss_pause_frames.c",
       "sha256": "1dec96e2545020821cb1d676155653be687f3889101e23b607529dfee88fb809",
       "bytes": 2545
+    },
+    {
+      "path": "experiments/maintained-components/save_state/foliage_journal.c",
+      "sha256": "b97833b1a25dfeba75e9c8d5036a0d33977d04794eed4d3a66890f34460ee141",
+      "bytes": 14617
+    },
+    {
+      "path": "experiments/maintained-components/save_state/rito_role_relation.c",
+      "sha256": "64627f513d2516bb6e5c71b9ee553d42e978e239845c15aed160d8ff794e624d",
+      "bytes": 2314
+    },
+    {
+      "path": "experiments/maintained-components/save_state/correspondence.h",
+      "sha256": "b5c9cd23380112e514eaf42fc087ec3f7cd115d1bedefa50aed6f61a7e6775af",
+      "bytes": 1797
+    },
+    {
+      "path": "experiments/maintained-components/save_state/object_binding.h",
+      "sha256": "2a94911068381ab3a98ffc03feaf9ab7ea37a73e0cd35f7528efc0f441809e0e",
+      "bytes": 1410
     }
   ],
   "excludes": [

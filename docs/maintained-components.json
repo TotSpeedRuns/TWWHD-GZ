@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R559",
+  "revision": "R570",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -47,6 +47,26 @@
       "path": "experiments/maintained-components/lite_hud.s",
       "sha256": "0bc09b78dd538f6813b3c2b6534d0724a9361373e6f1ade6562f64172e1b1736",
       "bytes": 2421
+    },
+    {
+      "path": "experiments/maintained-components/favorites_r562.c",
+      "sha256": "5735c5b472a7734f733470a0ab54485012595ac1c1990c58bcb5aacd29038e6e",
+      "bytes": 6610
+    },
+    {
+      "path": "experiments/maintained-components/favorites_r562.h",
+      "sha256": "b151d913dc202617d54a1d9d74e1171cc46b7994f32030788a4192e553993654",
+      "bytes": 479
+    },
+    {
+      "path": "experiments/maintained-components/favorites_storage_r562.c",
+      "sha256": "9aa79cdddc8783c2b64963037956d2770c3a2480f33ebf693854b84264d007ba",
+      "bytes": 4050
+    },
+    {
+      "path": "experiments/maintained-components/favorites_input.s",
+      "sha256": "24a4f5222587caec9cf245570b2783beb06a9cd1b3ccff7e708534070f9b80f0",
+      "bytes": 746
     }
   ],
   "excludes": [

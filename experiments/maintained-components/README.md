@@ -69,6 +69,41 @@ the graphical Input Viewer and other graphical overlays keep the normal path.
 It passed 236 emitted-code checks and actual Cemu native font queue checks.
 It does not explain or claim to fix lag with every overlay off.
 
+## Favorites (R570)
+
+The Favorites source adds a main-menu entry and an X toggle on route memfiles.
+The list loads through the existing checkpoint loader, shows the selected
+route and area, and supports removing entries with X. X keeps its existing
+meaning in the warp map and gameplay. An empty list cannot load a checkpoint.
+
+`favorites_r562.c` uses two-word identities derived from route, area, name,
+stage and entrance instead of saved numeric list indices. Unknown identities
+are retained and shown as unavailable rather than redirected to another file.
+Input queues preference changes; the ordinary game callback owns mutation and
+file writes. There is no filesystem work in VPAD or the draw callback.
+
+`favorites_storage_r562.c` keeps two checksummed 6,456-byte preference files
+in the practice title's common save directory. It uses `SAVEInitSaveDir(255)`
+before the first read/write, alternates banks, closes and flushes a complete
+write before advancing its sequence. It never opens `cking.sav`. Storage
+failure leaves session favorites usable and is shown in the menu.
+
+Compile these components with the existing freestanding soft-float flags and
+`-fno-merge-constants`: the current payload relocation exporter requires
+ordinary section-relative string offsets, without linker string merging.
+`favorites_input.s` preserves the existing input registers before dispatch.
+The private integration also adds the root row and custom-page drawing, and
+calls `_gz_fav_io_tick` from the ordinary game callback. No native hook or
+extra heap reservation is introduced.
+
+Validation includes 80 emitted-PPC checks across both editions and two
+relocation placements. Native menu and filesystem acceptance is tracked
+separately from these pure component tests. Actual Cemu checks passed X
+add/remove/hold behavior, native file writes, a fresh-process reload of the
+exact favorite identities, loading an original checkpoint and removing a
+favorite afterward. Ordinary game progress files stayed unchanged. Wii U
+acceptance remains pending.
+
 ## Source synchronization
 
 `tools/sync_components.py --manifest <local-manifest> --publish` validates

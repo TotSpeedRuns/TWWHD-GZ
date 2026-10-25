@@ -5,6 +5,27 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Swimming air rewind (R574)
+
+`save_state/` contains the current authored clock/air packet and its restore
+participant. Version 2 adds the exact current air meter, maximum and byte
+status in previously reserved words of the same 128-byte bank. Version 1
+remains valid and restores only its five recorded clock fields; absent air
+data is never invented. Capturing a new state is required to record air.
+
+The fixed root kernel reads and applies the air scalars under the existing
+frame/thread/root/heap ownership checks. The before-image and inverse cover
+the same fields. No native pointer is accepted from the archive, no new hook
+is installed, and no extra heap reservation is introduced. These files are
+components of the newer private integration, not a standalone build recipe.
+
+Validation: both final images passed 776 layout/relocation checks; 26
+emitted-PPC format checks cover the two packet versions and invalid inputs.
+Actual Cemu swimming capture followed by natural air drain and three restores
+returned the meter exactly to 882/900 at the native restore boundary, then
+normal draining resumed. No room load occurred. This does not establish full
+swimming effect replay, drowning, cross-area recovery or Wii U acceptance.
+
 ## Compact raw stick display (R546)
 
 `input_float.c` formats the original normalized f32 LX/LY/RX/RY sample bits.

@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R570",
+  "revision": "R574",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -67,6 +67,46 @@
       "path": "experiments/maintained-components/favorites_input.s",
       "sha256": "24a4f5222587caec9cf245570b2783beb06a9cd1b3ccff7e708534070f9b80f0",
       "bytes": 746
+    },
+    {
+      "path": "experiments/maintained-components/save_state/clock_state.c",
+      "sha256": "21c38179c47d8e1f6d123fc3d9e6a47fb7bbb92ed81a4b4cd31c1cbaed970ae5",
+      "bytes": 5168
+    },
+    {
+      "path": "experiments/maintained-components/save_state/clock_state.h",
+      "sha256": "0fb3dd57ce05b37e592dd5489fc512e78e1aadd541b09d716d1d0d662f91664d",
+      "bytes": 817
+    },
+    {
+      "path": "experiments/maintained-components/save_state/clock_replay.c",
+      "sha256": "f6fa91dadfe53528eda4486ab4376557e7fd6d39e65eae1811e86091acd34650",
+      "bytes": 9894
+    },
+    {
+      "path": "experiments/maintained-components/save_state/bomb_commit.c",
+      "sha256": "cf42d1b678870f576cb2596316edbcd5d88d722f829974b8a1157c24c382a1ed",
+      "bytes": 5031
+    },
+    {
+      "path": "experiments/maintained-components/save_state/world_core_target.inc",
+      "sha256": "fd3f1c07078e93d8e18ec4e40c32f6834eeaf229289ffac4c41c11e4373dd4fd",
+      "bytes": 4831
+    },
+    {
+      "path": "experiments/maintained-components/save_state/world_domains_prepare.c",
+      "sha256": "cfbfe389a80cfbd212b45de07783bf81c38e25745a2e0276db9eb2a2944529de",
+      "bytes": 8321
+    },
+    {
+      "path": "experiments/maintained-components/save_state/save_origin/root_access.c",
+      "sha256": "91e6d853baf7f386b451b5c5fd126105517d4cc30a441a20ae110708e6fa6caf",
+      "bytes": 19995
+    },
+    {
+      "path": "experiments/maintained-components/save_state/save_origin/death_persistent_access.inc",
+      "sha256": "5922abf16017aab76b8463701e1df7e0388fe6683eb5c6e6f0181c8deb4e520d",
+      "bytes": 9797
     }
   ],
   "excludes": [

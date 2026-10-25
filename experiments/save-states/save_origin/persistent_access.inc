@@ -18,7 +18,7 @@ SpoU32 _gz_spk_private_apart(SpoU32 a,SpoU32 n){SpoU32 p[]={
  return 1;
 }
 static SpoU32 spk_skip(SpoU32 i){return i<PP_SAVE_BYTES&&_gz_pp_fixed.offsets[i]>=36&&_gz_pp_fixed.offsets[i]<42;}
-static SpoU32 spk_address(SpoU32 root,SpoU32 i){return i<PP_SAVE_BYTES?root+0x20+_gz_pp_fixed.offsets[i]:0x10474c6bu+i-PP_SAVE_BYTES;}
+static SpoU32 spk_address(SpoU32 root,SpoU32 i){return i<PP_SAVE_BYTES?root+0x20+_gz_pp_fixed.offsets[i]:SPO_EQUIPPED_ITEMS+i-PP_SAVE_BYTES;}
 static SpoU32 spk_table(void){SpoU32 i,last=0,count=0,o;
  if(srh_hash(&_gz_pp_fixed,sizeof(_gz_pp_fixed))!=0xba41675cu)return 75;
  for(i=0;i<PP_SAVE_BYTES;i++){

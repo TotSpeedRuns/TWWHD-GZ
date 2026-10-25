@@ -80,20 +80,20 @@ SpoU32 _gz_spo_pre_note(SpoU32 parent,SpoU32 original_sp){SpoU32 z=spo_start(SPO
  _gz_spo_private.phase=SPO_PENDING;spo_count(&_gz_spo_private.pre_events);return spo_done(0);
 }
 SpoU32 _gz_spo_factory_note(SpoU32 child,SpoU32 bytes,SpoU32 parent,SpoU32 direction,SpoU32 original_sp){SpoU32 z=spo_start(SPO_FACTORY);if(z)return z;
- if(_gz_spo_private.phase!=SPO_PENDING||parent!=_gz_spo_private.parent||direction!=1||!spo_birth_current(1)||!spo_frame(original_sp,288,0x0203f458u)){spo_count(&_gz_spo_private.ignored_factory);return spo_done(SPB_NO_CHANGE);}
+ if(_gz_spo_private.phase!=SPO_PENDING||parent!=_gz_spo_private.parent||direction!=1||!spo_birth_current(1)||!spo_frame(original_sp,288,(SpoU32)_gz_spo_boot_factory_return)){spo_count(&_gz_spo_private.ignored_factory);return spo_done(SPB_NO_CHANGE);}
  z=_gz_spb_factory_post(child,bytes,parent,direction);if(z)return spo_done(spo_fail(z));
  _gz_spo_private.child=child;_gz_spo_private.backing_bytes=bytes;_gz_spo_private.backing_epoch=_gz_spb_private.v.backing_epoch;_gz_spo_private.factory_sp=original_sp;_gz_spo_private.phase=SPO_BORN;
  spo_count(&_gz_spo_private.factory_events);return spo_done(0);
 }
 SpoU32 _gz_spo_return_note(SpoU32 child,SpoU32 original_sp,SpoU32 original_lr){SpoU32 z=spo_start(SPO_RETURN);if(z)return z;
- if(original_sp!=_gz_spo_private.boot_sp||original_lr!=0x0203f458u)return spo_done(spo_fail(SPB_CHANGED));
+ if(original_sp!=_gz_spo_private.boot_sp||original_lr!=(SpoU32)_gz_spo_boot_factory_return)return spo_done(spo_fail(SPB_CHANGED));
  if(_gz_spo_private.phase==SPO_PENDING&&!child){z=_gz_spb_boot_return(0);_gz_spo_private.phase=SPO_EMPTY;return spo_done(z);}
  if(_gz_spo_private.phase!=SPO_BORN||child!=_gz_spo_private.child||!spo_birth_current(2))return spo_done(spo_fail(SPB_CHANGED));
  z=_gz_spb_boot_return(child);if(z)return spo_done(spo_fail(z));
  _gz_spo_private.phase=SPO_RETURNED;spo_count(&_gz_spo_private.return_events);return spo_done(0);
 }
 SpoU32 _gz_spo_ctor_note(SpoU32 root,SpoU32 child,SpoU32 slot,SpoU32 original_sp){SpoU32 z=spo_start(SPO_CTOR);if(z)return z;
- if(_gz_spo_private.phase!=SPO_RETURNED||child!=_gz_spo_private.child||slot!=SPB_ROOT_SLOT||!spo_birth_current(3)||!spo_frame(original_sp,24,0x0203f460u))return spo_done(spo_fail(SPB_CHANGED));
+ if(_gz_spo_private.phase!=SPO_RETURNED||child!=_gz_spo_private.child||slot!=SPB_ROOT_SLOT||!spo_birth_current(3)||!spo_frame(original_sp,24,(SpoU32)_gz_spo_boot_ctor_return))return spo_done(spo_fail(SPB_CHANGED));
  z=_gz_srw_ctor_note(root,child,slot);if(z)return spo_done(spo_fail(z));
  if(_gz_sro_private.generation<=_gz_spo_private.prior_sro_generation)return spo_done(spo_fail(SPB_CHANGED));
  z=_gz_spb_root_bind(root,child);if(z)return spo_done(spo_fail(z));
@@ -101,12 +101,12 @@ SpoU32 _gz_spo_ctor_note(SpoU32 root,SpoU32 child,SpoU32 slot,SpoU32 original_sp
  spo_count(&_gz_spo_private.ctor_events);return spo_done(0);
 }
 SpoU32 _gz_spo_initpre_note(SpoU32 root,SpoU32 original_sp,SpoU32 original_lr){SpoU32 z=spo_start(SPO_INITPRE);if(z)return z;
- if(_gz_spo_private.phase!=SPO_CONSTRUCTED||original_sp!=_gz_spo_private.boot_sp||original_lr!=0x0203f478u||root!=_gz_spo_private.root||!spo_tuple())return spo_done(spo_fail(SPB_CHANGED));
+ if(_gz_spo_private.phase!=SPO_CONSTRUCTED||original_sp!=_gz_spo_private.boot_sp||original_lr!=(SpoU32)_gz_spo_boot_initpre_return||root!=_gz_spo_private.root||!spo_tuple())return spo_done(spo_fail(SPB_CHANGED));
  z=_gz_srw_preboot_note(root);if(z)return spo_done(spo_fail(z));
  _gz_spo_private.phase=SPO_INITIALIZING;spo_count(&_gz_spo_private.initpre_events);return spo_done(0);
 }
 SpoU32 _gz_spo_initpost_note(SpoU32 root,SpoU32 original_sp,SpoU32 original_lr){SpoU32 z=spo_start(SPO_INITPOST);if(z)return z;
- if(_gz_spo_private.phase!=SPO_INITIALIZING||original_sp!=_gz_spo_private.boot_sp||original_lr!=0x0203f480u||root!=_gz_spo_private.root||!spo_tuple())return spo_done(spo_fail(SPB_CHANGED));
+ if(_gz_spo_private.phase!=SPO_INITIALIZING||original_sp!=_gz_spo_private.boot_sp||original_lr!=(SpoU32)_gz_spo_boot_initpost_return||root!=_gz_spo_private.root||!spo_tuple())return spo_done(spo_fail(SPB_CHANGED));
  z=_gz_srw_boot_note(root);if(z)return spo_done(spo_fail(z));
  _gz_spo_private.completed_serial=_gz_spo_private.serial;_gz_spo_private.phase=SPO_READY;spo_count(&_gz_spo_private.initpost_events);srh_boot_bind();return spo_done(0);
 }

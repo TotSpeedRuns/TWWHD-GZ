@@ -23,7 +23,8 @@ typedef struct {SpoU32 magic,bytes,valid,error,root,root_generation,parent,child
 typedef char SrhBindingSize[sizeof(SrhBinding)==476?1:-1];
 extern volatile SrhControl _gz_hl_control;
 extern volatile SrhHeap _gz_hl_heaps[4096];
-extern volatile SrhAllocation _gz_hl_allocations[262144];
+extern volatile SrhAllocation _gz_hl_projected[2];
+extern SpoU32 _gz_hl_project_locked(SpoU32,SpoU32,SpoU32);
 extern volatile SpoU32 _gz_hg_control[16];
 extern SpoU32 _gz_hl_meta_try_lock(void);
 extern void _gz_hl_meta_unlock(void);
@@ -49,7 +50,12 @@ static SpoU32 dth_context_owned(SpoU32);
 extern SpoU32 _gz_gqk_context_owned(SpoU32),_gz_gqk_access_entered(void);
 extern SpoU32 _gz_dck_context_owned(SpoU32),_gz_dck_access_entered(void);
 extern SpoU32 _gz_doh_context_owned(SpoU32),_gz_doh_access_entered(void);
-SpoU32 _gz_srh_any_access_entered(void){return _gz_srh_probe_entered||_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_dth_entered;}
+extern SpoU32 _gz_nsv_context_owned(SpoU32),_gz_nsv_access_entered(void);
+extern SpoU32 _gz_nrt_context_owned(SpoU32),_gz_nrt_access_entered(void);
+/* Kept separate so the NPC domain can exclude every OTHER root reader
+ * without recursively detecting its own entered flag. */
+SpoU32 _gz_srh_base_access_entered(void){return _gz_srh_probe_entered||_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_dth_entered;}
+SpoU32 _gz_srh_any_access_entered(void){return _gz_srh_base_access_entered()||_gz_nsv_access_entered()||_gz_nrt_access_entered();}
 extern SpoU32 _gz_prk_kernel_scope(SpoU32,SpoU32),_gz_prk_kernel_value(SpoU32,SpoU32);
 extern SpoU32 _gz_ckb_capture_scope(SpoU32);
 extern SpoU32 _gz_ckr_kernel_scope(SpoU32,SpoU32),_gz_ckr_kernel_expected(SpoU32,SpoU32),_gz_ckr_kernel_target(SpoU32);
@@ -73,10 +79,10 @@ static const volatile SrhHeap*srh_heap(SpoU32 p){SpoU32 i,start=((p>>2)*0x9e3779
   if(h->heap==p)return h;if(!h->heap)return 0;
  }return 0;
 }
-static const volatile SrhAllocation*srh_allocation(SpoU32 heap,SpoU32 p){SpoU32 i,start=((p>>2)*0x9e3779b1u)>>14;
- for(i=0;i<262144;i++){const volatile SrhAllocation*a=&_gz_hl_allocations[(start+i)&262143u];
-  if(a->pointer==p&&a->heap==heap)return a;if(!a->pointer)return 0;
- }return 0;
+static const volatile SrhAllocation*srh_allocation(SpoU32 heap,SpoU32 p,SpoU32 slot){
+ /* srh_lock remains held by every caller through the projection copies. */
+ if(slot>=2||_gz_hl_project_locked(heap,p,slot))return 0;
+ return _gz_hl_projected+slot;
 }
 static SpoU32 srh_inside(SpoU32 p,SpoU32 n,SpoU32 base,SpoU32 bytes){
  return n&&p>=base&&bytes<=0xffffffffu-base&&p<=0xffffffffu-n&&p+n<=base+bytes;
@@ -107,7 +113,7 @@ static __attribute__((noinline,noclone)) SpoU32 srh_capture_resize(SrhBinding*b)
  const volatile SrhHeap*ph;const volatile SrhMutation*found=0;SpoU32 i;
  /* Called only by fresh entered initpost under the common metadata lock.
   * Runtime leases never renew a receipt from the finite observer ring. */
- pa=srh_allocation(b->parent,b->child);ph=srh_heap(b->parent);
+ pa=srh_allocation(b->parent,b->child,1);ph=srh_heap(b->parent);
  if(!pa||!ph)return 78;
  for(i=0;i<sizeof(b->resize);i++)((unsigned char*)&b->resize)[i]=0;
  if(!pa->flags)return 0;
@@ -121,7 +127,7 @@ static __attribute__((noinline,noclone)) SpoU32 srh_capture_resize(SrhBinding*b)
 }
 static __attribute__((noinline,noclone)) SpoU32 srh_tuple(SrhBinding*b){const volatile SrhHeap*h,*ph;const volatile SrhAllocation*a,*pa;
  if(_gz_hl_control.flags||_gz_hl_control.active_heaps>4096||_gz_hl_control.active_allocations>262144)return 77;
- h=srh_heap(b->child);ph=srh_heap(b->parent);a=srh_allocation(b->child,b->root);pa=srh_allocation(b->parent,b->child);
+ h=srh_heap(b->child);ph=srh_heap(b->parent);a=srh_allocation(b->child,b->root,0);pa=srh_allocation(b->parent,b->child,1);
  if(!h||!ph||!a||!pa)return 78;
  if(h->state!=1||ph->state!=1||h->kind!=2||ph->kind!=1||!h->generation||!ph->generation||
   h->parent!=ph->heap||h->parent_generation!=ph->generation||h->flags||ph->flags)return 79;
@@ -165,7 +171,12 @@ static SpoU32 srh_idle(void){return _gz_pbac_menu==1&&!_gz_pbac_pending&&
  _gz_pbac_idle_for_capture()&&!_gz_roh_user_guard()&&!_gz_osa_pin_id();}
 /* Real fixed-frame callback scope. A nonce alone cannot issue this context.
  * HG independently binds its actual native thread and excludes mutators. */
+extern SpoU32 _gz_bsg_context_owned(SpoU32),_gz_wgp_context_owned(SpoU32);
 SpoU32 _gz_srh_context_owned(SpoU32 cookie){
+ if(_gz_wgp_context_owned(cookie))return 1;
+ if(_gz_bsg_context_owned(cookie))return 1;
+ if(_gz_nrt_context_owned(cookie))return 1;
+ if(_gz_nsv_context_owned(cookie))return 1;
  if(_gz_dck_context_owned(cookie))return 1;
  if(_gz_doh_context_owned(cookie))return 1;
  if(_gz_gqk_context_owned(cookie))return 1;
@@ -202,9 +213,9 @@ static SpoU32 sck_values_safe(const SpoU32*v){return (v[0]&0x7fffffffu)<0x7f8000
 static void sck_read(SpoU32 root){
  _gz_sck_values[0]=*(volatile SpoU32*)(root+0x44);
  _gz_sck_values[1]=*(volatile unsigned short*)(root+0x48);
- _gz_sck_values[2]=*(volatile SpoU32*)0x10476a88u;
- _gz_sck_values[3]=*(volatile unsigned short*)0x10476af2u;
- _gz_sck_values[4]=*(volatile SpoU32*)0x10476a90u;
+ _gz_sck_values[2]=*(volatile SpoU32*)SPO_CLOCK_A;
+ _gz_sck_values[3]=*(volatile unsigned short*)SPO_CLOCK_SHORT;
+ _gz_sck_values[4]=*(volatile SpoU32*)SPO_CLOCK_B;
 }
 static __attribute__((noinline,noclone)) SpoU32 sck_access(SpoU32 mode){SpoU32 frame=_gz_pbac_frame,gate=0,z=0,i,root,target[5],expected[5],alternate[5];
  for(i=2;i<16;i++)_gz_sck_report[i]=0;
@@ -229,9 +240,9 @@ static __attribute__((noinline,noclone)) SpoU32 sck_access(SpoU32 mode){SpoU32 f
    * occurs between these five stores under the exact allocation exclusion. */
   *(volatile SpoU32*)(root+0x44)=target[0];_gz_sck_report[14]|=1;
   *(volatile unsigned short*)(root+0x48)=(unsigned short)target[1];_gz_sck_report[14]|=2;
-  *(volatile SpoU32*)0x10476a88u=target[2];_gz_sck_report[14]|=4;
-  *(volatile unsigned short*)0x10476af2u=(unsigned short)target[3];_gz_sck_report[14]|=8;
-  *(volatile SpoU32*)0x10476a90u=target[4];_gz_sck_report[14]|=16;
+  *(volatile SpoU32*)SPO_CLOCK_A=target[2];_gz_sck_report[14]|=4;
+  *(volatile unsigned short*)SPO_CLOCK_SHORT=(unsigned short)target[3];_gz_sck_report[14]|=8;
+  *(volatile SpoU32*)SPO_CLOCK_B=target[4];_gz_sck_report[14]|=16;
   sck_read(root);for(i=0;i<5;i++)if(_gz_sck_values[i]!=target[i]){z=77;goto done;}
  }
  z=srh_current();if(!z)z=_gz_hg_capture_seal(gate);
@@ -270,9 +281,9 @@ void _gz_srh_step(void){SpoU32 req=_gz_srh_request,z=0,gate=0,i,root;
   * All reads are fixed fields; no caller/source pointer selects a target. */
  _gz_srh_report[10]=*(volatile SpoU32*)(root+0x44);
  _gz_srh_report[11]=*(volatile unsigned short*)(root+0x48);
- _gz_srh_report[12]=*(volatile SpoU32*)0x10476a88u;
- _gz_srh_report[13]=*(volatile unsigned short*)0x10476af2u;
- _gz_srh_report[14]=*(volatile SpoU32*)0x10476a90u;
+ _gz_srh_report[12]=*(volatile SpoU32*)SPO_CLOCK_A;
+ _gz_srh_report[13]=*(volatile unsigned short*)SPO_CLOCK_SHORT;
+ _gz_srh_report[14]=*(volatile SpoU32*)SPO_CLOCK_B;
  z=srh_current();if(!z)z=_gz_hg_capture_seal(gate);
 release:
  if(gate){_gz_srh_report[15]=_gz_hg_capture_end(gate);if(!z)z=_gz_srh_report[15];}

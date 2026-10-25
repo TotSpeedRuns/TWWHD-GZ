@@ -1,0 +1,45 @@
+{
+  "schema": "maintained-source-components/1",
+  "revision": "R555",
+  "status": "Reviewed components; full integrated build export remains separately versioned.",
+  "files": [
+    {
+      "path": "experiments/maintained-components/input_float.c",
+      "sha256": "543c743dacc197ad390409ff6b8a59c1a4cb75ef512139f6ccb7eaa588cc450c",
+      "bytes": 1201
+    },
+    {
+      "path": "experiments/maintained-components/input_float_draw.s",
+      "sha256": "d1ac682e1cc99b193f0773c36f2bc0cc2bfd2782b5d1a4c3a67ef2df687f27a1",
+      "bytes": 600
+    },
+    {
+      "path": "experiments/maintained-components/speed_grouping.s",
+      "sha256": "42eb8ab5df68c66022a320e6612dd928372737c021835786626010a8ca9916de",
+      "bytes": 1860
+    },
+    {
+      "path": "experiments/maintained-components/mss_order.c",
+      "sha256": "86b328eb401ffc7b83665a7ec142c86080273215fa3a8d17ae32243864813e38",
+      "bytes": 1736
+    },
+    {
+      "path": "experiments/maintained-components/mss_order_wrapper.s",
+      "sha256": "a44af52e373b3adeab89700dc7952fae3a5066a3d841da9eea91da3d4dae973a",
+      "bytes": 343
+    },
+    {
+      "path": "experiments/maintained-components/roll_clip_detector.c",
+      "sha256": "fe7124eda9522dd58e2c23c09c6a1a199ab3a94613a6fe39078a7c6b3aa5e0ec",
+      "bytes": 15352
+    }
+  ],
+  "excludes": [
+    "Game executables",
+    "Game artwork",
+    "Raw user captures",
+    "Save files",
+    "Keys",
+    "Private diagnostics"
+  ]
+}

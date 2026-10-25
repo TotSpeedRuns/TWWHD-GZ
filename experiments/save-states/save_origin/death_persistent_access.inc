@@ -34,17 +34,17 @@ static SpoU32 dps_binding(void){SpoU32 z=srh_current();
 static void dps_values(SpoU32 root){SpoU32 i;
  for(i=0;i<DPK_ROOT_BYTES;i++)_gz_dpk_root_values[i]=*(volatile unsigned char*)spk_address(root,i);
  _gz_dpk_root_clocks[0]=*(volatile SpoU32*)(root+0x44);_gz_dpk_root_clocks[1]=*(volatile unsigned short*)(root+0x48);
- _gz_dpk_root_clocks[2]=*(volatile SpoU32*)0x10476a88u;_gz_dpk_root_clocks[3]=*(volatile unsigned short*)0x10476af2u;
- _gz_dpk_root_clocks[4]=*(volatile SpoU32*)0x10476a90u;
+ _gz_dpk_root_clocks[2]=*(volatile SpoU32*)SPO_CLOCK_A;_gz_dpk_root_clocks[3]=*(volatile unsigned short*)SPO_CLOCK_SHORT;
+ _gz_dpk_root_clocks[4]=*(volatile SpoU32*)SPO_CLOCK_B;
 }
 static void dps_snapshot(SpoU32 root,unsigned char*save,unsigned char*equip,unsigned char*env){
  srh_copy(save,(const void*)(root+SRO_SAVE_OFFSET),SRO_SAVE_BYTES);
- srh_copy(equip,(const void*)0x10474c60u,32);srh_copy(env,(const void*)0x10476a80u,128);
+ srh_copy(equip,(const void*)SPO_EQUIPMENT,32);srh_copy(env,(const void*)SPO_ENVIRONMENT,128);
 }
 static SpoU32 dps_before(void){SpoU32 i,root=_gz_srh_binding.root;
  for(i=0;i<SRO_SAVE_BYTES;i++)if(*(volatile unsigned char*)(root+SRO_SAVE_OFFSET+i)!=_gz_dpk_save_before[i])return 77;
- for(i=0;i<32;i++)if(*(volatile unsigned char*)(0x10474c60u+i)!=_gz_dpk_equip_before[i])return 77;
- for(i=0;i<128;i++)if(*(volatile unsigned char*)(0x10476a80u+i)!=_gz_dpk_env_before[i])return 77;
+ for(i=0;i<32;i++)if(*(volatile unsigned char*)(SPO_EQUIPMENT+i)!=_gz_dpk_equip_before[i])return 77;
+ for(i=0;i<128;i++)if(*(volatile unsigned char*)(SPO_ENVIRONMENT+i)!=_gz_dpk_env_before[i])return 77;
  return 0;
 }
 static SpoU32 dps_apart(SpoU32 a,SpoU32 n,SpoU32 b,SpoU32 m){return a>=b?a-b>=m:b-a>=n;}
@@ -109,7 +109,7 @@ SpoU32 _gz_dpk_root_access(SpoU32 mode){DpkRootRole*r=&_gz_dpk_root_role;
    * the prevalidated persistent-byte stores and five clock stores. */
   for(i=0;i<DPK_ROOT_BYTES;i++)if(!spk_skip(i)){*(volatile unsigned char*)spk_address(root,i)=_gz_dpk_root_target[i];_gz_dpk_root_report[8]++;}
   *(volatile SpoU32*)(root+0x44)=ct[0];*(volatile unsigned short*)(root+0x48)=(unsigned short)ct[1];
-  *(volatile SpoU32*)0x10476a88u=ct[2];*(volatile unsigned short*)0x10476af2u=(unsigned short)ct[3];*(volatile SpoU32*)0x10476a90u=ct[4];
+  *(volatile SpoU32*)SPO_CLOCK_A=ct[2];*(volatile unsigned short*)SPO_CLOCK_SHORT=(unsigned short)ct[3];*(volatile SpoU32*)SPO_CLOCK_B=ct[4];
   _gz_dpk_root_report[9]=31;dps_values(root);
   for(i=0;i<DPK_ROOT_BYTES;i++)if(!spk_skip(i)&&_gz_dpk_root_values[i]!=_gz_dpk_root_target[i]){z=77;goto done;}
   for(i=0;i<5;i++)if(_gz_dpk_root_clocks[i]!=ct[i]){z=77;goto done;}

@@ -29,6 +29,9 @@ def main():
     if text.count('andi. 8, 8, 503')!=1:raise ValueError('Unexpected legacy overlay mask')
     asm.write_text(text.replace('andi. 8, 8, 503','andi. 8, 8, 4599'))
     link=(ROOT/'runtime/runtime.ld').read_text().replace('*(.text)','*(.text*)').replace('*(.data)','*(.data*) *(.rodata*) *(.bss*) *(.sdata*) *(.sbss*) *(COMMON)')
+    # Save-origin remains an experimental unit, but its native alias contract
+    # is shared by any future integration. Preserve --emit-relocs below.
+    link+='\n'+(ROOT/'experiments/save-states/save_origin/native_aliases.ld').read_text()
     for name,address in json.loads((dest/'aliases.json').read_text()).items():
         if name+' ='not in link:link+=f'\n{name} = {address:#x};\n'
     for name in PLACEHOLDERS:

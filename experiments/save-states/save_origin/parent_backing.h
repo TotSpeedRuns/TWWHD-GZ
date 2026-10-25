@@ -8,7 +8,11 @@ enum { SPB_EMPTY=0,SPB_PARENT=1,SPB_BORN=2,SPB_RETURNED=3,SPB_BOUND=4,SPB_RETIRE
 enum { SPB_OUTER_PUBLISH=1,SPB_BOOT_BEGIN=2,SPB_FACTORY_POST=3,SPB_BOOT_RETURN=4,SPB_ROOT_BIND=5,
  SPB_DIRECT_FREE=6,SPB_TAIL_SHRINK=7,SPB_FRONT_SHRINK=8,SPB_CHILD_RANGE=9,
  SPB_CHILD_FULL=10,SPB_CHILD_DESTROY=11,SPB_PARENT_FULL=12,SPB_PARENT_DESTROY=13,SPB_BIRTH_MISMATCH=14 };
-enum { SPB_MAGIC=0x53504231u,SPB_VERSION=1,SPB_BYTES=128,SPB_CHILD_BYTES=156,SPB_ROOT_SLOT=0x101f84f4u };
+enum { SPB_MAGIC=0x53504231u,SPB_VERSION=1,SPB_BYTES=128,SPB_CHILD_BYTES=156 };
+/* These are linker aliases into the native module, not allocated objects.
+ * Their addresses must receive the module's actual TEXT/DATA relocations. */
+#include "native_addresses.h"
+#define SPB_ROOT_SLOT ((SpbU32)_gz_spo_native_root_slot)
 /* All addresses are observed INTEGER VALUES. Neither this record nor0-return
  * authorizes a native dereference, allocation, source read, world mutation,
  * thread claim, mapping or lifetime pin. Event origin is unauthenticated here.

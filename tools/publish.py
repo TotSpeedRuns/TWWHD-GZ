@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 from audit_source import audit
 def run(args,**kw):return subprocess.run(args,check=True,cwd=ROOT,**kw)
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--candidate',type=Path);p.add_argument('--revision');p.add_argument('--push',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--candidate',type=Path);p.add_argument('--revision');p.add_argument('--push',action='store_true');p.add_argument('--message',help='Commit description for an independently reviewed component sync');a=p.parse_args()
     if bool(a.candidate)!=bool(a.revision):raise ValueError('Supply candidate and revision together')
     if a.candidate:
         from export_revision import export
@@ -22,7 +22,7 @@ def main():
     deleted=run(['git','ls-files','--deleted'],capture_output=True,text=True).stdout.strip()
     if deleted:raise ValueError('Review removed source files before publishing: '+deleted)
     if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode:
-        run(['git','commit','-m','Update reviewed source for '+revision])
+        run(['git','commit','-m',a.message or 'Update reviewed source for '+revision])
     if a.push:
         remote=run(['git','remote','get-url','origin'],capture_output=True,text=True).stdout.strip()
         if remote!='https://github.com/TotSpeedRuns/TWWHD-GZ.git':raise ValueError('Unexpected publication destination')

@@ -5,6 +5,44 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Frame advance (R595)
+
+`frame_advance.c` adds an opt-in Frame Advance page. D-pad Down pauses or
+advances one simulation frame after release; D-pad Up resumes. The default
+is Off. Requests are queued from controller input and applied by the existing
+completed-frame callback. The small top-right HUD uses native-font `||`
+and `>` pause/play markers. A step keeps its play indication for ten display
+frames, then returns to paused. No image asset or extra heap reservation is
+introduced.
+
+The native pause hook is at the verified complete function entry. When not
+forcing pause, its assembly wrapper replays the exact displaced first
+instruction and resumes the original function. Native UI queries keep Plus
+inventory navigation independent. Menu, save/restore, shoulder shortcuts,
+Zombie Hover Auto start and active Upcharge bindings retain precedence.
+
+Paused controller polling keeps the native game's held-button history at
+the last simulated input. Fresh action edges are retained for the granted
+frame; action buttons and floating-point stick bytes are handled separately
+from the reserved Up/Down commands. VPAD and Pro transports have different
+button encodings. The transport routines preserve unrelated sample fields,
+validate the read count and do not accept archive-supplied native pointers.
+
+Validation: both integrated editions passed 788 layout/relocation checks;
+132 emitted-code checks cover control state, UI ownership, exact transport
+fields and indicator timing. One actual Outset Cemu case passed live bomb
+fuse stepping, held Down, stick movement, stepped sword-draw animation,
+native world-clock pause, native Plus routing, capture/restore while paused,
+resume and disabling the tool. Its native font queue contained all three
+pause/play/step labels at the intended coordinates. This is not a screenshot
+or Wii U visual acceptance claim. Pro hardware and all boss/scene/tool
+combinations remain untested. Cross-area/void restoration and durable state
+slots remain separate unfinished work.
+
+`frame_advance.s` is the small input/hook adapter. The private integration
+also wires the root/page draw, controller batch paths and frame callback;
+these component files are not a replacement full-runtime build recipe.
+
 ## Swimming air rewind (R574)
 
 `save_state/` contains the current authored clock/air packet and its restore

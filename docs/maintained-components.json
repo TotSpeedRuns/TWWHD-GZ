@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R574",
+  "revision": "R595",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -107,6 +107,21 @@
       "path": "experiments/maintained-components/save_state/save_origin/death_persistent_access.inc",
       "sha256": "5922abf16017aab76b8463701e1df7e0388fe6683eb5c6e6f0181c8deb4e520d",
       "bytes": 9797
+    },
+    {
+      "path": "experiments/maintained-components/frame_advance.c",
+      "sha256": "21cfce2fe4d8d48a316c54f0a29a019ac0bd4f923aaa7ccc98b1a0b93670da15",
+      "bytes": 8905
+    },
+    {
+      "path": "experiments/maintained-components/frame_advance.s",
+      "sha256": "f4eefb6368c3d33adf54e2af03e0a573cdc517afd351d9cd112a61aaf7e0403c",
+      "bytes": 1560
+    },
+    {
+      "path": "experiments/maintained-components/README.md",
+      "sha256": "905b516b60bc6e12a23f202221537bb87f7f082c0af49a010e9d8d1224976b7c",
+      "bytes": 10069
     }
   ],
   "excludes": [

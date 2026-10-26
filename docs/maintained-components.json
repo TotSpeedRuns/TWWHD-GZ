@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R692",
+  "revision": "R701",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "e9404da36fd825f634d503cca2c887194cbe6ffecd46e0b71c398b64bd4af26a",
-      "bytes": 28459
+      "sha256": "22d7be626f49a3aa928f7a7720e30b17e16e3e655a7640e2fd60e9a39f08d066",
+      "bytes": 29809
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -297,6 +297,11 @@
       "path": "experiments/maintained-components/collider_scan/process.h",
       "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc",
       "bytes": 2597
+    },
+    {
+      "path": "experiments/maintained-components/triforce_shards.s",
+      "sha256": "ec780e215f31042d599080c9d6329eb65d3fe7257cb224d416af5bb3473d18a4",
+      "bytes": 5547
     }
   ],
   "excludes": [

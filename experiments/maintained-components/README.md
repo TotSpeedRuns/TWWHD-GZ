@@ -5,6 +5,28 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Triforce shard inventory page (R701)
+
+`triforce_shards.s` adds an eight-row text page to the existing inventory
+controller. The entry is selection 27 on Inventory; A opens page 57. A fresh A
+press toggles the selected ownership bit, Up/Down wrap through the eight rows,
+and B returns to the Inventory entry. The page shows each shard's ownership
+and the total. It uses the existing current-save guard and request dispatcher;
+the sole new save store changes one bit in player-save byte `0xBE`. It does
+not synthesize chart, chest or quest history. Native artwork is not included.
+
+The legacy runtime seams still required are the page-57 input/draw dispatch,
+open-page hotkey ownership, D-pad repeat ownership, Inventory upper bound 27,
+the row-27 handler before the health clamp, request IDs 940 through 947 in the
+guarded inventory dispatcher, and the added text/cursor draw calls. The older
+integrated v126 export has not been regenerated to include these seams.
+
+Validation: 16 real Cemu give/remove toggles changed exactly the expected bit,
+kept the other checked collect bytes unchanged, and returned the mask to its
+original value. Held A did not repeat the toggle. Navigation, Back, and the
+native text queue's 0/8 and 8/8 counts passed. Normal save-file hashes stayed
+unchanged. This is a private candidate; Wii U verification is pending.
+
 ## Pause-order and D-pad ownership corrections (R692)
 
 `mss_order.c` classifies Slow as Pause, Stick, Resume and Fast as Pause,

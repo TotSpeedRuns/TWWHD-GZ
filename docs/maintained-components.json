@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R650",
+  "revision": "R677",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -60,8 +60,8 @@
     },
     {
       "path": "experiments/maintained-components/favorites_storage_r562.c",
-      "sha256": "9aa79cdddc8783c2b64963037956d2770c3a2480f33ebf693854b84264d007ba",
-      "bytes": 4050
+      "sha256": "1a73e4933028a4772c0d3bed48f270e7eae3ce8929ddf7031758f2b9681cb64d",
+      "bytes": 8065
     },
     {
       "path": "experiments/maintained-components/favorites_input.s",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "93ce3ac3e8d11315c26f9988ba624c3b2f7f8597e6528e4224fc7d16f3547dcf",
-      "bytes": 23018
+      "sha256": "47cfda1dd72fd3f8cea819cf2701bfe0fef0ea1545dc3c761aaf7854bf175d56",
+      "bytes": 25302
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -257,6 +257,26 @@
       "path": "experiments/maintained-components/save_state/background_owner_relation.c",
       "sha256": "cf95673a3e313f32f9cf4c6671cf21b075c999b817ea825020be24361913a8fd",
       "bytes": 1922
+    },
+    {
+      "path": "experiments/maintained-components/creator_visibility.c",
+      "sha256": "414a6f1d004c7af3c2b8025cac619c43d0dba482ffb8e921610facfb9f3f42b2",
+      "bytes": 444
+    },
+    {
+      "path": "experiments/maintained-components/movement_turn.c",
+      "sha256": "1bd72cacad4c133f5b47de7b6179969bd0396928b657255b0b2f740615224b7c",
+      "bytes": 5452
+    },
+    {
+      "path": "experiments/maintained-components/process.h",
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc",
+      "bytes": 2597
+    },
+    {
+      "path": "experiments/maintained-components/save_state/ui_capture_gate.c",
+      "sha256": "b36e460213ab007ed2b1a2be2b11ae4fb0b66492ba7dfd5e227ea34437c36124",
+      "bytes": 4216
     }
   ],
   "excludes": [

@@ -5,6 +5,42 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Current menu and capture changes (R677)
+
+`creator_visibility.c` adds the last main-menu row, Show Creator Code.
+Personal defaults visible; Public defaults hidden. Both can toggle the caption
+and number during a session. The Creator beacon and transport are unchanged.
+The runtime places the caption/number below the main options to avoid overlap.
+
+`movement_turn.c` queues left/right quarter-turn intent from the Movement page.
+Only the native game callback resolves the current unique Link process, checks
+its live identity/extent and writes the five named current/old/shape yaw scalars.
+Position, velocity, speed, actor pointers and save bytes are retained. Six
+ordinary native Cemu turns, inverses and four-turn wrap passed with unchanged
+position/velocity. These are not typed keyboard or speed-angle editors.
+
+`favorites_storage_r562.c` retains the existing two checksummed preference
+files but moves filesystem operations to one private worker. The game callback
+is the sole live-list writer; the worker consumes and returns copied packets.
+A sleeping message queue avoids idle polling; the main callback never waits
+for file I/O. One job is queued at a time, with session-only fallback after a
+stalled request. Buffers and worker stack have SDK alignment. Missing-file
+errors are explicitly returned; the normal game save is never opened.
+
+Actual Cemu add/remove/held-X, list loading and fresh-process persistence pass.
+The initial lower-priority worker was starved; the accepted worker receives a
+brief service opportunity above its creating thread and blocks when idle.
+The reported native Wii U v138 freeze still requires console verification.
+
+`save_state/ui_capture_gate.c` now distinguishes legacy capture from selected
+slot capture for retry/cancellation. The runtime opens the chooser before world
+capture. Only confirming a slot captures and publishes it. Opening/canceling
+with placed and genuinely held bombs, including explosions while the chooser
+remains open, made no capture calls and left the existing slot unchanged in
+Cemu. Two placed-bomb expiry/recreation cycles passed with exact fuse/pose and
+no scene loading. This does not prove complete held-item/effect capture or fix
+all native Wii U bomb failures. No new retail hook or reserved heap was added.
+
 ## Current logical collision-background projection (R650)
 
 `rito_physics_state.c` records a versioned wall-query tuple in the existing

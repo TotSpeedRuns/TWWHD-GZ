@@ -5,6 +5,35 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Grouped menu, turn directions and Favorites persistence (R724)
+
+`menu.s` provides eight main rows: Warps, Routes, Tools, Inventory, Tricks,
+Favorites, Testing Tools and Misc. Testing Tools contains Frame
+Advance and Movement; Misc contains the Creator Code display toggle and
+Control Binds. Matching Back targets in `frame_advance.c`, `movement_turn.c`
+and Favorites are required. The legacy input/draw/navigation seams are not
+included by this small module alone; the integrated v126 runtime is unchanged.
+
+Movement Right/Left use the corrected quarter-turn directions for all five
+current yaw fields while preserving position. Favorites derives nonempty
+folders from actual route-area metadata and retains the existing stable IDs
+and FAV1 format, including unavailable saved keys. The storage worker uses
+the active occupied account, reads old common banks only for migration, and
+commits only after close, quota flush and full readback. An unreadable bank
+refuses adoption; an empty list requires all four files to be absent. Busy
+jobs retain ownership through late completion and newer edits remain dirty.
+
+One controlled Cemu create/relaunch test passed with the same build in two
+fresh processes: genuine legacy migration, five Earth Temple entries plus
+Outset Island, six exact reopened keys, a native checkpoint load, and empty
+folder removal. Both account preference banks were 6,456 bytes; legacy common
+banks and normal-save hashes were unchanged. Root/group/Back navigation,
+Creator toggle and inverse turns also passed. This is not Wii U acceptance,
+error/account-switch coverage, pixel validation or a new save-state test.
+
+The UI snapshot is R724; the save-state sources below remain R703. Newer
+private restore-performance receipts are not exported by this source update.
+
 ## Pot and contact rebinding after native actor recreation (R703)
 
 `save_state/contact_owner_mapping.c`, `contact_replay.c`,
@@ -74,7 +103,7 @@ and a subsequent native Wind Waker press. The separate native pause-menu
 update gate is still a private candidate and is not included here. These
 results do not establish Wii U acceptance or full save-state coverage.
 
-## Current menu and capture changes (R677)
+## Earlier menu and capture baseline (R677)
 
 `creator_visibility.c` adds the last main-menu row, Show Creator Code.
 Personal defaults visible; Public defaults hidden. Both can toggle the caption
@@ -88,13 +117,11 @@ Position, velocity, speed, actor pointers and save bytes are retained. Six
 ordinary native Cemu turns, inverses and four-turn wrap passed with unchanged
 position/velocity. These are not typed keyboard or speed-angle editors.
 
-`favorites_storage_r562.c` retains the existing two checksummed preference
-files but moves filesystem operations to one private worker. The game callback
-is the sole live-list writer; the worker consumes and returns copied packets.
-A sleeping message queue avoids idle polling; the main callback never waits
-for file I/O. One job is queued at a time, with session-only fallback after a
-stalled request. Buffers and worker stack have SDK alignment. Missing-file
-errors are explicitly returned; the normal game save is never opened.
+The earlier Favorites worker moved preference I/O off the game callback.
+R724 supersedes its common-bank writes and permanent stalled-request fallback
+with the account, preservation and late-completion behavior described above.
+The callback remains the sole live-list writer and never performs filesystem
+operations. The normal game save is never opened by Favorites.
 
 Actual Cemu add/remove/held-X, list loading and fresh-process persistence pass.
 The initial lower-priority worker was starved; the accepted worker receives a

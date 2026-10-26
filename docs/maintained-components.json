@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R703",
+  "revision": "R724",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -50,18 +50,18 @@
     },
     {
       "path": "experiments/maintained-components/favorites_r562.c",
-      "sha256": "5735c5b472a7734f733470a0ab54485012595ac1c1990c58bcb5aacd29038e6e",
-      "bytes": 6610
+      "sha256": "b0380c84945ed2de22c3140f7850cfc8eef7b0c950f0c9a0f075b3595348bfc3",
+      "bytes": 8614
     },
     {
       "path": "experiments/maintained-components/favorites_r562.h",
-      "sha256": "b151d913dc202617d54a1d9d74e1171cc46b7994f32030788a4192e553993654",
-      "bytes": 479
+      "sha256": "daaa635974e34a9a3c3f64dec11e98662f0bcc910d35d97a2e97575253af053b",
+      "bytes": 539
     },
     {
       "path": "experiments/maintained-components/favorites_storage_r562.c",
-      "sha256": "1a73e4933028a4772c0d3bed48f270e7eae3ce8929ddf7031758f2b9681cb64d",
-      "bytes": 8065
+      "sha256": "809d69d0c9ba66aad836c5ffa904e2db7b34d2a2ee50ed91a96a2aea1126d608",
+      "bytes": 12072
     },
     {
       "path": "experiments/maintained-components/favorites_input.s",
@@ -110,8 +110,8 @@
     },
     {
       "path": "experiments/maintained-components/frame_advance.c",
-      "sha256": "29768feb8fde993e5be4e91fa72c6d0f299c98ca3686ae3edc2aa5f75571dd89",
-      "bytes": 9231
+      "sha256": "fce079aa5813199ed2e9b72296700cea6904c4d47a98f426a557ba285ace74e2",
+      "bytes": 9232
     },
     {
       "path": "experiments/maintained-components/frame_advance.s",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "22d7be626f49a3aa928f7a7720e30b17e16e3e655a7640e2fd60e9a39f08d066",
-      "bytes": 29809
+      "sha256": "4eed9606d03d85d7f57e17b10cfc853d04ecf29b26e61bff00748edc01ace7ea",
+      "bytes": 33342
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -265,8 +265,8 @@
     },
     {
       "path": "experiments/maintained-components/movement_turn.c",
-      "sha256": "1bd72cacad4c133f5b47de7b6179969bd0396928b657255b0b2f740615224b7c",
-      "bytes": 5452
+      "sha256": "fad6336c26ecf4efa41827a41f140689a174efe2b21fe0c4289321d5bea8e5d7",
+      "bytes": 5446
     },
     {
       "path": "experiments/maintained-components/process.h",
@@ -322,6 +322,16 @@
       "path": "experiments/maintained-components/save_state/pot_replay.c",
       "sha256": "d7f31f0f3f1781ea220a5d45578ab976e0d45ec1b86597c2f4cfe731d8c4ffc1",
       "bytes": 19874
+    },
+    {
+      "path": "experiments/maintained-components/favorites_io_state.h",
+      "sha256": "42c946cf8e0dfd25284eb730ca583a39caeb76766e6296fc273a41426620b76d",
+      "bytes": 1535
+    },
+    {
+      "path": "experiments/maintained-components/menu.s",
+      "sha256": "de6a6f87f24ff7ddab8ced1872c79a1af31114064f32b179ba065c345bc585a1",
+      "bytes": 4733
     }
   ],
   "excludes": [

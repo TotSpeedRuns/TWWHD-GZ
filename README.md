@@ -7,8 +7,8 @@ Created by Tot_sr (Aydin), with contributions documented in the source.
 
 The complete reproducible runtime export in this repository is **v126**. Newer
 reviewed source is published under `experiments/maintained-components/`; that is
-a partial component snapshot, currently R703, and does not yet reproduce the
-complete v139 release. See [source status](docs/SOURCE_STATUS.md).
+a partial snapshot with UI components through R724 and save-state components
+through R703. It does not reproduce the complete v139 release. See [source status](docs/SOURCE_STATUS.md).
 
 The native patcher and Wii U GZ Setup source are also included. **Save states
 remain under development.** Actor recreation, resource ownership, transitions

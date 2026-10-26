@@ -16,12 +16,12 @@ volatile U _gz_mvt_command;
 U _gz_mvt_report[16]={0x4d565431u,64};
 static U mvt_result;
 static U mvt_span(U a,U n){return !(a&3u)&&a>=0x10000000u&&a<0xc0000000u&&n&&n<=0xc0000000u-a;}
-U _gz_mvt_quarter(U angle,U direction){return angle<=65535u&&(direction==1||direction==2)?(angle+(direction==1?16384u:49152u))&65535u:0xffffffffu;}
+U _gz_mvt_quarter(U angle,U direction){return angle<=65535u&&(direction==1||direction==2)?(angle+(direction==1?49152u:16384u))&65535u:0xffffffffu;}
 static U mvt_match(U edge,U held,U mask){return mask&&(edge&mask)&&(held&mask)==mask;}
 void _gz_mvt_open(void){_gz_page=MVT_PAGE;_gz_state[2]=0;mvt_result=0;}
 U _gz_mvt_input(U edge,U held,U repeat){U keys=edge|repeat;
  if(!_gz_state[0]||_gz_page!=MVT_PAGE)return 0;
- if(mvt_match(edge,held,_gz_bind_masks[6])){_gz_page=0;_gz_state[2]=MVT_ROOT;return 1;}
+ if(mvt_match(edge,held,_gz_bind_masks[6])){_gz_page=58;_gz_state[2]=1;return 1;}
  if(keys&(_gz_bind_masks[3]|_gz_bind_masks[4]))_gz_state[2]^=1;
  if(_gz_state[2]>1)_gz_state[2]=0;
  if(mvt_match(edge,held,_gz_bind_masks[5])){

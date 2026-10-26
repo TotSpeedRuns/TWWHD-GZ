@@ -34,7 +34,7 @@ U _gz_fad_input(U edges,U held,U unused,U native_ui){U now_down=held&DOWN,now_up
  if(_gz_state[0]){
   pending_edges=0;owned_dpad=0;
   if(_gz_page!=PAGE)return 0;
-  if(match(edges,held,_gz_bind_masks[6])){_gz_page=0;_gz_state[2]=7;return 1;}
+  if(match(edges,held,_gz_bind_masks[6])){_gz_page=58;_gz_state[2]=0;return 1;}
   if(match(edges,held,_gz_bind_masks[5]))queue(TOGGLE);
   return 1;
  }

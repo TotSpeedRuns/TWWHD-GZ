@@ -1,9 +1,11 @@
 # Source and build status
 
-The full reproducible export remains v126. The newer maintained-components
-snapshot is R701. The latest packaged release is v139, but its complete
-multi-object build has not yet been exported here. Do not treat the component
-snapshot as a reproducible v139 release or use its checks as full-game evidence.
+The full reproducible export remains v126. The maintained snapshot includes
+UI components through R724 and save-state components through R703. The latest
+packaged release is v139; its complete multi-object build has not been exported
+here. The snapshot does not reproduce v139 or establish full-game coverage.
+R724 UI testing does not promote the older save-state sources or include the
+newer private restore-performance receipts.
 
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the

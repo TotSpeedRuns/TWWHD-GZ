@@ -10,8 +10,12 @@ extern U _gz_bind_masks[];
 extern void _gz_game_text(U,U,U,const char*);
 U _gz_fav_report[16]={0x46415631u,64,1};
 U _gz_fav_keys[FAV_CAP][2],_gz_fav_count,_gz_fav_loaded;
-U _gz_fav_dirty,_gz_fav_request,_gz_fav_toggle_request;
+U _gz_fav_dirty,_gz_fav_request,_gz_fav_toggle_request,_gz_fav_revision;
+enum {FAV_AREA_CAP=256};
+typedef struct {const char*name;U first,count;} FavGroup;
 static U indices[FAV_CAP],visible,top;
+static FavGroup groups[FAV_AREA_CAP];
+static U group_count,active=FAV_AREA_CAP,root_row,root_top;
 static U catalogue[FAV_CAP][2],catalogue_ready;
 static char lines[10][64],context[2][96];
 static void text(U x,U y,const char*s){_gz_game_text(0,x,y,s);}
@@ -49,15 +53,43 @@ U _gz_fav_record_valid(const U*p,U bytes){U i,j;
  for(i=0;i<p[4];i++)for(j=0;j<i;j++)if(p[8+i*2]==p[8+j*2]&&p[9+i*2]==p[9+j*2])return 0;
  for(i=8+p[4]*2;i<FAV_WORDS;i++)if(p[i])return 0;
  return 1;}
-void _gz_fav_rebuild(void){U i,j,k[2];visible=0;
- /* Stable route/name/entrance keys survive catalogue reordering. Unknown
-  * entries remain stored, never redirect to a different numeric index. */
+static U same_name(const char*a,const char*b){U i;
+ for(i=0;i<160;i++){if(a[i]!=b[i])return 0;if(!a[i])return 1;}return 0;}
+static U rows(void){return active<group_count?groups[active].count:group_count;}
+static void clamp_page(void){U n=rows();
+ if(_gz_state[2]>=n)_gz_state[2]=n?n-1:0;
+ if(top>=n)top=0;
+ if(_gz_state[2]<top)top=_gz_state[2];
+ else if(_gz_state[2]>=top+10)top=_gz_state[2]-9;
+}
+void _gz_fav_rebuild(void){U i,j,k[2],c,a,g,pos,h;const char*prior=active<group_count?groups[active].name:0;
+ visible=0;group_count=0;
+ /* The existing category/area/name/stage/entrance keys remain byte-exact.
+  * Folders are a derived view of actual route-area metadata, never file IDs.
+  * Unknown saved keys remain stored and cannot redirect to a numeric route. */
  if(!catalogue_ready){for(j=0;j<FAV_CAP;j++){if(!key(j,k)){k[0]=k[1]=0;}catalogue[j][0]=k[0];catalogue[j][1]=k[1];}catalogue_ready=1;}
- for(i=0;i<_gz_fav_count;i++)for(j=0;j<FAV_CAP;j++)if(catalogue[j][0]==_gz_fav_keys[i][0]&&catalogue[j][1]==_gz_fav_keys[i][1]){indices[visible++]=j;break;}
- if(_gz_page==FAV_PAGE&&_gz_state[2]>=visible)_gz_state[2]=visible?visible-1:0;
- if(top>=visible)top=0;
+ for(i=0;i<_gz_fav_count&&i<FAV_CAP;i++)for(j=0;j<FAV_CAP;j++){
+  const char*name;
+  if(catalogue[j][0]!=_gz_fav_keys[i][0]||catalogue[j][1]!=_gz_fav_keys[i][1])continue;
+  if(!location(j,&c,&a))continue;
+  name=_gz_area_records[_gz_route_folders[c].first+a].name;
+  for(g=0;g<group_count;g++)if(same_name(groups[g].name,name))break;
+  if(g==group_count){if(group_count==FAV_AREA_CAP)break;groups[g].name=name;groups[g].first=visible;groups[g].count=0;group_count++;}
+  /* Stable in-place buckets avoid another803-entry derived list. */
+  pos=groups[g].first+groups[g].count;
+  for(h=visible;h>pos;h--)indices[h]=indices[h-1];
+  indices[pos]=j;visible++;groups[g].count++;
+  for(h=g+1;h<group_count;h++)groups[h].first++;
+  break;
+ }
+ active=FAV_AREA_CAP;
+ if(prior)for(g=0;g<group_count;g++)if(same_name(prior,groups[g].name)){active=g;break;}
+ if(_gz_page==FAV_PAGE){
+  if(prior&&active==FAV_AREA_CAP){_gz_state[2]=root_row;top=root_top;}
+  clamp_page();
+ }
  _gz_fav_report[3]=_gz_fav_count;_gz_fav_report[4]=visible;
- _gz_fav_report[5]=_gz_fav_count-visible;
+ _gz_fav_report[5]=_gz_fav_count-visible;_gz_fav_report[14]=group_count;_gz_fav_report[15]=active<group_count;
 }
 U _gz_fav_toggle(U route){U i,k[2];
  if(!_gz_fav_loaded||!key(route,k)||_gz_fav_count>FAV_CAP)return 0;
@@ -68,36 +100,44 @@ U _gz_fav_toggle(U route){U i,k[2];
   if(_gz_fav_count==FAV_CAP)return 0;
   _gz_fav_keys[_gz_fav_count][0]=k[0];_gz_fav_keys[_gz_fav_count++][1]=k[1];_gz_fav_report[6]=1;
  }
- _gz_fav_dirty=1;_gz_fav_request=1;_gz_fav_rebuild();return 1;}
+ if(!++_gz_fav_revision)_gz_fav_revision=1;
+ _gz_fav_dirty=1;_gz_fav_request=1;_gz_fav_rebuild();return 1;
+}
 static U match(U edges,U held,U mask){return mask&&(edges&mask)&&(held&mask)==mask;}
 static void request_toggle(U index){
- /* VPAD only queues intent. The game callback owns preference mutation and
-  * disk snapshots, so a button press cannot change a file mid-write. */
- if(!_gz_fav_toggle_request){_gz_fav_toggle_request=index+1;_gz_fav_request=1;}}
-void _gz_fav_open(void){_gz_page=FAV_PAGE;_gz_state[2]=0;top=0;_gz_fav_request=1;}
-U _gz_fav_input(U edges,U held,U repeat){U s,c,a,idx;
+ if(!_gz_fav_toggle_request){_gz_fav_toggle_request=index+1;_gz_fav_request=1;}
+}
+void _gz_fav_open(void){_gz_page=FAV_PAGE;_gz_state[2]=0;top=0;active=FAV_AREA_CAP;root_row=root_top=0;_gz_fav_report[15]=0;_gz_fav_request=1;}
+U _gz_fav_input(U edges,U held,U repeat){U s,c,a,idx,n;
  if(!_gz_state[0])return 0;
  if(_gz_page==5&&(edges&0x2000u)){
   idx=_gz_list_offset+_gz_state[2];
-  if(_gz_state[2]<_gz_list_count&&idx<FAV_CAP){
-   request_toggle(idx);
-  }return 1;
+  if(_gz_state[2]<_gz_list_count&&idx<FAV_CAP)request_toggle(idx);
+  return 1;
  }
  if(_gz_page!=FAV_PAGE)return 0;
- if(match(edges,held,_gz_bind_masks[6])){_gz_page=0;_gz_state[2]=6;return 1;}
- if(!_gz_fav_loaded||!visible)return 1;
- s=_gz_state[2];if(s>=visible)s=visible-1;
- if(match(edges|repeat,held,_gz_bind_masks[3]))s=s?s-1:visible-1;
- if(match(edges|repeat,held,_gz_bind_masks[4]))s=s+1<visible?s+1:0;
- _gz_state[2]=s;
- if(s<top)top=s;else if(s>=top+10)top=s-9;
- idx=indices[s];
+ if(match(edges,held,_gz_bind_masks[6])){
+  if(active<group_count){active=FAV_AREA_CAP;_gz_state[2]=root_row;top=root_top;_gz_fav_report[15]=0;clamp_page();}
+  else{_gz_page=0;_gz_state[2]=FAV_ROOT_INDEX;}
+  return 1;
+ }
+ n=rows();if(!_gz_fav_loaded||!n)return 1;
+ s=_gz_state[2];if(s>=n)s=n-1;
+ if(match(edges|repeat,held,_gz_bind_masks[3]))s=s?s-1:n-1;
+ if(match(edges|repeat,held,_gz_bind_masks[4]))s=s+1<n?s+1:0;
+ _gz_state[2]=s;clamp_page();
+ if(active>=group_count){
+  if(match(edges,held,_gz_bind_masks[5])){root_row=s;root_top=top;active=s;_gz_state[2]=top=0;_gz_fav_report[15]=1;}
+  return 1;
+ }
+ idx=indices[groups[active].first+s];
  if(edges&0x2000u){request_toggle(idx);return 1;}
  if(!_gz_fav_toggle_request&&match(edges,held,_gz_bind_masks[5])&&location(idx,&c,&a)&&!_gz_pending){
   _gz_route_selection=c;_gz_area_selection=a;_gz_route_choice=idx;_gz_pending=4;
  }
- return 1;}
-void _gz_fav_root_draw(void){text(4,9,"Favorites");}
+ return 1;
+}
+void _gz_fav_root_draw(void){text(4,FAV_ROOT_Y,"Favorites");}
 void _gz_fav_route_hint(void){U k[2],idx;
  if(_gz_page!=5)return;
  idx=_gz_list_offset+_gz_state[2];
@@ -105,25 +145,26 @@ void _gz_fav_route_hint(void){U k[2],idx;
  if(_gz_fav_loaded&&key(idx,k)&&find(k)<FAV_CAP){text(4,2,"Favorite");text(4,19,"X: Remove Favorite");}
  else text(4,19,"X: Add Favorite");
 }
-void _gz_fav_draw(void){U n,s,c,a,idx;
+void _gz_fav_draw(void){U n,s,c,a,idx,total=rows();
  text(2,1,"Favorites");
- if(!_gz_fav_loaded){text(4,4,"Loading favorites...");text(4,19,"B: Back");return;}
- if(!visible){text(4,4,"No favorites yet");text(4,6,"Press X on a route memfile.");}
+ if(!_gz_fav_loaded){text(4,4,"Loading favorites...");if(_gz_fav_report[8])text(4,6,"Could not read favorites. Retrying...");text(4,19,"B: Back");return;}
+ if(!visible){text(4,4,_gz_fav_count?"No available favorites":"No favorites yet");text(4,6,"Press X on a route memfile.");}
  else{
-  s=_gz_state[2];if(s>=visible)s=visible-1;
-  for(n=0;n<10&&top+n<visible;n++){
-   copy(lines[n],_gz_route_records[indices[top+n]].name,64);text(4,4+n,lines[n]);
-   if(top+n==s)text(2,4+n,">");
+  s=_gz_state[2];if(s>=total)s=total-1;
+  if(active<group_count)text(4,2,groups[active].name);
+  for(n=0;n<10&&top+n<total;n++){
+   const char*name=active<group_count?_gz_route_records[indices[groups[active].first+top+n]].name:groups[top+n].name;
+   copy(lines[n],name,64);text(4,4+n,lines[n]);if(top+n==s)text(2,4+n,">");
   }
-  idx=indices[s];if(location(idx,&c,&a)){
-   copy(context[0],_gz_route_folders[c].name,96);
-   copy(context[1],_gz_area_records[_gz_route_folders[c].first+a].name,96);
-   text(4,15,context[0]);text(4,16,context[1]);
+  if(active<group_count){
+   idx=indices[groups[active].first+s];if(location(idx,&c,&a)){
+    copy(context[0],_gz_route_folders[c].name,96);text(4,15,context[0]);
+   }
   }
  }
- if(_gz_fav_report[8])text(4,17,"Favorites kept for this session; storage unavailable.");
+ if(_gz_fav_report[8])text(4,17,"Favorites not saved yet. Retrying...");
  else if(_gz_fav_dirty)text(4,17,"Saving favorites...");
- else if(_gz_fav_count)text(4,17,"Favorites saved");
+ else if(_gz_fav_report[9])text(4,17,"Favorites saved");
  if(_gz_fav_report[5])text(4,18,"Some favorites are unavailable in this build.");
- text(4,19,"A: Load   X: Remove   B: Back");
+ text(4,19,active<group_count?"A: Load   X: Remove   B: Areas":"A: Open Area   B: Back");
 }

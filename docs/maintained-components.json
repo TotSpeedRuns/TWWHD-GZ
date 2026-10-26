@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R724",
-  "status": "Reviewed components; full integrated build export remains separately versioned.",
+  "revision": "v140-BottleR3-AirR2",
+  "status": "Reviewed authored components with bounded Cemu air qualification; full integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -110,8 +110,8 @@
     },
     {
       "path": "experiments/maintained-components/frame_advance.c",
-      "sha256": "fce079aa5813199ed2e9b72296700cea6904c4d47a98f426a557ba285ace74e2",
-      "bytes": 9232
+      "bytes": 9232,
+      "sha256": "fce079aa5813199ed2e9b72296700cea6904c4d47a98f426a557ba285ace74e2"
     },
     {
       "path": "experiments/maintained-components/frame_advance.s",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "4eed9606d03d85d7f57e17b10cfc853d04ecf29b26e61bff00748edc01ace7ea",
-      "bytes": 33342
+      "bytes": 33350,
+      "sha256": "09c9865db7052db9728f93d7b4138d3c279d3cf11115bac7bc3d5fe7a83e41c8"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -332,6 +332,41 @@
       "path": "experiments/maintained-components/menu.s",
       "sha256": "de6a6f87f24ff7ddab8ced1872c79a1af31114064f32b179ba065c345bc585a1",
       "bytes": 4733
+    },
+    {
+      "path": "experiments/maintained-components/bottle_menu.c",
+      "bytes": 7908,
+      "sha256": "8d03b2ccdde38391263fc2a6b1c8ce893ec322fcc18a76a8e334aeaebcdcb486"
+    },
+    {
+      "path": "experiments/maintained-components/bottle_menu.h",
+      "bytes": 643,
+      "sha256": "45a8bc7dc9695cb704c99cf436c969f97f31f1f850d21d35a0898f83c5dc1c5c"
+    },
+    {
+      "path": "experiments/maintained-components/bottle_bridges.s",
+      "bytes": 1291,
+      "sha256": "f90c313b23a9994eefcb55fa0f27aee74724b21e0216da925346cad7469de4c6"
+    },
+    {
+      "path": "experiments/maintained-components/frame_advance_air.s",
+      "bytes": 635,
+      "sha256": "57ad5b130ef2cb7cde960913f0fd0a7f130ac609110e059869af551b817d525b"
+    },
+    {
+      "path": "experiments/maintained-components/bottle_play.h",
+      "bytes": 2348,
+      "sha256": "a5230138efbd338f237bcebfe3f660d1349191f78a896b823baca6b5ffede2d2"
+    },
+    {
+      "path": "experiments/maintained-components/bottle_play_profile.json",
+      "bytes": 324,
+      "sha256": "f62605fa080eeba577f18f6cc0db337bdc3b4a38f8c636ad2f1379d7432438a1"
+    },
+    {
+      "path": "experiments/maintained-components/BOTTLES_AND_AIR.md",
+      "bytes": 7122,
+      "sha256": "66624ebfd79cf6a50dbc0991b0d3a3d25faf82e06dcce6713c6b9e3f9951d718"
     }
   ],
   "excludes": [

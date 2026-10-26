@@ -1,0 +1,9 @@
+{
+  "format": "TWWHD-GZ-bottle-play-profile/1",
+  "original_EUR_v0_sha256": "f9f461738949a09481dc1a31c01ad27db813c4c6058fdd7d015624a4146bbf0b",
+  "address": 38928600,
+  "bytes": 88,
+  "sha256": "4eb28e54a74385db77eb20f22cac08a1ef331f58a115536e25973bd1d2ee7ab7",
+  "local_only": true,
+  "output": "bottle_play_profile.inc"
+}

@@ -2,10 +2,20 @@
 
 The full reproducible export remains v126. The maintained snapshot includes
 UI components through R724 and save-state components through R703. The latest
-packaged release is v139; its complete multi-object build has not been exported
-here. The snapshot does not reproduce v139 or establish full-game coverage.
+packaged release is v140; its complete multi-object build has not been exported
+here. The snapshot does not reproduce v140 or establish full-game coverage.
 R724 UI testing does not promote the older save-state sources or include the
 newer private restore-performance receipts.
+
+The v140 source proposal additionally stages the reviewed bottle editor and
+Frame Advance air-handler component. It does not replace the v126 full
+builder or export the full newer runtime. One Cemu normal-swimming air test
+passed pause stability, three one-point steps and ordinary Resume draining;
+diving, drowning, every area and Wii U remain unqualified. The 88-byte
+retail profile is absent from source and must be extracted locally from
+the exact owned EUR v0 input. See the maintained-component compatibility
+notes. This source snapshot does not reproduce the full release or claim native
+Wii U acceptance.
 
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the

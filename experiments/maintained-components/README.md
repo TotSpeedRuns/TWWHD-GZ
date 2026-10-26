@@ -5,6 +5,16 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Bottle editor and Frame Advance air handler (v140 source proposal)
+
+The authored bottle editor and its small assembly bridges are included with
+the R3 current-Play checks. Retail profile bytes are extracted only into
+ignored local assets. The separate R2 air countdown-handler wrapper is
+included with one Cemu normal-swimming pause/three-step/resume pass. Diving,
+drowning, every area and Wii U remain unqualified.
+See [compatibility and build notes](BOTTLES_AND_AIR.md). Existing grouped
+menus, Movement and Favorites remain the R724 source snapshot below.
+
 ## Grouped menu, turn directions and Favorites persistence (R724)
 
 `menu.s` provides eight main rows: Warps, Routes, Tools, Inventory, Tricks,

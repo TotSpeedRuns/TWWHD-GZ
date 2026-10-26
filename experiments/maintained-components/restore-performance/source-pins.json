@@ -1,0 +1,51 @@
+{
+  "schema": "authored-restore-performance-source/1",
+  "normalization": "UTF-8 LF",
+  "files": [
+    {
+      "path": "factory_read_scope.h",
+      "bytes": 1353,
+      "sha256": "736b2f3088cfce8b2641d97a7bfb08e0d81cba915b97993938f3215dd79e6486"
+    },
+    {
+      "path": "factory_read_scope.inc",
+      "bytes": 6549,
+      "sha256": "641d17d9ebecd501681da1bfdd42c8a233dc6c2eb7ac0a4763e270a6963c5740"
+    },
+    {
+      "path": "factory_source_receipt.inc",
+      "bytes": 11588,
+      "sha256": "e959ea26ddf0ceab042320705b2094e68d5145ff36be252817dc56730f1d64cf"
+    },
+    {
+      "path": "members.c",
+      "bytes": 6525,
+      "sha256": "d223e787145e483a0bd7da3d6f0f50647fdedf7d81cbd74bc9b0cab491f6666c"
+    },
+    {
+      "path": "members.h",
+      "bytes": 2345,
+      "sha256": "13378abd1a7554f26787a066c81232f4951eb188e61874c281398685601ca98c"
+    },
+    {
+      "path": "observer.h",
+      "bytes": 2028,
+      "sha256": "5c2f548a96cb5706bcdc36f8b0ec8e828d4a62c0b82d4273337edf82bb406b10"
+    },
+    {
+      "path": "process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+    },
+    {
+      "path": "integration-seams.json",
+      "bytes": 6827,
+      "sha256": "75ab12bb9b478737ee5fcc02db8acaadf102bce7f466ac10a8a5164ea45bbd81"
+    },
+    {
+      "path": "integration-seams.txt",
+      "bytes": 1243,
+      "sha256": "4e93032fdb7394cc77f0ba48967c778608d7ecd73d63c92230e32f9a0081d257"
+    }
+  ]
+}

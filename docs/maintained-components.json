@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v140-WaterR4-InventoryStick",
-  "status": "Qualified authored UI components; post-v140 Wii U acceptance pending; integrated export remains v126.",
+  "revision": "post-v140-UI-and-RestorePerformance",
+  "status": "Reviewed authored partial snapshots; scoped Cemu restore tests passed, Wii U/void/sword gaps remain; full reproducible export stays v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 34947,
-      "sha256": "90ed0e5c8a0d1fa390607a301b2069feafed66586873d6f40077f16a7347d13a"
+      "bytes": 35262,
+      "sha256": "c5ac2cb82ec1dd103a50ccdf35fcb352353152178e0d757a93cd570ff9b29419"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -387,6 +387,61 @@
       "path": "experiments/maintained-components/menu_stats_gate.s",
       "bytes": 304,
       "sha256": "01b6e305b559f9e4f80fa975bba86d354259edf9239961226e93d4539e6a1164"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/factory_read_scope.h",
+      "bytes": 1353,
+      "sha256": "736b2f3088cfce8b2641d97a7bfb08e0d81cba915b97993938f3215dd79e6486"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/factory_read_scope.inc",
+      "bytes": 6549,
+      "sha256": "641d17d9ebecd501681da1bfdd42c8a233dc6c2eb7ac0a4763e270a6963c5740"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/factory_source_receipt.inc",
+      "bytes": 11588,
+      "sha256": "e959ea26ddf0ceab042320705b2094e68d5145ff36be252817dc56730f1d64cf"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/integration-seams.json",
+      "bytes": 6827,
+      "sha256": "75ab12bb9b478737ee5fcc02db8acaadf102bce7f466ac10a8a5164ea45bbd81"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/integration-seams.txt",
+      "bytes": 1243,
+      "sha256": "4e93032fdb7394cc77f0ba48967c778608d7ecd73d63c92230e32f9a0081d257"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/members.c",
+      "bytes": 6525,
+      "sha256": "d223e787145e483a0bd7da3d6f0f50647fdedf7d81cbd74bc9b0cab491f6666c"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/members.h",
+      "bytes": 2345,
+      "sha256": "13378abd1a7554f26787a066c81232f4951eb188e61874c281398685601ca98c"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/observer.h",
+      "bytes": 2028,
+      "sha256": "5c2f548a96cb5706bcdc36f8b0ec8e828d4a62c0b82d4273337edf82bb406b10"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/README.md",
+      "bytes": 5328,
+      "sha256": "e7d6c9766604cff09893f02f9a3406e66e9130610327a978c76d78fba7418bc2"
+    },
+    {
+      "path": "experiments/maintained-components/restore-performance/source-pins.json",
+      "bytes": 1468,
+      "sha256": "d1fbb86069d4920c5ab67cd8ec98a17c9a04004ff7f8642c46dbd9b558953222"
     }
   ],
   "excludes": [

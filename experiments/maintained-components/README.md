@@ -41,8 +41,12 @@ banks and normal-save hashes were unchanged. Root/group/Back navigation,
 Creator toggle and inverse turns also passed. This is not Wii U acceptance,
 error/account-switch coverage, pixel validation or a new save-state test.
 
-The UI snapshot is R724; the save-state sources below remain R703. Newer
-private restore-performance receipts are not exported by this source update.
+The UI snapshot is R724; the save-state sources below remain R703. The
+separate [post-v140 restore-performance snapshot](restore-performance/README.md)
+contains the reviewed authored five-view READ scope/receipt includes, integration
+seams and private collider observation validator. Three expired-bomb and three
+idle Cemu restores passed; it is not a complete newer build or Wii U acceptance.
+The older source snapshots and reproducible v126 export remain intact.
 
 ## Pot and contact rebinding after native actor recreation (R703)
 

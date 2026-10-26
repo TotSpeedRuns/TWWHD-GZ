@@ -1,0 +1,59 @@
+{
+  "schema": "authored-restore-performance-seams/1",
+  "complete_current_runtime_reproducible": false,
+  "scope": "Exact authored component hunks only; refuse a mismatched parent. Full dependencies, native hook ABI and current whole runtime are separate.",
+  "files": [
+    {
+      "path": "mapped_service.c",
+      "baseline_sha256": "158c3a6d49262c58756a4bb8c1ddaf06842b1f0146648971ffe08e6593a98ff2",
+      "selected_sha256": "bd99f1c68835ac7a6b7ba610070b590d5204d4570597bf16bf5d7d67f120232e",
+      "hunks": [
+        {
+          "before": " s->valid=1;_gz_bmh_seal=btr_hash(s,sizeof(*s));return 0;\n}\n\n/* Returned mapped pointers expire at the end of this exact service/frame.\n * Every use repeats original source checks and native actor/resource checks.\n * No caller destination/pointer is accepted as a write/replay capability. */\n",
+          "after": " s->valid=1;_gz_bmh_seal=btr_hash(s,sizeof(*s));return 0;\n}\n\n#include \"factory_read_scope.inc\"\n\n/* Returned mapped pointers expire at the end of this exact service/frame.\n * Every use repeats original source checks and native actor/resource checks.\n * No caller destination/pointer is accepted as a write/replay capability. */\n"
+        },
+        {
+          "before": " _gz_bmh_busy=1;service=s->id;frame=s->frame;row=14+(service-2)*7;\n _gz_bmh_report[2]=token;_gz_bmh_report[4]=frame;_gz_bmh_report[row]=service;_gz_bmh_report[row+1]=frame;\n z=_gz_roh_service_begin(token,service);_gz_bmh_report[7]=z;if(z)goto done;\n for(i=0;i<5;i++){\n  p[i]=_gz_bmv_read_service(token,frame,i+1);\n  if(!p[i]){z=28;break;}mask|=1u<<i;\n }\n _gz_bmh_report[row+2]=mask;\n if(!z){\n",
+          "after": " _gz_bmh_busy=1;service=s->id;frame=s->frame;row=14+(service-2)*7;\n _gz_bmh_report[2]=token;_gz_bmh_report[4]=frame;_gz_bmh_report[row]=service;_gz_bmh_report[row+1]=frame;\n z=_gz_roh_service_begin(token,service);_gz_bmh_report[7]=z;if(z)goto done;\n z=bmh_read_enter(token,frame);\n if(!z){\n  z=_gz_roh_factory_source_begin(token,frame);\n  if(!z){\n   for(i=0;i<5;i++){\n    p[i]=_gz_bmv_read_service(token,frame,i+1);\n    if(!p[i]){z=28;break;}mask|=1u<<i;\n   }\n  }\n  z=_gz_roh_factory_source_end(token,frame,z);\n  z=bmh_read_leave(z);\n }\n _gz_bmh_report[row+2]=mask;\n if(!z){\n"
+        }
+      ]
+    },
+    {
+      "path": "owner.c",
+      "baseline_sha256": "d2f67c31ba74db6ec334db1367f8f394f3ffc6f8a3eed78baedda94dc3995719",
+      "selected_sha256": "80337a6bf1deb508f3b972022291690bd9346ffc874e926e9e6092b3cc21258d",
+      "hunks": [
+        {
+          "before": " (_gz_roh_live_ftravel?16384u:0u)|(_gz_roh_live_fieldtravel?32768u:0u);}\nstatic u32 all_quiet(void){return base_quiet()&&!_gz_roh_live_world_pending&&!_gz_roh_live_world_failed&&!_gz_roh_live_fieldphase[3]&&!pending();}\nstatic u32 source_archive_receipt(u32,RohSample*);\nstatic u32 archive(u32 p,RohSample* s,u32 deep){\n u32 n,o,size,c,reused;\n if(deep){reused=source_archive_receipt(p,s);if(reused)return reused==1?0:ROH_ARCHIVE;}\n if(!span(p,216))return ROH_ARCHIVE;size=U32(p,4);c=gz_arc_shape(p,size);if(!c)return ROH_ARCHIVE;\n if(U32(p,156)!=0x60000u)return ROH_ARCHIVE;\n",
+          "after": " (_gz_roh_live_ftravel?16384u:0u)|(_gz_roh_live_fieldtravel?32768u:0u);}\nstatic u32 all_quiet(void){return base_quiet()&&!_gz_roh_live_world_pending&&!_gz_roh_live_world_failed&&!_gz_roh_live_fieldphase[3]&&!pending();}\nstatic u32 source_archive_receipt(u32,RohSample*);\nstatic u32 factory_archive_receipt(u32,RohSample*);\nstatic u32 archive(u32 p,RohSample* s,u32 deep){\n u32 n,o,size,c,reused;\n if(deep){reused=factory_archive_receipt(p,s);if(reused)return reused==1?0:ROH_ARCHIVE;}\n if(deep){reused=source_archive_receipt(p,s);if(reused)return reused==1?0:ROH_ARCHIVE;}\n if(!span(p,216))return ROH_ARCHIVE;size=U32(p,4);c=gz_arc_shape(p,size);if(!c)return ROH_ARCHIVE;\n if(U32(p,156)!=0x60000u)return ROH_ARCHIVE;\n"
+        },
+        {
+          "before": " return 0;\n}\n#include \"owner_source_receipt.inc\"\nstatic u32 validate(u32 token,u32 deep,u32 check_deadline){\n u32 z,life,again,frame;\n if(!owned(token))return ROH_BUSY;\n",
+          "after": " return 0;\n}\n#include \"owner_source_receipt.inc\"\n#include \"factory_source_receipt.inc\"\nstatic u32 validate(u32 token,u32 deep,u32 check_deadline){\n u32 z,life,again,frame;\n if(!owned(token))return ROH_BUSY;\n"
+        }
+      ]
+    },
+    {
+      "path": "save_origin/root_access.c",
+      "baseline_sha256": "91e6d853baf7f386b451b5c5fd126105517d4cc30a441a20ae110708e6fa6caf",
+      "selected_sha256": "6ae2a9edfbc563d029fbb4bf1a6c730ddc46e32fa38da7bf3a2150b448192aa5",
+      "hunks": [
+        {
+          "before": "/* Real fixed-frame callback scope. A nonce alone cannot issue this context.\n * HG independently binds its actual native thread and excludes mutators. */\nextern SpoU32 _gz_bsg_context_owned(SpoU32),_gz_wgp_context_owned(SpoU32);\nSpoU32 _gz_srh_context_owned(SpoU32 cookie){\n if(_gz_wgp_context_owned(cookie))return 1;\n if(_gz_bsg_context_owned(cookie))return 1;\n if(_gz_nrt_context_owned(cookie))return 1;\n",
+          "after": "/* Real fixed-frame callback scope. A nonce alone cannot issue this context.\n * HG independently binds its actual native thread and excludes mutators. */\nextern SpoU32 _gz_bsg_context_owned(SpoU32),_gz_wgp_context_owned(SpoU32);\nextern SpoU32 _gz_bmh_read_context_owned(SpoU32);\nSpoU32 _gz_srh_context_owned(SpoU32 cookie){\n if(_gz_bmh_read_context_owned(cookie))return 1;\n if(_gz_wgp_context_owned(cookie))return 1;\n if(_gz_bsg_context_owned(cookie))return 1;\n if(_gz_nrt_context_owned(cookie))return 1;\n"
+        }
+      ]
+    },
+    {
+      "path": "members.c",
+      "baseline_sha256": "d4ba379769e166e4e75aff07d6fa8c24d1d145d58254107c5e9a4b14db274fec",
+      "selected_sha256": "d223e787145e483a0bd7da3d6f0f50647fdedf7d81cbd74bc9b0cab491f6666c",
+      "hunks": [
+        {
+          "before": "  * pointers are scalar addresses only and are never dereferenced here. */\n for(i=0;i<CO_CAP;i++){\n  e=&_gz_co_rows[i];\n  if(e->state==CO_EMPTY){if(e->object||e->generation)goto corrupt;continue;}\n  if(e->state!=CO_LIVE&&e->state!=CO_DEAD&&e->state!=CO_UNOBSERVED)goto corrupt;\n  if(!span(e->object,0x50)||e->generation>h->serial||\n   (e->state==CO_LIVE&&!e->generation)||(e->state==CO_UNOBSERVED&&e->generation))goto corrupt;\n",
+          "after": "  * pointers are scalar addresses only and are never dereferenced here. */\n for(i=0;i<CO_CAP;i++){\n  e=&_gz_co_rows[i];\n  if(e->state==CO_EMPTY){if(e->object|e->generation)goto corrupt;continue;}\n  if(e->state!=CO_LIVE&&e->state!=CO_DEAD&&e->state!=CO_UNOBSERVED)goto corrupt;\n  if(!span(e->object,0x50)||e->generation>h->serial||\n   (e->state==CO_LIVE&&!e->generation)||(e->state==CO_UNOBSERVED&&e->generation))goto corrupt;\n"
+        }
+      ]
+    }
+  ]
+}

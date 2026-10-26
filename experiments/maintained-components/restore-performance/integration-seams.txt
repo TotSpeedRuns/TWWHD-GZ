@@ -1,0 +1,39 @@
+--- baseline/mapped_service.c
++++ selected/mapped_service.c
+@@ -164,0 +165,2 @@
++#include "factory_read_scope.inc"
++
+@@ -198,3 +200,11 @@
+- for(i=0;i<5;i++){
+-  p[i]=_gz_bmv_read_service(token,frame,i+1);
+-  if(!p[i]){z=28;break;}mask|=1u<<i;
++ z=bmh_read_enter(token,frame);
++ if(!z){
++  z=_gz_roh_factory_source_begin(token,frame);
++  if(!z){
++   for(i=0;i<5;i++){
++    p[i]=_gz_bmv_read_service(token,frame,i+1);
++    if(!p[i]){z=28;break;}mask|=1u<<i;
++   }
++  }
++  z=_gz_roh_factory_source_end(token,frame,z);
++  z=bmh_read_leave(z);
+--- baseline/owner.c
++++ selected/owner.c
+@@ -79,0 +80 @@
++static u32 factory_archive_receipt(u32,RohSample*);
+@@ -81,0 +83 @@
++ if(deep){reused=factory_archive_receipt(p,s);if(reused)return reused==1?0:ROH_ARCHIVE;}
+@@ -224,0 +227 @@
++#include "factory_source_receipt.inc"
+--- baseline/save_origin/root_access.c
++++ selected/save_origin/root_access.c
+@@ -176,0 +177 @@
++extern SpoU32 _gz_bmh_read_context_owned(SpoU32);
+@@ -177,0 +179 @@
++ if(_gz_bmh_read_context_owned(cookie))return 1;
+--- baseline/members.c
++++ selected/members.c
+@@ -30 +30 @@
+-  if(e->state==CO_EMPTY){if(e->object||e->generation)goto corrupt;continue;}
++  if(e->state==CO_EMPTY){if(e->object|e->generation)goto corrupt;continue;}

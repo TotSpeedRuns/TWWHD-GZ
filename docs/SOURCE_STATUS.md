@@ -4,8 +4,12 @@ The full reproducible export remains v126. The maintained snapshot includes
 UI components through R724 and save-state components through R703. The latest
 packaged release is v140; its complete multi-object build has not been exported
 here. The snapshot does not reproduce v140 or establish full-game coverage.
-R724 UI testing does not promote the older save-state sources or include the
-newer private restore-performance receipts.
+R724 UI testing does not promote the older save-state sources. A separate
+post-v140 restore-performance folder now supplies the reviewed authored READ
+scope/receipt includes and private collider metadata validator. It does not
+export a complete newer restore build. Three expired-bomb and three idle Cemu
+restores passed; native Wii U, post-void and sword-model gaps remain unresolved.
+See the maintained restore-performance compatibility notes for exact limits.
 
 The v140 source proposal additionally stages the reviewed bottle editor and
 Frame Advance air-handler component. It does not replace the v126 full

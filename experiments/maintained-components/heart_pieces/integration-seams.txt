@@ -1,0 +1,44 @@
+--- R751/runtime-personal.s
++++ candidate/runtime-personal.s
+@@ -80477,0 +80478,9 @@
++cmpwi 10,25
++bne _gz_hpc_input_ordinary
++andi. 9,8,0x2000
++beq _gz_hpc_input_ordinary
++stw 10,8(29)
++li 10,948
++b _gz_inv_queue
++.global _gz_hpc_input_ordinary
++_gz_hpc_input_ordinary:
+@@ -80871,0 +80881,7 @@
++cmplwi 27,948
++bne _gz_hpc_apply_ordinary
++mr 3,28
++bl _gz_hpc_apply
++b _gz_inv_apply_done
++.global _gz_hpc_apply_ordinary
++_gz_hpc_apply_ordinary:
+@@ -81122,0 +81139 @@
++rlwinm 8,8,0,0,29
+@@ -81744,0 +81762,9 @@
++bl _gz_inv_text_small
++lhz 9,0(28)
++andi. 9,9,3
++slwi 9,9,2
++lis 8,_gz_hpc_labels@ha
++addi 8,8,_gz_hpc_labels@l
++lwzx 6,8,9
++li 4,885
++li 5,408
+@@ -700477,0 +700504,11 @@
++
++/* Authored piece-progress labels; no native asset or acquisition state. */
++.section .data,"aw",@progbits
++.balign 4
++.global _gz_hpc_labels
++_gz_hpc_labels:
++.long _gz_hpc_label0,_gz_hpc_label1,_gz_hpc_label2,_gz_hpc_label3
++_gz_hpc_label0: .string "Pieces: 0/4 (X)"
++_gz_hpc_label1: .string "Pieces: 1/4 (X)"
++_gz_hpc_label2: .string "Pieces: 2/4 (X)"
++_gz_hpc_label3: .string "Pieces: 3/4 (X)"

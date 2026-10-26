@@ -1,0 +1,35 @@
+{
+  "schema": "quarter-heart-piece-runtime-seams/1",
+  "baseline_source": "f430c41bbac9cabb60ba3537c8308e2bedd4e8a372f4be3b8c2dba98111e4551",
+  "selected_source": "6664b1a9f6bca42dc80192600f1004fb6a5e6dc0c64da1edfa98e72cfa27f6b2",
+  "seams": [
+    {
+      "name": "piece input on container row only",
+      "before": "_gz_inv_health_input:\ncmpwi 10, 27",
+      "after": "_gz_inv_health_input:\ncmpwi 10,25\nbne _gz_hpc_input_ordinary\nandi. 9,8,0x2000\nbeq _gz_hpc_input_ordinary\nstw 10,8(29)\nli 10,948\nb _gz_inv_queue\n.global _gz_hpc_input_ordinary\n_gz_hpc_input_ordinary:\ncmpwi 10, 27"
+    },
+    {
+      "name": "new queued request only",
+      "before": "_gz_btl_apply_ordinary:\ncmplwi 27, 940",
+      "after": "_gz_btl_apply_ordinary:\ncmplwi 27,948\nbne _gz_hpc_apply_ordinary\nmr 3,28\nbl _gz_hpc_apply\nb _gz_inv_apply_done\n.global _gz_hpc_apply_ordinary\n_gz_hpc_apply_ordinary:\ncmplwi 27, 940"
+    },
+    {
+      "name": "native full-heart refill ceiling",
+      "before": "lhz 8, 0(28)\nstb 8, 3(28)\nb _gz_inv_apply_done",
+      "after": "lhz 8, 0(28)\nrlwinm 8,8,0,0,29\nstb 8, 3(28)\nb _gz_inv_apply_done"
+    },
+    {
+      "name": "independent piece-progress display",
+      "before": "li 5, 374\nbl _gz_inv_text_small\nbl _gz_inventory_magic_draw",
+      "after": "li 5, 374\nbl _gz_inv_text_small\nlhz 9,0(28)\nandi. 9,9,3\nslwi 9,9,2\nlis 8,_gz_hpc_labels@ha\naddi 8,8,_gz_hpc_labels@l\nlwzx 6,8,9\nli 4,885\nli 5,408\nbl _gz_inv_text_small\nbl _gz_inventory_magic_draw"
+    }
+  ],
+  "appended_labels": "\n/* Authored piece-progress labels; no native asset or acquisition state. */\n.section .data,\"aw\",@progbits\n.balign 4\n.global _gz_hpc_labels\n_gz_hpc_labels:\n.long _gz_hpc_label0,_gz_hpc_label1,_gz_hpc_label2,_gz_hpc_label3\n_gz_hpc_label0: .string \"Pieces: 0/4 (X)\"\n_gz_hpc_label1: .string \"Pieces: 1/4 (X)\"\n_gz_hpc_label2: .string \"Pieces: 2/4 (X)\"\n_gz_hpc_label3: .string \"Pieces: 3/4 (X)\"\n",
+  "required_parent": "Accepted privateR751; not the R753 diagnostic image",
+  "assembly_new_labels": "Authored data only; no native assets",
+  "current_GetPlay_import": "0x025200D8, existing whole initialized getter",
+  "other_component_roles_retained": 73,
+  "new_hooks": 0,
+  "new_imports": 0,
+  "new_heap_reservation_bytes": 0
+}

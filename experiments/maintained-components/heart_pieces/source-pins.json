@@ -1,0 +1,60 @@
+{
+  "schema": "quarter-heart-piece-authored-source/1",
+  "source_pins": {
+    "heart_pieces.c": {
+      "bytes": 3392,
+      "sha256": "6d8613fec45453a2b8f6130144763b9ef9d5b421c261bb638b3c926e3e51307a"
+    },
+    "heart_pieces.h": {
+      "bytes": 303,
+      "sha256": "f8308671c3ab40e9a7b51d97ec617aa901c5bc7b0108417f56a86d6a6f84657d"
+    },
+    "bottle_play.h": {
+      "bytes": 3735,
+      "sha256": "de33c00acd532ca2e52c5b4154cfdaacb6b56fd12b72760f98d2647155a0d1bf"
+    },
+    "runtime-personal.s": {
+      "bytes": 22433344,
+      "sha256": "6664b1a9f6bca42dc80192600f1004fb6a5e6dc0c64da1edfa98e72cfa27f6b2"
+    }
+  },
+  "published_pins": {
+    "bottle_play.h": {
+      "bytes": 3478,
+      "sha256": "e566fadff0583c21e513a33c80b939abfb2554266d336312386eed1779a1032e"
+    },
+    "heart_pieces.c": {
+      "bytes": 3392,
+      "sha256": "6d8613fec45453a2b8f6130144763b9ef9d5b421c261bb638b3c926e3e51307a"
+    },
+    "heart_pieces.h": {
+      "bytes": 303,
+      "sha256": "f8308671c3ab40e9a7b51d97ec617aa901c5bc7b0108417f56a86d6a6f84657d"
+    },
+    "integration-seams.json": {
+      "bytes": 2279,
+      "sha256": "1a446e58ab0bce37649d53f53a91f3a1fe6558691ceb34428c188e87ce5585a1"
+    },
+    "integration-seams.txt": {
+      "bytes": 1082,
+      "sha256": "16630ff6037f9f28b480910fbf84eb22904d187e072a56bda6838b1f3e8e3f6d"
+    },
+    "README.md": {
+      "bytes": 4404,
+      "sha256": "bd814860db69584a28c3aa81be8104048cc47b266c03e8f64e9e7f3722c070e4"
+    }
+  },
+  "only_header_transform": "Replace the bounded88-byte retail profile initializer with the existing locally generated include. Expansion is exact.",
+  "native_profile_published": false,
+  "binary_or_game_assets_published": false,
+  "private_image_sha256": "85cef8a2a3ee7ebef9b26d3042dfd1e4657857b420dccf8de9b78b42f01b2deb",
+  "native_qualification": {
+    "bytes": 4141,
+    "sha256": "b0e78bf0d36fa2ad9c8ddb0c1e506bfa352ba2c0717652ecbfe5c3eb3a3c8de3"
+  },
+  "native_heart_cases": 22,
+  "native_bomb_regressions": 2,
+  "hardware_tested": false,
+  "full_current_build_exported": false,
+  "hash_normalization": "Published pins use UTF-8 with LF line endings, matching Git source blobs; source_pins retain original private input hashes."
+}

@@ -5,6 +5,16 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Quarter-heart-piece editor (private R755)
+
+The [heart-piece component](heart_pieces/README.md) adds separate 0/4 through
+3/4 progress on Inventory's Heart Containers row and corrects Refills to use
+the full-heart health ceiling. The native meter consumes its queued change
+while GZ and the native Plus screen remain open. One isolated Cemu session
+passed 22 menu cases and two ordinary expired-bomb restore regressions, with
+unchanged original ROM and native save files. This is maintained component
+source, not a full newer build or Wii U acceptance.
+
 ## Bottle editor and Frame Advance air handler (v140 source proposal)
 
 The authored bottle editor and its small assembly bridges are included with

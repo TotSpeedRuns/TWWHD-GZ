@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v140-UI-and-RestorePerformance",
-  "status": "Reviewed authored partial snapshots; scoped Cemu restore tests passed, Wii U/void/sword gaps remain; full reproducible export stays v126.",
+  "revision": "post-v140-UI-RestorePerformance-and-HeartPieces",
+  "status": "Reviewed authored partial snapshots; R755 heart-piece component has22 real Cemu menu cases and2 expired-bomb regressions. Wii U and full save-state coverage remain unqualified; the full reproducible export stays v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 35262,
-      "sha256": "c5ac2cb82ec1dd103a50ccdf35fcb352353152178e0d757a93cd570ff9b29419"
+      "bytes": 35818,
+      "sha256": "5ec0022c96f8467e525df622b371211d844060f7004a984b933a170455835084"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -442,6 +442,41 @@
       "path": "experiments/maintained-components/restore-performance/source-pins.json",
       "bytes": 1468,
       "sha256": "d1fbb86069d4920c5ab67cd8ec98a17c9a04004ff7f8642c46dbd9b558953222"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/bottle_play.h",
+      "bytes": 3478,
+      "sha256": "e566fadff0583c21e513a33c80b939abfb2554266d336312386eed1779a1032e"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/heart_pieces.c",
+      "bytes": 3392,
+      "sha256": "6d8613fec45453a2b8f6130144763b9ef9d5b421c261bb638b3c926e3e51307a"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/heart_pieces.h",
+      "bytes": 303,
+      "sha256": "f8308671c3ab40e9a7b51d97ec617aa901c5bc7b0108417f56a86d6a6f84657d"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/integration-seams.json",
+      "bytes": 2279,
+      "sha256": "1a446e58ab0bce37649d53f53a91f3a1fe6558691ceb34428c188e87ce5585a1"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/integration-seams.txt",
+      "bytes": 1082,
+      "sha256": "16630ff6037f9f28b480910fbf84eb22904d187e072a56bda6838b1f3e8e3f6d"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/README.md",
+      "bytes": 4404,
+      "sha256": "bd814860db69584a28c3aa81be8104048cc47b266c03e8f64e9e7f3722c070e4"
+    },
+    {
+      "path": "experiments/maintained-components/heart_pieces/source-pins.json",
+      "bytes": 2205,
+      "sha256": "d29c7da5d6218e4ab9331f29920894c4276f894027d374a311f03e1e25ca1a51"
     }
   ],
   "excludes": [

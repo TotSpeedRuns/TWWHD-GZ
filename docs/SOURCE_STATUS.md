@@ -1,9 +1,10 @@
 # Source and build status
 
 The full reproducible export remains v126. The maintained snapshot includes
-UI components through R724 and save-state components through R703. The latest
-packaged release is v140; its complete multi-object build has not been exported
-here. The snapshot does not reproduce v140 or establish full-game coverage.
+UI components through R724 and save-state components through R703. The reviewed
+v142 component update is described below; its complete multi-object build has
+not been exported here. This snapshot does not reproduce the complete v142
+release or establish full-game coverage.
 R724 UI testing does not promote the older save-state sources. A separate
 post-v140 restore-performance folder now supplies the reviewed authored READ
 scope/receipt includes and private collider metadata validator. It does not
@@ -40,6 +41,14 @@ The generator depends on the private qualified R755 base and matching
 component objects; it cannot reproduce the current release from the exported
 v126 template. These are raw warps, not new route/memfile payloads. Full
 current-runtime export and broad native/hardware coverage remain separate.
+
+The v142 maintained component adds the authored practice-travel gear leaf,
+strict source applier and three Ganondorf entrance-word corrections.
+Cemu observations identify the retained Zelda conversation and native
+controls, and demonstrate a naturally raised hide bit followed by raw
+and memfile recovery. No pixels or Wii U hardware were observed. No
+save-state coverage, persistent slots or full current build is added.
+See [the component's exact scope and pins](../experiments/maintained-components/gear-travel/README.md).
 
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the

@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "location-warps-R757-source",
-  "status": "Reviewed authored partial snapshots with location-warp generator and factual tuples; private R755 build dependencies remain. Full reproducible export stays v126; no universal native/hardware coverage claim.",
+  "revision": "v142-Ganondorf-gear-authored-source",
+  "status": "Reviewed partial authored components including scoped v142 Ganondorf/practice-travel gear fix. Exact private R757 build dependencies remain; complete reproducible export stays v126. No broad native/hardware coverage claim.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 36456,
-      "sha256": "d276eb5dfc98440f8ec8cf6347976916bdd7fd0a5e45f187286d30f7eb0efa30"
+      "bytes": 37095,
+      "sha256": "9169a424ee889e538a79467c109dff1ea26149218c594e75d81353d2a5bab555"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -517,6 +517,41 @@
       "path": "experiments/maintained-components/location-warps/source-pins.json",
       "bytes": 2138,
       "sha256": "d6108ef30abf4e2015201127117c45bad33e70f32912fbe3a30dc7b26b8d11d4"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/gear_travel.s",
+      "bytes": 1561,
+      "sha256": "b9fccf2fb66693c1d0a710c1f4c23e634327bd3e4ac3494734665df8776eef01"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/apply.py",
+      "bytes": 3894,
+      "sha256": "863146da68b946042e9e55b50ea491f8ee7e2745e4e25aab8b6ca5c05367d762"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/test_apply.py",
+      "bytes": 3809,
+      "sha256": "7bb24c7b7b3d24f220cd2fb9c45688fa4d0a3679808903bbb731ef74bfb7678a"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/README.md",
+      "bytes": 4437,
+      "sha256": "a72d387bf2a1b2309a80e23e257e50c5de78d193d0faac3338766adf7b035273"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/seams.json",
+      "bytes": 1108,
+      "sha256": "78be94b95b105c275fee2880a080827555bd9f5aca997407d016726548f3632f"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/source-pins.json",
+      "bytes": 2361,
+      "sha256": "7886ed47b2398765a33418445b40da8357e03276a25294d9b0eb42e8608fd34b"
+    },
+    {
+      "path": "experiments/maintained-components/gear-travel/evidence-summary.json",
+      "bytes": 3221,
+      "sha256": "cdf035143e0403fc49f832e5fdea4b8891fee147498e447e50418085b7d157a3"
     }
   ],
   "excludes": [

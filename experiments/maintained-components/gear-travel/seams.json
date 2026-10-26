@@ -1,0 +1,37 @@
+{
+  "schema": "authored-practice-travel-seams/1",
+  "travel_calls": [
+    {
+      "name": "validated raw practice warp",
+      "before": "bl _gz_ff1_doomzoom_prepare\nbl _gz_music_before_travel\n",
+      "after": "bl _gz_ff1_doomzoom_prepare\nbl _gz_practice_gear_travel\nbl _gz_music_before_travel\n"
+    },
+    {
+      "name": "validated practice memfile dispatch",
+      "before": "bl _gz_clear_damage_restart\nbl _gz_music_before_travel\nlis 9, _gz_route_active@ha\n",
+      "after": "bl _gz_clear_damage_restart\nbl _gz_practice_gear_travel\nbl _gz_music_before_travel\nlis 9, _gz_route_active@ha\n"
+    }
+  ],
+  "ganondorf_aliases": {
+    "before": ".long _gz_quarantine_warp_name118,0x47546F77,0x65720000,0x000000FF,0",
+    "after": ".long _gz_quarantine_warp_name118,0x47546F77,0x65720000,0x00010000,0",
+    "records": [
+      116,
+      331,
+      383
+    ],
+    "occurrences": 3,
+    "tuple_before": {
+      "stage": "GTower",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255
+    },
+    "tuple_after": {
+      "stage": "GTower",
+      "room": 0,
+      "spawn": 1,
+      "layer": 0
+    }
+  }
+}

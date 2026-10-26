@@ -1,0 +1,55 @@
+{
+  "schema": "scoped-v142-gear-travel-evidence-summary/1",
+  "accepted_scope": "Ganondorf practice entrance and stale event3F40 cleanup during explicit practice travel only.",
+  "native_hardware_tested": false,
+  "native_pixels_observed": false,
+  "portable_tests": "Authored source-text seams, reversal and refusal/output safety only; no native API body/results or game authority.",
+  "private_emitted_checks": {
+    "actual_leaf_executions": 544,
+    "checks": 4326,
+    "placements": 2,
+    "native_APIs_or_doubles_or_supplied_results": 0,
+    "scope": "Register preservation, bounds/alignment and exact byte-store footprints of emitted leaf."
+  },
+  "private_build_checks": {
+    "baseline_objects_reproduced": 2,
+    "old_code_intervals_exact_per_edition": 6464,
+    "old_TEXT_relocations_retained_per_edition": 19440,
+    "final_main_read_checks": 2833,
+    "native_receipt_review_checks": 89
+  },
+  "genuine_Cemu_observations": [
+    "Three compiled menu aliases and existing checkpoint755 requestedGTower/0/1/0 and reached the normal native point1 pose.",
+    "NativePZ_TALK requested message13666; nativeA completed Zelda's bow-cover conversation.",
+    "Ordinary movement, native sword attack/item259, shield control and nonzero model pointers were observed.",
+    "A disposable compiled point2 entrance triggered nativeendhr and raised only bit40 in observed eventbyteB0toF0.",
+    "Raw practice travel returnedF0toB0, retained sword62/shield60 and repeated raw travel stayedB0.",
+    "A second nativeendhr source followed by memfile travel returnedF0toB0 with the same equipment IDs and ordinary talk/control.",
+    "Original executable and source/disposable native save hashes were unchanged; logged host writes were virtual controller input only."
+  ],
+  "qualified_images": {
+    "personal": {
+      "bytes": 26456384,
+      "sha256": "19ac65c653e534c6c605e4ffbcc72190da944a08c0f3ac107043602c640b441c"
+    },
+    "public": {
+      "bytes": 26456384,
+      "sha256": "9a4436e34eaadd1730b169c4d894997f241b88f61ec010ff9ac83c4408787091"
+    }
+  },
+  "limitations": [
+    "Native sessions used Personal and a nonrelease ending probe with identical executableCODE. Public inherits exactCODE proof; no separate Public native run.",
+    "No rendered-pixel or WiiU hardware acceptance.",
+    "The ending probe is not a controller-played Ganondorf victory, and arbitrary event/progress or concurrent reassertion paths are not proven.",
+    "The memfile payload itself also clears the byte; arrival does not isolate the new helper's causal timing.",
+    "Inactive/transition event-name pointers may be stale; only active native identities were used.",
+    "The first overly broad all-event-modes-zero harness failure is preserved; TALK is not the entry movie.",
+    "Recorded message status4096/1536 are rawhalfwords; actualLBZ status bytes are16/6.",
+    "No new save-state coverage, persistent slots or cross-area instant-restore claim."
+  ],
+  "private_review_fingerprints": {
+    "qualification": "29e06d087497bc26acb41d601a024cd2340cb0ca72079076a80c15c429bbcf50",
+    "independent_native_review": "b99a8b7b3f540ca7d890fa9c30eb3e9583b334052be0c52960491fdc55aadf2c"
+  },
+  "raw_native_reports_published": false
+}

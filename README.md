@@ -7,9 +7,9 @@ Created by Tot_sr (Aydin), with contributions documented in the source.
 
 The complete reproducible runtime export in this repository is **v126**. Newer
 reviewed source is published under `experiments/maintained-components/`; that is
-a partial snapshot including the reviewed post-v140 Forest Water and Inventory
-UI corrections, older save-state components through R703, and isolated
-post-v140 restore-performance source. It does not reproduce the complete current release. See [source status](docs/SOURCE_STATUS.md).
+a partial snapshot including the scoped v142 Ganondorf entrance and practice-
+travel gear cleanup, post-v140 UI corrections, older save-state components
+through R703, and isolated restore-performance source. It does not reproduce the complete current release. See [source status](docs/SOURCE_STATUS.md).
 
 The native patcher and Wii U GZ Setup source are also included. **Save states
 remain under development.** Actor recreation, resource ownership, transitions

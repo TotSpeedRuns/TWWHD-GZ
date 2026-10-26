@@ -1,0 +1,70 @@
+{
+  "schema": "authored-gear-travel-source-pins/1",
+  "text_encoding": "UTF-8 LF; exact input bytes",
+  "authored_leaf": {
+    "bytes": 1561,
+    "sha256": "b9fccf2fb66693c1d0a710c1f4c23e634327bd3e4ac3494734665df8776eef01"
+  },
+  "seams": {
+    "bytes": 1108,
+    "sha256": "78be94b95b105c275fee2880a080827555bd9f5aca997407d016726548f3632f"
+  },
+  "editions": {
+    "personal": {
+      "required_R757_assembly": {
+        "bytes": 22464137,
+        "sha256": "fcfb02d7358ea46367c92b85a725a486074b901a88e731e6bb95be633acee0fd"
+      },
+      "expected_composed_assembly": {
+        "bytes": 22465755,
+        "sha256": "fb9287ce4265910a6133e47342e6db89b9ae3622fab662bc874a216102c9b448"
+      },
+      "original_runtime_object": {
+        "bytes": 9808020,
+        "sha256": "774452e17e65596b684c6b7f9380c2c4a45544c94ac87b00736e7db230d921b3"
+      },
+      "qualified_runtime_object": {
+        "bytes": 9808284,
+        "sha256": "045a2cb786233891c148125acb3c790cd9109a564de496ea638b8977756a8a30"
+      },
+      "qualified_R763_image": {
+        "bytes": 26456384,
+        "sha256": "19ac65c653e534c6c605e4ffbcc72190da944a08c0f3ac107043602c640b441c"
+      }
+    },
+    "public": {
+      "required_R757_assembly": {
+        "bytes": 22464137,
+        "sha256": "911268f88ef3720e0699ee6ec1209a8f53fa53003ba0ee160b968beb2594f44d"
+      },
+      "expected_composed_assembly": {
+        "bytes": 22465755,
+        "sha256": "8af6e89c8901f416afcde5d46ad77cd1ca66f632156e8eae4ef77670411e1c91"
+      },
+      "original_runtime_object": {
+        "bytes": 9808020,
+        "sha256": "91226f7ce288f3f5d7553f390ecc6a625de72e203bf5fccccef81daaee0f23e8"
+      },
+      "qualified_runtime_object": {
+        "bytes": 9808284,
+        "sha256": "e4e378603341a72f7e33431fd01e0f731402f455f541b53ac454ebbd0708b18b"
+      },
+      "qualified_R763_image": {
+        "bytes": 26456384,
+        "sha256": "9a4436e34eaadd1730b169c4d894997f241b88f61ec010ff9ac83c4408787091"
+      }
+    }
+  },
+  "new_native_hooks": 0,
+  "new_native_imports": 0,
+  "new_heap_or_reservation_bytes": 0,
+  "TEXT_growth_bytes": 128,
+  "DATA_size_growth_bytes": 0,
+  "BSS_growth_bytes": 0,
+  "unchanged_route_payloads": 803,
+  "unchanged_native_hooks": 298,
+  "unchanged_GQR_patches": 80,
+  "unchanged_other_linked_roles": 73,
+  "full_current_build_exported": false,
+  "owned_game_bytes_distributed": false
+}

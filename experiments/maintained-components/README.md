@@ -5,6 +5,17 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Ganondorf entrance and practice-travel gear cleanup (v142)
+
+The [gear-travel component](gear-travel/README.md) provides the authored
+112-byte leaf and exact source applier for two admitted practice-travel
+calls plus all three Ganondorf raw-entry aliases. It retains native Zelda
+fight dialogue and clears only the proven equipment-hide event bit on
+explicit practice travel. Genuine Cemu entry, dialogue, controls and
+naturally raised hide-bit recovery were reviewed. Pixel visibility and
+Wii U acceptance remain unobserved. The exact private R757 baseline and
+its complete link inputs are required; this does not export v142 in full.
+
 ## Location warp tables and Hyrule browser
 
 The [location-warp component](location-warps/README.md) contains the exact

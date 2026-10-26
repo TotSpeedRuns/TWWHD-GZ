@@ -4,6 +4,11 @@ dist/
 __pycache__/
 *.pyc
 *.o
+*.obj
+*.a
+*.map
+*.bin
+*.zip
 *.elf
 *.rpx
 *.wuhb

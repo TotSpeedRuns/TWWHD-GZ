@@ -5,6 +5,31 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Pause-order and D-pad ownership corrections (R692)
+
+`mss_order.c` classifies Slow as Pause, Stick, Resume and Fast as Pause,
+Resume, Stick. Duration and swimming speed do not select the type. A delayed
+trigger for a continuously held button is not a second press; a coalesced
+release/repress is handled separately. The fourth wrapper argument supplies
+the existing raw release bits. Plus and B can both resume. Pause residency
+still reports its own frame count; B alone does not imply an Insta pause.
+The runtime displays the completed classification rather than a provisional
+Fast result while the sequence is incomplete. A same-sample ordering ambiguity
+is reported as unclear. The caller does not yet provide every historical native
+input sample, so omitted sub-sample stick motion cannot be reconstructed.
+
+`frame_advance.c` retains D-pad ownership only after accepting a pause, step
+or resume command. Merely enabling Frame Advance leaves an ordinary Up press
+and release available to the Wind Waker. The owned resume press stays consumed
+through its release; a subsequent fresh Up returns to the native item.
+
+Validation: 143 emitted PPC metadata cases and eight real Cemu pause-order
+cases passed, including Plus/B resumes and short/long delays. Four real Cemu
+D-pad cases passed: native Wind Waker use, Down stepping, owned resume/release,
+and a subsequent native Wind Waker press. The separate native pause-menu
+update gate is still a private candidate and is not included here. These
+results do not establish Wii U acceptance or full save-state coverage.
+
 ## Current menu and capture changes (R677)
 
 `creator_visibility.c` adds the last main-menu row, Show Creator Code.

@@ -15,6 +15,10 @@ enum {PAGE=53,DOWN=0x100,UP=0x200,TOGGLE=4};
 volatile U _gz_fad_enabled,_gz_fad_paused,_gz_fad_forced,_gz_fad_commands;
 U _gz_fad_report[16]={0x46414431,64};
 static U down_held,up_held,last_frame,have_frame,steps,boundaries,last_step_frame,have_step;
+/* A held/released D-pad sample belongs to Frame Advance only after its
+ * pause/step/resume command was accepted. Merely enabling the feature must
+ * leave ordinary Up (Wind Waker) and its release with the native game. */
+static U owned_dpad;
 /* Native input is polled while simulation is paused. Retain fresh action
  * edges until the requested simulation frame, rather than losing them in
  * an earlier paused poll. These are controller bits, never actor stores. */
@@ -24,16 +28,17 @@ U _gz_fad_replay_edges;
 static void queue(U bits){__sync_fetch_and_or(&_gz_fad_commands,bits);}
 static U match(U edge,U held,U mask){return mask&&(edge&mask)&&(held&mask)==mask;}
 void _gz_fad_open(void){_gz_page=PAGE;_gz_state[2]=0;}
-U _gz_fad_input(U edges,U held,U unused,U native_ui){U now_down=held&DOWN,now_up=held&UP;U was=down_held|up_held;U d=now_down&&!down_held,u=now_up&&!up_held;U i,rising=(held&~action_held)&ACTIONS;
+U _gz_fad_input(U edges,U held,U unused,U native_ui){U now_down=held&DOWN,now_up=held&UP;U was=owned_dpad;U d=now_down&&!down_held,u=now_up&&!up_held;U i,rising=(held&~action_held)&ACTIONS;
  (void)unused;down_held=now_down;up_held=now_up;action_held=held&ACTIONS;
+ owned_dpad&=held;
  if(_gz_state[0]){
-  pending_edges=0;
+  pending_edges=0;owned_dpad=0;
   if(_gz_page!=PAGE)return 0;
   if(match(edges,held,_gz_bind_masks[6])){_gz_page=0;_gz_state[2]=7;return 1;}
   if(match(edges,held,_gz_bind_masks[5]))queue(TOGGLE);
   return 1;
  }
- if(!_gz_fad_enabled||native_ui){pending_edges=0;return 0;}
+ if(!_gz_fad_enabled||native_ui){pending_edges=0;owned_dpad=0;return 0;}
  /* Existing position, state and menu chords retain priority. In particular
   * a shoulder prefix must not accidentally pause on its D-pad component. */
  for(i=0;i<3;i++)if(_gz_bind_masks[i]&&(held&_gz_bind_masks[i])==_gz_bind_masks[i]){pending_edges=0;return 0;}
@@ -42,9 +47,9 @@ U _gz_fad_input(U edges,U held,U unused,U native_ui){U now_down=held&DOWN,now_up
  if(held==0x230u&&(_gz_tools_flags&64u)){pending_edges=0;return 0;} /* Zombie Hover Auto start */
  if(_gz_fad_paused&&_gz_fad_forced)pending_edges=(pending_edges|rising)&held;
  else pending_edges=0;
- if(u&&(edges&UP))queue(2);
- else if(d&&(edges&DOWN)){if(_gz_fad_paused){step_edges=pending_edges;pending_edges=0;}queue(1);}
- return ((held&(DOWN|UP))||was)?2:0;
+ if(u&&(edges&UP)&&_gz_fad_paused){owned_dpad|=UP;queue(2);}
+ else if(d&&(edges&DOWN)){owned_dpad|=DOWN;if(_gz_fad_paused){step_edges=pending_edges;pending_edges=0;}queue(1);}
+ return (owned_dpad||was)?2:0;
 }
 /* Controller transport only. Preserve all action buttons, floating-point
  * stick bytes and non-button fields. Counts remain within the native read's

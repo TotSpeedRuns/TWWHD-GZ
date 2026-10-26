@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R684",
+  "revision": "R692",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -20,13 +20,13 @@
     },
     {
       "path": "experiments/maintained-components/mss_order.c",
-      "sha256": "86b328eb401ffc7b83665a7ec142c86080273215fa3a8d17ae32243864813e38",
-      "bytes": 1736
+      "sha256": "e38245bbc111b6440dec9b5c3848f5d57adf142a4884626a7f27ad2d03abc3b5",
+      "bytes": 5392
     },
     {
       "path": "experiments/maintained-components/mss_order_wrapper.s",
-      "sha256": "a44af52e373b3adeab89700dc7952fae3a5066a3d841da9eea91da3d4dae973a",
-      "bytes": 343
+      "sha256": "52b666c319da5c4fd7594eefe4a54a66b9d567b44b5c252eed6af0d1354851fe",
+      "bytes": 413
     },
     {
       "path": "experiments/maintained-components/roll_clip_detector.c",
@@ -110,8 +110,8 @@
     },
     {
       "path": "experiments/maintained-components/frame_advance.c",
-      "sha256": "21cfce2fe4d8d48a316c54f0a29a019ac0bd4f923aaa7ccc98b1a0b93670da15",
-      "bytes": 8905
+      "sha256": "29768feb8fde993e5be4e91fa72c6d0f299c98ca3686ae3edc2aa5f75571dd89",
+      "bytes": 9231
     },
     {
       "path": "experiments/maintained-components/frame_advance.s",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "c0e679800b63f18a6af37bdc0122b5bcb20c27df99e848a2f5c493fce1de537d",
-      "bytes": 26890
+      "sha256": "e9404da36fd825f634d503cca2c887194cbe6ffecd46e0b71c398b64bd4af26a",
+      "bytes": 28459
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",

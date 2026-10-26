@@ -1,7 +1,7 @@
 # Source and build status
 
 The full reproducible export remains v126. The newer maintained-components
-snapshot is R684. The latest packaged release is v139, but its complete
+snapshot is R692. The latest packaged release is v139, but its complete
 multi-object build has not yet been exported here. Do not treat the component
 snapshot as a reproducible v139 release or use its checks as full-game evidence.
 

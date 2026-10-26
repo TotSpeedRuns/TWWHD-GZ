@@ -12,6 +12,8 @@ mr 3,8
 mr 4,12
 lis 5,_gz_mss_frame_counter@ha
 lwz 5,_gz_mss_frame_counter@l(5)
+lis 6,_gz_shortcut_raw_release@ha
+lwz 6,_gz_shortcut_raw_release@l(6)
 bl _gz_mss_order_input
 lwz 8,8(1)
 lwz 9,12(1)

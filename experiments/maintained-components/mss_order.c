@@ -1,57 +1,165 @@
-/* Pause type follows controller event order only. No player, speed, gain,
- * native pause duration or facing field is read by this classifier. */
-typedef unsigned int U;
-typedef long long S64;
-typedef unsigned long long U64;
+/* Classify pause technique from controller event order, never player speed.
+ *
+ * This module shares the legacy trainer's 50-word state. The named indices
+ * below document that ABI without changing its size or its other counters.
+ * A press spans all consecutive samples where held OR trigger is present:
+ * the two views of one physical press must not become two pause events.
+ */
+typedef unsigned int MssWord;
+typedef long long MssSignedWide;
+typedef unsigned long long MssWide;
 
-static int axis(U bits,int*out){
- U exp=(bits>>23)&255,m=bits&0x7fffff,shift,value;
- if((bits&0x7fffffffu)>0x40000000u)return 0;
- if(exp)m|=0x800000;
- shift=exp?134-exp:133;
- value=exp>=127?65536:shift>=32?0:m>>shift;
- *out=bits>>31?-(int)value:(int)value;return 1;
+enum MssStateIndex {
+    MSS_PREVIOUS_HELD = 11,
+    MSS_CURRENT_TYPE = 36,
+    MSS_DISPLAY_TYPE = 37,
+    MSS_PHASE = 42,
+    MSS_BASELINE_X = 43,
+    MSS_BASELINE_Y = 44,
+    MSS_FIRST_FRAME = 45,
+    MSS_LAST_RESUME = 46,
+    MSS_RESUME = 47,
+    MSS_PREVIOUS_TRIGGER = 48,
+    MSS_LAST_INPUT_FRAME = 49
+};
+
+enum MssPhase {
+    MSS_IDLE,
+    MSS_AFTER_PAUSE,
+    MSS_AFTER_RESUME,
+    MSS_AFTER_STICK,
+    MSS_COMPLETE
+};
+
+enum MssType {
+    MSS_UNKNOWN,
+    MSS_FAST,
+    MSS_SLOW,
+    /* Legacy type 3 was B-close = Insta. Actual 2f residency is measured
+     * separately by mss_pause_frames.c; the resume button cannot imply it.
+     */
+    MSS_SAME_SAMPLE = 4
+};
+
+/* Decode a calibrated IEEE-754 stick component into signed Q16. Keeping this
+ * integer-only avoids adding a floating-point ABI to the input callback.
+ * Invalid components cannot establish a movement event. The existing 0.1
+ * vector deadband is retained; this revision does not retune stick geometry.
+ */
+static int mss_axis(MssWord bits, int *out)
+{
+    MssWord exponent = (bits >> 23) & 255;
+    MssWord mantissa = bits & 0x7fffff;
+    MssWord shift;
+    MssWord value;
+
+    if ((bits & 0x7fffffffu) > 0x40000000u)
+        return 0;
+    if (exponent)
+        mantissa |= 0x800000;
+    shift = exponent ? 134 - exponent : 133;
+    value = exponent >= 127 ? 65536 : shift >= 32 ? 0 : mantissa >> shift;
+    *out = bits >> 31 ? -(int)value : (int)value;
+    return 1;
 }
-static U moved(U x,U y,U oldx,U oldy){
- int a,b,c,d;S64 dx,dy;
- if(!axis(x,&a)||!axis(y,&b)||!axis(oldx,&c)||!axis(oldy,&d))return 0;
- dx=a-c;dy=b-d;
- /* A vector deadband rejects normal stick jitter without consulting speed. */
- return (U64)(dx*dx+dy*dy)>=42954916ull;
+
+static MssWord mss_stick_moved(MssWord x, MssWord y,
+                                MssWord old_x, MssWord old_y)
+{
+    int a, b, c, d;
+    MssSignedWide dx, dy;
+
+    if (!mss_axis(x, &a) || !mss_axis(y, &b) ||
+        !mss_axis(old_x, &c) || !mss_axis(old_y, &d))
+        return 0;
+    dx = a - c;
+    dy = b - d;
+    return (MssWide)(dx * dx + dy * dy) >= 42954916ull;
 }
-static void result(U*s,U kind){s[36]=s[37]=kind;s[42]=4;}
-static void first(U*s,const U*input,U frame){
- s[42]=1;s[43]=input[1];s[44]=input[2];s[45]=frame;
- s[36]=s[37]=0;s[47]=0;
+
+static void mss_result(MssWord *state, MssWord type)
+{
+    state[MSS_CURRENT_TYPE] = type;
+    state[MSS_DISPLAY_TYPE] = type;
+    state[MSS_PHASE] = MSS_COMPLETE;
 }
-U _gz_mss_order_input(U*s,const U*input,U frame){
- U held=input[0],trigger=input[13],edges=(held&~s[11])|(trigger&~s[48]);
- U phase=s[42],motion;
- s[48]=trigger;s[49]=frame;
- if(phase>4||(phase&&(U)(frame-s[45])>120)){
-  s[42]=phase=0;s[36]=s[37]=0;
- }
- if(edges&8){
-  if(phase==3){result(s,2);return edges;}
-  if(phase==1){
-   s[47]=2;
-   if(moved(input[1],input[2],s[43],s[44]))result(s,4);
-   else s[42]=2;
-   return edges;
-  }
-  first(s,input,frame);return edges;
- }
- if((edges&0x4000)&&phase==1){
-  s[47]=1;
-  if(moved(input[1],input[2],s[43],s[44]))result(s,4);
-  else s[42]=2;
-  return edges;
- }
- if(phase!=1&&phase!=2)return edges;
- motion=moved(input[1],input[2],s[43],s[44]);
- if(motion){
-  if(phase==1)s[42]=3;
-  else {result(s,s[47]==1?3:1);s[46]=s[47];}
- }
- return edges;
+
+static void mss_begin(MssWord *state, const MssWord *input, MssWord frame)
+{
+    state[MSS_PHASE] = MSS_AFTER_PAUSE;
+    state[MSS_BASELINE_X] = input[1];
+    state[MSS_BASELINE_Y] = input[2];
+    state[MSS_FIRST_FRAME] = frame;
+    state[MSS_CURRENT_TYPE] = MSS_UNKNOWN;
+    state[MSS_DISPLAY_TYPE] = MSS_UNKNOWN;
+    state[MSS_RESUME] = 0;
+}
+
+MssWord _gz_mss_order_input(MssWord *state, const MssWord *input,
+                            MssWord frame, MssWord released)
+{
+    MssWord held = input[0];
+    MssWord trigger = input[13];
+    MssWord previous = state[MSS_PREVIOUS_HELD] |
+                       state[MSS_PREVIOUS_TRIGGER];
+    MssWord edges = (held | trigger) & ~previous;
+    MssWord phase = state[MSS_PHASE];
+    MssWord duplicate = frame == state[MSS_LAST_INPUT_FRAME] &&
+                        held == state[MSS_PREVIOUS_HELD] &&
+                        trigger == state[MSS_PREVIOUS_TRIGGER];
+
+    state[MSS_PREVIOUS_TRIGGER] = trigger;
+    state[MSS_LAST_INPUT_FRAME] = frame;
+
+    /* If one native poll includes release and re-press, held may never look
+     * neutral to this callback. The captured release+trigger pair proves a
+     * new press. Trigger alone while continuously held does not.
+     */
+    if (!duplicate)
+        edges |= trigger & released;
+
+    /* A delay does not change event order or invalidate a completed result.
+     * The existing trainer reset handles leaving the swimming context.
+     */
+    if (phase > MSS_COMPLETE) {
+        state[MSS_PHASE] = phase = MSS_IDLE;
+        state[MSS_CURRENT_TYPE] = MSS_UNKNOWN;
+        state[MSS_DISPLAY_TYPE] = MSS_UNKNOWN;
+    }
+
+    /* Plus and B can both close the native pause menu. Only Plus begins a
+     * sequence; either closing button participates in the same order rule.
+     */
+    if ((edges & 8) || ((edges & 0x4000) &&
+        (phase == MSS_AFTER_PAUSE || phase == MSS_AFTER_STICK))) {
+        if (phase == MSS_AFTER_STICK) {
+            mss_result(state, MSS_SLOW);
+            return edges;
+        }
+        if (phase == MSS_AFTER_PAUSE) {
+            state[MSS_RESUME] = edges & 8 ? 2 : 1;
+            if (mss_stick_moved(input[1], input[2],
+                               state[MSS_BASELINE_X], state[MSS_BASELINE_Y]))
+                mss_result(state, MSS_SAME_SAMPLE);
+            else
+                state[MSS_PHASE] = MSS_AFTER_RESUME;
+            return edges;
+        }
+        if (edges & 8)
+            mss_begin(state, input, frame);
+        return edges;
+    }
+
+    if (phase != MSS_AFTER_PAUSE && phase != MSS_AFTER_RESUME)
+        return edges;
+    if (mss_stick_moved(input[1], input[2],
+                       state[MSS_BASELINE_X], state[MSS_BASELINE_Y])) {
+        if (phase == MSS_AFTER_PAUSE) {
+            state[MSS_PHASE] = MSS_AFTER_STICK;
+        } else {
+            mss_result(state, MSS_FAST);
+            state[MSS_LAST_RESUME] = state[MSS_RESUME];
+        }
+    }
+    return edges;
 }

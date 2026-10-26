@@ -1,6 +1,6 @@
 # Native heap snapshot reference
 
-Chris supplied [glankk/gz state.c](https://github.com/glankk/gz/blob/master/src/gz/state.c)
+Tot_sr supplied [glankk/gz state.c](https://github.com/glankk/gz/blob/master/src/gz/state.c)
 as a design reference. Its game-arena snapshot and allocator reconstruction are
 relevant to reducing per-actor reconstruction. This is a study reference, not a
 claim that its code has been ported or its addresses apply to Wind Waker HD.

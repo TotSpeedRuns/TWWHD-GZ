@@ -5,6 +5,28 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Pot and contact rebinding after native actor recreation (R703)
+
+`save_state/contact_owner_mapping.c`, `contact_replay.c`,
+`contact_replay_api.h` and `pot_replay.c` retain the original archived pot
+packets and join their placement/constructor identity to freshly qualified
+current actors. Historical actor addresses do not grant access to a new
+allocation. The current process generation, queue membership, heap, model,
+resource and embedded collision/status bindings still need to pass. The
+current before-image remains independent of the archived target, so recovery
+does not need to follow the source packet. The narrow new correspondence is
+limited to the supported PF2 flags-zero packets. No snapshot or reserved heap
+size was increased.
+
+One controlled Cemu test saved Outset, drowned naturally, and restored seven
+recreated pots and 266 contact rows with the exact requested player pose and
+no room load. Source and native save-file hashes stayed unchanged. That
+post-void restore took 21.562 seconds; it does not meet the user's under-five-
+second requirement. Optimization is in progress. Partial rollback, native
+Wii U acceptance, bomb failures and full-game coverage remain open. These
+files are reviewed component source, not a standalone integrated build;
+their complete private integration dependencies have not all been exported.
+
 ## Triforce shard inventory page (R701)
 
 `triforce_shards.s` adds an eight-row text page to the existing inventory

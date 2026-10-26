@@ -17,6 +17,17 @@ the exact owned EUR v0 input. See the maintained-component compatibility
 notes. This source snapshot does not reproduce the full release or claim native
 Wii U acceptance.
 
+The post-v140 UI update publishes the relocation-aware Forest Water guard,
+Inventory stick cursor component and the menu ownership gate for Debug/Input
+text. The Forest Water guard still checks all 22 native entry words exactly;
+it recomputes only the seven documented DATA relocation halfwords from the
+existing native heap-slot alias. The 88-byte retail signature remains a
+generated local-only input. No raw game code or live diagnostics are exported.
+Focused Cemu checks passed all four Forest Water slots, its shared countdown,
+native Plus save/restoration, stick navigation and complete Tools toggle text.
+Wii U acceptance of these post-v140 changes remains pending. These files do
+not claim to fix the remaining MSS typing or save-state coverage failures.
+
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the
 whole project. The newer maintained C modules do not remove that limitation.

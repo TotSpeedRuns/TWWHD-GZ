@@ -563,3 +563,30 @@ invalidations with zero collider overlaps. Wii U performance remains untested.
 The modeled empty/singleton path uses about 25% fewer instructions; dense or
 wide-bound tables can execute more instructions. This is not a universal game
 speedup claim or a claim that remaining superswim lag is resolved.
+
+
+## Post-v140 Forest Water and Inventory UI corrections
+
+`bottle_play.h` retains the whole-entry signature guard and warm/current Play
+checks. It reconstructs the exact expected HA/LO DATA relocations using the
+existing heap-slot alias. The generated `bottle_play_profile.inc` stays local;
+use the existing extraction command with an owned original EUR v0 RPX.
+
+`inventory_stick.c`, `.h` and `inventory_stick_bridge.s` add cursor movement on Inventory page 8.
+The component reads canonical IEEE-754 stick bits without floating-point ABI
+changes, uses menu-local 0.5 press / 0.35 release thresholds and a 12/4-frame
+repeat, and gives digital navigation priority. It does not synthesize actions,
+change gameplay deadzones or edit resource values. Its ABI bridge replaces
+one existing input load, preserves the documented registers and replays that
+load before returning. Bottle and shard submenus keep their existing input.
+
+`menu_stats_gate.s` defers Debug/Input text while the practice menu owns the
+existing text queue, preserving their enabled flags. The existing draw call
+targets this small gate instead; both overlays return when the menu closes.
+Other tool overlays and native hook sites are unchanged.
+
+Focused Cemu checks passed four-direction cursor navigation, repeat/release,
+resource-row behavior, all 12 Tools labels and values with both overlays on,
+and repeated close/reopen cycles. Forest Water passed all four bottle slots,
+countdown, editing/deletion of other contents, native Plus capture/restoration
+and refill. These are bounded UI checks, not full-game or Wii U acceptance.

@@ -394,8 +394,9 @@ meaning in the warp map and gameplay. An empty list cannot load a checkpoint.
 `favorites_r562.c` uses two-word identities derived from route, area, name,
 stage and entrance instead of saved numeric list indices. Unknown identities
 are retained and shown as unavailable rather than redirected to another file.
-Input queues preference changes; the ordinary game callback owns mutation and
-file writes. There is no filesystem work in VPAD or the draw callback.
+Input queues preference changes; the ordinary game callback owns live-list
+mutation. One private worker owns all SAVE/FS calls and file writes. There is
+no filesystem work in VPAD, drawing, or the ordinary game callback.
 
 `favorites_storage_r562.c` keeps two checksummed 6,456-byte preference files
 in the practice title's common save directory. It uses `SAVEInitSaveDir(255)`
@@ -431,3 +432,28 @@ background watcher and does not create a scheduled job.
 Do not put game assets, user capture arrays or raw state dumps in this folder.
 The newer full multi-object runtime and installer need a separate reproducible
 export; the legacy full-release exporter must not silently label them current.
+
+
+## Collider invalidation scan (R684 private candidate)
+
+`collider_scan/members.c` preserves full validation of the 8,192-row private
+collider table before changing any row. During validation it records the first
+and last overlapping active row; the retirement pass then visits only those
+bounds, or no rows when no collider overlaps. Native addresses remain scalar
+keys in this routine. Tracking, locks, flags and counter behavior stay intact.
+There are no new hooks or permanent data buffers. Invalidation stack use rises
+from 40 to 56 bytes, and its machine code grows by 128 bytes.
+
+Validation compares original and candidate emitted PPC across 73 private
+metadata cases, plus seven converted-fragment cases, with every store restricted
+to mapped private metadata or the fixture stack. Static instruction, relocation
+and branch-target comparison also covers the unchanged helper/query functions.
+These checks establish invalidation behavior, not a model of native ownership.
+
+The integrated private Cemu image passed two placed-bomb expiry/restores, with
+exact saved fuse and position. A three-second no-overlay swimming sample crossed
+four sea sectors at about 30 FPS; observer flags stayed clear through 394
+invalidations with zero collider overlaps. Wii U performance remains untested.
+The modeled empty/singleton path uses about 25% fewer instructions; dense or
+wide-bound tables can execute more instructions. This is not a universal game
+speedup claim or a claim that remaining superswim lag is resolved.

@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R677",
+  "revision": "R684",
   "status": "Reviewed components; full integrated build export remains separately versioned.",
   "files": [
     {
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "47cfda1dd72fd3f8cea819cf2701bfe0fef0ea1545dc3c761aaf7854bf175d56",
-      "bytes": 25302
+      "sha256": "c0e679800b63f18a6af37bdc0122b5bcb20c27df99e848a2f5c493fce1de537d",
+      "bytes": 26890
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -277,6 +277,26 @@
       "path": "experiments/maintained-components/save_state/ui_capture_gate.c",
       "sha256": "b36e460213ab007ed2b1a2be2b11ae4fb0b66492ba7dfd5e227ea34437c36124",
       "bytes": 4216
+    },
+    {
+      "path": "experiments/maintained-components/collider_scan/members.c",
+      "sha256": "d4ba379769e166e4e75aff07d6fa8c24d1d145d58254107c5e9a4b14db274fec",
+      "bytes": 6526
+    },
+    {
+      "path": "experiments/maintained-components/collider_scan/members.h",
+      "sha256": "13378abd1a7554f26787a066c81232f4951eb188e61874c281398685601ca98c",
+      "bytes": 2345
+    },
+    {
+      "path": "experiments/maintained-components/collider_scan/observer.h",
+      "sha256": "5c2f548a96cb5706bcdc36f8b0ec8e828d4a62c0b82d4273337edf82bb406b10",
+      "bytes": 2028
+    },
+    {
+      "path": "experiments/maintained-components/collider_scan/process.h",
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc",
+      "bytes": 2597
     }
   ],
   "excludes": [

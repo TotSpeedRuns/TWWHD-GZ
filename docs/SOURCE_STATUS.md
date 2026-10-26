@@ -32,6 +32,15 @@ native Plus save/restoration, stick navigation and complete Tools toggle text.
 Wii U acceptance of these post-v140 changes remains pending. These files do
 not claim to fix the remaining MSS typing or save-state coverage failures.
 
+The maintained location-warp update adds an authored table generator and
+compiler driver plus normalized destination, repair and location metadata.
+It includes attribution to the requested Teotia reference and an independent
+metadata-only check. Original room bytes and private diagnostics are absent.
+The generator depends on the private qualified R755 base and matching
+component objects; it cannot reproduce the current release from the exported
+v126 template. These are raw warps, not new route/memfile payloads. Full
+current-runtime export and broad native/hardware coverage remain separate.
+
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the
 whole project. The newer maintained C modules do not remove that limitation.

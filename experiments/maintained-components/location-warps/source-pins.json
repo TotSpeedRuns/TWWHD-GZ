@@ -1,0 +1,68 @@
+{
+  "schema": "location-warps-authored-source/1",
+  "normalization": "UTF-8 LF",
+  "authored_inputs": {
+    "build_candidate.py": {
+      "bytes": 10104,
+      "sha256": "8a14bb510a6017ae5b2ffb86d2269e9c53810951a57b743eb2a5ecc234ab492d"
+    },
+    "compile_candidate.py": {
+      "bytes": 4038,
+      "sha256": "95fa56c6a13672c2c141de4b2e05106b08f31d5e6b8f63c469eb3306511a1ea2"
+    }
+  },
+  "published_files": {
+    "build_candidate.py": {
+      "bytes": 10104,
+      "sha256": "8a14bb510a6017ae5b2ffb86d2269e9c53810951a57b743eb2a5ecc234ab492d"
+    },
+    "compile_candidate.py": {
+      "bytes": 4038,
+      "sha256": "95fa56c6a13672c2c141de4b2e05106b08f31d5e6b8f63c469eb3306511a1ea2"
+    },
+    "README.md": {
+      "bytes": 5426,
+      "sha256": "f409cbe154002b1394813d85bd4b2ce97b72ef22dd89b593d02446ac33dd6b60"
+    },
+    "validate_facts.py": {
+      "bytes": 3739,
+      "sha256": "812ee754e750c9e2685ade6508668059cfa6b1e522464509d62012bfe7b9f69e"
+    },
+    "reference-plan.json": {
+      "bytes": 67979,
+      "sha256": "a9a90945836fc74165b4495eb711bd763c6b6e7605ef2310e6f62dd3378200f0"
+    },
+    "decisions.json": {
+      "bytes": 123566,
+      "sha256": "011bad966604e280bf7b4a8653af40fe0704f7a062bb2b3e28e82b909cc2713d"
+    },
+    "normalized-tables.json": {
+      "bytes": 86749,
+      "sha256": "b8d0d9adc0105ad0f10abe992006306c60bc6c8257370f88e9d530b31b0670f4"
+    }
+  },
+  "source_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+  "required_private_base_assembly": {
+    "bytes": 22433344,
+    "sha256": "6664b1a9f6bca42dc80192600f1004fb6a5e6dc0c64da1edfa98e72cfa27f6b2"
+  },
+  "recorded_component_hashes": {
+    "personal": {
+      "bytes": 9808020,
+      "sha256": "774452e17e65596b684c6b7f9380c2c4a45544c94ac87b00736e7db230d921b3"
+    },
+    "public": {
+      "bytes": 9808020,
+      "sha256": "91226f7ce288f3f5d7553f390ecc6a625de72e203bf5fccccef81daaee0f23e8"
+    }
+  },
+  "source_object_review": {
+    "checks": 5066,
+    "native_gameplay_tested": false
+  },
+  "new_heap_bytes": 0,
+  "new_hooks": 0,
+  "route_payloads_changed": 0,
+  "full_current_build_exported": false,
+  "raw_native_evidence_published": false
+}

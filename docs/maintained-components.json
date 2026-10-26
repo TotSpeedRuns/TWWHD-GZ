@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v140-UI-RestorePerformance-and-HeartPieces",
-  "status": "Reviewed authored partial snapshots; R755 heart-piece component has22 real Cemu menu cases and2 expired-bomb regressions. Wii U and full save-state coverage remain unqualified; the full reproducible export stays v126.",
+  "revision": "location-warps-R757-source",
+  "status": "Reviewed authored partial snapshots with location-warp generator and factual tuples; private R755 build dependencies remain. Full reproducible export stays v126; no universal native/hardware coverage claim.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 35818,
-      "sha256": "5ec0022c96f8467e525df622b371211d844060f7004a984b933a170455835084"
+      "bytes": 36456,
+      "sha256": "d276eb5dfc98440f8ec8cf6347976916bdd7fd0a5e45f187286d30f7eb0efa30"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -477,6 +477,46 @@
       "path": "experiments/maintained-components/heart_pieces/source-pins.json",
       "bytes": 2205,
       "sha256": "d29c7da5d6218e4ab9331f29920894c4276f894027d374a311f03e1e25ca1a51"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/build_candidate.py",
+      "bytes": 10104,
+      "sha256": "8a14bb510a6017ae5b2ffb86d2269e9c53810951a57b743eb2a5ecc234ab492d"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/compile_candidate.py",
+      "bytes": 4038,
+      "sha256": "95fa56c6a13672c2c141de4b2e05106b08f31d5e6b8f63c469eb3306511a1ea2"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/README.md",
+      "bytes": 5426,
+      "sha256": "f409cbe154002b1394813d85bd4b2ce97b72ef22dd89b593d02446ac33dd6b60"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/validate_facts.py",
+      "bytes": 3739,
+      "sha256": "812ee754e750c9e2685ade6508668059cfa6b1e522464509d62012bfe7b9f69e"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/reference-plan.json",
+      "bytes": 67979,
+      "sha256": "a9a90945836fc74165b4495eb711bd763c6b6e7605ef2310e6f62dd3378200f0"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/decisions.json",
+      "bytes": 123566,
+      "sha256": "011bad966604e280bf7b4a8653af40fe0704f7a062bb2b3e28e82b909cc2713d"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/normalized-tables.json",
+      "bytes": 86749,
+      "sha256": "b8d0d9adc0105ad0f10abe992006306c60bc6c8257370f88e9d530b31b0670f4"
+    },
+    {
+      "path": "experiments/maintained-components/location-warps/source-pins.json",
+      "bytes": 2138,
+      "sha256": "d6108ef30abf4e2015201127117c45bad33e70f32912fbe3a30dc7b26b8d11d4"
     }
   ],
   "excludes": [

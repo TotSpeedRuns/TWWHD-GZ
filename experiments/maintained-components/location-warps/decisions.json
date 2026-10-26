@@ -1,0 +1,3607 @@
+{
+  "schema": "location-warp-factual-decisions/1",
+  "rows": [
+    {
+      "line": 1,
+      "reference_label": "Angular Isles - Cave",
+      "reference_value": "SubD43",
+      "stage": "SubD43",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 47,
+      "folder": "Angular Isles",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 2,
+      "reference_label": "Beedle's Shop Ship",
+      "reference_value": "Obshop",
+      "stage": "Obshop",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "contextual",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Reference omits location/room; represented by actual per-island shop/submarine/sea destinations.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Reference omits location/room; represented by actual per-island shop/submarine/sea destinations."
+      }
+    },
+    {
+      "line": 3,
+      "reference_label": "Bird's Peak Rock - Triforce Cave",
+      "reference_value": "TF_03",
+      "stage": "TF_03",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 35,
+      "folder": "Bird's Peak Rock",
+      "label": "Triforce Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 4,
+      "reference_label": "Boating Course",
+      "reference_value": "Ocean",
+      "stage": "Ocean",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "status": "supported",
+      "sector": 48,
+      "folder": "Boating Course",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Point00 has event0; point02 is the only eventFF/type0 entrance. This standalone stage has no incoming SCLS in this audit; gameplay behavior is unqualified."
+      }
+    },
+    {
+      "line": 5,
+      "reference_label": "Bomb Island - Cave",
+      "reference_value": "Cave01",
+      "stage": "Cave01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 34,
+      "folder": "Bomb Island",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 6,
+      "reference_label": "Cliff Plateau Isles - Cave",
+      "reference_value": "Cave03",
+      "stage": "Cave03",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 42,
+      "folder": "Cliff Plateau",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 7,
+      "reference_label": "Credits",
+      "reference_value": "sea_E",
+      "stage": "sea_E",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 8,
+      "reference_label": "Diamond Steppe Island - Cave",
+      "reference_value": "WarpD",
+      "stage": "WarpD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 36,
+      "folder": "Diamond Steppe",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 9,
+      "reference_label": "Dragon Roost Cavern",
+      "reference_value": "M_NewD2",
+      "stage": "M_NewD2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 10,
+      "reference_label": "Dragon Roost Cavern - Boss Room",
+      "reference_value": "M_DragB",
+      "stage": "M_DragB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Boss Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 11,
+      "reference_label": "Dragon Roost Island - Cave",
+      "reference_value": "TF_06",
+      "stage": "TF_06",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 13,
+      "folder": "Dragon Roost",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 12,
+      "reference_label": "Dragon Roost Island - Komali's Room",
+      "reference_value": "Comori",
+      "stage": "Comori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost",
+      "label": "Komali's Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 13,
+      "reference_label": "Dragon Roost Island - Mail Center",
+      "reference_value": "Atorizk",
+      "stage": "Atorizk",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost",
+      "label": "Mail Center",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 14,
+      "reference_label": "Dragon Roost Island - Spring",
+      "reference_value": "Adanmae",
+      "stage": "Adanmae",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 13,
+      "folder": "Dragon Roost",
+      "label": "Spring",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 15,
+      "reference_label": "Earth Temple",
+      "reference_value": "M_Dai",
+      "stage": "M_Dai",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 16,
+      "reference_label": "Earth Temple - Boss Room",
+      "reference_value": "M_DaiB",
+      "stage": "M_DaiB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "Boss Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 17,
+      "reference_label": "Earth Temple - Entrance",
+      "reference_value": "Edaichi",
+      "stage": "Edaichi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 18,
+      "reference_label": "Eastern Fairy Island - Fairy",
+      "reference_value": "Fairy02",
+      "stage": "Fairy02",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 19,
+      "folder": "Eastern Fairy",
+      "label": "Fairy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 19,
+      "reference_label": "End Game Cutscene",
+      "reference_value": "ENDumi",
+      "stage": "ENDumi",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 20,
+      "reference_label": "File Select",
+      "reference_value": "Name",
+      "stage": "Name",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 21,
+      "reference_label": "Forbidden Woods",
+      "reference_value": "kindan",
+      "stage": "kindan",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forbidden Woods",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 22,
+      "reference_label": "Forbidden Woods - Boss Room",
+      "reference_value": "kinBOSS",
+      "stage": "kinBOSS",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forbidden Woods",
+      "label": "Boss Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 23,
+      "reference_label": "Forest Haven - Behind Waterfall",
+      "reference_value": "Otkura",
+      "stage": "Otkura",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Behind Waterfall",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 24,
+      "reference_label": "Forest Haven - Bomb Shop",
+      "reference_value": "Ocrogh",
+      "stage": "Ocrogh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Bomb Shop",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 25,
+      "reference_label": "Forest Haven - Interior",
+      "reference_value": "Omori",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 26,
+      "reference_label": "Forsaken Fortress - Exterior",
+      "reference_value": "MajyuE",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "Exterior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 27,
+      "reference_label": "Forsaken Fortress - Ganon's Lair",
+      "reference_value": "M2ganon",
+      "stage": "M2ganon",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "Ganon's Lair",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 28,
+      "reference_label": "Forsaken Fortress - Interior 1",
+      "reference_value": "ma2room",
+      "stage": "ma2room",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "Interior 1",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Points00/01 have event0/type4. Point03 is eventFF/type0 and is a native exterior SCLS destination."
+      }
+    },
+    {
+      "line": 29,
+      "reference_label": "Forsaken Fortress - Interior 2",
+      "reference_value": "ma3room",
+      "stage": "ma3room",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "Interior 2",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Points00/01 have event0/type4. Point03 is eventFF/type0; this layout has no incoming SCLS in this audit."
+      }
+    },
+    {
+      "line": 30,
+      "reference_label": "Forsaken Fortress - Jail",
+      "reference_value": "majroom",
+      "stage": "majroom",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "Jail",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Points00/01 have event0/type4. Point03 is eventFF/type0 and is a native MajyuE SCLS destination."
+      }
+    },
+    {
+      "line": 31,
+      "reference_label": "Gallery - Boss Figurines",
+      "reference_value": "figureD",
+      "stage": "figureD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Boss Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 32,
+      "reference_label": "Gallery - DRC Figurines",
+      "reference_value": "figureF",
+      "stage": "figureF",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "DRC Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 33,
+      "reference_label": "Gallery - Enemy Figurines",
+      "reference_value": "figureE",
+      "stage": "figureE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Enemy Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 34,
+      "reference_label": "Gallery - Forest Haven Figurines",
+      "reference_value": "figureG",
+      "stage": "figureG",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Forest Haven Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 35,
+      "reference_label": "Gallery - Great Sea Figurines",
+      "reference_value": "figureA",
+      "stage": "figureA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Great Sea Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 36,
+      "reference_label": "Gallery - Outset Island Figurines",
+      "reference_value": "figureC",
+      "stage": "figureC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Outset Island Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 37,
+      "reference_label": "Gallery - Windfall Island Figurines",
+      "reference_value": "figureB",
+      "stage": "figureB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Windfall Island Figurines",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 38,
+      "reference_label": "Ganon's Tower - Center",
+      "reference_value": "GanonM",
+      "stage": "GanonM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Center",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 39,
+      "reference_label": "Ganon's Tower - DRC Trial",
+      "reference_value": "GanonB",
+      "stage": "GanonB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "DRC Trial",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 40,
+      "reference_label": "Ganon's Tower - DRC Trial Boss",
+      "reference_value": "Xboss0",
+      "stage": "Xboss0",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "DRC Trial Boss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 41,
+      "reference_label": "Ganon's Tower - ET Trial",
+      "reference_value": "GanonE",
+      "stage": "GanonE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "ET Trial",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 42,
+      "reference_label": "Ganon's Tower - ET Trial Boss",
+      "reference_value": "Xboss2",
+      "stage": "Xboss2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "ET Trial Boss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 43,
+      "reference_label": "Ganon's Tower - Entrance",
+      "reference_value": "GanonA",
+      "stage": "GanonA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 44,
+      "reference_label": "Ganon's Tower - FW Trial",
+      "reference_value": "GanonD",
+      "stage": "GanonD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "FW Trial",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 45,
+      "reference_label": "Ganon's Tower - FW Trial Boss",
+      "reference_value": "Xboss1",
+      "stage": "Xboss1",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "FW Trial Boss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 46,
+      "reference_label": "Ganon's Tower - Final Fight",
+      "reference_value": "GTower",
+      "stage": "GTower",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Final Fight",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 47,
+      "reference_label": "Ganon's Tower - Ganon's Room",
+      "reference_value": "GanonK",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Ganon's Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Point00 has event2. Point01 is eventFF/type0; avoid event00 and warp-pot points02/03 for the generic room row."
+      }
+    },
+    {
+      "line": 48,
+      "reference_label": "Ganon's Tower - Maze",
+      "reference_value": "GanonJ",
+      "stage": "GanonJ",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Maze",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 49,
+      "reference_label": "Ganon's Tower - Staircase to Center",
+      "reference_value": "GanonN",
+      "stage": "GanonN",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Staircase to Center",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 50,
+      "reference_label": "Ganon's Tower - Staircase to Ganon",
+      "reference_value": "GanonL",
+      "stage": "GanonL",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Staircase to Ganon",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 51,
+      "reference_label": "Ganon's Tower - WT Trial",
+      "reference_value": "GanonC",
+      "stage": "GanonC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "WT Trial",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 52,
+      "reference_label": "Ganon's Tower - WT Trial Boss",
+      "reference_value": "Xboss3",
+      "stage": "Xboss3",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "WT Trial Boss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 53,
+      "reference_label": "Ghost Ship",
+      "reference_value": "PShip",
+      "stage": "PShip",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": null,
+      "folder": "Ghost Ship",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Only authored Ghost Ship room is2. It is mobile; text Dungeons only, no fixed sea sector.",
+        "mobile": "Dungeons/Ghost Ship text selection only; no fixed map sector."
+      }
+    },
+    {
+      "line": 54,
+      "reference_label": "Great Sea",
+      "reference_value": "sea",
+      "stage": "sea",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "contextual",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Reference omits location/room; represented by actual per-island shop/submarine/sea destinations.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Reference omits location/room; represented by actual per-island shop/submarine/sea destinations."
+      }
+    },
+    {
+      "line": 55,
+      "reference_label": "Horseshoe Island - Cave",
+      "reference_value": "Cave05",
+      "stage": "Cave05",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 43,
+      "folder": "Horseshoe",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 56,
+      "reference_label": "Hyrule Castle - Basement",
+      "reference_value": "kenroom",
+      "stage": "kenroom",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Hyrule",
+      "label": "Basement",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 57,
+      "reference_label": "Hyrule Castle - Exterior",
+      "reference_value": "Hyrule",
+      "stage": "Hyrule",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Hyrule",
+      "label": "Exterior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 58,
+      "reference_label": "Hyrule Castle - Interior",
+      "reference_value": "Hyroom",
+      "stage": "Hyroom",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Hyrule",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Point00 has event2. Point01 is eventFF/type0 and has a native SCLS from Hyrule exterior; choose the ordinary entrance."
+      }
+    },
+    {
+      "line": 59,
+      "reference_label": "Ice Ring Isle - Grotto",
+      "reference_value": "ITest62",
+      "stage": "ITest62",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 40,
+      "folder": "Ice Ring",
+      "label": "Grotto",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 60,
+      "reference_label": "Inside Fire Mountain",
+      "reference_value": "MiniKaz",
+      "stage": "MiniKaz",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 20,
+      "folder": "Fire Mountain",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 61,
+      "reference_label": "Inside Ice Ring Isle",
+      "reference_value": "MiniHyo",
+      "stage": "MiniHyo",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 40,
+      "folder": "Ice Ring",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 62,
+      "reference_label": "Invisible Island",
+      "reference_value": "A_nami",
+      "stage": "A_nami",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 63,
+      "reference_label": "Islet of Steel - Interior",
+      "reference_value": "ShipD",
+      "stage": "ShipD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 30,
+      "folder": "Islet of Steel",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 64,
+      "reference_label": "Link's Oasis",
+      "reference_value": "Abesso",
+      "stage": "Abesso",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 33,
+      "folder": "Private Oasis",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 65,
+      "reference_label": "Link's Oasis - Triforce Cave",
+      "reference_value": "TF_04",
+      "stage": "TF_04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 33,
+      "folder": "Private Oasis",
+      "label": "Triforce Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 66,
+      "reference_label": "Needle Rock Isle - Cave",
+      "reference_value": "SubD42",
+      "stage": "SubD42",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 29,
+      "folder": "Needle Rock",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 67,
+      "reference_label": "Nintendo Gallery",
+      "reference_value": "Pfigure",
+      "stage": "Pfigure",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 68,
+      "reference_label": "Northern Fairy Island - Fairy",
+      "reference_value": "Fairy01",
+      "stage": "Fairy01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 3,
+      "folder": "Northern Fairy",
+      "label": "Fairy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 69,
+      "reference_label": "Outset Island - Abe's House",
+      "reference_value": "Onobuta",
+      "stage": "Onobuta",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Abe's House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 70,
+      "reference_label": "Outset Island - Basement",
+      "reference_value": "LinkUG",
+      "stage": "LinkUG",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Basement",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 71,
+      "reference_label": "Outset Island - Forest",
+      "reference_value": "A_mori",
+      "stage": "A_mori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Forest",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 72,
+      "reference_label": "Outset Island - Forest - Fairy",
+      "reference_value": "Fairy04",
+      "stage": "Fairy04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Forest - Fairy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 73,
+      "reference_label": "Outset Island - Jabun's Cavern",
+      "reference_value": "Pjavdou",
+      "stage": "Pjavdou",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Jabun's Cavern",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 74,
+      "reference_label": "Outset Island - Link's House",
+      "reference_value": "LinkRM",
+      "stage": "LinkRM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Link's House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 75,
+      "reference_label": "Outset Island - Mesa's House",
+      "reference_value": "Omasao",
+      "stage": "Omasao",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Mesa's House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 76,
+      "reference_label": "Outset Island - Orca's House",
+      "reference_value": "Ojhous",
+      "stage": "Ojhous",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Orca's House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 77,
+      "reference_label": "Outset Island - Sturgeon's House",
+      "reference_value": "Ojhous2",
+      "stage": "Ojhous2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Sturgeon's House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 78,
+      "reference_label": "Overlook Island - Triforce Cave",
+      "reference_value": "TF_02",
+      "stage": "TF_02",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 7,
+      "folder": "Overlook",
+      "label": "Triforce Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 79,
+      "reference_label": "Pawprint Isle - Cave",
+      "reference_value": "TyuTyu",
+      "stage": "TyuTyu",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 12,
+      "folder": "Pawprint",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 80,
+      "reference_label": "Pawprint Isle - Wizzrobe Cave",
+      "reference_value": "Cave07",
+      "stage": "Cave07",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 12,
+      "folder": "Pawprint",
+      "label": "Wizzrobe Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 81,
+      "reference_label": "Pirate Ship - Deck",
+      "reference_value": "A_umikz",
+      "stage": "A_umikz",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Pirate Ship",
+      "label": "Deck",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 82,
+      "reference_label": "Pirate Ship - Interior",
+      "reference_value": "Asoko",
+      "stage": "Asoko",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 11,
+      "folder": "Pirate Ship",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 83,
+      "reference_label": "Rock Spire Isle - Cave",
+      "reference_value": "Cave04",
+      "stage": "Cave04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 16,
+      "folder": "Rock Spire",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 84,
+      "reference_label": "Savage Labyrinth - Another Empty",
+      "reference_value": "Cave11",
+      "stage": "Cave11",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Another Empty",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 85,
+      "reference_label": "Savage Labyrinth - Beginning",
+      "reference_value": "Cave09",
+      "stage": "Cave09",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Beginning",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference.",
+        "SCLS_derived_Savage_floor": 0
+      }
+    },
+    {
+      "line": 86,
+      "reference_label": "Savage Labyrinth - Empty",
+      "reference_value": "Cave10",
+      "stage": "Cave10",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Empty",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 87,
+      "reference_label": "Shark Island - Cave",
+      "reference_value": "ITest63",
+      "stage": "ITest63",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 38,
+      "folder": "Shark Island",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 88,
+      "reference_label": "Southern Fairy Island - Fairy",
+      "reference_value": "Fairy06",
+      "stage": "Fairy06",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 39,
+      "folder": "Southern Fairy",
+      "label": "Fairy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 89,
+      "reference_label": "Star Island - Cave",
+      "reference_value": "Cave02",
+      "stage": "Cave02",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 2,
+      "folder": "Star Island",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 90,
+      "reference_label": "Stonewatcher Island - Cave",
+      "reference_value": "SubD44",
+      "stage": "SubD44",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 31,
+      "folder": "Stonewatcher",
+      "label": "Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 91,
+      "reference_label": "Stonewatcher Island - Triforce Cave",
+      "reference_value": "TF_01",
+      "stage": "TF_01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 31,
+      "folder": "Stonewatcher",
+      "label": "Triforce Cave",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 92,
+      "reference_label": "Submarine - Unused Room",
+      "reference_value": "PShip2",
+      "stage": "PShip2",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 93,
+      "reference_label": "Submarine - Unused Room 2",
+      "reference_value": "PShip3",
+      "stage": "PShip3",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 94,
+      "reference_label": "Submarine Interior",
+      "reference_value": "Abship",
+      "stage": "Abship",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "contextual",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Reference omits location/room; represented by actual per-island shop/submarine/sea destinations.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Reference omits location/room; represented by actual per-island shop/submarine/sea destinations."
+      }
+    },
+    {
+      "line": 95,
+      "reference_label": "Thorned Fairy Island - Fairy",
+      "reference_value": "Fairy05",
+      "stage": "Fairy05",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 28,
+      "folder": "Thorned Fairy",
+      "label": "Fairy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 96,
+      "reference_label": "Tingle's Paint Room",
+      "reference_value": "tincle",
+      "stage": "tincle",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 17,
+      "folder": "Tingle",
+      "label": "Interior",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 97,
+      "reference_label": "Title Screen",
+      "reference_value": "sea_T",
+      "stage": "sea_T",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 98,
+      "reference_label": "Tower of Gods",
+      "reference_value": "Siren",
+      "stage": "Siren",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 99,
+      "reference_label": "Tower of Gods - Boss Room",
+      "reference_value": "SirenB",
+      "stage": "SirenB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "Boss Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 100,
+      "reference_label": "Tower of Gods - Cutscene",
+      "reference_value": "ADMumi",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "Cutscene",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 101,
+      "reference_label": "Unused Fire Mountain",
+      "reference_value": "kazan",
+      "stage": "kazan",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 102,
+      "reference_label": "Unused Temple Island",
+      "reference_value": "Mukao",
+      "stage": "Mukao",
+      "room": null,
+      "spawn": null,
+      "layer": null,
+      "status": "excluded",
+      "sector": null,
+      "folder": null,
+      "label": null,
+      "reason": "Non-gameplay or unused scene; not a location warp.",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "reason": "Non-gameplay or unused scene; not a location warp."
+      }
+    },
+    {
+      "line": 103,
+      "reference_label": "Western Fairy Island - Fairy",
+      "reference_value": "Fairy03",
+      "stage": "Fairy03",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 15,
+      "folder": "Western Fairy",
+      "label": "Fairy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 104,
+      "reference_label": "Wind Temple",
+      "reference_value": "kaze",
+      "stage": "kaze",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 105,
+      "reference_label": "Wind Temple - Boss Room",
+      "reference_value": "kazeB",
+      "stage": "kazeB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "Boss Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 106,
+      "reference_label": "Wind Temple - Entrance",
+      "reference_value": "Ekaze",
+      "stage": "Ekaze",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 107,
+      "reference_label": "Wind Temple - Miniboss Room",
+      "reference_value": "kazeMB",
+      "stage": "kazeMB",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "Miniboss Room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Only authored miniboss entrance is Room6/point00."
+      }
+    },
+    {
+      "line": 108,
+      "reference_label": "Windfall Island - Auction House",
+      "reference_value": "Orichh",
+      "stage": "Orichh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Auction House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 109,
+      "reference_label": "Windfall Island - Bomb Shop",
+      "reference_value": "Obombh",
+      "stage": "Obombh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Bomb Shop",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 110,
+      "reference_label": "Windfall Island - Cafe Bar",
+      "reference_value": "Opub",
+      "stage": "Opub",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Cafe Bar",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 111,
+      "reference_label": "Windfall Island - Lenzo's Studio",
+      "reference_value": "Ocmera",
+      "stage": "Ocmera",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Lenzo's Studio",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 112,
+      "reference_label": "Windfall Island - Minigame House",
+      "reference_value": "Kaisen",
+      "stage": "Kaisen",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Minigame House",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 113,
+      "reference_label": "Windfall Island - Potion Shop",
+      "reference_value": "Pdrgsh",
+      "stage": "Pdrgsh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Potion Shop",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 114,
+      "reference_label": "Windfall Island - Prison",
+      "reference_value": "Pnezumi",
+      "stage": "Pnezumi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "Prison",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 115,
+      "reference_label": "Windfall Island - School of Joy",
+      "reference_value": "Nitiyou",
+      "stage": "Nitiyou",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "School of Joy",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "default_choice": "Authored default point00 in Room0; no room/spawn/layer is supplied by the reference."
+      }
+    },
+    {
+      "line": 116,
+      "reference_label": "Windfall Island - FF1 cs",
+      "reference_value": "sea, 11, C8, 08",
+      "stage": "sea",
+      "room": 11,
+      "spawn": 200,
+      "layer": 8,
+      "status": "existing",
+      "sector": 11,
+      "folder": "Windfall",
+      "label": "FF1 Cutscene",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "sea",
+          "room": 11,
+          "spawn": 200,
+          "layer": 8
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 120,
+      "reference_label": "Outset Island - aryll lookout",
+      "reference_value": "sea, 44, 06, FF",
+      "stage": "sea",
+      "room": 44,
+      "spawn": 6,
+      "layer": 255,
+      "status": "supported",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "aryll lookout",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "sea",
+          "room": 44,
+          "spawn": 6,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 121,
+      "reference_label": "Forsaken Fortress - FF1 exterior from first jail cell",
+      "reference_value": "MajyuE, 00, 04, FF",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 4,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "FF1 exterior from first jail cell",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "MajyuE",
+          "room": 0,
+          "spawn": 4,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 122,
+      "reference_label": "Forsaken Fortress - FF1 2 moblins",
+      "reference_value": "majroom, 03, 08, FF",
+      "stage": "majroom",
+      "room": 3,
+      "spawn": 8,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "FF1 2 moblins",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "majroom",
+          "room": 3,
+          "spawn": 8,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 123,
+      "reference_label": "Forsaken Fortress - FF1 Last moblin",
+      "reference_value": "MajyuE, 00, 0A, FF",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 10,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "FF1 Last moblin",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "MajyuE",
+          "room": 0,
+          "spawn": 10,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 124,
+      "reference_label": "Forsaken Fortress - FF1 Between sidles",
+      "reference_value": "MajyuE, 00, 13, FF",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 19,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "FF1 Between sidles",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "MajyuE",
+          "room": 0,
+          "spawn": 19,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 125,
+      "reference_label": "Dragon Roost Island - Beedle shop",
+      "reference_value": "Obshop, 02, 00, FF",
+      "stage": "Obshop",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost",
+      "label": "Beedle shop",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Obshop",
+          "room": 2,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 126,
+      "reference_label": "Dragon Roost Cavern - Main big room",
+      "reference_value": "M_NewD2, 02, 00, FF",
+      "stage": "M_NewD2",
+      "room": 2,
+      "spawn": 5,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Main Room - Warp Pot",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 2,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Source spawn00 is absent in Room2. Select authored warp-pot05, also reached by native SCLS and explicitly supplied at line132; label clarifies this same-room substitute."
+      }
+    },
+    {
+      "line": 127,
+      "reference_label": "Dragon Roost Cavern - Water pots",
+      "reference_value": "M_NewD2, 13, 00, FF",
+      "stage": "M_NewD2",
+      "room": 13,
+      "spawn": 4,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Water pots",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 13,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room13 entrance is04."
+      }
+    },
+    {
+      "line": 128,
+      "reference_label": "Dragon Roost Cavern - Sword boko in pot",
+      "reference_value": "M_NewD2, 01, 00, FF",
+      "stage": "M_NewD2",
+      "room": 1,
+      "spawn": 20,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Sword boko in pot",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 1,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room1 entrance is14 hexadecimal."
+      }
+    },
+    {
+      "line": 129,
+      "reference_label": "Dragon Roost Cavern - Many chus room",
+      "reference_value": "M_NewD2, 11, 00, FF",
+      "stage": "M_NewD2",
+      "room": 11,
+      "spawn": 2,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Many chus room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 11,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room11 entrance is02."
+      }
+    },
+    {
+      "line": 130,
+      "reference_label": "Dragon Roost Cavern - Big ladder outdoor",
+      "reference_value": "M_NewD2, 03, 00, FF",
+      "stage": "M_NewD2",
+      "room": 3,
+      "spawn": 6,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Big ladder outdoor",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 3,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room3 entrance is06."
+      }
+    },
+    {
+      "line": 131,
+      "reference_label": "Dragon Roost Cavern - Dark keese room",
+      "reference_value": "M_NewD2, 04, 00, FF",
+      "stage": "M_NewD2",
+      "room": 4,
+      "spawn": 7,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Dark keese room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 4,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room4 entrance is07."
+      }
+    },
+    {
+      "line": 132,
+      "reference_label": "Dragon Roost Cavern - Top bridge warp pot",
+      "reference_value": "M_NewD2, 02, 05, FF",
+      "stage": "M_NewD2",
+      "room": 2,
+      "spawn": 5,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Top bridge warp pot",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 2,
+          "spawn": 5,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 133,
+      "reference_label": "Dragon Roost Cavern - 3 bokoblin fight",
+      "reference_value": "M_NewD2, 06, 00, FF",
+      "stage": "M_NewD2",
+      "room": 6,
+      "spawn": 9,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "3 bokoblin fight",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 6,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room6 entrance is09."
+      }
+    },
+    {
+      "line": 134,
+      "reference_label": "Dragon Roost Cavern - Magtail lava platform",
+      "reference_value": "M_NewD2, 08, 00, FF",
+      "stage": "M_NewD2",
+      "room": 8,
+      "spawn": 14,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Magtail lava platform",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 8,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room8 entrance is0E hexadecimal."
+      }
+    },
+    {
+      "line": 135,
+      "reference_label": "Dragon Roost Cavern - Outside boos door",
+      "reference_value": "M_NewD2, 10, 01, FF",
+      "stage": "M_NewD2",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "Outside boss door",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_NewD2",
+          "room": 10,
+          "spawn": 1,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Source spawn01 belongs to Room2. Room10 spawn00 is the authored return from M_Dra09/Room9, a conservative same-room entrance substitute."
+      }
+    },
+    {
+      "line": 136,
+      "reference_label": "Dragon Roost Cavern - miniboss",
+      "reference_value": "M_Dra09, 09, 00, FF",
+      "stage": "M_Dra09",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 13,
+      "folder": "Dragon Roost Cavern",
+      "label": "miniboss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_Dra09",
+          "room": 9,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 137,
+      "reference_label": "Forest Haven - outside main entrance",
+      "reference_value": "sea, 41, 05, FF",
+      "stage": "sea",
+      "room": 41,
+      "spawn": 5,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "outside main entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "sea",
+          "room": 41,
+          "spawn": 5,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 138,
+      "reference_label": "Forest Haven - main entrance",
+      "reference_value": "Omori, 00, 05, FF",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 5,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forest Haven",
+      "label": "main entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Omori",
+          "room": 0,
+          "spawn": 5,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 139,
+      "reference_label": "Forbidden Woods - FW miniboss",
+      "reference_value": "kinMB, 10, 00, FF",
+      "stage": "kinMB",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forbidden Woods",
+      "label": "FW miniboss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "kinMB",
+          "room": 10,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 140,
+      "reference_label": "Forbidden Woods - FW basement room 2",
+      "reference_value": "kindan, 12, 01, FF",
+      "stage": "kindan",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forbidden Woods",
+      "label": "FW basement room 2",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "kindan",
+          "room": 12,
+          "spawn": 1,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Only authored Room12 entrance is00."
+      }
+    },
+    {
+      "line": 141,
+      "reference_label": "Forbidden Woods - FW in front of boss door",
+      "reference_value": "kindan, 16, 01, FF",
+      "stage": "kindan",
+      "room": 16,
+      "spawn": 1,
+      "layer": 255,
+      "status": "existing",
+      "sector": 41,
+      "folder": "Forbidden Woods",
+      "label": "FW in front of boss door",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "kindan",
+          "room": 16,
+          "spawn": 1,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 142,
+      "reference_label": "Tower of Gods - TOTG beemos",
+      "reference_value": "Siren, 06, 00, FF",
+      "stage": "Siren",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG beemos",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Siren",
+          "room": 6,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 143,
+      "reference_label": "Tower of Gods - TOTG scales",
+      "reference_value": "Siren, 08, 00, FF",
+      "stage": "Siren",
+      "room": 8,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG scales",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Siren",
+          "room": 8,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 144,
+      "reference_label": "Tower of Gods - TOTG before miniboss",
+      "reference_value": "Siren, 14, 00, FF",
+      "stage": "Siren",
+      "room": 14,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG before miniboss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Siren",
+          "room": 14,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 145,
+      "reference_label": "Tower of Gods - TOTG miniboss",
+      "reference_value": "SirenMB, 23, 00, FF",
+      "stage": "SirenMB",
+      "room": 23,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG miniboss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "SirenMB",
+          "room": 23,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 146,
+      "reference_label": "Tower of Gods - TOTG floor 3",
+      "reference_value": "Siren, 17, 00, FF",
+      "stage": "Siren",
+      "room": 17,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG floor 3",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Siren",
+          "room": 17,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 147,
+      "reference_label": "Tower of Gods - TOTG before boss",
+      "reference_value": "Siren, 18, 00,FF",
+      "stage": "Siren",
+      "room": 18,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG before boss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Siren",
+          "room": 18,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 148,
+      "reference_label": "Tower of Gods - TOTG bell",
+      "reference_value": "ADMumi, 00, C8, 09",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 200,
+      "layer": 9,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Tower of the Gods",
+      "label": "TOTG bell",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "ADMumi",
+          "room": 0,
+          "spawn": 200,
+          "layer": 9
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 149,
+      "reference_label": "Forsaken Fortress - Helmaroc fight",
+      "reference_value": "M2tower, 00, 14, FF",
+      "stage": "M2tower",
+      "room": 0,
+      "spawn": 20,
+      "layer": 255,
+      "status": "supported",
+      "sector": 1,
+      "folder": "Forsaken Fortress",
+      "label": "Helmaroc fight",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M2tower",
+          "room": 0,
+          "spawn": 20,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 150,
+      "reference_label": "Earth Temple - ET moblins and poes",
+      "reference_value": "M_Dai, 00, 08, FF",
+      "stage": "M_Dai",
+      "room": 7,
+      "spawn": 8,
+      "layer": 255,
+      "status": "existing",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "ET moblins and poes",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_Dai",
+          "room": 0,
+          "spawn": 8,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Stage-global point08 declares room7, not the supplied room0."
+      }
+    },
+    {
+      "line": 151,
+      "reference_label": "Earth Temple - ET miniboss",
+      "reference_value": "M_DaiMB, 12, 00, FF",
+      "stage": "M_DaiMB",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "ET miniboss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_DaiMB",
+          "room": 12,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 152,
+      "reference_label": "Earth Temple - ET Before last crypt",
+      "reference_value": "M_Dai, 13, 0E, FF",
+      "stage": "M_Dai",
+      "room": 13,
+      "spawn": 14,
+      "layer": 255,
+      "status": "supported",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "ET Before last crypt",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_Dai",
+          "room": 13,
+          "spawn": 14,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 153,
+      "reference_label": "Earth Temple - ET before boss door",
+      "reference_value": "M_Dai, 15, 18, FF",
+      "stage": "M_Dai",
+      "room": 15,
+      "spawn": 24,
+      "layer": 255,
+      "status": "supported",
+      "sector": 45,
+      "folder": "Earth Temple",
+      "label": "ET before boss door",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "M_Dai",
+          "room": 15,
+          "spawn": 24,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 154,
+      "reference_label": "Wind Temple - WT snipe the warp pot",
+      "reference_value": "kaze, 00, 02, FF",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 2,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "WT snipe the warp pot",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "kaze",
+          "room": 0,
+          "spawn": 2,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Stage-global point02 declares room2, not the supplied room0."
+      }
+    },
+    {
+      "line": 155,
+      "reference_label": "Wind Temple - WT BK room",
+      "reference_value": "Kaze, 00, 08, FF",
+      "stage": "kaze",
+      "room": 8,
+      "spawn": 8,
+      "layer": 255,
+      "status": "supported",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "WT BK room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "canonical_stage_spelling": "Kaze -> kaze",
+        "original_tuple": {
+          "stage": "kaze",
+          "room": 0,
+          "spawn": 8,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Stage-global point08 declares room8, not the supplied room0."
+      }
+    },
+    {
+      "line": 156,
+      "reference_label": "Wind Temple - WT bottom floor",
+      "reference_value": "Kaze, 00, 14, FF",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 20,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "WT bottom floor",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "canonical_stage_spelling": "Kaze -> kaze",
+        "original_tuple": {
+          "stage": "kaze",
+          "room": 0,
+          "spawn": 20,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "correction": "Stage-global point14 hexadecimal declares room2, not the supplied room0."
+      }
+    },
+    {
+      "line": 157,
+      "reference_label": "Wind Temple - WT miniboss",
+      "reference_value": "kazeMB, 06, 00, FF",
+      "stage": "kazeMB",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 4,
+      "folder": "Wind Temple",
+      "label": "WT miniboss",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "kazeMB",
+          "room": 6,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 158,
+      "reference_label": "Outset Island - Savage Floor 0",
+      "reference_value": "Cave09, 00, 00, FF",
+      "stage": "Cave09",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Savage Floor 0",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave09",
+          "room": 0,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "SCLS_derived_Savage_floor": 0
+      }
+    },
+    {
+      "line": 159,
+      "reference_label": "Outset Island - Savage Floor 10",
+      "reference_value": "Cave09, 15, 00, FF",
+      "stage": "Cave09",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Savage Floor 10",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave09",
+          "room": 15,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "SCLS_derived_Savage_floor": 10
+      }
+    },
+    {
+      "line": 160,
+      "reference_label": "Outset Island - Savage Floor 20",
+      "reference_value": "Cave10, 15, 00, FF",
+      "stage": "Cave10",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Savage Floor 20",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave10",
+          "room": 15,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "SCLS_derived_Savage_floor": 20
+      }
+    },
+    {
+      "line": 161,
+      "reference_label": "Outset Island - Savage Floor 30",
+      "reference_value": "Cave09, 20, 00, FF",
+      "stage": "Cave09",
+      "room": 20,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Savage Floor 30",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave09",
+          "room": 20,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "SCLS_derived_Savage_floor": 30
+      }
+    },
+    {
+      "line": 162,
+      "reference_label": "Outset Island - Savage Floor 40",
+      "reference_value": "Cave11, 15, 00, FF",
+      "stage": "Cave11",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Savage Floor 40",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave11",
+          "room": 15,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "SCLS_derived_Savage_floor": 40
+      }
+    },
+    {
+      "line": 163,
+      "reference_label": "Outset Island - Savage many bokoblins floor",
+      "reference_value": "Cave10, 09, 00, FF",
+      "stage": "Cave10",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 44,
+      "folder": "Outset Island",
+      "label": "Savage many bokoblins floor",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave10",
+          "room": 9,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "SCLS_derived_Savage_floor": 44
+      }
+    },
+    {
+      "line": 164,
+      "reference_label": "Forbidden Woods - FW main room",
+      "reference_value": "kindan, 05, 00, FF",
+      "stage": "kindan",
+      "room": 5,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 41,
+      "folder": "Forbidden Woods",
+      "label": "FW main room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "kindan",
+          "room": 5,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 166,
+      "reference_label": "Bomb island - Interior second room",
+      "reference_value": "Cave01, 01, 00, FF",
+      "stage": "Cave01",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 34,
+      "folder": "Bomb Island",
+      "label": "Interior second room",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Cave01",
+          "room": 1,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 167,
+      "reference_label": "Flight Control Platform - minigame",
+      "reference_value": "sea, 14, 01, 02",
+      "stage": "sea",
+      "room": 14,
+      "spawn": 1,
+      "layer": 2,
+      "status": "existing",
+      "sector": 14,
+      "folder": "Flight Control Platform",
+      "label": "minigame",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "sea",
+          "room": 14,
+          "spawn": 1,
+          "layer": 2
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 168,
+      "reference_label": "Ghost Ship",
+      "reference_value": "PShip, 02, 00, FF",
+      "stage": "PShip",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": null,
+      "folder": "Ghost Ship",
+      "label": "Entrance",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "PShip",
+          "room": 2,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "mobile": "Dungeons/Ghost Ship text selection only; no fixed map sector."
+      }
+    },
+    {
+      "line": 169,
+      "reference_label": "Ganon's Tower - Trials hub",
+      "reference_value": "GanonA, 01, 00, FF",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Trials hub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "GanonA",
+          "room": 1,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 171,
+      "reference_label": "Ganon's Tower - Earth temple trial exit",
+      "reference_value": "GanonA, 01, 04, FF",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 4,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Earth temple trial exit",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "GanonA",
+          "room": 1,
+          "spawn": 4,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 172,
+      "reference_label": "Ganon's Tower - Puppet ganon warp pot",
+      "reference_value": "GanonK, 00, 02, FF",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "status": "supported",
+      "sector": 26,
+      "folder": "Ganon's Tower",
+      "label": "Puppet ganon warp pot",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "GanonK",
+          "room": 0,
+          "spawn": 2,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 173,
+      "reference_label": "Northern Fairy Island - Sub",
+      "reference_value": "Abship, 04, 00, FF",
+      "stage": "Abship",
+      "room": 4,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 3,
+      "folder": "Northern Fairy",
+      "label": "Sub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 4,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 174,
+      "reference_label": "Earth Temple - Headstone Sub",
+      "reference_value": "Abship, 05, 00, FF",
+      "stage": "Abship",
+      "room": 5,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 45,
+      "folder": "Headstone",
+      "label": "Submarine",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 5,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler",
+        "label_correction": "Special Headstone Sub prefix consumed the entire source label; this is Abship05, not an Earth Temple entrance."
+      }
+    },
+    {
+      "line": 175,
+      "reference_label": "Crescent Moon Island - Sub",
+      "reference_value": "Abship, 07, 00, FF",
+      "stage": "Abship",
+      "room": 7,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 5,
+      "folder": "Crescent Moon",
+      "label": "Sub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 7,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 176,
+      "reference_label": "Six-Eye Reef - Sub",
+      "reference_value": "Abship, 01, 00, FF",
+      "stage": "Abship",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 25,
+      "folder": "Six Eye Reef",
+      "label": "Sub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 1,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 177,
+      "reference_label": "Five-Star Isles - Sub",
+      "reference_value": "Abship, 00, 00, FF",
+      "stage": "Abship",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 49,
+      "folder": "Five Star Isles",
+      "label": "Sub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 0,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 178,
+      "reference_label": "Bomb island - Sub",
+      "reference_value": "Abship, 02, 00, FF",
+      "stage": "Abship",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 34,
+      "folder": "Bomb Island",
+      "label": "Sub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 2,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    },
+    {
+      "line": 179,
+      "reference_label": "Flight Control Platform - Sub",
+      "reference_value": "Abship, 06, 00, FF",
+      "stage": "Abship",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "status": "existing",
+      "sector": 14,
+      "folder": "Flight Control Platform",
+      "label": "Sub",
+      "evidence": {
+        "basis": "Factual entrance selection privately reviewed; no native bytes or game/source authority included.",
+        "reference_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+        "original_tuple": {
+          "stage": "Abship",
+          "room": 6,
+          "spawn": 0,
+          "layer": 255
+        },
+        "numbering": "room decimal; spawn/layer hexadecimal, per original C# handler"
+      }
+    }
+  ],
+  "current_repairs": [
+    {
+      "warp": 78,
+      "before": {
+        "stage": "TF_01",
+        "room": 6,
+        "spawn": 0,
+        "layer": 255
+      },
+      "after": {
+        "stage": "TF_01",
+        "room": 0,
+        "spawn": 0,
+        "layer": 255
+      },
+      "label": "Triforce Cave",
+      "evidence": {
+        "reason": "No authored room6 point; conservative cave-entrance substitute, not a chest landing. Aliases existing warp79; deduplicate visible lists while preserving both IDs.",
+        "basis": "Authored factual entrance correction; private raw game evidence omitted."
+      }
+    },
+    {
+      "warp": 101,
+      "before": {
+        "stage": "M_Dai",
+        "room": 0,
+        "spawn": 8,
+        "layer": 255
+      },
+      "after": {
+        "stage": "M_Dai",
+        "room": 7,
+        "spawn": 8,
+        "layer": 255
+      },
+      "evidence": {
+        "reason": "Stage-global room correction",
+        "basis": "Authored factual entrance correction; private raw game evidence omitted."
+      }
+    },
+    {
+      "warp": 105,
+      "before": {
+        "stage": "kindan",
+        "room": 12,
+        "spawn": 1,
+        "layer": 255
+      },
+      "after": {
+        "stage": "kindan",
+        "room": 12,
+        "spawn": 0,
+        "layer": 255
+      },
+      "evidence": {
+        "reason": "Unique intended-room point",
+        "basis": "Authored factual entrance correction; private raw game evidence omitted."
+      }
+    }
+  ],
+  "source_blob": "3aa4fc3a192e51c78c2ec9cf992d11e890202c96",
+  "summary": {
+    "source_rows": 174,
+    "status_counts": {
+      "existing": 76,
+      "contextual": 3,
+      "supported": 86,
+      "excluded": 9
+    },
+    "explicit_source_tuples": 59,
+    "incomplete_naked_source_rows": 115,
+    "incomplete_supported_rows": 103,
+    "supplied_tuple_corrections": 14,
+    "current_repairs": 3,
+    "actual_current_main_records_verified": 136
+  },
+  "native_evidence_included": false,
+  "game_authority_issued": false
+}

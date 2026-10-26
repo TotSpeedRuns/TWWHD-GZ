@@ -1,0 +1,5120 @@
+{
+  "schema": "location-warp-normalized-tables/1",
+  "metadata_only": true,
+  "warps": [
+    {
+      "id": 0,
+      "label": "Island",
+      "stage": "sea",
+      "room": 47,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 1,
+      "label": "Cave 1",
+      "stage": "I_SubAN",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 2,
+      "label": "Cave 2",
+      "stage": "SubD43",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 3,
+      "label": "Island",
+      "stage": "sea",
+      "room": 35,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 4,
+      "label": "Bird's Peak",
+      "stage": "TF_03",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 5,
+      "label": "Island",
+      "stage": "sea",
+      "room": 48,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 6,
+      "label": "Cave",
+      "stage": "SubD71",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 7,
+      "label": "Island",
+      "stage": "sea",
+      "room": 34,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 8,
+      "label": "Inner Cave",
+      "stage": "Cave01",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 9,
+      "label": "Cave Entrance",
+      "stage": "Cave01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 10,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 11,
+      "label": "Island",
+      "stage": "sea",
+      "room": 42,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 12,
+      "label": "Cave 1",
+      "stage": "Cave03",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 13,
+      "label": "Cave 2",
+      "stage": "Cave03",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 14,
+      "label": "Island",
+      "stage": "sea",
+      "room": 5,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 15,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 7,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 16,
+      "label": "Island",
+      "stage": "sea",
+      "room": 24,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 17,
+      "label": "Island",
+      "stage": "sea",
+      "room": 36,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 18,
+      "label": "Diamond Steppe Cave",
+      "stage": "WarpD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 19,
+      "label": "Island",
+      "stage": "sea",
+      "room": 13,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 20,
+      "label": "DRI Pond",
+      "stage": "Adanmae",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 21,
+      "label": "Cave",
+      "stage": "TF_06",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 22,
+      "label": "Island",
+      "stage": "sea",
+      "room": 27,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 23,
+      "label": "Island",
+      "stage": "sea",
+      "room": 20,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 24,
+      "label": "Cave",
+      "stage": "MiniKaz",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 25,
+      "label": "Island",
+      "stage": "sea",
+      "room": 37,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 26,
+      "label": "Island",
+      "stage": "sea",
+      "room": 49,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 27,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 28,
+      "label": "Island",
+      "stage": "sea",
+      "room": 14,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 29,
+      "label": "Minigame Arrival",
+      "stage": "sea",
+      "room": 14,
+      "spawn": 1,
+      "layer": 2,
+      "flags": 0
+    },
+    {
+      "id": 30,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 31,
+      "label": "Island",
+      "stage": "sea",
+      "room": 41,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 32,
+      "label": "Interior",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 33,
+      "label": "Farore's Pearl",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 214,
+      "layer": 9,
+      "flags": 0
+    },
+    {
+      "id": 34,
+      "label": "Makar",
+      "stage": "Otkura",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 35,
+      "label": "Figurines",
+      "stage": "Pfigure",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 36,
+      "label": "Island",
+      "stage": "sea",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 37,
+      "label": "Island",
+      "stage": "sea",
+      "room": 8,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 38,
+      "label": "Island",
+      "stage": "sea",
+      "room": 4,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 39,
+      "label": "Gale",
+      "stage": "Ekaze",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 40,
+      "label": "Island",
+      "stage": "sea",
+      "room": 23,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 41,
+      "label": "Island",
+      "stage": "sea",
+      "room": 45,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 42,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 5,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 43,
+      "label": "Island",
+      "stage": "sea",
+      "room": 43,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 44,
+      "label": "Cave",
+      "stage": "Cave05",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 45,
+      "label": "Island",
+      "stage": "sea",
+      "room": 40,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 46,
+      "label": "Ice Ring Interior",
+      "stage": "MiniHyo",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 47,
+      "label": "Island",
+      "stage": "sea",
+      "room": 30,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 48,
+      "label": "Islet of Steel",
+      "stage": "ShipD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 49,
+      "label": "Island",
+      "stage": "sea",
+      "room": 29,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 50,
+      "label": "Cave",
+      "stage": "SubD42",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 51,
+      "label": "Island",
+      "stage": "sea",
+      "room": 18,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 52,
+      "label": "Island",
+      "stage": "sea",
+      "room": 44,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 53,
+      "label": "Forest of Fairies",
+      "stage": "A_mori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 54,
+      "label": "Nayru's Pearl",
+      "stage": "Pjavdou",
+      "room": 0,
+      "spawn": 200,
+      "layer": 8,
+      "flags": 0
+    },
+    {
+      "id": 55,
+      "label": "Savage Floor 0",
+      "stage": "Cave09",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 56,
+      "label": "Savage Floor 10",
+      "stage": "Cave09",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 57,
+      "label": "Savage Floor 20",
+      "stage": "Cave10",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 58,
+      "label": "Savage Floor 30",
+      "stage": "Cave09",
+      "room": 20,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 59,
+      "label": "Savage Floor 40",
+      "stage": "Cave11",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 60,
+      "label": "Savage Bokoblin Floor",
+      "stage": "Cave10",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 61,
+      "label": "Island",
+      "stage": "sea",
+      "room": 7,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 62,
+      "label": "Overlook",
+      "stage": "TF_02",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 63,
+      "label": "Island",
+      "stage": "sea",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 64,
+      "label": "Cave",
+      "stage": "Cave07",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 65,
+      "label": "Island",
+      "stage": "sea",
+      "room": 33,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 66,
+      "label": "Island",
+      "stage": "sea",
+      "room": 16,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 67,
+      "label": "Cave",
+      "stage": "Cave04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 68,
+      "label": "Island",
+      "stage": "sea",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 69,
+      "label": "Island",
+      "stage": "sea",
+      "room": 38,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 70,
+      "label": "Island",
+      "stage": "sea",
+      "room": 25,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 71,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 72,
+      "label": "Island",
+      "stage": "sea",
+      "room": 32,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 73,
+      "label": "Island",
+      "stage": "sea",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 74,
+      "label": "Island",
+      "stage": "sea",
+      "room": 21,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 75,
+      "label": "Island",
+      "stage": "sea",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 76,
+      "label": "Cave",
+      "stage": "Cave02",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 77,
+      "label": "Island",
+      "stage": "sea",
+      "room": 31,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 78,
+      "label": "Triforce Cave",
+      "stage": "TF_01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 79,
+      "label": "Cave",
+      "stage": "TF_01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 80,
+      "label": "Island",
+      "stage": "sea",
+      "room": 22,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 81,
+      "label": "Island",
+      "stage": "sea",
+      "room": 17,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 82,
+      "label": "Island",
+      "stage": "sea",
+      "room": 26,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 83,
+      "label": "Island",
+      "stage": "sea",
+      "room": 46,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 84,
+      "label": "Island",
+      "stage": "sea",
+      "room": 11,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 85,
+      "label": "FF1 CS",
+      "stage": "sea",
+      "room": 11,
+      "spawn": 200,
+      "layer": 8,
+      "flags": 0
+    },
+    {
+      "id": 86,
+      "label": "Island",
+      "stage": "sea",
+      "room": 3,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 87,
+      "label": "Fountain",
+      "stage": "Fairy01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 88,
+      "label": "Submarine",
+      "stage": "Abship",
+      "room": 4,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 89,
+      "label": "Island",
+      "stage": "sea",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 90,
+      "label": "Fountain",
+      "stage": "Fairy03",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 91,
+      "label": "Island",
+      "stage": "sea",
+      "room": 19,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 92,
+      "label": "Fountain",
+      "stage": "Fairy02",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 93,
+      "label": "Island",
+      "stage": "sea",
+      "room": 28,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 94,
+      "label": "Fountain",
+      "stage": "Fairy05",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 95,
+      "label": "Island",
+      "stage": "sea",
+      "room": 39,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 96,
+      "label": "Fountain",
+      "stage": "Fairy06",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 97,
+      "label": "Fountain",
+      "stage": "Fairy04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 98,
+      "label": "Entrance",
+      "stage": "M_NewD2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 99,
+      "label": "Miniboss",
+      "stage": "M_Dra09",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 100,
+      "label": "Gohma",
+      "stage": "M_DragB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 101,
+      "label": "Poes & Moblins",
+      "stage": "M_Dai",
+      "room": 7,
+      "spawn": 8,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 102,
+      "label": "ET Miniboss",
+      "stage": "M_DaiMB",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 103,
+      "label": "ET Boss",
+      "stage": "M_DaiB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 104,
+      "label": "Entrance",
+      "stage": "kindan",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 105,
+      "label": "Basement Room 2",
+      "stage": "kindan",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 106,
+      "label": "Miniboss",
+      "stage": "kinMB",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 107,
+      "label": "BK Skip",
+      "stage": "kindan",
+      "room": 16,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 108,
+      "label": "Boss",
+      "stage": "kinBOSS",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 109,
+      "label": "FF1",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 110,
+      "label": "FF1 - Doomzoom",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 16,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 111,
+      "label": "Save Aryll CS",
+      "stage": "M2tower",
+      "room": 0,
+      "spawn": 16,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 112,
+      "label": "EMS CS Part 1",
+      "stage": "M2ganon",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 113,
+      "label": "EMS CS Part 2",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 244,
+      "layer": 11,
+      "flags": 0
+    },
+    {
+      "id": 114,
+      "label": "Before Grand Staircase",
+      "stage": "GanonM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 115,
+      "label": "Light Arrows",
+      "stage": "GanonJ",
+      "room": 13,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 116,
+      "label": "Ganondorf",
+      "stage": "GTower",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 117,
+      "label": "Ghost Ship",
+      "stage": "PShip",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 118,
+      "label": "Hyrule",
+      "stage": "Hyrule",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 119,
+      "label": "Pirate Ship",
+      "stage": "Asoko",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 120,
+      "label": "Beemos",
+      "stage": "Siren",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 121,
+      "label": "Miniboss",
+      "stage": "SirenMB",
+      "room": 23,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 122,
+      "label": "Scales",
+      "stage": "Siren",
+      "room": 8,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 123,
+      "label": "Floor 3",
+      "stage": "Siren",
+      "room": 17,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 124,
+      "label": "Outdoors",
+      "stage": "Siren",
+      "room": 18,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 125,
+      "label": "Gohdan",
+      "stage": "SirenB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 126,
+      "label": "Hookshot",
+      "stage": "kazeMB",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 127,
+      "label": "Entrance",
+      "stage": "kaze",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 128,
+      "label": "Upper Hub",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 129,
+      "label": "Boss Key Approach",
+      "stage": "kaze",
+      "room": 5,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 130,
+      "label": "Boss Key Exit",
+      "stage": "kaze",
+      "room": 15,
+      "spawn": 15,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 131,
+      "label": "Lower Hub",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 20,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 132,
+      "label": "Spikes",
+      "stage": "kaze",
+      "room": 9,
+      "spawn": 9,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 133,
+      "label": "Warp Pot",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 23,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 134,
+      "label": "Boss Door",
+      "stage": "kaze",
+      "room": 12,
+      "spawn": 24,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 135,
+      "label": "Molgera",
+      "stage": "kazeB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 136,
+      "label": "Interior",
+      "stage": "Ocean",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 137,
+      "label": "Komali's Room",
+      "stage": "Comori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 138,
+      "label": "Mail Center",
+      "stage": "Atorizk",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 139,
+      "label": "Entrance",
+      "stage": "M_Dai",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 140,
+      "label": "Entrance",
+      "stage": "Edaichi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 141,
+      "label": "Bomb Shop",
+      "stage": "Ocrogh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 142,
+      "label": "Interior",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 143,
+      "label": "Interior 1",
+      "stage": "ma2room",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 144,
+      "label": "Interior 2",
+      "stage": "ma3room",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 145,
+      "label": "Jail",
+      "stage": "majroom",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 146,
+      "label": "Boss Figurines",
+      "stage": "figureD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 147,
+      "label": "DRC Figurines",
+      "stage": "figureF",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 148,
+      "label": "Enemy Figurines",
+      "stage": "figureE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 149,
+      "label": "Forest Haven Figurines",
+      "stage": "figureG",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 150,
+      "label": "Great Sea Figurines",
+      "stage": "figureA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 151,
+      "label": "Outset Island Figurines",
+      "stage": "figureC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 152,
+      "label": "Windfall Island Figurines",
+      "stage": "figureB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 153,
+      "label": "DRC Trial",
+      "stage": "GanonB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 154,
+      "label": "DRC Trial Boss",
+      "stage": "Xboss0",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 155,
+      "label": "ET Trial",
+      "stage": "GanonE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 156,
+      "label": "ET Trial Boss",
+      "stage": "Xboss2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 157,
+      "label": "Entrance",
+      "stage": "GanonA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 158,
+      "label": "FW Trial",
+      "stage": "GanonD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 159,
+      "label": "FW Trial Boss",
+      "stage": "Xboss1",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 160,
+      "label": "Ganon's Room",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 161,
+      "label": "Maze",
+      "stage": "GanonJ",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 162,
+      "label": "Staircase to Center",
+      "stage": "GanonN",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 163,
+      "label": "Staircase to Ganon",
+      "stage": "GanonL",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 164,
+      "label": "WT Trial",
+      "stage": "GanonC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 165,
+      "label": "WT Trial Boss",
+      "stage": "Xboss3",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 166,
+      "label": "Basement",
+      "stage": "kenroom",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 167,
+      "label": "Interior",
+      "stage": "Hyroom",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 168,
+      "label": "Grotto",
+      "stage": "ITest62",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 169,
+      "label": "Interior",
+      "stage": "Abesso",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 170,
+      "label": "Triforce Cave",
+      "stage": "TF_04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 171,
+      "label": "Abe's House",
+      "stage": "Onobuta",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 172,
+      "label": "Basement",
+      "stage": "LinkUG",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 173,
+      "label": "Jabun's Cavern",
+      "stage": "Pjavdou",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 174,
+      "label": "Link's House",
+      "stage": "LinkRM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 175,
+      "label": "Mesa's House",
+      "stage": "Omasao",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 176,
+      "label": "Orca's House",
+      "stage": "Ojhous",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 177,
+      "label": "Sturgeon's House",
+      "stage": "Ojhous2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 178,
+      "label": "Cave",
+      "stage": "TyuTyu",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 179,
+      "label": "Deck",
+      "stage": "A_umikz",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 180,
+      "label": "Another Empty",
+      "stage": "Cave11",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 181,
+      "label": "Empty",
+      "stage": "Cave10",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 182,
+      "label": "Cave",
+      "stage": "ITest63",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 183,
+      "label": "Cave",
+      "stage": "SubD44",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 184,
+      "label": "Interior",
+      "stage": "tincle",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 185,
+      "label": "Entrance",
+      "stage": "Siren",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 186,
+      "label": "Cutscene",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 187,
+      "label": "Auction House",
+      "stage": "Orichh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 188,
+      "label": "Bomb Shop",
+      "stage": "Obombh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 189,
+      "label": "Cafe Bar",
+      "stage": "Opub",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 190,
+      "label": "Lenzo's Studio",
+      "stage": "Ocmera",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 191,
+      "label": "Minigame House",
+      "stage": "Kaisen",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 192,
+      "label": "Potion Shop",
+      "stage": "Pdrgsh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 193,
+      "label": "Prison",
+      "stage": "Pnezumi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 194,
+      "label": "School of Joy",
+      "stage": "Nitiyou",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 195,
+      "label": "aryll lookout",
+      "stage": "sea",
+      "room": 44,
+      "spawn": 6,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 196,
+      "label": "FF1 exterior from first jail cell",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 197,
+      "label": "FF1 2 moblins",
+      "stage": "majroom",
+      "room": 3,
+      "spawn": 8,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 198,
+      "label": "FF1 Last moblin",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 10,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 199,
+      "label": "FF1 Between sidles",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 19,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 200,
+      "label": "Beedle shop",
+      "stage": "Obshop",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 201,
+      "label": "Main Room - Warp Pot",
+      "stage": "M_NewD2",
+      "room": 2,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 202,
+      "label": "Water pots",
+      "stage": "M_NewD2",
+      "room": 13,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 203,
+      "label": "Sword boko in pot",
+      "stage": "M_NewD2",
+      "room": 1,
+      "spawn": 20,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 204,
+      "label": "Many chus room",
+      "stage": "M_NewD2",
+      "room": 11,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 205,
+      "label": "Big ladder outdoor",
+      "stage": "M_NewD2",
+      "room": 3,
+      "spawn": 6,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 206,
+      "label": "Dark keese room",
+      "stage": "M_NewD2",
+      "room": 4,
+      "spawn": 7,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 207,
+      "label": "3 bokoblin fight",
+      "stage": "M_NewD2",
+      "room": 6,
+      "spawn": 9,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 208,
+      "label": "Magtail lava platform",
+      "stage": "M_NewD2",
+      "room": 8,
+      "spawn": 14,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 209,
+      "label": "Outside boss door",
+      "stage": "M_NewD2",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 210,
+      "label": "outside main entrance",
+      "stage": "sea",
+      "room": 41,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 211,
+      "label": "before miniboss",
+      "stage": "Siren",
+      "room": 14,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 212,
+      "label": "bell",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 200,
+      "layer": 9,
+      "flags": 0
+    },
+    {
+      "id": 213,
+      "label": "Helmaroc fight",
+      "stage": "M2tower",
+      "room": 0,
+      "spawn": 20,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 214,
+      "label": "Before last crypt",
+      "stage": "M_Dai",
+      "room": 13,
+      "spawn": 14,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 215,
+      "label": "before boss door",
+      "stage": "M_Dai",
+      "room": 15,
+      "spawn": 24,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 216,
+      "label": "BK room",
+      "stage": "kaze",
+      "room": 8,
+      "spawn": 8,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 217,
+      "label": "main room",
+      "stage": "kindan",
+      "room": 5,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 218,
+      "label": "Trials hub",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 219,
+      "label": "Earth temple trial exit",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 220,
+      "label": "Puppet ganon warp pot",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 221,
+      "label": "Island",
+      "stage": "sea",
+      "room": 48,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 222,
+      "label": "Cave",
+      "stage": "SubD71",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 223,
+      "label": "Interior",
+      "stage": "Ocean",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 224,
+      "label": "Island",
+      "stage": "sea",
+      "room": 13,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 225,
+      "label": "DRI Pond",
+      "stage": "Adanmae",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 226,
+      "label": "Cave",
+      "stage": "TF_06",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 227,
+      "label": "Komali's Room",
+      "stage": "Comori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 228,
+      "label": "Mail Center",
+      "stage": "Atorizk",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 229,
+      "label": "Beedle shop",
+      "stage": "Obshop",
+      "room": 2,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 230,
+      "label": "Island",
+      "stage": "sea",
+      "room": 41,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 231,
+      "label": "Interior",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 232,
+      "label": "Farore's Pearl",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 214,
+      "layer": 9,
+      "flags": 0
+    },
+    {
+      "id": 233,
+      "label": "Makar",
+      "stage": "Otkura",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 234,
+      "label": "Figurines",
+      "stage": "Pfigure",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 235,
+      "label": "Bomb Shop",
+      "stage": "Ocrogh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 236,
+      "label": "Interior",
+      "stage": "Omori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 237,
+      "label": "Boss Figurines",
+      "stage": "figureD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 238,
+      "label": "DRC Figurines",
+      "stage": "figureF",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 239,
+      "label": "Enemy Figurines",
+      "stage": "figureE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 240,
+      "label": "Forest Haven Figurines",
+      "stage": "figureG",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 241,
+      "label": "Great Sea Figurines",
+      "stage": "figureA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 242,
+      "label": "Outset Island Figurines",
+      "stage": "figureC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 243,
+      "label": "Windfall Island Figurines",
+      "stage": "figureB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 244,
+      "label": "outside main entrance",
+      "stage": "sea",
+      "room": 41,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 245,
+      "label": "Island",
+      "stage": "sea",
+      "room": 40,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 246,
+      "label": "Ice Ring Interior",
+      "stage": "MiniHyo",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 247,
+      "label": "Grotto",
+      "stage": "ITest62",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 248,
+      "label": "Island",
+      "stage": "sea",
+      "room": 44,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 249,
+      "label": "Forest of Fairies",
+      "stage": "A_mori",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 250,
+      "label": "Nayru's Pearl",
+      "stage": "Pjavdou",
+      "room": 0,
+      "spawn": 200,
+      "layer": 8,
+      "flags": 0
+    },
+    {
+      "id": 251,
+      "label": "Savage Floor 0",
+      "stage": "Cave09",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 252,
+      "label": "Savage Floor 10",
+      "stage": "Cave09",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 253,
+      "label": "Savage Floor 20",
+      "stage": "Cave10",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 254,
+      "label": "Savage Floor 30",
+      "stage": "Cave09",
+      "room": 20,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 255,
+      "label": "Savage Floor 40",
+      "stage": "Cave11",
+      "room": 15,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 256,
+      "label": "Savage Bokoblin Floor",
+      "stage": "Cave10",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 257,
+      "label": "Abe's House",
+      "stage": "Onobuta",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 258,
+      "label": "Basement",
+      "stage": "LinkUG",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 259,
+      "label": "Fountain",
+      "stage": "Fairy04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 260,
+      "label": "Jabun's Cavern",
+      "stage": "Pjavdou",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 261,
+      "label": "Link's House",
+      "stage": "LinkRM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 262,
+      "label": "Mesa's House",
+      "stage": "Omasao",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 263,
+      "label": "Orca's House",
+      "stage": "Ojhous",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 264,
+      "label": "Sturgeon's House",
+      "stage": "Ojhous2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 265,
+      "label": "Another Empty",
+      "stage": "Cave11",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 266,
+      "label": "Empty",
+      "stage": "Cave10",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 267,
+      "label": "aryll lookout",
+      "stage": "sea",
+      "room": 44,
+      "spawn": 6,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 268,
+      "label": "Island",
+      "stage": "sea",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 269,
+      "label": "Cave",
+      "stage": "Cave07",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 270,
+      "label": "Cave",
+      "stage": "TyuTyu",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 271,
+      "label": "Island",
+      "stage": "sea",
+      "room": 33,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 272,
+      "label": "Interior",
+      "stage": "Abesso",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 273,
+      "label": "Triforce Cave",
+      "stage": "TF_04",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 274,
+      "label": "Island",
+      "stage": "sea",
+      "room": 38,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 275,
+      "label": "Cave",
+      "stage": "ITest63",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 276,
+      "label": "Island",
+      "stage": "sea",
+      "room": 31,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 277,
+      "label": "Triforce Cave",
+      "stage": "TF_01",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 278,
+      "label": "Cave",
+      "stage": "SubD44",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 279,
+      "label": "Island",
+      "stage": "sea",
+      "room": 17,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 280,
+      "label": "Interior",
+      "stage": "tincle",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 281,
+      "label": "Island",
+      "stage": "sea",
+      "room": 11,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 282,
+      "label": "FF1 CS",
+      "stage": "sea",
+      "room": 11,
+      "spawn": 200,
+      "layer": 8,
+      "flags": 0
+    },
+    {
+      "id": 283,
+      "label": "Auction House",
+      "stage": "Orichh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 284,
+      "label": "Bomb Shop",
+      "stage": "Obombh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 285,
+      "label": "Cafe Bar",
+      "stage": "Opub",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 286,
+      "label": "Lenzo's Studio",
+      "stage": "Ocmera",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 287,
+      "label": "Minigame House",
+      "stage": "Kaisen",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 288,
+      "label": "Potion Shop",
+      "stage": "Pdrgsh",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 289,
+      "label": "Prison",
+      "stage": "Pnezumi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 290,
+      "label": "School of Joy",
+      "stage": "Nitiyou",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 291,
+      "label": "Entrance",
+      "stage": "M_NewD2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 292,
+      "label": "Miniboss",
+      "stage": "M_Dra09",
+      "room": 9,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 293,
+      "label": "Gohma",
+      "stage": "M_DragB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 294,
+      "label": "Main Room - Warp Pot",
+      "stage": "M_NewD2",
+      "room": 2,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 295,
+      "label": "Water pots",
+      "stage": "M_NewD2",
+      "room": 13,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 296,
+      "label": "Sword boko in pot",
+      "stage": "M_NewD2",
+      "room": 1,
+      "spawn": 20,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 297,
+      "label": "Many chus room",
+      "stage": "M_NewD2",
+      "room": 11,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 298,
+      "label": "Big ladder outdoor",
+      "stage": "M_NewD2",
+      "room": 3,
+      "spawn": 6,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 299,
+      "label": "Dark keese room",
+      "stage": "M_NewD2",
+      "room": 4,
+      "spawn": 7,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 300,
+      "label": "3 bokoblin fight",
+      "stage": "M_NewD2",
+      "room": 6,
+      "spawn": 9,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 301,
+      "label": "Magtail lava platform",
+      "stage": "M_NewD2",
+      "room": 8,
+      "spawn": 14,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 302,
+      "label": "Outside boss door",
+      "stage": "M_NewD2",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 303,
+      "label": "Poes & Moblins",
+      "stage": "M_Dai",
+      "room": 7,
+      "spawn": 8,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 304,
+      "label": "ET Miniboss",
+      "stage": "M_DaiMB",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 305,
+      "label": "ET Boss",
+      "stage": "M_DaiB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 306,
+      "label": "Entrance",
+      "stage": "M_Dai",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 307,
+      "label": "Entrance",
+      "stage": "Edaichi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 308,
+      "label": "Before last crypt",
+      "stage": "M_Dai",
+      "room": 13,
+      "spawn": 14,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 309,
+      "label": "before boss door",
+      "stage": "M_Dai",
+      "room": 15,
+      "spawn": 24,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 310,
+      "label": "Entrance",
+      "stage": "kindan",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 311,
+      "label": "Basement Room 2",
+      "stage": "kindan",
+      "room": 12,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 312,
+      "label": "Miniboss",
+      "stage": "kinMB",
+      "room": 10,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 313,
+      "label": "BK Skip",
+      "stage": "kindan",
+      "room": 16,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 314,
+      "label": "Boss",
+      "stage": "kinBOSS",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 315,
+      "label": "main room",
+      "stage": "kindan",
+      "room": 5,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 316,
+      "label": "FF1",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 317,
+      "label": "FF1 - Doomzoom",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 16,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 318,
+      "label": "Save Aryll CS",
+      "stage": "M2tower",
+      "room": 0,
+      "spawn": 16,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 319,
+      "label": "EMS CS Part 1",
+      "stage": "M2ganon",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 320,
+      "label": "EMS CS Part 2",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 244,
+      "layer": 11,
+      "flags": 0
+    },
+    {
+      "id": 321,
+      "label": "Interior 1",
+      "stage": "ma2room",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 322,
+      "label": "Interior 2",
+      "stage": "ma3room",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 323,
+      "label": "Jail",
+      "stage": "majroom",
+      "room": 0,
+      "spawn": 3,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 324,
+      "label": "FF1 exterior from first jail cell",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 325,
+      "label": "FF1 2 moblins",
+      "stage": "majroom",
+      "room": 3,
+      "spawn": 8,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 326,
+      "label": "FF1 Last moblin",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 10,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 327,
+      "label": "FF1 Between sidles",
+      "stage": "MajyuE",
+      "room": 0,
+      "spawn": 19,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 328,
+      "label": "Helmaroc fight",
+      "stage": "M2tower",
+      "room": 0,
+      "spawn": 20,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 329,
+      "label": "Before Grand Staircase",
+      "stage": "GanonM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 330,
+      "label": "Light Arrows",
+      "stage": "GanonJ",
+      "room": 13,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 331,
+      "label": "Ganondorf",
+      "stage": "GTower",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 332,
+      "label": "DRC Trial",
+      "stage": "GanonB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 333,
+      "label": "DRC Trial Boss",
+      "stage": "Xboss0",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 334,
+      "label": "ET Trial",
+      "stage": "GanonE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 335,
+      "label": "ET Trial Boss",
+      "stage": "Xboss2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 336,
+      "label": "Entrance",
+      "stage": "GanonA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 337,
+      "label": "FW Trial",
+      "stage": "GanonD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 338,
+      "label": "FW Trial Boss",
+      "stage": "Xboss1",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 339,
+      "label": "Ganon's Room",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 340,
+      "label": "Maze",
+      "stage": "GanonJ",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 341,
+      "label": "Staircase to Center",
+      "stage": "GanonN",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 342,
+      "label": "Staircase to Ganon",
+      "stage": "GanonL",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 343,
+      "label": "WT Trial",
+      "stage": "GanonC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 344,
+      "label": "WT Trial Boss",
+      "stage": "Xboss3",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 345,
+      "label": "Trials hub",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 346,
+      "label": "Earth temple trial exit",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 347,
+      "label": "Puppet ganon warp pot",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 348,
+      "label": "Hyrule",
+      "stage": "Hyrule",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 349,
+      "label": "Basement",
+      "stage": "kenroom",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 350,
+      "label": "Interior",
+      "stage": "Hyroom",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 351,
+      "label": "Pirate Ship",
+      "stage": "Asoko",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 352,
+      "label": "Deck",
+      "stage": "A_umikz",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 353,
+      "label": "Beemos",
+      "stage": "Siren",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 354,
+      "label": "Miniboss",
+      "stage": "SirenMB",
+      "room": 23,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 355,
+      "label": "Scales",
+      "stage": "Siren",
+      "room": 8,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 356,
+      "label": "Floor 3",
+      "stage": "Siren",
+      "room": 17,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 357,
+      "label": "Outdoors",
+      "stage": "Siren",
+      "room": 18,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 358,
+      "label": "Gohdan",
+      "stage": "SirenB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 359,
+      "label": "Entrance",
+      "stage": "Siren",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 360,
+      "label": "Cutscene",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 361,
+      "label": "before miniboss",
+      "stage": "Siren",
+      "room": 14,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 362,
+      "label": "bell",
+      "stage": "ADMumi",
+      "room": 0,
+      "spawn": 200,
+      "layer": 9,
+      "flags": 0
+    },
+    {
+      "id": 363,
+      "label": "Hookshot",
+      "stage": "kazeMB",
+      "room": 6,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 364,
+      "label": "Entrance",
+      "stage": "kaze",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 365,
+      "label": "Upper Hub",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 366,
+      "label": "Boss Key Approach",
+      "stage": "kaze",
+      "room": 5,
+      "spawn": 5,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 367,
+      "label": "Boss Key Exit",
+      "stage": "kaze",
+      "room": 15,
+      "spawn": 15,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 368,
+      "label": "Lower Hub",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 20,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 369,
+      "label": "Spikes",
+      "stage": "kaze",
+      "room": 9,
+      "spawn": 9,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 370,
+      "label": "Warp Pot",
+      "stage": "kaze",
+      "room": 2,
+      "spawn": 23,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 371,
+      "label": "Boss Door",
+      "stage": "kaze",
+      "room": 12,
+      "spawn": 24,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 372,
+      "label": "Molgera",
+      "stage": "kazeB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 373,
+      "label": "Gale",
+      "stage": "Ekaze",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 374,
+      "label": "BK room",
+      "stage": "kaze",
+      "room": 8,
+      "spawn": 8,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 375,
+      "label": "Before Grand Staircase",
+      "stage": "GanonM",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 376,
+      "label": "DRC Trial",
+      "stage": "GanonB",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 377,
+      "label": "DRC Trial Boss",
+      "stage": "Xboss0",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 378,
+      "label": "ET Trial",
+      "stage": "GanonE",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 379,
+      "label": "ET Trial Boss",
+      "stage": "Xboss2",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 380,
+      "label": "Entrance",
+      "stage": "GanonA",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 381,
+      "label": "FW Trial",
+      "stage": "GanonD",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 382,
+      "label": "FW Trial Boss",
+      "stage": "Xboss1",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 383,
+      "label": "Ganondorf",
+      "stage": "GTower",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 384,
+      "label": "Ganon's Room",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 385,
+      "label": "Maze",
+      "stage": "GanonJ",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 386,
+      "label": "Staircase to Center",
+      "stage": "GanonN",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 387,
+      "label": "Staircase to Ganon",
+      "stage": "GanonL",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 388,
+      "label": "WT Trial",
+      "stage": "GanonC",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 389,
+      "label": "WT Trial Boss",
+      "stage": "Xboss3",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 390,
+      "label": "Basement",
+      "stage": "kenroom",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 391,
+      "label": "Hyrule",
+      "stage": "Hyrule",
+      "room": 0,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 392,
+      "label": "Interior",
+      "stage": "Hyroom",
+      "room": 0,
+      "spawn": 1,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 393,
+      "label": "Trials hub",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 0,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 394,
+      "label": "Earth temple trial exit",
+      "stage": "GanonA",
+      "room": 1,
+      "spawn": 4,
+      "layer": 255,
+      "flags": 0
+    },
+    {
+      "id": 395,
+      "label": "Puppet ganon warp pot",
+      "stage": "GanonK",
+      "room": 0,
+      "spawn": 2,
+      "layer": 255,
+      "flags": 0
+    }
+  ],
+  "folders": [
+    {
+      "label": "Islands",
+      "start": 3,
+      "count": 44,
+      "kind": 1
+    },
+    {
+      "label": "Dungeons",
+      "start": 53,
+      "count": 10,
+      "kind": 1
+    },
+    {
+      "label": "Hyrule",
+      "start": 375,
+      "count": 21,
+      "kind": 0
+    },
+    {
+      "label": "Angular Isles",
+      "start": 0,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Bird's Peak Rock",
+      "start": 3,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Boating Course",
+      "start": 221,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Bomb Island",
+      "start": 7,
+      "count": 4,
+      "kind": 0
+    },
+    {
+      "label": "Cliff Plateau",
+      "start": 11,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Crescent Moon",
+      "start": 14,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Cyclops Reef",
+      "start": 16,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Diamond Steppe",
+      "start": 17,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Dragon Roost",
+      "start": 224,
+      "count": 6,
+      "kind": 0
+    },
+    {
+      "label": "Eastern Triangle",
+      "start": 22,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Fire Mountain",
+      "start": 23,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Five Eye Reef",
+      "start": 25,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Five Star Isles",
+      "start": 26,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Flight Control Platform",
+      "start": 28,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Forest Haven",
+      "start": 230,
+      "count": 15,
+      "kind": 0
+    },
+    {
+      "label": "Forsaken Fortress",
+      "start": 36,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Four-Eye Reef",
+      "start": 37,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Gale Isle",
+      "start": 38,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Greatfish",
+      "start": 40,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Headstone",
+      "start": 41,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Horseshoe",
+      "start": 43,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Ice Ring",
+      "start": 245,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Islet of Steel",
+      "start": 47,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Needle Rock",
+      "start": 49,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Northern Triangle",
+      "start": 51,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Outset Island",
+      "start": 248,
+      "count": 20,
+      "kind": 0
+    },
+    {
+      "label": "Overlook",
+      "start": 61,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Pawprint",
+      "start": 268,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Private Oasis",
+      "start": 271,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Rock Spire",
+      "start": 66,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Seven-Star",
+      "start": 68,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Shark Island",
+      "start": 274,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Six Eye Reef",
+      "start": 70,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Southern Triangle",
+      "start": 72,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Spectacle",
+      "start": 73,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Star Belt",
+      "start": 74,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Star Island",
+      "start": 75,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Stonewatcher",
+      "start": 276,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Three Eye Reef",
+      "start": 80,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Tingle",
+      "start": 279,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Tower of the Gods",
+      "start": 82,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Two Eye Reef",
+      "start": 83,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Windfall",
+      "start": 281,
+      "count": 10,
+      "kind": 0
+    },
+    {
+      "label": "Fairy Islands",
+      "start": 47,
+      "count": 6,
+      "kind": 1
+    },
+    {
+      "label": "Northern Fairy",
+      "start": 86,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Western Fairy",
+      "start": 89,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Eastern Fairy",
+      "start": 91,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Thorned Fairy",
+      "start": 93,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Southern Fairy",
+      "start": 95,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Outset Fairy",
+      "start": 97,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Dragon Roost Cavern",
+      "start": 291,
+      "count": 12,
+      "kind": 0
+    },
+    {
+      "label": "Earth Temple",
+      "start": 303,
+      "count": 7,
+      "kind": 0
+    },
+    {
+      "label": "Forbidden Woods",
+      "start": 310,
+      "count": 6,
+      "kind": 0
+    },
+    {
+      "label": "Forsaken Fortress",
+      "start": 316,
+      "count": 13,
+      "kind": 0
+    },
+    {
+      "label": "Ganon's Tower",
+      "start": 329,
+      "count": 19,
+      "kind": 0
+    },
+    {
+      "label": "Ghost Ship",
+      "start": 117,
+      "count": 1,
+      "kind": 0
+    },
+    {
+      "label": "Hyrule",
+      "start": 348,
+      "count": 3,
+      "kind": 0
+    },
+    {
+      "label": "Pirate Ship",
+      "start": 351,
+      "count": 2,
+      "kind": 0
+    },
+    {
+      "label": "Tower of the Gods",
+      "start": 353,
+      "count": 10,
+      "kind": 0
+    },
+    {
+      "label": "Wind Temple",
+      "start": 363,
+      "count": 12,
+      "kind": 0
+    }
+  ],
+  "quadrants": [
+    {
+      "sector": 1,
+      "label": "Forsaken Fortress",
+      "start": 0,
+      "count": 14
+    },
+    {
+      "sector": 2,
+      "label": "Star Island",
+      "start": 14,
+      "count": 2
+    },
+    {
+      "sector": 3,
+      "label": "Northern Fairy",
+      "start": 16,
+      "count": 3
+    },
+    {
+      "sector": 4,
+      "label": "Gale Isle",
+      "start": 19,
+      "count": 13
+    },
+    {
+      "sector": 5,
+      "label": "Crescent Moon",
+      "start": 32,
+      "count": 2
+    },
+    {
+      "sector": 6,
+      "label": "Seven Star Isles",
+      "start": 34,
+      "count": 1
+    },
+    {
+      "sector": 7,
+      "label": "Overlook Island",
+      "start": 35,
+      "count": 2
+    },
+    {
+      "sector": 8,
+      "label": "Four Eye Reef",
+      "start": 37,
+      "count": 1
+    },
+    {
+      "sector": 9,
+      "label": "Mother & Child",
+      "start": 38,
+      "count": 0
+    },
+    {
+      "sector": 10,
+      "label": "Spectacle Island",
+      "start": 38,
+      "count": 1
+    },
+    {
+      "sector": 11,
+      "label": "Windfall",
+      "start": 39,
+      "count": 12
+    },
+    {
+      "sector": 12,
+      "label": "Pawprint Isle",
+      "start": 51,
+      "count": 3
+    },
+    {
+      "sector": 13,
+      "label": "Dragon Roost",
+      "start": 54,
+      "count": 18
+    },
+    {
+      "sector": 14,
+      "label": "Flight Control Platform",
+      "start": 72,
+      "count": 3
+    },
+    {
+      "sector": 15,
+      "label": "Western Fairy",
+      "start": 75,
+      "count": 2
+    },
+    {
+      "sector": 16,
+      "label": "Rock Spire",
+      "start": 77,
+      "count": 2
+    },
+    {
+      "sector": 17,
+      "label": "Tingle Island",
+      "start": 79,
+      "count": 2
+    },
+    {
+      "sector": 18,
+      "label": "Northern Triangle",
+      "start": 81,
+      "count": 1
+    },
+    {
+      "sector": 19,
+      "label": "Eastern Fairy",
+      "start": 82,
+      "count": 2
+    },
+    {
+      "sector": 20,
+      "label": "Fire Mountain",
+      "start": 84,
+      "count": 2
+    },
+    {
+      "sector": 21,
+      "label": "Star Belt Archipelago",
+      "start": 86,
+      "count": 1
+    },
+    {
+      "sector": 22,
+      "label": "Three Eye Reef",
+      "start": 87,
+      "count": 1
+    },
+    {
+      "sector": 23,
+      "label": "Greatfish",
+      "start": 88,
+      "count": 1
+    },
+    {
+      "sector": 24,
+      "label": "Cyclops Reef",
+      "start": 89,
+      "count": 1
+    },
+    {
+      "sector": 25,
+      "label": "Six Eye Reef",
+      "start": 90,
+      "count": 2
+    },
+    {
+      "sector": 26,
+      "label": "Tower of the Gods",
+      "start": 92,
+      "count": 33
+    },
+    {
+      "sector": 27,
+      "label": "Eastern Triangle",
+      "start": 125,
+      "count": 1
+    },
+    {
+      "sector": 28,
+      "label": "Thorned Fairy",
+      "start": 126,
+      "count": 2
+    },
+    {
+      "sector": 29,
+      "label": "Needle Rock",
+      "start": 128,
+      "count": 2
+    },
+    {
+      "sector": 30,
+      "label": "Islet of Steel",
+      "start": 130,
+      "count": 2
+    },
+    {
+      "sector": 31,
+      "label": "Stone Watcher",
+      "start": 132,
+      "count": 3
+    },
+    {
+      "sector": 32,
+      "label": "Southern Triangle",
+      "start": 135,
+      "count": 1
+    },
+    {
+      "sector": 33,
+      "label": "Private Oasis",
+      "start": 136,
+      "count": 3
+    },
+    {
+      "sector": 34,
+      "label": "Bomb Island",
+      "start": 139,
+      "count": 4
+    },
+    {
+      "sector": 35,
+      "label": "Bird's Peak Rock",
+      "start": 143,
+      "count": 2
+    },
+    {
+      "sector": 36,
+      "label": "Diamond Steppe",
+      "start": 145,
+      "count": 2
+    },
+    {
+      "sector": 37,
+      "label": "Five Eye Reef",
+      "start": 147,
+      "count": 1
+    },
+    {
+      "sector": 38,
+      "label": "Shark Island",
+      "start": 148,
+      "count": 2
+    },
+    {
+      "sector": 39,
+      "label": "Southern Fairy",
+      "start": 150,
+      "count": 2
+    },
+    {
+      "sector": 40,
+      "label": "Ice Ring",
+      "start": 152,
+      "count": 3
+    },
+    {
+      "sector": 41,
+      "label": "Forest Haven",
+      "start": 155,
+      "count": 21
+    },
+    {
+      "sector": 42,
+      "label": "Cliff Plateau",
+      "start": 176,
+      "count": 3
+    },
+    {
+      "sector": 43,
+      "label": "Horseshoe Island",
+      "start": 179,
+      "count": 2
+    },
+    {
+      "sector": 44,
+      "label": "Outset",
+      "start": 181,
+      "count": 20
+    },
+    {
+      "sector": 45,
+      "label": "Headstone",
+      "start": 201,
+      "count": 9
+    },
+    {
+      "sector": 46,
+      "label": "Two Eye Reef",
+      "start": 210,
+      "count": 1
+    },
+    {
+      "sector": 47,
+      "label": "Angular Isles",
+      "start": 211,
+      "count": 2
+    },
+    {
+      "sector": 48,
+      "label": "Boating Course",
+      "start": 213,
+      "count": 3
+    },
+    {
+      "sector": 49,
+      "label": "Five Star Isles",
+      "start": 216,
+      "count": 2
+    }
+  ],
+  "destinations": [
+    {
+      "label": "Island",
+      "warp": 36
+    },
+    {
+      "label": "FF1",
+      "warp": 109
+    },
+    {
+      "label": "FF1 - Doomzoom",
+      "warp": 110
+    },
+    {
+      "label": "Save Aryll CS",
+      "warp": 111
+    },
+    {
+      "label": "EMS CS Part 1",
+      "warp": 112
+    },
+    {
+      "label": "EMS CS Part 2",
+      "warp": 113
+    },
+    {
+      "label": "Interior 1",
+      "warp": 143
+    },
+    {
+      "label": "Interior 2",
+      "warp": 144
+    },
+    {
+      "label": "Jail",
+      "warp": 145
+    },
+    {
+      "label": "FF1 exterior from first jail cell",
+      "warp": 196
+    },
+    {
+      "label": "FF1 2 moblins",
+      "warp": 197
+    },
+    {
+      "label": "FF1 Last moblin",
+      "warp": 198
+    },
+    {
+      "label": "FF1 Between sidles",
+      "warp": 199
+    },
+    {
+      "label": "Helmaroc fight",
+      "warp": 213
+    },
+    {
+      "label": "Island",
+      "warp": 75
+    },
+    {
+      "label": "Cave",
+      "warp": 76
+    },
+    {
+      "label": "Island",
+      "warp": 86
+    },
+    {
+      "label": "Fountain",
+      "warp": 87
+    },
+    {
+      "label": "Submarine",
+      "warp": 88
+    },
+    {
+      "label": "Island",
+      "warp": 38
+    },
+    {
+      "label": "Gale",
+      "warp": 39
+    },
+    {
+      "label": "Wind Temple / Hookshot",
+      "warp": 126
+    },
+    {
+      "label": "Wind Temple / Entrance",
+      "warp": 127
+    },
+    {
+      "label": "Wind Temple / Upper Hub",
+      "warp": 128
+    },
+    {
+      "label": "Wind Temple / Boss Key Approach",
+      "warp": 129
+    },
+    {
+      "label": "Wind Temple / Boss Key Exit",
+      "warp": 130
+    },
+    {
+      "label": "Wind Temple / Lower Hub",
+      "warp": 131
+    },
+    {
+      "label": "Wind Temple / Spikes",
+      "warp": 132
+    },
+    {
+      "label": "Wind Temple / Warp Pot",
+      "warp": 133
+    },
+    {
+      "label": "Wind Temple / Boss Door",
+      "warp": 134
+    },
+    {
+      "label": "Wind Temple / Molgera",
+      "warp": 135
+    },
+    {
+      "label": "WT / BK room",
+      "warp": 216
+    },
+    {
+      "label": "Island",
+      "warp": 14
+    },
+    {
+      "label": "Submarine",
+      "warp": 15
+    },
+    {
+      "label": "Island",
+      "warp": 68
+    },
+    {
+      "label": "Island",
+      "warp": 61
+    },
+    {
+      "label": "Overlook",
+      "warp": 62
+    },
+    {
+      "label": "Island",
+      "warp": 37
+    },
+    {
+      "label": "Island",
+      "warp": 73
+    },
+    {
+      "label": "Island",
+      "warp": 84
+    },
+    {
+      "label": "FF1 CS",
+      "warp": 85
+    },
+    {
+      "label": "Pirate Ship / Pirate Ship",
+      "warp": 119
+    },
+    {
+      "label": "Deck",
+      "warp": 179
+    },
+    {
+      "label": "Auction House",
+      "warp": 187
+    },
+    {
+      "label": "Bomb Shop",
+      "warp": 188
+    },
+    {
+      "label": "Cafe Bar",
+      "warp": 189
+    },
+    {
+      "label": "Lenzo's Studio",
+      "warp": 190
+    },
+    {
+      "label": "Minigame House",
+      "warp": 191
+    },
+    {
+      "label": "Potion Shop",
+      "warp": 192
+    },
+    {
+      "label": "Prison",
+      "warp": 193
+    },
+    {
+      "label": "School of Joy",
+      "warp": 194
+    },
+    {
+      "label": "Island",
+      "warp": 63
+    },
+    {
+      "label": "Cave",
+      "warp": 64
+    },
+    {
+      "label": "Cave",
+      "warp": 178
+    },
+    {
+      "label": "Island",
+      "warp": 19
+    },
+    {
+      "label": "DRI Pond",
+      "warp": 20
+    },
+    {
+      "label": "Cave",
+      "warp": 21
+    },
+    {
+      "label": "Dragon Roost Cavern / Entrance",
+      "warp": 98
+    },
+    {
+      "label": "Dragon Roost Cavern / Miniboss",
+      "warp": 99
+    },
+    {
+      "label": "Dragon Roost Cavern / Gohma",
+      "warp": 100
+    },
+    {
+      "label": "Komali's Room",
+      "warp": 137
+    },
+    {
+      "label": "Mail Center",
+      "warp": 138
+    },
+    {
+      "label": "Beedle shop",
+      "warp": 200
+    },
+    {
+      "label": "DRC / Main Room - Warp Pot",
+      "warp": 201
+    },
+    {
+      "label": "DRC / Water pots",
+      "warp": 202
+    },
+    {
+      "label": "DRC / Sword boko in pot",
+      "warp": 203
+    },
+    {
+      "label": "DRC / Many chus room",
+      "warp": 204
+    },
+    {
+      "label": "DRC / Big ladder outdoor",
+      "warp": 205
+    },
+    {
+      "label": "DRC / Dark keese room",
+      "warp": 206
+    },
+    {
+      "label": "DRC / 3 bokoblin fight",
+      "warp": 207
+    },
+    {
+      "label": "DRC / Magtail lava platform",
+      "warp": 208
+    },
+    {
+      "label": "DRC / Outside boss door",
+      "warp": 209
+    },
+    {
+      "label": "Island",
+      "warp": 28
+    },
+    {
+      "label": "Minigame Arrival",
+      "warp": 29
+    },
+    {
+      "label": "Submarine",
+      "warp": 30
+    },
+    {
+      "label": "Island",
+      "warp": 89
+    },
+    {
+      "label": "Fountain",
+      "warp": 90
+    },
+    {
+      "label": "Island",
+      "warp": 66
+    },
+    {
+      "label": "Cave",
+      "warp": 67
+    },
+    {
+      "label": "Island",
+      "warp": 81
+    },
+    {
+      "label": "Interior",
+      "warp": 184
+    },
+    {
+      "label": "Island",
+      "warp": 51
+    },
+    {
+      "label": "Island",
+      "warp": 91
+    },
+    {
+      "label": "Fountain",
+      "warp": 92
+    },
+    {
+      "label": "Island",
+      "warp": 23
+    },
+    {
+      "label": "Cave",
+      "warp": 24
+    },
+    {
+      "label": "Island",
+      "warp": 74
+    },
+    {
+      "label": "Island",
+      "warp": 80
+    },
+    {
+      "label": "Island",
+      "warp": 40
+    },
+    {
+      "label": "Island",
+      "warp": 16
+    },
+    {
+      "label": "Island",
+      "warp": 70
+    },
+    {
+      "label": "Submarine",
+      "warp": 71
+    },
+    {
+      "label": "Island",
+      "warp": 82
+    },
+    {
+      "label": "Ganon's Tower / Before Grand Staircase",
+      "warp": 114
+    },
+    {
+      "label": "Ganon's Tower / Light Arrows",
+      "warp": 115
+    },
+    {
+      "label": "Ganon's Tower / Ganondorf",
+      "warp": 116
+    },
+    {
+      "label": "Hyrule / Hyrule",
+      "warp": 118
+    },
+    {
+      "label": "Beemos",
+      "warp": 120
+    },
+    {
+      "label": "Miniboss",
+      "warp": 121
+    },
+    {
+      "label": "Scales",
+      "warp": 122
+    },
+    {
+      "label": "Floor 3",
+      "warp": 123
+    },
+    {
+      "label": "Outdoors",
+      "warp": 124
+    },
+    {
+      "label": "Gohdan",
+      "warp": 125
+    },
+    {
+      "label": "Ganon Tower / DRC Trial",
+      "warp": 153
+    },
+    {
+      "label": "Ganon Tower / DRC Trial Boss",
+      "warp": 154
+    },
+    {
+      "label": "Ganon Tower / ET Trial",
+      "warp": 155
+    },
+    {
+      "label": "Ganon Tower / ET Trial Boss",
+      "warp": 156
+    },
+    {
+      "label": "Ganon Tower / Entrance",
+      "warp": 157
+    },
+    {
+      "label": "Ganon Tower / FW Trial",
+      "warp": 158
+    },
+    {
+      "label": "Ganon Tower / FW Trial Boss",
+      "warp": 159
+    },
+    {
+      "label": "Ganon Tower / Ganon's Room",
+      "warp": 160
+    },
+    {
+      "label": "Ganon Tower / Maze",
+      "warp": 161
+    },
+    {
+      "label": "Ganon Tower / Staircase to Center",
+      "warp": 162
+    },
+    {
+      "label": "Ganon Tower / Staircase to Ganon",
+      "warp": 163
+    },
+    {
+      "label": "Ganon Tower / WT Trial",
+      "warp": 164
+    },
+    {
+      "label": "Ganon Tower / WT Trial Boss",
+      "warp": 165
+    },
+    {
+      "label": "Hyrule / Basement",
+      "warp": 166
+    },
+    {
+      "label": "Hyrule / Interior",
+      "warp": 167
+    },
+    {
+      "label": "TotG / Entrance",
+      "warp": 185
+    },
+    {
+      "label": "TotG / Cutscene",
+      "warp": 186
+    },
+    {
+      "label": "TotG / before miniboss",
+      "warp": 211
+    },
+    {
+      "label": "TotG / bell",
+      "warp": 212
+    },
+    {
+      "label": "Ganon Tower / Trials hub",
+      "warp": 218
+    },
+    {
+      "label": "Ganon Tower / Earth temple trial exit",
+      "warp": 219
+    },
+    {
+      "label": "Ganon Tower / Puppet ganon warp pot",
+      "warp": 220
+    },
+    {
+      "label": "Island",
+      "warp": 22
+    },
+    {
+      "label": "Island",
+      "warp": 93
+    },
+    {
+      "label": "Fountain",
+      "warp": 94
+    },
+    {
+      "label": "Island",
+      "warp": 49
+    },
+    {
+      "label": "Cave",
+      "warp": 50
+    },
+    {
+      "label": "Island",
+      "warp": 47
+    },
+    {
+      "label": "Islet of Steel",
+      "warp": 48
+    },
+    {
+      "label": "Island",
+      "warp": 77
+    },
+    {
+      "label": "Triforce Cave",
+      "warp": 78
+    },
+    {
+      "label": "Cave",
+      "warp": 183
+    },
+    {
+      "label": "Island",
+      "warp": 72
+    },
+    {
+      "label": "Island",
+      "warp": 65
+    },
+    {
+      "label": "Interior",
+      "warp": 169
+    },
+    {
+      "label": "Triforce Cave",
+      "warp": 170
+    },
+    {
+      "label": "Island",
+      "warp": 7
+    },
+    {
+      "label": "Inner Cave",
+      "warp": 8
+    },
+    {
+      "label": "Cave Entrance",
+      "warp": 9
+    },
+    {
+      "label": "Submarine",
+      "warp": 10
+    },
+    {
+      "label": "Island",
+      "warp": 3
+    },
+    {
+      "label": "Bird's Peak",
+      "warp": 4
+    },
+    {
+      "label": "Island",
+      "warp": 17
+    },
+    {
+      "label": "Diamond Steppe Cave",
+      "warp": 18
+    },
+    {
+      "label": "Island",
+      "warp": 25
+    },
+    {
+      "label": "Island",
+      "warp": 69
+    },
+    {
+      "label": "Cave",
+      "warp": 182
+    },
+    {
+      "label": "Island",
+      "warp": 95
+    },
+    {
+      "label": "Fountain",
+      "warp": 96
+    },
+    {
+      "label": "Island",
+      "warp": 45
+    },
+    {
+      "label": "Ice Ring Interior",
+      "warp": 46
+    },
+    {
+      "label": "Grotto",
+      "warp": 168
+    },
+    {
+      "label": "Island",
+      "warp": 31
+    },
+    {
+      "label": "Interior",
+      "warp": 32
+    },
+    {
+      "label": "Farore's Pearl",
+      "warp": 33
+    },
+    {
+      "label": "Makar",
+      "warp": 34
+    },
+    {
+      "label": "Figurines",
+      "warp": 35
+    },
+    {
+      "label": "Forbidden Woods / Entrance",
+      "warp": 104
+    },
+    {
+      "label": "Forbidden Woods / Basement Room 2",
+      "warp": 105
+    },
+    {
+      "label": "Forbidden Woods / Miniboss",
+      "warp": 106
+    },
+    {
+      "label": "Forbidden Woods / BK Skip",
+      "warp": 107
+    },
+    {
+      "label": "Forbidden Woods / Boss",
+      "warp": 108
+    },
+    {
+      "label": "Bomb Shop",
+      "warp": 141
+    },
+    {
+      "label": "Interior",
+      "warp": 142
+    },
+    {
+      "label": "Boss Figurines",
+      "warp": 146
+    },
+    {
+      "label": "DRC Figurines",
+      "warp": 147
+    },
+    {
+      "label": "Enemy Figurines",
+      "warp": 148
+    },
+    {
+      "label": "Forest Haven Figurines",
+      "warp": 149
+    },
+    {
+      "label": "Great Sea Figurines",
+      "warp": 150
+    },
+    {
+      "label": "Outset Island Figurines",
+      "warp": 151
+    },
+    {
+      "label": "Windfall Island Figurines",
+      "warp": 152
+    },
+    {
+      "label": "outside main entrance",
+      "warp": 210
+    },
+    {
+      "label": "FW / main room",
+      "warp": 217
+    },
+    {
+      "label": "Island",
+      "warp": 11
+    },
+    {
+      "label": "Cave 1",
+      "warp": 12
+    },
+    {
+      "label": "Cave 2",
+      "warp": 13
+    },
+    {
+      "label": "Island",
+      "warp": 43
+    },
+    {
+      "label": "Cave",
+      "warp": 44
+    },
+    {
+      "label": "Island",
+      "warp": 52
+    },
+    {
+      "label": "Forest of Fairies",
+      "warp": 53
+    },
+    {
+      "label": "Nayru's Pearl",
+      "warp": 54
+    },
+    {
+      "label": "Savage Floor 0",
+      "warp": 55
+    },
+    {
+      "label": "Savage Floor 10",
+      "warp": 56
+    },
+    {
+      "label": "Savage Floor 20",
+      "warp": 57
+    },
+    {
+      "label": "Savage Floor 30",
+      "warp": 58
+    },
+    {
+      "label": "Savage Floor 40",
+      "warp": 59
+    },
+    {
+      "label": "Savage Bokoblin Floor",
+      "warp": 60
+    },
+    {
+      "label": "Fountain",
+      "warp": 97
+    },
+    {
+      "label": "Abe's House",
+      "warp": 171
+    },
+    {
+      "label": "Basement",
+      "warp": 172
+    },
+    {
+      "label": "Jabun's Cavern",
+      "warp": 173
+    },
+    {
+      "label": "Link's House",
+      "warp": 174
+    },
+    {
+      "label": "Mesa's House",
+      "warp": 175
+    },
+    {
+      "label": "Orca's House",
+      "warp": 176
+    },
+    {
+      "label": "Sturgeon's House",
+      "warp": 177
+    },
+    {
+      "label": "Another Empty",
+      "warp": 180
+    },
+    {
+      "label": "Empty",
+      "warp": 181
+    },
+    {
+      "label": "aryll lookout",
+      "warp": 195
+    },
+    {
+      "label": "Island",
+      "warp": 41
+    },
+    {
+      "label": "Submarine",
+      "warp": 42
+    },
+    {
+      "label": "Earth Temple / Poes & Moblins",
+      "warp": 101
+    },
+    {
+      "label": "Earth Temple / ET Miniboss",
+      "warp": 102
+    },
+    {
+      "label": "Earth Temple / ET Boss",
+      "warp": 103
+    },
+    {
+      "label": "ET / Entrance",
+      "warp": 139
+    },
+    {
+      "label": "ET / Entrance",
+      "warp": 140
+    },
+    {
+      "label": "ET / Before last crypt",
+      "warp": 214
+    },
+    {
+      "label": "ET / before boss door",
+      "warp": 215
+    },
+    {
+      "label": "Island",
+      "warp": 83
+    },
+    {
+      "label": "Island",
+      "warp": 0
+    },
+    {
+      "label": "Cave",
+      "warp": 2
+    },
+    {
+      "label": "Island",
+      "warp": 5
+    },
+    {
+      "label": "Cave",
+      "warp": 6
+    },
+    {
+      "label": "Interior",
+      "warp": 136
+    },
+    {
+      "label": "Island",
+      "warp": 26
+    },
+    {
+      "label": "Submarine",
+      "warp": 27
+    }
+  ]
+}

@@ -5,6 +5,17 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Location warp tables and Hyrule browser
+
+The [location-warp component](location-warps/README.md) contains the exact
+authored table generator/compiler driver and clean functional destination
+facts, with attribution to Teotia's reference list. It accounts for all174
+source rows and preserves old warp IDs with three explicit entrance repairs.
+The result includes a Hyrule text root and location-grouped chart entries.
+Private entrance bytes, full generated assembly and compiled objects are
+excluded. The generator still requires its exact private qualified R755
+base; this is not a complete current-release or replacement v126 build.
+
 ## Quarter-heart-piece editor (private R755)
 
 The [heart-piece component](heart_pieces/README.md) adds separate 0/4 through

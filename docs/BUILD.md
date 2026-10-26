@@ -1,5 +1,9 @@
 # Build status
 
+A Docker route for the exported runtime is described in [DOCKER.md](DOCKER.md).
+It supplies the toolchain and Python dependencies; owned game inputs are still
+required for a full RPX build. Public CI checks compile components without game files.
+
 The standalone native runtime build has been reproduced from this asset-free
 source export. Local game artwork is required at build time.
 

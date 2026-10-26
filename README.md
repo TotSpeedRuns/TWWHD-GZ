@@ -15,6 +15,14 @@ The native patcher and Wii U GZ Setup source are also included. **Save states
 remain under development.** Actor recreation, resource ownership, transitions
 and durable slots still have gaps; this is not a claim of full-game coverage.
 
+## Build with Docker
+
+Only Docker is needed on the host for this route. Run `./build-docker.ps1` in
+PowerShell, or `bash build-docker.sh` with your original EUR v0 RPX and the matching
+practice RPX paths. The toolchain is supplied by the container; game files are
+mounted read-only and never included in the image. See [Docker instructions](docs/DOCKER.md).
+This builds the exported v126 runtime, not the complete latest release or installer.
+
 ## Build the native runtime
 
 You need Python 3.10+, Pillow, devkitPPC, your own unmodified EUR v0 `code/cking.rpx`,

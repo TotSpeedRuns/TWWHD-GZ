@@ -17,6 +17,13 @@ Upstreams: [TWWHD Randomizer](https://github.com/SuperDude88/TWWHD-Randomizer),
 [tinyxml2](https://github.com/leethomason/tinyxml2),
 [Dumpling](https://github.com/dumpling-app/dumpling).
 
+External build dependencies include devkitPPC and
+[WUT](https://github.com/devkitPro/wut). WUT publishes a
+[zlib license](https://github.com/devkitPro/wut/blob/master/LICENSE.txt).
+The toolchain/SDK binaries are not vendored in this repository. This dependency
+notice is not a complete provenance certification; see
+[source status](docs/SOURCE_STATUS.md).
+
 Nintendo game executables, artwork, fonts, saves and keys are not licensed by this
 project and are not included. The artwork manifest contains only sizes, addresses
 and hashes for local extraction from the matching practice executable.

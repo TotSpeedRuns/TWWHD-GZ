@@ -726,5 +726,17 @@ a small separately compiled C function with a C/C++ header. It avoids the
 diagnosed Cemu 2.6 indexed atomic-store register clobber. It supplies no game
 snapshot or actor-lifetime authority.
 
-These are reviewed authored components. Shipped v145 and the complete
-reproducible v126 export remain unchanged.
+These are reviewed authored partial components. The complete reproducible
+integrated export remains v126; the newer modules do not constitute a full
+v146 integrated source export.
+
+## Native job Gate scheduling probe
+
+The [native-job Gate experiment](native-job-gate/README.md) adds the reviewed
+authored same-Gate TRY/immediate metadata-LEAVE producer and its small report
+interface. One genuine Cemu window observed 121 completed frames and 121 new
+acquire/release cycles; callback family 7 and BUSY remained unobserved. The real
+LEAVE may block, and WORLD/READ readiness remains 0 with MISSING=15. Game-worker,
+physical, resource and lifetime closure are unfinished. This narrow include
+requires the existing common-admission primitive and full adapter integration;
+it does not update the reproducible integrated v126 export to v146.

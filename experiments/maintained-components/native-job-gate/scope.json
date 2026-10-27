@@ -1,0 +1,58 @@
+{
+  "schema": "authored-native-job-gate-source-scope/1",
+  "source_revision": "reviewed R3",
+  "source_sha256": "f5ea87c7b3d4ae69a40068f3038cf6e1eb81913122de53b62453c842694f4964",
+  "standalone": false,
+  "complete_current_runtime_export": false,
+  "reproducible_integrated_export_unchanged": "v126",
+  "report": {
+    "magic": "JXP1",
+    "version": 1,
+    "bytes": 128,
+    "DATA_bytes": 128,
+    "BSS_bytes": 28,
+    "WORLD_READY": 0,
+    "READ_READY": 0,
+    "MISSING": 15
+  },
+  "native_observation": {
+    "environment": "one genuine Cemu run",
+    "date": "2026-10-27",
+    "completed_frame_window": 121,
+    "new_actual_sameGate_tries": 121,
+    "new_actual_sameGate_acquires": 121,
+    "new_actual_sameGate_releases": 121,
+    "observed_callback_kinds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "unobserved_callback_kinds": [
+      7
+    ],
+    "BUSY_observed": false,
+    "native_API_results_supplied": false,
+    "HALTED_or_failed_LEAVE_triggered": false,
+    "hardware_tested": false
+  },
+  "readiness": {
+    "world_snapshot": false,
+    "complete_writer_coverage": false,
+    "lifetime_closure": false,
+    "resource_or_device_closure": false,
+    "physical_incarnation_closure": false,
+    "replay": false,
+    "all_game_proof": false
+  },
+  "dependencies": [
+    "Existing nine-wrapper adapter and genuine returned-frame caller in the same translation unit",
+    "Exact published common-admission R2 API/types/implementation",
+    "Official WUT headers, genuine OS bindings, devkitPPC, no LTO",
+    "Actual final named-section allocation, cold-zero, same-Gate relocation, atomic RA0 and stack/ABI reviews"
+  ]
+}

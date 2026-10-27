@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "area-folders-FF-map-versions-r3",
-  "status": "Reviewed authored partial components. Cemu menu navigation covers 49 sectors and 14 folders, including FF1/FF2/FF3. Hardware and full-world restoration remain unverified. Complete reproducible integrated export remains v126.",
+  "revision": "v146-authored-native-job-gate-probe",
+  "status": "Reviewed partial components; v146 adds native job scheduling gate source. WORLD/READ readiness remains0 and full-game snapshot closure is unfinished. Complete reproducible integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 43132,
-      "sha256": "ea2bba57fec958394730d433fc8089010a68fc01680c72ebdeba551672e0ce5e"
+      "bytes": 43856,
+      "sha256": "df96d098c623ac6922a4d8768ebc2a0e3e47bd191896e371013180643e50cb52"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -832,6 +832,26 @@
       "path": "experiments/maintained-components/map-area-hierarchy/validate_facts.py",
       "bytes": 5234,
       "sha256": "42331e9b061e4c9906bd3cadff8be194a48fa9ded826e4bf66d7f72c30f01809"
+    },
+    {
+      "path": "experiments/maintained-components/native-job-gate/exclusive_probe.h",
+      "bytes": 2004,
+      "sha256": "85ced6a4de90164ca9fa86a7b4f9d8795b8cfeebafbbd93e05fd2c7912522b39"
+    },
+    {
+      "path": "experiments/maintained-components/native-job-gate/exclusive_probe.inc",
+      "bytes": 6269,
+      "sha256": "f5ea87c7b3d4ae69a40068f3038cf6e1eb81913122de53b62453c842694f4964"
+    },
+    {
+      "path": "experiments/maintained-components/native-job-gate/README.md",
+      "bytes": 6101,
+      "sha256": "ede927595289c5a8769dd00abe5139a12d21d417bd648a2a03f86be54453b9eb"
+    },
+    {
+      "path": "experiments/maintained-components/native-job-gate/scope.json",
+      "bytes": 1671,
+      "sha256": "c3f7eb3b5cfeb23482cfa02411c4eac3b0fcf1834fc6bffa46bc7edd2bdde2ff"
     }
   ],
   "excludes": [

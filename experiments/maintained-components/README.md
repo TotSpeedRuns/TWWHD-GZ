@@ -693,7 +693,10 @@ Plain Left from Inventory's right panel returns to the nearest item row.
 L+Left retains decrement, with existing Right/A/X/Y edits unchanged. Shard
 selection accepts Left/Right as well as Up/Down; A remains the only toggle.
 The clip detector's sole numeric adjustment is radius*.975 to radius*.98:
-required overlap changes from 2.5% to 2%, with its ledge/climb latch unchanged.
+latest private tuning changes the radius multiplier from .9800 to .9850,
+requiring more than 1.5% overlap, with its ledge/climb latch unchanged.
+The delivered v146 uses .9800; this newer private candidate has 140 emitted
+geometry/latch checks, without a new live wall-clip or hardware claim.
 
 These are independently reviewed partial source components for a private
 candidate. Native controller acceptance and Wii U delivery are separate;

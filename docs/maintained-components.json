@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "v146-authored-native-job-gate-probe",
+  "revision": "private-0.985-clip-tuning-and-v146-native-job-gate",
   "status": "Reviewed partial components; v146 adds native job scheduling gate source. WORLD/READ readiness remains0 and full-game snapshot closure is unfinished. Complete reproducible integrated export remains v126.",
   "files": [
     {
@@ -30,8 +30,8 @@
     },
     {
       "path": "experiments/maintained-components/roll_clip_detector.c",
-      "sha256": "37184bd37b436cd37fcd1a771657206742ac19e652f71a51ab29e0a23b2775d7",
-      "bytes": 15020
+      "bytes": 15021,
+      "sha256": "95a72be1d54a56b3402b2e62dcffaecbf85f3ad42670880f2a33324d14fb353c"
     },
     {
       "path": "experiments/maintained-components/particle_guard.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 43856,
-      "sha256": "df96d098c623ac6922a4d8768ebc2a0e3e47bd191896e371013180643e50cb52"
+      "bytes": 44068,
+      "sha256": "ceeb72166d2d7106fa41e9cde30bf277a2d150f365c7e46ef76a8ce877dea80b"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",

@@ -1,0 +1,61 @@
+{
+  "schema": "authored-source-pins/1",
+  "hash_normalization": "UTF-8 with LF line endings",
+  "files": [
+    {
+      "path": "generic_capture.c",
+      "bytes": 17527,
+      "sha256": "29b680600df696ea900648b1dc89e9f8b9b21f014196cf8d7b03cf21b5ca139a"
+    },
+    {
+      "path": "generic_capture.h",
+      "bytes": 1623,
+      "sha256": "e2955d3601965af633c44145f9ee1c7def4dac7b9f15b71b7081bce3d81e0bb6"
+    },
+    {
+      "path": "generic_root_access.inc",
+      "bytes": 4093,
+      "sha256": "9c927aae4281de3b97ac71d4f6b22c98b77bda9ef3f47fe2b45f08a68313f65c"
+    },
+    {
+      "path": "ois_cpu_diagnostic.inc",
+      "bytes": 2841,
+      "sha256": "def8d47c0762652c195e0bb75047898ce2bc9093254b07cff32e322c09ab9a58"
+    },
+    {
+      "path": "callback.s",
+      "bytes": 1305,
+      "sha256": "0b2e85a4d84f6f8c0a1215ea4b8546a67b2963573f92038dcae21c70ed00c2de"
+    },
+    {
+      "path": "intent.c",
+      "bytes": 910,
+      "sha256": "c778ff052c99475706c95e7847da52d3299308734f3f7980b961af0310bb2355"
+    },
+    {
+      "path": "intent_bridge.s",
+      "bytes": 1089,
+      "sha256": "7690b3670af01a8f2ec04c5c865a098050c8607caebeece35e96242dfb75ac7f"
+    },
+    {
+      "path": "process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+    },
+    {
+      "path": "lifetime.h",
+      "bytes": 7036,
+      "sha256": "181cb7bcf0f009301b29b8cfa0dbe8d4ee77d6da18e5a0b1d461854b2c23183e"
+    },
+    {
+      "path": "heap_owner.h",
+      "bytes": 1603,
+      "sha256": "e87e7b4f369a40a62a743c8a22f0a543d3f9aa97b0b1d34f025976307f7c7caa"
+    },
+    {
+      "path": "integration-seams.json",
+      "bytes": 9541,
+      "sha256": "31f6b5c2845236a226ff0b56a43720c4e71a2e81b3c653581b7b7331283de276"
+    }
+  ]
+}

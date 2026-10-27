@@ -5,6 +5,28 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Generic CPU observation and fresh MSS visit joins
+
+The [generic CPU observation experiment](generic-cpu-observation/README.md)
+adds reviewed authored collector/header, root and private-owner includes,
+small ABI bridges and interface headers. It captures complete owned CPU
+allocations for two selected classes as diagnostic evidence. All63 unresolved
+closure bits remain; no replay or native capture is claimed by this export.
+The full current integration and reproducible builder remain separate.
+
+The maintained `mss_order.c`, `mss_pause_frames.c`, `mss_visit_join.c` and
+`mss_visit_join.h` now match the reviewed current visit-join sources used by
+the R749/R786 Cemu tests. Slow/Fast still follow Pause-Stick-Resume versus
+Pause-Resume-Stick order. Insta requires one fresh completed native visit
+with exactly two settled Menu frames joined to the same current attempt,
+actor and epoch; an old last-duration display cannot label a new attempt.
+The metadata join cancels frame/context gaps and handles nested notification
+publication without modifying game state. The existing wrapper stays intact.
+R786 observed ordinary Plus/B Slow/Fast sequences and one fresh joined 2-frame
+Insta visit. That does not establish a seven-frame stick window, new timing
+colors, batch reconstruction or Wii U acceptance. These files are partial
+maintained sources; they do not make the older v126 builder a newer build.
+
 ## Static Triforce graphic, full-mask image and source hints
 
 The [graphic component](triforce-graphic/README.md) adds an authored clipped

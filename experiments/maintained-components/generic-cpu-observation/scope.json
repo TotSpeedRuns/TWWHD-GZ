@@ -1,0 +1,39 @@
+{
+  "schema": "generic-CPU-observation-scope/1",
+  "source_snapshot": "Reviewed private R787 component sources",
+  "full_reproducible_export": "v126",
+  "complete_current_runtime_reproducible": false,
+  "native_capture_claimed": false,
+  "replay_or_restore": false,
+  "collector": {
+    "selection": "First current live pot453 and stone454 only",
+    "actor_bytes": "Complete currently owned native allocation capacity",
+    "model_bytes": "Complete childless forward Solid CPU model-heap span",
+    "capacity_bytes": 65536,
+    "observation": "Two exact byte comparisons under the existing guarded observational context",
+    "missing_closure_bits": 63
+  },
+  "missing": [
+    "Other worker writes",
+    "Inbound references",
+    "Shared resources/device lifetime",
+    "Audio state",
+    "Lifetime inverse",
+    "Atomic world snapshot"
+  ],
+  "publication": "Private immutable diagnostic OIS type3 only; never a playable archive",
+  "supplied": [
+    "Collector/header",
+    "Root and OIS includes",
+    "Small authored ABI/input bridges",
+    "PO/HL/GH interface headers",
+    "Narrow authored integration hunks"
+  ],
+  "omitted": [
+    "Game executables and code bytes",
+    "Artwork and other assets",
+    "Raw captures and save files",
+    "Machine paths and private diagnostic reports",
+    "Complete newer runtime, native linker inputs and full integration builder"
+  ]
+}

@@ -65,6 +65,18 @@ acceptance and native shine remain unverified. This partial source does not repl
 reproducible v126 export or add Puppet Ganon/cutscene save-state replay.
 See [graphic component scope](../experiments/maintained-components/triforce-graphic/README.md).
 
+The maintained generic CPU observation experiment adds reviewed authored
+collector/header, guarded root/OIS includes, small ABI/input bridges and
+interface headers from the private R787 component. Its two-class full CPU-byte
+capture is diagnostic only: mask63 keeps every unresolved closure bit, and no
+native capture, world freeze or replay is claimed here. Matching providers,
+link inputs and complete current integration remain unexported. The maintained
+MSS four-file snapshot now includes the reviewed fresh native visit join used
+by R749/R786: ordinary Slow/Fast ordering and one joined settled 2-frame Insta
+visit were observed in Cemu. It does not infer a seven-frame stick window or
+timing colors. See the component scope files. The full reproducible builder
+remains v126; these source snapshots do not constitute a coherent newer build.
+
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the
 whole project. The newer maintained C modules do not remove that limitation.

@@ -1,0 +1,156 @@
+{
+  "schema": "generic-CPU-observation-authored-integration/1",
+  "complete_current_runtime_reproducible": false,
+  "files": [
+    {
+      "path": "save_origin/root_access.c",
+      "baseline_sha256": "6ae2a9edfbc563d029fbb4bf1a6c730ddc46e32fa38da7bf3a2150b448192aa5",
+      "selected_sha256": "a060e2ae5485b74add853087728fe8a20de9e78cde8ba33dfd8bcb67426e73e3",
+      "hunks": [
+        {
+          "before": "",
+          "after": "static SpoU32 _gz_gac_root_entered,_gz_gac_root_frame,\n _gz_gac_root_thread,_gz_gac_root_serial,_gz_gac_root_gate;\nstatic SpoU32 gac_root_context_owned(SpoU32);\n\n"
+        },
+        {
+          "before": "SpoU32 _gz_srh_base_access_entered(void){return _gz_srh_probe_entered||_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_dth_entered;}\n",
+          "after": "SpoU32 _gz_srh_base_access_entered(void){return _gz_srh_probe_entered||_gz_spk_entered||_gz_sck_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered;}\n"
+        },
+        {
+          "before": "",
+          "after": " if(gac_root_context_owned(cookie))return 1;\n"
+        },
+        {
+          "before": " if(_gz_sck_entered||_gz_spk_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_doh_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||!sck_scope(mode,frame)||!srh_sealed()||\n",
+          "after": " if(_gz_sck_entered||_gz_spk_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_doh_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||!sck_scope(mode,frame)||!srh_sealed()||\n"
+        },
+        {
+          "before": "",
+          "after": "#include \"generic_root_access.inc\"\n"
+        },
+        {
+          "before": " if(req!=_gz_srh_ack+1||_gz_srh_probe_entered||_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_doh_access_entered()||_gz_dck_access_entered()||!srh_idle()){z=5;goto done;}\n",
+          "after": " if(req!=_gz_srh_ack+1||_gz_srh_probe_entered||_gz_spk_entered||_gz_sck_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_doh_access_entered()||_gz_dck_access_entered()||!srh_idle()){z=5;goto done;}\n"
+        }
+      ]
+    },
+    {
+      "path": "save_origin/render_capture_access.inc",
+      "baseline_sha256": "da4efd29ced5762176c8381e654cb09e45cd70d87017762e906fde75db0e808b",
+      "selected_sha256": "ce12e439d135b65fbb106fda25d72e565f0bde61df41eeef09da604ed743ee30",
+      "hunks": [
+        {
+          "before": " if((mode!=1&&mode!=2)||_gz_rkc_entered||_gz_spk_entered||_gz_sck_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||\n",
+          "after": " if((mode!=1&&mode!=2)||_gz_gac_root_entered||_gz_rkc_entered||_gz_spk_entered||_gz_sck_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||\n"
+        }
+      ]
+    },
+    {
+      "path": "save_origin/persistent_access.inc",
+      "baseline_sha256": "6f2767de16a4c2d3e6bd927171227edfbc3afe8c10ff74499746b55e778c47cf",
+      "selected_sha256": "aff9f4f4fb43d91918d7922c347ac1a1fe50c9e15abfbfb1eccf12d6eb622b84",
+      "hunks": [
+        {
+          "before": " if(_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||mode<2||mode>5||\n",
+          "after": " if(_gz_spk_entered||_gz_sck_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||mode<2||mode>5||\n"
+        }
+      ]
+    },
+    {
+      "path": "save_origin/death_read_access.inc",
+      "baseline_sha256": "35cf0f3880cabe18028f1b2db4d628f2dc74f84ebd96b5428b69f198ac0c1d71",
+      "selected_sha256": "b9a0e50ecdd69108d514575c9cd159b8c723650ed0c5233617254bbd46bb34d9",
+      "hunks": [
+        {
+          "before": " if(_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_doh_access_entered()||_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_srh_probe_entered||\n",
+          "after": " if(_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_doh_access_entered()||_gz_spk_entered||_gz_sck_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_srh_probe_entered||\n"
+        }
+      ]
+    },
+    {
+      "path": "save_origin/death_persistent_access.inc",
+      "baseline_sha256": "5922abf16017aab76b8463701e1df7e0388fe6683eb5c6e6f0181c8deb4e520d",
+      "selected_sha256": "101295964d708e2d234f32d98586da42813e0f31a406868a04519ed2942d0e35",
+      "hunks": [
+        {
+          "before": " if(_gz_dpk_root_entered||_gz_spk_entered||_gz_sck_entered||_gz_rkc_entered||_gz_dth_entered||_gz_srh_probe_entered||\n",
+          "after": " if(_gz_dpk_root_entered||_gz_spk_entered||_gz_sck_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered||_gz_srh_probe_entered||\n"
+        }
+      ]
+    },
+    {
+      "path": "particle_guard.c",
+      "baseline_sha256": "0976bf35380606d6340a4831722140436889ef3bab244e58e4362186e5806fec",
+      "selected_sha256": "6f91744afefe51856f86d6fbdad3eaf36611819248719ccec44abcfb693a61f1",
+      "hunks": [
+        {
+          "before": "",
+          "after": "extern U _gz_gac_particle_entry(U),_gz_gac_particle_identity(U,U,U);\nstatic U jpg_capture_entry(U mode,U frame){return mode==3?_gz_gac_particle_entry(frame):_gz_rkc_particle_entry(mode,frame);}\nstatic U jpg_capture_identity(U mode,U frame,U cookie,U thread){return mode==3?_gz_gac_particle_identity(frame,cookie,thread):_gz_rkc_particle_identity(mode,frame,cookie,thread);}\n\n"
+        },
+        {
+          "before": " jpg_mode==2?_gz_rkc_particle_identity(jpg_capture_mode,jpg_capture_frame,jpg_token,jpg_thread)==1:0;}\n",
+          "after": " jpg_mode==2?jpg_capture_identity(jpg_capture_mode,jpg_capture_frame,jpg_token,jpg_thread)==1:0;}\n"
+        },
+        {
+          "before": " if((mode!=1&&mode!=2)||frame!=_gz_po_frame||jpg_gpu_entered||!jpg_heap_open()||!jpg_idle())return JPG_OWNER;\n",
+          "after": " if((mode!=1&&mode!=2&&mode!=3)||frame!=_gz_po_frame||jpg_gpu_entered||!jpg_heap_open()||!jpg_idle())return JPG_OWNER;\n"
+        },
+        {
+          "before": " cookie=_gz_rkc_particle_entry(mode,frame);thread=_gz_hg_platform_thread();\n",
+          "after": " cookie=jpg_capture_entry(mode,frame);thread=_gz_hg_platform_thread();\n"
+        },
+        {
+          "before": " if(_gz_rkc_particle_entry(mode,frame)!=cookie){\n",
+          "after": " if(jpg_capture_entry(mode,frame)!=cookie){\n"
+        },
+        {
+          "before": "  _gz_rkc_particle_entry(jpg_capture_mode,frame)==owner;\n",
+          "after": "  jpg_capture_entry(jpg_capture_mode,frame)==owner;\n"
+        }
+      ]
+    },
+    {
+      "path": "owned_images.c",
+      "baseline_sha256": "633c2ab6274736127060d54fb592aaaa7fd3d30f6c989d90d0d0f0e5b797dc11",
+      "selected_sha256": "970e7a67bb87f93a05da8ac21340513cc7ff8497feb87e857d3c88221e617989",
+      "hunks": [
+        {
+          "before": "static U header(void){return !retained_conflict&&state.magic==0x4f495331u&&state.version==1&&state.bytes==sizeof(state)&&state.serial&&state.inverse==~state.serial&&state.entered<=1&&state.writer<=3&&(state.entered||(!state.thread&&!state.writer));}\n",
+          "after": "static U header(void){return !retained_conflict&&state.magic==0x4f495331u&&state.version==1&&state.bytes==sizeof(state)&&state.serial&&state.inverse==~state.serial&&state.entered<=1&&state.writer<=4&&(state.entered||(!state.thread&&!state.writer));}\n"
+        },
+        {
+          "before": " if(state.staging.pointer&&!apart(p,n,state.staging.pointer,state.staging.capacity))return state.entered&&(state.writer==1||state.writer==2)&&contains(state.staging.pointer,state.staging.capacity,p,n);\n",
+          "after": " if(state.staging.pointer&&!apart(p,n,state.staging.pointer,state.staging.capacity))return state.entered&&(state.writer==1||state.writer==2||state.writer==4)&&contains(state.staging.pointer,state.staging.capacity,p,n);\n"
+        },
+        {
+          "before": " else if(!s->generation||s->used<192||s->used>s->region.capacity||(s->used&3)||(s->type!=1&&s->type!=2))return 0;\n",
+          "after": " else if(!s->generation||s->used<192||s->used>s->region.capacity||(s->used&3)||(s->type!=1&&s->type!=2&&s->type!=3))return 0;\n"
+        },
+        {
+          "before": "",
+          "after": "#include \"ois_cpu_diagnostic.inc\"\n"
+        }
+      ]
+    }
+  ],
+  "runtime": {
+    "path": "runtime-personal.s",
+    "hunks": [
+      {
+        "before": "mr 30, 3\nbl _gz_ksi_vpad_bridge",
+        "after": "mr 30, 3\nbl _gz_gai_vpad_bridge\ncmpwi 3,0\nbeq _gz_gai_vpad_prior\nmr 4,30\nb _gz_romain_vpad_bounded\n_gz_gai_vpad_prior:\nbl _gz_ksi_vpad_bridge"
+      },
+      {
+        "before": "bl _gz_ksr_callback\nlfd 0, 688(1)",
+        "after": "bl _gz_ksr_callback\nlwz 3,0x364(1)\nlwz 4,148(1)\nbl _gz_gac_callback\nlfd 0, 688(1)"
+      }
+    ]
+  },
+  "issuer": "Existing counter-calc saved-return seam. This is observational and is not a completed-frame or world-freeze grant.",
+  "required_unexported_integration": [
+    "Exact save-root translation unit and reciprocal owner scopes",
+    "Matching JPG mode3 selector and real native guards",
+    "Matching OIS private slot9 writer/type3 owner",
+    "Current PO/HL/HG/GH and private-storage providers",
+    "Full source/runtime native aliases, strict relocation and whole-BSS initialization checks"
+  ]
+}

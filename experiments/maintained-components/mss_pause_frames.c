@@ -1,6 +1,8 @@
 /* Actual native Plus-menu residency, independent of MSS input order and
  * gameplay buffer length. Called once at each completed game/UI frame.
  * All stores target trainer metadata. No menu or gameplay state is written. */
+#include "mss_visit_join.h"
+
 typedef unsigned int U;
 extern volatile U _gz_tools_flags,_gz_state[],_gz_game_counter;
 extern volatile U _gz_ps_ui_state_root,_gz_pbac_epoch;
@@ -15,13 +17,15 @@ extern volatile unsigned char _gz_loading_store;
 U _gz_mpd_report[16]={0x4d504431u,64,1};
 void _gz_mpd_observe(U frame,U mode,U context){
  U *s=_gz_mpd_report,delta;
+ _gz_msj_observe(frame,mode,context);
  if(s[3]&&frame==s[4])return;
  delta=frame-s[4];
  if(s[3]&&(delta!=1||context!=s[5])){s[6]=s[7]=s[8]=0;s[14]++;}
  s[3]=1;s[4]=frame;s[5]=context;s[13]=mode;
  if(mode==0){s[6]=s[7]=s[8]=0;return;}
  if(mode==1||mode==4){
-  if(s[7]){s[9]=s[8];s[10]=1;s[11]++;}
+  if(s[7]){s[9]=s[8];s[10]=1;s[11]++;
+   _gz_msj_visit_complete(frame,context,s[8]);}
   s[7]=s[8]=0;s[6]=mode==1;return;
  }
  if(mode==3){
@@ -32,6 +36,7 @@ void _gz_mpd_observe(U frame,U mode,U context){
  }
  if(mode!=2){s[6]=s[7]=s[8]=0;return;}
  if(!s[6])return;
+ if(!s[7])_gz_msj_visit_begin(frame,context);
  s[7]=1;if(s[8]!=0xffffffffu)s[8]++;
 }
 

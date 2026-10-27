@@ -5,6 +5,8 @@
  * A press spans all consecutive samples where held OR trigger is present:
  * the two views of one physical press must not become two pause events.
  */
+#include "mss_visit_join.h"
+
 typedef unsigned int MssWord;
 typedef long long MssSignedWide;
 typedef unsigned long long MssWide;
@@ -86,6 +88,7 @@ static void mss_result(MssWord *state, MssWord type)
 
 static void mss_begin(MssWord *state, const MssWord *input, MssWord frame)
 {
+    _gz_msj_begin(state, frame);
     state[MSS_PHASE] = MSS_AFTER_PAUSE;
     state[MSS_BASELINE_X] = input[1];
     state[MSS_BASELINE_Y] = input[2];

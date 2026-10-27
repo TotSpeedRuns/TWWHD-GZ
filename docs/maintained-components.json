@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "reviewed-generic-CPU-observation-and-fresh-MSS-visit-join",
-  "status": "Reviewed authored partial components; complete reproducible integrated export remains v126. Generic observation has no replay or native-capture claim.",
+  "revision": "reviewed-frame-observation-and-detached-registry",
+  "status": "Reviewed authored partial components; complete reproducible integrated export remains v126. Frame observation is not a read grant; registry format has no native provider or replay claim.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -687,6 +687,41 @@
       "path": "experiments/maintained-components/mss-source-scope.json",
       "sha256": "880a8a743d90ebd9be7479f19ca0c4329c7a15a655ea0865163f1ec1a2f9c060",
       "bytes": 1077
+    },
+    {
+      "path": "experiments/maintained-components/generic-frame-observation/frame_observer.c",
+      "sha256": "96c29048bb739734b3f9dde7ca7503270594e8c846a5d449984c670a3f0d1f83",
+      "bytes": 3433
+    },
+    {
+      "path": "experiments/maintained-components/generic-frame-observation/frame_observer.h",
+      "sha256": "c99d7fa5e5d960e10a12d27576c6b37fabda4bddec5b817a255d7a4d5fa39cf2",
+      "bytes": 880
+    },
+    {
+      "path": "experiments/maintained-components/generic-frame-observation/wrapper.s",
+      "sha256": "094a7f55921dc2c99d4c9838c318ddefac473693494b107dd01d2af1127c0087",
+      "bytes": 7717
+    },
+    {
+      "path": "experiments/maintained-components/common-registry-capsule/registry_capsule.c",
+      "sha256": "6cd12b8c60bc34b0961d77ae8b76de9462436d1d8bb7835eaa0a35da9a014d9a",
+      "bytes": 14850
+    },
+    {
+      "path": "experiments/maintained-components/common-registry-capsule/registry_capsule.h",
+      "sha256": "287ed84aefcfc59a1dc895cdc6c339d424e460b1360c5898e231817856195b3f",
+      "bytes": 4293
+    },
+    {
+      "path": "experiments/maintained-components/generic-frame-observation/README.md",
+      "sha256": "c5716552fe3bde06b9774dda9a6e7a9fe264aca3d8fa6689e20a8754a438d7dd",
+      "bytes": 1798
+    },
+    {
+      "path": "experiments/maintained-components/common-registry-capsule/README.md",
+      "sha256": "cc84c0f95eaa87e3eb9ef8fd3d71f7b5af60ad26c045d42738b14bc7eb591040",
+      "bytes": 1950
     }
   ],
   "excludes": [

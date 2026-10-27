@@ -117,3 +117,11 @@ for every project file or for model training data. A complete dependency/header
 provenance inventory remains to be finished. Existing third-party source notices
 are listed in [NOTICE.md](../NOTICE.md). Proprietary SDK headers and game assets
 must not be added to the published source tree.
+
+The maintained whole-frame observer and detached registry capsule are authored
+partial components. One private Cemu test observed real frame returns during
+gameplay and menus; its read/ownership functions remain false. The registry
+component validates detached ordered graphs and identities only, with no live
+provider, replay or readiness grant. Worker/resource/writer exclusion and real
+independent undo remain open. These files do not make a newer coherent build
+export or qualify full-game save states. See the two component scope documents.

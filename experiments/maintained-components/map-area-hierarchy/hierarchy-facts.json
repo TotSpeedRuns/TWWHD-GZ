@@ -1,77 +1,120 @@
 {
-  "schema": "map-area-hierarchy-functional-facts/1",
+  "schema": "map-area-hierarchy-functional-facts/2",
   "sectors": [
     {
       "sector": 1,
       "title": "Forsaken Fortress",
+      "title_symbol": "_gz_map_quadrant_name0",
       "root_rows": [
         {
           "kind": "leaf",
-          "label": "Island",
-          "warp": 36
+          "label": "Exterior (FF2/FF3)",
+          "warp": 36,
+          "label_symbol": "_gz_mah_label28"
         },
         {
           "kind": "folder",
-          "label": "Forsaken Fortress >",
-          "folder": 0
+          "label": "FF1 >",
+          "folder": 0,
+          "label_symbol": "_gz_mah_label1"
+        },
+        {
+          "kind": "folder",
+          "label": "FF2 >",
+          "folder": 12,
+          "label_symbol": "_gz_mah_label25"
+        },
+        {
+          "kind": "folder",
+          "label": "FF3 >",
+          "folder": 13,
+          "label_symbol": "_gz_mah_label27"
         }
       ],
       "folders": [
         {
           "id": 0,
-          "title": "Forsaken Fortress",
+          "title": "FF1",
+          "title_symbol": "_gz_mah_label0",
           "rows": [
             {
               "label": "FF1",
-              "warp": 109
+              "warp": 109,
+              "label_symbol": "_gz_map_destination_name1"
             },
             {
               "label": "FF1 - Doomzoom",
-              "warp": 110
-            },
-            {
-              "label": "Save Aryll CS",
-              "warp": 111
-            },
-            {
-              "label": "EMS CS Part 1",
-              "warp": 112
-            },
-            {
-              "label": "EMS CS Part 2",
-              "warp": 113
-            },
-            {
-              "label": "Interior 1",
-              "warp": 143
-            },
-            {
-              "label": "Interior 2",
-              "warp": 144
+              "warp": 110,
+              "label_symbol": "_gz_map_destination_name2"
             },
             {
               "label": "Jail",
-              "warp": 145
+              "warp": 145,
+              "label_symbol": "_gz_tw_label22"
             },
             {
               "label": "FF1 exterior from first jail cell",
-              "warp": 196
+              "warp": 196,
+              "label_symbol": "_gz_tw_label124"
             },
             {
               "label": "FF1 2 moblins",
-              "warp": 197
+              "warp": 197,
+              "label_symbol": "_gz_tw_label126"
             },
             {
               "label": "FF1 Last moblin",
-              "warp": 198
+              "warp": 198,
+              "label_symbol": "_gz_tw_label128"
             },
             {
               "label": "FF1 Between sidles",
-              "warp": 199
+              "warp": 199,
+              "label_symbol": "_gz_tw_label130"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "FF2",
+          "title_symbol": "_gz_mah_label24",
+          "rows": [
+            {
+              "label": "Save Aryll CS",
+              "warp": 111,
+              "label_symbol": "_gz_map_destination_name3"
+            },
+            {
+              "label": "EMS CS Part 1",
+              "warp": 112,
+              "label_symbol": "_gz_map_destination_name4"
+            },
+            {
+              "label": "EMS CS Part 2",
+              "warp": 113,
+              "label_symbol": "_gz_map_destination_name5"
+            },
+            {
+              "label": "Interior 1",
+              "warp": 143,
+              "label_symbol": "_gz_tw_label18"
             },
             {
               "label": "Helmaroc fight",
-              "warp": 213
+              "warp": 213,
+              "label_symbol": "_gz_tw_label158"
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "title": "FF3",
+          "title_symbol": "_gz_mah_label26",
+          "rows": [
+            {
+              "label": "Interior 2",
+              "warp": 144,
+              "label_symbol": "_gz_tw_label20"
             }
           ]
         }
@@ -80,16 +123,19 @@
     {
       "sector": 2,
       "title": "Star Island",
+      "title_symbol": "_gz_map_quadrant_name1",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 75
+          "warp": 75,
+          "label_symbol": "_gz_map_destination_name6"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 76
+          "warp": 76,
+          "label_symbol": "_gz_map_destination_name7"
         }
       ],
       "folders": []
@@ -97,21 +143,25 @@
     {
       "sector": 3,
       "title": "Northern Fairy",
+      "title_symbol": "_gz_map_quadrant_name2",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 86
+          "warp": 86,
+          "label_symbol": "_gz_map_destination_name8"
         },
         {
           "kind": "leaf",
           "label": "Fountain",
-          "warp": 87
+          "warp": 87,
+          "label_symbol": "_gz_map_destination_name9"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 88
+          "warp": 88,
+          "label_symbol": "_gz_map_destination_name10"
         }
       ],
       "folders": []
@@ -119,71 +169,87 @@
     {
       "sector": 4,
       "title": "Gale Isle",
+      "title_symbol": "_gz_map_quadrant_name3",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 38
+          "warp": 38,
+          "label_symbol": "_gz_map_destination_name11"
         },
         {
           "kind": "leaf",
           "label": "Gale",
-          "warp": 39
+          "warp": 39,
+          "label_symbol": "_gz_map_destination_name12"
         },
         {
           "kind": "folder",
           "label": "Wind Temple >",
-          "folder": 1
+          "folder": 1,
+          "label_symbol": "_gz_mah_label3"
         }
       ],
       "folders": [
         {
           "id": 1,
           "title": "Wind Temple",
+          "title_symbol": "_gz_mah_label2",
           "rows": [
             {
               "label": "Wind Temple / Hookshot",
-              "warp": 126
+              "warp": 126,
+              "label_symbol": "_gz_map_destination_name13"
             },
             {
               "label": "Wind Temple / Entrance",
-              "warp": 127
+              "warp": 127,
+              "label_symbol": "_gz_map_destination_name14"
             },
             {
               "label": "Wind Temple / Upper Hub",
-              "warp": 128
+              "warp": 128,
+              "label_symbol": "_gz_map_destination_name15"
             },
             {
               "label": "Wind Temple / Boss Key Approach",
-              "warp": 129
+              "warp": 129,
+              "label_symbol": "_gz_map_destination_name16"
             },
             {
               "label": "Wind Temple / Boss Key Exit",
-              "warp": 130
+              "warp": 130,
+              "label_symbol": "_gz_map_destination_name17"
             },
             {
               "label": "Wind Temple / Lower Hub",
-              "warp": 131
+              "warp": 131,
+              "label_symbol": "_gz_map_destination_name18"
             },
             {
               "label": "Wind Temple / Spikes",
-              "warp": 132
+              "warp": 132,
+              "label_symbol": "_gz_map_destination_name19"
             },
             {
               "label": "Wind Temple / Warp Pot",
-              "warp": 133
+              "warp": 133,
+              "label_symbol": "_gz_map_destination_name20"
             },
             {
               "label": "Wind Temple / Boss Door",
-              "warp": 134
+              "warp": 134,
+              "label_symbol": "_gz_map_destination_name21"
             },
             {
               "label": "Wind Temple / Molgera",
-              "warp": 135
+              "warp": 135,
+              "label_symbol": "_gz_map_destination_name22"
             },
             {
               "label": "WT / BK room",
-              "warp": 216
+              "warp": 216,
+              "label_symbol": "_gz_tw_label164"
             }
           ]
         }
@@ -192,16 +258,19 @@
     {
       "sector": 5,
       "title": "Crescent Moon",
+      "title_symbol": "_gz_map_quadrant_name4",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 14
+          "warp": 14,
+          "label_symbol": "_gz_map_destination_name23"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 15
+          "warp": 15,
+          "label_symbol": "_gz_map_destination_name24"
         }
       ],
       "folders": []
@@ -209,11 +278,13 @@
     {
       "sector": 6,
       "title": "Seven Star Isles",
+      "title_symbol": "_gz_map_quadrant_name5",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 68
+          "warp": 68,
+          "label_symbol": "_gz_map_destination_name25"
         }
       ],
       "folders": []
@@ -221,16 +292,19 @@
     {
       "sector": 7,
       "title": "Overlook Island",
+      "title_symbol": "_gz_map_quadrant_name6",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 61
+          "warp": 61,
+          "label_symbol": "_gz_map_destination_name26"
         },
         {
           "kind": "leaf",
           "label": "Overlook",
-          "warp": 62
+          "warp": 62,
+          "label_symbol": "_gz_map_destination_name27"
         }
       ],
       "folders": []
@@ -238,11 +312,13 @@
     {
       "sector": 8,
       "title": "Four Eye Reef",
+      "title_symbol": "_gz_map_quadrant_name7",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 37
+          "warp": 37,
+          "label_symbol": "_gz_map_destination_name28"
         }
       ],
       "folders": []
@@ -250,17 +326,20 @@
     {
       "sector": 9,
       "title": "Mother & Child",
+      "title_symbol": "_gz_map_quadrant_name8",
       "root_rows": [],
       "folders": []
     },
     {
       "sector": 10,
       "title": "Spectacle Island",
+      "title_symbol": "_gz_map_quadrant_name9",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 73
+          "warp": 73,
+          "label_symbol": "_gz_map_destination_name29"
         }
       ],
       "folders": []
@@ -268,78 +347,95 @@
     {
       "sector": 11,
       "title": "Windfall",
+      "title_symbol": "_gz_map_quadrant_name10",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 84
+          "warp": 84,
+          "label_symbol": "_gz_map_destination_name30"
         },
         {
           "kind": "leaf",
           "label": "FF1 CS",
-          "warp": 85
+          "warp": 85,
+          "label_symbol": "_gz_map_destination_name31"
         },
         {
           "kind": "folder",
           "label": "Buildings >",
-          "folder": 2
+          "folder": 2,
+          "label_symbol": "_gz_mah_label6"
         },
         {
           "kind": "folder",
           "label": "Pirate Ship >",
-          "folder": 3
+          "folder": 3,
+          "label_symbol": "_gz_mah_label7"
         }
       ],
       "folders": [
         {
           "id": 2,
           "title": "Buildings",
+          "title_symbol": "_gz_mah_label4",
           "rows": [
             {
               "label": "Auction House",
-              "warp": 187
+              "warp": 187,
+              "label_symbol": "_gz_tw_label106"
             },
             {
               "label": "Bomb Shop",
-              "warp": 188
+              "warp": 188,
+              "label_symbol": "_gz_tw_label108"
             },
             {
               "label": "Cafe Bar",
-              "warp": 189
+              "warp": 189,
+              "label_symbol": "_gz_tw_label110"
             },
             {
               "label": "Lenzo's Studio",
-              "warp": 190
+              "warp": 190,
+              "label_symbol": "_gz_tw_label112"
             },
             {
               "label": "Minigame House",
-              "warp": 191
+              "warp": 191,
+              "label_symbol": "_gz_tw_label114"
             },
             {
               "label": "Potion Shop",
-              "warp": 192
+              "warp": 192,
+              "label_symbol": "_gz_tw_label116"
             },
             {
               "label": "Prison",
-              "warp": 193
+              "warp": 193,
+              "label_symbol": "_gz_tw_label118"
             },
             {
               "label": "School of Joy",
-              "warp": 194
+              "warp": 194,
+              "label_symbol": "_gz_tw_label120"
             }
           ]
         },
         {
           "id": 3,
           "title": "Pirate Ship",
+          "title_symbol": "_gz_mah_label5",
           "rows": [
             {
               "label": "Pirate Ship / Pirate Ship",
-              "warp": 119
+              "warp": 119,
+              "label_symbol": "_gz_map_destination_name32"
             },
             {
               "label": "Deck",
-              "warp": 179
+              "warp": 179,
+              "label_symbol": "_gz_tw_label90"
             }
           ]
         }
@@ -348,21 +444,25 @@
     {
       "sector": 12,
       "title": "Pawprint Isle",
+      "title_symbol": "_gz_map_quadrant_name11",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 63
+          "warp": 63,
+          "label_symbol": "_gz_map_destination_name33"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 64
+          "warp": 64,
+          "label_symbol": "_gz_map_destination_name34"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 178
+          "warp": 178,
+          "label_symbol": "_gz_tw_label88"
         }
       ],
       "folders": []
@@ -370,95 +470,116 @@
     {
       "sector": 13,
       "title": "Dragon Roost",
+      "title_symbol": "_gz_map_quadrant_name12",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 19
+          "warp": 19,
+          "label_symbol": "_gz_map_destination_name35"
         },
         {
           "kind": "leaf",
           "label": "DRI Pond",
-          "warp": 20
+          "warp": 20,
+          "label_symbol": "_gz_map_destination_name36"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 21
+          "warp": 21,
+          "label_symbol": "_gz_map_destination_name38"
         },
         {
           "kind": "leaf",
           "label": "Komali's Room",
-          "warp": 137
+          "warp": 137,
+          "label_symbol": "_gz_tw_label6"
         },
         {
           "kind": "leaf",
           "label": "Mail Center",
-          "warp": 138
+          "warp": 138,
+          "label_symbol": "_gz_tw_label8"
         },
         {
           "kind": "leaf",
           "label": "Beedle shop",
-          "warp": 200
+          "warp": 200,
+          "label_symbol": "_gz_tw_label132"
         },
         {
           "kind": "folder",
           "label": "Dragon Roost Cavern >",
-          "folder": 4
+          "folder": 4,
+          "label_symbol": "_gz_mah_label9"
         }
       ],
       "folders": [
         {
           "id": 4,
           "title": "Dragon Roost Cavern",
+          "title_symbol": "_gz_mah_label8",
           "rows": [
             {
               "label": "Dragon Roost Cavern / Entrance",
-              "warp": 98
+              "warp": 98,
+              "label_symbol": "_gz_map_destination_name39"
             },
             {
               "label": "Dragon Roost Cavern / Miniboss",
-              "warp": 99
+              "warp": 99,
+              "label_symbol": "_gz_map_destination_name40"
             },
             {
               "label": "Dragon Roost Cavern / Gohma",
-              "warp": 100
+              "warp": 100,
+              "label_symbol": "_gz_map_destination_name41"
             },
             {
               "label": "DRC / Main Room - Warp Pot",
-              "warp": 201
+              "warp": 201,
+              "label_symbol": "_gz_tw_label134"
             },
             {
               "label": "DRC / Water pots",
-              "warp": 202
+              "warp": 202,
+              "label_symbol": "_gz_tw_label136"
             },
             {
               "label": "DRC / Sword boko in pot",
-              "warp": 203
+              "warp": 203,
+              "label_symbol": "_gz_tw_label138"
             },
             {
               "label": "DRC / Many chus room",
-              "warp": 204
+              "warp": 204,
+              "label_symbol": "_gz_tw_label140"
             },
             {
               "label": "DRC / Big ladder outdoor",
-              "warp": 205
+              "warp": 205,
+              "label_symbol": "_gz_tw_label142"
             },
             {
               "label": "DRC / Dark keese room",
-              "warp": 206
+              "warp": 206,
+              "label_symbol": "_gz_tw_label144"
             },
             {
               "label": "DRC / 3 bokoblin fight",
-              "warp": 207
+              "warp": 207,
+              "label_symbol": "_gz_tw_label146"
             },
             {
               "label": "DRC / Magtail lava platform",
-              "warp": 208
+              "warp": 208,
+              "label_symbol": "_gz_tw_label148"
             },
             {
               "label": "DRC / Outside boss door",
-              "warp": 209
+              "warp": 209,
+              "label_symbol": "_gz_tw_label150"
             }
           ]
         }
@@ -467,21 +588,25 @@
     {
       "sector": 14,
       "title": "Flight Control Platform",
+      "title_symbol": "_gz_map_quadrant_name13",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 28
+          "warp": 28,
+          "label_symbol": "_gz_map_destination_name42"
         },
         {
           "kind": "leaf",
           "label": "Minigame Arrival",
-          "warp": 29
+          "warp": 29,
+          "label_symbol": "_gz_map_destination_name43"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 30
+          "warp": 30,
+          "label_symbol": "_gz_map_destination_name44"
         }
       ],
       "folders": []
@@ -489,16 +614,19 @@
     {
       "sector": 15,
       "title": "Western Fairy",
+      "title_symbol": "_gz_map_quadrant_name14",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 89
+          "warp": 89,
+          "label_symbol": "_gz_map_destination_name45"
         },
         {
           "kind": "leaf",
           "label": "Fountain",
-          "warp": 90
+          "warp": 90,
+          "label_symbol": "_gz_map_destination_name46"
         }
       ],
       "folders": []
@@ -506,16 +634,19 @@
     {
       "sector": 16,
       "title": "Rock Spire",
+      "title_symbol": "_gz_map_quadrant_name15",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 66
+          "warp": 66,
+          "label_symbol": "_gz_map_destination_name47"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 67
+          "warp": 67,
+          "label_symbol": "_gz_map_destination_name48"
         }
       ],
       "folders": []
@@ -523,16 +654,19 @@
     {
       "sector": 17,
       "title": "Tingle Island",
+      "title_symbol": "_gz_map_quadrant_name16",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 81
+          "warp": 81,
+          "label_symbol": "_gz_map_destination_name49"
         },
         {
           "kind": "leaf",
           "label": "Interior",
-          "warp": 184
+          "warp": 184,
+          "label_symbol": "_gz_tw_label100"
         }
       ],
       "folders": []
@@ -540,11 +674,13 @@
     {
       "sector": 18,
       "title": "Northern Triangle",
+      "title_symbol": "_gz_map_quadrant_name17",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 51
+          "warp": 51,
+          "label_symbol": "_gz_map_destination_name50"
         }
       ],
       "folders": []
@@ -552,16 +688,19 @@
     {
       "sector": 19,
       "title": "Eastern Fairy",
+      "title_symbol": "_gz_map_quadrant_name18",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 91
+          "warp": 91,
+          "label_symbol": "_gz_map_destination_name51"
         },
         {
           "kind": "leaf",
           "label": "Fountain",
-          "warp": 92
+          "warp": 92,
+          "label_symbol": "_gz_map_destination_name52"
         }
       ],
       "folders": []
@@ -569,16 +708,19 @@
     {
       "sector": 20,
       "title": "Fire Mountain",
+      "title_symbol": "_gz_map_quadrant_name19",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 23
+          "warp": 23,
+          "label_symbol": "_gz_map_destination_name53"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 24
+          "warp": 24,
+          "label_symbol": "_gz_map_destination_name54"
         }
       ],
       "folders": []
@@ -586,11 +728,13 @@
     {
       "sector": 21,
       "title": "Star Belt Archipelago",
+      "title_symbol": "_gz_map_quadrant_name20",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 74
+          "warp": 74,
+          "label_symbol": "_gz_map_destination_name55"
         }
       ],
       "folders": []
@@ -598,11 +742,13 @@
     {
       "sector": 22,
       "title": "Three Eye Reef",
+      "title_symbol": "_gz_map_quadrant_name21",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 80
+          "warp": 80,
+          "label_symbol": "_gz_map_destination_name56"
         }
       ],
       "folders": []
@@ -610,11 +756,13 @@
     {
       "sector": 23,
       "title": "Greatfish",
+      "title_symbol": "_gz_map_quadrant_name22",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 40
+          "warp": 40,
+          "label_symbol": "_gz_map_destination_name57"
         }
       ],
       "folders": []
@@ -622,11 +770,13 @@
     {
       "sector": 24,
       "title": "Cyclops Reef",
+      "title_symbol": "_gz_map_quadrant_name23",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 16
+          "warp": 16,
+          "label_symbol": "_gz_map_destination_name58"
         }
       ],
       "folders": []
@@ -634,16 +784,19 @@
     {
       "sector": 25,
       "title": "Six Eye Reef",
+      "title_symbol": "_gz_map_quadrant_name24",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 70
+          "warp": 70,
+          "label_symbol": "_gz_map_destination_name59"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 71
+          "warp": 71,
+          "label_symbol": "_gz_map_destination_name60"
         }
       ],
       "folders": []
@@ -651,171 +804,209 @@
     {
       "sector": 26,
       "title": "Tower of the Gods",
+      "title_symbol": "_gz_map_quadrant_name25",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 82
+          "warp": 82,
+          "label_symbol": "_gz_map_destination_name61"
         },
         {
           "kind": "leaf",
           "label": "Beemos",
-          "warp": 120
+          "warp": 120,
+          "label_symbol": "_gz_map_destination_name66"
         },
         {
           "kind": "leaf",
           "label": "Miniboss",
-          "warp": 121
+          "warp": 121,
+          "label_symbol": "_gz_map_destination_name67"
         },
         {
           "kind": "leaf",
           "label": "Scales",
-          "warp": 122
+          "warp": 122,
+          "label_symbol": "_gz_map_destination_name68"
         },
         {
           "kind": "leaf",
           "label": "Floor 3",
-          "warp": 123
+          "warp": 123,
+          "label_symbol": "_gz_map_destination_name69"
         },
         {
           "kind": "leaf",
           "label": "Outdoors",
-          "warp": 124
+          "warp": 124,
+          "label_symbol": "_gz_map_destination_name70"
         },
         {
           "kind": "leaf",
           "label": "Gohdan",
-          "warp": 125
+          "warp": 125,
+          "label_symbol": "_gz_map_destination_name71"
         },
         {
           "kind": "leaf",
           "label": "TotG / Entrance",
-          "warp": 185
+          "warp": 185,
+          "label_symbol": "_gz_tw_label102"
         },
         {
           "kind": "leaf",
           "label": "TotG / Cutscene",
-          "warp": 186
+          "warp": 186,
+          "label_symbol": "_gz_tw_label104"
         },
         {
           "kind": "leaf",
           "label": "TotG / before miniboss",
-          "warp": 211
+          "warp": 211,
+          "label_symbol": "_gz_tw_label154"
         },
         {
           "kind": "leaf",
           "label": "TotG / bell",
-          "warp": 212
+          "warp": 212,
+          "label_symbol": "_gz_tw_label156"
         },
         {
           "kind": "folder",
           "label": "Hyrule >",
-          "folder": 5
+          "folder": 5,
+          "label_symbol": "_gz_mah_label12"
         },
         {
           "kind": "folder",
           "label": "Ganon's Tower >",
-          "folder": 6
+          "folder": 6,
+          "label_symbol": "_gz_mah_label13"
         }
       ],
       "folders": [
         {
           "id": 5,
           "title": "Hyrule",
+          "title_symbol": "_gz_mah_label10",
           "rows": [
             {
               "label": "Hyrule / Hyrule",
-              "warp": 118
+              "warp": 118,
+              "label_symbol": "_gz_map_destination_name65"
             },
             {
               "label": "Hyrule / Basement",
-              "warp": 166
+              "warp": 166,
+              "label_symbol": "_gz_tw_label64"
             },
             {
               "label": "Hyrule / Interior",
-              "warp": 167
+              "warp": 167,
+              "label_symbol": "_gz_tw_label66"
             }
           ]
         },
         {
           "id": 6,
           "title": "Ganon's Tower",
+          "title_symbol": "_gz_mah_label11",
           "rows": [
             {
               "label": "Ganon's Tower / Before Grand Staircase",
-              "warp": 114
+              "warp": 114,
+              "label_symbol": "_gz_map_destination_name62"
             },
             {
               "label": "Ganon's Tower / Light Arrows",
-              "warp": 115
+              "warp": 115,
+              "label_symbol": "_gz_map_destination_name63"
             },
             {
               "label": "Ganon's Tower / Ganondorf",
-              "warp": 116
+              "warp": 116,
+              "label_symbol": "_gz_map_destination_name64"
             },
             {
               "label": "Ganon Tower / DRC Trial",
-              "warp": 153
+              "warp": 153,
+              "label_symbol": "_gz_tw_label38"
             },
             {
               "label": "Ganon Tower / DRC Trial Boss",
-              "warp": 154
+              "warp": 154,
+              "label_symbol": "_gz_tw_label40"
             },
             {
               "label": "Ganon Tower / ET Trial",
-              "warp": 155
+              "warp": 155,
+              "label_symbol": "_gz_tw_label42"
             },
             {
               "label": "Ganon Tower / ET Trial Boss",
-              "warp": 156
+              "warp": 156,
+              "label_symbol": "_gz_tw_label44"
             },
             {
               "label": "Ganon Tower / Entrance",
-              "warp": 157
+              "warp": 157,
+              "label_symbol": "_gz_tw_label46"
             },
             {
               "label": "Ganon Tower / FW Trial",
-              "warp": 158
+              "warp": 158,
+              "label_symbol": "_gz_tw_label48"
             },
             {
               "label": "Ganon Tower / FW Trial Boss",
-              "warp": 159
+              "warp": 159,
+              "label_symbol": "_gz_tw_label50"
             },
             {
               "label": "Ganon Tower / Ganon's Room",
-              "warp": 160
+              "warp": 160,
+              "label_symbol": "_gz_tw_label52"
             },
             {
               "label": "Ganon Tower / Maze",
-              "warp": 161
+              "warp": 161,
+              "label_symbol": "_gz_tw_label54"
             },
             {
               "label": "Ganon Tower / Staircase to Center",
-              "warp": 162
+              "warp": 162,
+              "label_symbol": "_gz_tw_label56"
             },
             {
               "label": "Ganon Tower / Staircase to Ganon",
-              "warp": 163
+              "warp": 163,
+              "label_symbol": "_gz_tw_label58"
             },
             {
               "label": "Ganon Tower / WT Trial",
-              "warp": 164
+              "warp": 164,
+              "label_symbol": "_gz_tw_label60"
             },
             {
               "label": "Ganon Tower / WT Trial Boss",
-              "warp": 165
+              "warp": 165,
+              "label_symbol": "_gz_tw_label62"
             },
             {
               "label": "Ganon Tower / Trials hub",
-              "warp": 218
+              "warp": 218,
+              "label_symbol": "_gz_tw_label168"
             },
             {
               "label": "Ganon Tower / Earth temple trial exit",
-              "warp": 219
+              "warp": 219,
+              "label_symbol": "_gz_tw_label170"
             },
             {
               "label": "Ganon Tower / Puppet ganon warp pot",
-              "warp": 220
+              "warp": 220,
+              "label_symbol": "_gz_tw_label172"
             }
           ]
         }
@@ -824,11 +1015,13 @@
     {
       "sector": 27,
       "title": "Eastern Triangle",
+      "title_symbol": "_gz_map_quadrant_name26",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 22
+          "warp": 22,
+          "label_symbol": "_gz_map_destination_name72"
         }
       ],
       "folders": []
@@ -836,16 +1029,19 @@
     {
       "sector": 28,
       "title": "Thorned Fairy",
+      "title_symbol": "_gz_map_quadrant_name27",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 93
+          "warp": 93,
+          "label_symbol": "_gz_map_destination_name73"
         },
         {
           "kind": "leaf",
           "label": "Fountain",
-          "warp": 94
+          "warp": 94,
+          "label_symbol": "_gz_map_destination_name74"
         }
       ],
       "folders": []
@@ -853,16 +1049,19 @@
     {
       "sector": 29,
       "title": "Needle Rock",
+      "title_symbol": "_gz_map_quadrant_name28",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 49
+          "warp": 49,
+          "label_symbol": "_gz_map_destination_name75"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 50
+          "warp": 50,
+          "label_symbol": "_gz_map_destination_name76"
         }
       ],
       "folders": []
@@ -870,16 +1069,19 @@
     {
       "sector": 30,
       "title": "Islet of Steel",
+      "title_symbol": "_gz_map_quadrant_name29",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 47
+          "warp": 47,
+          "label_symbol": "_gz_map_destination_name77"
         },
         {
           "kind": "leaf",
           "label": "Islet of Steel",
-          "warp": 48
+          "warp": 48,
+          "label_symbol": "_gz_map_destination_name78"
         }
       ],
       "folders": []
@@ -887,21 +1089,25 @@
     {
       "sector": 31,
       "title": "Stone Watcher",
+      "title_symbol": "_gz_map_quadrant_name30",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 77
+          "warp": 77,
+          "label_symbol": "_gz_map_destination_name79"
         },
         {
           "kind": "leaf",
           "label": "Triforce Cave",
-          "warp": 78
+          "warp": 78,
+          "label_symbol": "_gz_tw_label1"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 183
+          "warp": 183,
+          "label_symbol": "_gz_tw_label98"
         }
       ],
       "folders": []
@@ -909,11 +1115,13 @@
     {
       "sector": 32,
       "title": "Southern Triangle",
+      "title_symbol": "_gz_map_quadrant_name31",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 72
+          "warp": 72,
+          "label_symbol": "_gz_map_destination_name82"
         }
       ],
       "folders": []
@@ -921,21 +1129,25 @@
     {
       "sector": 33,
       "title": "Private Oasis",
+      "title_symbol": "_gz_map_quadrant_name32",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 65
+          "warp": 65,
+          "label_symbol": "_gz_map_destination_name83"
         },
         {
           "kind": "leaf",
           "label": "Interior",
-          "warp": 169
+          "warp": 169,
+          "label_symbol": "_gz_tw_label70"
         },
         {
           "kind": "leaf",
           "label": "Triforce Cave",
-          "warp": 170
+          "warp": 170,
+          "label_symbol": "_gz_tw_label72"
         }
       ],
       "folders": []
@@ -943,26 +1155,31 @@
     {
       "sector": 34,
       "title": "Bomb Island",
+      "title_symbol": "_gz_map_quadrant_name33",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 7
+          "warp": 7,
+          "label_symbol": "_gz_map_destination_name84"
         },
         {
           "kind": "leaf",
           "label": "Inner Cave",
-          "warp": 8
+          "warp": 8,
+          "label_symbol": "_gz_map_destination_name85"
         },
         {
           "kind": "leaf",
           "label": "Cave Entrance",
-          "warp": 9
+          "warp": 9,
+          "label_symbol": "_gz_map_destination_name86"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 10
+          "warp": 10,
+          "label_symbol": "_gz_map_destination_name87"
         }
       ],
       "folders": []
@@ -970,16 +1187,19 @@
     {
       "sector": 35,
       "title": "Bird's Peak Rock",
+      "title_symbol": "_gz_map_quadrant_name34",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 3
+          "warp": 3,
+          "label_symbol": "_gz_map_destination_name88"
         },
         {
           "kind": "leaf",
           "label": "Bird's Peak",
-          "warp": 4
+          "warp": 4,
+          "label_symbol": "_gz_map_destination_name89"
         }
       ],
       "folders": []
@@ -987,16 +1207,19 @@
     {
       "sector": 36,
       "title": "Diamond Steppe",
+      "title_symbol": "_gz_map_quadrant_name35",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 17
+          "warp": 17,
+          "label_symbol": "_gz_map_destination_name90"
         },
         {
           "kind": "leaf",
           "label": "Diamond Steppe Cave",
-          "warp": 18
+          "warp": 18,
+          "label_symbol": "_gz_map_destination_name91"
         }
       ],
       "folders": []
@@ -1004,11 +1227,13 @@
     {
       "sector": 37,
       "title": "Five Eye Reef",
+      "title_symbol": "_gz_map_quadrant_name36",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 25
+          "warp": 25,
+          "label_symbol": "_gz_map_destination_name92"
         }
       ],
       "folders": []
@@ -1016,16 +1241,19 @@
     {
       "sector": 38,
       "title": "Shark Island",
+      "title_symbol": "_gz_map_quadrant_name37",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 69
+          "warp": 69,
+          "label_symbol": "_gz_map_destination_name93"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 182
+          "warp": 182,
+          "label_symbol": "_gz_tw_label96"
         }
       ],
       "folders": []
@@ -1033,16 +1261,19 @@
     {
       "sector": 39,
       "title": "Southern Fairy",
+      "title_symbol": "_gz_map_quadrant_name38",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 95
+          "warp": 95,
+          "label_symbol": "_gz_map_destination_name94"
         },
         {
           "kind": "leaf",
           "label": "Fountain",
-          "warp": 96
+          "warp": 96,
+          "label_symbol": "_gz_map_destination_name95"
         }
       ],
       "folders": []
@@ -1050,21 +1281,25 @@
     {
       "sector": 40,
       "title": "Ice Ring",
+      "title_symbol": "_gz_map_quadrant_name39",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 45
+          "warp": 45,
+          "label_symbol": "_gz_map_destination_name96"
         },
         {
           "kind": "leaf",
           "label": "Ice Ring Interior",
-          "warp": 46
+          "warp": 46,
+          "label_symbol": "_gz_map_destination_name97"
         },
         {
           "kind": "leaf",
           "label": "Grotto",
-          "warp": 168
+          "warp": 168,
+          "label_symbol": "_gz_tw_label68"
         }
       ],
       "folders": []
@@ -1072,119 +1307,145 @@
     {
       "sector": 41,
       "title": "Forest Haven",
+      "title_symbol": "_gz_map_quadrant_name40",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 31
+          "warp": 31,
+          "label_symbol": "_gz_map_destination_name98"
         },
         {
           "kind": "leaf",
           "label": "Interior",
-          "warp": 32
+          "warp": 32,
+          "label_symbol": "_gz_map_destination_name99"
         },
         {
           "kind": "leaf",
           "label": "Farore's Pearl",
-          "warp": 33
+          "warp": 33,
+          "label_symbol": "_gz_map_destination_name100"
         },
         {
           "kind": "leaf",
           "label": "Makar",
-          "warp": 34
+          "warp": 34,
+          "label_symbol": "_gz_map_destination_name101"
         },
         {
           "kind": "leaf",
           "label": "Bomb Shop",
-          "warp": 141
+          "warp": 141,
+          "label_symbol": "_gz_tw_label14"
         },
         {
           "kind": "leaf",
           "label": "Interior",
-          "warp": 142
+          "warp": 142,
+          "label_symbol": "_gz_tw_label16"
         },
         {
           "kind": "leaf",
           "label": "outside main entrance",
-          "warp": 210
+          "warp": 210,
+          "label_symbol": "_gz_tw_label152"
         },
         {
           "kind": "folder",
           "label": "Forbidden Woods >",
-          "folder": 7
+          "folder": 7,
+          "label_symbol": "_gz_mah_label16"
         },
         {
           "kind": "folder",
           "label": "Figurine Gallery >",
-          "folder": 8
+          "folder": 8,
+          "label_symbol": "_gz_mah_label17"
         }
       ],
       "folders": [
         {
           "id": 7,
           "title": "Forbidden Woods",
+          "title_symbol": "_gz_mah_label14",
           "rows": [
             {
               "label": "Forbidden Woods / Entrance",
-              "warp": 104
+              "warp": 104,
+              "label_symbol": "_gz_map_destination_name103"
             },
             {
               "label": "Forbidden Woods / Basement Room 2",
-              "warp": 105
+              "warp": 105,
+              "label_symbol": "_gz_map_destination_name104"
             },
             {
               "label": "Forbidden Woods / Miniboss",
-              "warp": 106
+              "warp": 106,
+              "label_symbol": "_gz_map_destination_name105"
             },
             {
               "label": "Forbidden Woods / BK Skip",
-              "warp": 107
+              "warp": 107,
+              "label_symbol": "_gz_map_destination_name106"
             },
             {
               "label": "Forbidden Woods / Boss",
-              "warp": 108
+              "warp": 108,
+              "label_symbol": "_gz_map_destination_name107"
             },
             {
               "label": "FW / main room",
-              "warp": 217
+              "warp": 217,
+              "label_symbol": "_gz_tw_label166"
             }
           ]
         },
         {
           "id": 8,
           "title": "Figurine Gallery",
+          "title_symbol": "_gz_mah_label15",
           "rows": [
             {
               "label": "Figurines",
-              "warp": 35
+              "warp": 35,
+              "label_symbol": "_gz_map_destination_name102"
             },
             {
               "label": "Boss Figurines",
-              "warp": 146
+              "warp": 146,
+              "label_symbol": "_gz_tw_label24"
             },
             {
               "label": "DRC Figurines",
-              "warp": 147
+              "warp": 147,
+              "label_symbol": "_gz_tw_label26"
             },
             {
               "label": "Enemy Figurines",
-              "warp": 148
+              "warp": 148,
+              "label_symbol": "_gz_tw_label28"
             },
             {
               "label": "Forest Haven Figurines",
-              "warp": 149
+              "warp": 149,
+              "label_symbol": "_gz_tw_label30"
             },
             {
               "label": "Great Sea Figurines",
-              "warp": 150
+              "warp": 150,
+              "label_symbol": "_gz_tw_label32"
             },
             {
               "label": "Outset Island Figurines",
-              "warp": 151
+              "warp": 151,
+              "label_symbol": "_gz_tw_label34"
             },
             {
               "label": "Windfall Island Figurines",
-              "warp": 152
+              "warp": 152,
+              "label_symbol": "_gz_tw_label36"
             }
           ]
         }
@@ -1193,21 +1454,25 @@
     {
       "sector": 42,
       "title": "Cliff Plateau",
+      "title_symbol": "_gz_map_quadrant_name41",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 11
+          "warp": 11,
+          "label_symbol": "_gz_map_destination_name108"
         },
         {
           "kind": "leaf",
           "label": "Cave 1",
-          "warp": 12
+          "warp": 12,
+          "label_symbol": "_gz_map_destination_name109"
         },
         {
           "kind": "leaf",
           "label": "Cave 2",
-          "warp": 13
+          "warp": 13,
+          "label_symbol": "_gz_map_destination_name110"
         }
       ],
       "folders": []
@@ -1215,16 +1480,19 @@
     {
       "sector": 43,
       "title": "Horseshoe Island",
+      "title_symbol": "_gz_map_quadrant_name42",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 43
+          "warp": 43,
+          "label_symbol": "_gz_map_destination_name111"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 44
+          "warp": 44,
+          "label_symbol": "_gz_map_destination_name112"
         }
       ],
       "folders": []
@@ -1232,114 +1500,139 @@
     {
       "sector": 44,
       "title": "Outset",
+      "title_symbol": "_gz_map_quadrant_name43",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 52
+          "warp": 52,
+          "label_symbol": "_gz_map_destination_name113"
         },
         {
           "kind": "leaf",
           "label": "Forest of Fairies",
-          "warp": 53
+          "warp": 53,
+          "label_symbol": "_gz_map_destination_name114"
         },
         {
           "kind": "leaf",
           "label": "Nayru's Pearl",
-          "warp": 54
+          "warp": 54,
+          "label_symbol": "_gz_map_destination_name115"
         },
         {
           "kind": "leaf",
           "label": "Fountain",
-          "warp": 97
+          "warp": 97,
+          "label_symbol": "_gz_map_destination_name123"
         },
         {
           "kind": "leaf",
           "label": "Jabun's Cavern",
-          "warp": 173
+          "warp": 173,
+          "label_symbol": "_gz_tw_label78"
         },
         {
           "kind": "leaf",
           "label": "aryll lookout",
-          "warp": 195
+          "warp": 195,
+          "label_symbol": "_gz_tw_label122"
         },
         {
           "kind": "folder",
           "label": "Houses >",
-          "folder": 9
+          "folder": 9,
+          "label_symbol": "_gz_mah_label20"
         },
         {
           "kind": "folder",
           "label": "Savage Labyrinth >",
-          "folder": 10
+          "folder": 10,
+          "label_symbol": "_gz_mah_label21"
         }
       ],
       "folders": [
         {
           "id": 9,
           "title": "Houses",
+          "title_symbol": "_gz_mah_label18",
           "rows": [
             {
               "label": "Abe's House",
-              "warp": 171
+              "warp": 171,
+              "label_symbol": "_gz_tw_label74"
             },
             {
               "label": "Basement",
-              "warp": 172
+              "warp": 172,
+              "label_symbol": "_gz_tw_label76"
             },
             {
               "label": "Link's House",
-              "warp": 174
+              "warp": 174,
+              "label_symbol": "_gz_tw_label80"
             },
             {
               "label": "Mesa's House",
-              "warp": 175
+              "warp": 175,
+              "label_symbol": "_gz_tw_label82"
             },
             {
               "label": "Orca's House",
-              "warp": 176
+              "warp": 176,
+              "label_symbol": "_gz_tw_label84"
             },
             {
               "label": "Sturgeon's House",
-              "warp": 177
+              "warp": 177,
+              "label_symbol": "_gz_tw_label86"
             }
           ]
         },
         {
           "id": 10,
           "title": "Savage Labyrinth",
+          "title_symbol": "_gz_mah_label19",
           "rows": [
             {
               "label": "Savage Floor 0",
-              "warp": 55
+              "warp": 55,
+              "label_symbol": "_gz_map_destination_name116"
             },
             {
               "label": "Savage Floor 10",
-              "warp": 56
+              "warp": 56,
+              "label_symbol": "_gz_map_destination_name117"
             },
             {
               "label": "Savage Floor 20",
-              "warp": 57
+              "warp": 57,
+              "label_symbol": "_gz_map_destination_name118"
             },
             {
               "label": "Savage Floor 30",
-              "warp": 58
+              "warp": 58,
+              "label_symbol": "_gz_map_destination_name119"
             },
             {
               "label": "Savage Floor 40",
-              "warp": 59
+              "warp": 59,
+              "label_symbol": "_gz_map_destination_name120"
             },
             {
               "label": "Savage Bokoblin Floor",
-              "warp": 60
+              "warp": 60,
+              "label_symbol": "_gz_map_destination_name121"
             },
             {
               "label": "Another Empty",
-              "warp": 180
+              "warp": 180,
+              "label_symbol": "_gz_tw_label92"
             },
             {
               "label": "Empty",
-              "warp": 181
+              "warp": 181,
+              "label_symbol": "_gz_tw_label94"
             }
           ]
         }
@@ -1348,55 +1641,67 @@
     {
       "sector": 45,
       "title": "Headstone",
+      "title_symbol": "_gz_map_quadrant_name44",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 41
+          "warp": 41,
+          "label_symbol": "_gz_map_destination_name124"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 42
+          "warp": 42,
+          "label_symbol": "_gz_map_destination_name125"
         },
         {
           "kind": "folder",
           "label": "Earth Temple >",
-          "folder": 11
+          "folder": 11,
+          "label_symbol": "_gz_mah_label23"
         }
       ],
       "folders": [
         {
           "id": 11,
           "title": "Earth Temple",
+          "title_symbol": "_gz_mah_label22",
           "rows": [
             {
               "label": "Earth Temple / Poes & Moblins",
-              "warp": 101
+              "warp": 101,
+              "label_symbol": "_gz_map_destination_name126"
             },
             {
               "label": "Earth Temple / ET Miniboss",
-              "warp": 102
+              "warp": 102,
+              "label_symbol": "_gz_map_destination_name127"
             },
             {
               "label": "Earth Temple / ET Boss",
-              "warp": 103
+              "warp": 103,
+              "label_symbol": "_gz_map_destination_name128"
             },
             {
               "label": "ET / Entrance",
-              "warp": 139
+              "warp": 139,
+              "label_symbol": "_gz_tw_label10"
             },
             {
               "label": "ET / Entrance",
-              "warp": 140
+              "warp": 140,
+              "label_symbol": "_gz_tw_label12"
             },
             {
               "label": "ET / Before last crypt",
-              "warp": 214
+              "warp": 214,
+              "label_symbol": "_gz_tw_label160"
             },
             {
               "label": "ET / before boss door",
-              "warp": 215
+              "warp": 215,
+              "label_symbol": "_gz_tw_label162"
             }
           ]
         }
@@ -1405,11 +1710,13 @@
     {
       "sector": 46,
       "title": "Two Eye Reef",
+      "title_symbol": "_gz_map_quadrant_name45",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 83
+          "warp": 83,
+          "label_symbol": "_gz_map_destination_name129"
         }
       ],
       "folders": []
@@ -1417,16 +1724,19 @@
     {
       "sector": 47,
       "title": "Angular Isles",
+      "title_symbol": "_gz_map_quadrant_name46",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 0
+          "warp": 0,
+          "label_symbol": "_gz_map_destination_name130"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 2
+          "warp": 2,
+          "label_symbol": "_gz_tw_label2"
         }
       ],
       "folders": []
@@ -1434,21 +1744,25 @@
     {
       "sector": 48,
       "title": "Boating Course",
+      "title_symbol": "_gz_map_quadrant_name47",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 5
+          "warp": 5,
+          "label_symbol": "_gz_map_destination_name131"
         },
         {
           "kind": "leaf",
           "label": "Cave",
-          "warp": 6
+          "warp": 6,
+          "label_symbol": "_gz_map_destination_name132"
         },
         {
           "kind": "leaf",
           "label": "Interior",
-          "warp": 136
+          "warp": 136,
+          "label_symbol": "_gz_tw_label4"
         }
       ],
       "folders": []
@@ -1456,23 +1770,261 @@
     {
       "sector": 49,
       "title": "Five Star Isles",
+      "title_symbol": "_gz_map_quadrant_name48",
       "root_rows": [
         {
           "kind": "leaf",
           "label": "Island",
-          "warp": 26
+          "warp": 26,
+          "label_symbol": "_gz_map_destination_name133"
         },
         {
           "kind": "leaf",
           "label": "Submarine",
-          "warp": 27
+          "warp": 27,
+          "label_symbol": "_gz_map_destination_name134"
         }
       ],
       "folders": []
     }
   ],
   "sector_count": 49,
-  "folder_count": 12,
+  "folder_count": 14,
+  "row_count": 232,
   "original_leaf_count": 218,
-  "original_warp_records_unchanged": true
+  "original_warp_records_unchanged": true,
+  "fortress_versions": {
+    "recommended_root_display": "Exterior (FF2/FF3)",
+    "recommended_groups": {
+      "direct_exterior": [
+        36
+      ],
+      "FF1": [
+        109,
+        110,
+        145,
+        196,
+        197,
+        198,
+        199
+      ],
+      "FF2": [
+        111,
+        112,
+        113,
+        143,
+        213
+      ],
+      "FF3": [
+        144
+      ]
+    },
+    "recommended_folder_IDs": {
+      "FF1": 0,
+      "FF2": 12,
+      "FF3": 13
+    },
+    "classified_existing_destinations": [
+      {
+        "warp_ID": 36,
+        "existing_leaf_label": "Island",
+        "group": "direct_exterior",
+        "stage": "sea",
+        "spawn": 0,
+        "room": 1,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "4eeb660fe14adca3a36995b7db5e4b7a29c29cbbb1cb70053e4a78e02e7d55c2",
+        "note": "Shared second/third-visit exterior. Keep direct and label Exterior (FF2/FF3); do not force a version flag."
+      },
+      {
+        "warp_ID": 109,
+        "existing_leaf_label": "FF1",
+        "group": "FF1",
+        "stage": "MajyuE",
+        "spawn": 0,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "ec53c4c82c5a3cf98263490592c38b33936a99528cc42145fbdcf877b11045ba",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 110,
+        "existing_leaf_label": "FF1 - Doomzoom",
+        "group": "FF1",
+        "stage": "MajyuE",
+        "spawn": 16,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "59e0c603775f9aea2d1db505055d2df87715d1dcffea17bc2c7a4673e4eb3398",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 145,
+        "existing_leaf_label": "Jail",
+        "group": "FF1",
+        "stage": "majroom",
+        "spawn": 3,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "7ca0b90a97e9244d0ef35cd7661fb7c1663a44b8812921fa86dd45389f68042b",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 196,
+        "existing_leaf_label": "FF1 exterior from first jail cell",
+        "group": "FF1",
+        "stage": "MajyuE",
+        "spawn": 4,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "332548cffd33277abc7ca66e2b8cddfa3044b1cfe04f2dce54542fc8970cd1a9",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 197,
+        "existing_leaf_label": "FF1 2 moblins",
+        "group": "FF1",
+        "stage": "majroom",
+        "spawn": 8,
+        "room": 3,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "768e849142c87d500e60611a36f292aba410898a9775dc74fba386649a17a890",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 198,
+        "existing_leaf_label": "FF1 Last moblin",
+        "group": "FF1",
+        "stage": "MajyuE",
+        "spawn": 10,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "4c4343f875a4fe028de96f64b3794f95cfaba17cba894e115535a44d99d67253",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 199,
+        "existing_leaf_label": "FF1 Between sidles",
+        "group": "FF1",
+        "stage": "MajyuE",
+        "spawn": 19,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "f8307d479b94ba9d8b15c86b05199c485745ac8f617955d154b41b5ad21481f8",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 111,
+        "existing_leaf_label": "Save Aryll CS",
+        "group": "FF2",
+        "stage": "M2tower",
+        "spawn": 16,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "fd189826b57fbb6a5f145fa8f7ea4d7c1dfdb8b1e0afc8037b9438b173faa079",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 112,
+        "existing_leaf_label": "EMS CS Part 1",
+        "group": "FF2",
+        "stage": "M2ganon",
+        "spawn": 0,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "e22288a3de20ea0a6f51bec3e2ce7ea7c956a5ead1b8d47834d398c92c36d682",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 113,
+        "existing_leaf_label": "EMS CS Part 2",
+        "group": "FF2",
+        "stage": "ADMumi",
+        "spawn": 244,
+        "room": 0,
+        "layer": 11,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "62100680e3abceccde03021f15c93681a33d90aadb730e6edc32ffbaae241d56",
+        "note": "Keep existing EMS CS2 leaf label and exact ADMumi/spawnF4/room0/layer0B tuple. This is a related Valoo-rescue/EMS cutscene shortcut, not an ordinary FF2 map."
+      },
+      {
+        "warp_ID": 143,
+        "existing_leaf_label": "Interior 1",
+        "group": "FF2",
+        "stage": "ma2room",
+        "spawn": 3,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "f5878fdb40b8cfacf1ee9c81265026293c8d900eca5ba505f0785ef0eebc11a9",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 213,
+        "existing_leaf_label": "Helmaroc fight",
+        "group": "FF2",
+        "stage": "M2tower",
+        "spawn": 20,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "3af74c340a94ca317cf1bcfc71c76a56920ca2d218ff50ba0bdd4532d4f93344",
+        "note": "Existing tuple and leaf label preserved; version classification changes only the hierarchy."
+      },
+      {
+        "warp_ID": 144,
+        "existing_leaf_label": "Interior 2",
+        "group": "FF3",
+        "stage": "ma3room",
+        "spawn": 3,
+        "room": 0,
+        "layer": 255,
+        "trailing_control_word": 0,
+        "unchanged_tuple_SHA256": "72b4b11bd683e965ad5b8a32deea1505372e5c1ce10d059a6c1de9040b055b41",
+        "note": "Distinct third-visit interior variant. No claim about the unverified story flag/event that selects it."
+      }
+    ],
+    "no_flags_invented_or_written": true,
+    "owned_HD_findings": [
+      "majroom, ma2room and ma3room have distinct Stage.bfres resource hashes; they are not one shared interior tuple.",
+      "All three Room0 resources contain the existing room0/spawn3 Link entry.",
+      "majroom Stage/Room0 exits reference MajyuE, matching the first-visit exterior; majroom Room3 contains the existing spawn8 entry and exits MajyuE.",
+      "ma2room and ma3room Stage/Room0 exits reference sea room1; Room0 transition fade values also differ (5 versus11).",
+      "ADMumi Stage EVNT contains runaway_majuto and the resource contains runaway_majuto.stb; public primary scene mapping assigns its layer11 to Rescued by Valoo."
+    ],
+    "primary_sources": [
+      {
+        "url": "https://github.com/LagoLunatic/wwrando/blob/master/data/stage_names.txt#L175-L192",
+        "supports": "First/second/third interior stage names."
+      },
+      {
+        "url": "https://github.com/magcius/noclip.website/blob/main/src/ZeldaWindWaker/Main.ts#L1100-L1108",
+        "supports": "Distinct visit interiors and sea room1 exterior shared by second/third visit."
+      },
+      {
+        "url": "https://github.com/magcius/noclip.website/blob/main/src/ZeldaWindWaker/Main.ts#L1026-L1030",
+        "supports": "ADMumi layer11 runaway_majuto.stb / Rescued by Valoo cutscene."
+      },
+      {
+        "url": "https://github.com/zeldaret/tww/blob/main/src/d/d_s_play.cpp#L928-L948",
+        "supports": "Separate stage resource preload cases."
+      }
+    ],
+    "source_ref_limit": "Public links are branch references. Retrieval and source pin limits are recorded in the primary receipt; no immutable commit hash is fabricated.",
+    "limitations": [
+      "No story flag or event-selection predicate for the third-visit variant is inferred.",
+      "ID113 remains a cross-area/layered story shortcut; classification is not a retarget or generic ADMumi geography claim.",
+      "No native travel outcome or safety of a cutscene warp under arbitrary flags is claimed."
+    ]
+  }
 }

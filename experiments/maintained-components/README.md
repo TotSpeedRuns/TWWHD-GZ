@@ -715,7 +715,9 @@ has 88 pure geometry/latch cases; no live shallow-wall result is claimed.
 
 [Map area hierarchy](map-area-hierarchy/README.md) adds related-area folders
 while preserving all 218 existing destinations. Its private Cemu navigation
-test covers all 49 sectors, 12 folders and parent-cursor restoration. The
+test covers all 49 sectors, 14 folders and parent-cursor restoration.
+Forsaken Fortress separates FF1, FF2 and FF3, with the shared later exterior
+labeled explicitly. The
 module, eight exact source seams and integration contract are provided;
 Wii U presentation and leaf-warp execution remain separate validations.
 

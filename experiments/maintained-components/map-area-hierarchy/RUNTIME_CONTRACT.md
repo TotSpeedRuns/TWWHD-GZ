@@ -33,7 +33,7 @@ board module and assets remain separate dependencies and are not supplied.
 state falls back to the sector root; invalid sector state is bounded to zero.
 
 `_gz_mah_open_folder` expects a high-bit-tagged folder value in `r10` and the
-existing state base in `r29`. It bounds the decoded ID below 12, records the
+existing state base in `r29`. It bounds the decoded ID below 14, records the
 parent cursor, selects the first folder row and branches to `_gz_mask`.
 It uses `r9`, `r10` and CR0. `_gz_mah_back` uses `r9` through `r11` and CR0;
 it restores the parent row, returns from a sector list to the grid, or returns
@@ -43,17 +43,17 @@ functions. None changes `r29`, `r31`, SP or nonvolatile GPRs.
 Each descriptor is three 32-bit words: title pointer, first row index, row
 count. Each row is two words: label pointer and value. A clear high bit means
 an unchanged original warp ID. A set high bit means `0x80000000 | folder_id`.
-Only folder IDs 0 through 11 are valid. The selection seam intercepts that
+Only folder IDs 0 through 13 are valid. The selection seam intercepts that
 tag before the original warp-choice/pending publication; a folder value must
 never reach the warp dispatcher.
 
-There are 49 root descriptors, 12 folder descriptors and 230 rows: 218 original
-leaves plus 12 folder rows. Folder lists contain leaves only. New mutable state
+There are 49 root descriptors, 14 folder descriptors and 232 rows: 218 original
+leaves plus 14 folder rows. Folder lists contain leaves only. New mutable state
 is exactly eight initialized DATA bytes at `_gz_mah_state`: active folder
 `0xffffffff` at the sector root and the parent cursor. No slot scratch, BSS,
 heap allocation, native hook or import is added. The three helper bodies total
 216 bytes; after the replaced instruction spans, net TEXT grows by 184 bytes,
-RO by 2,956 bytes and DATA by eight bytes.
+RO by 3,012 bytes and DATA by eight bytes.
 
 The eight edits replace the list descriptor lookup, distinguish folder/leaf
 selection, reset folder state on sector entry and map open, implement parent
@@ -78,3 +78,18 @@ The formatted export changes comments/whitespace only. Its allocated section
 bytes, symbol offsets and relocations were checked against the pinned private
 module before staging. No published source or release artifact is modified by
 this proposal.
+
+The FF version derivative keeps the same eight runtime seams and eight mutable
+bytes. Only three helper capacity immediates grow from 12 to 14; no instruction
+or hook is added. IDs 1 through 11 keep their existing title and row-label
+references. They are not derived from `2 * folder_id`: sectors with multiple
+folders interleave title and root-row label allocation. The portable validator
+resolves local `.string` symbols before comparing them with semantic facts, so
+a swapped title or root-folder label is rejected independently of ID coverage.
+
+The 14-folder image's independent packed audit checked all 49 root titles and
+row labels, all 14 folder titles and leaf labels, and every original destination
+tuple. The shared exterior is a display alias only. FF3 denotes the distinct
+third interior resource; no event-selection predicate or travel outcome under
+arbitrary save flags is inferred. ID 113 retains the original layered Valoo
+cutscene tuple and label. See the public provenance in `hierarchy-facts.json`.

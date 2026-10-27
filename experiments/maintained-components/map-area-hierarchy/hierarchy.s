@@ -10,7 +10,7 @@
 _gz_mah_descriptor:
     lis 12, _gz_mah_state@ha
     lwz 9, _gz_mah_state@l(12)
-    cmplwi 9, 12
+    cmplwi 9, 14
     bge .Lmah_root_descriptor
     mulli 9, 9, 12
     lis 12, _gz_mah_folders@ha
@@ -32,11 +32,11 @@ _gz_mah_descriptor:
 .size _gz_mah_descriptor,.-_gz_mah_descriptor
 .global _gz_mah_open_folder
 .type _gz_mah_open_folder,@function
-# r10 contains a tagged folder ID; r29 is the existing menu-state base.
-# This tail path exits through the existing input mask, rather than returning.
+# r10 is a tagged folder ID; r29 is the existing menu-state base.
+# This tail path exits through the existing input mask.
 _gz_mah_open_folder:
     clrlwi 10, 10, 1
-    cmplwi 10, 12
+    cmplwi 10, 14
     blt .Lmah_folder_valid
     b _gz_mask
 .Lmah_folder_valid:
@@ -65,7 +65,7 @@ _gz_mah_back:
     lis 11, _gz_mah_state@ha
     addi 11, 11, _gz_mah_state@l
     lwz 10, 0(11)
-    cmplwi 10, 12
+    cmplwi 10, 14
     bge .Lmah_back_map
     li 10, -1
     stw 10, 0(11)
@@ -82,7 +82,7 @@ _gz_mah_back:
 .section .data,"aw",@progbits
 .balign 4
 .global _gz_mah_state
-# Initialized menu state: active folder (-1 at sector root), parent cursor.
+# Initialized state: active folder (-1 at sector root), parent cursor.
 _gz_mah_state:
     .long -1, 0
 .section .rodata,"a",@progbits
@@ -90,88 +90,93 @@ _gz_mah_state:
 .global _gz_mah_roots
 # 49 descriptors: title pointer, first row index, row count.
 _gz_mah_roots:
-    .long _gz_map_quadrant_name0, 0, 2
-    .long _gz_map_quadrant_name1, 15, 2
-    .long _gz_map_quadrant_name2, 17, 3
-    .long _gz_map_quadrant_name3, 20, 3
-    .long _gz_map_quadrant_name4, 34, 2
-    .long _gz_map_quadrant_name5, 36, 1
-    .long _gz_map_quadrant_name6, 37, 2
-    .long _gz_map_quadrant_name7, 39, 1
-    .long _gz_map_quadrant_name8, 40, 0
-    .long _gz_map_quadrant_name9, 40, 1
-    .long _gz_map_quadrant_name10, 41, 4
-    .long _gz_map_quadrant_name11, 55, 3
-    .long _gz_map_quadrant_name12, 58, 7
-    .long _gz_map_quadrant_name13, 77, 3
-    .long _gz_map_quadrant_name14, 80, 2
-    .long _gz_map_quadrant_name15, 82, 2
-    .long _gz_map_quadrant_name16, 84, 2
-    .long _gz_map_quadrant_name17, 86, 1
-    .long _gz_map_quadrant_name18, 87, 2
-    .long _gz_map_quadrant_name19, 89, 2
-    .long _gz_map_quadrant_name20, 91, 1
-    .long _gz_map_quadrant_name21, 92, 1
-    .long _gz_map_quadrant_name22, 93, 1
-    .long _gz_map_quadrant_name23, 94, 1
-    .long _gz_map_quadrant_name24, 95, 2
-    .long _gz_map_quadrant_name25, 97, 13
-    .long _gz_map_quadrant_name26, 132, 1
-    .long _gz_map_quadrant_name27, 133, 2
-    .long _gz_map_quadrant_name28, 135, 2
-    .long _gz_map_quadrant_name29, 137, 2
-    .long _gz_map_quadrant_name30, 139, 3
-    .long _gz_map_quadrant_name31, 142, 1
-    .long _gz_map_quadrant_name32, 143, 3
-    .long _gz_map_quadrant_name33, 146, 4
-    .long _gz_map_quadrant_name34, 150, 2
-    .long _gz_map_quadrant_name35, 152, 2
-    .long _gz_map_quadrant_name36, 154, 1
-    .long _gz_map_quadrant_name37, 155, 2
-    .long _gz_map_quadrant_name38, 157, 2
-    .long _gz_map_quadrant_name39, 159, 3
-    .long _gz_map_quadrant_name40, 162, 9
-    .long _gz_map_quadrant_name41, 185, 3
-    .long _gz_map_quadrant_name42, 188, 2
-    .long _gz_map_quadrant_name43, 190, 8
-    .long _gz_map_quadrant_name44, 212, 3
-    .long _gz_map_quadrant_name45, 222, 1
-    .long _gz_map_quadrant_name46, 223, 2
-    .long _gz_map_quadrant_name47, 225, 3
-    .long _gz_map_quadrant_name48, 228, 2
+    .long _gz_map_quadrant_name0, 0, 4
+    .long _gz_map_quadrant_name1, 17, 2
+    .long _gz_map_quadrant_name2, 19, 3
+    .long _gz_map_quadrant_name3, 22, 3
+    .long _gz_map_quadrant_name4, 36, 2
+    .long _gz_map_quadrant_name5, 38, 1
+    .long _gz_map_quadrant_name6, 39, 2
+    .long _gz_map_quadrant_name7, 41, 1
+    .long _gz_map_quadrant_name8, 42, 0
+    .long _gz_map_quadrant_name9, 42, 1
+    .long _gz_map_quadrant_name10, 43, 4
+    .long _gz_map_quadrant_name11, 57, 3
+    .long _gz_map_quadrant_name12, 60, 7
+    .long _gz_map_quadrant_name13, 79, 3
+    .long _gz_map_quadrant_name14, 82, 2
+    .long _gz_map_quadrant_name15, 84, 2
+    .long _gz_map_quadrant_name16, 86, 2
+    .long _gz_map_quadrant_name17, 88, 1
+    .long _gz_map_quadrant_name18, 89, 2
+    .long _gz_map_quadrant_name19, 91, 2
+    .long _gz_map_quadrant_name20, 93, 1
+    .long _gz_map_quadrant_name21, 94, 1
+    .long _gz_map_quadrant_name22, 95, 1
+    .long _gz_map_quadrant_name23, 96, 1
+    .long _gz_map_quadrant_name24, 97, 2
+    .long _gz_map_quadrant_name25, 99, 13
+    .long _gz_map_quadrant_name26, 134, 1
+    .long _gz_map_quadrant_name27, 135, 2
+    .long _gz_map_quadrant_name28, 137, 2
+    .long _gz_map_quadrant_name29, 139, 2
+    .long _gz_map_quadrant_name30, 141, 3
+    .long _gz_map_quadrant_name31, 144, 1
+    .long _gz_map_quadrant_name32, 145, 3
+    .long _gz_map_quadrant_name33, 148, 4
+    .long _gz_map_quadrant_name34, 152, 2
+    .long _gz_map_quadrant_name35, 154, 2
+    .long _gz_map_quadrant_name36, 156, 1
+    .long _gz_map_quadrant_name37, 157, 2
+    .long _gz_map_quadrant_name38, 159, 2
+    .long _gz_map_quadrant_name39, 161, 3
+    .long _gz_map_quadrant_name40, 164, 9
+    .long _gz_map_quadrant_name41, 187, 3
+    .long _gz_map_quadrant_name42, 190, 2
+    .long _gz_map_quadrant_name43, 192, 8
+    .long _gz_map_quadrant_name44, 214, 3
+    .long _gz_map_quadrant_name45, 224, 1
+    .long _gz_map_quadrant_name46, 225, 2
+    .long _gz_map_quadrant_name47, 227, 3
+    .long _gz_map_quadrant_name48, 230, 2
 .global _gz_mah_folders
-# 12 area descriptors using the same 12-byte layout.
+# 14 area descriptors using the same 12-byte layout.
+# FF1=0, FF2=12 and FF3=13; all other folder IDs retain their meanings.
 _gz_mah_folders:
-    .long _gz_mah_label0, 2, 13
-    .long _gz_mah_label2, 23, 11
-    .long _gz_mah_label4, 45, 8
-    .long _gz_mah_label5, 53, 2
-    .long _gz_mah_label8, 65, 12
-    .long _gz_mah_label10, 110, 3
-    .long _gz_mah_label11, 113, 19
-    .long _gz_mah_label14, 171, 6
-    .long _gz_mah_label15, 177, 8
-    .long _gz_mah_label18, 198, 6
-    .long _gz_mah_label19, 204, 8
-    .long _gz_mah_label22, 215, 7
+    .long _gz_mah_label0, 4, 7
+    .long _gz_mah_label2, 25, 11
+    .long _gz_mah_label4, 47, 8
+    .long _gz_mah_label5, 55, 2
+    .long _gz_mah_label8, 67, 12
+    .long _gz_mah_label10, 112, 3
+    .long _gz_mah_label11, 115, 19
+    .long _gz_mah_label14, 173, 6
+    .long _gz_mah_label15, 179, 8
+    .long _gz_mah_label18, 200, 6
+    .long _gz_mah_label19, 206, 8
+    .long _gz_mah_label22, 217, 7
+    .long _gz_mah_label24, 11, 5
+    .long _gz_mah_label26, 16, 1
 .global _gz_mah_rows
-# 230 rows: label pointer, original warp ID or 0x80000000 | folder ID.
+# 232 rows: label pointer, original warp ID or 0x80000000 | folder ID.
 _gz_mah_rows:
-    .long _gz_map_destination_name0, 36
+    .long _gz_mah_label28, 36
     .long _gz_mah_label1, 0x80000000
+    .long _gz_mah_label25, 0x8000000c
+    .long _gz_mah_label27, 0x8000000d
     .long _gz_map_destination_name1, 109
     .long _gz_map_destination_name2, 110
-    .long _gz_map_destination_name3, 111
-    .long _gz_map_destination_name4, 112
-    .long _gz_map_destination_name5, 113
-    .long _gz_tw_label18, 143
-    .long _gz_tw_label20, 144
     .long _gz_tw_label22, 145
     .long _gz_tw_label124, 196
     .long _gz_tw_label126, 197
     .long _gz_tw_label128, 198
     .long _gz_tw_label130, 199
+    .long _gz_map_destination_name3, 111
+    .long _gz_map_destination_name4, 112
+    .long _gz_map_destination_name5, 113
+    .long _gz_tw_label18, 143
     .long _gz_tw_label158, 213
+    .long _gz_tw_label20, 144
     .long _gz_map_destination_name6, 75
     .long _gz_map_destination_name7, 76
     .long _gz_map_destination_name8, 86
@@ -390,11 +395,11 @@ _gz_mah_rows:
 .balign 4
 .global _gz_mah_label0
 _gz_mah_label0:
-    .string "Forsaken Fortress"
+    .string "FF1"
 .balign 4
 .global _gz_mah_label1
 _gz_mah_label1:
-    .string "Forsaken Fortress >"
+    .string "FF1 >"
 .balign 4
 .global _gz_mah_label2
 _gz_mah_label2:
@@ -483,3 +488,23 @@ _gz_mah_label22:
 .global _gz_mah_label23
 _gz_mah_label23:
     .string "Earth Temple >"
+.balign 4
+.global _gz_mah_label24
+_gz_mah_label24:
+    .string "FF2"
+.balign 4
+.global _gz_mah_label25
+_gz_mah_label25:
+    .string "FF2 >"
+.balign 4
+.global _gz_mah_label26
+_gz_mah_label26:
+    .string "FF3"
+.balign 4
+.global _gz_mah_label27
+_gz_mah_label27:
+    .string "FF3 >"
+.balign 4
+.global _gz_mah_label28
+_gz_mah_label28:
+    .string "Exterior (FF2/FF3)"

@@ -1,5 +1,13 @@
 # Source and build status
 
+The [common C admission primitive](../experiments/maintained-components/common-admission/README.md)
+is now published as an exact reviewed standalone source component. One private
+Cemu test exercised four real OS threads on guest cores 0, 1 and 2, with nested
+and overlapping shared work, blocked wakeup, two-Gate ownership checks and clean
+termination/join. It is not an actual game-writer/lifetime barrier, memory
+snapshot implementation or Wii U qualification. No proprietary bytes or private
+runtime reports are included, and the full integrated export remains v126.
+
 The full reproducible export remains v126. The maintained snapshot includes
 UI components through R724 and save-state components through R703. The reviewed
 v142 component update is described below; its complete multi-object build has

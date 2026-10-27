@@ -1,0 +1,34 @@
+{
+  "schema": "public-authored-common-admission-scope/1",
+  "component_revision": "common-admission-r2",
+  "source_sha256": "27881929ff69fb3a986747b739d7af2de742fb78eca251c5cb0670f5d9c288d0",
+  "header_sha256": "2c46274ac1b2d6f05936a858f09872fda2a532e55d8715b36bc2d9ad55070a3e",
+  "private_tested_object_sha256": "01b4393468d3fff44d2e1b54b9edd6bc42bbbeac99e93e0f032d0dadd8ceca2d",
+  "private_Cemu_observation": {
+    "threads": 4,
+    "actual_guest_worker_cores": [
+      0,
+      1,
+      2
+    ],
+    "all_four_terminated_and_joined": true,
+    "actual_wrong_gate_and_active_token_guards": true,
+    "nested_depth": 2,
+    "overlapping_shared_depth": 3,
+    "API_results_supplied": false
+  },
+  "hardware_tested": false,
+  "world_ready": false,
+  "integrated_export_revision": "v126",
+  "does_not_supply": [
+    "Game hooks",
+    "Memory ownership or allocator/lifetime closure",
+    "Arena capture or replay",
+    "Room/resource/cutscene/audio restoration",
+    "Ten durable slots",
+    "Full current release builder"
+  ],
+  "private_reviewed_source_sha256": "27881929ff69fb3a986747b739d7af2de742fb78eca251c5cb0670f5d9c288d0",
+  "private_reviewed_header_sha256": "2c46274ac1b2d6f05936a858f09872fda2a532e55d8715b36bc2d9ad55070a3e",
+  "source_line_endings": "Canonical LF; otherwise exact reviewed private source."
+}

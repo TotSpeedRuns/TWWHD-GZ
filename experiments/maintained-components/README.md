@@ -5,6 +5,15 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Common C callback-admission primitive
+
+The [common-admission component](common-admission/README.md) publishes the exact
+reviewed C Gate and token implementation tested with four real OS threads on
+three guest CPU cores. It handles nested/shared lifetimes, nonwaiting exclusive
+attempts and cross-Gate token guards. This is a scoped private Cemu result;
+game-worker/lifetime closure, arena rewind and Wii U behavior remain unproved.
+It does not change the reproducible integrated v126 export.
+
 ## Generic CPU observation and fresh MSS visit joins
 
 The [generic CPU observation experiment](generic-cpu-observation/README.md)

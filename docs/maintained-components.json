@@ -1,6 +1,6 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "reviewed-delivery-copies-and-guarded-inventory",
+  "revision": "reviewed-common-admission-r2-three-core-scope",
   "status": "Reviewed authored partial components. Delivery inventory has a scoped23case Cemu cohort; equipped remap and WiiU remain unverified. Complete reproducible integrated export remains v126.",
   "files": [
     {
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "bf7d9688f9d252d7af2f9f355b818bc4c3ab590af15d259d18e7cb12ae98b657",
-      "bytes": 41741
+      "sha256": "0d37f79606e36ee38a1facb7eb74bba2f635e1103887572ccebee36f61a49f3a",
+      "bytes": 42237
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -757,6 +757,26 @@
       "path": "experiments/maintained-components/delivery-copies/README.md",
       "bytes": 3950,
       "sha256": "b214ae22b979a42530b7577e8cc0fca1144f2968a8a508cec995c0fad0bb93d8"
+    },
+    {
+      "path": "experiments/maintained-components/common-admission/common_admission.c",
+      "sha256": "27881929ff69fb3a986747b739d7af2de742fb78eca251c5cb0670f5d9c288d0",
+      "bytes": 5873
+    },
+    {
+      "path": "experiments/maintained-components/common-admission/common_admission.h",
+      "sha256": "2c46274ac1b2d6f05936a858f09872fda2a532e55d8715b36bc2d9ad55070a3e",
+      "bytes": 1726
+    },
+    {
+      "path": "experiments/maintained-components/common-admission/README.md",
+      "sha256": "611b91ec47563e2c590690728e8db464e3735393bba8e13167aae3f25d460d63",
+      "bytes": 2614
+    },
+    {
+      "path": "experiments/maintained-components/common-admission/scope.json",
+      "sha256": "67846e53e445cadc615a0f20676c2d2277e4ea520129d1fe1e2d0f652f493434",
+      "bytes": 1318
     }
   ],
   "excludes": [

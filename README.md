@@ -7,7 +7,8 @@ Created by Tot_sr (Aydin), with contributions documented in the source.
 
 The complete reproducible runtime export in this repository is **v126**. Newer
 reviewed source is published under `experiments/maintained-components/`; that is
-a partial snapshot including the private R769 static Triforce graphic,
+a partial snapshot including static Triforce graphic source with the reviewed
+full-mask image branch and bounded R771 Cemu CPU-canvas validation,
 the scoped v142 Ganondorf entrance and practice-travel gear cleanup,
 post-v140 UI corrections, older save-state components
 through R703, and isolated restore-performance source. It does not reproduce the complete current release. See [source status](docs/SOURCE_STATUS.md).

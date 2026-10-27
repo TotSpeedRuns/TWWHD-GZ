@@ -10,6 +10,7 @@ struct tfg_piece {
 };
 
 extern const struct tfg_piece _gz_tfg_pieces[8];
+extern const struct tfg_piece _gz_tfg_full_piece;
 
 /* Canonical sources, not acquisition history for the current save. */
 static const char *const source_lines[8][2] = {
@@ -69,10 +70,22 @@ void _gz_tfg_draw_parts(uint8_t *pixels, uint32_t ownership,
 
     if (large > 1u)
         return;
-    if (selected < 8u && large)
-        draw_piece(&canvas, &_gz_tfg_pieces[selected], center_x, center_y,
-                   large, 0xffffffffu, 1);
-    for (piece = 0; piece < 8u; ++piece)
-        draw_piece(&canvas, &_gz_tfg_pieces[piece], center_x, center_y, large,
-                   ownership & (1u << piece) ? 0xffffffffu : 0x60606070u, 0);
+    if ((ownership & 255u) == 255u) {
+        /* The native full-image pane has the same default widget center.
+         * Draw the authored selection boundary last so it remains visible.
+         * Native demo, shine, material and pane state are not invoked here.
+         */
+        draw_piece(&canvas, &_gz_tfg_full_piece, center_x, center_y,
+                   large, 0xffffffffu, 0);
+        if (selected < 8u && large)
+            draw_piece(&canvas, &_gz_tfg_pieces[selected], center_x, center_y,
+                       large, 0xffffffffu, 1);
+    } else {
+        if (selected < 8u && large)
+            draw_piece(&canvas, &_gz_tfg_pieces[selected], center_x, center_y,
+                       large, 0xffffffffu, 1);
+        for (piece = 0; piece < 8u; ++piece)
+            draw_piece(&canvas, &_gz_tfg_pieces[piece], center_x, center_y, large,
+                       ownership & (1u << piece) ? 0xffffffffu : 0x60606070u, 0);
+    }
 }

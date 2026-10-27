@@ -5,13 +5,21 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
-## Static Triforce graphic and source hints (private R769)
+## Static Triforce graphic, full-mask image and source hints
 
 The [graphic component](triforce-graphic/README.md) adds an authored clipped
 RGBA compositor, static irregular shard page, selection outline and canonical
-source hints. All 16 real Cemu give/remove operations and navigation passed.
-Owned artwork and complete integration dependencies are excluded; native
-shine and Wii U acceptance remain open. This is unpromoted component source.
+source hints. When the low eight ownership bits are all set, the draw policy
+uses a separate static full-image descriptor; the large page draws its selected
+shard outline afterward. Other ownership masks retain the eight-shard policy.
+The R769 baseline passed all 16 real Cemu give/remove operations and navigation.
+The additional full-mask branch has emitted-code and positive-pixel checks.
+The integrated R771 image then passed 16 give/remove operations and CPU-canvas
+comparisons of 921,599 large-page pixels and 4,500 Inventory-preview pixels in
+one isolated Cemu session; the large comparison excludes the sole authenticated
+transparent refresh pixel at (0,0). Final TV/GamePad and native-font composition,
+Wii U acceptance and native shine remain unverified. Owned artwork and complete
+integration dependencies are excluded. The full source export remains v126.
 
 ## Ganondorf entrance and practice-travel gear cleanup (v142)
 

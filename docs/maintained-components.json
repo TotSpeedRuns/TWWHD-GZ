@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "R769-static-Triforce-authored-component",
-  "status": "Reviewed partial authored components including private static Triforce UI; no native shine or complete current runtime export. Reproducible full export remains v126. Puppet Ganon/cutscene replay is not included.",
+  "revision": "static-Triforce-full-mask-authored-component",
+  "status": "Reviewed partial authored components including the static full-mask Triforce draw policy with bounded integrated R771 Cemu CPU-canvas validation. Final TV/GamePad and native-font composition, Wii U acceptance and native shine remain unverified. Reproducible full export remains v126. Puppet Ganon/cutscene replay is not included.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 37538,
-      "sha256": "d496062ff85670575ec8fa4373637c0ad7cbd12587029d6cc6ef78a6f044ad44"
+      "bytes": 38181,
+      "sha256": "0be07362af908afe204762f19a9fbdea599c99ee2b9f7b67c934632066f0cb4a"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -570,13 +570,13 @@
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/menu.c",
-      "bytes": 2991,
-      "sha256": "fc939ccbe13fc2440cacf94886ddcbac1355c905cd471d8a1760e321cd174d0a"
+      "bytes": 3635,
+      "sha256": "4486a140fc176d81495d4e4d109ea02c96a11d54c1df9b81f4a05be6e116aca0"
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/README.md",
-      "bytes": 3552,
-      "sha256": "fcb2fe07449a756acc03978862a57d3c15ad8c8c5133ed9ad5ab7888bda1051a"
+      "bytes": 4833,
+      "sha256": "f52efe0c9eb67e88c158858c8921e3952c9c66d366777de32bc20d29206215dd"
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/test_composite.c",

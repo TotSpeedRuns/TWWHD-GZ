@@ -50,13 +50,19 @@ and memfile recovery. No pixels or Wii U hardware were observed. No
 save-state coverage, persistent slots or full current build is added.
 See [the component's exact scope and pins](../experiments/maintained-components/gear-travel/README.md).
 
-The private R769 static Triforce component adds the authored RGBA compositor,
-menu composition and small ABI bridges, with a standalone compositor smoke
-test. Owned sprites and complete current build dependencies remain excluded.
-All 16 real Cemu shard give/remove operations and navigation passed; native
-shine and Wii U visual acceptance remain open. It is unpromoted component
-source and does not replace the reproducible v126 integrated export or add
-Puppet Ganon/cutscene save-state replay.
+The static Triforce component adds the authored RGBA compositor, menu
+composition and small ABI bridges, with a standalone compositor smoke test.
+The additional full-mask draw policy uses a separate full-image descriptor when
+all eight ownership bits are set, then draws the large-page selection outline.
+Owned sprites, asset assembly and complete current build dependencies remain
+excluded. The R769 baseline passed all 16 real Cemu shard give/remove operations
+and navigation. After pure emitted-code and positive-pixel checks, the integrated
+R771 full-mask image passed 16 give/remove operations and CPU-canvas comparisons
+of 921,599 large-page pixels plus 4,500 Inventory-preview pixels in one isolated
+Cemu session. The large comparison excludes the sole authenticated transparent
+refresh pixel at (0,0). Final TV/GamePad and native-font composition, Wii U visual
+acceptance and native shine remain unverified. This partial source does not replace the
+reproducible v126 export or add Puppet Ganon/cutscene save-state replay.
 See [graphic component scope](../experiments/maintained-components/triforce-graphic/README.md).
 
 The large legacy assembly template mixes authored patch code, compiler-generated

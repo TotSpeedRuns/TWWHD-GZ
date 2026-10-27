@@ -1,3 +1,5 @@
 *.sh text eol=lf
 Dockerfile text eol=lf
 .dockerignore text eol=lf
+experiments/maintained-components/README.md text eol=lf
+experiments/maintained-components/triforce-graphic/* text eol=lf

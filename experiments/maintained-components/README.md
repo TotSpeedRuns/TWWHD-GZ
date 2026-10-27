@@ -5,6 +5,14 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## Static Triforce graphic and source hints (private R769)
+
+The [graphic component](triforce-graphic/README.md) adds an authored clipped
+RGBA compositor, static irregular shard page, selection outline and canonical
+source hints. All 16 real Cemu give/remove operations and navigation passed.
+Owned artwork and complete integration dependencies are excluded; native
+shine and Wii U acceptance remain open. This is unpromoted component source.
+
 ## Ganondorf entrance and practice-travel gear cleanup (v142)
 
 The [gear-travel component](gear-travel/README.md) provides the authored

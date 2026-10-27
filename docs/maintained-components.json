@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "v142-Ganondorf-gear-authored-source",
-  "status": "Reviewed partial authored components including scoped v142 Ganondorf/practice-travel gear fix. Exact private R757 build dependencies remain; complete reproducible export stays v126. No broad native/hardware coverage claim.",
+  "revision": "R769-static-Triforce-authored-component",
+  "status": "Reviewed partial authored components including private static Triforce UI; no native shine or complete current runtime export. Reproducible full export remains v126. Puppet Ganon/cutscene replay is not included.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 37095,
-      "sha256": "9169a424ee889e538a79467c109dff1ea26149218c594e75d81353d2a5bab555"
+      "bytes": 37538,
+      "sha256": "d496062ff85670575ec8fa4373637c0ad7cbd12587029d6cc6ef78a6f044ad44"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -552,6 +552,36 @@
       "path": "experiments/maintained-components/gear-travel/evidence-summary.json",
       "bytes": 3221,
       "sha256": "cdf035143e0403fc49f832e5fdea4b8891fee147498e447e50418085b7d157a3"
+    },
+    {
+      "path": "experiments/maintained-components/triforce-graphic/bridges.s",
+      "bytes": 1479,
+      "sha256": "c9ac9b12fadfad4b5e2d52e4d96b0a0a88fc2645f3cd8f6ef8748e35c0529d24"
+    },
+    {
+      "path": "experiments/maintained-components/triforce-graphic/composite.c",
+      "bytes": 7118,
+      "sha256": "95f9ad41d710670caf76bdd2c254ee1f262656bda04a7969a84b6d0fbd59f3b4"
+    },
+    {
+      "path": "experiments/maintained-components/triforce-graphic/composite.h",
+      "bytes": 1921,
+      "sha256": "3629659274b506900806ce4c712412fdb7cd024dac8cd83e4d3151a2e86509a5"
+    },
+    {
+      "path": "experiments/maintained-components/triforce-graphic/menu.c",
+      "bytes": 2991,
+      "sha256": "fc939ccbe13fc2440cacf94886ddcbac1355c905cd471d8a1760e321cd174d0a"
+    },
+    {
+      "path": "experiments/maintained-components/triforce-graphic/README.md",
+      "bytes": 3552,
+      "sha256": "fcb2fe07449a756acc03978862a57d3c15ad8c8c5133ed9ad5ab7888bda1051a"
+    },
+    {
+      "path": "experiments/maintained-components/triforce-graphic/test_composite.c",
+      "bytes": 2948,
+      "sha256": "b0bf92ddfafea1c23c6b24a5aacef84c7bc146e64cfd63382ea686926e7be8ea"
     }
   ],
   "excludes": [
@@ -562,5 +592,6 @@
     "Keys",
     "Private diagnostics"
   ],
-  "hash_normalization": "UTF-8 with LF line endings, matching Git source blobs"
+  "hash_normalization": "UTF-8 with LF line endings, matching Git source blobs",
+  "Triforce_source_line_endings": "Canonical LF with subtree eol=lf; semantic private-source equality is checked after CRLF normalization."
 }

@@ -50,6 +50,15 @@ and memfile recovery. No pixels or Wii U hardware were observed. No
 save-state coverage, persistent slots or full current build is added.
 See [the component's exact scope and pins](../experiments/maintained-components/gear-travel/README.md).
 
+The private R769 static Triforce component adds the authored RGBA compositor,
+menu composition and small ABI bridges, with a standalone compositor smoke
+test. Owned sprites and complete current build dependencies remain excluded.
+All 16 real Cemu shard give/remove operations and navigation passed; native
+shine and Wii U visual acceptance remain open. It is unpromoted component
+source and does not replace the reproducible v126 integrated export or add
+Puppet Ganon/cutscene save-state replay.
+See [graphic component scope](../experiments/maintained-components/triforce-graphic/README.md).
+
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the
 whole project. The newer maintained C modules do not remove that limitation.

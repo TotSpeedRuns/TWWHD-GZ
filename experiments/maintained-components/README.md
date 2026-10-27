@@ -743,3 +743,12 @@ LEAVE may block, and WORLD/READ readiness remains 0 with MISSING=15. Game-worker
 physical, resource and lifetime closure are unfinished. This narrow include
 requires the existing common-admission primitive and full adapter integration;
 it does not update the reproducible integrated v126 export to v146.
+
+
+## Current owner allocation metadata
+
+The [job-owner label observer](job-owner-labels/README.md) has two genuine Cemu
+observations of both manager allocation identities. It reads fixed resident
+labels and private allocation metadata; it does not read manager payloads or
+grant lifetime, capture or replay permission. The later coupled exclusion
+mechanism and complete integrated source export remain separate.

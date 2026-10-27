@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "private-0.985-clip-tuning-and-v146-native-job-gate",
-  "status": "Reviewed partial components; v146 adds native job scheduling gate source. WORLD/READ readiness remains0 and full-game snapshot closure is unfinished. Complete reproducible integrated export remains v126.",
+  "revision": "private-0.985-clip-and-current-job-owner-labels",
+  "status": "Reviewed partial components, including actual current allocation-label observations. WORLD/READ readiness remains0; lifetime and full-game snapshot closure are unfinished. Complete reproducible integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 44068,
-      "sha256": "ceeb72166d2d7106fa41e9cde30bf277a2d150f365c7e46ef76a8ce877dea80b"
+      "bytes": 44480,
+      "sha256": "56f30f2ec9dd451b9a5a505272fbefb14a27eb5d3dc12a3eef33e87397fcb80e"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -852,6 +852,21 @@
       "path": "experiments/maintained-components/native-job-gate/scope.json",
       "bytes": 1671,
       "sha256": "c3f7eb3b5cfeb23482cfa02411c4eac3b0fcf1834fc6bffa46bc7edd2bdde2ff"
+    },
+    {
+      "path": "experiments/maintained-components/job-owner-labels/owner_labels.c",
+      "bytes": 6771,
+      "sha256": "f697e1c26f65015b9bbbe08270ad2c4c3adec5e03e3a50950c3aab4df0b7bc16"
+    },
+    {
+      "path": "experiments/maintained-components/job-owner-labels/README.md",
+      "bytes": 1766,
+      "sha256": "b1b75d0b8b8f2e95a260e2a3fbfa162bd582c458634494ae13284782a7ed44fc"
+    },
+    {
+      "path": "experiments/maintained-components/job-owner-labels/scope.json",
+      "bytes": 1090,
+      "sha256": "2fde020bf807784d8cfe1a518a95e68ba3e70d60ae1133402c1c57a1831a4c40"
     }
   ],
   "excludes": [

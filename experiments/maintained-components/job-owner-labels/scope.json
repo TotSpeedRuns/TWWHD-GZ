@@ -1,0 +1,28 @@
+{
+  "schema": "authored-current-owner-label-scope/1",
+  "source_revision": "R837-r2 / private R844",
+  "original_source_sha256": "f697e1c26f65015b9bbbe08270ad2c4c3adec5e03e3a50950c3aab4df0b7bc16",
+  "LF_source_sha256": "f697e1c26f65015b9bbbe08270ad2c4c3adec5e03e3a50950c3aab4df0b7bc16",
+  "source_review_sha256": "2a6e2c1631fede5a1479fab1c5ca22fa23280a145d489ddedb8f41ff3212a6ab",
+  "native_qualification_sha256": "5f533833dfb5b63001c0b86215459e234432edd9d525d036f40188268ba92236",
+  "native_observations": {
+    "environment": "isolated Cemu",
+    "fresh_publications": 2,
+    "frame_spacing": 300,
+    "matching_binding_rows": 4,
+    "actual_API_OK_returns": 16,
+    "native_API_results_supplied": false,
+    "save_hashes_unchanged": 6,
+    "hardware_tested": false
+  },
+  "world_ready": false,
+  "READ_READY": false,
+  "missing": 31,
+  "session": 0,
+  "physical_lifetime_or_no_free_grant": false,
+  "payload_capture": false,
+  "replay": false,
+  "complete_current_integrated_export": false,
+  "reproducible_integrated_export": "v126",
+  "supplied_files_are_authored_source_only": true
+}

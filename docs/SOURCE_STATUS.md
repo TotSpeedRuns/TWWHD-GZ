@@ -125,3 +125,14 @@ component validates detached ordered graphs and identities only, with no live
 provider, replay or readiness grant. Worker/resource/writer exclusion and real
 independent undo remain open. These files do not make a newer coherent build
 export or qualify full-game save states. See the two component scope documents.
+
+The maintained Delivery Bag source adds physical-copy counts, Left/Right
+remove/add and the existing A toggle through the existing guarded inventory
+dispatcher. One private Cemu cohort completed21 Delivery cases and two neighbor
+bag checks. The first driver remains failed after a wrong Spoils selector; a
+separately reviewed same-process remainder completed those two checks. Five
+unassigned saved bindings/cache bytes and all six normal files were unchanged.
+Actual equipped remapping, native letter use and WiiU remain untested; bag
+acquisition grants remained in disposable RAM. No full-RAM, save-state or
+complete current-build claim is made. See delivery-copies/README.md in the
+maintained components. The reproducible integrated export remains v126.

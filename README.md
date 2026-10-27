@@ -11,7 +11,7 @@ a partial snapshot including static Triforce graphic source with the reviewed
 full-mask image branch and bounded R771 Cemu CPU-canvas validation,
 the scoped v142 Ganondorf entrance and practice-travel gear cleanup,
 post-v140 UI corrections, older save-state components
-through R703, and isolated restore-performance source. It does not reproduce the complete current release. See [source status](docs/SOURCE_STATUS.md).
+through R703, isolated restore-performance source, and scoped Delivery Bag copy editing. It does not reproduce the complete current release. See [source status](docs/SOURCE_STATUS.md).
 
 The native patcher and Wii U GZ Setup source are also included. **Save states
 remain under development.** Actor recreation, resource ownership, transitions

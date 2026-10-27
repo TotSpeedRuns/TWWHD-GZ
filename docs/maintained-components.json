@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "reviewed-frame-observation-and-detached-registry",
-  "status": "Reviewed authored partial components; complete reproducible integrated export remains v126. Frame observation is not a read grant; registry format has no native provider or replay claim.",
+  "revision": "reviewed-delivery-copies-and-guarded-inventory",
+  "status": "Reviewed authored partial components. Delivery inventory has a scoped23case Cemu cohort; equipped remap and WiiU remain unverified. Complete reproducible integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -722,6 +722,41 @@
       "path": "experiments/maintained-components/common-registry-capsule/README.md",
       "sha256": "cc84c0f95eaa87e3eb9ef8fd3d71f7b5af60ad26c045d42738b14bc7eb591040",
       "bytes": 1950
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/delivery.c",
+      "bytes": 3234,
+      "sha256": "e527a01db23a70738810616059dd4cee6ae392bbf7d20a384a1f1d40e9d597ca"
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/delivery.h",
+      "bytes": 1055,
+      "sha256": "7e1f11f446f409e8185cce3394d395e894ba75408cc2fd0e71283f46cc97273c"
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/delivery_bridge.s",
+      "bytes": 1815,
+      "sha256": "85bfecf271251e85d9a82510cf7dddabf25bf154cfb4774be62906cf51fdea5e"
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/integration-seams.json",
+      "bytes": 3577,
+      "sha256": "2131c5b4c0a7303fdc244824a46156821f3f964f258c83fe28f727b6f49b8a91"
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/apply_source.py",
+      "bytes": 2850,
+      "sha256": "6fc47afc3f2e176339bcab38859cc1d61ec4fed2052fcbb3a45aeeb2dd856771"
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/test_source.py",
+      "bytes": 2304,
+      "sha256": "518f4dd39e6a7de6b7792ac4a45c17ebab954cc6e0437fdd697e0297b5b1fb7b"
+    },
+    {
+      "path": "experiments/maintained-components/delivery-copies/README.md",
+      "bytes": 3950,
+      "sha256": "b214ae22b979a42530b7577e8cc0fca1144f2968a8a508cec995c0fad0bb93d8"
     }
   ],
   "excludes": [

@@ -81,3 +81,21 @@ shine, material/noise animation and adjacent Pearl rendering are not implemented
 by this snapshot. The authored source-over blend is not a claim of native NW4F
 material equivalence. Full current-release source reproduction, final display
 composition and Wii U visual acceptance remain separate qualifications.
+
+
+## Lower-cost native-art view
+
+The current authored derivative uses 2x enlargement on the shard page, rather
+than 3x: the full-image rectangle is 300x240 instead of 450x360, reducing that
+destination area by 55.56%. The small Inventory preview is unchanged. It uses
+the same native artwork when privately bound; no new image detail or shine is
+invented and no texture cache or persistent buffer is added.
+
+The compositor now skips invisible RGB work and uses exact straight-alpha
+reductions for opaque source, empty canvas and opaque canvas pixels. Pure
+emitted-code comparisons preserve the prior mathematical pixels, including
+edge clipping, padding and canaries. Crop instruction counts are mixed: some
+paths improve while a dimmed crop grows slightly; they are not Wii U FPS
+measurements. The smaller enlargement has separate positive emitted-code
+checks for 4,500 small-view and 72,000 large-view pixels. Earlier native checks
+above apply to the historical view, not automatically to this derivative.

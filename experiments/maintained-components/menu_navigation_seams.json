@@ -1,0 +1,38 @@
+{
+  "schema": "authored-menu-navigation-seams/1",
+  "scope": "Symbolic authored UI seams; not a complete runtime or native-hook contract.",
+  "qualified_private_assembly_baseline_sha256": "9d750e916e445beb66bfaccbbee3597bafc0feb9a74b892d3a04111e4f7cdc43",
+  "requires_all_seams_and_matching_Favorites_getter": true,
+  "seams": [
+    {
+      "name": "one analog dispatcher after original digital repeat",
+      "before": "bl _gz_nav_repeat\nstw 3, 0x1C(1)\n",
+      "after": "bl _gz_nav_repeat\nstw 3, 0x1C(1)\nbl _gz_mnu_input_bridge\n"
+    },
+    {
+      "name": "old Inventory-only analog caller retired",
+      "before": "_gz_inv_far_5:\nb _gz_ins_inventory_bridge\n",
+      "after": "_gz_inv_far_5:\nlwz 9,0x1c(1)\n"
+    },
+    {
+      "name": "side panel plain Left escapes; held L retains decrement",
+      "before": "_gz_inv_horizontal:\ncmpwi 10, 24\nblt _gz_inv_far_8\nb _gz_inv_health_input\n",
+      "after": "_gz_inv_horizontal:\nb _gz_mnu_inv_horizontal\n"
+    },
+    {
+      "name": "shards horizontal aliases retain original action edges",
+      "before": "_gz_shards_navigation:\nlwz 9, 0x1C(1)\nor 8, 8, 9\nlis 9, _gz_inventory_dpad_repeat@ha\nlwz 9, _gz_inventory_dpad_repeat@l(9)\nor 8, 8, 9\nlwz 10, 8(29)\nlwz 9, 12(11)\nori 9, 9, 0x0200\nand. 9, 8, 9\nbeq _gz_shards_down\naddi 10, 10, -1\n_gz_shards_down:\nlwz 9, 16(11)\nori 9, 9, 0x0100\nand. 9, 8, 9\nbeq _gz_shards_lower\naddi 10, 10, 1\n",
+      "after": "_gz_shards_navigation:\nlwz 9, 0x1C(1)\nor 8, 8, 9\nlis 9, _gz_inventory_dpad_repeat@ha\nlwz 9, _gz_inventory_dpad_repeat@l(9)\nor 8, 8, 9\nlwz 10, 8(29)\nlwz 9, 12(11)\nori 9, 9, 0x0A00\nand. 9, 8, 9\nbeq _gz_shards_down\naddi 10, 10, -1\n_gz_shards_down:\nlwz 9, 16(11)\nori 9, 9, 0x0500\nand. 9, 8, 9\nbeq _gz_shards_lower\naddi 10, 10, 1\n"
+    },
+    {
+      "name": "existing one-line Inventory help reflects side-panel controls",
+      "before": "bl _gz_btl_inventory_help\nmr 6,3\n",
+      "after": "bl _gz_mnu_inventory_help\nmr 6,3\n"
+    },
+    {
+      "name": "Old map analog fallback retired; digital direction and repeat stay unchanged",
+      "before": "_gz_map_v02_check_stick:\ncmpwi 3, 0\nbne _gz_map_v02_nav_direction\nlis 8, _gz_input_snapshot@ha\n",
+      "after": "_gz_map_v02_check_stick:\ncmpwi 3, 0\nbne _gz_map_v02_nav_direction\nb _gz_map_v02_nav_reset\nlis 8, _gz_input_snapshot@ha\n"
+    }
+  ]
+}

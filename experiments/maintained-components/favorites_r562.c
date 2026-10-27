@@ -168,3 +168,10 @@ void _gz_fav_draw(void){U n,s,c,a,idx,total=rows();
  if(_gz_fav_report[5])text(4,18,"Some favorites are unavailable in this build.");
  text(4,19,active<group_count?"A: Load   X: Remove   B: Areas":"A: Open Area   B: Back");
 }
+
+/* Current derived page size for authored analog cursor navigation only.
+ * No key/format/storage mutation or activation is performed by this getter. */
+U _gz_fav_navigation_count(void)
+{
+    return _gz_fav_loaded ? rows() : 0;
+}

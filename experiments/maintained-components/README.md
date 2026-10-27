@@ -642,3 +642,39 @@ resource-row behavior, all 12 Tools labels and values with both overlays on,
 and repeated close/reopen cycles. Forest Water passed all four bottle slots,
 countdown, editing/deletion of other contents, native Plus capture/restoration
 and refill. These are bounded UI checks, not full-game or Wii U acceptance.
+
+
+## Common menu navigation and small clip adjustment
+
+`menu_navigation.c`, `.h`, and `navigation_bridges.s` supersede the older
+Inventory-only analog caller. They move cursor metadata, never synthesize
+action buttons, use menu-local 0.50/0.35 thresholds and a 12/4-frame repeat,
+and give real D-pad/action edges priority. Gameplay deadzones stay separate.
+Vertical lists use Up/Down; horizontal stick navigation belongs to the item
+grid, map and shards. The existing map D-pad/configured directions retain
+their original repeat path; only its former analog fallback is retired.
+`menu_navigation_seams.json` lists the required authored UI edits, including
+retiring the old map analog fallback. Keeping both map paths causes duplicate
+movement. The matching Favorites UI adds a read-only current-row-count getter;
+its storage format and worker are unchanged.
+
+Plain Left from Inventory's right panel returns to the nearest item row.
+L+Left retains decrement, with existing Right/A/X/Y edits unchanged. Shard
+selection accepts Left/Right as well as Up/Down; A remains the only toggle.
+The clip detector's sole numeric adjustment is radius*.975 to radius*.98:
+required overlap changes from 2.5% to 2%, with its ledge/climb latch unchanged.
+
+These are independently reviewed partial source components for a private
+candidate. Native controller acceptance and Wii U delivery are separate;
+the reproducible integrated export remains v126. The earlier Inventory-only
+files remain as historical source, not an additional caller to install.
+
+
+The R777 private candidate completed 64 controller-only menu cases in Cemu:
+cursor navigation, action priority, right-panel return, shard selection and
+Favorites navigation/temporary-entry cleanup. The resource state was restored
+and ordinary/source/disposable saves were unchanged. Initial harness failures
+were retained and corrected before this completed run. This supports those UI
+behaviors; it does not qualify Wii U behavior, game-font pixels, native shine,
+music, bridge restoration or hardware frame rate. The .975-to-.98 clip change
+has 88 pure geometry/latch cases; no live shallow-wall result is claimed.

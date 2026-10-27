@@ -44,7 +44,7 @@ static uint32_t interpolate(uint32_t a, uint32_t b, uint32_t fraction)
     return (a * (256u - fraction) + b * fraction + 128u) >> 8;
 }
 
-static void sample(const struct tfg_sprite *source, int32_t u, int32_t v,
+static uint32_t sample(const struct tfg_sprite *source, int32_t u, int32_t v,
                    uint32_t linear, uint32_t rgba[4])
 {
     uint32_t x = (uint32_t)u >> 16;
@@ -53,7 +53,10 @@ static void sample(const struct tfg_sprite *source, int32_t u, int32_t v,
     uint32_t channel;
 
     if (!linear) {
-        for (channel = 0; channel < 4; ++channel)
+        rgba[3] = first[3];
+        if (!rgba[3])
+            return 0;
+        for (channel = 0; channel < 3; ++channel)
             rgba[channel] = first[channel];
     } else {
         uint32_t next_x = x + (x + 1u < source->width);
@@ -64,17 +67,34 @@ static void sample(const struct tfg_sprite *source, int32_t u, int32_t v,
         uint32_t fx = ((uint32_t)u >> 8) & 255u;
         uint32_t fy = ((uint32_t)v >> 8) & 255u;
 
-        for (channel = 0; channel < 4; ++channel) {
+        uint32_t alpha_or = first[3] | right[3] | below[3] | diagonal[3];
+        uint32_t alpha_and = first[3] & right[3] & below[3] & diagonal[3];
+
+        if (!alpha_or)
+            return 0;
+        if (alpha_and == 255u)
+            rgba[3] = 255;
+        else {
+            uint32_t top_alpha = interpolate(first[3], right[3], fx);
+            uint32_t bottom_alpha = interpolate(below[3], diagonal[3], fx);
+            rgba[3] = interpolate(top_alpha, bottom_alpha, fy);
+        }
+        if (!rgba[3])
+            return 0;
+        for (channel = 0; channel < 3; ++channel) {
             uint32_t top = interpolate(first[channel], right[channel], fx);
             uint32_t bottom = interpolate(below[channel], diagonal[channel], fx);
             rgba[channel] = interpolate(top, bottom, fy);
         }
     }
+    return 1;
 }
 
 static void over(uint8_t *target, const uint32_t rgba[4], uint32_t tint)
 {
-    uint32_t source_alpha = mul255(rgba[3], tint & 255u);
+    uint32_t tint_alpha = tint & 255u;
+    uint32_t source_alpha = tint_alpha == 255u ? rgba[3] :
+                            mul255(rgba[3], tint_alpha);
     uint32_t target_alpha = target[3];
     uint32_t remaining = 255u - source_alpha;
     uint32_t alpha_denominator = source_alpha * 255u + target_alpha * remaining;
@@ -82,8 +102,34 @@ static void over(uint8_t *target, const uint32_t rgba[4], uint32_t tint)
 
     if (!source_alpha)
         return;
+    /* These are exact reductions of the straight-alpha equation below.
+     * Transparent canvas and opaque source pixels need no variable divide.
+     * Do not cache a blend: the canvas behind this layer can change each draw.
+     */
+    if (source_alpha == 255u || !target_alpha) {
+        for (channel = 0; channel < 3; ++channel) {
+            uint32_t multiplier = (tint >> (24u - channel * 8u)) & 255u;
+            target[channel] = (uint8_t)(multiplier == 255u ? rgba[channel] :
+                                        mul255(rgba[channel], multiplier));
+        }
+        target[3] = (uint8_t)source_alpha;
+        return;
+    }
+    if (target_alpha == 255u) {
+        for (channel = 0; channel < 3; ++channel) {
+            uint32_t multiplier = (tint >> (24u - channel * 8u)) & 255u;
+            uint32_t color = multiplier == 255u ? rgba[channel] :
+                             mul255(rgba[channel], multiplier);
+            target[channel] = (uint8_t)((color * source_alpha +
+                                        target[channel] * remaining + 127u) / 255u);
+        }
+        target[3] = 255;
+        return;
+    }
     for (channel = 0; channel < 3; ++channel) {
-        uint32_t color = mul255(rgba[channel], (tint >> (24u - channel * 8u)) & 255u);
+        uint32_t multiplier = (tint >> (24u - channel * 8u)) & 255u;
+        uint32_t color = multiplier == 255u ? rgba[channel] :
+                         mul255(rgba[channel], multiplier);
         uint32_t numerator = color * source_alpha * 255u +
                              target[channel] * target_alpha * remaining;
         target[channel] = (uint8_t)((numerator + alpha_denominator / 2u) /
@@ -167,8 +213,8 @@ uint32_t _gz_tfg_composite(struct tfg_plane *target,
                 (uint32_t)u < source->width * TFG_Q16 &&
                 (uint32_t)v < source->height * TFG_Q16) {
                 uint32_t rgba[4];
-                sample(source, u, v, quad->filtering, rgba);
-                over(pixel, rgba, quad->tint);
+                if (sample(source, u, v, quad->filtering, rgba))
+                    over(pixel, rgba, quad->tint);
             }
             pixel += 4;
             /* Do not form an unused, possibly overflowing final coordinate. */

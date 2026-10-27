@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "static-Triforce-full-mask-authored-component",
-  "status": "Reviewed partial authored components including the static full-mask Triforce draw policy with bounded integrated R771 Cemu CPU-canvas validation. Final TV/GamePad and native-font composition, Wii U acceptance and native shine remain unverified. Reproducible full export remains v126. Puppet Ganon/cutscene replay is not included.",
+  "revision": "reviewed-menu-navigation-compact-Triforce-and-small-clip-adjustment",
+  "status": "Reviewed authored partial components; native candidate qualification separate; full reproducible integrated source export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -30,8 +30,8 @@
     },
     {
       "path": "experiments/maintained-components/roll_clip_detector.c",
-      "bytes": 15021,
-      "sha256": "082e9e03d7f948d804c419cc9d0eb7931c407f17dcee39ccb31a89a7e9fa971b"
+      "bytes": 15020,
+      "sha256": "37184bd37b436cd37fcd1a771657206742ac19e652f71a51ab29e0a23b2775d7"
     },
     {
       "path": "experiments/maintained-components/particle_guard.c",
@@ -50,8 +50,8 @@
     },
     {
       "path": "experiments/maintained-components/favorites_r562.c",
-      "bytes": 8614,
-      "sha256": "b0380c84945ed2de22c3140f7850cfc8eef7b0c950f0c9a0f075b3595348bfc3"
+      "bytes": 8845,
+      "sha256": "567d3569934b0dbf19b0a0e98440a8a1ae41e9271e3a1ff2f5e6c547b9d6f755"
     },
     {
       "path": "experiments/maintained-components/favorites_r562.h",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 38181,
-      "sha256": "0be07362af908afe204762f19a9fbdea599c99ee2b9f7b67c934632066f0cb4a"
+      "bytes": 40332,
+      "sha256": "13ef541601dcee6da9d47af8bd02709f0f0972c6208e7c7bff0493948a5d8c6f"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -560,8 +560,8 @@
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/composite.c",
-      "bytes": 7118,
-      "sha256": "95f9ad41d710670caf76bdd2c254ee1f262656bda04a7969a84b6d0fbd59f3b4"
+      "bytes": 9080,
+      "sha256": "1eb183947f6dd6791bcda01ae436e730d3164f17424a8a23bc1b52324c11b61e"
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/composite.h",
@@ -570,18 +570,38 @@
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/menu.c",
-      "bytes": 3635,
-      "sha256": "4486a140fc176d81495d4e4d109ea02c96a11d54c1df9b81f4a05be6e116aca0"
+      "bytes": 3619,
+      "sha256": "e8f847e32931708bb795fe5c92261beb0a7affb81520295c906488a30d70921f"
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/README.md",
-      "bytes": 4833,
-      "sha256": "f52efe0c9eb67e88c158858c8921e3952c9c66d366777de32bc20d29206215dd"
+      "bytes": 5841,
+      "sha256": "dc380d3fe127ab8448073e00b6f29c5a878f1916e299d6f2c2cd654bfed046b2"
     },
     {
       "path": "experiments/maintained-components/triforce-graphic/test_composite.c",
       "bytes": 2948,
       "sha256": "b0bf92ddfafea1c23c6b24a5aacef84c7bc146e64cfd63382ea686926e7be8ea"
+    },
+    {
+      "path": "experiments/maintained-components/menu_navigation.c",
+      "bytes": 7925,
+      "sha256": "b330a9061e07e57648af2613499c50f0923f3f03c249a5fec34ef321612e37c4"
+    },
+    {
+      "path": "experiments/maintained-components/menu_navigation.h",
+      "bytes": 730,
+      "sha256": "d86e15c677ab2c71d8dc633bb2d16608a7495e3b12d09cd19e55efbb2dcabace"
+    },
+    {
+      "path": "experiments/maintained-components/navigation_bridges.s",
+      "bytes": 1933,
+      "sha256": "fd267b95d9823ed01f98234f855b12c36068cd4f392e8f841eb8c2ea246b35d1"
+    },
+    {
+      "path": "experiments/maintained-components/menu_navigation_seams.json",
+      "bytes": 2359,
+      "sha256": "574e4a96597eb19885156b2672786ee104b3fd8bd91d54fecb4b1625905981ed"
     }
   ],
   "excludes": [

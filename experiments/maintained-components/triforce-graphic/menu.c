@@ -45,12 +45,12 @@ static void draw_piece(struct tfg_plane *canvas, const struct tfg_piece *piece,
         (uint32_t)width, (uint32_t)height, (uint32_t)width * 4u
     };
     struct tfg_quad quad = {
-        center_x + (large ? x2 * 3 / 2 : x2 / 4),
-        center_y + (large ? y2 * 3 / 2 : y2 / 4),
-        large ? (uint32_t)width * 3u : ((uint32_t)width + 1u) / 2u,
-        large ? (uint32_t)height * 3u : ((uint32_t)height + 1u) / 2u,
-        0, 0, large ? 21845 : 131072, 0,
-        0, large ? 21845 : 131072, tint, 1
+        center_x + (large ? x2 : x2 / 4),
+        center_y + (large ? y2 : y2 / 4),
+        large ? (uint32_t)width * 2u : ((uint32_t)width + 1u) / 2u,
+        large ? (uint32_t)height * 2u : ((uint32_t)height + 1u) / 2u,
+        0, 0, large ? 32768 : 131072, 0,
+        0, large ? 32768 : 131072, tint, 1
     };
     (void)_gz_tfg_composite(canvas, &sprite, &quad);
 }

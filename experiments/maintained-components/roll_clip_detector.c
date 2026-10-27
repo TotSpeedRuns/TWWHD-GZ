@@ -145,11 +145,11 @@ void _gz_roll_volume_triangle(void* query,u32 vertices,u32 ia,u32 ib,u32 ic,
     if(ny>=.5f||ny<-.8f)return;
     float h2=nx*nx+nz*nz,n2=h2+ny*ny;
     if(h2<.3f||n2<.99f||n2>1.01f)return;
-    /* Count shallow partial setups in every room: more than 2.5% of the
+    /* Count shallow partial setups in every room: more than 2.0% of the
      * live wall-circle radius must overlap this finite, solid wall slice.
      * Exact tangency remains excluded. This reports partial overlap only;
      * the native roll gate separately decides a completed roll clip. */
-    float s=nx*c->x+ny*c->y+nz*c->z+plane[3],r=c->r*.975f;
+    float s=nx*c->x+ny*c->y+nz*c->z+plane[3],r=c->r*.98f;
     if(r<=0.f||s*s>=r*r*h2)return;
     u32 vi[3]={ia,ib,ic};float v[3][3],points[6][2];u32 count=0;
     for(u32 i=0;i<3;i++)for(u32 j=0;j<3;j++) {

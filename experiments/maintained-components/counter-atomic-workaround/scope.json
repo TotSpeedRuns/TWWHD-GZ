@@ -1,0 +1,27 @@
+{
+  "schema": "single-address-atomic-counter-source/1",
+  "status": "compiled/source-reviewed workaround; no native lifetime or API-result claim",
+  "exported_source_sha256": {
+    "counter.c": "42806b11a8f549b10f0d9d6a53dad2d40f4f4f94bf1d4a44d275d4137d2d8780",
+    "counter.h": "70326a3fc758dcd9a2474a63922cfdb42c2ebaa3521fd66b04258c3e2537c823"
+  },
+  "counter_C_exact_reviewed_bytes": true,
+  "private_helper_source_sha256": "42806b11a8f549b10f0d9d6a53dad2d40f4f4f94bf1d4a44d275d4137d2d8780",
+  "private_adapter_review_sha256": "9c31111439811251d8758e8d45324d413ff3d7dec0b3c1b58fa33039f56cb481",
+  "helper_TEXT_bytes": 28,
+  "helper_RA_fields": [
+    0,
+    0
+  ],
+  "reviewed_adapter_atomic_instructions": 26,
+  "all_reviewed_adapter_atomic_RA_zero": true,
+  "separate_C_translation_unit": true,
+  "LTO": false,
+  "new_Cpp_header_compiles_with_unmangled_C_symbol": true,
+  "official_Cemu_commit": "a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98",
+  "official_source_blob": "97b2c14c5b6cc95803769f4503cc3218f1e10333",
+  "official_source_URL": "https://github.com/cemu-project/Cemu/blob/a6fb0a48eb437a8a41c13b782ac8ae0433bf8f98/src/Cafe/HW/Espresso/Recompiler/PPCRecompilerX64.cpp",
+  "crash_causality_claimed": false,
+  "native_API_results_supplied": 0,
+  "release_changed": false
+}

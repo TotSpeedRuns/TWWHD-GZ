@@ -1,0 +1,49 @@
+{
+  "schema": "scoped-map-area-hierarchy-source/1",
+  "status": "experimental maintained source; v145 release unchanged; integrated export remains v126",
+  "exported_source_sha256": {
+    "hierarchy.s": "f80d3ed0a65c57b8203b74ea6b47cc7a6a0157e078b14c87438add9c17eec679",
+    "runtime-seams.json": "7785b1937a4fce72b29abeac2fa26bf7066038e2bd6a54e64518500e6f93ed66",
+    "hierarchy-facts.json": "507b8550aa15822b699aa9f8003f4d35ff392e5eb5afc66e63fbd77d4cc0ffaf",
+    "RUNTIME_CONTRACT.md": "5fe96a8a17d4b610765e48b0e12143694e0939885d97233bc6d1cf84244f4bc5"
+  },
+  "private_module_source_sha256": "cb2dcb13f53d2fea115244061aff34f8f6bd1e0adb182bbda854b96c3e528695",
+  "private_module_emitted_sections_symbols_relocations_equal": true,
+  "formatting_only_export_changes": true,
+  "eight_exact_runtime_seams": true,
+  "sector_count": 49,
+  "folder_count": 12,
+  "original_leaf_count": 218,
+  "private_actual_image_sha256": "3841978e20144a384ebec65cec636417c39038674a943cd60d58845926990c18",
+  "private_native_result_sha256": "87e9f3014e97683da94ea28b15f94fa52ec6017fe9a7db2aeaf25adb9545dc7b",
+  "independent_native_qualification_sha256": "077d55fe76480254231defdc01852f7b313ca4cfa8e7e3a547ee624ac02e2554",
+  "independent_native_qualification_checks": 2767,
+  "private_Cemu_observation": {
+    "passed": true,
+    "sectors": 49,
+    "folders": 12,
+    "required_repeat_cycles": 4,
+    "retained_text_matches": 60,
+    "retained_text_samples": 60,
+    "compiled_input_writes": 968,
+    "ordinary_save_hashes_checked": 6,
+    "save_hashes_unchanged": true,
+    "seconds": 115.422,
+    "leaf_warps": false,
+    "native_Save": false,
+    "native_API_results_supplied": false,
+    "screenshots_or_pixels_verified": false,
+    "hardware_tested": false
+  },
+  "omitted": [
+    "full runtime",
+    "board artwork",
+    "game data",
+    "binary objects",
+    "raw captures",
+    "saves",
+    "process/profile details",
+    "private paths",
+    "credentials"
+  ]
+}

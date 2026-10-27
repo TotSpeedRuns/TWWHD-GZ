@@ -1,0 +1,1478 @@
+{
+  "schema": "map-area-hierarchy-functional-facts/1",
+  "sectors": [
+    {
+      "sector": 1,
+      "title": "Forsaken Fortress",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 36
+        },
+        {
+          "kind": "folder",
+          "label": "Forsaken Fortress >",
+          "folder": 0
+        }
+      ],
+      "folders": [
+        {
+          "id": 0,
+          "title": "Forsaken Fortress",
+          "rows": [
+            {
+              "label": "FF1",
+              "warp": 109
+            },
+            {
+              "label": "FF1 - Doomzoom",
+              "warp": 110
+            },
+            {
+              "label": "Save Aryll CS",
+              "warp": 111
+            },
+            {
+              "label": "EMS CS Part 1",
+              "warp": 112
+            },
+            {
+              "label": "EMS CS Part 2",
+              "warp": 113
+            },
+            {
+              "label": "Interior 1",
+              "warp": 143
+            },
+            {
+              "label": "Interior 2",
+              "warp": 144
+            },
+            {
+              "label": "Jail",
+              "warp": 145
+            },
+            {
+              "label": "FF1 exterior from first jail cell",
+              "warp": 196
+            },
+            {
+              "label": "FF1 2 moblins",
+              "warp": 197
+            },
+            {
+              "label": "FF1 Last moblin",
+              "warp": 198
+            },
+            {
+              "label": "FF1 Between sidles",
+              "warp": 199
+            },
+            {
+              "label": "Helmaroc fight",
+              "warp": 213
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 2,
+      "title": "Star Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 75
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 76
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 3,
+      "title": "Northern Fairy",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 86
+        },
+        {
+          "kind": "leaf",
+          "label": "Fountain",
+          "warp": 87
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 88
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 4,
+      "title": "Gale Isle",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 38
+        },
+        {
+          "kind": "leaf",
+          "label": "Gale",
+          "warp": 39
+        },
+        {
+          "kind": "folder",
+          "label": "Wind Temple >",
+          "folder": 1
+        }
+      ],
+      "folders": [
+        {
+          "id": 1,
+          "title": "Wind Temple",
+          "rows": [
+            {
+              "label": "Wind Temple / Hookshot",
+              "warp": 126
+            },
+            {
+              "label": "Wind Temple / Entrance",
+              "warp": 127
+            },
+            {
+              "label": "Wind Temple / Upper Hub",
+              "warp": 128
+            },
+            {
+              "label": "Wind Temple / Boss Key Approach",
+              "warp": 129
+            },
+            {
+              "label": "Wind Temple / Boss Key Exit",
+              "warp": 130
+            },
+            {
+              "label": "Wind Temple / Lower Hub",
+              "warp": 131
+            },
+            {
+              "label": "Wind Temple / Spikes",
+              "warp": 132
+            },
+            {
+              "label": "Wind Temple / Warp Pot",
+              "warp": 133
+            },
+            {
+              "label": "Wind Temple / Boss Door",
+              "warp": 134
+            },
+            {
+              "label": "Wind Temple / Molgera",
+              "warp": 135
+            },
+            {
+              "label": "WT / BK room",
+              "warp": 216
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 5,
+      "title": "Crescent Moon",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 14
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 15
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 6,
+      "title": "Seven Star Isles",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 68
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 7,
+      "title": "Overlook Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 61
+        },
+        {
+          "kind": "leaf",
+          "label": "Overlook",
+          "warp": 62
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 8,
+      "title": "Four Eye Reef",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 37
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 9,
+      "title": "Mother & Child",
+      "root_rows": [],
+      "folders": []
+    },
+    {
+      "sector": 10,
+      "title": "Spectacle Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 73
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 11,
+      "title": "Windfall",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 84
+        },
+        {
+          "kind": "leaf",
+          "label": "FF1 CS",
+          "warp": 85
+        },
+        {
+          "kind": "folder",
+          "label": "Buildings >",
+          "folder": 2
+        },
+        {
+          "kind": "folder",
+          "label": "Pirate Ship >",
+          "folder": 3
+        }
+      ],
+      "folders": [
+        {
+          "id": 2,
+          "title": "Buildings",
+          "rows": [
+            {
+              "label": "Auction House",
+              "warp": 187
+            },
+            {
+              "label": "Bomb Shop",
+              "warp": 188
+            },
+            {
+              "label": "Cafe Bar",
+              "warp": 189
+            },
+            {
+              "label": "Lenzo's Studio",
+              "warp": 190
+            },
+            {
+              "label": "Minigame House",
+              "warp": 191
+            },
+            {
+              "label": "Potion Shop",
+              "warp": 192
+            },
+            {
+              "label": "Prison",
+              "warp": 193
+            },
+            {
+              "label": "School of Joy",
+              "warp": 194
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Pirate Ship",
+          "rows": [
+            {
+              "label": "Pirate Ship / Pirate Ship",
+              "warp": 119
+            },
+            {
+              "label": "Deck",
+              "warp": 179
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 12,
+      "title": "Pawprint Isle",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 63
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 64
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 178
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 13,
+      "title": "Dragon Roost",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 19
+        },
+        {
+          "kind": "leaf",
+          "label": "DRI Pond",
+          "warp": 20
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 21
+        },
+        {
+          "kind": "leaf",
+          "label": "Komali's Room",
+          "warp": 137
+        },
+        {
+          "kind": "leaf",
+          "label": "Mail Center",
+          "warp": 138
+        },
+        {
+          "kind": "leaf",
+          "label": "Beedle shop",
+          "warp": 200
+        },
+        {
+          "kind": "folder",
+          "label": "Dragon Roost Cavern >",
+          "folder": 4
+        }
+      ],
+      "folders": [
+        {
+          "id": 4,
+          "title": "Dragon Roost Cavern",
+          "rows": [
+            {
+              "label": "Dragon Roost Cavern / Entrance",
+              "warp": 98
+            },
+            {
+              "label": "Dragon Roost Cavern / Miniboss",
+              "warp": 99
+            },
+            {
+              "label": "Dragon Roost Cavern / Gohma",
+              "warp": 100
+            },
+            {
+              "label": "DRC / Main Room - Warp Pot",
+              "warp": 201
+            },
+            {
+              "label": "DRC / Water pots",
+              "warp": 202
+            },
+            {
+              "label": "DRC / Sword boko in pot",
+              "warp": 203
+            },
+            {
+              "label": "DRC / Many chus room",
+              "warp": 204
+            },
+            {
+              "label": "DRC / Big ladder outdoor",
+              "warp": 205
+            },
+            {
+              "label": "DRC / Dark keese room",
+              "warp": 206
+            },
+            {
+              "label": "DRC / 3 bokoblin fight",
+              "warp": 207
+            },
+            {
+              "label": "DRC / Magtail lava platform",
+              "warp": 208
+            },
+            {
+              "label": "DRC / Outside boss door",
+              "warp": 209
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 14,
+      "title": "Flight Control Platform",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 28
+        },
+        {
+          "kind": "leaf",
+          "label": "Minigame Arrival",
+          "warp": 29
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 30
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 15,
+      "title": "Western Fairy",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 89
+        },
+        {
+          "kind": "leaf",
+          "label": "Fountain",
+          "warp": 90
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 16,
+      "title": "Rock Spire",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 66
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 67
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 17,
+      "title": "Tingle Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 81
+        },
+        {
+          "kind": "leaf",
+          "label": "Interior",
+          "warp": 184
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 18,
+      "title": "Northern Triangle",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 51
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 19,
+      "title": "Eastern Fairy",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 91
+        },
+        {
+          "kind": "leaf",
+          "label": "Fountain",
+          "warp": 92
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 20,
+      "title": "Fire Mountain",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 23
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 24
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 21,
+      "title": "Star Belt Archipelago",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 74
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 22,
+      "title": "Three Eye Reef",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 80
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 23,
+      "title": "Greatfish",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 40
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 24,
+      "title": "Cyclops Reef",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 16
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 25,
+      "title": "Six Eye Reef",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 70
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 71
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 26,
+      "title": "Tower of the Gods",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 82
+        },
+        {
+          "kind": "leaf",
+          "label": "Beemos",
+          "warp": 120
+        },
+        {
+          "kind": "leaf",
+          "label": "Miniboss",
+          "warp": 121
+        },
+        {
+          "kind": "leaf",
+          "label": "Scales",
+          "warp": 122
+        },
+        {
+          "kind": "leaf",
+          "label": "Floor 3",
+          "warp": 123
+        },
+        {
+          "kind": "leaf",
+          "label": "Outdoors",
+          "warp": 124
+        },
+        {
+          "kind": "leaf",
+          "label": "Gohdan",
+          "warp": 125
+        },
+        {
+          "kind": "leaf",
+          "label": "TotG / Entrance",
+          "warp": 185
+        },
+        {
+          "kind": "leaf",
+          "label": "TotG / Cutscene",
+          "warp": 186
+        },
+        {
+          "kind": "leaf",
+          "label": "TotG / before miniboss",
+          "warp": 211
+        },
+        {
+          "kind": "leaf",
+          "label": "TotG / bell",
+          "warp": 212
+        },
+        {
+          "kind": "folder",
+          "label": "Hyrule >",
+          "folder": 5
+        },
+        {
+          "kind": "folder",
+          "label": "Ganon's Tower >",
+          "folder": 6
+        }
+      ],
+      "folders": [
+        {
+          "id": 5,
+          "title": "Hyrule",
+          "rows": [
+            {
+              "label": "Hyrule / Hyrule",
+              "warp": 118
+            },
+            {
+              "label": "Hyrule / Basement",
+              "warp": 166
+            },
+            {
+              "label": "Hyrule / Interior",
+              "warp": 167
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Ganon's Tower",
+          "rows": [
+            {
+              "label": "Ganon's Tower / Before Grand Staircase",
+              "warp": 114
+            },
+            {
+              "label": "Ganon's Tower / Light Arrows",
+              "warp": 115
+            },
+            {
+              "label": "Ganon's Tower / Ganondorf",
+              "warp": 116
+            },
+            {
+              "label": "Ganon Tower / DRC Trial",
+              "warp": 153
+            },
+            {
+              "label": "Ganon Tower / DRC Trial Boss",
+              "warp": 154
+            },
+            {
+              "label": "Ganon Tower / ET Trial",
+              "warp": 155
+            },
+            {
+              "label": "Ganon Tower / ET Trial Boss",
+              "warp": 156
+            },
+            {
+              "label": "Ganon Tower / Entrance",
+              "warp": 157
+            },
+            {
+              "label": "Ganon Tower / FW Trial",
+              "warp": 158
+            },
+            {
+              "label": "Ganon Tower / FW Trial Boss",
+              "warp": 159
+            },
+            {
+              "label": "Ganon Tower / Ganon's Room",
+              "warp": 160
+            },
+            {
+              "label": "Ganon Tower / Maze",
+              "warp": 161
+            },
+            {
+              "label": "Ganon Tower / Staircase to Center",
+              "warp": 162
+            },
+            {
+              "label": "Ganon Tower / Staircase to Ganon",
+              "warp": 163
+            },
+            {
+              "label": "Ganon Tower / WT Trial",
+              "warp": 164
+            },
+            {
+              "label": "Ganon Tower / WT Trial Boss",
+              "warp": 165
+            },
+            {
+              "label": "Ganon Tower / Trials hub",
+              "warp": 218
+            },
+            {
+              "label": "Ganon Tower / Earth temple trial exit",
+              "warp": 219
+            },
+            {
+              "label": "Ganon Tower / Puppet ganon warp pot",
+              "warp": 220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 27,
+      "title": "Eastern Triangle",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 22
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 28,
+      "title": "Thorned Fairy",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 93
+        },
+        {
+          "kind": "leaf",
+          "label": "Fountain",
+          "warp": 94
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 29,
+      "title": "Needle Rock",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 49
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 50
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 30,
+      "title": "Islet of Steel",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 47
+        },
+        {
+          "kind": "leaf",
+          "label": "Islet of Steel",
+          "warp": 48
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 31,
+      "title": "Stone Watcher",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 77
+        },
+        {
+          "kind": "leaf",
+          "label": "Triforce Cave",
+          "warp": 78
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 183
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 32,
+      "title": "Southern Triangle",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 72
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 33,
+      "title": "Private Oasis",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 65
+        },
+        {
+          "kind": "leaf",
+          "label": "Interior",
+          "warp": 169
+        },
+        {
+          "kind": "leaf",
+          "label": "Triforce Cave",
+          "warp": 170
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 34,
+      "title": "Bomb Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 7
+        },
+        {
+          "kind": "leaf",
+          "label": "Inner Cave",
+          "warp": 8
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave Entrance",
+          "warp": 9
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 10
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 35,
+      "title": "Bird's Peak Rock",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 3
+        },
+        {
+          "kind": "leaf",
+          "label": "Bird's Peak",
+          "warp": 4
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 36,
+      "title": "Diamond Steppe",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 17
+        },
+        {
+          "kind": "leaf",
+          "label": "Diamond Steppe Cave",
+          "warp": 18
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 37,
+      "title": "Five Eye Reef",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 25
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 38,
+      "title": "Shark Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 69
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 182
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 39,
+      "title": "Southern Fairy",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 95
+        },
+        {
+          "kind": "leaf",
+          "label": "Fountain",
+          "warp": 96
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 40,
+      "title": "Ice Ring",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 45
+        },
+        {
+          "kind": "leaf",
+          "label": "Ice Ring Interior",
+          "warp": 46
+        },
+        {
+          "kind": "leaf",
+          "label": "Grotto",
+          "warp": 168
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 41,
+      "title": "Forest Haven",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 31
+        },
+        {
+          "kind": "leaf",
+          "label": "Interior",
+          "warp": 32
+        },
+        {
+          "kind": "leaf",
+          "label": "Farore's Pearl",
+          "warp": 33
+        },
+        {
+          "kind": "leaf",
+          "label": "Makar",
+          "warp": 34
+        },
+        {
+          "kind": "leaf",
+          "label": "Bomb Shop",
+          "warp": 141
+        },
+        {
+          "kind": "leaf",
+          "label": "Interior",
+          "warp": 142
+        },
+        {
+          "kind": "leaf",
+          "label": "outside main entrance",
+          "warp": 210
+        },
+        {
+          "kind": "folder",
+          "label": "Forbidden Woods >",
+          "folder": 7
+        },
+        {
+          "kind": "folder",
+          "label": "Figurine Gallery >",
+          "folder": 8
+        }
+      ],
+      "folders": [
+        {
+          "id": 7,
+          "title": "Forbidden Woods",
+          "rows": [
+            {
+              "label": "Forbidden Woods / Entrance",
+              "warp": 104
+            },
+            {
+              "label": "Forbidden Woods / Basement Room 2",
+              "warp": 105
+            },
+            {
+              "label": "Forbidden Woods / Miniboss",
+              "warp": 106
+            },
+            {
+              "label": "Forbidden Woods / BK Skip",
+              "warp": 107
+            },
+            {
+              "label": "Forbidden Woods / Boss",
+              "warp": 108
+            },
+            {
+              "label": "FW / main room",
+              "warp": 217
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Figurine Gallery",
+          "rows": [
+            {
+              "label": "Figurines",
+              "warp": 35
+            },
+            {
+              "label": "Boss Figurines",
+              "warp": 146
+            },
+            {
+              "label": "DRC Figurines",
+              "warp": 147
+            },
+            {
+              "label": "Enemy Figurines",
+              "warp": 148
+            },
+            {
+              "label": "Forest Haven Figurines",
+              "warp": 149
+            },
+            {
+              "label": "Great Sea Figurines",
+              "warp": 150
+            },
+            {
+              "label": "Outset Island Figurines",
+              "warp": 151
+            },
+            {
+              "label": "Windfall Island Figurines",
+              "warp": 152
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 42,
+      "title": "Cliff Plateau",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 11
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave 1",
+          "warp": 12
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave 2",
+          "warp": 13
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 43,
+      "title": "Horseshoe Island",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 43
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 44
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 44,
+      "title": "Outset",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 52
+        },
+        {
+          "kind": "leaf",
+          "label": "Forest of Fairies",
+          "warp": 53
+        },
+        {
+          "kind": "leaf",
+          "label": "Nayru's Pearl",
+          "warp": 54
+        },
+        {
+          "kind": "leaf",
+          "label": "Fountain",
+          "warp": 97
+        },
+        {
+          "kind": "leaf",
+          "label": "Jabun's Cavern",
+          "warp": 173
+        },
+        {
+          "kind": "leaf",
+          "label": "aryll lookout",
+          "warp": 195
+        },
+        {
+          "kind": "folder",
+          "label": "Houses >",
+          "folder": 9
+        },
+        {
+          "kind": "folder",
+          "label": "Savage Labyrinth >",
+          "folder": 10
+        }
+      ],
+      "folders": [
+        {
+          "id": 9,
+          "title": "Houses",
+          "rows": [
+            {
+              "label": "Abe's House",
+              "warp": 171
+            },
+            {
+              "label": "Basement",
+              "warp": 172
+            },
+            {
+              "label": "Link's House",
+              "warp": 174
+            },
+            {
+              "label": "Mesa's House",
+              "warp": 175
+            },
+            {
+              "label": "Orca's House",
+              "warp": 176
+            },
+            {
+              "label": "Sturgeon's House",
+              "warp": 177
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Savage Labyrinth",
+          "rows": [
+            {
+              "label": "Savage Floor 0",
+              "warp": 55
+            },
+            {
+              "label": "Savage Floor 10",
+              "warp": 56
+            },
+            {
+              "label": "Savage Floor 20",
+              "warp": 57
+            },
+            {
+              "label": "Savage Floor 30",
+              "warp": 58
+            },
+            {
+              "label": "Savage Floor 40",
+              "warp": 59
+            },
+            {
+              "label": "Savage Bokoblin Floor",
+              "warp": 60
+            },
+            {
+              "label": "Another Empty",
+              "warp": 180
+            },
+            {
+              "label": "Empty",
+              "warp": 181
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 45,
+      "title": "Headstone",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 41
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 42
+        },
+        {
+          "kind": "folder",
+          "label": "Earth Temple >",
+          "folder": 11
+        }
+      ],
+      "folders": [
+        {
+          "id": 11,
+          "title": "Earth Temple",
+          "rows": [
+            {
+              "label": "Earth Temple / Poes & Moblins",
+              "warp": 101
+            },
+            {
+              "label": "Earth Temple / ET Miniboss",
+              "warp": 102
+            },
+            {
+              "label": "Earth Temple / ET Boss",
+              "warp": 103
+            },
+            {
+              "label": "ET / Entrance",
+              "warp": 139
+            },
+            {
+              "label": "ET / Entrance",
+              "warp": 140
+            },
+            {
+              "label": "ET / Before last crypt",
+              "warp": 214
+            },
+            {
+              "label": "ET / before boss door",
+              "warp": 215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sector": 46,
+      "title": "Two Eye Reef",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 83
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 47,
+      "title": "Angular Isles",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 0
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 2
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 48,
+      "title": "Boating Course",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 5
+        },
+        {
+          "kind": "leaf",
+          "label": "Cave",
+          "warp": 6
+        },
+        {
+          "kind": "leaf",
+          "label": "Interior",
+          "warp": 136
+        }
+      ],
+      "folders": []
+    },
+    {
+      "sector": 49,
+      "title": "Five Star Isles",
+      "root_rows": [
+        {
+          "kind": "leaf",
+          "label": "Island",
+          "warp": 26
+        },
+        {
+          "kind": "leaf",
+          "label": "Submarine",
+          "warp": 27
+        }
+      ],
+      "folders": []
+    }
+  ],
+  "sector_count": 49,
+  "folder_count": 12,
+  "original_leaf_count": 218,
+  "original_warp_records_unchanged": true
+}

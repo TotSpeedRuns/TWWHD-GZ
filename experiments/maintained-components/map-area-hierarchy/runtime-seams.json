@@ -1,0 +1,48 @@
+{
+  "schema": "authored-map-area-runtime-seams/1",
+  "baseline_source_sha256": "0e7dc9e1380a061b7827b2eafc5f17d9e89cc0b00726752a0544775e843a96b4",
+  "seam_count": 8,
+  "module_linked_separately": true,
+  "seams": [
+    {
+      "name": "list current descriptor",
+      "before": "lis 9, _gz_map_sector@ha\nlwz 9, _gz_map_sector@l(9)\nmulli 9, 9, 12\nlis 12, _gz_map_quadrants@ha\naddi 12, 12, _gz_map_quadrants@l\nadd 12, 12, 9\nlwz 7, 8(12)\n",
+      "after": "bl _gz_mah_descriptor\nlwz 7, 8(12)\n"
+    },
+    {
+      "name": "folder or unchanged leaf selection",
+      "before": "_gz_map_v02_far_6:\nlwz 9, 4(12)\nadd 10, 10, 9\nslwi 10, 10, 3\nlis 9, _gz_map_destinations@ha\naddi 9, 9, _gz_map_destinations@l\nadd 9, 9, 10\nlwz 10, 4(9)\nlis 9, _gz_warp_choice@ha\n",
+      "after": "_gz_map_v02_far_6:\nlwz 9, 4(12)\nadd 10, 10, 9\nslwi 10, 10, 3\nlis 9, _gz_mah_rows@ha\naddi 9, 9, _gz_mah_rows@l\nadd 9, 9, 10\nlwz 10, 4(9)\ncmpwi 10, 0\nbge .Lmah_selected_leaf\nb _gz_mah_open_folder\n.Lmah_selected_leaf:\nlis 9, _gz_warp_choice@ha\n"
+    },
+    {
+      "name": "reset folder on sector entry",
+      "before": "_gz_map_v02_far_4:\nli 10, 14\n",
+      "after": "_gz_map_v02_far_4:\nlis 9, _gz_mah_state@ha\nli 10, -1\nstw 10, _gz_mah_state@l(9)\nli 10, 14\n"
+    },
+    {
+      "name": "reset folder on map open",
+      "before": "_gz_map_open:\nlis 9, _gz_page@ha\n",
+      "after": "_gz_map_open:\nlis 9, _gz_mah_state@ha\nli 10, -1\nstw 10, _gz_mah_state@l(9)\nlis 9, _gz_page@ha\n"
+    },
+    {
+      "name": "folder back restores sector parent cursor",
+      "before": "_gz_map_back:\nlis 9, _gz_page@ha\nlwz 10, _gz_page@l(9)\ncmpwi 10, 14\nbne _gz_map_back_root\nli 10, 13\nstw 10, _gz_page@l(9)\nli 10, 0\nstw 10, 8(29)\nb _gz_mask\n",
+      "after": "_gz_map_back:\nb _gz_mah_back\n"
+    },
+    {
+      "name": "draw active area title and rows",
+      "before": "lis 8, _gz_map_sector@ha\nlwz 8, _gz_map_sector@l(8)\nmulli 8, 8, 12\nlis 28, _gz_map_quadrants@ha\naddi 28, 28, _gz_map_quadrants@l\nadd 28, 28, 8\nlwz 6, 0(28)\n",
+      "after": "bl _gz_mah_descriptor\nmr 28, 12\nlwz 6, 0(28)\n"
+    },
+    {
+      "name": "draw hierarchical rows",
+      "before": "lis 6, _gz_map_destinations@ha\naddi 6, 6, _gz_map_destinations@l\nlwzx 6, 6, 8\n",
+      "after": "lis 6, _gz_mah_rows@ha\naddi 6, 6, _gz_mah_rows@l\nlwzx 6, 6, 8\n"
+    },
+    {
+      "name": "folder help label",
+      "before": ".string \"Stick/D-pad: Sector/List   A: Select/Warp\"",
+      "after": ".string \"Stick/D-pad: Sector/List   A: Open/Warp\""
+    }
+  ]
+}

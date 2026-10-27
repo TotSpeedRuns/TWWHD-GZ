@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "reviewed-common-admission-r2-three-core-scope",
-  "status": "Reviewed authored partial components. Delivery inventory has a scoped23case Cemu cohort; equipped remap and WiiU remain unverified. Complete reproducible integrated export remains v126.",
+  "revision": "area-folders-and-atomic-counter-r1",
+  "status": "Reviewed authored partial components. Map-area navigation passed49sector/12folderCemu checks; hardware and full-world restoration remain unverified. Delivery inventory remains scoped23case with equipped remap pending. Complete reproducible integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "0d37f79606e36ee38a1facb7eb74bba2f635e1103887572ccebee36f61a49f3a",
-      "bytes": 42237
+      "bytes": 43035,
+      "sha256": "7d932ae125ed88ddb7d1c9121f10575abd4181418a81922a8d733314d8965752"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -777,6 +777,61 @@
       "path": "experiments/maintained-components/common-admission/scope.json",
       "sha256": "67846e53e445cadc615a0f20676c2d2277e4ea520129d1fe1e2d0f652f493434",
       "bytes": 1318
+    },
+    {
+      "path": "experiments/maintained-components/counter-atomic-workaround/counter.c",
+      "bytes": 274,
+      "sha256": "42806b11a8f549b10f0d9d6a53dad2d40f4f4f94bf1d4a44d275d4137d2d8780"
+    },
+    {
+      "path": "experiments/maintained-components/counter-atomic-workaround/counter.h",
+      "bytes": 421,
+      "sha256": "70326a3fc758dcd9a2474a63922cfdb42c2ebaa3521fd66b04258c3e2537c823"
+    },
+    {
+      "path": "experiments/maintained-components/counter-atomic-workaround/README.md",
+      "bytes": 2958,
+      "sha256": "332555d4acc1cfcfd267986b55822f642a3ae57b5ab399c946d582e186ad9b49"
+    },
+    {
+      "path": "experiments/maintained-components/counter-atomic-workaround/scope.json",
+      "bytes": 1279,
+      "sha256": "c54ca1dad355f82c46a827ad4a104361b3c0c0df025d4310ce1ef361e88a779c"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/hierarchy-facts.json",
+      "bytes": 30240,
+      "sha256": "507b8550aa15822b699aa9f8003f4d35ff392e5eb5afc66e63fbd77d4cc0ffaf"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/hierarchy.s",
+      "bytes": 15347,
+      "sha256": "f80d3ed0a65c57b8203b74ea6b47cc7a6a0157e078b14c87438add9c17eec679"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/README.md",
+      "bytes": 2408,
+      "sha256": "518b3737d1832bf4fa100d2982c0d9213c5bb1608740917fb6bea558c51f8c8a"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/runtime-seams.json",
+      "bytes": 2551,
+      "sha256": "7785b1937a4fce72b29abeac2fa26bf7066038e2bd6a54e64518500e6f93ed66"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/RUNTIME_CONTRACT.md",
+      "bytes": 4579,
+      "sha256": "5fe96a8a17d4b610765e48b0e12143694e0939885d97233bc6d1cf84244f4bc5"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/scope.json",
+      "bytes": 1948,
+      "sha256": "438f763c5bc62dbe1ee48e03b790ca3214b4f0d26631c7e40d810bcfd61c2403"
+    },
+    {
+      "path": "experiments/maintained-components/map-area-hierarchy/validate_facts.py",
+      "bytes": 2170,
+      "sha256": "310eefe9740812d0be446f2f866c55025402a481651e9a8fd31ba1e4ded6b0ed"
     }
   ],
   "excludes": [

@@ -5,3 +5,5 @@ experiments/maintained-components/README.md text eol=lf
 experiments/maintained-components/triforce-graphic/* text eol=lf
 experiments/maintained-components/delivery-copies/* text eol=lf
 experiments/maintained-components/common-admission/* text eol=lf
+experiments/maintained-components/map-area-hierarchy/* text eol=lf
+experiments/maintained-components/counter-atomic-workaround/* text eol=lf

@@ -709,3 +709,20 @@ were retained and corrected before this completed run. This supports those UI
 behaviors; it does not qualify Wii U behavior, game-font pixels, native shine,
 music, bridge restoration or hardware frame rate. The .975-to-.98 clip change
 has 88 pure geometry/latch cases; no live shallow-wall result is claimed.
+
+
+## Map area folders and the counter helper
+
+[Map area hierarchy](map-area-hierarchy/README.md) adds related-area folders
+while preserving all 218 existing destinations. Its private Cemu navigation
+test covers all 49 sectors, 12 folders and parent-cursor restoration. The
+module, eight exact source seams and integration contract are provided;
+Wii U presentation and leaf-warp execution remain separate validations.
+
+[The single-address counter helper](counter-atomic-workaround/README.md) is
+a small separately compiled C function with a C/C++ header. It avoids the
+diagnosed Cemu 2.6 indexed atomic-store register clobber. It supplies no game
+snapshot or actor-lifetime authority.
+
+These are reviewed authored components. Shipped v145 and the complete
+reproducible v126 export remain unchanged.

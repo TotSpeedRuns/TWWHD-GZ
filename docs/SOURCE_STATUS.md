@@ -84,8 +84,9 @@ and Plus/B/stick order, with the last completed display retained during a new
 pause. Pause duration is diagnostic only. Twelve sequences at three dwell
 values passed in one private Cemu run; Wii U chronology and pixel output remain
 unqualified. See the maintained MSS rules and portable classifier tests.
-Delivered revision remains v147, and the full reproducible builder remains
-v126; these source snapshots do not constitute a complete newer build.
+The MSS ordering/latch snapshot is first delivered in v148. The full
+reproducible builder remains v126; these partial snapshots do not constitute a
+complete newer build.
 
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the
@@ -159,3 +160,12 @@ or Wii U reliability. GPA's boot report is historical; its matcher was not
 exercised in this campaign. The default-disabled raw-copy proposal is excluded.
 Native wrappers, complete owner implementations and the current multi-object
 builder remain external dependencies. The reproducible full export stays v126.
+
+The v148 partial source update adds the authored CM row-cache, SDK empty-sweep
+rule and exact HL existing-key lookup functions with portable checks. It keeps
+the prior v147 observation/admission work and adds the MSS ordering/latch fix
+first delivered in v148. Three quiet
+bomb expiry restores and a bounded ocean-streaming Cemu campaign passed; Wii U
+lag/crash improvement remains unverified. No triangular-probing experiment,
+raw-copy kernel or new WORLD/READ permission is included. See
+[streaming bookkeeping scope](../experiments/maintained-components/streaming-bookkeeping-v148/README.md).

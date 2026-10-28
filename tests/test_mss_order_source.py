@@ -13,7 +13,7 @@ HOME = ROOT / 'experiments/maintained-components'
 class MssOrderTests(unittest.TestCase):
     def test_scope_keeps_order_duration_and_release_separate(self):
         scope = json.loads((HOME / 'mss-source-scope.json').read_text())
-        self.assertEqual(scope['delivered_revision'], 'v147')
+        self.assertEqual(scope['delivered_revision'], 'v148')
         self.assertEqual(scope['full_reproducible_export'], 'v126')
         self.assertFalse(scope['complete_current_runtime_reproducible'])
         self.assertFalse(scope['pause_duration_type_authority'])

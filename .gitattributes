@@ -18,3 +18,9 @@ experiments/maintained-components/mss-source-scope.json text eol=lf
 experiments/maintained-components/MSS_INPUT_ORDER.md text eol=lf
 experiments/maintained-components/mss_order_cases.c text eol=lf
 tests/test_mss_order_source.py text eol=lf
+
+# Reviewed v148 authored streaming bookkeeping and portable checks.
+experiments/maintained-components/streaming-bookkeeping-v148/* text eol=lf
+experiments/maintained-components/streaming-bookkeeping-v148/collider/* text eol=lf
+experiments/maintained-components/streaming-bookkeeping-v148/sdk/* text eol=lf
+tests/test_streaming_bookkeeping_source.py text eol=lf

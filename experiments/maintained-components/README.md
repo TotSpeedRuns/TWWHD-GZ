@@ -31,9 +31,10 @@ Opening a new pause preserves the last completed label; ambiguous order cannot
 replace it. One private Cemu run passed twelve sequences across three dwell
 values, with native pause metrics of 4 to 27 frames and unchanged save hashes.
 See [MSS rules, dependencies and portable tests](MSS_INPUT_ORDER.md).
-This is a partial authored component update; delivered revision remains v147,
-the complete reproducible integrated export remains v126, and Wii U acceptance
-is not claimed. Historical MSS notes below describe older source snapshots.
+The MSS ordering/latch snapshot is first delivered in v148. This is a partial
+authored component update; the complete reproducible integrated export remains
+v126, and Wii U acceptance is not claimed. Historical MSS notes below describe
+older source snapshots.
 
 ## Static Triforce graphic, full-mask image and source hints
 
@@ -762,3 +763,11 @@ Parentless ancestry flag2 and WORLD/READ=false remain explicit; the raw-copy
 proposal is not included or adopted. These are partial modules with external
 native integration dependencies, not a complete v147 build export. The full
 reproducible integrated export remains v126.
+
+## v148 streaming bookkeeping
+
+[The narrow source update](streaming-bookkeeping-v148/README.md) supplies the
+reviewed authored CM, SDK and HL changes plus portable checks. It retains full
+metadata preflight, generations and lifecycle rules. This is a partial source
+snapshot: integrated reproduction remains v126, and Wii U performance is not
+qualified. The separate triangular probe experiment is absent.

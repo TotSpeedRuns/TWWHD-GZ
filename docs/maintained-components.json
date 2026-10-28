@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "v147-partial-native-heap-and-source-validation",
-  "status": "Reviewed authored partial v147 components, including MSS explicit order/latch, heap metadata/provenance, worker admission and SOURCE reuse. WORLD/READ false; complete reproducible integrated export remains v126.",
+  "revision": "v148-partial-streaming-bookkeeping",
+  "status": "Reviewed authored partial v148 streaming bookkeeping and MSS order/latch first delivered in v148, plus retained v147 observation/admission. No Wii U performance, WORLD/READ or complete current-runtime reproduction claim; integrated full export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 45054,
-      "sha256": "04c95ec45335629959c5a862c5c3dd51f911f24db96c918228a434aa40994f2c"
+      "bytes": 45488,
+      "sha256": "a067d3e1422b8201a2b391c6e618e92af3bc9b0025e15c8a4336bacb1a5c0a94"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -686,7 +686,7 @@
     {
       "path": "experiments/maintained-components/mss-source-scope.json",
       "bytes": 1455,
-      "sha256": "7026202de499de7663e56692289ac42d66dcaeeefb88c4031ecd4178942dce60"
+      "sha256": "1b089e5f2799d762e278d3918db48275b187486a077c77b4f56dda958a080ed0"
     },
     {
       "path": "experiments/maintained-components/generic-frame-observation/frame_observer.c",
@@ -1080,8 +1080,68 @@
     },
     {
       "path": "experiments/maintained-components/MSS_INPUT_ORDER.md",
-      "bytes": 3536,
-      "sha256": "1d68540f4ee15e770ec364914308cc11e54e084310d6c8937022cf125d30bbed"
+      "bytes": 3496,
+      "sha256": "aa2dce515dae034f2963bbe819b0cb48ffca7752a39ebbe7f971af2143745a00"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/hl_lookup.inc",
+      "bytes": 1913,
+      "sha256": "2879aafc1fe30d2874d93a48e316dd70bece74073c4e5c904a3d930cebc94c69"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/lookup_cases.c",
+      "bytes": 3063,
+      "sha256": "85a384961174cd5a0e07833a87d156301b26dc7e7916e355d4b3be1c0198da4b"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/portable_models.py",
+      "bytes": 2848,
+      "sha256": "1986e9a91e1892277810a3770907c8c012120acd97604938b4c28ace91757faf"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/README.md",
+      "bytes": 5629,
+      "sha256": "f3f844416fa626dba391a4951818cb234be478cb7507eead9881d4dc0a3af37f"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/scope.json",
+      "bytes": 2760,
+      "sha256": "47770e530a81a62b378fcb15e7e5cee5d399238b6471dc0b96bb00979141d0c9"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/cm_fast.c",
+      "bytes": 4948,
+      "sha256": "5d6ecc3e8188adcf9ad6b057976f1f783ff59334a46f0bac44de80ede58d7894"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/members.h",
+      "bytes": 2345,
+      "sha256": "13378abd1a7554f26787a066c81232f4951eb188e61874c281398685601ca98c"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/observer.h",
+      "bytes": 2028,
+      "sha256": "5c2f548a96cb5706bcdc36f8b0ec8e828d4a62c0b82d4273337edf82bb406b10"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/sdk/observer.h",
+      "bytes": 2863,
+      "sha256": "0da3ba675e467f4164294767d822cb76de7f2fec00f3e9342726fb780030164c"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/sdk/sdk_drain.c",
+      "bytes": 4377,
+      "sha256": "9b0e8c5c9aa43718e66faaf1a980d551f90c18f136d162f9ecc8c0732ab7e082"
+    },
+    {
+      "path": "tests/test_streaming_bookkeeping_source.py",
+      "bytes": 4159,
+      "sha256": "43d675840617fe179e373ccec12de67cbdd17b8bb6e804bd1cbf7ae9f384fd01"
     }
   ],
   "excludes": [

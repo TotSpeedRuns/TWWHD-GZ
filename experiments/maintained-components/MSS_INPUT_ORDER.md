@@ -43,9 +43,9 @@ before these cases due to a missing helper import and was preserved separately.
 
 These are controller and trainer-metadata observations, not pixel checks,
 Wii U chronology/hardware acceptance, all historical pad subsamples, or new
-save-state coverage. This source update does not label a new delivered release:
-the delivered revision remains v147, and the complete reproducible integrated
-source export remains v126. Full current integration is still not exported.
+save-state coverage. The MSS ordering/latch snapshot is first delivered in
+v148. The complete reproducible integrated source export remains v126. Full
+current integration is still not exported.
 
 ## Portable classifier tests
 

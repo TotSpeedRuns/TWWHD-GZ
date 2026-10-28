@@ -1,0 +1,66 @@
+{
+  "schema": "v148-streaming-bookkeeping-source-scope/1",
+  "delivered_revision": "v148",
+  "full_reproducible_export": "v126",
+  "complete_current_runtime_reproducible": false,
+  "WiiU_performance_fix_verified": false,
+  "WORLD_READY": false,
+  "READ_READY": false,
+  "logical_missing": 15,
+  "physical_missing": 31,
+  "session": 0,
+  "triangular_probe_included": false,
+  "held_sword_changes_included": false,
+  "raw_copy_kernel_included": false,
+  "private_HL_stride": 60,
+  "public_HL_stride": 80,
+  "HL_capacity": 262144,
+  "CM_scratch_target_bytes": 128,
+  "new_native_hooks": 0,
+  "new_native_imports": 0,
+  "source_projection": "LF; CM comment-only correction; exact SDK C and two exact HL function bodies",
+  "selected_module_sha256": {
+    "CM": "5de1fabe70b9b61d8d114080b5b79e461ca27c5bd480478d886ae3d365a4d950",
+    "SDK": "3efb8fde68b09625a2f28246e83f20dd61c95df283e7a9384619bb1d00fb75af",
+    "HL": "2a525ddf6eb3ce993d9a9c957932bc5de1017239ea610f4d0f9752159fa79a17"
+  },
+  "files": [
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/cm_fast.c",
+      "bytes": 4948,
+      "sha256": "5d6ecc3e8188adcf9ad6b057976f1f783ff59334a46f0bac44de80ede58d7894"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/members.h",
+      "bytes": 2345,
+      "sha256": "13378abd1a7554f26787a066c81232f4951eb188e61874c281398685601ca98c"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/observer.h",
+      "bytes": 2028,
+      "sha256": "5c2f548a96cb5706bcdc36f8b0ec8e828d4a62c0b82d4273337edf82bb406b10"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/collider/process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/sdk/sdk_drain.c",
+      "bytes": 4377,
+      "sha256": "9b0e8c5c9aa43718e66faaf1a980d551f90c18f136d162f9ecc8c0732ab7e082"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/sdk/observer.h",
+      "bytes": 2863,
+      "sha256": "0da3ba675e467f4164294767d822cb76de7f2fec00f3e9342726fb780030164c"
+    },
+    {
+      "path": "experiments/maintained-components/streaming-bookkeeping-v148/hl_lookup.inc",
+      "bytes": 1913,
+      "sha256": "2879aafc1fe30d2874d93a48e316dd70bece74073c4e5c904a3d930cebc94c69"
+    }
+  ],
+  "portable_test_scope": "Exact HL selectors and scalar CM/SDK reference models only; no native API outcomes or PPC wire-layout grant",
+  "native_scope": "Three quiet bomb expiry restores and one bounded Cemu ocean campaign; no hardware/comparative performance proof"
+}

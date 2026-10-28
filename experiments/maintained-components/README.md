@@ -752,3 +752,14 @@ observations of both manager allocation identities. It reads fixed resident
 labels and private allocation metadata; it does not read manager payloads or
 grant lifetime, capture or replay permission. The later coupled exclusion
 mechanism and complete integrated source export remain separate.
+
+## v147 native heap groundwork and SOURCE validation
+
+[The v147 authored-source snapshot](native-heap-v147/README.md) adds same-Gate
+worker admission, HG-first metadata cuts, process-arena birth provenance and
+SOURCE digest/format reuse under a genuine pin. One combined Cemu session
+completed two usable metadata censuses and three idle typed WCT restores.
+Parentless ancestry flag2 and WORLD/READ=false remain explicit; the raw-copy
+proposal is not included or adopted. These are partial modules with external
+native integration dependencies, not a complete v147 build export. The full
+reproducible integrated export remains v126.

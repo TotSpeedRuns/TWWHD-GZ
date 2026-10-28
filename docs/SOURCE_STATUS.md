@@ -144,3 +144,16 @@ Actual equipped remapping, native letter use and WiiU remain untested; bag
 acquisition grants remained in disposable RAM. No full-RAM, save-state or
 complete current-build claim is made. See delivery-copies/README.md in the
 maintained components. The reproducible integrated export remains v126.
+
+## v147 partial heap and SOURCE modules
+
+The [v147 maintained snapshot](../experiments/maintained-components/native-heap-v147/README.md)
+publishes reviewed authored C, headers and includes for worker admission,
+HG-first allocation metadata censuses, genuine process-arena birth provenance,
+and SOURCE digest/format reuse. Its combined Cemu observation covers two usable
+metadata cuts and one capture/three idle typed WCT restores. It does not establish
+opaque heap capture, physical lifetime/resource/device closure, universal replay
+or Wii U reliability. GPA's boot report is historical; its matcher was not
+exercised in this campaign. The default-disabled raw-copy proposal is excluded.
+Native wrappers, complete owner implementations and the current multi-object
+builder remain external dependencies. The reproducible full export stays v126.

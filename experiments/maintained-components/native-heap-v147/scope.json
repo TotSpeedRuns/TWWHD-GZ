@@ -1,0 +1,232 @@
+{
+  "schema": "authored-v147-native-heap-source-scope/1",
+  "complete_integrated_reproduction": false,
+  "reproducible_integrated_export": "v126",
+  "source_only": true,
+  "native_instruction_blocks_included": false,
+  "raw_payload_kernel_included": false,
+  "WORLD": false,
+  "READ_READY": false,
+  "logical_missing": 15,
+  "physical_missing": 31,
+  "session": 0,
+  "hardware_tested": false,
+  "GPA_match_consumer_tested": false,
+  "native_observation": {
+    "environment": "one isolated Cemu combined-image session",
+    "date": "2026-10-28",
+    "metadata_attempts": 2,
+    "usable_metadata_cuts": 2,
+    "frame_spacing": 300,
+    "ancestry_flag": 2,
+    "typed_captures": 1,
+    "typed_idle_restores": 3,
+    "WCT_participants": 14,
+    "WCT_groups": 6,
+    "restore_seconds": [
+      1.0121304,
+      0.9531416,
+      0.9551357
+    ],
+    "six_save_files_unchanged": true,
+    "native_API_results_supplied": false
+  },
+  "integration": "Exact matching private owner/lifetime providers, actual native wrappers/hooks/loader relocation, cold initialization and final ABI/atomic/fence audits remain external dependencies; never substitute mocks or numerical address equality as authority.",
+  "files": [
+    {
+      "path": "actor_heap_cut.inc",
+      "bytes": 10372,
+      "sha256": "074ebcf032518d79bef9096234bed15a001ba8080fa3c4a8c97f3632f2ba5aac"
+    },
+    {
+      "path": "archive_layout.h",
+      "bytes": 812,
+      "sha256": "010292d788b8bd35111f1008dfc81d180977522fcde015d9c93792fb6f539adc"
+    },
+    {
+      "path": "context_labels.inc",
+      "bytes": 690,
+      "sha256": "02d4839feee975c1fb925ae8a82c7264337b6ded0dd172312c7183b67b56c246"
+    },
+    {
+      "path": "coupled_hold.c",
+      "bytes": 9409,
+      "sha256": "f0163cf380558f60bf332e7da6b0319731915b5492ea1a72d61ef5556a051728"
+    },
+    {
+      "path": "coupled_hold.h",
+      "bytes": 1504,
+      "sha256": "1eaed6e990aee427266c8810b7927507aba0402b47e1e03ec1bf22560c5ac92f"
+    },
+    {
+      "path": "directory_metadata.c",
+      "bytes": 2175,
+      "sha256": "b21bf15afc9c462f1978b22dbb92db136dffd25491efa5eec3e8039c2dd434f6"
+    },
+    {
+      "path": "directory_metadata.h",
+      "bytes": 1709,
+      "sha256": "b373975a161b1c6e3f77bcd842f216a9f9d79efaf5df65b0036a91761c0c2bff"
+    },
+    {
+      "path": "format_birth_bank.inc",
+      "bytes": 757,
+      "sha256": "d7539944b3565cbb8cb0c3f6abf840216cac412c1234e10fa912fc84cbb46a0c"
+    },
+    {
+      "path": "format_inventory_bomb_main.inc",
+      "bytes": 790,
+      "sha256": "81f917af6db341d34e4a2cadcfaaf5ca94aaa731283837fd3963e23bccf4dd86"
+    },
+    {
+      "path": "format_layer_bank.inc",
+      "bytes": 743,
+      "sha256": "4118d52809c2a2473302875c1c1ac2f155bffbcdea0867bab6d4e24f5b892175"
+    },
+    {
+      "path": "format_pot_bank.inc",
+      "bytes": 1356,
+      "sha256": "d982e9b301e88927e3c178a012c3ad3d436a3974617bf35e11c7583b7caed0a7"
+    },
+    {
+      "path": "gate.h",
+      "bytes": 2058,
+      "sha256": "bbe25daede27b08a13f2d254d77fc64f8602662098a121b5084959ef502eb7e3"
+    },
+    {
+      "path": "heap_domain_cut.h",
+      "bytes": 1781,
+      "sha256": "24e7b8a8f31f6000a52405d6ecb1307e13210116065fbdd0bd1840806e6f6c69"
+    },
+    {
+      "path": "heap_domain_cut.inc",
+      "bytes": 13405,
+      "sha256": "46c329743a12b64a2144fcccddcc5083865d027e83ed02d8e460b12c5d1ea424"
+    },
+    {
+      "path": "jol_context.c",
+      "bytes": 9119,
+      "sha256": "08388f0d25cde36c49edb016a92270afc7c33e176b5961029105f05cce0e2301"
+    },
+    {
+      "path": "jol_context.h",
+      "bytes": 382,
+      "sha256": "9ec795ee2248c8cf4330d16d23666143629ded9803db16d5d9d89417b2aa0b69"
+    },
+    {
+      "path": "lifetime.h",
+      "bytes": 7036,
+      "sha256": "181cb7bcf0f009301b29b8cfa0dbe8d4ee77d6da18e5a0b1d461854b2c23183e"
+    },
+    {
+      "path": "lifetime_bridge.inc",
+      "bytes": 2993,
+      "sha256": "29b97570a54e88e3959c9a6ecaf0f9567761b4a2fce6758f22a02c41729869c0"
+    },
+    {
+      "path": "lifetime_storage.h",
+      "bytes": 2836,
+      "sha256": "d0e17840c0550501a52fa0adf1ab1df46210a3dd780ffaa3bf36f11d20e82994"
+    },
+    {
+      "path": "object-binding-try.inc",
+      "bytes": 11352,
+      "sha256": "acc2e84628a7cb01848c1e76a7b5034e0c2af3e7272b0627bd6994b25cdd0255"
+    },
+    {
+      "path": "object-directory.inc",
+      "bytes": 8850,
+      "sha256": "17b4b448678b4c813466dc62b559770f2d6995690e78f7256f3442623a77938d"
+    },
+    {
+      "path": "object_binding.h",
+      "bytes": 1386,
+      "sha256": "f819da87db93e12443de7d650c433971cbab0574ac16ec0e2cbb74d2340b1992"
+    },
+    {
+      "path": "object_binding_try.h",
+      "bytes": 1200,
+      "sha256": "bbbbd1fabbee7464e4dd3266af3dc3c597f2227491fba56cede58e62c23d7f0b"
+    },
+    {
+      "path": "object_directory.h",
+      "bytes": 2210,
+      "sha256": "59a76a32ca6b9eefcf13f5510621c809828fca501c9bf0e10b121bbe339d6bc8"
+    },
+    {
+      "path": "process_arena.c",
+      "bytes": 12847,
+      "sha256": "f9dd794c950c5b008745019afe29328ee88b5d14aedf391cba1e22d08ed69aac"
+    },
+    {
+      "path": "process_arena.h",
+      "bytes": 1947,
+      "sha256": "4fd43ade9bfbe05b6b27d3552eb2bc56f006998479b2b714100a670bd3db9825"
+    },
+    {
+      "path": "source_active_write_guard.inc",
+      "bytes": 947,
+      "sha256": "3fbdbea90858f36b8b7b1dc0e0d808181e75b62bd6ce521aeba77d81af36bee8"
+    },
+    {
+      "path": "source_pin_digest.h",
+      "bytes": 888,
+      "sha256": "a8e933ab47ce5838aff091e50b15d9cd316b1b1b97edeb57ea8c58b3b35e75d7"
+    },
+    {
+      "path": "source_pin_digest.inc",
+      "bytes": 3019,
+      "sha256": "4977b1896f1f1375875e7ae53778becfe4f7794f86b71eb457270eb8581ef4fd"
+    },
+    {
+      "path": "source_pin_digest_compare.inc",
+      "bytes": 990,
+      "sha256": "38df6fd2a583efe5c742f9c440e6c4aa0de3cd67a9d94e3b43cf6922351fd972"
+    },
+    {
+      "path": "source_pin_format.h",
+      "bytes": 2371,
+      "sha256": "ac649d35046566997cf477c3dbbc233b2874b5a053c2ad8582308bbea35918ba"
+    },
+    {
+      "path": "source_pin_format.inc",
+      "bytes": 3330,
+      "sha256": "2a78d1368594793646f9f93b8eb3a9e9f1223c943165603885d5fb87bf984090"
+    },
+    {
+      "path": "source_work.c",
+      "bytes": 2637,
+      "sha256": "2240fe56757ed8022245df35f3957d51ec0c81933c22dbf7c903eed0ce4de0ad"
+    },
+    {
+      "path": "source_work.h",
+      "bytes": 650,
+      "sha256": "65933e526613da8944583c7a47fcfe78eab45781feb5e50eb7f02f25fc1d719d"
+    },
+    {
+      "path": "source_work_atomic.c",
+      "bytes": 697,
+      "sha256": "8979ce60e740e41f59cc10876d1d6e7c3d3625ab2982c543a0525cea0d527d9b"
+    },
+    {
+      "path": "worker_atomic.c",
+      "bytes": 1190,
+      "sha256": "a66142b5a3354299f3f992e9d7897a23acdac6dc2d92d8c299ab205ae0e4cad2"
+    },
+    {
+      "path": "worker_atomic.h",
+      "bytes": 589,
+      "sha256": "eef7a2e2c0d6c4710db9c8c9db5eb4ab71c17fb7cfd14c0163311e50cb57fd17"
+    },
+    {
+      "path": "worker_family.h",
+      "bytes": 1751,
+      "sha256": "c1e65d28a5d194ea736e2128cc676b6ac283efea5f5b36aac47e12939566675e"
+    },
+    {
+      "path": "worker_family.inc",
+      "bytes": 12334,
+      "sha256": "ef184f76506cde478d294e53c7b5dd52c699a1587030f7f600f3f94d05b7eebb"
+    }
+  ]
+}

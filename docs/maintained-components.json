@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v148-partial-worker-custody",
-  "status": "Authored partial v148 and later private component snapshots, including same-worker SOURCE custody. Finite Cemu tests only; complete integrated reproducible export remains v126.",
+  "revision": "post-v148-partial-custodian-format-memo",
+  "status": "Authored partial snapshots including same-worker saved-format memo. Distinct finite Cemu WCT and factory tests; complete integrated reproducible export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 47245,
-      "sha256": "3d5de552c05274b6b0b5920c53557e02680a3930854abcafb90bab265fa90468"
+      "bytes": 47812,
+      "sha256": "d3fadf6e8423c9aba20337e2606b280b908baaca3a12a0e10e2455b942f586f2"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1160,13 +1160,13 @@
     },
     {
       "path": "experiments/maintained-components/save-state-performance/README.md",
-      "bytes": 2728,
-      "sha256": "940fe44657b9b1ffaa87da22e56cdf5e6db55db879914434d3357352617d6d9e"
+      "bytes": 5435,
+      "sha256": "1e8d4977d89b3063fabb6419e362a0202189a0ebbce12dc6b0d4e8e3b7c40a3c"
     },
     {
       "path": "experiments/maintained-components/save-state-performance/scope.json",
-      "bytes": 4179,
-      "sha256": "014f6714c90ff835313ff4352b9abb0a548d57bfac592dad3d2280f0afe4a634"
+      "bytes": 5940,
+      "sha256": "032241f0b535a9e851ba908cd54d8df741b7dde4b1e6a7bb7aa5b5af2c207fca"
     },
     {
       "path": "experiments/maintained-components/save-state-performance/source_bomb_final.inc",
@@ -1195,13 +1195,13 @@
     },
     {
       "path": "experiments/maintained-components/save-state-performance/source_pin_format.h",
-      "bytes": 2371,
-      "sha256": "ac649d35046566997cf477c3dbbc233b2874b5a053c2ad8582308bbea35918ba"
+      "bytes": 2393,
+      "sha256": "6607ef8b4980267f901c0332fadc3cee27bcd6729864000e0a8198bac44473d5"
     },
     {
       "path": "experiments/maintained-components/save-state-performance/source_pin_format.inc",
-      "bytes": 3393,
-      "sha256": "a9296d56c6ccf23081c32cbc57d08277d5d2820f2ffefc29f3e88485897c0b7d"
+      "bytes": 7623,
+      "sha256": "784170a148244303a7cf306ffd30240cde5c7b87ee5d6d8737339e04f5d57823"
     },
     {
       "path": "experiments/maintained-components/wct-root-borrow/integration-seams.json",
@@ -1357,6 +1357,31 @@
       "path": "experiments/maintained-components/source-worker-custodian/source_worker_state.inc",
       "bytes": 564,
       "sha256": "cf8767313d401258d7b06f66982d16f548b21899414ad67155c7c54d2df25654"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/custodian-format-integration-pins.json",
+      "bytes": 4586,
+      "sha256": "d6a68b88364fec6230661f02ddfdfa017dae48945b29c16a1d86a3f87199e063"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/custodian-format-source-pins.json",
+      "bytes": 1331,
+      "sha256": "26b5942115b368faa9306c8666fc5a184d17b714e4611908219ea83ed441e3fb"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/custodian_format_cases.c",
+      "bytes": 1440,
+      "sha256": "200cf0c905ded8d3db1eb0291f64aa6d79126094f19a0a1b96e96325afd92f07"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/integration.patch.txt",
+      "bytes": 4296,
+      "sha256": "a340b32dbd3247c0b68b9879a50be7885544adec2fc190e380beed6c8b8c29d2"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_custodian_format_policy.h",
+      "bytes": 464,
+      "sha256": "483a6923bd407aedad3920f19d4c225185d7ab1589bf8a58cfb9f14d43266619"
     }
   ],
   "excludes": [

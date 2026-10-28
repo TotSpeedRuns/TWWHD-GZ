@@ -2,7 +2,7 @@
 #define GZ_SOURCE_PIN_FORMAT_H
 /* Saved-source checks only. Every installed/CURRENT comparison stays fresh. */
 enum { SFM_FULL=0, SFM_REUSE=1, SFM_REFUSE=2, SFM_MINT=3, SFM_CHECK=4 };
-enum { SFM_PF=1, SFM_BC=2, SFM_LG=3, SFM_B294=4 };
+enum { SFM_PF=1, SFM_BC=2, SFM_LG=3, SFM_B294=4, SFM_SAND=5, SFM_CGA=6 };
 typedef struct { unsigned int pin,mask; } GzSourceFormatMemo;
 extern GzSourceFormatMemo _gz_sfm_memo;
 unsigned int _gz_som_source_format_check(unsigned int,unsigned int,unsigned int);
@@ -28,7 +28,7 @@ static inline unsigned int gz_sfm_full_lease_phase(unsigned int active,
 static inline unsigned int gz_sfm_plan(unsigned int old_pin,unsigned int mask,
         unsigned int pin,unsigned int kind)
 {
-    if (!pin || kind<SFM_PF || kind>SFM_B294 || (mask&~15u) ||
+    if (!pin || kind<SFM_PF || kind>SFM_CGA || (mask&~63u) ||
         (!old_pin && mask) || old_pin>pin) return SFM_REFUSE;
     if (old_pin!=pin) return SFM_MINT;
     return mask&(1u<<(kind-1)) ? SFM_REUSE : SFM_MINT;

@@ -13,7 +13,7 @@ request, frame and thread, and permits reuse only inside that fixed call.
 Reentry, lost plans, recovery and conflicting WCT purpose refuse reuse.
 Outside that purpose the original full checks remain.
 
-The existing four-kind saved-format memo is pin-bound. It records a result
+The current six-kind saved-format memo is pin-bound. It records a result
 only after the actual saved-data validator succeeds, then rechecks the real
 digest and pin. No current-world validation result is cached. Before owner
 publication, `source_bomb_final.inc` forces the existing full archive hash
@@ -43,3 +43,44 @@ an end-to-end speed gain from this validator alone.
 These changes do not authorize generic RAM replay or solve actors born after
 capture, held equipment, death/void, different rooms, complete cutscenes or
 music. All original route payloads and normal save files were preserved.
+
+## Same-worker saved-format memo extension
+
+The three authored `source_pin_format.inc`, `source_pin_format.h` and
+`source_custodian_format_policy.h` files extend the existing eight-byte memo to
+the actual preadoption SOURCE custodian. They add no DATA/BSS, native hooks or
+native import sites. A real READY/admission or ADMITTED/install borrower must
+recheck the complete sealed 76-byte current custody, actual pin, source/used,
+Row identity/generation/hash, frame/thread/worker context and current revision
+before and after each operation. Only an actual complete saved-only validator
+success can mint a bit. Pending custody with a lost purpose refuses; unissued
+SO decoding without custody remains FULL. All CURRENT comparisons, original
+ordered work callbacks, full admission/publication and final hashes remain.
+
+`custodian-format-integration-pins.json` names the exact LF 805 SOURCE parent,
+three forward/inverse-verified integration hunks, public dependency pins and
+same-translation-unit order. Copy the scalar policy header into the original
+SOURCE directory and apply `integration.patch.txt` only to its exact pinned
+parent. The published complete header/include also replace the older public
+four-kind snapshot; this patch is against the later six-kind 805 parent, not
+against the older public file. Real SAND/CGA saved validators and private
+owner/OSA/SOM integration remain external dependencies. No test substitutes
+successful validator, ownership, pin or native API results for them.
+
+The tested extension completed three ordinary WCT/SSP saved-holstered/current-
+drawn sword restores, with exact pose/equipment and per-restore journal/hold
+cleanup. In that ordinary lane, CGA wrappers stayed 9 and complete saved-leaf
+entries changed 9 to 7 relative to the preceding finite campaign. SAND stayed
+250 wrappers/1 complete leaf; covered SOURCE FNV evaluations stayed 7.
+A separate Debug+Input (flags 3) campaign completed three natural-expiry bomb
+factory recreations with exact fuse/pose and fresh identities; ordinary WCT
+was unchanged. Its SAND 237/9, CGA 11/10 and covered FNV 16 stayed unchanged.
+Stable post-bomb helper state is only a post-campaign observation.
+
+These are distinct finite Cemu scopes, not full-world replay or a hardware,
+latency, total-hash, bytes-read, scan-avoidance or comparative speed claim.
+`custodian_format_cases.c` tests only actual scalar predicates.
+Source-contract tests check the retained real validators and pre/post guards;
+neither test supplies positive native/lease outcomes. The complete integrated
+public builder remains **v126**. No game bytes, captures, profiles, private
+paths, host memory reader or binary object is part of this source projection.

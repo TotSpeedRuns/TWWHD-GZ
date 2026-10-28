@@ -798,3 +798,14 @@ speed claim is made. The integrated full export stays v126.
 ### Same-worker SOURCE custody
 
 [`source-worker-custodian/`](source-worker-custodian/) publishes the authored worker-only acquisition/three-callback/pin-transfer code and zero-context integration patch. It preserves the full SOURCE boundaries and current checks. It is partial source, not a current-game builder or generic memory grant.
+
+
+### Same-worker saved-format memo
+
+The [saved-data validation snapshot](save-state-performance/README.md#same-worker-saved-format-memo-extension)
+includes the exact six-kind memo extension for real preadoption worker custody.
+Three ordinary sword WCT restores and three separate Debug/Input bomb factory
+recreations passed in Cemu. Ordinary CGA wrappers stayed 9 while complete saved
+leaves changed 9 to 7; this is not a latency, total-work or hardware claim.
+The integrated public builder remains v126; original CURRENT and full-source
+boundaries remain required.

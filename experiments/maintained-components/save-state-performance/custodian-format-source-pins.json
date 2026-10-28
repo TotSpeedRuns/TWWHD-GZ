@@ -1,0 +1,45 @@
+{
+  "schema": "LF-authored-custodian-format-source-pins/1",
+  "files": [
+    {
+      "path": "custodian-format-integration-pins.json",
+      "bytes": 4586,
+      "sha256": "d6a68b88364fec6230661f02ddfdfa017dae48945b29c16a1d86a3f87199e063"
+    },
+    {
+      "path": "custodian_format_cases.c",
+      "bytes": 1440,
+      "sha256": "200cf0c905ded8d3db1eb0291f64aa6d79126094f19a0a1b96e96325afd92f07"
+    },
+    {
+      "path": "integration.patch.txt",
+      "bytes": 4296,
+      "sha256": "a340b32dbd3247c0b68b9879a50be7885544adec2fc190e380beed6c8b8c29d2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5435,
+      "sha256": "1e8d4977d89b3063fabb6419e362a0202189a0ebbce12dc6b0d4e8e3b7c40a3c"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 5940,
+      "sha256": "032241f0b535a9e851ba908cd54d8df741b7dde4b1e6a7bb7aa5b5af2c207fca"
+    },
+    {
+      "path": "source_custodian_format_policy.h",
+      "bytes": 464,
+      "sha256": "483a6923bd407aedad3920f19d4c225185d7ab1589bf8a58cfb9f14d43266619"
+    },
+    {
+      "path": "source_pin_format.h",
+      "bytes": 2393,
+      "sha256": "6607ef8b4980267f901c0332fadc3cee27bcd6729864000e0a8198bac44473d5"
+    },
+    {
+      "path": "source_pin_format.inc",
+      "bytes": 7623,
+      "sha256": "784170a148244303a7cf306ffd30240cde5c7b87ee5d6d8737339e04f5d57823"
+    }
+  ]
+}

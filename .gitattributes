@@ -39,3 +39,5 @@ experiments/maintained-components/snapshot-display-activity/* text eol=lf
 # Authored same-worker SOURCE custody.
 experiments/maintained-components/source-worker-custodian/* text eol=lf
 tests/test_source_worker_custodian_source.py text eol=lf
+
+tests/test_custodian_format_source.py text eol=lf

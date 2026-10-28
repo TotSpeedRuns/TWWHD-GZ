@@ -27,3 +27,8 @@ tests/test_streaming_bookkeeping_source.py text eol=lf
 
 # Authored post-v148 private performance snapshot.
 experiments/maintained-components/save-state-performance/* text eol=lf
+
+# Authored private fixed-root transaction borrow snapshot.
+experiments/maintained-components/wct-root-borrow/* text eol=lf
+experiments/maintained-components/wct-root-borrow/save_origin/* text eol=lf
+tests/test_wct_root_borrow_source.py text eol=lf

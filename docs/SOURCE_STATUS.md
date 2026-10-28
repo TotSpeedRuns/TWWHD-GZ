@@ -173,3 +173,14 @@ raw-copy kernel or new WORLD/READ permission is included. See
 ## Post-v148 save-state performance source
 
 The [saved-data performance snapshot](../experiments/maintained-components/save-state-performance/README.md) adds genuine BOH pin-scoped source reuse and the pure identity validator. Three Cemu bomb expiry/restores and a separate seven-cut foliage replay passed. Observed restore intervals fell from roughly 2.14 seconds to 1.21 seconds in the same driver; this is not a controlled or hardware benchmark. It is a private-branch partial snapshot, not a new released build or full-game acceptance. Integrated reproducible source remains v126.
+
+## Post-v148 fixed root borrowing
+
+The [fixed root-borrow snapshot](../experiments/maintained-components/wct-root-borrow/README.md)
+publishes authored CLOCK/PERSIST getter fragments, the real coupled WHL/job
+provider and exact integration seams. It preserves ordinary independent
+admission outside the genuine retained transaction and refuses lost borrowers
+without fallback. Three private Cemu sword transitions and three separate
+standalone bomb expiry/restores passed. These finite observations do not
+establish Wii U, broad actor retirement or full-game coverage. This is partial
+experimental source; the reproducible integrated export remains v126.

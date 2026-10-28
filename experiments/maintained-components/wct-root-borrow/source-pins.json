@@ -1,0 +1,76 @@
+{
+  "schema": "authored-root-borrow-source-pins/1",
+  "hash_normalization": "UTF-8 with LF line endings, matching Git source blobs",
+  "files": [
+    {
+      "path": "integration-seams.json",
+      "bytes": 19276,
+      "sha256": "395942a793768d3982cbd34a32857f4fdab8027aef9036d1b9aa31cd2b6fde7f"
+    },
+    {
+      "path": "integration-seams.txt",
+      "bytes": 15166,
+      "sha256": "4596817fccf32403022f3b0299344f58d73b324d89c4a0a6be32dab81663a4da"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5647,
+      "sha256": "3d7ed2169fa8400f7870377caf29f28bdd18a83bcdeec4b7bedc1ed11fe2aece"
+    },
+    {
+      "path": "save_origin/clock_access.inc",
+      "bytes": 3190,
+      "sha256": "2d768b19f976adb333f21a6cfd7f3a09bfc2256caab93d502e3510abcd982fb5"
+    },
+    {
+      "path": "save_origin/persistent_access.inc",
+      "bytes": 2810,
+      "sha256": "359b9e2247fdb8b814d3a7f2a65c1c90cdbe14741ede6a32ae2b6b4214668614"
+    },
+    {
+      "path": "save_origin/root_context.inc",
+      "bytes": 1141,
+      "sha256": "e3554c55a694d05f17887bb981efbb0a3971cdb34e5bdda731ada0337f9e4712"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 1482,
+      "sha256": "7ac8bcc163a05f1d1c225be180715388a0487df37ea2e1ce941a50fbcfe0ee04"
+    },
+    {
+      "path": "wct_heap_lease.h",
+      "bytes": 1836,
+      "sha256": "c56acfdf51303c7a6487e11d71e2a5553c58f476d84c8afff6e321a2c6a726eb"
+    },
+    {
+      "path": "wct_heap_lease.inc",
+      "bytes": 9503,
+      "sha256": "18c2e76bb6dba705d56eb3c1bfaaf7c842a3a1a31ef1b76e3efcefd7372e9bf8"
+    },
+    {
+      "path": "wct_job_bridge.h",
+      "bytes": 456,
+      "sha256": "e1479717e5905616e170449c997f2bfe5933741baf7f70ae046f07bb4e97fc76"
+    },
+    {
+      "path": "wct_job_bridge.inc",
+      "bytes": 1925,
+      "sha256": "fc0882e2199c1971cf8d57a92b6d7b517980699527bb81bbd9edaeaf47941f96"
+    },
+    {
+      "path": "wct_native_context.inc",
+      "bytes": 1965,
+      "sha256": "a7a98383aafbdb9ca47a8bdb68b845845a16fb2f82ea7ae41c4b22a07bacc87f"
+    },
+    {
+      "path": "wct_root_borrow.h",
+      "bytes": 724,
+      "sha256": "ffe8dfb647200f6169e85a47a4aefbda0a07a1f2b1a5d87b54a9dba79da3fedb"
+    },
+    {
+      "path": "wct_root_borrow.inc",
+      "bytes": 2844,
+      "sha256": "a763c1f22242501af047e15d5a02c690682430728c2523bb79794e35662633ad"
+    }
+  ]
+}

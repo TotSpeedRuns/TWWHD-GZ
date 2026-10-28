@@ -1,0 +1,231 @@
+--- a/bomb/bomb_recreation.c
++++ b/bomb/bomb_recreation.c
+@@ -1,5 +1,6 @@
+ #include "native_stateid_aliases.h"
+ #include "wct_heap_lease.h"
++#include "wct_root_borrow.h"
+ #include "native_text_aliases.h"
+ #include "native_data_aliases.h"
+ #include "slot_capacity.h"
+@@ -447,6 +448,7 @@
+ #include "world_group_publication.c"
+ #include "wct_heap_lease.inc"
+ #include "wct_native_context.inc"
++#include "wct_root_borrow.inc"
+ #include "world_core_menu.c"
+ 
+ #include "keese_core.c"
+--- a/bomb/wct_heap_lease.inc
++++ b/bomb/wct_heap_lease.inc
+@@ -68,6 +68,7 @@
+  * helper is also the ordinary pre-mutation BUSY path: never wait/drain or
+  * clear a token by hand, and never perform native/source-body work first. */
+ static u32 whl_release_actual(void){u32 raw;
++ if(_gz_wct_root_pending())return whl_fail(WHL_ROOT_RETAINED);
+  if(_gz_wct_job_token.active||_gz_wct_job_token.gate){
+   raw=_gz_jwa_wct_leave();_gz_wct_heap_report[24]=raw;
+   if(raw!=GZ_JCA_OK||_gz_wct_job_token.active||_gz_wct_job_token.gate)return whl_fail(WHL_RETAINED);
+@@ -77,7 +78,7 @@
+  whl.phase=WHL_ENDED;whl_seal();_gz_wct_heap_report[3]=WHL_ENDED;_gz_wct_heap_report[10]=0;return 0;
+ }
+ u32 _gz_wct_heap_begin(u32 t,u32 f){u32 parent,thread,previous,restored,raw,zero,clean,z=WHL_CONTEXT;
+- if(_gz_wct_heap_pending()||_gz_wct_job_token.active||_gz_wct_job_token.gate||
++ if(_gz_wct_root_pending()||_gz_wct_heap_pending()||_gz_wct_job_token.active||_gz_wct_job_token.gate||
+   !_gz_jwf_atomic_cas(&whl_busy,0,1))return WHL_RETAINED;
+  if(!t||f!=_gz_pbac_frame||!_gz_wct_group_context(t,f,1)||
+   _gz_wgp_unreleased()||!ssp_none())goto done;
+@@ -112,13 +113,13 @@
+ done:whl_busy=0;return z;}
+ 
+ u32 _gz_wct_heap_borrow(u32 t,u32 f,u32 mode){u32 result=0;
+- if(!whl_valid()||whl.borrowed||mode<1||mode>4||!_gz_jwf_atomic_cas(&whl_busy,0,1))return 0;
++ if(_gz_wct_root_pending()||!whl_valid()||whl.borrowed||mode<1||mode>4||!_gz_jwf_atomic_cas(&whl_busy,0,1))return 0;
+  if(!_gz_wct_heap_held(t,f)||!_gz_wgp_context_owned(t)||!wgp()||wgp()[7]!=mode)goto done;
+  whl.borrowed=mode;whl_seal();_gz_wct_heap_report[15]=mode;result=whl.hg;
+ done:whl_busy=0;return result;}
+ u32 _gz_wct_heap_unborrow(u32 t,u32 f,u32 mode,u32 actual_hg){u32 z=WHL_RETAINED;
+  if(!whl_valid()||!_gz_jwf_atomic_cas(&whl_busy,0,1))return z;
+- if(whl.borrowed!=mode||actual_hg!=whl.hg||!_gz_wct_heap_held(t,f)||
++ if(_gz_wct_root_pending()||whl.borrowed!=mode||actual_hg!=whl.hg||!_gz_wct_heap_held(t,f)||
+   !_gz_wgp_context_owned(t)||!wgp()||wgp()[7]!=mode)goto done;
+  whl.borrowed=0;whl_seal();_gz_wct_heap_report[15]=0;z=0;
+ done:whl_busy=0;return z;}
+@@ -127,6 +128,7 @@
+  * final SSP binding/target validation MUST remain before this call. No
+  * native/audio access is allowed after a successful end before private leaf. */
+ u32 _gz_wct_heap_end(u32 t,u32 f){const volatile u32*o=_gz_roh_owner;u32 z=WHL_RETAINED;
++ if(_gz_wct_root_pending())return WHL_ROOT_RETAINED;
+  if(!_gz_wct_heap_pending())return 0;
+  if(!whl_valid()||whl.token!=t||whl.frame!=f||!_gz_jwf_atomic_cas(&whl_busy,0,1))return z;
+  if(whl.phase==WHL_ENDED&&!whl.hg&&!whl.borrowed&&!whl.error&&
+@@ -140,7 +142,7 @@
+  z=whl_release_actual();
+ done:if(z&&whl.phase!=WHL_HALTED)z=whl_fail(z);whl_busy=0;return z;}
+ void _gz_wct_heap_finish_leaf(u32 t){
+- if(whl_busy||!whl_valid()||whl.token!=t||whl.phase!=WHL_ENDED||whl.hg||whl.borrowed||whl.error||
++ if(_gz_wct_root_pending()||whl_busy||!whl_valid()||whl.token!=t||whl.phase!=WHL_ENDED||whl.hg||whl.borrowed||whl.error||
+   _gz_wct_job_token.active||_gz_wct_job_token.gate)return;
+  bcl_zero(&whl,sizeof(whl));_gz_wct_heap_report[3]=0;
+  /* whl_serial and historical diagnostic identity are deliberately retained. */
+--- a/bomb/wct_native_context.inc
++++ b/bomb/wct_native_context.inc
+@@ -27,6 +27,6 @@
+  if(!whl_native.active)return;
+  /* Preserve terminal evidence/tokens, but expire producer authority as the
+   * actual callback leaves. Retention never manufactures an extended frame. */
+- if(_gz_wct_heap_pending())whl_native.halted=1;
++ if(_gz_wct_heap_pending()||_gz_wct_root_pending())whl_native.halted=1;
+  __asm__ volatile("sync":::"memory");whl_native.active=0;
+ }
+--- a/bomb/world_core_roundtrip.c
++++ b/bomb/world_core_roundtrip.c
+@@ -103,7 +103,7 @@
+   ((!wct.error&&wct.services==7)||(wct.error&&wct.services>=2&&wct.services<=7))&&
+   _gz_wct_closure_hash&&_gz_wct_closure_hash==wct_seal&&!wct_before(t,f);
+ }
+-void _gz_wct_finish_leaf(void){_gz_wgp_finish_leaf(wct.token);_gz_cgr_finish(wct.token);_gz_ccr_finish(wct.token);cjp_finish(wct.token);pti_finish_leaf(wct.token);fgp_finish_leaf(wct.token);_gz_ssp_finish_leaf(wct.token);_gz_wct_heap_finish_leaf(wct.token);wdp_clear_private();bcl_zero(&wct,sizeof(wct));wct_seal=_gz_wct_closure_hash=0;}
++void _gz_wct_finish_leaf(void){if(_gz_wct_root_pending())return;_gz_wgp_finish_leaf(wct.token);_gz_cgr_finish(wct.token);_gz_ccr_finish(wct.token);cjp_finish(wct.token);pti_finish_leaf(wct.token);fgp_finish_leaf(wct.token);_gz_ssp_finish_leaf(wct.token);_gz_wct_heap_finish_leaf(wct.token);wdp_clear_private();bcl_zero(&wct,sizeof(wct));wct_seal=_gz_wct_closure_hash=0;}
+ #include "world_core_target.inc"
+ static u32 wct_group(u32 t,u32 f,u32 g){u32 id=g==1?5:g==3?8:g==5?WCT_FINAL_SERVICE:g==4?6:2,z;
+  if(f!=_gz_pbac_frame)return 42;
+--- a/bomb/world_group_publication.c
++++ b/bomb/world_group_publication.c
+@@ -24,6 +24,7 @@
+  if(_gz_wct_heap_pending()){q[9]=_gz_wct_heap_borrow(t,f,mode);if(q[9])q[45]=1;}
+  else q[9]=_gz_hg_capture_begin(t);wgp_seal(q);if(!q[9]){q[7]=q[8]=0;wgp_seal(q);return WGP_BAD;}return 0;}
+ static u32 wgp_leave(u32 z){u32*q=wgp(),seal,end,digest;
++ if(_gz_wct_root_pending())return z?z:WHL_ROOT_RETAINED;
+  digest=crd_end();if(!z)z=digest;
+  digest=fgd_end();if(!z)z=digest;
+  seal=_gz_hg_capture_seal(q[9]);
+@@ -31,7 +32,7 @@
+  else end=_gz_hg_capture_end(q[9]);q[46]=q[45];q[33]=end;
+  if(end){wgp_seal(q);return end;}
+  q[7]=q[8]=q[9]=q[45]=0;wgp_seal(q);return z?z:seal;}
+-u32 _gz_wgp_unreleased(void){u32*q=wgp();return q&&(q[7]||q[9]);}
++u32 _gz_wgp_unreleased(void){u32*q=wgp();return _gz_wct_root_pending()||(q&&(q[7]||q[9]));}
+ /* Expose only the genuine currently held PREPARE HG serial. A receipt cannot
+  * create an exclusion hold, extend it or use it in forward/recovery modes. */
+ u32 _gz_wgp_source_receipt_hold(u32 t,u32 f){u32*q=wgp();return q&&f==_gz_pbac_frame&&wgp_held(t,1)?q[9]:0;}
+@@ -102,9 +103,10 @@
+  if(bcf_group_run()->phase!=NSG_ROLLED)z=NSG_PHASE;else z=_gz_nsg_before_matches(bcf_group_plan(),bcf_group_run());
+  if(!z)z=wgp_pots(t,f,0);if(!z)z=_gz_cgr_before(t,f);q[27]=z;wgp_audit(q);return wgp_leave(z);}
+ u32 _gz_wgp_forget_clean(u32 t){u32*q=wgp(),z;NsgPlan*p=bcf_group_plan();NsgRun*r=bcf_group_run();
++ if(_gz_wct_root_pending())return WHL_ROOT_RETAINED;
+  if(!q||!q[2]||q[3]==7)return 0;if(!wgp_valid(q)||q[4]!=t||q[7]||q[9]||_gz_roh_user_guard()||_gz_osa_pin_id())return WGP_BAD;
+  if(p&&p->magic){z=_gz_nsg_forget(p,r,t);if(z)return z;}q[3]=7;wgp_seal(q);return 0;}
+-void _gz_wgp_finish_leaf(u32 t){u32*q=wgp();if(!_gz_wgp_has_token(t))return;crd_retire();fgd_retire();bcf_group_finish_leaf();q[3]=7;q[7]=q[8]=q[9]=0;wgp_seal(q);}
++void _gz_wgp_finish_leaf(u32 t){u32*q=wgp();if(_gz_wct_root_pending()||!_gz_wgp_has_token(t))return;crd_retire();fgd_retire();bcf_group_finish_leaf();q[3]=7;q[7]=q[8]=q[9]=0;wgp_seal(q);}
+ u32 _gz_wgp_commit_scope(u32 t,u32 f){u32*q=wgp();NsgPlan*p=bcf_group_plan();NsgRun*r=bcf_group_run();
+  return q&&p&&r&&wgp_valid(q)&&q[4]==t&&q[6]==f&&q[35]==f&&f==_gz_pbac_frame&&!q[7]&&!q[9]&&!q[26]&&
+   q[3]==3&&q[19]==p->seal&&q[20]==r->seal&&q[21]==NSG_APPLIED&&r->phase==NSG_APPLIED&&!r->error&&
+--- a/save_origin/save_origin/persistent_access.inc
++++ b/save_origin/save_origin/persistent_access.inc
+@@ -29,14 +29,15 @@
+ static void spk_read(SpoU32 root){SpoU32 i;
+  for(i=0;i<SPK_BYTES;i++)_gz_spk_values[i]=*(volatile unsigned char*)spk_address(root,i);
+ }
+-static __attribute__((noinline,noclone)) SpoU32 spk_access(SpoU32 mode){SpoU32 frame=_gz_pbac_frame,gate=0,z=0,i,x,root=0;
++static __attribute__((noinline,noclone)) SpoU32 spk_access(SpoU32 mode){SpoU32 frame=_gz_pbac_frame,gate=0,borrowed=0,z=0,i,x,root=0;
+  for(i=2;i<20;i++)_gz_spk_report[i]=0;
+  if(_gz_spk_entered||_gz_sck_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||mode<2||mode>5||
+   !_gz_prk_kernel_scope(mode,frame)||!srh_sealed()||_gz_spk_serial==0xffffffffu)return 28;
+  _gz_spk_serial++;_gz_spk_frame=frame;_gz_spk_thread=_gz_hg_platform_thread();_gz_spk_mode=mode;_gz_spk_entered=1;
+  _gz_spk_report[2]=frame;_gz_spk_report[4]=_gz_spk_serial;_gz_spk_report[13]=mode;
+- gate=_gz_hg_capture_begin(_gz_spk_serial);if(!gate){z=86;goto done;}
+- z=_gz_hg_capture_seal(gate);if(z)goto done;
++ if(_gz_wct_heap_pending()){borrowed=1;gate=_gz_wct_root_borrow(WHL_ROOT_PERSIST,mode,_gz_spk_serial,frame);}
++ else gate=_gz_hg_capture_begin(_gz_spk_serial);_gz_spk_report[16]=borrowed;if(!gate){z=86;goto done;}
++ z=srh_wct_seal(WHL_ROOT_PERSIST,mode,_gz_spk_serial,frame,gate,borrowed);if(z)goto done;
+  z=srh_current();if(z)goto done;z=spk_table();if(z)goto done;root=_gz_srh_binding.root;
+  spk_read(root);
+  if(mode==3||mode==4){
+@@ -49,7 +50,7 @@
+   }
+   for(i=0;i<SPK_BYTES;i++)if(!spk_skip(i)&&_gz_spk_values[i]!=_gz_spk_expected[i]&&
+     _gz_spk_values[i]!=_gz_spk_alternate[i]){z=77;_gz_spk_report[15]=i+1;goto done;}
+-  z=srh_current();if(z)goto done;z=_gz_hg_capture_seal(gate);if(z)goto done;
++  z=srh_current();if(z)goto done;z=srh_wct_seal(WHL_ROOT_PERSIST,mode,_gz_spk_serial,frame,gate,borrowed);if(z)goto done;
+   if(!_gz_prk_kernel_scope(mode,frame)){z=5;goto done;}
+   /* The fixed table and prevalidated private scalars are the only inputs
+    * between stores. No SDK/native call, source lookup, callback or yield. */
+@@ -59,9 +60,9 @@
+   spk_read(root);
+   for(i=0;i<SPK_BYTES;i++)if(!spk_skip(i)&&_gz_spk_values[i]!=_gz_spk_target[i]){z=77;goto done;}
+  }
+- z=srh_current();if(!z)z=_gz_hg_capture_seal(gate);
++ z=srh_current();if(!z)z=srh_wct_seal(WHL_ROOT_PERSIST,mode,_gz_spk_serial,frame,gate,borrowed);
+ done:
+- if(gate){i=_gz_hg_capture_end(gate);if(!z)z=i;_gz_spk_report[5]=i;}
++ if(gate){i=borrowed?_gz_wct_root_unborrow(WHL_ROOT_PERSIST,mode,_gz_spk_serial,frame,gate):_gz_hg_capture_end(gate);if(!z)z=i;_gz_spk_report[5]=i;}
+  if(!z&&!_gz_prk_kernel_scope(mode,frame))z=5;
+  _gz_spk_report[3]=z;_gz_spk_report[11]=_gz_hl_control.flags;_gz_spk_report[12]=_gz_hg_control[15];
+  if(!z)_gz_spk_report[6]=srh_hash(_gz_spk_values,SPK_BYTES);
+--- a/save_origin/save_origin/root_access.c
++++ b/save_origin/save_origin/root_access.c
+@@ -172,6 +172,25 @@
+  return b->magic==0x53524231u&&b->bytes==sizeof(*b)&&b->valid==1&&!b->error&&b->thread&&
+   b->root_generation&&_gz_srh_seal==srh_hash(b,sizeof(*b));
+ }
++#include "../wct_root_borrow.h"
++/* Fresh real entered kernel context only; no source/root/native body read. */
++SpoU32 _gz_srh_wct_root_context(SpoU32 kind,SpoU32 mode,SpoU32 serial,SpoU32 frame){SpoU32 thread;
++ if(!serial||frame!=_gz_pbac_frame||mode<2||mode>5||!srh_sealed()||
++  _gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||
++  _gz_doh_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered)return 0;
++ thread=_gz_hg_platform_thread();if(!thread)return 0;
++ if(kind==WHL_ROOT_CLOCK)return _gz_sck_entered==1&&!_gz_spk_entered&&
++  _gz_sck_serial==serial&&_gz_sck_frame==frame&&_gz_sck_thread==thread&&
++  _gz_sck_mode==mode&&_gz_ckr_kernel_scope(mode,frame)?1u:0u;
++ if(kind==WHL_ROOT_PERSIST)return _gz_spk_entered==1&&!_gz_sck_entered&&
++  _gz_spk_serial==serial&&_gz_spk_frame==frame&&_gz_spk_thread==thread&&
++  _gz_spk_mode==mode&&_gz_prk_kernel_scope(mode,frame)?1u:0u;
++ return 0;
++}
++static SpoU32 srh_wct_seal(SpoU32 kind,SpoU32 mode,SpoU32 serial,SpoU32 frame,SpoU32 gate,SpoU32 borrowed){
++ if(borrowed&&!_gz_wct_root_held(kind,mode,serial,frame,gate))return WHL_ROOT_RETAINED;
++ return _gz_hg_capture_seal(gate);
++}
+ static SpoU32 srh_idle(void){return _gz_pbac_menu==1&&!_gz_pbac_pending&&
+  !*(volatile unsigned char*)&_gz_pbac_loading&&!_gz_pbac_tools&&!_gz_pbac_world_resume_pending&&
+  _gz_pbac_idle_for_capture()&&!_gz_roh_user_guard()&&!_gz_osa_pin_id();}
+@@ -229,14 +248,15 @@
+  _gz_sck_values[6]=*(volatile SpoU32*)(SCK_AIR+4);
+  _gz_sck_values[7]=*(volatile unsigned char*)(SCK_AIR+0x64);
+ }
+-static __attribute__((noinline,noclone)) SpoU32 sck_access(SpoU32 mode){SpoU32 frame=_gz_pbac_frame,gate=0,z=0,i,root,n=0,target[8],expected[8],alternate[8];
++static __attribute__((noinline,noclone)) SpoU32 sck_access(SpoU32 mode){SpoU32 frame=_gz_pbac_frame,gate=0,borrowed=0,z=0,i,root,n=0,target[8],expected[8],alternate[8];
+  for(i=2;i<16;i++)_gz_sck_report[i]=0;
+  if(_gz_sck_entered||_gz_spk_entered||_gz_gac_root_entered||_gz_rkc_entered||_gz_dth_entered||_gz_gqk_access_entered()||_gz_doh_access_entered()||_gz_dck_access_entered()||_gz_srh_probe_entered||!sck_scope(mode,frame)||!srh_sealed()||
+   _gz_sck_serial==0xffffffffu)return 28;
+  _gz_sck_serial++;_gz_sck_frame=frame;_gz_sck_thread=_gz_hg_platform_thread();_gz_sck_mode=mode;_gz_sck_entered=1;
+  _gz_sck_report[2]=frame;_gz_sck_report[4]=_gz_sck_serial;_gz_sck_report[13]=mode;
+- gate=_gz_hg_capture_begin(_gz_sck_serial);if(!gate){z=86;goto done;}
+- z=_gz_hg_capture_seal(gate);if(z)goto done;
++ if(_gz_wct_heap_pending()){borrowed=1;gate=_gz_wct_root_borrow(WHL_ROOT_CLOCK,mode,_gz_sck_serial,frame);}
++ else gate=_gz_hg_capture_begin(_gz_sck_serial);_gz_sck_report[15]=borrowed;if(!gate){z=86;goto done;}
++ z=srh_wct_seal(WHL_ROOT_CLOCK,mode,_gz_sck_serial,frame,gate,borrowed);if(z)goto done;
+  z=srh_current();if(z)goto done;root=_gz_srh_binding.root;
+  sck_read(root);
+  n=mode==1?8:_gz_ckr_kernel_count();if(n!=5&&n!=8){z=28;goto done;}
+@@ -247,7 +267,7 @@
+   }
+   if(!sck_values_safe(target,n)||!sck_values_safe(expected,n)||!sck_values_safe(alternate,n)){z=77;goto done;}
+   for(i=0;i<n;i++)if(_gz_sck_values[i]!=expected[i]&&_gz_sck_values[i]!=alternate[i]){z=77;goto done;}
+-  z=srh_current();if(z)goto done;z=_gz_hg_capture_seal(gate);if(z)goto done;
++  z=srh_current();if(z)goto done;z=srh_wct_seal(WHL_ROOT_CLOCK,mode,_gz_sck_serial,frame,gate,borrowed);if(z)goto done;
+   if(!sck_scope(mode,frame)){z=5;goto done;}
+   /* Fixed targets only. No native call, callback, source lookup or yield
+    * occurs between these five stores under the exact allocation exclusion. */
+@@ -263,9 +283,9 @@
+    *(volatile unsigned char*)(SCK_AIR+0x64)=(unsigned char)target[7];_gz_sck_report[14]|=128;}
+   sck_read(root);for(i=0;i<n;i++)if(_gz_sck_values[i]!=target[i]){z=77;goto done;}
+  }
+- z=srh_current();if(!z)z=_gz_hg_capture_seal(gate);
++ z=srh_current();if(!z)z=srh_wct_seal(WHL_ROOT_CLOCK,mode,_gz_sck_serial,frame,gate,borrowed);
+ done:
+- if(gate){i=_gz_hg_capture_end(gate);if(!z)z=i;_gz_sck_report[5]=i;}
++ if(gate){i=borrowed?_gz_wct_root_unborrow(WHL_ROOT_CLOCK,mode,_gz_sck_serial,frame,gate):_gz_hg_capture_end(gate);if(!z)z=i;_gz_sck_report[5]=i;}
+  if(!z&&!sck_scope(mode,frame))z=5;
+  if(!z)for(i=0;i<5;i++)_gz_sck_report[6+i]=_gz_sck_values[i];
+  _gz_sck_report[3]=z;_gz_sck_report[11]=_gz_hl_control.flags;

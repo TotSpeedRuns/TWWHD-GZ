@@ -1,0 +1,62 @@
+{
+  "schema": "authored-fixed-clock-persistent-borrow-scope/1",
+  "source_snapshot": "post-v148 private R894",
+  "delivered_release_claim": false,
+  "full_reproducible_export": "v126",
+  "complete_current_runtime_reproducible": false,
+  "standalone_library": false,
+  "READ_READY": false,
+  "WORLD_READY": false,
+  "new_root_borrow_private_bytes": 32,
+  "new_native_import_names": 0,
+  "new_hooks": 0,
+  "new_DATA_bytes": 0,
+  "root_borrow_modes": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "root_borrow_kinds": {
+    "CLOCK": 1,
+    "PERSIST": 2
+  },
+  "WGP_modes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "root_borrow_tags": [
+    5,
+    6
+  ],
+  "cleanup_order": [
+    "private root unborrow",
+    "checked final target/inverse/source validation",
+    "actual job LEAVE",
+    "actual HG end",
+    "private journal retirement"
+  ],
+  "Cemu_observations": {
+    "holstered_save_drawn_current_restores": 3,
+    "standalone_quiet_bomb_expiry_restores": 3,
+    "sword_seconds": [
+      0.9172426,
+      0.8527364,
+      0.887271
+    ],
+    "quiet_bomb_seconds": [
+      1.3101636,
+      1.2134211,
+      1.1982395
+    ],
+    "end_to_end_includes_host_polling": true,
+    "controlled_benchmark": false,
+    "WiiU_qualification": false,
+    "source_hash_after_success_is_frozen_driver_assertion_not_retained_raw_packet": true
+  },
+  "current_only_actor_retirement_included": false,
+  "saved_format_memo_extension_included": false,
+  "unmerged_raw_copy_or_triangular_experiments_included": false
+}

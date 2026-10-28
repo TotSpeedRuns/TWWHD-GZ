@@ -775,3 +775,13 @@ qualified. The separate triangular probe experiment is absent.
 ## Post-v148 save-state performance
 
 The [saved-data performance snapshot](save-state-performance/README.md) contains the pin-scoped BOH reuse, mandatory full final validation and pure identity validator. See its finite Cemu results and explicit integration/coverage limits. No raw RAM copy or new live-memory grant is included.
+
+## Fixed clock and persistent-root ownership (private post-v148)
+
+The [root-borrow component](wct-root-borrow/README.md) publishes exact authored
+fixed-kernel and retained-HG/same-job-Gate includes, getter fragments and
+integration diffs. No pending transaction can silently fall back to a nested
+HG begin. Failed private borrows retain the real owner tokens and block finish.
+Three finite sword and three standalone quiet-bomb Cemu restores passed; no
+Wii U, general actor-retirement or complete current-build claim is made. The
+full reproducible integrated source remains v126.

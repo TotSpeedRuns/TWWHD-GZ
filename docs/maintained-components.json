@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "v148-partial-streaming-bookkeeping",
-  "status": "Reviewed authored partial v148 streaming bookkeeping and MSS order/latch first delivered in v148, plus retained v147 observation/admission. No Wii U performance, WORLD/READ or complete current-runtime reproduction claim; integrated full export remains v126.",
+  "revision": "post-v148-partial-save-state-performance",
+  "status": "Authored partial v148 streaming and post-v148 private save-state performance sources. Finite Cemu tests only; no full-game or Wii U acceptance. Complete integrated reproducible export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 45488,
-      "sha256": "a067d3e1422b8201a2b391c6e618e92af3bc9b0025e15c8a4336bacb1a5c0a94"
+      "bytes": 45818,
+      "sha256": "7b875f7fd5c149a8d2e066ac1f31e496085778c760cb34361e1f3fd987659693"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1142,6 +1142,66 @@
       "path": "tests/test_streaming_bookkeeping_source.py",
       "bytes": 4159,
       "sha256": "43d675840617fe179e373ccec12de67cbdd17b8bb6e804bd1cbf7ae9f384fd01"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/identity_validate.c",
+      "bytes": 3051,
+      "sha256": "927c51fa8d9a38db00b8d73614db3b0e91988253bebb7bdab7b24774056f3e25"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/identity_wrapper.s",
+      "bytes": 337,
+      "sha256": "b48c49aa60f0da00f3eae4a7f327125685fee5e7f4a223edc6f79d7a7bfa56d4"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/integration-seams.json",
+      "bytes": 6128,
+      "sha256": "032b91c936f5fd2e7e6c8f1e09de6c89715f028123a5949cb97f94857fbb8621"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/README.md",
+      "bytes": 2728,
+      "sha256": "940fe44657b9b1ffaa87da22e56cdf5e6db55db879914434d3357352617d6d9e"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/scope.json",
+      "bytes": 4179,
+      "sha256": "014f6714c90ff835313ff4352b9abb0a548d57bfac592dad3d2280f0afe4a634"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_bomb_final.inc",
+      "bytes": 1519,
+      "sha256": "70789cfb280a44662c9c7f266f5c8f03f636c5f4b50b486c5b5a48154052c937"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_bomb_scope.h",
+      "bytes": 1963,
+      "sha256": "95d344d787f8bbd89e9ae6a7e1300eb32bebf828504f75b1f187e6f9c98eee32"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_bomb_scope.inc",
+      "bytes": 4294,
+      "sha256": "391c701d66f6f11eeb8d4850464e19358066c3cb2748fb8c6391b04eb8e40807"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_pin_digest.h",
+      "bytes": 888,
+      "sha256": "a8e933ab47ce5838aff091e50b15d9cd316b1b1b97edeb57ea8c58b3b35e75d7"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_pin_digest.inc",
+      "bytes": 3165,
+      "sha256": "884203c6ab2d64a75052f6c3a244945676544b357a04be7115cae37d9d2fd743"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_pin_format.h",
+      "bytes": 2371,
+      "sha256": "ac649d35046566997cf477c3dbbc233b2874b5a053c2ad8582308bbea35918ba"
+    },
+    {
+      "path": "experiments/maintained-components/save-state-performance/source_pin_format.inc",
+      "bytes": 3393,
+      "sha256": "a9296d56c6ccf23081c32cbc57d08277d5d2820f2ffefc29f3e88485897c0b7d"
     }
   ],
   "excludes": [

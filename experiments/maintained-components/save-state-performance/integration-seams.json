@@ -1,0 +1,109 @@
+{
+  "schema": "authored-BOH-source-reuse-integration-seams/1",
+  "seams": [
+    {
+      "file": "bomb/held_constructor.c",
+      "name": "preserve whole BOH body under fixed wrapper",
+      "before": "void _gz_boh_step(void){",
+      "after": "static __attribute__((noinline,noclone)) void sbp_boh_step_inner(void){"
+    },
+    {
+      "file": "bomb/bomb_forward_menu.c",
+      "name": "preserve whole BFM body under fixed wrapper",
+      "before": "void _gz_bfm_tick(void){",
+      "after": "static __attribute__((noinline,noclone)) void sbp_bfm_tick_inner(void){"
+    },
+    {
+      "file": "bomb/bomb_recreation.c",
+      "name": "fixed purpose after exact whole TU",
+      "before": "#include \"bomb_clone.c\"",
+      "after": "#include \"bomb_clone.c\"\n#include \"source_bomb_scope.inc\""
+    },
+    {
+      "file": "bomb/keese_render_capture.c",
+      "name": "new purpose is excluded from arbitrary writer outputs",
+      "before": "#include \"observer_native_addresses.h\"",
+      "after": "#include \"observer_native_addresses.h\"\n#include \"source_bomb_scope.h\""
+    },
+    {
+      "file": "bomb/keese_render_capture.c",
+      "name": "fixed purpose span in every KRC private-apart view",
+      "before": "  !epj_apart(p,n,(u32)&_gz_krc_stage,sizeof(_gz_krc_stage))||",
+      "after": "  !epj_apart(p,n,(u32)&_gz_sbp_call,sizeof(_gz_sbp_call))||\n  !epj_apart(p,n,(u32)&_gz_krc_stage,sizeof(_gz_krc_stage))||"
+    },
+    {
+      "file": "so/source-core/source_pin_digest.inc",
+      "name": "declare exact shared purpose ABI",
+      "before": "#include \"source_pin_digest.h\"",
+      "after": "#include \"source_pin_digest.h\"\n#include \"source_bomb_scope.h\""
+    },
+    {
+      "file": "so/source-core/source_pin_digest.inc",
+      "name": "tri-state genuine purpose only",
+      "before": "    GzSourceDigest result;\n    if(!so_pin()) {",
+      "after": "    GzSourceDigest result;\n    u32 scope;\n    if(!so_pin()) {"
+    },
+    {
+      "file": "so/source-core/source_pin_digest.inc",
+      "name": "issued digest gated by genuine WCT or BOH purpose",
+      "before": "    if((u32)(result>>32)==GZ_DIGEST_ISSUED&&!_gz_wct_source_digest_scope())\n        return SPD_RESULT(GZ_DIGEST_FULL,0);",
+      "after": "    if((u32)(result>>32)==GZ_DIGEST_ISSUED) {\n        scope=_gz_source_reuse_scope();\n        if(scope==SBP_NONE) return SPD_RESULT(GZ_DIGEST_FULL,0);\n        if(scope!=SBP_CHECK) return SPD_RESULT(GZ_DIGEST_REFUSE,0);\n    }"
+    },
+    {
+      "file": "so/source-core/source_pin_format.inc",
+      "name": "same fixed shared purpose ABI",
+      "before": "extern u32 sfm_original_scope(void) __asm__(\"_gz_wct_source_digest_scope\");",
+      "after": "extern u32 sfm_original_scope(void) __asm__(\"_gz_source_reuse_scope\");"
+    },
+    {
+      "file": "so/source-core/source_pin_format.inc",
+      "name": "memo scope local scalar",
+      "before": "    u32 pin,plan,z,phase;",
+      "after": "    u32 pin,plan,z,phase,scope;"
+    },
+    {
+      "file": "so/source-core/source_pin_format.inc",
+      "name": "NONE keeps FULL but poisoned purpose refuses",
+      "before": "    if (!sfm_original_scope()) return SFM_FULL;",
+      "after": "    scope=sfm_original_scope();\n    if (scope==SBP_NONE) return SFM_FULL;\n    if (scope!=SBP_CHECK) return SFM_REFUSE;"
+    },
+    {
+      "file": "so/source-core/source_pin_digest.inc",
+      "name": "describe both authenticated purposes",
+      "before": "    /* Preserve complete original ROH hashing outside the genuine ordinary\n     * WCT invocation, whose healthy publication has the forced-full exit. */",
+      "after": "    /* Preserve complete original ROH hashing outside the genuine WCT or\n     * BOH invocation, whose healthy publication has a forced-full exit. */"
+    },
+    {
+      "file": "so/source-core/source_pin_format.inc",
+      "name": "describe retained non-purpose FULL callers",
+      "before": "    /* Preserve BOM/BSR/capture and all other non-WCT callers' original FULL\n     * validation. This branch does not inspect or update the memo. */",
+      "after": "    /* Preserve capture, recovery and other callers outside the two genuine\n     * purposes. FULL does not inspect or update the memo. */"
+    },
+    {
+      "file": "so/source-core/source_pin_format.inc",
+      "name": "describe both genuine postchecked purposes",
+      "before": "     * lease and WCT scope are checked again even on an already-minted hit. */",
+      "after": "     * lease and genuine purpose are checked again on an already-minted hit. */"
+    },
+    {
+      "file": "so/source-core/source_module.c",
+      "name": "fixed final verifier after existing provider",
+      "before": "#include \"source_pin_format.inc\"",
+      "after": "#include \"source_pin_format.inc\"\n#include \"source_bomb_final.inc\""
+    },
+    {
+      "file": "roh/bomb_owner_commit.inc",
+      "name": "declare fixed source boundary",
+      "before": "extern void _gz_boh_commit_leaf(void);",
+      "after": "extern void _gz_boh_commit_leaf(void);\r\n#include \"source_bomb_scope.h\""
+    },
+    {
+      "file": "roh/bomb_owner_commit.inc",
+      "name": "force full SOURCE before nonfallible publication",
+      "before": " z=validate(token,1,1);if(z)return z;\r\n if(!all_quiet()||_gz_boh_commit_scope(token,frame)!=1)return ROH_SERVICE;\r\n /* No source read, SDK/native call, allocation or failure branch follows. */",
+      "after": " z=validate(token,1,1);if(z)return z;\r\n if(!all_quiet()||_gz_boh_commit_scope(token,frame)!=1)return ROH_SERVICE;\r\n z=_gz_som_verify_bomb_final(token,frame);if(z)return z;\r\n if(!all_quiet()||_gz_boh_commit_scope(token,frame)!=1)return ROH_SERVICE;\r\n /* No source read, SDK/native call, allocation or failure branch follows. */"
+    }
+  ],
+  "missing_parent_dependencies": "Complete BOH/BFM, SO/OSA, ROH and native owner modules, original native wrappers, hook/loader integration and current multi-object builder remain external.",
+  "R3_inlined_HBP_helper": "source_bomb_scope.inc supplies the original five predicates because the parent compiler inlined hbp_sealed; it calls the existing private btr_hash symbol."
+}

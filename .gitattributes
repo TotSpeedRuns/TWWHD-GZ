@@ -24,3 +24,6 @@ experiments/maintained-components/streaming-bookkeeping-v148/* text eol=lf
 experiments/maintained-components/streaming-bookkeeping-v148/collider/* text eol=lf
 experiments/maintained-components/streaming-bookkeeping-v148/sdk/* text eol=lf
 tests/test_streaming_bookkeeping_source.py text eol=lf
+
+# Authored post-v148 private performance snapshot.
+experiments/maintained-components/save-state-performance/* text eol=lf

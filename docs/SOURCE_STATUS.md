@@ -169,3 +169,7 @@ bomb expiry restores and a bounded ocean-streaming Cemu campaign passed; Wii U
 lag/crash improvement remains unverified. No triangular-probing experiment,
 raw-copy kernel or new WORLD/READ permission is included. See
 [streaming bookkeeping scope](../experiments/maintained-components/streaming-bookkeeping-v148/README.md).
+
+## Post-v148 save-state performance source
+
+The [saved-data performance snapshot](../experiments/maintained-components/save-state-performance/README.md) adds genuine BOH pin-scoped source reuse and the pure identity validator. Three Cemu bomb expiry/restores and a separate seven-cut foliage replay passed. Observed restore intervals fell from roughly 2.14 seconds to 1.21 seconds in the same driver; this is not a controlled or hardware benchmark. It is a private-branch partial snapshot, not a new released build or full-game acceptance. Integrated reproducible source remains v126.

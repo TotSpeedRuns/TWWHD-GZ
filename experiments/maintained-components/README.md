@@ -771,3 +771,7 @@ reviewed authored CM, SDK and HL changes plus portable checks. It retains full
 metadata preflight, generations and lifecycle rules. This is a partial source
 snapshot: integrated reproduction remains v126, and Wii U performance is not
 qualified. The separate triangular probe experiment is absent.
+
+## Post-v148 save-state performance
+
+The [saved-data performance snapshot](save-state-performance/README.md) contains the pin-scoped BOH reuse, mandatory full final validation and pure identity validator. See its finite Cemu results and explicit integration/coverage limits. No raw RAM copy or new live-memory grant is included.

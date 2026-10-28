@@ -1,0 +1,98 @@
+{
+  "schema": "authored-display-activity-source-pins/1",
+  "hash_projection": "Both actual authored-source bytes and UTF-8 LF projections are pinned. integration.patch.txt applies to the LF projection; line endings are the only normalization.",
+  "files": [
+    {
+      "path": "source/bomb/bomb_forward_menu.c",
+      "parent_actual_bytes": {
+        "bytes": 11844,
+        "sha256": "01384e4fc4cd3c9ef4bf39eecc26158699c524a90e3ae11c3b869da200d2cb78"
+      },
+      "final_actual_bytes": {
+        "bytes": 11897,
+        "sha256": "43f8891a203af882ec04021126befa2d0119a4aa8d5901e7c2db370d4e490fcc"
+      },
+      "parent_UTF8_LF": {
+        "bytes": 11844,
+        "sha256": "01384e4fc4cd3c9ef4bf39eecc26158699c524a90e3ae11c3b869da200d2cb78"
+      },
+      "final_UTF8_LF": {
+        "bytes": 11897,
+        "sha256": "43f8891a203af882ec04021126befa2d0119a4aa8d5901e7c2db370d4e490fcc"
+      }
+    },
+    {
+      "path": "source/bomb/bomb_recreation.c",
+      "parent_actual_bytes": {
+        "bytes": 27224,
+        "sha256": "3b5efc6ec147e07dc200c67a88c09a6e25ff7a36d13c990fcf99d397ac033a6f"
+      },
+      "final_actual_bytes": {
+        "bytes": 27318,
+        "sha256": "172a187a8660d6b4adeb06ef15b2deb0fd1fdad9cb9543bca31b063754e09176"
+      },
+      "parent_UTF8_LF": {
+        "bytes": 27224,
+        "sha256": "3b5efc6ec147e07dc200c67a88c09a6e25ff7a36d13c990fcf99d397ac033a6f"
+      },
+      "final_UTF8_LF": {
+        "bytes": 27318,
+        "sha256": "172a187a8660d6b4adeb06ef15b2deb0fd1fdad9cb9543bca31b063754e09176"
+      }
+    },
+    {
+      "path": "source/bomb/world_core_menu.c",
+      "parent_actual_bytes": {
+        "bytes": 3576,
+        "sha256": "7a6b18b6d6115f832a503a30420e22505449f9aea96bf1a276cd4215a094c1a2"
+      },
+      "final_actual_bytes": {
+        "bytes": 3610,
+        "sha256": "ed1b7287666f42dba2cd59dfb36120e0f66764242bea24316ce086d216a74ae0"
+      },
+      "parent_UTF8_LF": {
+        "bytes": 3531,
+        "sha256": "488e23ddf580a7c8eacf864e91d32428646699a0e0231a7d6ea9b7feadabbf3b"
+      },
+      "final_UTF8_LF": {
+        "bytes": 3565,
+        "sha256": "0f62b0cd3ecdc8b17d951ffb0ee8cbe6089e5ded93e9b2b446c12997dabe0718"
+      }
+    },
+    {
+      "path": "source/roh/owner.c",
+      "parent_actual_bytes": {
+        "bytes": 36195,
+        "sha256": "ada56167ae5ee6cc4b6ab0ca8adb0d1707974afa645f52c324eb884f61771233"
+      },
+      "final_actual_bytes": {
+        "bytes": 36340,
+        "sha256": "f8b2d49ab83c57db5f7fcc40621b47d5f06031ea6e70e0fc0a051bf2a867d68f"
+      },
+      "parent_UTF8_LF": {
+        "bytes": 36195,
+        "sha256": "ada56167ae5ee6cc4b6ab0ca8adb0d1707974afa645f52c324eb884f61771233"
+      },
+      "final_UTF8_LF": {
+        "bytes": 36340,
+        "sha256": "f8b2d49ab83c57db5f7fcc40621b47d5f06031ea6e70e0fc0a051bf2a867d68f"
+      }
+    }
+  ],
+  "shared_header": {
+    "path": "snapshot_display_activity.h",
+    "bytes": 976,
+    "sha256": "c2b05023b0e58b6fa26a1b7ce2a2872f91a2023562048ae4a69ce79881d31357",
+    "install_into": [
+      "source/bomb/snapshot_display_activity.h",
+      "source/roh/snapshot_display_activity.h"
+    ]
+  },
+  "integration_patch": {
+    "path": "integration.patch.txt",
+    "bytes": 2102,
+    "sha256": "43b556b01b7a754a29b90a59db2850fc3a9958b76bebdc4224a5c42c6a867006"
+  },
+  "patch_hunks": 7,
+  "changed_authored_C_files": 4
+}

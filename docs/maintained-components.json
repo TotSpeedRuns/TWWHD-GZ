@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v148-partial-fixed-root-borrow",
-  "status": "Authored partial v148 streaming, post-v148 private performance and fixed-root borrowing sources. Finite Cemu tests only; no full-game or Wii U acceptance. Complete integrated reproducible export remains v126.",
+  "revision": "post-v148-partial-display-activity",
+  "status": "Authored partial v148 streaming, post-v148 private performance, fixed-root ownership and display activity sources. Finite Cemu tests only; no full-game or Wii U acceptance. Complete integrated reproducible export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 46399,
-      "sha256": "c042b8ac815507a522bceb9c264cef225bdfc61e4fbb05afeefcfb470abb79b1"
+      "bytes": 46907,
+      "sha256": "048eca40c9fafffd9760e1c36d87a0dae5236ddaf8bde2f67b4aa46691f74e36"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1277,6 +1277,31 @@
       "path": "experiments/maintained-components/wct-root-borrow/save_origin/root_context.inc",
       "bytes": 1141,
       "sha256": "e3554c55a694d05f17887bb981efbb0a3971cdb34e5bdda731ada0337f9e4712"
+    },
+    {
+      "path": "experiments/maintained-components/snapshot-display-activity/integration.patch.txt",
+      "bytes": 2102,
+      "sha256": "43b556b01b7a754a29b90a59db2850fc3a9958b76bebdc4224a5c42c6a867006"
+    },
+    {
+      "path": "experiments/maintained-components/snapshot-display-activity/README.md",
+      "bytes": 2393,
+      "sha256": "5e7cc842d8130688484e683b439b71a0f2a582f13ae160c9e60efe422e2928fb"
+    },
+    {
+      "path": "experiments/maintained-components/snapshot-display-activity/scope.json",
+      "bytes": 1081,
+      "sha256": "36751e11c456c1d3eb23988cf5b9adee16f726444479ef8341e473b7d7604281"
+    },
+    {
+      "path": "experiments/maintained-components/snapshot-display-activity/snapshot_display_activity.h",
+      "bytes": 976,
+      "sha256": "c2b05023b0e58b6fa26a1b7ce2a2872f91a2023562048ae4a69ce79881d31357"
+    },
+    {
+      "path": "experiments/maintained-components/snapshot-display-activity/source-pins.json",
+      "bytes": 3335,
+      "sha256": "4b54a2c4031bb6f490381e6914b441680797c5c1e880e44932399b79c13a2eab"
     }
   ],
   "excludes": [

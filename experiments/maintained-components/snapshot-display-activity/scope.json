@@ -1,0 +1,35 @@
+{
+  "schema": "authored-snapshot-display-activity-scope/2",
+  "source_snapshot": "post-v148 private R911",
+  "complete_reproducible_export": "v126",
+  "standalone_current_builder": false,
+  "delivered_release_claim": false,
+  "display_bits": [
+    1,
+    2
+  ],
+  "existing_legacy_allow_preserved": [
+    0,
+    8
+  ],
+  "private_probe_activity_rules_unchanged": true,
+  "SOURCE_CURRENT_lifetime_checks_preserved": true,
+  "new_DATA_bytes": 0,
+  "new_BSS_bytes": 0,
+  "new_native_hooks": 0,
+  "new_native_import_sites": 0,
+  "Cemu_observations": {
+    "normal_Tools_UI_flags": 3,
+    "natural_bomb_expiry_restores_passed": 3,
+    "first_sword_harness_stopped_before_capture": true,
+    "full_game_coverage": false,
+    "WiiU_qualification": false,
+    "controlled_speedup_claim": false,
+    "holstered_save_drawn_current_sword_restores_passed": 3,
+    "sword_opposite_constructor_direction_tested": false,
+    "initial_harness_argument_count_error_corrected": true,
+    "initial_harness_stop_was_not_a_GZ_restore_failure": true
+  },
+  "READ_READY": false,
+  "WORLD_READY": false
+}

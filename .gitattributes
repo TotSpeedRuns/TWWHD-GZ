@@ -32,3 +32,6 @@ experiments/maintained-components/save-state-performance/* text eol=lf
 experiments/maintained-components/wct-root-borrow/* text eol=lf
 experiments/maintained-components/wct-root-borrow/save_origin/* text eol=lf
 tests/test_wct_root_borrow_source.py text eol=lf
+
+# Authored snapshot display activity policy.
+experiments/maintained-components/snapshot-display-activity/* text eol=lf

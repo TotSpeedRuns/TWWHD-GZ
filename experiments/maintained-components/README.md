@@ -785,3 +785,12 @@ HG begin. Failed private borrows retain the real owner tokens and block finish.
 Three finite sword and three standalone quiet-bomb Cemu restores passed; no
 Wii U, general actor-retirement or complete current-build claim is made. The
 full reproducible integrated source remains v126.
+
+## Snapshot display activity (private post-v148)
+
+The [display activity component](snapshot-display-activity/README.md) publishes
+the shared activity header and seven authored C patch hunks. Normal-menu Debug
+and Input Viewer remained enabled during three finite Cemu bomb restores and
+three holstered-save/drawn-current sword restores. Other gameplay restrictions
+and all SOURCE/CURRENT/lifetime checks remain. No full-game, Wii U or comparative
+speed claim is made. The integrated full export stays v126.

@@ -1,0 +1,31 @@
+diff --git a/source/bomb/bomb_forward_menu.c b/source/bomb/bomb_forward_menu.c
+--- a/source/bomb/bomb_forward_menu.c
++++ b/source/bomb/bomb_forward_menu.c
+@@ -48 +48 @@
+-  (allow_existing==2?c>1:(allow_existing?c!=1:c!=0))||(_gz_pbac_tools&~8u)||_gz_pbac_pending||_gz_pbac_event||
++  (allow_existing==2?c>1:(allow_existing?c!=1:c!=0))||gz_snapshot_activity_conflict(_gz_pbac_tools,GZ_SNAPSHOT_LEGACY_UPCHARGE)||_gz_pbac_pending||_gz_pbac_event||
+diff --git a/source/bomb/bomb_recreation.c b/source/bomb/bomb_recreation.c
+--- a/source/bomb/bomb_recreation.c
++++ b/source/bomb/bomb_recreation.c
+@@ -0,0 +1 @@
++#include "snapshot_display_activity.h"
+@@ -112 +113 @@
+- if(_gz_pbac_tools&~8u)return 8;if(_gz_pbac_world_resume_pending)return 9;
++ if(gz_snapshot_activity_conflict(_gz_pbac_tools,GZ_SNAPSHOT_LEGACY_UPCHARGE))return 8;if(_gz_pbac_world_resume_pending)return 9;
+diff --git a/source/bomb/world_core_menu.c b/source/bomb/world_core_menu.c
+--- a/source/bomb/world_core_menu.c
++++ b/source/bomb/world_core_menu.c
+@@ -24 +24 @@
+- if(R32(p+R32(p,208),72)||bomb_count(_gz_pba_native_actor_queue)||_gz_pbac_tools||_gz_pbac_pending||_gz_pbac_event||
++ if(R32(p+R32(p,208),72)||bomb_count(_gz_pba_native_actor_queue)||gz_snapshot_activity_conflict(_gz_pbac_tools,0u)||_gz_pbac_pending||_gz_pbac_event||
+diff --git a/source/roh/owner.c b/source/roh/owner.c
+--- a/source/roh/owner.c
++++ b/source/roh/owner.c
+@@ -2,0 +3 @@
++#include "snapshot_display_activity.h"
+@@ -69 +70 @@
+-static u32 base_quiet(void){return _gz_roh_live_menu==1&&!(_gz_roh_live_tools&~8u)&&!_gz_roh_live_pending&&!_gz_roh_live_inv&&!_gz_roh_live_hover&&!_gz_roh_live_life&&!_gz_roh_live_route;}
++static u32 base_quiet(void){return _gz_roh_live_menu==1&&!gz_snapshot_activity_conflict(_gz_roh_live_tools,GZ_SNAPSHOT_LEGACY_UPCHARGE)&&!_gz_roh_live_pending&&!_gz_roh_live_inv&&!_gz_roh_live_hover&&!_gz_roh_live_life&&!_gz_roh_live_route;}
+@@ -73 +74 @@
+- (_gz_roh_live_menu!=1?1u:0u)|((_gz_roh_live_tools&~8u)?2u:0u)|
++ (_gz_roh_live_menu!=1?1u:0u)|(gz_snapshot_activity_conflict(_gz_roh_live_tools,GZ_SNAPSHOT_LEGACY_UPCHARGE)?2u:0u)|

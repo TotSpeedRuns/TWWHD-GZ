@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v148-partial-display-activity",
-  "status": "Authored partial v148 streaming, post-v148 private performance, fixed-root ownership and display activity sources. Finite Cemu tests only; no full-game or Wii U acceptance. Complete integrated reproducible export remains v126.",
+  "revision": "post-v148-partial-worker-custody",
+  "status": "Authored partial v148 and later private component snapshots, including same-worker SOURCE custody. Finite Cemu tests only; complete integrated reproducible export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 46907,
-      "sha256": "048eca40c9fafffd9760e1c36d87a0dae5236ddaf8bde2f67b4aa46691f74e36"
+      "bytes": 47245,
+      "sha256": "3d5de552c05274b6b0b5920c53557e02680a3930854abcafb90bab265fa90468"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1302,6 +1302,61 @@
       "path": "experiments/maintained-components/snapshot-display-activity/source-pins.json",
       "bytes": 3335,
       "sha256": "4b54a2c4031bb6f490381e6914b441680797c5c1e880e44932399b79c13a2eab"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/integration-pins.json",
+      "bytes": 5336,
+      "sha256": "c889afc39ceab03723d88ce3b7c370d606391236d367a5ffdfefcc87735862b5"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/integration.patch.txt",
+      "bytes": 4351,
+      "sha256": "9badd68f3f3c888e1c00e4145d676fe4bfbd67823805485445d3603e2d150232"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/policy_cases.c",
+      "bytes": 1100,
+      "sha256": "c8b5a25af00727562b3d3ab5b17661f458820241773f2ed8c719d12a0b709d5c"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/README.md",
+      "bytes": 3756,
+      "sha256": "2a4f9f39450562529cf75e97308adb72678b5784b100a693abb2eb68b99eb3e3"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/scope.json",
+      "bytes": 1280,
+      "sha256": "8e5706fce2a21bd00c0d91f1af49290eaf3c41dfc98db44fc4a74b7c94e33b2c"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/source-pins.json",
+      "bytes": 2031,
+      "sha256": "0f233f6d63b3a0ca70626b23ec012ad290303c49741bba4412da69285c15c9ea"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/source_worker_custodian.h",
+      "bytes": 1308,
+      "sha256": "fb92a2f2f39f18909078b96f02696b7fa24d9fb8548b665acd8c29d221513fd0"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/source_worker_custodian.inc",
+      "bytes": 10248,
+      "sha256": "a7f187f157f295a530019ca05902b7a359b85534c094d92a1437d6d10701b21c"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/source_worker_native_state.inc",
+      "bytes": 181,
+      "sha256": "3375f58859a788a681e8731825cd8d1be35c34b16199598b58abd48249c0ebd0"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/source_worker_policy.h",
+      "bytes": 1028,
+      "sha256": "6930d953402793807e5e3c56615402ead8c656376f8e73c4f1f6511c6c71549f"
+    },
+    {
+      "path": "experiments/maintained-components/source-worker-custodian/source_worker_state.inc",
+      "bytes": 564,
+      "sha256": "cf8767313d401258d7b06f66982d16f548b21899414ad67155c7c54d2df25654"
     }
   ],
   "excludes": [

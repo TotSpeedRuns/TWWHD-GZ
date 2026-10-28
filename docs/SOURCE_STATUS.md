@@ -184,3 +184,5 @@ without fallback. Three private Cemu sword transitions and three separate
 standalone bomb expiry/restores passed. These finite observations do not
 establish Wii U, broad actor retirement or full-game coverage. This is partial
 experimental source; the reproducible integrated export remains v126.
+
+The same-worker SOURCE custodian snapshot is an additional partial authored component. Its fixed callback repair forwards the real slot, MCA and bflower callbacks under one existing acquisition; private Cemu sword tests cover three restores. A separate three-case factory bomb recreation regression also passed; that lane did not participate in WCT or BMH services and supplies no bomb speedup claim. Complete integrated reproduction remains v126; no Wii U, full-game, release or speedup claim is added.

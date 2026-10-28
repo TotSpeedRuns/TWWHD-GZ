@@ -794,3 +794,7 @@ and Input Viewer remained enabled during three finite Cemu bomb restores and
 three holstered-save/drawn-current sword restores. Other gameplay restrictions
 and all SOURCE/CURRENT/lifetime checks remain. No full-game, Wii U or comparative
 speed claim is made. The integrated full export stays v126.
+
+### Same-worker SOURCE custody
+
+[`source-worker-custodian/`](source-worker-custodian/) publishes the authored worker-only acquisition/three-callback/pin-transfer code and zero-context integration patch. It preserves the full SOURCE boundaries and current checks. It is partial source, not a current-game builder or generic memory grant.

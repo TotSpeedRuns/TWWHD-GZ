@@ -35,3 +35,7 @@ tests/test_wct_root_borrow_source.py text eol=lf
 
 # Authored snapshot display activity policy.
 experiments/maintained-components/snapshot-display-activity/* text eol=lf
+
+# Authored same-worker SOURCE custody.
+experiments/maintained-components/source-worker-custodian/* text eol=lf
+tests/test_source_worker_custodian_source.py text eol=lf

@@ -1,0 +1,94 @@
+--- a/source/so/owner/owner.c
++++ b/source/so/owner/owner.c
+@@ -40 +40 @@
+-static U meta_apart(U p,U n){return apart(p,n,(U)&owner,sizeof(owner))&&apart(p,n,(U)&tx,sizeof(tx))&&
++static U meta_apart(U p,U n){return apart(p,n,(U)&swc,sizeof(swc))&&apart(p,n,(U)&owner,sizeof(owner))&&apart(p,n,(U)&tx,sizeof(tx))&&
+--- a/source/so/source-core/compressed_slot_source.c
++++ b/source/so/source-core/compressed_slot_source.c
+@@ -18,0 +19 @@
++ osa_apart(p,n,(OsaU32)&swc,sizeof(swc))&&
+@@ -62 +63 @@
+-void _gz_osa_release_leaf(void){OsaU32 i;
++static void osa_release_owned_leaf(void){OsaU32 i;
+@@ -65,0 +67,4 @@
++}
++void _gz_osa_release_leaf(void){
++ if(swc_pending()){swc_release_refused();return;}
++ osa_release_owned_leaf();
+--- a/source/so/source-core/source_bridge.c
++++ b/source/so/source-core/source_bridge.c
+@@ -48,0 +49 @@
++ if(swc_pending())return SWC_RETAINED;
+@@ -63,0 +65 @@
++ if(swc_pending())return 5;
+@@ -117,0 +120 @@
++ if(swc_pending())return 5;
+--- a/source/so/source-core/source_module.c
++++ b/source/so/source-core/source_module.c
+@@ -9,0 +10 @@
++#include "source_worker_state.inc"
+@@ -12,0 +14 @@
++#include "source_worker_custodian.inc"
+--- a/source/bomb/bomb_recreation.c
++++ b/source/bomb/bomb_recreation.c
+@@ -4,0 +5,2 @@
++#include "source_worker_custodian.h"
++#include "source_worker_native_state.inc"
+--- a/source/bomb/keese_render_capture.c
++++ b/source/bomb/keese_render_capture.c
+@@ -40,0 +41 @@
++  !epj_apart(p,n,(u32)&wct_source,sizeof(wct_source))||
+--- a/source/bomb/wct_native_context.inc
++++ b/source/bomb/wct_native_context.inc
+@@ -30 +30 @@
+- if(_gz_wct_heap_pending()||_gz_wct_root_pending())whl_native.halted=1;
++ if(_gz_wct_heap_pending()||_gz_wct_root_pending()||_gz_swc_pending())whl_native.halted=1;
+--- a/source/bomb/world_core_menu.c
++++ b/source/bomb/world_core_menu.c
+@@ -38,0 +39,9 @@
++u32 _gz_wcm_admission_held(u32 request,u32 frame,u32 slot){u32*q=wcm(),pin,p,n,z=42;
++ pin=_gz_swc_admission_pin(request,frame,slot);if(!pin)return 42;
++ if(!q||!q[2]||q[3]!=1)return 0;
++ if(!wcm_valid(q)||q[4]!=request||q[5]!=slot||slot>9||frame!=_gz_pbac_frame||_gz_roh_user_guard()||
++  !_gz_osa_intent_match(slot,q[8],q[9],q[7],q[10]))return 42;
++ p=_gz_osa_source(pin);n=_gz_osa_bytes(pin);
++ if(_gz_osa_raw_match(pin,slot,p,n)&&n==q[7]&&p==_gz_pbac_slots[slot]&&_gz_osa_pin_identity(pin)==q[8]&&_gz_osa_pin_generation(pin)==q[9]&&
++  btr_hash((const void*)p,n)==q[10])z=0;
++ if(_gz_swc_admission_pin(request,frame,slot)!=pin)return 42;return z;}
+--- a/source/bomb/world_core_roundtrip.c
++++ b/source/bomb/world_core_roundtrip.c
+@@ -13,0 +14,8 @@
++extern volatile u32 _gz_wct_request,_gz_wct_ack;
++u32 _gz_wct_source_worker_context(u32 request,u32 frame,u32 slot){u32 parent;
++ if(wct_source.entered!=1||wct_entered!=1||!request||request!=wct_source.request||
++  frame!=wct_source.frame||slot!=wct_source.slot||frame!=_gz_pbac_frame||slot!=_gz_pbac_selected||
++  slot>9||request!=_gz_wct_request||_gz_wct_ack==BAD||request!=_gz_wct_ack+1||
++  !_gz_wcm_requested(request)||_gz_boh_has_owner())return 0;
++ parent=_gz_wct_native_owned();return parent&&_gz_hg_platform_thread()?parent:0;
++}
+@@ -142,3 +150,6 @@
+- z=_gz_wcm_admission(req,f,slot);if(z)goto done;
+- z=_gz_slots_install(slot);_gz_wct_report[6]=z;if(z)goto done;
+- z=_gz_roh_begin(slot,60);_gz_wct_report[7]=z;if(z)goto done;t=_gz_roh_owner[5];_gz_wct_report[8]=t;
++ wct_source.request=req;wct_source.frame=f;wct_source.slot=slot;
++ __asm__ volatile("sync":::"memory");wct_source.entered=1;
++ z=_gz_swc_begin(req,f,slot);_gz_wct_report[100]=z;if(z)goto done;
++ z=_gz_swc_admission(req,f,slot);_gz_wct_report[101]=z;if(z)goto done;
++ z=_gz_swc_install(req,f,slot);_gz_wct_report[6]=z;if(z)goto done;
++ z=_gz_swc_roh_begin(req,f,slot,60);_gz_wct_report[7]=z;if(z)goto done;t=_gz_roh_owner[5];_gz_wct_report[8]=t;
+@@ -217,0 +229,4 @@
++ if(_gz_swc_pending()){i=_gz_swc_cancel(req,f,slot);_gz_wct_report[102]=i;
++  if(i){_gz_wct_report[46]=1;if(!z)z=i;}}
++ _gz_wct_report[103]=_gz_swc_pending();
++ wct_source.entered=0;wct_source.request=wct_source.frame=wct_source.slot=0;
+--- a/runtime-personal.s
++++ b/runtime-personal.s
+@@ -462788 +462788 @@
+-bl _gz_roh_work_replaced
++bl _gz_swc_mca_work_replaced
+@@ -465503 +465503 @@
+-bl _gz_roh_work_replaced
++bl _gz_swc_slot_work_replaced
+@@ -504616 +504616 @@
+-bl _gz_roh_work_replaced
++bl _gz_swc_bflower_work_replaced

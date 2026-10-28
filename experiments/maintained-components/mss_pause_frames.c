@@ -57,12 +57,9 @@ void _gz_mpd_tick(void){U root,callback,mode=0;
 static char line[64];
 static char *append(char*p,const char*s){while(*s)*p++=*s++;return p;}
 const char *_gz_mpd_text(void){U *s=_gz_mpd_report,n;char *p=line,digits[10];U i=0;
- if(!s[7]&&!s[10])return "Pause frames: -- (2f Insta, 3f target)";
+ if(!s[7]&&!s[10])return "Pause frames: --";
  n=s[7]?s[8]:s[9];p=append(p,s[7]?"|| Pause: ":"> Last pause: ");
  do{digits[i++]=(char)('0'+n%10);n/=10;}while(n);
  while(i)*p++=digits[--i];p=append(p,"f");
- n=s[7]?s[8]:s[9];
- if(n==2)p=append(p," (Insta)");
- else if(n==3)p=append(p," (3f target)");
  *p=0;return line;
 }

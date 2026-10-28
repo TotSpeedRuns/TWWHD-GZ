@@ -1,35 +1,46 @@
 {
-  "schema": "maintained-MSS-visit-source-scope/1",
+  "schema": "maintained-MSS-event-order-source-scope/2",
+  "delivered_revision": "v147",
   "full_reproducible_export": "v126",
   "complete_current_runtime_reproducible": false,
   "source_files": [
     {
       "path": "mss_order.c",
-      "bytes": 5454,
-      "sha256": "3e5ce8d403a8ab7421c6920944cc3958ae3b332bfec5ce29808c8192dc267075"
+      "bytes": 6179,
+      "sha256": "5e7b91eb08b77d4394bc8af545e6fc9e896c5a3aa9338ff9ee8d69e67791ca35"
     },
     {
       "path": "mss_pause_frames.c",
-      "bytes": 2705,
-      "sha256": "3131dcab1081fdedeee7cb41f6a0f176103c24d088b80ccd651a7ec8fb0b4bc6"
+      "bytes": 2589,
+      "sha256": "bc8cd70facb6b6c4fa721d4add10aa0207e522a3f4314d747a65f26f149f3da3"
     },
     {
       "path": "mss_visit_join.c",
-      "bytes": 10639,
-      "sha256": "06795f5fea13cd7047ab2244e7288d2a93c3bf838f6a95a5c3241fc600bd39ed"
+      "bytes": 9284,
+      "sha256": "3bcb889ec4df908a695bae1827f27b2ac033c27346d40b213dee7db419b0ced3"
     },
     {
       "path": "mss_visit_join.h",
-      "bytes": 1442,
-      "sha256": "919ceed6901c65ac8460f992535188bf65891b62ef7cb99acc40b66a758cc1c1"
+      "bytes": 1553,
+      "sha256": "04b962728c83f2a80fba4c8228a147eb597241b723deae6824e11a0dbfe4cc62"
     }
   ],
-  "native_observation": "Scoped R749/R786 Cemu metadata/controller checks, including one fresh joined two-settled-frame Insta visit.",
+  "rules": {
+    "Slow": "Plus-stick-Plus",
+    "Fast": "Plus-Plus-stick",
+    "Insta": "Plus-B-stick or B+stick closing sample"
+  },
+  "pause_duration_type_authority": false,
+  "last_completed_display_latched": true,
+  "MSJ_ABI": 2,
+  "native_observation": "Twelve actual private Cemu Slow/Fast/Insta variants at requested dwell0.1/0.3/0.8seconds; new pause retained prior label, native pause metrics4..27frames.",
+  "portable_tests": "mss_order_cases.c",
   "not_proven": [
     "Wii U acceptance",
     "Seven-frame stick eligibility window",
-    "3/4/5 color feedback",
     "All pad subsamples",
-    "Full newer integration"
+    "Pixel output",
+    "Full newer integration",
+    "Save-state coverage"
   ]
 }

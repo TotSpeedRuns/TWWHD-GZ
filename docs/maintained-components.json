@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
   "revision": "v147-partial-native-heap-and-source-validation",
-  "status": "Reviewed authored partial components including v147 heap metadata/provenance, worker admission and SOURCE validation reuse. WORLD/READ false; complete reproducible integrated export remains v126.",
+  "status": "Reviewed authored partial v147 components, including MSS explicit order/latch, heap metadata/provenance, worker admission and SOURCE reuse. WORLD/READ false; complete reproducible integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -20,8 +20,8 @@
     },
     {
       "path": "experiments/maintained-components/mss_order.c",
-      "sha256": "3e5ce8d403a8ab7421c6920944cc3958ae3b332bfec5ce29808c8192dc267075",
-      "bytes": 5454
+      "bytes": 6179,
+      "sha256": "5e7b91eb08b77d4394bc8af545e6fc9e896c5a3aa9338ff9ee8d69e67791ca35"
     },
     {
       "path": "experiments/maintained-components/mss_order_wrapper.s",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 45114,
-      "sha256": "0b15aff31c141d71db289fe7b3a1aed2d57ed7af3f0a9641da261e0c7dfc05dd"
+      "bytes": 45054,
+      "sha256": "04c95ec45335629959c5a862c5c3dd51f911f24db96c918228a434aa40994f2c"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -160,8 +160,8 @@
     },
     {
       "path": "experiments/maintained-components/mss_pause_frames.c",
-      "sha256": "3131dcab1081fdedeee7cb41f6a0f176103c24d088b80ccd651a7ec8fb0b4bc6",
-      "bytes": 2705
+      "bytes": 2589,
+      "sha256": "bc8cd70facb6b6c4fa721d4add10aa0207e522a3f4314d747a65f26f149f3da3"
     },
     {
       "path": "experiments/maintained-components/save_state/foliage_journal.c",
@@ -655,13 +655,13 @@
     },
     {
       "path": "experiments/maintained-components/mss_visit_join.c",
-      "sha256": "06795f5fea13cd7047ab2244e7288d2a93c3bf838f6a95a5c3241fc600bd39ed",
-      "bytes": 10639
+      "bytes": 9284,
+      "sha256": "3bcb889ec4df908a695bae1827f27b2ac033c27346d40b213dee7db419b0ced3"
     },
     {
       "path": "experiments/maintained-components/mss_visit_join.h",
-      "sha256": "919ceed6901c65ac8460f992535188bf65891b62ef7cb99acc40b66a758cc1c1",
-      "bytes": 1442
+      "bytes": 1553,
+      "sha256": "04b962728c83f2a80fba4c8228a147eb597241b723deae6824e11a0dbfe4cc62"
     },
     {
       "path": "experiments/maintained-components/generic-cpu-observation/integration-seams.json",
@@ -685,8 +685,8 @@
     },
     {
       "path": "experiments/maintained-components/mss-source-scope.json",
-      "sha256": "880a8a743d90ebd9be7479f19ca0c4329c7a15a655ea0865163f1ec1a2f9c060",
-      "bytes": 1077
+      "bytes": 1455,
+      "sha256": "7026202de499de7663e56692289ac42d66dcaeeefb88c4031ecd4178942dce60"
     },
     {
       "path": "experiments/maintained-components/generic-frame-observation/frame_observer.c",
@@ -1072,6 +1072,16 @@
       "path": "experiments/maintained-components/native-heap-v147/format_pot_bank.inc",
       "bytes": 1356,
       "sha256": "d982e9b301e88927e3c178a012c3ad3d436a3974617bf35e11c7583b7caed0a7"
+    },
+    {
+      "path": "experiments/maintained-components/mss_order_cases.c",
+      "bytes": 3383,
+      "sha256": "72c6aec0952217350521fa708693f617946cb8eecf983988f8642356ec861189"
+    },
+    {
+      "path": "experiments/maintained-components/MSS_INPUT_ORDER.md",
+      "bytes": 3536,
+      "sha256": "1d68540f4ee15e770ec364914308cc11e54e084310d6c8937022cf125d30bbed"
     }
   ],
   "excludes": [

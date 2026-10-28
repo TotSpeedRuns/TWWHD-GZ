@@ -13,7 +13,7 @@ extern volatile unsigned char _gz_loading_store;
 volatile MssVisitJoin _gz_msj_report = {
     .magic = 0x4d534a31u,
     .bytes = 128,
-    .version = 1
+    .version = 2
 };
 
 enum {
@@ -32,12 +32,6 @@ enum {
 };
 
 static void msj_cancel(MssJoinWord reason);
-
-typedef struct MssPublication {
-    MssJoinWord active, counter_increased;
-    MssJoinWord type, display, phase;
-    MssJoinWord actor, first_frame;
-} MssPublication;
 
 static MssJoinWord msj_enter(void)
 {
@@ -63,30 +57,14 @@ static MssJoinWord msj_enter(void)
     }
 }
 
-static void msj_leave(const MssPublication *publication)
+static void msj_leave(void)
 {
     MssJoinWord expected = 1;
-
     if (__atomic_compare_exchange_n(&_gz_msj_report.busy, &expected, 0, 0,
                                     __ATOMIC_RELEASE, __ATOMIC_RELAXED))
         return;
-    /* A poisoned guard remains exclusively owned until cleanup is complete.
-     * No final plain check can race with publication and release. Only a type
-     * published by this invocation is rolled back; older completed labels are
-     * outside the pending join. 'lost' is a diagnostic count, never authority.
-     */
-    if (publication && publication->active) {
-        if (_gz_mss_state[0] == publication->actor &&
-            _gz_mss_state[45] == publication->first_frame &&
-            _gz_mss_state[36] == 3 && _gz_mss_state[37] == 3 &&
-            _gz_mss_state[42] == 4) {
-            _gz_mss_state[36] = publication->type;
-            _gz_mss_state[37] = publication->display;
-            _gz_mss_state[42] = publication->phase;
-        }
-        if (publication->counter_increased)
-            _gz_msj_report.published--;
-    }
+    /* Visit metadata never publishes input classification. A nested lost
+     * notification cancels this visit only; last completed display survives. */
     msj_cancel(MSJ_REENTRY);
     __atomic_store_n(&_gz_msj_report.busy, 0, __ATOMIC_RELEASE);
 }
@@ -155,7 +133,7 @@ void _gz_msj_begin(MssJoinWord *state, MssJoinWord native_frame)
     }
     _gz_msj_report.armed = 1;
 done:
-    msj_leave(0);
+    msj_leave();
 }
 
 void _gz_msj_observe(MssJoinWord frame, MssJoinWord mode, MssJoinWord epoch)
@@ -206,7 +184,7 @@ void _gz_msj_observe(MssJoinWord frame, MssJoinWord mode, MssJoinWord epoch)
         _gz_msj_report.gameplay_baseline = 0;
     }
 done:
-    msj_leave(0);
+    msj_leave();
 }
 
 void _gz_msj_visit_begin(MssJoinWord frame, MssJoinWord epoch)
@@ -234,14 +212,12 @@ void _gz_msj_visit_begin(MssJoinWord frame, MssJoinWord epoch)
     _gz_msj_report.completed_before = _gz_mpd_report[11];
     _gz_msj_report.bound = 1;
 done:
-    msj_leave(0);
+    msj_leave();
 }
 
 void _gz_msj_visit_complete(MssJoinWord frame, MssJoinWord epoch,
                             MssJoinWord settled_frames)
 {
-    MssPublication publication = {0};
-
     if (!msj_enter())
         return;
     if (!msj_enabled() || !msj_current_attempt() ||
@@ -262,26 +238,12 @@ void _gz_msj_visit_complete(MssJoinWord frame, MssJoinWord epoch,
     _gz_msj_report.completed_frames = settled_frames;
     _gz_msj_report.completed_common = frame;
     _gz_msj_report.completed_native = _gz_mss_frame_counter;
-    if (settled_frames != 2) {
-        msj_cancel(MSJ_NOT_TWO_FRAMES);
-        goto done;
-    }
+    /* Duration belongs only to the MPD metric. Completing a visit never
+     * assigns Fast/Slow/Insta or modifies the input collector phase. */
     _gz_msj_report.consumed_attempt = _gz_msj_report.attempt;
     _gz_msj_report.armed = _gz_msj_report.bound = 0;
-    publication.active = 1;
-    publication.type = _gz_mss_state[36];
-    publication.display = _gz_mss_state[37];
-    publication.phase = _gz_mss_state[42];
-    publication.actor = _gz_mss_state[0];
-    publication.first_frame = _gz_mss_state[45];
-    _gz_mss_state[36] = 3;
-    _gz_mss_state[37] = 3;
-    _gz_mss_state[42] = 4;
-    if (_gz_msj_report.published != 0xffffffffu) {
-        _gz_msj_report.published++;
-        publication.counter_increased = 1;
-    }
     _gz_msj_report.reason = MSJ_CONSUMED;
+
 done:
-    msj_leave(&publication);
+    msj_leave();
 }

@@ -3,7 +3,9 @@
 
 typedef unsigned int MssJoinWord;
 
-/* Diagnostic/control metadata only. The legacy MSS snapshot remains 50 words.
+/* ABI2 duration/visit diagnostics ONLY, no input classification publication.
+ * Legacy published word22 is retained in layout and remains zero.
+ * The legacy MSS snapshot remains 50 words.
  * Retain both named frame readings; the accepted image aliases them to the
  * same native counter at 0x101FF558. They are not independent clocks.
  * A last-duration display value is never accepted as a fresh visit receipt.

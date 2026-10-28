@@ -8,3 +8,13 @@ experiments/maintained-components/common-admission/* text eol=lf
 experiments/maintained-components/map-area-hierarchy/* text eol=lf
 experiments/maintained-components/counter-atomic-workaround/* text eol=lf
 experiments/maintained-components/native-heap-v147/* text eol=lf
+
+# Reviewed MSS authored sources and portable tests.
+experiments/maintained-components/mss_order.c text eol=lf
+experiments/maintained-components/mss_pause_frames.c text eol=lf
+experiments/maintained-components/mss_visit_join.c text eol=lf
+experiments/maintained-components/mss_visit_join.h text eol=lf
+experiments/maintained-components/mss-source-scope.json text eol=lf
+experiments/maintained-components/MSS_INPUT_ORDER.md text eol=lf
+experiments/maintained-components/mss_order_cases.c text eol=lf
+tests/test_mss_order_source.py text eol=lf

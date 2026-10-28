@@ -79,11 +79,13 @@ interface headers from the private R787 component. Its two-class full CPU-byte
 capture is diagnostic only: mask63 keeps every unresolved closure bit, and no
 native capture, world freeze or replay is claimed here. Matching providers,
 link inputs and complete current integration remain unexported. The maintained
-MSS four-file snapshot now includes the reviewed fresh native visit join used
-by R749/R786: ordinary Slow/Fast ordering and one joined settled 2-frame Insta
-visit were observed in Cemu. It does not infer a seven-frame stick window or
-timing colors. See the component scope files. The full reproducible builder
-remains v126; these source snapshots do not constitute a coherent newer build.
+MSS four-file snapshot now follows explicit Plus/stick/Plus, Plus/Plus/stick,
+and Plus/B/stick order, with the last completed display retained during a new
+pause. Pause duration is diagnostic only. Twelve sequences at three dwell
+values passed in one private Cemu run; Wii U chronology and pixel output remain
+unqualified. See the maintained MSS rules and portable classifier tests.
+Delivered revision remains v147, and the full reproducible builder remains
+v126; these source snapshots do not constitute a complete newer build.
 
 The large legacy assembly template mixes authored patch code, compiler-generated
 code and generated tables. It is not a good canonical review surface for the

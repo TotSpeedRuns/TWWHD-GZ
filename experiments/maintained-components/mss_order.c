@@ -37,10 +37,8 @@ enum MssType {
     MSS_UNKNOWN,
     MSS_FAST,
     MSS_SLOW,
-    /* Legacy type 3 was B-close = Insta. Actual 2f residency is measured
-     * separately by mss_pause_frames.c; the resume button cannot imply it.
-     */
-    MSS_SAME_SAMPLE = 4
+    MSS_INSTA, /* Pause -> B -> stick, including B+stick on close edge. */
+    MSS_SAME_SAMPLE = 4 /* Unresolved order; never replace a completed label. */
 };
 
 /* Decode a calibrated IEEE-754 stick component into signed Q16. Keeping this
@@ -81,8 +79,14 @@ static MssWord mss_stick_moved(MssWord x, MssWord y,
 
 static void mss_result(MssWord *state, MssWord type)
 {
-    state[MSS_CURRENT_TYPE] = type;
-    state[MSS_DISPLAY_TYPE] = type;
+    if (type == MSS_FAST || type == MSS_SLOW || type == MSS_INSTA) {
+        state[MSS_CURRENT_TYPE] = type;
+        state[MSS_DISPLAY_TYPE] = type;
+    } else {
+        /* The unchanged legacy coach copies any nonzero36 into37. Unknown
+         * current order must stay0 so that consumer preserves the latch. */
+        state[MSS_CURRENT_TYPE] = MSS_UNKNOWN;
+    }
     state[MSS_PHASE] = MSS_COMPLETE;
 }
 
@@ -94,7 +98,7 @@ static void mss_begin(MssWord *state, const MssWord *input, MssWord frame)
     state[MSS_BASELINE_Y] = input[2];
     state[MSS_FIRST_FRAME] = frame;
     state[MSS_CURRENT_TYPE] = MSS_UNKNOWN;
-    state[MSS_DISPLAY_TYPE] = MSS_UNKNOWN;
+    /* Display37 is the last completed classification, not this collector. */
     state[MSS_RESUME] = 0;
 }
 
@@ -127,23 +131,30 @@ MssWord _gz_mss_order_input(MssWord *state, const MssWord *input,
     if (phase > MSS_COMPLETE) {
         state[MSS_PHASE] = phase = MSS_IDLE;
         state[MSS_CURRENT_TYPE] = MSS_UNKNOWN;
-        state[MSS_DISPLAY_TYPE] = MSS_UNKNOWN;
     }
 
-    /* Plus and B can both close the native pause menu. Only Plus begins a
-     * sequence; either closing button participates in the same order rule.
-     */
+    /* A simultaneous Plus+B sample supplies no closing-button order.
+     * Do not invent native priority or replace a completed label. */
+    if ((edges & 0x4008u) == 0x4008u) {
+        if (phase >= MSS_AFTER_PAUSE && phase <= MSS_AFTER_STICK)
+            mss_result(state, MSS_SAME_SAMPLE);
+        return edges;
+    }
+
+    /* Only Plus begins. Plus-close before stick is Fast; stick before
+     * Plus-close is Slow. B-close before/with stick is Insta. Ordinary B
+     * outside an open attempt cannot begin or replace a result. */
     if ((edges & 8) || ((edges & 0x4000) &&
         (phase == MSS_AFTER_PAUSE || phase == MSS_AFTER_STICK))) {
         if (phase == MSS_AFTER_STICK) {
-            mss_result(state, MSS_SLOW);
+            mss_result(state, edges & 8 ? MSS_SLOW : MSS_SAME_SAMPLE);
             return edges;
         }
         if (phase == MSS_AFTER_PAUSE) {
             state[MSS_RESUME] = edges & 8 ? 2 : 1;
             if (mss_stick_moved(input[1], input[2],
                                state[MSS_BASELINE_X], state[MSS_BASELINE_Y]))
-                mss_result(state, MSS_SAME_SAMPLE);
+                mss_result(state, edges & 8 ? MSS_SAME_SAMPLE : MSS_INSTA);
             else
                 state[MSS_PHASE] = MSS_AFTER_RESUME;
             return edges;
@@ -160,7 +171,7 @@ MssWord _gz_mss_order_input(MssWord *state, const MssWord *input,
         if (phase == MSS_AFTER_PAUSE) {
             state[MSS_PHASE] = MSS_AFTER_STICK;
         } else {
-            mss_result(state, MSS_FAST);
+            mss_result(state, state[MSS_RESUME] == 1 ? MSS_INSTA : MSS_FAST);
             state[MSS_LAST_RESUME] = state[MSS_RESUME];
         }
     }

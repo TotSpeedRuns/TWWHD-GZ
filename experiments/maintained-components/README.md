@@ -24,17 +24,16 @@ closure bits remain; no replay or native capture is claimed by this export.
 The full current integration and reproducible builder remain separate.
 
 The maintained `mss_order.c`, `mss_pause_frames.c`, `mss_visit_join.c` and
-`mss_visit_join.h` now match the reviewed current visit-join sources used by
-the R749/R786 Cemu tests. Slow/Fast still follow Pause-Stick-Resume versus
-Pause-Resume-Stick order. Insta requires one fresh completed native visit
-with exactly two settled Menu frames joined to the same current attempt,
-actor and epoch; an old last-duration display cannot label a new attempt.
-The metadata join cancels frame/context gaps and handles nested notification
-publication without modifying game state. The existing wrapper stays intact.
-R786 observed ordinary Plus/B Slow/Fast sequences and one fresh joined 2-frame
-Insta visit. That does not establish a seven-frame stick window, new timing
-colors, batch reconstruction or Wii U acceptance. These files are partial
-maintained sources; they do not make the older v126 builder a newer build.
+`mss_visit_join.h` now use the reviewed explicit-order classifier and completed
+label latch. Slow is Plus-Stick-Plus, Fast is Plus-Plus-Stick, and Insta is
+Plus-B-Stick or B+Stick on the closing sample. Duration is a separate metric.
+Opening a new pause preserves the last completed label; ambiguous order cannot
+replace it. One private Cemu run passed twelve sequences across three dwell
+values, with native pause metrics of 4 to 27 frames and unchanged save hashes.
+See [MSS rules, dependencies and portable tests](MSS_INPUT_ORDER.md).
+This is a partial authored component update; delivered revision remains v147,
+the complete reproducible integrated export remains v126, and Wii U acceptance
+is not claimed. Historical MSS notes below describe older source snapshots.
 
 ## Static Triforce graphic, full-mask image and source hints
 

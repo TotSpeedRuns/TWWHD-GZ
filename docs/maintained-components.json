@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v150-codec-and-cleanup-candidate",
-  "status": "Authored partial snapshots including the tested zero-run codec and reviewed clean-abort retirement candidate. The ordinary sword restore passed in Cemu but did not trigger the targeted abort. Cleanup native qualification remains pending. Complete integrated reproducible export remains v126.",
+  "revision": "post-v150-quiet-pickup-lifetime-validation",
+  "status": "Authored partial snapshots with finite Cemu validation for one quiet heart and a separate two-green-rupee native retirement. Each required a later manual Restore; mixed, one-action completion, active effects and Wii U remain unqualified. Complete integrated reproducible export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 48203,
-      "sha256": "25f829a45bcb407fa716fed9b68c3d460254194f20e7bcec71f9aec66c997448"
+      "bytes": 48908,
+      "sha256": "9c7a1ca8efb75dc23712acf777397e5c09e1e5093ab2b38b459f7e6c0e47854a"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1425,8 +1425,8 @@
     },
     {
       "path": "experiments/maintained-components/clean-abort-retirement/README.txt",
-      "bytes": 1825,
-      "sha256": "df7d1ecef7875375048ecef7d84d46f20dbde85099bea16c44375691cb98e5f1"
+      "bytes": 2286,
+      "sha256": "cda42489c96dc0690e7ccdc3a6597f85457d56bc2d6ecc6b60cec48026f56f7e"
     },
     {
       "path": "experiments/maintained-components/clean-abort-retirement/world_domains_prepare-original.c",
@@ -1437,6 +1437,31 @@
       "path": "experiments/maintained-components/clean-abort-retirement/world_domains_prepare.c",
       "bytes": 8725,
       "sha256": "6313fd629931981f198af720a48e6d5051140a1848830e3f0c75685c54ce4034"
+    },
+    {
+      "path": "experiments/maintained-components/quiet-heart0-lifecycle/baseline/lifecycle_intent.inc",
+      "bytes": 15888,
+      "sha256": "58b8d6623a5e2913d43ed94907338094ef1ffae20f6dbf962c476cc3b9275cd6"
+    },
+    {
+      "path": "experiments/maintained-components/quiet-heart0-lifecycle/candidate/lifecycle_intent.inc",
+      "bytes": 17345,
+      "sha256": "abf84c25c8d537cc96e7bf70775bc06d655322138b747260dbfc9964683d2356"
+    },
+    {
+      "path": "experiments/maintained-components/quiet-heart0-lifecycle/quiet-heart0.patch",
+      "bytes": 8636,
+      "sha256": "dec79601718a19521de9bbd3beedcc8a90d592141b493e1f10ec9d0776ae47d9"
+    },
+    {
+      "path": "experiments/maintained-components/quiet-heart0-lifecycle/README.md",
+      "bytes": 7168,
+      "sha256": "1daa15ad084f57c4ff297019fd5be2217e2d1f01a6f9a1a652b0d7c5b5853fb9"
+    },
+    {
+      "path": "experiments/maintained-components/quiet-heart0-lifecycle/source-pins.json",
+      "bytes": 2102,
+      "sha256": "fb0b6a8b37b785926fbe82d53b5b332fcaf9a900c9038da3572fb3785d729eda"
     }
   ],
   "excludes": [

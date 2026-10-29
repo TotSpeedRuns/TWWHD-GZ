@@ -1,0 +1,56 @@
+{
+  "schema": "quiet-heart0-authored-component-source/2",
+  "source_only_partial_snapshot": true,
+  "complete_reproducible_integrated_export": "v126",
+  "native_qualification": "Finite Cemu: one natural quiet HEART0 and a separate two-green1 control passed inverse/CLEAN40, native retirement, then separate manual Restore15. Mixed is inconclusive before any Restore. No Wii U, active-effect, or full-game qualification.",
+  "sources": {
+    "baseline/lifecycle_intent.inc": {
+      "bytes": 15888,
+      "sha256": "58b8d6623a5e2913d43ed94907338094ef1ffae20f6dbf962c476cc3b9275cd6"
+    },
+    "candidate/lifecycle_intent.inc": {
+      "bytes": 17345,
+      "sha256": "abf84c25c8d537cc96e7bf70775bc06d655322138b747260dbfc9964683d2356"
+    },
+    "quiet-heart0.patch": {
+      "bytes": 8636,
+      "sha256": "dec79601718a19521de9bbd3beedcc8a90d592141b493e1f10ec9d0776ae47d9"
+    },
+    "README.md": {
+      "bytes": 7168,
+      "sha256": "1daa15ad084f57c4ff297019fd5be2217e2d1f01a6f9a1a652b0d7c5b5853fb9"
+    }
+  },
+  "private_reviewed_fingerprints_only": {
+    "parent_bomb": {
+      "bytes": 1332428,
+      "sha256": "9ca3ce7ccd2d3c378c74e2e778ffb80e689f650801b6cc870e2eb7580190bd0a"
+    },
+    "candidate_bomb": {
+      "bytes": 1332668,
+      "sha256": "ef2a6eaa491afa030c3914dd1a8c77f665ed95d97be4cd83b8c4592d54db3e7b"
+    },
+    "private_integrated_main": {
+      "bytes": 27192128,
+      "sha256": "b7bc7bf89b937cef19ae69826a14f1e44a29d166b1ca6e324474943115feb51d"
+    }
+  },
+  "no_compiled_or_private_capture_files_included": true,
+  "native_evidence_fingerprints_only": {
+    "heart_finite_outcome_review": {
+      "bytes": 6678,
+      "sha256": "9dc92dbeb9cf5aff577b4e7af4b81c6c37dcd9dbacbf312bd5204b6aadb048c4"
+    },
+    "green_outcome_and_mixed_scope_review": {
+      "bytes": 5328,
+      "sha256": "9eeb7c71017b520d8474b737dfcf5fdae0cf3715b11356ba974e22de109fe7f7"
+    }
+  },
+  "finite_native_case_counts": {
+    "heart_current_only_items": 1,
+    "green_current_only_items": 2,
+    "mixed_qualified_cohorts": 0,
+    "Restore_requests_per_passed_case": 2,
+    "automatic_retry": false
+  }
+}

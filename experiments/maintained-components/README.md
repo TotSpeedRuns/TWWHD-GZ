@@ -817,3 +817,15 @@ of zero runs with exact modular exponentiation. Portable compatibility checks
 and three finite Cemu bomb restores passed. Smoke reconstruction and full-game
 coverage remain unfinished; this is a partial component, not a current release
 builder or a Wii U performance guarantee.
+
+## Quiet pickup lifetimes and clean-abort recovery
+
+The [quiet pickup experiment](quiet-heart0-lifecycle/README.md) adds an exact
+sealed ItemNo tuple to the existing native retirement consumer. One natural
+heart and a separate two-green-rupee cohort passed typed inverse, genuine native
+retirement and a later separate manual Restore in Cemu. The heart test also
+matched all 1,500 restored grass rows in their 64 numeric bytes. The mixed case
+stopped before Restore, and automatic completion from one request remains
+unfinished. Source, ownership, actor generation and particle guards remain.
+This is a partial source update; it is not a full current builder, Wii U result
+or full-game save-state claim.

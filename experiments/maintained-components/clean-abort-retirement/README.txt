@@ -29,3 +29,10 @@ a standalone executable or a complete current-release build export. The
 repository's integrated reproducible builder remains v126. Game binaries,
 memory captures, personal profiles, saves and native diagnostic dumps are
 excluded.
+
+Later bounded verification (2026-10-29): the retained cleanup path was exercised
+by one natural quiet heart and a separate two-green-rupee cohort. Both completed
+the typed inverse and native retirement, cleared the checked private records,
+then committed a separate manual Restore. See the quiet-heart0-lifecycle source
+snapshot for exact scope. The original effect-mismatch case, arbitrary actors,
+one-action completion and Wii U behavior remain unqualified.

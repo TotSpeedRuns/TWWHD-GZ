@@ -1,0 +1,17 @@
+--- world_domains_prepare-original.c
++++ world_domains_prepare.c
+@@ -49,6 +49,14 @@
+   !wdp_owned_or_empty(_gz_lct_plan.token,token)||!wdp_owned_or_empty(_gz_ckr_plan.token,token)||
+   !wdp_owned_or_empty(_gz_prk_plan.token,token)||!wdp_owned_or_empty(_gz_rgr_plan.token,token))return 42;
+  if(_gz_wgp_forget_clean(token)||_gz_cgr_forget(token)||_gz_ccr_forget(token)||cjp_forget(token)||pti_forget(token)||fgp_forget(token))return 42;
++ /* The checked END already released both physical tokens. Retire its
++  * matching private IPK/CTP leaf before wdp_empty asks WGP/IPK to be idle.
++  * The existing leaf refuses a foreign, live, failed or incomplete journal.
++  * Never clear private source/plans if that retirement did not finish. */
++ if(_gz_wct_heap_pending()){
++  _gz_wct_heap_finish_leaf(token);
++  if(_gz_wct_heap_pending())return 42;
++ }
+  wdp_clear_private();return wdp_empty()?0:42;
+ }
+ static u32 wdp_before_images(u32 t,u32 f){u32 z,i,seeds[3];

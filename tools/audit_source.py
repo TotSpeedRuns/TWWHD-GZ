@@ -4,7 +4,7 @@ import argparse, re, subprocess
 ROOT=Path(__file__).resolve().parents[1]
 DIRECTORIES={'runtime','tools','patcher','creator','setup','experiments','docs','tests','.github'}
 ROOT_FILES={'.gitignore','.gitattributes','.dockerignore','Dockerfile','LICENSE','README.md','NOTICE.md','requirements.txt','requirements-docker.txt','build.py','build-docker.sh','build-docker.ps1','CONTRIBUTING.md'}
-SUFFIXES={'.py','.c','.cpp','.h','.hpp','.inc','.s','.asm','.in','.json','.md','.txt','.yml','.yaml','.ld','.sh','.ps1'}
+SUFFIXES={'.py','.c','.cpp','.h','.hpp','.inc','.s','.asm','.in','.json','.md','.txt','.patch','.yml','.yaml','.ld','.sh','.ps1'}
 def files(root=ROOT):
     for p in root.rglob('*'):
         rel=p.relative_to(root)

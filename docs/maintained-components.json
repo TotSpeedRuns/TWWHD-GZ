@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v148-partial-custodian-format-memo",
-  "status": "Authored partial snapshots including same-worker saved-format memo. Distinct finite Cemu WCT and factory tests; complete integrated reproducible export remains v126.",
+  "revision": "post-v150-codec-and-cleanup-candidate",
+  "status": "Authored partial snapshots including the tested zero-run codec and reviewed clean-abort retirement candidate. The ordinary sword restore passed in Cemu but did not trigger the targeted abort. Cleanup native qualification remains pending. Complete integrated reproducible export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 47812,
-      "sha256": "d3fadf6e8423c9aba20337e2606b280b908baaca3a12a0e10e2455b942f586f2"
+      "bytes": 48203,
+      "sha256": "25f829a45bcb407fa716fed9b68c3d460254194f20e7bcec71f9aec66c997448"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1382,6 +1382,61 @@
       "path": "experiments/maintained-components/save-state-performance/source_custodian_format_policy.h",
       "bytes": 464,
       "sha256": "483a6923bd407aedad3920f19d4c225185d7ab1589bf8a58cfb9f14d43266619"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/codec-original.c",
+      "bytes": 4746,
+      "sha256": "31b54cb5ae25c470abe589665eac395bf43334de11b70e6e0e0412c518ede733"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/codec.c",
+      "bytes": 5010,
+      "sha256": "d137322d4d794884596d628f72395a52d500d4eb837a03b72ddf7d6fe96c6326"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/codec.h",
+      "bytes": 1396,
+      "sha256": "f47f33731e6e6818e1704547395851f4205d9af3cec3ef096bca780916558f46"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/codec.patch",
+      "bytes": 1163,
+      "sha256": "be69acba35a8f0a4c6c1a7e13cff0dc0e2e0fc353cdc54203f4d9f2e7f65dd9b"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/compat_harness.c",
+      "bytes": 2522,
+      "sha256": "b2bf80c8f0a5a41a83a75bd2eedf1c07bfe59c1ffffd556f026d8193825ffbcd"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/README.md",
+      "bytes": 1671,
+      "sha256": "138675dbb9d9308c9a17e720f058587c3ccb2584663f59f617ad7f5eb2845b17"
+    },
+    {
+      "path": "experiments/maintained-components/codec-zero-runs/source-pins.json",
+      "bytes": 1511,
+      "sha256": "382a252fa558da843da2d039e38afe5328b012feb6d49d93ba9aa0280ca0f865"
+    },
+    {
+      "path": "experiments/maintained-components/clean-abort-retirement/cleanup.patch",
+      "bytes": 959,
+      "sha256": "d0d34b6ec617e3817992c993e134b94ee54b71435ba273e3d49d3b80d88e1d00"
+    },
+    {
+      "path": "experiments/maintained-components/clean-abort-retirement/README.txt",
+      "bytes": 1825,
+      "sha256": "df7d1ecef7875375048ecef7d84d46f20dbde85099bea16c44375691cb98e5f1"
+    },
+    {
+      "path": "experiments/maintained-components/clean-abort-retirement/world_domains_prepare-original.c",
+      "bytes": 8321,
+      "sha256": "cfbfe389a80cfbd212b45de07783bf81c38e25745a2e0276db9eb2a2944529de"
+    },
+    {
+      "path": "experiments/maintained-components/clean-abort-retirement/world_domains_prepare.c",
+      "bytes": 8725,
+      "sha256": "6313fd629931981f198af720a48e6d5051140a1848830e3f0c75685c54ce4034"
     }
   ],
   "excludes": [

@@ -194,5 +194,8 @@ adds the authored bounded retirement consumer, native writer, dispatcher and
 fixed topology borrower used by the v149 candidate. Its birth-state and native
 TEXT-addend checks are corrected using the real producer and original relocation
 operands. This remains partial source with no complete current-runtime builder
-or general actor/heap/cutscene replay claim. Native test and delivery status are
-separate from publication; the integrated reproducible export remains v126.
+or general actor/heap/cutscene replay claim. A finite closed Cemu test has since
+completed native retirement of five post-capture ItemNo1 objects and a separately
+requested restore of all fourteen typed targets, grass, player and sword. It
+does not establish automatic retry or Wii U coverage. The integrated
+reproducible export remains v126.

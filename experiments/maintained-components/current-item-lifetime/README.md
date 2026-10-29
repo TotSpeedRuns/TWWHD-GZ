@@ -1,6 +1,6 @@
 # Current item lifetime recovery
 
-This is an authored partial C source snapshot for the upcoming v149 test.
+This is an authored partial C source snapshot for the v149 test build.
 It is not a complete current-runtime builder; the complete reproducible export
 remains v126. The original translation units, real job/heap/source owners and
 typed restore participants are required. No successful owner or native API
@@ -29,7 +29,16 @@ The component was rebuilt after reproducing its entire parent object first.
 Only those three native method operands changed in this correction; it adds
 no imports, actor masks, memory reserve or blanket coverage permission.
 These source and machine checks do not establish Wii U or full-game reliability.
-Native qualification and delivery are separate from this source publication.
+A subsequent closed Cemu test retired five genuine post-capture ItemNo1 objects
+through the normal engine and independently checked their matching process,
+collider and SOLID-heap generation completion labels. A separately requested
+restore then matched all fourteen typed targets, every registered grass row,
+the saved player pose and holstered sword. The source archive and six save files
+remained unchanged. The ordinary control took about 0.56 seconds, the first
+inverse about 2.46 seconds, and the separate final restore about 0.53 seconds.
+These are descriptive Cemu intervals, not a Wii U benchmark. This is not an
+automatic retry or general actor-retirement result; the first pending interval
+and the final independently requested restore remain distinct.
 
 The files contain authored C, headers and includes only. No game executable,
 artwork, original native method bytes, captured game state, save, personal

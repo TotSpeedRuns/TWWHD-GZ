@@ -48,3 +48,6 @@ experiments/maintained-components/codec-zero-runs/* text eol=lf
 # Authored single-action Restore experiment and portable policy cases.
 experiments/maintained-components/single-restore-continuation/** text eol=lf
 tests/test_single_restore_source.py text eol=lf
+
+# Checked v151 title-upgrade sources and portable fingerprint inventory.
+experiments/maintained-components/setup-title-upgrade-v151/** text eol=lf

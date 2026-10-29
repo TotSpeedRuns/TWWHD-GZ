@@ -1,0 +1,120 @@
+{
+  "schema": "authored-current-item-lifecycle-source-snapshot/1",
+  "source_only": true,
+  "component_BOMB_sha256": "98f842f615c798a942d0c5b4164cd79b285f325be64bb225a95748c2fde4352d",
+  "complete_integrated_builder": false,
+  "complete_reproducible_export": "v126",
+  "members": [
+    {
+      "path": "bomb/held_item_lifetime.c",
+      "bytes": 17554,
+      "sha256": "702f05e5bf3e61d775cefedbea99f031da934bf6ff2af10f5df9f8600228d425"
+    },
+    {
+      "path": "bomb/held_item_owner.inc",
+      "bytes": 1932,
+      "sha256": "945baaf4f274d52e2912e2a4e9b1dc7024419409de80ec21d60df12aaf52813b"
+    },
+    {
+      "path": "bomb/held_item_recipe.c",
+      "bytes": 11369,
+      "sha256": "95de11509e5ff40b44e39e5e4d25d19e9169533ee2ed6d61cca25fd3f9a6abff"
+    },
+    {
+      "path": "bomb/held_item_recipe.h",
+      "bytes": 1340,
+      "sha256": "0f93712e8533e66af4270e1cbfc4f7a60a21e061fcc55259e8ca4b0004bfabe8"
+    },
+    {
+      "path": "bomb/lifecycle_intent.h",
+      "bytes": 415,
+      "sha256": "df25f9732c6d6a93beecfdd5c5c254add916a53314b134dc3e8f842d824fd3ce"
+    },
+    {
+      "path": "bomb/lifecycle_intent.inc",
+      "bytes": 15888,
+      "sha256": "58b8d6623a5e2913d43ed94907338094ef1ffae20f6dbf962c476cc3b9275cd6"
+    },
+    {
+      "path": "bomb/lifecycle_scalar.h",
+      "bytes": 1212,
+      "sha256": "ea45ca5d7ee3f49d1f0169f68aeadd637e5b27c0185992e4f51124204bfc3555"
+    },
+    {
+      "path": "bomb/lifecycle_writer.h",
+      "bytes": 846,
+      "sha256": "0e371831589c47bfb9fcb57ab69cc8a46d087442d0a83609fbc1bf2e0c0eeb01"
+    },
+    {
+      "path": "bomb/native_parked_target.inc",
+      "bytes": 5072,
+      "sha256": "263a90f0a2c43a478c5dfd7c7a1941ef465a2d599ee27241cbf1aeed8cb7afd8"
+    },
+    {
+      "path": "bomb/park_admission.h",
+      "bytes": 1426,
+      "sha256": "9c1221d00632cd1c5d2754f4b6c4427559d217cacf3fb6592d3e823eebb85444"
+    },
+    {
+      "path": "bomb/park_context.inc",
+      "bytes": 3359,
+      "sha256": "c03e678462191b32d079c9d1188fba938c0f8772ac52ca9eea86f9a2900340c8"
+    },
+    {
+      "path": "bomb/park_plan.inc",
+      "bytes": 14762,
+      "sha256": "61e20a9eca433dfd33860a8374fbca3e4755e8628d4b583a438586608c0358cf"
+    },
+    {
+      "path": "bomb/park_scalar.h",
+      "bytes": 1293,
+      "sha256": "17bb9d070e9bac564f01431f69e041ab66fd16954f45dd7f7c81c6a110c24991"
+    },
+    {
+      "path": "bomb/wct_root_borrow.h",
+      "bytes": 896,
+      "sha256": "b8f0bc1d99410bd213c9c4b07a415ea349df9bbc2a992736f539da73a7eaae9e"
+    },
+    {
+      "path": "bomb/wct_root_borrow.inc",
+      "bytes": 5027,
+      "sha256": "c67ae14ab6f67a53637051f27e93de97358ee042ec933a6dd1c6e872d834b030"
+    },
+    {
+      "path": "provider/lifecycle_writer.h",
+      "bytes": 846,
+      "sha256": "0e371831589c47bfb9fcb57ab69cc8a46d087442d0a83609fbc1bf2e0c0eeb01"
+    },
+    {
+      "path": "provider/lifecycle_writer.inc",
+      "bytes": 8603,
+      "sha256": "becc166d7abed8b4bb2718d7e2d752675efde697c2eac88b4c01d9d6512e1976"
+    },
+    {
+      "path": "provider/adapter.c",
+      "bytes": 9706,
+      "sha256": "67d42effbedf594adbadcf4ddb6aa6763b6cad0a7f672cf71c3d4e4ca46e0778"
+    },
+    {
+      "path": "provider/adapter.h",
+      "bytes": 1317,
+      "sha256": "199b780572d42ece357cef9739f8d2990fe031cbdbdf8955e6af7d999107c10a"
+    },
+    {
+      "path": "dispatch/lifecycle_writer.h",
+      "bytes": 846,
+      "sha256": "0e371831589c47bfb9fcb57ab69cc8a46d087442d0a83609fbc1bf2e0c0eeb01"
+    },
+    {
+      "path": "dispatch/native_dispatch.c",
+      "bytes": 1216,
+      "sha256": "c1d297e68ca774558ff8f93a7d73a04a84a2f94d832788b8bba1a1446584d26d"
+    },
+    {
+      "path": "dispatch/wct_heap_lease.h",
+      "bytes": 1836,
+      "sha256": "c56acfdf51303c7a6487e11d71e2a5553c58f476d84c8afff6e321a2c6a726eb"
+    }
+  ],
+  "canonical_line_endings": "LF"
+}

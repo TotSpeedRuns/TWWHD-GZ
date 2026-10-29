@@ -186,3 +186,13 @@ establish Wii U, broad actor retirement or full-game coverage. This is partial
 experimental source; the reproducible integrated export remains v126.
 
 The same-worker SOURCE custodian snapshot is an additional partial authored component. Its fixed callback repair forwards the real slot, MCA and bflower callbacks under one existing acquisition; private Cemu sword tests cover three restores. A separate three-case factory bomb recreation regression also passed; that lane did not participate in WCT or BMH services and supplies no bomb speedup claim. Complete integrated reproduction remains v126; no Wii U, full-game, release or speedup claim is added.
+
+## Current item lifetime recovery source
+
+The [current item lifetime snapshot](../experiments/maintained-components/current-item-lifetime/README.md)
+adds the authored bounded retirement consumer, native writer, dispatcher and
+fixed topology borrower used by the v149 candidate. Its birth-state and native
+TEXT-addend checks are corrected using the real producer and original relocation
+operands. This remains partial source with no complete current-runtime builder
+or general actor/heap/cutscene replay claim. Native test and delivery status are
+separate from publication; the integrated reproducible export remains v126.

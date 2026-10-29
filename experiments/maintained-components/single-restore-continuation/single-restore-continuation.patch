@@ -1,0 +1,622 @@
+--- baseline/bomb/bomb_recreation.c
++++ candidate/bomb/bomb_recreation.c
+@@ -20,6 +20,7 @@
+ extern void _gz_bmd_reset(void),_gz_bmd_capture(unsigned int,unsigned int,unsigned int);
+ extern unsigned int _gz_wgp_observe_scope(unsigned int),_gz_wgp_context_owned(unsigned int),_gz_wgp_has_token(unsigned int),_gz_wgp_idle(void),_gz_wgp_prepare(unsigned int,unsigned int),_gz_wgp_prepared_before(unsigned int,unsigned int),_gz_wgp_forward(unsigned int,unsigned int),_gz_wgp_target(unsigned int,unsigned int),_gz_wgp_recover(unsigned int,unsigned int),_gz_wgp_before(unsigned int,unsigned int),_gz_wgp_forget_clean(unsigned int),_gz_wgp_unreleased(void),_gz_wgp_commit_scope(unsigned int,unsigned int),_gz_wgp_contact_scope(unsigned int,unsigned int,unsigned int),_gz_wgp_pot_mode(unsigned int,unsigned int),_gz_wgp_pot_prepare_scope(unsigned int,unsigned int,unsigned int),_gz_wct_group_context(unsigned int,unsigned int,unsigned int),_gz_wcm_admission(unsigned int,unsigned int,unsigned int);
+ extern void _gz_wgp_finish_leaf(unsigned int),_gz_wcm_tick(void);
++static void wcm_continue_tick(void);
+ extern unsigned int _gz_bcf_test_recovery_wait(unsigned int),_gz_bcf_group_prepare(unsigned int,unsigned int);
+ extern unsigned int _gz_cgr_factory_bind(unsigned int,unsigned int),_gz_bcf_metadata(unsigned int,unsigned int,unsigned int),_gz_bcf_forward(unsigned int,unsigned int),_gz_bcf_final_check(unsigned int,unsigned int),_gz_bcf_commit_scope(unsigned int,unsigned int),_gz_bcf_pot_mode(unsigned int,unsigned int),_gz_bcf_recovery_undo(unsigned int,unsigned int),_gz_bcf_recovery_check(unsigned int,unsigned int),_gz_bcf_recovery_receipt(unsigned int,unsigned int),_gz_bcf_recovery_finish_scope(unsigned int,unsigned int,unsigned int),_gz_bcf_bomb_mask(unsigned int),_gz_bcf_bomb_byte(unsigned int),_gz_bcf_bomb_join(unsigned int);
+ extern void _gz_bcf_finish_leaf(unsigned int);
+@@ -433,6 +434,7 @@
+ 
+ #include "world_pot_roundtrip.c"
+ #include "world_domains_prepare.c"
++#include "continuation_state.inc"
+ #include "world_core_roundtrip.c"
+ 
+ #include "ui_capture_context.c"
+--- /dev/null
++++ candidate/bomb/continuation_state.inc
+@@ -0,0 +1,36 @@
++/* Fixed private continuation metadata. No raw SOURCE/native pointer or token. */
++enum {WCC_MAGIC=0x57434332u,WCC_BOUND=1,WCC_RETRY=2,WCC_RETAINED=3,
++ WCC_DEADLINE=650,WCC_CANCEL_SELECTION=1,WCC_CANCEL_SCENE=2,
++ WCC_CANCEL_DEADLINE=3,WCC_CANCEL_SOURCE=4};
++typedef struct {
++ u32 magic,bytes,phase,request,retry_request,token,frame,slot,identity,generation;
++ u32 used,hash,cookie,nonce,epoch,stage0,stage1,room,layer,cancel,error,seal;
++} WcmContinuation;
++static WcmContinuation wcc;
++static u32 wcc_entered;
++typedef struct {u32 request,token,frame;} WcmCommitBlocker;
++static WcmCommitBlocker wcc_blocker;
++static void wcc_seal(void){wcc.seal=btr_hash(&wcc,sizeof(wcc)-4);}
++static u32 wcc_valid(void){return wcc.magic==WCC_MAGIC&&wcc.bytes==sizeof(wcc)&&
++ wcc.phase>=WCC_BOUND&&wcc.phase<=WCC_RETAINED&&wcc.request&&wcc.token&&
++ wcc.slot<10&&wcc.identity&&wcc.generation&&wcc.used>=216&&wcc.cookie&&
++ wcc.nonce&&wcc.cancel<=WCC_CANCEL_SOURCE&&wcc.seal==btr_hash(&wcc,sizeof(wcc)-4);}
++static u32 wcc_empty(void){u32 i;const u32*p=(const u32*)&wcc;
++ for(i=0;i<sizeof(wcc)/4;i++)if(p[i])return 0;return 1;}
++static u32 wcc_private_apart(u32 p,u32 n){return epj_apart(p,n,(u32)&wcc,sizeof(wcc))&&
++ epj_apart(p,n,(u32)&wcc_entered,sizeof(wcc_entered))&&
++ epj_apart(p,n,(u32)&wcc_blocker,sizeof(wcc_blocker));}
++/* Fixed metadata only: safe from LRW's requested predicate, including while
++ * its actual Gate is held. It never looks up NCB, SOURCE or a native actor. */
++static u32 wcc_cancelled(u32 request,u32 nonce){u32 reason=0;
++ if(!wcc_valid()||wcc.request!=request||wcc.nonce!=nonce)return 0;
++ if(wcc.cancel)return wcc.cancel;
++ if(_gz_pbac_selected!=wcc.slot)reason=WCC_CANCEL_SELECTION;
++ else if(_gz_pbac_epoch!=wcc.epoch||_gz_pbac_stage[0]!=wcc.stage0||
++  _gz_pbac_stage[1]!=wcc.stage1||_gz_pbac_room!=wcc.room||_gz_pbac_layer!=wcc.layer||
++  *(volatile u8*)&_gz_pbac_loading||_gz_pbac_event||_gz_pbac_world_resume_pending)reason=WCC_CANCEL_SCENE;
++ else if((u32)(_gz_pbac_frame-wcc.frame)>WCC_DEADLINE)reason=WCC_CANCEL_DEADLINE;
++ if(reason){wcc.cancel=reason;wcc_seal();}return reason;
++}
++static u32 wcm_lrr_allowed(u32,u32,u32);
++static u32 wcm_lrr_bind(u32,u32,u32,u32,u32,u32,u32,u32,u32);
+--- baseline/bomb/held_bomb_probe.c
++++ candidate/bomb/held_bomb_probe.c
+@@ -50,4 +50,4 @@
+ void _gz_wsp_step(void);
+ void _gz_wrt_step(void);
+ extern void _gz_bci_step(void);
+-void _gz_hbp_dispatch(void){_gz_kec_tick();_gz_boh_step();_gz_bfm_tick();_gz_bex_probe_step();_gz_brx_probe_step();_gz_hif_step();_gz_wct_step();_gz_wcm_tick();_gz_wdp_step();_gz_wsp_step();_gz_wrt_step();_gz_bci_step();}
++void _gz_hbp_dispatch(void){_gz_kec_tick();_gz_boh_step();_gz_bfm_tick();_gz_bex_probe_step();_gz_brx_probe_step();_gz_hif_step();wcm_continue_tick();_gz_wct_step();_gz_wcm_tick();_gz_wdp_step();_gz_wsp_step();_gz_wrt_step();_gz_bci_step();}
+--- baseline/bomb/lifecycle_intent.inc
++++ candidate/bomb/lifecycle_intent.inc
+@@ -48,16 +48,26 @@
+ /* Called by real LRW twice before/after its native body. This contains NO
+  * API/native/table traversal. The nonce survives all HELD/postbody checks.
+  * Only a LATER call, after genuine release/producer expiry, unblocks tools. */
+-u32 _gz_lrr_requested(void){
+- if(lrr_release_observed(lrr.phase,lrr.nonce,lrr.provider_serial,
+-  _gz_lrw_report[5],_gz_lrw_report[4],_gz_lrw_report[3],_gz_lrw_report[15],
+-  _gz_lrw_report[16],_gz_lrw_report[17],_gz_lrw_report[18])){
+-  if(lrr.phase==LRR_HALTED)return 0; /* stays blocked, no repeated writer calls */
++u32 _gz_lrr_requested(void){u32 cancel;
++ /* Idle/completed operations do not hash or traverse a journal per frame. */
++ if((!lrr.magic&&!lrr.phase&&!lrr.nonce)||
++  (lrr.magic==LRR_MAGIC&&lrr.phase==LRR_FINISHED))return 0;
++ /* An unissued cancellation can clear only its own private intent once the
++  * actual permanent native writer tokens are all quiescent. No API result or
++  * native retirement receipt is fabricated for a never-issued operation. */
++ cancel=lrr_valid()?wcc_cancelled(lrr.request,lrr.nonce):0;
++ if(cancel&&lrr.phase==LRR_ARMED&&!lrr.scheduled&&_gz_lrw_quiescent()){
++  lrr.phase=LRR_FINISHED;lrr_seal();_gz_lrr_report[3]=LRR_FINISHED;_gz_lrr_report[28]=cancel;
++  return 0;
++ }
++ if(lrr_valid()&&lrr_release_observed(lrr.phase,lrr.nonce,lrr.provider_serial,
++  _gz_lrw_completed(lrr.nonce,lrr.provider_serial))){
++  if(lrr.phase==LRR_HALTED)return 0;
+   lrr.phase=LRR_FINISHED;lrr_seal();_gz_lrr_report[3]=LRR_FINISHED;
+  }
+  return _gz_lrr_blocked()?lrr.nonce:0;
+ }
+-u32 _gz_lrr_private_apart(u32 p,u32 n){return epj_apart(p,n,(u32)&lrr,sizeof(lrr))&&
++u32 _gz_lrr_private_apart(u32 p,u32 n){return wcc_private_apart(p,n)&&epj_apart(p,n,(u32)&lrr,sizeof(lrr))&&
+  epj_apart(p,n,(u32)&lrr_serial,4)&&epj_apart(p,n,(u32)&lrr_binding,sizeof(lrr_binding))&&
+  epj_apart(p,n,(u32)_gz_lrr_report,sizeof(_gz_lrr_report));}
+ static u32 lrr_headers(void){return _gz_po_header.magic==PO_MAGIC&&_gz_po_header.bytes==64&&
+@@ -142,7 +152,7 @@
+  * Unsupported cases decline the NEW experiment and retain the old refusal.
+  * No source address/pin or WHL/HG/job capability survives in this receipt. */
+ static void lrr_arm(u32 t,u32 f){u32 i,z=LRR_CONTEXT;
+- if(_gz_ipk_idle())return;
++ if(_gz_ipk_idle()||!wcm_lrr_allowed(wct_source.request,t,f))return;
+  if(_gz_lrr_blocked()||!wct_sealed(t,f)||wct.phase!=WCT_ROLLED||wct.returned!=1||
+   !wct.error||wct.fault_group||!wct_source.entered||!wct_source.request||wct_source.frame!=f||
+   _gz_wct_report[94]!=1||!_gz_wcm_requested(wct_source.request)||
+@@ -181,6 +191,7 @@
+  }
+  z=LRR_CHANGED;if(!lrr_headers()||!lrr_frame()||!ctp_restored(t,f)||!_gz_wct_heap_held(t,f))goto decline;
+  /* Publish nonce LAST, from this actual private monotonically-issued serial. */
++ if(!wcm_lrr_bind(lrr.request,t,f,lrr_serial+1,lrr.slot,lrr.identity,lrr.generation,lrr.used,lrr.hash))goto decline;
+  lrr.phase=LRR_ARMED;lrr.nonce=++lrr_serial;lrr_seal();
+  for(i=3;i<32;i++)_gz_lrr_report[i]=0;_gz_lrr_report[18]=BAD;_gz_lrr_report[26]=31;
+  _gz_lrr_report[3]=lrr.phase;_gz_lrr_report[4]=lrr.nonce;_gz_lrr_report[5]=0;
+@@ -215,13 +226,18 @@
+  if(!lrr_headers()||!btr_equal(&ph,&_gz_po_header,sizeof(ph))||!btr_equal(&ch,&_gz_co_header,sizeof(ch)))return 2;
+  return z;
+ }
+-u32 _gz_lrr_native_step(void){LrrActor*x;u32 i,z,raw,ambient,f=_gz_pbac_frame;u8 items_before[LRR_CAP];
++u32 _gz_lrr_native_step(void){LrrActor*x;u32 i,z,raw,ambient,cancel,f=_gz_pbac_frame;u8 items_before[LRR_CAP];
+  if(!lrr_valid()||lrr.error||!_gz_lrw_owned())return lrr_fail(LRR_CONTEXT);
+  /* Observe this genuine provider BEFORE any fallible consumer check.
+   * A terminal SOURCE/frame/timeout refusal can then recognize its real
+   * cleanup on the next entry, without requesting repeated writer slots. */
+  lrr.provider_serial=_gz_lrw_report[4];
+- if(!lrr_source()||!lrr_frame())return lrr_fail(LRR_SOURCE);
++ cancel=wcc_cancelled(lrr.request,lrr.nonce);
++ if(cancel&&!lrr.scheduled){lrr.phase=LRR_REPLAY_READY;lrr_seal();_gz_lrr_report[3]=lrr.phase;_gz_lrr_report[28]=cancel;return 0;}
++ /* Once canceled, only the bounded old-generation metadata wait may run.
++  * It stays under the actual LRW writer and never issues another native call.
++  * A changed scene is not permission to follow an old actor or skip receipts. */
++ if(!lrr_source()||(!cancel&&!lrr_frame()))return lrr_fail(LRR_SOURCE);
+  if(lrr.callbacks==LRR_WAIT_LIMIT)return lrr_fail(LRR_TIMEOUT);
+  ++lrr.callbacks;lrr.frame=f;
+  _gz_lrr_report[17]=lrr.callbacks;_gz_lrr_report[19]=lrr.provider_serial;_gz_lrr_report[20]=f;
+@@ -229,10 +245,11 @@
+   if(z==2)return lrr_fail(LRR_OBSERVER);
+   if(!z){lrr_seal();return 5;}
+   lrr.retired|=1u<<lrr.next;_gz_lrr_report[16]=lrr.retired;
+-  if(lrr.retired==lrr_mask(lrr.count)){lrr.phase=LRR_REPLAY_READY;lrr_seal();_gz_lrr_report[3]=lrr.phase;return 0;}
++  if(cancel||lrr.retired==lrr_mask(lrr.count)){lrr.phase=LRR_REPLAY_READY;lrr_seal();_gz_lrr_report[3]=lrr.phase;return 0;}
+   ++lrr.next;lrr.phase=LRR_ARMED;
+  }
+  if(lrr.phase!=LRR_ARMED)return lrr_fail(LRR_CONTEXT);
++ if(cancel){lrr.phase=LRR_REPLAY_READY;lrr_seal();_gz_lrr_report[3]=lrr.phase;_gz_lrr_report[28]=cancel;return 0;}
+  i=lrr.next;x=lrr.actor+i;
+  /* Metadata identity precedes EVERY actor follow. No old scheduled actor
+   * is dereferenced by any subsequent call, including error paths. */
+--- baseline/bomb/lifecycle_scalar.h
++++ candidate/bomb/lifecycle_scalar.h
+@@ -5,11 +5,8 @@
+  LRR_REPLAY_READY=4,LRR_FINISHED=5,LRR_HALTED=6};
+ static unsigned int lrr_mask(unsigned int n){return n&&n<=8?((1u<<n)-1u):0;}
+ static unsigned int lrr_release_observed(unsigned int phase,unsigned int nonce,
+- unsigned int own_serial,unsigned int report_nonce,unsigned int report_serial,
+- unsigned int report_phase,unsigned int first_error,unsigned int active,
+- unsigned int job,unsigned int ticket){
+- return (phase==LRR_REPLAY_READY||phase==LRR_HALTED)&&nonce&&own_serial&&nonce==report_nonce&&
+-  own_serial==report_serial&&report_phase==4&&!first_error&&!active&&!job&&!ticket;
++ unsigned int own_serial,unsigned int private_completed){
++ return (phase==LRR_REPLAY_READY||phase==LRR_HALTED)&&nonce&&own_serial&&private_completed==1;
+ }
+ static unsigned int lrr_po_completion(unsigned int state,unsigned int end,
+  unsigned int flags){return state==3&&end&&!flags;}
+--- baseline/bomb/lifecycle_writer.h
++++ candidate/bomb/lifecycle_writer.h
+@@ -13,4 +13,7 @@
+  * No caller-supplied callback pointer, native EA, context or result exists. */
+ uint32_t _gz_lrr_requested(void);
+ uint32_t _gz_lrr_native_step(void);
++/* Metadata only; actual private producer and physical tokens, no native call. */
++uint32_t _gz_lrw_completed(uint32_t nonce,uint32_t serial);
++uint32_t _gz_lrw_quiescent(void);
+ #endif
+--- baseline/bomb/world_core_menu.c
++++ candidate/bomb/world_core_menu.c
+@@ -18,7 +18,7 @@
+ }
+ u32 _gz_wcm_choose(void){u32*q=wcm(),slot=_gz_pbac_selected,pin,p,n,id,gen,hash,z=28;
+  if(!GZ_CORE_MENU_RESTORE_ENABLED||!q||slot>9||_gz_roh_user_guard()||_gz_boh_has_owner()||_gz_wct_request!=_gz_wct_ack||_gz_wct_ack==BAD||
+-  (q[2]&&(!wcm_valid(q)||q[3]==1))||_gz_osa_acquire(slot))return 28;
++  (!wcc_empty()||(q[2]&&(!wcm_valid(q)||q[3]==1)))||_gz_osa_acquire(slot))return 28;
+  pin=_gz_osa_pin_id();p=_gz_osa_source(pin);n=_gz_osa_bytes(pin);
+  if(!p||p!=_gz_pbac_slots[slot]||!archive_ok(p)||R32(p,4)!=n||R32(p,12)<30||_gz_b294m_archive_validate(p,n,0))goto done;
+  if(R32(p+R32(p,208),72)||bomb_count(_gz_pba_native_actor_queue)||gz_snapshot_activity_conflict(_gz_pbac_tools,0u)||_gz_pbac_pending||_gz_pbac_event||
+@@ -45,10 +45,128 @@
+  if(_gz_osa_raw_match(pin,slot,p,n)&&n==q[7]&&p==_gz_pbac_slots[slot]&&_gz_osa_pin_identity(pin)==q[8]&&_gz_osa_pin_generation(pin)==q[9]&&
+   btr_hash((const void*)p,n)==q[10])z=0;
+  if(_gz_swc_admission_pin(request,frame,slot)!=pin)return 42;return z;}
+-void _gz_wcm_tick(void){u32*q=wcm(),z;if(!q||!wcm_valid(q)||q[3]!=1||_gz_wct_ack!=q[4])return;
+- /* An unverified dirty failure keeps the original held owner. No source
+-  * body read or fabricated success occurs in this result dispatcher. */
+- if(_gz_roh_user_guard()||_gz_osa_pin_id()||_gz_wgp_unreleased())return;
++extern u32 _gz_osa_intent_reserve(u32,u32,u32,u32,u32,u32,u32);
++extern u32 _gz_osa_intent_reservation_match(u32,u32,u32,u32,u32,u32,u32);
++extern u32 _gz_osa_intent_release(u32,u32);
++/* The new logical-operation busy guard never waives an original guard. Only
++ * its own real NBD metadata cleanup or exact fresh ordinary WCT can proceed.
++ * There are no callbacks/native body reads inside the metadata cleanup. */
++u32 _gz_wcc_tools_blocked(void){
++ if(wcc_empty())return 0;
++ if(!wcc_valid()||wcc.phase==WCC_RETAINED)return 1;
++ if(wcc_entered==1&&_gz_nbd_context_owned(_gz_pbac_frame))return 0;
++ if(wcc.phase==WCC_RETRY&&wct_entered==1&&wcc.retry_request&&
++  _gz_wct_request==wcc.retry_request&&_gz_wcm_requested(wcc.retry_request)&&
++  _gz_wct_native_owned())return 0;
++ return 1;
++}
++/* Each check below is private metadata, or an existing normal-owner predicate.
++ * Neither progress report words nor an old physical capability are accepted. */
++static u32 wcm_tuple(const u32*q){return wcm_valid(q)&&q[3]==1&&q[5]==wcc.slot&&
++ q[7]==wcc.used&&q[8]==wcc.identity&&q[9]==wcc.generation&&q[10]==wcc.hash;}
++static u32 wcm_physical_idle(void){u32 i;
++ for(i=3;i<7;i++)if(_gz_roh_owner[i])return 0;
++ return !_gz_roh_owner[12]&&!_gz_osa_pin_id()&&!_gz_wct_heap_pending()&&!_gz_wct_root_pending()&&
++  !_gz_wct_job_token.active&&!_gz_wct_job_token.gate&&
++  !_gz_swc_pending()&&!_gz_wgp_unreleased()&&!_gz_boh_has_owner();
++}
++static u32 wcm_lrr_allowed(u32 request,u32 t,u32 f){u32*q=wcm();
++ return wcc_empty()&&!wcc_entered&&wcm_valid(q)&&q[3]==1&&q[4]==request&&request&&
++  request==wct_source.request&&wcc_blocker.request==request&&wcc_blocker.token==t&&wcc_blocker.frame==f&&
++  wct_source.entered&&wct_source.frame==f&&wct.token==t&&wct.phase==WCT_ROLLED&&
++  wct.returned==1&&wct.error==40&&!wct.fault_group;
++}
++static u32 wcm_lrr_bind(u32 request,u32 t,u32 f,u32 nonce,u32 slot,u32 id,u32 gen,u32 used,u32 hash){u32*q=wcm(),cookie;
++ if(!nonce||!wcm_lrr_allowed(request,t,f)||q[5]!=slot||q[7]!=used||q[8]!=id||q[9]!=gen||q[10]!=hash||
++  !_gz_wct_source_worker_context(request,f,slot))return 0;
++ cookie=_gz_osa_intent_reserve(request,f,slot,id,gen,used,hash);if(!cookie)return 0;
++ /* No fallible work follows reservation: exact logical tuple only, no pin. */
++ bcl_zero(&wcc,sizeof(wcc));wcc.magic=WCC_MAGIC;wcc.bytes=sizeof(wcc);wcc.phase=WCC_BOUND;
++ wcc.request=request;wcc.token=t;wcc.frame=f;wcc.slot=slot;wcc.identity=id;wcc.generation=gen;
++ wcc.used=used;wcc.hash=hash;wcc.cookie=cookie;wcc.nonce=nonce;wcc.epoch=_gz_pbac_epoch;
++ wcc.stage0=_gz_pbac_stage[0];wcc.stage1=_gz_pbac_stage[1];wcc.room=_gz_pbac_room;wcc.layer=_gz_pbac_layer;
++ wcc_seal();return 1;
++}
++/* Observation-only unused WCT report tail, after its genuine attempt receipt.
++ * No runtime admission or physical owner consumes any of these words. */
++static void wcm_observe(u32 result){
++ _gz_wct_report[104]=WCC_MAGIC;_gz_wct_report[105]=wcc.phase;
++ _gz_wct_report[106]=wcc.request;_gz_wct_report[107]=wcc.frame;_gz_wct_report[108]=wcc.token;
++ _gz_wct_report[109]=40;_gz_wct_report[110]=wcc.nonce;_gz_wct_report[111]=lrr.provider_serial;
++ _gz_wct_report[112]=wcc.retry_request;_gz_wct_report[113]=0;_gz_wct_report[114]=wcc.cancel;
++ _gz_wct_report[115]=wcc.retry_request?1u:0u;_gz_wct_report[116]=wcc.slot;
++ _gz_wct_report[117]=wcc.identity;_gz_wct_report[118]=wcc.generation;_gz_wct_report[119]=wcc.used;
++ _gz_wct_report[120]=wcc.hash;_gz_wct_report[121]=_gz_pbac_frame;_gz_wct_report[122]=wcc.error;
++ _gz_wct_report[123]=result;
++}
++static void wcm_terminal(u32*q,u32 result){u32 z;
++ if(!wcc_empty()){
++  if(!wcc_valid()||!wcm_tuple(q)||!wcm_physical_idle())return;
++  z=_gz_osa_intent_release(wcc.cookie,wcc.request);
++  if(z){
++   if((u32)(_gz_pbac_frame-wcc.frame)>WCC_DEADLINE){wcc.phase=WCC_RETAINED;wcc.error=z;wcc_seal();}
++   wcm_observe(5);return;
++  }
++  wcm_observe(result);bcl_zero(&wcc,sizeof(wcc));
++ }
++ q[3]=2;q[12]=result;q[14]=_gz_pbac_frame;q[15]=_gz_wct_report[8];wcm_seal(q);
++ _gz_pbac_menu=q[11];_gz_status=result;_gz_start_toast(result);
++}
++static void wcm_continue_tick(void){u32*q,cancel,ready,failed,next,f=_gz_pbac_frame;
++ /* Normal no-continuation path is fixed private metadata only. */
++ if(wcc_empty()||wcc_entered||!wcc_valid()||wcc.phase!=WCC_BOUND)return;
++ wcc_entered=1;q=wcm();
++ if(!wcm_tuple(q)||q[4]!=wcc.request||_gz_wct_ack!=wcc.request||_gz_wct_request!=_gz_wct_ack)goto done;
++ if(!lrr_valid()||lrr.request!=wcc.request||lrr.nonce!=wcc.nonce||
++  lrr.slot!=wcc.slot||lrr.identity!=wcc.identity||lrr.generation!=wcc.generation||
++  lrr.used!=wcc.used||lrr.hash!=wcc.hash)goto done;
++ cancel=wcc_cancelled(wcc.request,wcc.nonce);
++ failed=lrr.phase==LRR_HALTED&&lrr.error&&_gz_lrw_completed(lrr.nonce,lrr.provider_serial);
++ ready=lrr.phase==LRR_FINISHED&&!lrr.error&&
++  ((cancel&&!lrr.scheduled&&_gz_lrw_quiescent())||
++   _gz_lrw_completed(lrr.nonce,lrr.provider_serial));
++ if(!ready&&!failed)goto done;
++ if(!wcm_physical_idle())goto done;
++ if(failed&&lrr.scheduled){
++  /* Producer release is not actor/CO/heap retirement. A post-issue unknown
++   * or timeout remains dirty/retained with its logical SOURCE reservation. */
++  wcc.phase=WCC_RETAINED;wcc.error=lrr.error;wcc_seal();wcm_observe(5);goto done;
++ }
++ if(failed||cancel){wcm_terminal(q,28);goto done;}
++ if(lrr.scheduled!=lrr_mask(lrr.count)||lrr.retired!=lrr_mask(lrr.count))goto done;
++ if(!_gz_osa_intent_reservation_match(wcc.cookie,wcc.request,wcc.slot,wcc.identity,wcc.generation,wcc.used,wcc.hash)){
++  /* A foreign SOURCE writer/entered callback may be transiently busy. The
++   * fixed native-frame deadline cancels; no mismatched row is ever read. */
++  goto done;
++ }
++ if(_gz_wct_ack==BAD||_gz_wct_late_target_fault||!_gz_nbd_context_owned(f)){
++  wcc.cancel=WCC_CANCEL_SOURCE;wcc_seal();wcm_terminal(q,28);goto done;
++ }
++ next=_gz_wct_ack+1;if(!next){wcc.cancel=WCC_CANCEL_SOURCE;wcc_seal();wcm_terminal(q,28);goto done;}
++ /* Keep q's original source tuple and previous menu byte-for-byte. The
++  * ordinary worker below obtains every NEW native/pin/job/owner boundary. */
++ wcc.retry_request=next;wcc.phase=WCC_RETRY;wcc_seal();
++ q[4]=next;wcm_seal(q);_gz_pbac_menu=1;_gz_wct_commit_ticket=next;
++ __asm__ volatile("sync":::"memory");_gz_wct_request=next;
++ /* The parent's earlier enter saw request==ack. Enter the actual unchanged
++  * producer NOW, from this same genuine NBD callback, after the fresh intent.
++  * Its normal thread/interrupt/request checks remain mandatory. */
++ _gz_wct_native_enter();
++done:wcc_entered=0;
++}
++void _gz_wcm_tick(void){u32*q=wcm(),z;
++ if(!q||!wcm_valid(q)||q[3]!=1||_gz_wct_ack!=q[4])return;
++ if(!wcc_empty()){
++  if(!wcc_valid()||wcc.phase!=WCC_RETRY||wcc.retry_request!=q[4])return;
++ }
++ if(!wcc_empty()){
++  if(wcc_entered||!_gz_nbd_context_owned(_gz_pbac_frame))return;
++  wcc_entered=1;
++  if(_gz_roh_user_guard()||!wcm_physical_idle()){wcc_entered=0;return;}
++  z=!_gz_wct_report[5]&&_gz_wct_report[96]==1?15:28;
++  wcm_terminal(q,z);wcc_entered=0;return;
++ }
++ if(_gz_roh_user_guard()||!wcm_physical_idle())return;
+  z=!_gz_wct_report[5]&&_gz_wct_report[96]==1?15:28;
+- q[3]=2;q[12]=z;q[14]=_gz_pbac_frame;q[15]=_gz_wct_report[8];wcm_seal(q);
+- _gz_pbac_menu=q[11];_gz_status=z;_gz_start_toast(z);}
++ wcm_terminal(q,z);
++}
+--- baseline/bomb/world_core_roundtrip.c
++++ candidate/bomb/world_core_roundtrip.c
+@@ -111,7 +111,7 @@
+   ((!wct.error&&wct.services==7)||(wct.error&&wct.services>=2&&wct.services<=7))&&
+   _gz_wct_closure_hash&&_gz_wct_closure_hash==wct_seal&&!wct_before(t,f);
+ }
+-void _gz_wct_finish_leaf(void){if(_gz_wct_root_pending()||_gz_ipk_admission_outstanding())return;_gz_wgp_finish_leaf(wct.token);_gz_cgr_finish(wct.token);_gz_ccr_finish(wct.token);cjp_finish(wct.token);pti_finish_leaf(wct.token);fgp_finish_leaf(wct.token);_gz_ssp_finish_leaf(wct.token);_gz_wct_heap_finish_leaf(wct.token);wdp_clear_private();bcl_zero(&wct,sizeof(wct));wct_seal=_gz_wct_closure_hash=0;}
++void _gz_wct_finish_leaf(void){if(_gz_wct_root_pending()||_gz_ipk_admission_outstanding())return;_gz_wgp_finish_leaf(wct.token);_gz_cgr_finish(wct.token);_gz_ccr_finish(wct.token);cjp_finish(wct.token);pti_finish_leaf(wct.token);fgp_finish_leaf(wct.token);_gz_ssp_finish_leaf(wct.token);_gz_wct_heap_finish_leaf(wct.token);wdp_clear_private();bcl_zero(&wct,sizeof(wct));wct_seal=_gz_wct_closure_hash=0;bcl_zero(&wcc_blocker,sizeof(wcc_blocker));}
+ #include "world_core_target.inc"
+ static u32 wct_group(u32 t,u32 f,u32 g){u32 id=g==1?5:g==3?8:g==5?WCT_FINAL_SERVICE:g==4?6:2,z;
+  if(f!=_gz_pbac_frame)return 42;
+@@ -134,6 +134,7 @@
+   * they must not leave a genuine chooser command waiting forever. */
+  if(!GZ_CORE_MENU_RESTORE_ENABLED||!req||req==_gz_wct_ack||wct_entered||!_gz_wcm_requested(req))return;
+  wct_entered=1;
++ bcl_zero(&wcc_blocker,sizeof(wcc_blocker));
+  for(i=3;i<128;i++)_gz_wct_report[i]=0;_gz_wct_report[3]=req;_gz_wct_report[4]=f;
+  /* Bind a private fault ticket to one exact command. Even a clean refusal
+   * consumes it; a later command cannot inherit a stale actor-write intent. */
+--- baseline/bomb/world_core_target.inc
++++ candidate/bomb/world_core_target.inc
+@@ -62,14 +62,21 @@
+  z=_gz_wct_target_scope(t,f)?0:42;
+ done:_gz_wct_report[92]=z;wct_target_entered=0;return z;
+ }
+-u32 _gz_wct_commit_scope(u32 t,u32 f){
+- /* Native reversible topology was proved; the extras are still LIVE. No
+-  * source-world publication until a real retirement participant completes. */
+- if(_gz_ctp_queue_pending())return 0;
+- return wct_commit_arming==1&&wct_entered==1&&!wct_target_entered&&wct_sealed(t,f)&&
++u32 _gz_wct_commit_scope(u32 t,u32 f){u32 valid;
++ /* Authenticate every original base predicate before recording the specific
++  * blocked publication branch. The marker is private, not a report grant. */
++ valid=wct_commit_arming==1&&wct_entered==1&&!wct_target_entered&&wct_sealed(t,f)&&
+   wct.phase==WCT_FORWARD&&!wct.returned&&!wct.error&&wct.services==WCT_FINAL_CALLS&&
+   _gz_wct_report[91]==16383&&!_gz_wct_report[92]&&_gz_wct_report[93]==14&&cjp_complete(t)&&_gz_wgp_commit_scope(t,f)&&
+   _gz_wct_closure_hash&&_gz_wct_closure_hash==wct_seal&&_gz_wct_target_scope(t,f);
++ if(!valid)return 0;
++ if(_gz_ctp_queue_pending()){
++  if(wct_source.entered&&wct_source.frame==f&&wct_source.request&&_gz_wcm_requested(wct_source.request)){
++   wcc_blocker.request=wct_source.request;wcc_blocker.token=t;wcc_blocker.frame=f;
++  }
++  return 0;
++ }
++ return 1;
+ }
+ static u32 wct_commit_finish(u32 t,u32 f){u32 z;
+  if(wct_commit_arming||!wct_sealed(t,f)||_gz_roh_owner[12]||_gz_roh_owner[13]!=WCT_FINAL_CALLS)return 42;
+--- baseline/source/owner/owner.c
++++ candidate/source/owner/owner.c
+@@ -1,6 +1,7 @@
+ #include "owner.h"
+ #include "source_work.h"
+ #include "codec.h"
++#include "source_intent_policy.h"
+ /* Appended source-active guard declaration; definition follows owner functions. */
+ U so_active_write_apart(U,U);
+ typedef struct {U mode,pointer,capacity,stored,heap,used,identity,generation,origin,hash,codec,valid;SoPresentation presentation;U seal;} Row;
+@@ -11,9 +12,12 @@
+ /* Immutable stack witness across callbacks. Includes the exact issuing
+  * receipts, every logical row, both serializer-plan representations and RAW
+  * aliases. No callback may rewrite these private fields as an admission. */
+-typedef struct {Owner owner;Tx tx;U snapshot[120],live[120],views[10],origins[20],origin;} Boundary;
++typedef struct {Owner owner;Tx tx;SoIntentState intent;U snapshot[120],live[120],views[10],origins[20],origin;} Boundary;
+ static Owner owner={.magic=0x534f5731,.version=1,.serial=1,.inverse=~1u};
+ static Tx tx;
++/* Separate private state preserves the externally observed Owner/Row ABI. */
++static SoIntentState so_intent __attribute__((section(".data.gz_so_intent")))={
++ .magic=SOI_MAGIC,.bytes=SOI_BYTES,.version=SOI_VERSION,.inverse=~0u,.seal=0x220f0a7eu};
+ static U span(U p,U n){return !(p&3)&&p>=0x10000000u&&p<0xbffe0000u&&n&&n<=0xbffe0000u-p;}
+ static U apart(U p,U n,U q,U m){return n<=0xffffffffu-p&&m<=0xffffffffu-q&&(p+n<=q||q+m<=p);}
+ static U cap(U n){return n>=216&&n<=SO_MAX&&!(n&3)?(n+31u)&~31u:0;}
+@@ -38,14 +42,19 @@
+  * retain their admission receipt; foreign allocators must exclude our complete
+  * set before publishing any new region of their own. */
+ static U meta_apart(U p,U n){return apart(p,n,(U)&swc,sizeof(swc))&&apart(p,n,(U)&owner,sizeof(owner))&&apart(p,n,(U)&tx,sizeof(tx))&&
++ apart(p,n,(U)&so_intent,sizeof(so_intent))&&
+  apart(p,n,(U)_gz_slots_plan,480)&&apart(p,n,(U)&_gz_slot_origin_captured,4)&&
+  apart(p,n,(U)_gz_slots_ptrs,40)&&apart(p,n,(U)_gz_slot_origin_sidecars,80)&&apart(p,n,(U)_gz_osa_plan_snapshot,480);}
+ static U all_ok(void){U i,j;Cache*c=&owner.cache;
+- if(owner.magic!=0x534f5731||owner.version!=1||!owner.serial||owner.inverse!=~owner.serial||owner.quarantine||owner.entered>1||owner.writer>1||owner.lease.active>1||tx.active!=owner.writer)return 0;
++ if(owner.magic!=0x534f5731||owner.version!=1||!owner.serial||owner.inverse!=~owner.serial||owner.quarantine||owner.entered>1||owner.writer>1||owner.lease.active>1||tx.active!=owner.writer||!soi_shape(&so_intent))return 0;
+  for(i=0;i<10;i++){const Row*r=&owner.rows[i];if(!row_ok(r))return 0;
+   if(r->mode&&!meta_apart(r->pointer,r->capacity))return 0;
+   if(owner.view[i]!=(owner.lease.active&&owner.lease.slot==i?owner.lease.pointer:0))return 0;
+   for(j=0;j<i;j++)if(r->mode&&owner.rows[j].mode&&!apart(r->pointer,r->capacity,owner.rows[j].pointer,owner.rows[j].capacity))return 0;
++ }
++ if(so_intent.cookie){const Row*r=&owner.rows[so_intent.slot];
++  if(!r->mode||r->identity!=so_intent.identity||r->generation!=so_intent.generation||
++   r->used!=so_intent.used||r->hash!=so_intent.hash)return 0;
+  }
+  if(c->pointer){if(!span(c->pointer,c->capacity)||(c->pointer&31)||!span(c->heap,4)||c->capacity!=cap(c->used)||!meta_apart(c->pointer,c->capacity)||c->seal!=hash(c,sizeof(*c)-4))return 0;
+   for(i=0;i<10;i++)if(owner.rows[i].mode&&!apart(c->pointer,c->capacity,owner.rows[i].pointer,owner.rows[i].capacity))return 0;
+@@ -80,12 +89,12 @@
+  for(i=0;i<30;i++){a=p[4*i];n=p[4*i+1];if((n&3)||n>p[4*i+3]||n>SO_MAX-t||(n&&!span(a,n)))return 0;t+=n;}return t;}
+ static U current(void){U i;if(!tx.active||tx.slot>9||!same(&tx.old,&owner.rows[tx.slot],sizeof(Row))||tx.origin!=_gz_slot_origin_captured)return 0;
+  for(i=0;i<120;i++)if(_gz_osa_plan_snapshot[i]!=_gz_slots_plan[i])return 0;return total(_gz_osa_plan_snapshot)==tx.used;}
+-static U writer(U slot,U frame){return all_ok()&&owner.writer&&tx.active&&slot==tx.slot&&frame==tx.frame&&slot<10&&!owner.lease.active&&current();}
++static U writer(U slot,U frame){return all_ok()&&owner.writer&&tx.active&&slot==tx.slot&&frame==tx.frame&&slot<10&&!owner.lease.active&&soi_write_allowed(&so_intent,slot)&&current();}
+ static U issue(void){owner.serial++;owner.inverse=~owner.serial;return owner.serial;}
+-static void boundary_take(Boundary*b){copy(&b->owner,&owner,sizeof(owner));copy(&b->tx,&tx,sizeof(tx));
++static void boundary_take(Boundary*b){copy(&b->owner,&owner,sizeof(owner));copy(&b->tx,&tx,sizeof(tx));copy(&b->intent,&so_intent,sizeof(so_intent));
+  copy(b->snapshot,_gz_osa_plan_snapshot,480);copy(b->live,(const void*)_gz_slots_plan,480);
+  copy(b->views,(const void*)_gz_slots_ptrs,40);copy(b->origins,(const void*)_gz_slot_origin_sidecars,80);b->origin=_gz_slot_origin_captured;}
+-static U boundary_same(const Boundary*b){return same(&b->owner,&owner,sizeof(owner))&&same(&b->tx,&tx,sizeof(tx))&&
++static U boundary_same(const Boundary*b){return same(&b->owner,&owner,sizeof(owner))&&same(&b->tx,&tx,sizeof(tx))&&same(&b->intent,&so_intent,sizeof(so_intent))&&
+  same(b->snapshot,_gz_osa_plan_snapshot,480)&&same(b->live,(const void*)_gz_slots_plan,480)&&
+  same(b->views,(const void*)_gz_slots_ptrs,40)&&same(b->origins,(const void*)_gz_slot_origin_sidecars,80)&&b->origin==_gz_slot_origin_captured;}
+ static U boundary_fault(U p){owner.quarantine=p?p:0xffffffffu;return SO_BAD;}
+@@ -100,7 +109,7 @@
+  return (!owner.cache.pointer||apart(p,n,owner.cache.pointer,owner.cache.capacity))&&(!tx.raw||apart(p,n,tx.raw,tx.raw_capacity))&&(!tx.encoded||apart(p,n,tx.encoded,tx.encoded_capacity));}
+ U so_begin(U slot,U frame,U presentation){U i,n,z;Boundary held;SoPresentation*m=(SoPresentation*)presentation;
+  if(!all_ok()||slot>9||!frame||(frame&7)||!span(presentation,sizeof(*m))||!so_physical_apart(presentation,sizeof(*m)))return SO_BAD;
+- if(owner.entered||owner.writer||owner.lease.active)return SO_BUSY;
++ if(owner.entered||owner.writer||owner.lease.active||!soi_write_allowed(&so_intent,slot))return SO_BUSY;
+  boundary_take(&held);z=so_native_guard(1);if(!boundary_same(&held))return boundary_fault(0);if(z)return SO_BUSY;
+  if(owner.serial>0xfffffffcu)return SO_SERIAL;
+  if(!(n=total(_gz_slots_plan))||!pshape(m))return SO_BAD;
+@@ -179,7 +188,7 @@
+  z=image(held.tx.raw,held.tx.used,held.tx.raw_capacity);
+  if(!boundary_same(&held))return boundary_fault(0);if(!z)goto bad;
+  z=so_native_guard(1);if(!boundary_same(&held))return boundary_fault(0);
+- if(z||!current()||sc_hash((void*)held.tx.raw,held.tx.used)!=rh)goto bad;
++ if(z||!current()||!soi_write_allowed(&so_intent,slot)||sc_hash((void*)held.tx.raw,held.tx.used)!=rh)goto bad;
+  zero(&next,sizeof(next));next.mode=held.tx.encoded?SO_RLE:SO_RAW;next.pointer=held.tx.encoded?held.tx.encoded:held.tx.raw;
+  next.capacity=held.tx.encoded?held.tx.encoded_capacity:held.tx.raw_capacity;next.stored=held.tx.encoded?held.tx.encoded_used:held.tx.used;
+  next.heap=held.tx.encoded?held.tx.encoded_heap:held.tx.raw_heap;next.used=held.tx.used;next.identity=held.tx.identity;next.generation=held.tx.generation;
+--- /dev/null
++++ candidate/source/owner/source_intent_policy.h
+@@ -0,0 +1,51 @@
++#ifndef GZ_SOURCE_INTENT_POLICY_H
++#define GZ_SOURCE_INTENT_POLICY_H
++#include <stdint.h>
++
++/* Logical identity only. No source address, physical lease or native token. */
++typedef struct {
++ uint32_t magic,bytes,version,serial,inverse;
++ uint32_t cookie,request,slot,identity,generation,used,hash,flags,seal;
++} SoIntentState;
++typedef char SoIntentStateSize[sizeof(SoIntentState)==56?1:-1];
++enum {SOI_MAGIC=0x4f534931u,SOI_VERSION=1,SOI_BYTES=56};
++
++/* Word-wise private-metadata seal is independent of target byte order. */
++static uint32_t soi_seal_value(const SoIntentState*s){
++ const uint32_t*p=(const uint32_t*)s;uint32_t i,h=2166136261u;
++ for(i=0;i<13;i++)h=(h^p[i])*16777619u;return h;
++}
++static uint32_t soi_shape(const SoIntentState*s){
++ if(s->magic!=SOI_MAGIC||s->bytes!=SOI_BYTES||s->version!=SOI_VERSION||
++  s->serial==0xffffffffu||s->inverse!=~s->serial||s->flags||
++  s->seal!=soi_seal_value(s))return 0;
++ if(!s->cookie)return !(s->request|s->slot|s->identity|s->generation|s->used|s->hash);
++ return s->cookie==s->serial&&s->request&&s->slot<10&&s->identity&&
++  s->generation&&s->used>=216&&s->used<=0x200000u&&!(s->used&3);
++}
++static uint32_t soi_matches(const SoIntentState*s,uint32_t cookie,uint32_t request,
++ uint32_t slot,uint32_t identity,uint32_t generation,uint32_t used,uint32_t hash){
++ return soi_shape(s)&&cookie&&s->cookie==cookie&&s->request==request&&
++  s->slot==slot&&s->identity==identity&&s->generation==generation&&
++  s->used==used&&s->hash==hash;
++}
++static uint32_t soi_write_allowed(const SoIntentState*s,uint32_t slot){
++ return soi_shape(s)&&(!s->cookie||s->slot!=slot);
++}
++/* Entry authority and the actual row/lease are checked by the enclosing TU.
++ * This helper changes only fixed private metadata after those checks. */
++static uint32_t soi_arm(SoIntentState*s,uint32_t request,uint32_t slot,
++ uint32_t identity,uint32_t generation,uint32_t used,uint32_t hash){
++ if(!soi_shape(s)||s->cookie||s->serial>=0xfffffffeu||!request||slot>9||
++  !identity||!generation||used<216||used>0x200000u||(used&3))return 0;
++ s->serial++;s->inverse=~s->serial;s->cookie=s->serial;s->request=request;
++ s->slot=slot;s->identity=identity;s->generation=generation;s->used=used;
++ s->hash=hash;s->flags=0;s->seal=soi_seal_value(s);return s->cookie;
++}
++/* Caller has already authenticated the exact receipt. Preserve the cookie
++ * generator; an old request/cookie cannot identify a later reservation. */
++static void soi_clear_leaf(SoIntentState*s){
++ s->cookie=0;s->request=0;s->slot=0;s->identity=0;s->generation=0;
++ s->used=0;s->hash=0;s->flags=0;s->seal=soi_seal_value(s);
++}
++#endif
+--- baseline/source/source-core/compressed_slot_source.c
++++ candidate/source/source-core/compressed_slot_source.c
+@@ -17,6 +17,7 @@
+ /* Fixed adapter metadata set: no READ, body hash or foreign callback. */
+ OsaU32 _gz_osa_adapter_private_apart(OsaU32 p,OsaU32 n){return osa_span(p,n)&&
+  osa_apart(p,n,(OsaU32)&swc,sizeof(swc))&&
++ osa_apart(p,n,(OsaU32)&so_intent,sizeof(so_intent))&&
+  osa_apart(p,n,(OsaU32)&_gz_sfm_memo,sizeof(_gz_sfm_memo))&&
+  osa_apart(p,n,(OsaU32)&_gz_osa_state,sizeof(_gz_osa_state))&&
+  osa_apart(p,n,(OsaU32)&_gz_osa_initial_presentation,sizeof(_gz_osa_initial_presentation))&&
+--- /dev/null
++++ candidate/source/source-core/source_intent_reservation.h
+@@ -0,0 +1,13 @@
++#ifndef GZ_SOURCE_INTENT_RESERVATION_H
++#define GZ_SOURCE_INTENT_RESERVATION_H
++#include <stdint.h>
++/* Original entered WCT worker + its real OSA pin are required only at entry.
++ * A logical reservation grants no READ/WORLD/native or physical pin access. */
++uint32_t _gz_osa_intent_reserve(uint32_t request,uint32_t frame,uint32_t slot,
++ uint32_t identity,uint32_t generation,uint32_t used,uint32_t hash);
++uint32_t _gz_osa_intent_reservation_match(uint32_t cookie,uint32_t request,
++ uint32_t slot,uint32_t identity,uint32_t generation,uint32_t used,uint32_t hash);
++/* Validate exact own receipt, then fixed private clear. Call before a terminal
++ * status is published, never from an enclosing nonfallible post-owner tail. */
++uint32_t _gz_osa_intent_release(uint32_t cookie,uint32_t request);
++#endif
+--- /dev/null
++++ candidate/source/source-core/source_intent_reservation.inc
+@@ -0,0 +1,38 @@
++#include "source_intent_reservation.h"
++
++/* Same actual SOURCE TU: the original OSA lease and adapter aliases must agree
++ * before and after the genuine WCT-context callback. No saved body is read. */
++static U soi_original_pin(U pin,U slot,U id,U gen,U used,U h){
++ return pin&&!_gz_osa_validate(pin)&&so_lease_slot(pin)==slot&&
++  so_identity(pin)==id&&so_generation(pin)==gen&&so_bytes(pin)==used&&
++  so_raw_hash(pin)==h&&so_intent_match(slot,id,gen,used,h);
++}
++U _gz_osa_intent_reserve(U request,U frame,U slot,U id,U gen,U used,U h){
++ Boundary held;OsaPin adapter;U pin,parent,again,cookie;
++ if(!request||!frame||slot>9||!all_ok()||owner.entered||owner.writer||
++  so_intent.cookie)return 0;
++ pin=so_pin();if(!soi_original_pin(pin,slot,id,gen,used,h))return 0;
++ copy(&adapter,&_gz_osa_state.pin,sizeof(adapter));boundary_take(&held);
++ parent=_gz_wct_source_worker_context(request,frame,slot);
++ if(!boundary_same(&held)||!same(&adapter,&_gz_osa_state.pin,sizeof(adapter))){
++  (void)boundary_fault(0);return 0;
++ }
++ if(!parent||pin!=so_pin()||!soi_original_pin(pin,slot,id,gen,used,h))return 0;
++ again=_gz_wct_source_worker_context(request,frame,slot);
++ if(!boundary_same(&held)||!same(&adapter,&_gz_osa_state.pin,sizeof(adapter))){
++  (void)boundary_fault(0);return 0;
++ }
++ if(again!=parent||pin!=so_pin()||!soi_original_pin(pin,slot,id,gen,used,h))return 0;
++ cookie=soi_arm(&so_intent,request,slot,id,gen,used,h);
++ __asm__ volatile("sync":::"memory");return cookie;
++}
++U _gz_osa_intent_reservation_match(U cookie,U request,U slot,U id,U gen,U used,U h){
++ return all_ok()&&!owner.entered&&!owner.writer&&
++  soi_matches(&so_intent,cookie,request,slot,id,gen,used,h);
++}
++U _gz_osa_intent_release(U cookie,U request){
++ if(!all_ok()||owner.entered||owner.writer||!cookie||!request||
++  so_intent.cookie!=cookie||so_intent.request!=request)return SO_BAD;
++ /* No callback, source read, allocator or native call after validation. */
++ soi_clear_leaf(&so_intent);__asm__ volatile("sync":::"memory");return 0;
++}
+--- baseline/source/source-core/source_module.c
++++ candidate/source/source-core/source_module.c
+@@ -12,6 +12,7 @@
+ #include "compressed_slot_source.c"
+ #include "source_bridge.c"
+ #include "source_worker_custodian.inc"
++#include "source_intent_reservation.inc"
+ #include "source_direct_recovery.c"
+ #include "source_read.c"
+ #include "source_access.c"
+--- baseline/source/source-core/source_read.c
++++ candidate/source/source-core/source_read.c
+@@ -13,7 +13,8 @@
+  return s->magic==0x4253524fu&&s->bytes==64&&s->version==1&&s->active<=1&&s->fatal<=1&&!s->reserved0&&!s->reserved1;
+ }
+ extern u32 _gz_lrr_blocked(void);
+-static u32 bsr_blocked(void){return _gz_lrr_blocked()||!bsr_shape()||_gz_bsr_state.active||_gz_bsr_state.fatal;}
++extern u32 _gz_wcc_tools_blocked(void);
++static u32 bsr_blocked(void){return _gz_lrr_blocked()||_gz_wcc_tools_blocked()||!bsr_shape()||_gz_bsr_state.active||_gz_bsr_state.fatal;}
+ static void bsr_clear(void){u32 i;for(i=3;i<16;i++)((volatile u32*)&_gz_bsr_state)[i]=0;}
+ static u32 bsr_issued(void){const BsrState*s=&_gz_bsr_state;const OsaPin*p=&_gz_osa_state.pin;
+  return bsr_shape()&&!s->fatal&&s->active==1&&s->token&&s->token==s->pin&&s->slot<10&&s->source&&s->used>=216&&
+--- baseline/adapter/lifecycle_writer.h
++++ candidate/adapter/lifecycle_writer.h
+@@ -13,4 +13,7 @@
+  * No caller-supplied callback pointer, native EA, context or result exists. */
+ uint32_t _gz_lrr_requested(void);
+ uint32_t _gz_lrr_native_step(void);
++/* Metadata only; actual private producer and physical tokens, no native call. */
++uint32_t _gz_lrw_completed(uint32_t nonce,uint32_t serial);
++uint32_t _gz_lrw_quiescent(void);
+ #endif
+--- baseline/adapter/lifecycle_writer.inc
++++ candidate/adapter/lifecycle_writer.inc
+@@ -150,4 +150,16 @@
+  _gz_lrw_report[16]=lrw.active;_gz_lrw_report[17]=lrw_job.active;_gz_lrw_report[18]=lrw_hg.live;
+  lrw.busy=0;return 1;
+ }
++/* Private permanent-token observation. No report word is authority. A
++ * caller still needs its own sealed nonce and a NEW ordinary world owner. */
++LRW_FN uint32_t _gz_lrw_quiescent(void){const volatile LrwState*s=&lrw;
++ if(s->busy||s->active||s->halted||s->hg_serial||lrw_hg.live||lrw_job.active||lrw_job.gate)return 0;
++ jwa_barrier();
++ return !s->busy&&!s->active&&!s->halted&&!s->hg_serial&&!lrw_hg.live&&!lrw_job.active&&!lrw_job.gate;
++}
++LRW_FN uint32_t _gz_lrw_completed(uint32_t nonce,uint32_t serial){const volatile LrwState*s=&lrw;
++ if(!nonce||!serial||s->request!=nonce||s->serial!=serial||s->stage!=LRW_ENDED||!_gz_lrw_quiescent())return 0;
++ jwa_barrier();
++ return s->request==nonce&&s->serial==serial&&s->stage==LRW_ENDED&&_gz_lrw_quiescent();
++}
+ #undef LRW_FN

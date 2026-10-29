@@ -825,7 +825,18 @@ sealed ItemNo tuple to the existing native retirement consumer. One natural
 heart and a separate two-green-rupee cohort passed typed inverse, genuine native
 retirement and a later separate manual Restore in Cemu. The heart test also
 matched all 1,500 restored grass rows in their 64 numeric bytes. The mixed case
-stopped before Restore, and automatic completion from one request remains
-unfinished. Source, ownership, actor generation and particle guards remain.
+stopped before Restore, and automatic completion from one request was
+not qualified by that earlier experiment; see the later continuation below. Source, ownership, actor generation and particle guards remain.
 This is a partial source update; it is not a full current builder, Wii U result
 or full-game save-state claim.
+
+## One-action recovery after new pickups spawn
+
+The [single-action continuation source](single-restore-continuation/README.md)
+keeps the selected saved state reserved through genuine native retirement, then
+issues a fresh restore internally. Separate Cemu cases removed two new hearts
+and three new green rupees with one confirmation, in about three seconds.
+Actor generations, SOURCE identity and physical cleanup were checked; the
+green case also matched all 1,500 restored grass rows. Mixed cohorts, active
+effects, general actors, cutscenes, cross-area replay and Wii U remain unqualified.
+These are partial authored sources. The complete integrated export remains v126.

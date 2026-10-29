@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v150-quiet-pickup-lifetime-validation",
-  "status": "Authored partial snapshots with finite Cemu validation for one quiet heart and a separate two-green-rupee native retirement. Each required a later manual Restore; mixed, one-action completion, active effects and Wii U remain unqualified. Complete integrated reproducible export remains v126.",
+  "revision": "post-v150-single-action-pickup-continuation",
+  "status": "Partial authored sources. Separate Cemu one-confirmation restores after two new hearts or three green rupees passed. Mixed cohorts, active effects, general actors and Wii U remain unqualified. Complete integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 48908,
-      "sha256": "9c7a1ca8efb75dc23712acf777397e5c09e1e5093ab2b38b459f7e6c0e47854a"
+      "bytes": 49644,
+      "sha256": "18a19af7ace22b3328bee182d2e8d67a144e469bd353a421cd848a5022cc50b5"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1462,6 +1462,191 @@
       "path": "experiments/maintained-components/quiet-heart0-lifecycle/source-pins.json",
       "bytes": 2102,
       "sha256": "fb0b6a8b37b785926fbe82d53b5b332fcaf9a900c9038da3572fb3785d729eda"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/adapter/lifecycle_writer.h",
+      "bytes": 846,
+      "sha256": "0e371831589c47bfb9fcb57ab69cc8a46d087442d0a83609fbc1bf2e0c0eeb01"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/adapter/lifecycle_writer.inc",
+      "bytes": 8603,
+      "sha256": "becc166d7abed8b4bb2718d7e2d752675efde697c2eac88b4c01d9d6512e1976"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/bomb_recreation.c",
+      "bytes": 27573,
+      "sha256": "1721f02f0e9ba01b6b139def4cc6fbc40618aeaaf8a640e84e27bfed971c6067"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/held_bomb_probe.c",
+      "bytes": 3247,
+      "sha256": "f46fcde190c201d45d1f6a2bcf8f2aa32c615ee7faa475557e425965bdb216cf"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/lifecycle_intent.inc",
+      "bytes": 17345,
+      "sha256": "abf84c25c8d537cc96e7bf70775bc06d655322138b747260dbfc9964683d2356"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/lifecycle_scalar.h",
+      "bytes": 1212,
+      "sha256": "ea45ca5d7ee3f49d1f0169f68aeadd637e5b27c0185992e4f51124204bfc3555"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/lifecycle_writer.h",
+      "bytes": 846,
+      "sha256": "0e371831589c47bfb9fcb57ab69cc8a46d087442d0a83609fbc1bf2e0c0eeb01"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/world_core_menu.c",
+      "bytes": 4209,
+      "sha256": "3e8618f36ce7f8951ed98c1cbf086d4d3bfa746b318db7d243c7506508037eeb"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/world_core_roundtrip.c",
+      "bytes": 17659,
+      "sha256": "3946700b9b25fc39c5e0723f09d4671f03c106f4c1e8a589ff9efb8a28160e38"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/bomb/world_core_target.inc",
+      "bytes": 5444,
+      "sha256": "47022b8bdb9ad9dc1972df49315f0fdc5dc870e1dd1de1d995bb13ac1822129e"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/source/owner/owner.c",
+      "bytes": 21009,
+      "sha256": "72c8aa47d106692592dc39cbc01dd2ff2147f1053b7b20813047034f3bdd0cd1"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/source/source-core/compressed_slot_source.c",
+      "bytes": 5692,
+      "sha256": "796440e348a645f8c195c397145305b3cd6520bf794072690072001f4852c61a"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/source/source-core/source_module.c",
+      "bytes": 1091,
+      "sha256": "a5ae6ecf3fdbed41f67d4c23e8d14e2091db0a358baf8f75eeeb5da54ec1d853"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/baseline/source/source-core/source_read.c",
+      "bytes": 4544,
+      "sha256": "f75c034109b3c2fc6c4e6461c59f5aa15b243c37a9a12facbf01ffbafe0a84ba"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/adapter/lifecycle_writer.h",
+      "bytes": 1022,
+      "sha256": "6d98091886b3bac74961414fda3ce75eea4155f72ec75206403e32187526d1c6"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/adapter/lifecycle_writer.inc",
+      "bytes": 9361,
+      "sha256": "1bd2981c656f604bb805280a3183aaabd276cc8ae2c763bc6f2c347ab44a94c4"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/bomb_recreation.c",
+      "bytes": 27644,
+      "sha256": "74bfcdae3cc895875e1cc341ee75c86262a98faabb9877534382680c6db465e0"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/continuation_state.inc",
+      "bytes": 2185,
+      "sha256": "92e9ea0a5cb663bd634545da65602730bed65fbf0cf7af0e23b4106ef7553c70"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/held_bomb_probe.c",
+      "bytes": 3267,
+      "sha256": "d743786a7484499d2a6898b561361c0a4b71d6b9f527573029ad54d1a9447142"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/lifecycle_intent.inc",
+      "bytes": 18628,
+      "sha256": "43ef35166bc5de07c8cc37b0e12819335cb8c3c106393525ba18a08c4f40d5c4"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/lifecycle_scalar.h",
+      "bytes": 994,
+      "sha256": "5af2e7a406ff327da7c162de7ceceff6a53dca9455625d4dc22fcb25827d30c3"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/lifecycle_writer.h",
+      "bytes": 1022,
+      "sha256": "6d98091886b3bac74961414fda3ce75eea4155f72ec75206403e32187526d1c6"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/world_core_menu.c",
+      "bytes": 10784,
+      "sha256": "6ebc634129a5907addbb4ba6ae3432beb7ec55b4e74afad1638d70285227a71c"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/world_core_roundtrip.c",
+      "bytes": 17747,
+      "sha256": "741ad51beb3236e70b49abd483e004814a39637dc80607b42c783053de5abff4"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/bomb/world_core_target.inc",
+      "bytes": 5688,
+      "sha256": "4992b2ae4e04b1591e18227e9382b1880ae8e56a65aa02c98c35278a9913dfeb"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/owner/owner.c",
+      "bytes": 21798,
+      "sha256": "506d7c4179c3220c0fbdfc8f44be5e9fe91c4d65ded7de09ff6ab326335cca19"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/owner/source_intent_policy.h",
+      "bytes": 2583,
+      "sha256": "72ece645a1801c1ca6f12499851492be571cfa8b13bebef763f7d9daf0e4e18b"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/source-core/compressed_slot_source.c",
+      "bytes": 5747,
+      "sha256": "1a3781304e25b66b83a8a85761d788e7cb7a9748801d68b6634a41ae367b4b59"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/source-core/source_intent_reservation.h",
+      "bytes": 797,
+      "sha256": "6f3d23724339f79d3df4b876e739728d22dc6b219f4788c10768da18bb2794d8"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/source-core/source_intent_reservation.inc",
+      "bytes": 1994,
+      "sha256": "d98fa1e4ef8d130b34b3a62ca0f0b8c76a06e99b38e0948dde07ab95d619f2e6"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/source-core/source_module.c",
+      "bytes": 1132,
+      "sha256": "ce31c24d09cad7df1ecbfd2477b8b5855421522339e323aafb9d4cf9ade771cb"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/candidate/source/source-core/source_read.c",
+      "bytes": 4609,
+      "sha256": "839b7105f8724efe597fc28397049b7a1bacfa5243ecb25c842db6bb3e8b1673"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/README.md",
+      "bytes": 7973,
+      "sha256": "a4a9e883c3782e24fcb6b5ec0e1501c69d6d521d3e75dc4f138844d702284dfb"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/single-restore-continuation.patch",
+      "bytes": 39972,
+      "sha256": "24c84d6f3ffd3babd9fd7d5b7104896dc0201a0d79c177585ad026e44029c58c"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/source-pins.json",
+      "bytes": 7626,
+      "sha256": "fc252d272dd5b7665be6c74331a65296cbeb9ff8a17d2ab1ab05eb6d38aedca1"
+    },
+    {
+      "path": "experiments/maintained-components/single-restore-continuation/source_intent_policy_cases.c",
+      "bytes": 2714,
+      "sha256": "f37984c5d04f01674f84301a1a1cea22bc1f83fc0cec4b4136da41359c3856c5"
+    },
+    {
+      "path": "tests/test_single_restore_source.py",
+      "bytes": 4110,
+      "sha256": "64c2c976b3238cd454aa738073f14d37616bd6cebb434dfeb7268da0996ce08e"
     }
   ],
   "excludes": [

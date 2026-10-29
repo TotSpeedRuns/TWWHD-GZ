@@ -44,3 +44,7 @@ tests/test_custodian_format_source.py text eol=lf
 
 # Reviewed lossless scalar codec optimization.
 experiments/maintained-components/codec-zero-runs/* text eol=lf
+
+# Authored single-action Restore experiment and portable policy cases.
+experiments/maintained-components/single-restore-continuation/** text eol=lf
+tests/test_single_restore_source.py text eol=lf

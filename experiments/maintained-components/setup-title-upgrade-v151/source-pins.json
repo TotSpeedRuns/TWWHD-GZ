@@ -1,0 +1,46 @@
+{
+  "schema": "v151-authored-installed-title-upgrade-source/1",
+  "source_only_partial_snapshot": true,
+  "complete_reproducible_integrated_export": "v126",
+  "sources": {
+    "source/title_upgrade.hpp": {
+      "bytes": 3907,
+      "sha256": "145b0a2826f41dd622f1ef3f1afe7ce78ddc78f808d12eb3848c7f494d08c687"
+    },
+    "source/title_upgrade_setup.inc": {
+      "bytes": 5123,
+      "sha256": "9705d24724157e504d6e3670338b3472465833a53af2329088ef5e89f2e66fce"
+    },
+    "test_title_upgrade.cpp": {
+      "bytes": 4646,
+      "sha256": "67b236fab3f597ee094923023a7c35532fb00b0dbc7675d3cdee7c27838f2f5c"
+    }
+  },
+  "private_proof_fingerprints": {
+    "frozen_authored_source_handoff_sha256": "dfb4fe660a61b8cecfb55c8f1b829da8b3406e09c33fede5e58e253676c65aba",
+    "actual_header_host_qualification_sha256": "c55c6734aa3062a591c1859d54bd8fcfd7e4f0cbb6064a9fb091514699f859cf",
+    "actual_header_host_output_sha256": "06afdd213ebb9ca0f30e528adfece9c60beae7b54eeb437477001974cdf6e508"
+  },
+  "host_validation": {
+    "actual_header": true,
+    "passed": true,
+    "cases": 142,
+    "compiler_returncode": 0,
+    "native_Setup_adapter_qualification_included": false,
+    "WiiU_tested": false
+  },
+  "resource_fingerprints_only": {
+    "legacy_title_archive_sha256": "718f8650532ff94d82db347bb9185858fd39b8492a9a91b6f3beb5108f1df819",
+    "selected_title_archive_sha256": "029987c7d8d952aa284fcf345c5302b957d15dc9dc56c18927cc02074fab5510",
+    "selected_original_only_recipe_sha256": "d8bcb9e4987adaf1771a7bf7be3739be37bef14fbb94c5f00566c50ff9ba93e6",
+    "original_EUR_v0_title_archive_sha256": "06aaa05d996605d379b04e7ab1dfb9592d8d739c7c13e97bcd23049d33f29c5a"
+  },
+  "boundaries": {
+    "title_archives_artwork_binary_recipes_bundled": false,
+    "binaries_game_executables_keys_saves_or_raw_captures_bundled": false,
+    "private_paths_profiles_or_logs_bundled": false,
+    "full_current_installer_reproducible": false,
+    "v150_final_repair_freeze_fixed": false,
+    "runtime_WiiU_full_game_or_smoke_coverage_claimed": false
+  }
+}

@@ -840,3 +840,11 @@ Actor generations, SOURCE identity and physical cleanup were checked; the
 green case also matched all 1,500 restored grass rows. Mixed cohorts, active
 effects, general actors, cutscenes, cross-area replay and Wii U remain unqualified.
 These are partial authored sources. The complete integrated export remains v126.
+
+## Checked v151 installed-title upgrade
+
+The [title-upgrade source](setup-title-upgrade-v151/README.md) publishes the checked
+file transaction and its Setup adapter, with 142 passing host cases. It retains a
+verified prior title and checks replacement, rollback and retry. Wii U filesystem
+behavior and the reported final-Repair freeze remain unqualified. These are
+partial source components; the complete integrated export remains v126.

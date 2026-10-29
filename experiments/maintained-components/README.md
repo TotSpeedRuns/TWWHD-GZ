@@ -809,3 +809,11 @@ recreations passed in Cemu. Ordinary CGA wrappers stayed 9 while complete saved
 leaves changed 9 to 7; this is not a latency, total-work or hardware claim.
 The integrated public builder remains v126; original CURRENT and full-source
 boundaries remain required.
+
+## Lossless zero-run decoding
+
+[The codec source snapshot](codec-zero-runs/README.md) replaces bytewise hashing
+of zero runs with exact modular exponentiation. Portable compatibility checks
+and three finite Cemu bomb restores passed. Smoke reconstruction and full-game
+coverage remain unfinished; this is a partial component, not a current release
+builder or a Wii U performance guarantee.

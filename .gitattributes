@@ -41,3 +41,6 @@ experiments/maintained-components/source-worker-custodian/* text eol=lf
 tests/test_source_worker_custodian_source.py text eol=lf
 
 tests/test_custodian_format_source.py text eol=lf
+
+# Reviewed lossless scalar codec optimization.
+experiments/maintained-components/codec-zero-runs/* text eol=lf

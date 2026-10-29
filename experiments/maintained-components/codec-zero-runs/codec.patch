@@ -1,0 +1,23 @@
+--- shipped/codec.c
++++ candidate/codec.c
+@@ -11,6 +11,11 @@
+ U sc_hash(const void*p,U n){const B*s=(const B*)p;U h=2166136261u,i;
+  if(n>SC_MAX||!range(p,n))return 0;
+  for(i=0;i<n;i++)h=addhash(h,s[i]);
++ return h;}
++/* For zero bytes FNV-1a is multiplication by the prime. Unsigned
++ * arithmetic preserves the original modulo-2^32 result exactly. */
++static U zerohash(U h,U bytes){U factor=16777619u;
++ while(bytes){if(bytes&1u)h*=factor;bytes>>=1;factor*=factor;}
+  return h;}
+ static U run(const B*s,U words,U at){U n=1,v=get(s+at*4);while(n<words-at&&get(s+(at+n)*4)==v)n++;return n;}
+ static void block(const B*s,U words,U at,U*count,U*kind){U n=run(s,words,at),end;
+@@ -50,7 +55,7 @@
+    for(j=0;j<bytes;j++){if(emit)d[out+j]=s[at+j];else h=addhash(h,s[at+j]);}at+=bytes;
+   }else if(kind==1){if(encoded-at<4)return 0;v=get(s+at);at+=4;
+    for(j=0;j<count;j++)for(k=0;k<4;k++){B b=(B)(v>>(24-k*8));if(emit)d[out+j*4+k]=b;else h=addhash(h,b);}
+-  }else{for(j=0;j<bytes;j++){if(emit)d[out+j]=0;else h=addhash(h,0);}}
++  }else if(emit){for(j=0;j<bytes;j++)d[out+j]=0;}else h=zerohash(h,bytes);
+   out+=bytes;
+  }
+  if(at!=encoded||out!=expected)return 0;

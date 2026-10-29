@@ -1,0 +1,43 @@
+{
+  "schema": "authored-lossless-zero-run-codec-source/1",
+  "source_only": true,
+  "complete_integrated_builder": false,
+  "complete_reproducible_export": "v126",
+  "members": [
+    {
+      "path": "codec.c",
+      "bytes": 5010,
+      "sha256": "d137322d4d794884596d628f72395a52d500d4eb837a03b72ddf7d6fe96c6326",
+      "source_sha256": "d137322d4d794884596d628f72395a52d500d4eb837a03b72ddf7d6fe96c6326",
+      "line_endings": "LF"
+    },
+    {
+      "path": "codec-original.c",
+      "bytes": 4746,
+      "sha256": "31b54cb5ae25c470abe589665eac395bf43334de11b70e6e0e0412c518ede733",
+      "source_sha256": "31b54cb5ae25c470abe589665eac395bf43334de11b70e6e0e0412c518ede733",
+      "line_endings": "LF"
+    },
+    {
+      "path": "codec.h",
+      "bytes": 1396,
+      "sha256": "f47f33731e6e6818e1704547395851f4205d9af3cec3ef096bca780916558f46",
+      "source_sha256": "f47f33731e6e6818e1704547395851f4205d9af3cec3ef096bca780916558f46",
+      "line_endings": "LF"
+    },
+    {
+      "path": "codec.patch",
+      "bytes": 1163,
+      "sha256": "be69acba35a8f0a4c6c1a7e13cff0dc0e2e0fc353cdc54203f4d9f2e7f65dd9b",
+      "source_sha256": "f96cd0741f8fbfec6a6d4bcb4c951174ba1a3bd765d39beb711c093cf88c45f0",
+      "line_endings": "LF"
+    },
+    {
+      "path": "compat_harness.c",
+      "bytes": 2522,
+      "sha256": "b2bf80c8f0a5a41a83a75bd2eedf1c07bfe59c1ffffd556f026d8193825ffbcd",
+      "source_sha256": "b2bf80c8f0a5a41a83a75bd2eedf1c07bfe59c1ffffd556f026d8193825ffbcd",
+      "line_endings": "LF"
+    }
+  ]
+}

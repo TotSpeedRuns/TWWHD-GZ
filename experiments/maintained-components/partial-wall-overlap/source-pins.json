@@ -1,9 +1,9 @@
 {
-  "schema": "partial-wall-overlap-portable-source/1",
-  "candidate_source_sha256": "742f35c5e83b0240397ad653d4f4732e5c907c017c5303afbb4a5d006fd3955b",
-  "baseline_source_sha256": "1e0dd0fcae9966bf8fe95ab2f81bcda41af9f86c8b10763b0585f82471cf58d6",
-  "selected_original_object_sha256": "39a83ff6c6e6a91f6d3eaf6081cb902b890f42950bfb0d994b1271710fd2ba59",
-  "compiled_candidate_object_sha256": "83c1cb383c27ee0f35894706b58ebe286db3a0452db28ff078acab9ca42b1d55",
+  "schema": "partial-wall-overlap-portable-source/2",
+  "candidate_source_sha256": "3623b76db1f45174374a395deada8909a508b992a9b5a544aa300b755a9ab3d9",
+  "baseline_source_sha256": "742f35c5e83b0240397ad653d4f4732e5c907c017c5303afbb4a5d006fd3955b",
+  "selected_original_object_sha256": "83c1cb383c27ee0f35894706b58ebe286db3a0452db28ff078acab9ca42b1d55",
+  "compiled_candidate_object_sha256": "32e6523cdb3852fff81c5837e5e9c16ad559dc8668466a0b48459ed559811e5c",
   "compiler_flags": [
     "-mcpu=750",
     "-O2",
@@ -27,8 +27,10 @@
     "-fno-tree-switch-conversion",
     "-ffp-contract=off"
   ],
-  "overlap_percent_before": 1,
-  "overlap_percent_after": 0.5,
+  "overlap_percent_before": 0.5,
+  "overlap_percent_after": 0.25,
   "delivered_in_v151": false,
+  "new_threshold_main_linked": false,
+  "new_threshold_native_tested": false,
   "complete_integrated_export": false
 }

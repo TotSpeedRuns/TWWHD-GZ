@@ -852,7 +852,7 @@ partial source components; the complete integrated export remains v126.
 ## Shallower partial wall overlap
 
 The [current trainer unit](partial-wall-overlap/README.md) lowers the required
-radial overlap from 1% to 0.5% while retaining the finite collision and animation
-guards. The actual component was compiled and linked; one ordinary ET2 ledge,
-corner and climb observation stayed clear. The missed shallow runner setup and
-Wii U sensitivity still need playtesting. This change is staged after v151.
+radial overlap from 0.5% to 0.25% while retaining finite collision and animation
+guards. The component compiles with the predecessor reproduced byte for byte.
+Main integration, ordinary-ledge and shallow-clip checks remain pending for this
+threshold. This is staged after v151, which contains the earlier 1% threshold.

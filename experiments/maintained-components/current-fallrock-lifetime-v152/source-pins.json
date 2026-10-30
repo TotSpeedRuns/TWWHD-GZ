@@ -1,0 +1,46 @@
+{
+  "schema": "v152-maintained-authored-source-pins/1",
+  "complete_reproducible_integrated_export": "v126",
+  "source_only_partial_snapshot": true,
+  "sources": {
+    "integration.patch": {
+      "bytes": 11647,
+      "sha256": "54595b4252e037a86c5944a8f600d7ebacafd1770ce03844c03cce9bfb48b6ff"
+    },
+    "baseline/lifecycle_intent.inc": {
+      "bytes": 18628,
+      "sha256": "43ef35166bc5de07c8cc37b0e12819335cb8c3c106393525ba18a08c4f40d5c4"
+    },
+    "source/lifecycle_fallrock.inc": {
+      "bytes": 6240,
+      "sha256": "30683717a987ac04aec1eb2c53c5d97eda3d15a2b6ac547dc85a87f3002d84c1"
+    },
+    "source/lifecycle_intent.inc": {
+      "bytes": 19419,
+      "sha256": "3049e4c39b0112a4a2a0d4adf9d2718d649e1b7c6dd7bd2a7dc34513b2ef8382"
+    }
+  },
+  "private_proof_fingerprints": {
+    "fallrock_source": {
+      "bytes": 2507,
+      "sha256": "a252fe6ec674171d68cbab60c305aedb7c7ae71d525e925ea6a881ea245cd741"
+    },
+    "fallrock_source_peer": {
+      "bytes": 11950,
+      "sha256": "9462c974af1e3191e8d64943c75b0f2299d3671b8000904ca72f191bddc11620"
+    },
+    "fallrock_component_peer": {
+      "bytes": 33166,
+      "sha256": "f68150e6c088511d797ac52c25a7ec69a90deccfed829436c93f6cffdbf9ff61"
+    },
+    "baseline_native_assessment": {
+      "bytes": 11914,
+      "sha256": "310520744b550bfaff1ca9b82166877b3dec13404497869c31f6130a2c01bc76"
+    },
+    "selected_native_assessment": {
+      "bytes": 12239,
+      "sha256": "c376d551706aa705459ee7bfb4dab67942df8d8eaa3036fbe7cdbf659fbf9d2f"
+    }
+  },
+  "native_or_resource_bytes_included": false
+}

@@ -1,0 +1,62 @@
+--- baseline/world_core_roundtrip.c
++++ source/world_core_roundtrip.c
+@@ -67,6 +67,33 @@
+ static u32 wct_sealed(u32 t,u32 f){
+  return wct_metadata_sealed(t,f)&&wct_plans(t);
+ }
++/* Aggregate only the original SOURCE metadata tuple comparison. The caller
++ * still owns every original WCT/ROH/WGP/HG/WHL/JPG/GPU/current predicate.
++ * No digest result is retained beyond this same nonyielding call. FULL or
++ * REFUSE does not become a body-hash/read grant: it executes only the exact
++ * original five metadata APIs below. The healthy final forced hash is separate.
++ */
++extern u32 _gz_roh_registry_revision;
++static u32 wct_source_tuple_current(u32 token,u32 frame)
++{
++ u32 parent;
++ if(wct_entered==1&&token&&wct.token==token&&wct.frame==frame&&
++  frame==_gz_pbac_frame&&wct.revision&&
++  wct.revision==*(volatile u32*)&_gz_roh_registry_revision&&
++  (parent=_gz_wct_native_owned())!=0){
++  GzSourceDigest value=_gz_osa_verified_source_digest(wct.pin,wct.source,wct.used,
++      wct.identity,wct.generation,wct.revision);
++  /* Only the upper state selects the aggregate result. Hash0 is valid;
++   * the old tuple clause never compared a sourcebody hash here. */
++  if((u32)(value>>32)==GZ_DIGEST_ISSUED&&_gz_wct_native_owned()==parent&&
++   frame==_gz_pbac_frame&&wct.frame==frame&&
++   wct.revision==*(volatile u32*)&_gz_roh_registry_revision)return 1;
++ }
++ return !_gz_osa_validate(wct.pin)&&_gz_osa_source(wct.pin)==wct.source&&
++  _gz_osa_bytes(wct.pin)==wct.used&&_gz_osa_pin_identity(wct.pin)==wct.identity&&
++  _gz_osa_pin_generation(wct.pin)==wct.generation;
++}
++
+ /* Metadata only: the real frame-owned callback establishes entry before
+  * the independent native HG gate may be acquired. No actor/source body is
+  * followed here, and group receipts cannot create an owner. */
+@@ -77,9 +104,8 @@
+  if(brr_wct_group_fast(t,f,mode)){
+   /* Recheck the live issued source pin, not its contents or a cached
+    * capability. These accessors inspect only fixed ownership metadata. */
+-  if(!wct_metadata_sealed(t,f)||_gz_osa_pin_id()!=wct.pin||_gz_osa_validate(wct.pin)||
+-   _gz_osa_source(wct.pin)!=wct.source||_gz_osa_bytes(wct.pin)!=wct.used||
+-   _gz_osa_pin_identity(wct.pin)!=wct.identity||_gz_osa_pin_generation(wct.pin)!=wct.generation)return 0;
++  if(!wct_metadata_sealed(t,f)||_gz_osa_pin_id()!=wct.pin||
++   !wct_source_tuple_current(t,f))return 0;
+  }else if(!wct_sealed(t,f))return 0;
+  if(o[6]!=1)return 0;
+  if(mode==2)return wct.phase==WCT_FORWARD&&!wct.returned&&!wct.error&&o[3]==ROH_MUTATING&&!o[7]&&o[12]==8;
+--- baseline/bridge_replay3.inc
++++ source/bridge_replay3.inc
+@@ -146,9 +146,8 @@
+     if(brr_wgp.mode==1) {
+         if(!_gz_wct_group_context(token,brr_wgp.frame,1))return 0;
+     } else if(!fgd_metadata(token,brr_wgp.frame,brr_wgp.mode) ||
+-       _gz_osa_pin_id()!=wct.pin || _gz_osa_validate(wct.pin) ||
+-       _gz_osa_source(wct.pin)!=wct.source || _gz_osa_bytes(wct.pin)!=wct.used ||
+-       _gz_osa_pin_identity(wct.pin)!=wct.identity || _gz_osa_pin_generation(wct.pin)!=wct.generation)return 0;
++       _gz_osa_pin_id()!=wct.pin ||
++       !wct_source_tuple_current(token,brr_wgp.frame))return 0;
+     if(brr_plan.rows && (!_gz_wct_heap_held(token,brr_wgp.frame) ||
+        _gz_jpg_check(token,brr_wgp.frame) || _gz_jpg_gpu_restore_ready(token,brr_wgp.frame)))return 0;
+     return brr_wgp.entered==1 && brr_wgp.plan_seal && brr_plan.seal==brr_wgp.plan_seal;

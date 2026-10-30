@@ -61,3 +61,12 @@ experiments/maintained-components/saved-bomb-source-identity/** text eol=lf
 # Authored experimental bridge capture/replay.
 experiments/maintained-components/native-bridge-rewind/** text eol=lf
 experiments/maintained-components/native-bridge-rewind/*.patch -whitespace
+
+# Reviewed authored v152 partial lifecycle, Source and Setup components.
+experiments/maintained-components/current-fallrock-lifetime-v152/** text eol=lf
+experiments/maintained-components/issued-source-tuple-v152/** text eol=lf
+experiments/maintained-components/setup-title-upgrade-v152/** text eol=lf
+# Preserve this tested authored C++ source's exact original CRLF bytes.
+experiments/maintained-components/setup-title-upgrade-v152/title_recipe_driver.cpp -text
+docs/releases/v152-source-status.md text eol=lf
+docs/releases/v152-source-pins.json text eol=lf

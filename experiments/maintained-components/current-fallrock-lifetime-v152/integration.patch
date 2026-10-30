@@ -1,0 +1,195 @@
+--- baseline/lifecycle_intent.inc
++++ source/lifecycle_intent.inc
+@@ -35,10 +35,16 @@
+ /* Item policy is immutable private intent, not a native-read grant. The
+  * unused bytes are zero from whole-intent initialization. Never resample a
+  * native ItemNo after schedule; exact lifetime receipts replace that object. */
++/* Existing eight policy bytes:0/1 retain exact profile255 ItemNo;2 is the
++ * separately qualified profile422 class. No native ItemNo read for422. */
+ static u32 lrr_items(void){u32 i;if(!lrr.count||lrr.count>LRR_CAP)return 0;
+- for(i=0;i<LRR_CAP;i++)if(i<lrr.count){if(lrr.item_no[i]>1)return 0;}else if(lrr.item_no[i])return 0;
++ for(i=0;i<LRR_CAP;i++)if(i<lrr.count){
++  if(lrr.actor[i].process.profile==255){if(lrr.item_no[i]>1)return 0;}
++  else if(lrr.actor[i].process.profile==422){if(lrr.item_no[i]!=2)return 0;}
++  else return 0;
++ }else if(lrr.item_no[i])return 0;
+  return 1;}
+-static u32 lrr_valid(void){return lrr.magic==LRR_MAGIC&&lrr.bytes==sizeof(lrr)&&lrr.version==2&&
++static u32 lrr_valid(void){return lrr.magic==LRR_MAGIC&&lrr.bytes==sizeof(lrr)&&lrr.version==3&&
+  lrr.nonce&&lrr.count&&lrr.count<=LRR_CAP&&lrr.co_count<=LRR_CO_CAP&&
+  lrr.next<lrr.count&&lrr_items()&&lrr.seal==btr_hash(&lrr,sizeof(lrr)-4);}
+ static u32 lrr_fail(u32 z){if(!lrr.error)lrr.error=z;lrr.phase=LRR_HALTED;lrr_seal();
+@@ -84,6 +90,7 @@
+  !*(volatile u8*)&_gz_pbac_loading&&!_gz_pbac_event&&!_gz_pbac_world_resume_pending&&
+  !_gz_pbac_pending&&_gz_hg_platform_thread()==lrr.thread;}
+ static u32 lrr_empty_root(u32 p){return !R32(p,0)&&!R32(p,4)&&!R32(p,8);}
++#include "lifecycle_fallrock.inc"
+ /* Only current native fields are followed, after exact LIVE Po key and
+  * allocation metadata checks under the separate genuine writer interval.
+  * No resource manager/node/refcount is read. All addresses use retained
+@@ -118,6 +125,11 @@
+   !R32(d+0x1f3328u,8)||R32(d+0x1f3328u,8)>IPR_SOURCE_CAP)return 0;
+  return 1;
+ }
++static u32 lrr_class_shape(const LrrActor*x,u32 policy){
++ if(x->process.profile==255)return policy<=1&&lrr_item_shape(x,policy);
++ if(x->process.profile==422)return policy==2&&lrr_fallrock_shape(x);
++ return 0;
++}
+ /* One-time private index capture; no per-frame full Po/Co table rescans. */
+ static u32 lrr_indices(void){u32 i,j,k,start,found;
+  /* Exact current producer lookup geometry; no tombstone/create policy is
+@@ -161,7 +173,7 @@
+   !ipk_plan.extra_count||ipk_plan.extra_count>LRR_CAP||_gz_ipk_before_end(t,f)||
+   !_gz_wct_heap_held(t,f)||!lrr_headers())return;
+  if(lrr_serial==BAD){_gz_lrr_report[5]=LRR_EXHAUSTED;return;}
+- bcl_zero(&lrr,sizeof(lrr));lrr.magic=LRR_MAGIC;lrr.bytes=sizeof(lrr);lrr.version=2;
++ bcl_zero(&lrr,sizeof(lrr));lrr.magic=LRR_MAGIC;lrr.bytes=sizeof(lrr);lrr.version=3;
+  lrr.request=wct_source.request;lrr.issued_frame=f;lrr.thread=_gz_hg_platform_thread();
+  lrr.slot=wct_source.slot;lrr.identity=ipk_plan.identity;lrr.generation=ipk_plan.generation;
+  lrr.used=ipk_plan.used;lrr.hash=ipk_plan.source_hash;lrr.epoch=_gz_pbac_epoch;
+@@ -182,12 +194,18 @@
+  }
+  z=LRR_OBSERVER;if(!lrr_indices()||!lrr_heap_capture())goto decline;
+  z=LRR_SHAPE;for(i=0;i<lrr.count;i++){
+-  /* Current LIVE PO/OB/HL identities above and the original WHL interval
+-   * precede both ItemNo reads. Seal the exact case, not merely set0/1. */
+-  if(lrr.actor[i].process.profile!=255||lrr.actor[i].process.process_name!=255||
+-   lrr.actor[i].process.allocation_bytes!=0x7f0||!span(lrr.actor[i].process.object,0x7f0))goto decline;
+-  lrr.item_no[i]=R8(lrr.actor[i].process.object,0x74e);
+-  if(!lrr_item_shape(lrr.actor+i,lrr.item_no[i]))goto decline;
++  /* Exact LIVE PO/OB/HL identities and original WHL precede all bodies.
++   * Keep the old255 native ItemNo case exact;422's sealed marker is private. */
++  if(lrr.actor[i].process.profile==255){
++   if(lrr.actor[i].process.process_name!=255||lrr.actor[i].process.allocation_bytes!=0x7f0||
++    !span(lrr.actor[i].process.object,0x7f0))goto decline;
++   lrr.item_no[i]=R8(lrr.actor[i].process.object,0x74e);
++  }else if(lrr.actor[i].process.profile==422){
++   if(lrr.actor[i].process.process_name!=422||lrr.actor[i].process.allocation_bytes!=0x734||
++    !span(lrr.actor[i].process.object,0x734))goto decline;
++   lrr.item_no[i]=2;
++  }else goto decline;
++  if(!lrr_class_shape(lrr.actor+i,lrr.item_no[i]))goto decline;
+  }
+  z=LRR_CHANGED;if(!lrr_headers()||!lrr_frame()||!ctp_restored(t,f)||!_gz_wct_heap_held(t,f))goto decline;
+  /* Publish nonce LAST, from this actual private monotonically-issued serial. */
+@@ -258,7 +276,7 @@
+  if(!_gz_hl_meta_try_lock()){lrr_seal();return 5;}
+  z=_gz_hl_control.flags||_gz_hl_control.session||!btr_equal(_gz_hl_heaps+x->heap_index,&x->solid,sizeof(HlHeap));
+  _gz_hl_meta_unlock();if(z)return lrr_fail(LRR_OWNER);
+- if(!lrr_item_shape(x,lrr.item_no[i])||!lrr_source()||!_gz_lrw_owned())return lrr_fail(LRR_SHAPE);
++ if(!lrr_class_shape(x,lrr.item_no[i])||!lrr_source()||!_gz_lrw_owned())return lrr_fail(LRR_SHAPE);
+  btr_copy(items_before,lrr.item_no,sizeof(items_before));ambient=R32(GZ_OB_DATA_BEGIN,0x1f3ae8);
+  lrr.phase=LRR_CALLING;lrr.scheduled|=1u<<i;lrr_seal();_gz_lrr_report[3]=LRR_CALLING;
+  _gz_lrr_report[15]=lrr.scheduled;_gz_lrr_report[18]=BAD;_gz_lrr_report[21]=i;
+--- /dev/null
++++ source/lifecycle_fallrock.inc
+@@ -0,0 +1,108 @@
++/* Finite CURRENT profile422 retirement shape. Caller already proved current
++ * PO/OB/solid-HL and owns either the actual WHL inverse or fresh LRW writer.
++ * No saved pointer is followed, no resource/native object is written, and
++ * this check alone grants neither publication nor a lifecycle capability. */
++static u32 lrr_rock_bound(u32 p,u32 bytes)
++{
++    return span(p,bytes) && !_gz_ob_try_capture(p,bytes,&lrr_binding) &&
++        !_gz_ob_try_validate(&lrr_binding);
++}
++
++/* Same resident resource tree/headers used by the retained native lookup.
++ * Fresh OB precedes each dynamic envelope. Only index32 (KROCK_00) from the
++ * exact CURRENT Always entry is accepted; no saved or caller-selected name.
++ * The genuine writer/WHL interval excludes concurrent native resource work. */
++static u32 lrr_rock_resource(u32 expected)
++{
++    u32 control=_gz_brg_native_resource_control_slot,pool,storage,count,node;
++    u32 low=0,high=0xffffffffu,seen[4]={0,0,0,0},steps=0;
++    if(!control || control!=_gz_pr_resource_control ||
++       !lrr_rock_bound(control,0x2130) ||
++       R32(control,0)!=(u32)_gz_lpc_native_res_control_vtable)return 0;
++    pool=control+20;storage=control+40;count=R32(pool,12);node=R32(pool,0);
++    if(R32(pool,8)!=storage || R32(pool,16)!=128 || !count || count>128)return 0;
++    while(node) {
++        u32 i,key,info,table,n,container,header,bytes,resource;
++        if(node<storage || node>=storage+128*32 || ((node-storage)&31) || ++steps>count)return 0;
++        i=(node-storage)>>5;
++        if(seen[i>>5]&(1u<<(i&31)))return 0;
++        seen[i>>5]|=1u<<(i&31);
++        if(R32(node,28)!=pool || R32(node,16)!=(u32)_gz_lpc_native_res_node_vtable ||
++           R8(node,8)>1)return 0;
++        key=R32(node,12);
++        if(key!=R32(node,20) || key<low || key>high)return 0;
++        if(key==0xa108392du) {
++            info=R32(node,24);
++            if(!lrr_rock_bound(info,0x8c) ||
++               R32(info,12)!=(u32)_gz_lpc_native_res_info_vtable ||
++               R32(info,16)!=info+28 || R32(info,20)!=(u32)_gz_lpc_native_res_string_vtable ||
++               R32(info,24)!=64 || R32(info,28)!=0x416c7761u ||
++               R16(info,32)!=0x7973 || R8(info,34))return 0;
++            table=R32(info,96);n=R32(info,132);container=R32(info,92);
++            if(n<=32 || n>4096 || !lrr_rock_bound(table,n*4))return 0;
++            resource=R32(table,32*4);
++            if(!resource || resource!=expected || !lrr_rock_bound(resource,0x20) ||
++               !lrr_rock_bound(container,0x24))return 0;
++            header=R32(container,20);
++            if(!lrr_rock_bound(header,0x6c) || R32(header,0)!=0x46524553u ||
++               R32(header,4)!=0x03040001u)return 0;
++            bytes=R32(header,12);
++            if(bytes<0x6c || bytes>0x4000000u || !lrr_rock_bound(header,bytes))return 0;
++            /* Recheck every followed owning edge before returning an identity.
++             * This is not a resource refcount edit or a destruction receipt. */
++            if(!lrr_rock_bound(info,0x8c) || R32(info,96)!=table ||
++               R32(info,132)!=n || R32(info,92)!=container ||
++               !lrr_rock_bound(table,n*4) || R32(table,32*4)!=resource ||
++               !lrr_rock_bound(container,0x24) || R32(container,20)!=header ||
++               !lrr_rock_bound(control,0x2130) ||
++               control!=_gz_brg_native_resource_control_slot || control!=_gz_pr_resource_control ||
++               R32(pool,0)==0 || R32(pool,12)!=count || R32(node,24)!=info ||
++               R32(node,12)!=0xa108392du || R32(node,20)!=0xa108392du)return 0;
++            return 1;
++        }
++        if(key>0xa108392du) {if(!key)return 0;high=key-1;node=R32(node,0);}
++        else {if(key==0xffffffffu)return 0;low=key+1;node=R32(node,4);}
++    }
++    return 0;
++}
++
++static u32 lrr_fallrock_shape(const LrrActor*x)
++{
++    u32 a=x->process.object,d=GZ_OB_DATA_BEGIN,t=GZ_OB_TEXT_BEGIN,model,resource;
++    if(x->process.profile!=422 || x->process.process_name!=422 ||
++       x->process.allocation_bytes!=0x734 || x->process.profile_entry!=d+0x1b4a60 ||
++       x->process.init_state || x->process.flags || x->process.state!=PO_LIVE ||
++       !x->process.generation || !x->process.pid || !span(a,0x734) ||
++       R32(a,4)!=x->process.pid || R16(a,8)!=422 || R8(a,10)==1 ||
++       R8(a,11)!=x->pause || (x->pause&3u) || R8(a,12)!=2 || R32(a,0x14) ||
++       R32(a,0x2c)!=x->layer || !x->layer || x->layer_id>=0xfffffffdu ||
++       _gz_bli_native_resolve(x->layer_id)!=x->layer || !span(x->layer,0x2c) ||
++       R32(x->layer,12)!=x->layer_id || R16(x->layer,0x2a)>=0x7fffu ||
++       R32(a,0xa8)!=d+0x1f3bdc || R32(a,0xbc)!=d+0x1f3088 ||
++       R32(a,0xf0)!=d+0x1b4a1c || R32(a,0xb4)!=d+0xe7e4 ||
++       R32(a,0xf4)!=x->solid.heap || R8(a,0x2dc) || R8(a,0x3aa)!=1 ||
++       R32(a,0x3b4)!=2 ||
++       R32(d+0x1b4a1c,4)!=t+(0x2131854u-0x02000000u) ||
++       R32(d+0xe7e4,12)!=t+(0x2131b58u-0x02000000u))return 0;
++    /* Native completed phase+4 is2; Delete ignores phase+0 on this path.
++     * Never transplant profile255 ItemNo/follow offsets beyond this0x734 body. */
++    if(_gz_ipk_native_is_node(IPK_NODE_TYPE,R32(a,0xb8)) || R8(a+0x68,16) ||
++       !lrr_empty_root(d+0x1f39a4u) || !lrr_empty_root(d+0x1f3a1cu) ||
++       !lrr_empty_root(d+0x48ab40u) ||
++       R32(a+0x4c,0) || R32(a+0x4c,4) || R32(a+0x4c,8) ||
++       R32(a+0x4c,12)!=a || R8(a+0x4c,16) ||
++       R32(a+0xc8,4)!=d+0x1f3328u || R32(a+0xc8,12)!=a || R8(a+0xc8,16)!=1 ||
++       !R32(d+0x1f3328u,8) || R32(d+0x1f3328u,8)>IPR_SOURCE_CAP)return 0;
++    model=R32(a,0x3ac);
++    if(_gz_gh_solid(x->solid.heap,model,0xf8) ||
++       !_gz_gh_identity.valid || _gz_gh_identity.heap!=x->solid.heap ||
++       _gz_gh_identity.model!=model || _gz_gh_identity.model_bytes!=0xf8 ||
++       !lrr_rock_bound(model,0xf8) || lrr_binding.kind!=HL_SOLID ||
++       lrr_binding.heap!=x->solid.heap || lrr_binding.heap_generation!=x->solid.generation)return 0;
++    resource=R32(model,0xac);
++    if(!lrr_rock_resource(resource) || !lrr_rock_bound(model,0xf8) ||
++       lrr_binding.heap!=x->solid.heap || lrr_binding.heap_generation!=x->solid.generation ||
++       R32(model,0xac)!=resource || _gz_ob_try_validate(&x->allocation) ||
++       R32(a,0x3ac)!=model || R32(a,0x3b4)!=2 || R32(a,0xf4)!=x->solid.heap)return 0;
++    return 1;
++}

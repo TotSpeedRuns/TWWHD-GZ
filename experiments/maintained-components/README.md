@@ -884,3 +884,13 @@ A private Cemu Sickass test completed three bridge restores in12.641–12.906sec
 the earlier separate baseline was21.390–21.625seconds. Fresh source/cohorts differ,
 so this is a bounded observation, with no exact percentage or Wii U claim.
 Restores remain too slow and full actor lifetime/resource coverage remains unfinished.
+
+## v152 authored lifecycle and Setup source update
+
+See [the v152 source record](../../docs/releases/v152-source-status.md),
+[current-only falling-rock retirement](current-fallrock-lifetime-v152/README.md),
+[issued Source query](issued-source-tuple-v152/README.md), and
+[Setup title transaction](setup-title-upgrade-v152/README.md). These are partial
+maintained components. The complete reproducible integrated builder remains v126.
+Two separate Cemu sessions each qualified one rock/contact; the selected restore
+took38.235 seconds and no latency gain or general/Wii U coverage is claimed.

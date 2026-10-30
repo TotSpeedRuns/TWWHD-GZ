@@ -1,0 +1,46 @@
+{
+  "schema": "v152-maintained-authored-source-pins/1",
+  "complete_reproducible_integrated_export": "v126",
+  "source_only_partial_snapshot": true,
+  "sources": {
+    "test_title_upgrade.cpp": {
+      "bytes": 4646,
+      "sha256": "67b236fab3f597ee094923023a7c35532fb00b0dbc7675d3cdee7c27838f2f5c"
+    },
+    "title_recipe_driver.cpp": {
+      "bytes": 1638,
+      "sha256": "e2ebd11b8f35b6630f269a89b8ed4b71564f575bc8fc65e5140248bb0debc99a"
+    },
+    "source/title_upgrade.hpp": {
+      "bytes": 3907,
+      "sha256": "145b0a2826f41dd622f1ef3f1afe7ce78ddc78f808d12eb3848c7f494d08c687"
+    },
+    "source/title_upgrade_setup.inc": {
+      "bytes": 5258,
+      "sha256": "2bd6e6f2f1895d43796e5ec962c7eb9af7eb001b3af8688fffb9eddc002d6c4e"
+    }
+  },
+  "private_proof_fingerprints": {
+    "title_source": {
+      "bytes": 3992,
+      "sha256": "de0e4c4bc7957a336813ee3be5dc87f008fe583a855cb10036a9b31e112a0284"
+    },
+    "title_host142": {
+      "bytes": 1302,
+      "sha256": "0390f02cff94ac8ad22ec2fa4e62523f63692a915db1fa319d286b926b0473ba"
+    },
+    "title_personal_recipe10": {
+      "bytes": 4385,
+      "sha256": "1b3cc419d89f82a96d1d9482a9bc8d07cacc17b30f493518448254e6b20be9c4"
+    },
+    "title_public_recipe10": {
+      "bytes": 4363,
+      "sha256": "15ef875fbcd59f47784c5311f3b78f39f02d296e9a5c64ebc6c4b832b371fbca"
+    },
+    "title_visual_inheritance": {
+      "bytes": 2091,
+      "sha256": "22944d75e1b7b5ee8bc4a05dcd9075e6b909f21e04949945657a019e73f22da2"
+    }
+  },
+  "native_or_resource_bytes_included": false
+}

@@ -199,3 +199,11 @@ completed native retirement of five post-capture ItemNo1 objects and a separatel
 requested restore of all fourteen typed targets, grass, player and sword. It
 does not establish automatic retry or Wii U coverage. The integrated
 reproducible export remains v126.
+
+## v152 test-release source record
+
+The [v152 source record](releases/v152-source-status.md) publishes the finite
+current-only422 retirement delta, selected issued-Source query and exact Setup
+transaction source/tests. One-rock Cemu restores completed, but the selected
+38.235-second interval showed no latency gain. General game/hardware coverage
+remains incomplete; the complete reproducible integrated builder remains v126.

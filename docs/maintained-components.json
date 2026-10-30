@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v151-shared-binding-check-cost",
-  "status": "Partial authored sources. Shared object-binding fixed-check factoring passed finite Cemu bridge cases in12.641\u201312.906seconds. Still slow; general actor/resource/cutscene/persistence and Wii U scope remain incomplete. Complete integrated export remains v126.",
+  "revision": "v152-reviewed-partial-source",
+  "status": "Partial authored sources. v152 includes current-only falling-rock retirement and Setup title transactions. Selected one-rock Cemu restore took 38.235 seconds; no speedup or full-game/Wii U qualification. Complete integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 52072,
-      "sha256": "b1728eda5c06ba34999e94b16fb821902ee28bd9fd5af0723b5b71c30dbcd88b"
+      "bytes": 52664,
+      "sha256": "6b9fe58ea5f2ee3c55b3e427a786f5aab3c5dd4dab05659ba0726ca4b9f57f55"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1747,6 +1747,91 @@
       "path": "experiments/maintained-components/native-heap-v147/object-binding-fixed-private.patch",
       "bytes": 1047,
       "sha256": "c4c2d6df59bfc9e01af48bc53c999fc095d03bc38489af86bdb886c4b41e3b0e"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/baseline/lifecycle_intent.inc",
+      "bytes": 18628,
+      "sha256": "43ef35166bc5de07c8cc37b0e12819335cb8c3c106393525ba18a08c4f40d5c4"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/INTEGRATION.md",
+      "bytes": 2504,
+      "sha256": "337f73f72caefe2c817fa271732d6be467f3d613de6791f7bf412863515a620d"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/integration.patch",
+      "bytes": 11647,
+      "sha256": "54595b4252e037a86c5944a8f600d7ebacafd1770ce03844c03cce9bfb48b6ff"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/README.md",
+      "bytes": 3038,
+      "sha256": "4332bbfd596c0076d6fe69b5bac432484ab3102af555ef663e3f5fb9676bdc58"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/source/lifecycle_fallrock.inc",
+      "bytes": 6240,
+      "sha256": "30683717a987ac04aec1eb2c53c5d97eda3d15a2b6ac547dc85a87f3002d84c1"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/source/lifecycle_intent.inc",
+      "bytes": 19419,
+      "sha256": "3049e4c39b0112a4a2a0d4adf9d2718d649e1b7c6dd7bd2a7dc34513b2ef8382"
+    },
+    {
+      "path": "experiments/maintained-components/current-fallrock-lifetime-v152/source-pins.json",
+      "bytes": 1561,
+      "sha256": "d701f69d43b23668afa051fdb346584b5180da0085d414364e48441a5242e103"
+    },
+    {
+      "path": "experiments/maintained-components/issued-source-tuple-v152/issued-source-tuple.patch",
+      "bytes": 3413,
+      "sha256": "1da21199ffc500bbc419b8ad67fb5f416395b986d3ed2e2415cdf089c42ae8ad"
+    },
+    {
+      "path": "experiments/maintained-components/issued-source-tuple-v152/portable_policy_cases.c",
+      "bytes": 4078,
+      "sha256": "4f4393f68d3e76f62bab8adc58c94136b552b2aea425f6b331804ada88afebb2"
+    },
+    {
+      "path": "experiments/maintained-components/issued-source-tuple-v152/README.md",
+      "bytes": 2262,
+      "sha256": "0502eb877290f2cd9113c018c7820695eeef4285080b33dd6968d7368fdcf169"
+    },
+    {
+      "path": "experiments/maintained-components/issued-source-tuple-v152/source-pins.json",
+      "bytes": 1740,
+      "sha256": "b2ae4a28bcc24b86245412a5d5e04a2b90856d09b084b80fabda4d958ea25e17"
+    },
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/INTEGRATION.md",
+      "bytes": 1585,
+      "sha256": "e54519b96b4f425f7b74b79f17456a3958fe8fea94ed61c266a932fbe4277c1a"
+    },
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/README.md",
+      "bytes": 2145,
+      "sha256": "20473acebcd3efb3c232684ecda8ad60bda1988de88b9e63279c44ad175ea7f2"
+    },
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/source/title_upgrade.hpp",
+      "bytes": 3907,
+      "sha256": "145b0a2826f41dd622f1ef3f1afe7ce78ddc78f808d12eb3848c7f494d08c687"
+    },
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/source/title_upgrade_setup.inc",
+      "bytes": 5258,
+      "sha256": "2bd6e6f2f1895d43796e5ec962c7eb9af7eb001b3af8688fffb9eddc002d6c4e"
+    },
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/source-pins.json",
+      "bytes": 1534,
+      "sha256": "3920282bbd11fa97cf0744de6e4d33d9942d3fc042a0c4efdd2451ac589109f4"
+    },
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/test_title_upgrade.cpp",
+      "bytes": 4646,
+      "sha256": "67b236fab3f597ee094923023a7c35532fb00b0dbc7675d3cdee7c27838f2f5c"
     }
   ],
   "excludes": [
@@ -1758,5 +1843,14 @@
     "Private diagnostics"
   ],
   "hash_normalization": "UTF-8 with LF line endings, matching Git source blobs",
-  "Triforce_source_line_endings": "Canonical LF with subtree eol=lf; semantic private-source equality is checked after CRLF normalization."
+  "Triforce_source_line_endings": "Canonical LF with subtree eol=lf; semantic private-source equality is checked after CRLF normalization.",
+  "exact_source_files": [
+    {
+      "path": "experiments/maintained-components/setup-title-upgrade-v152/title_recipe_driver.cpp",
+      "bytes": 1638,
+      "sha256": "e2ebd11b8f35b6630f269a89b8ed4b71564f575bc8fc65e5140248bb0debc99a",
+      "hash_normalization": "Exact authored bytes; Git -text retains the qualified CRLF source."
+    }
+  ],
+  "exact_source_files_note": "These explicit raw-byte records are separate from the existing LF-normalized inventory; each corresponding Git blob must preserve these exact authored bytes."
 }

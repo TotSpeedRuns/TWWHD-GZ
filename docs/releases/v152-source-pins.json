@@ -1,0 +1,85 @@
+{
+  "schema": "v152-source-and-package-status-fingerprints/1",
+  "complete_reproducible_integrated_export": "v126",
+  "proofs": {
+    "fallrock_source": {
+      "bytes": 2507,
+      "sha256": "a252fe6ec674171d68cbab60c305aedb7c7ae71d525e925ea6a881ea245cd741"
+    },
+    "fallrock_source_peer": {
+      "bytes": 11950,
+      "sha256": "9462c974af1e3191e8d64943c75b0f2299d3671b8000904ca72f191bddc11620"
+    },
+    "fallrock_component_peer": {
+      "bytes": 33166,
+      "sha256": "f68150e6c088511d797ac52c25a7ec69a90deccfed829436c93f6cffdbf9ff61"
+    },
+    "baseline_native_assessment": {
+      "bytes": 11914,
+      "sha256": "310520744b550bfaff1ca9b82166877b3dec13404497869c31f6130a2c01bc76"
+    },
+    "selected_native_assessment": {
+      "bytes": 12239,
+      "sha256": "c376d551706aa705459ee7bfb4dab67942df8d8eaa3036fbe7cdbf659fbf9d2f"
+    },
+    "issued_tuple_source": {
+      "bytes": 4034,
+      "sha256": "b3c168b9e7b703b2f4f962b8ffeb8660117eada8187137b09f95f6a6a8f3e61a"
+    },
+    "issued_tuple_component_peer": {
+      "bytes": 30343,
+      "sha256": "efb6a0b788ce6de481911798eeb5a23712b227eb834a4334a0499d9155eefdd6"
+    },
+    "issued_tuple_host28": {
+      "bytes": 1519,
+      "sha256": "fbcda4c1a8963f0093adf1ae4be6fcc362ec3b78eb353c8ef71effdf582dcbd9"
+    },
+    "title_source": {
+      "bytes": 3992,
+      "sha256": "de0e4c4bc7957a336813ee3be5dc87f008fe583a855cb10036a9b31e112a0284"
+    },
+    "title_host142": {
+      "bytes": 1302,
+      "sha256": "0390f02cff94ac8ad22ec2fa4e62523f63692a915db1fa319d286b926b0473ba"
+    },
+    "title_personal_recipe10": {
+      "bytes": 4385,
+      "sha256": "1b3cc419d89f82a96d1d9482a9bc8d07cacc17b30f493518448254e6b20be9c4"
+    },
+    "title_public_recipe10": {
+      "bytes": 4363,
+      "sha256": "15ef875fbcd59f47784c5311f3b78f39f02d296e9a5c64ebc6c4b832b371fbca"
+    },
+    "title_visual_inheritance": {
+      "bytes": 2091,
+      "sha256": "22944d75e1b7b5ee8bc4a05dcd9075e6b909f21e04949945657a019e73f22da2"
+    },
+    "Public_main_peer": {
+      "bytes": 135129,
+      "sha256": "972ac0bcbf7f6b326b059f910612a33968ebff979eb451b70432ac8e1be56149"
+    },
+    "release_scope": {
+      "bytes": 2401,
+      "sha256": "6c2418dd8481a072d6a9d3701faf6672d453a65278cb21a3047ac76da7f7b645"
+    },
+    "Cemu_package_qualification": {
+      "bytes": 22412,
+      "sha256": "b866fd37739f90ed59c825e2bbaa5ca3e68a01ac987b23dd8af5166e87ed3c1c"
+    }
+  },
+  "Personal_image_sha256": "a138fb5be57a774e5183f0af3a0bca6602ba875bcfe207fe67cd676f3ae081ba",
+  "Public_image_sha256": "10fc9d14b994acbb30fd7ce6f034c3ab67a1e3dc6ba567137281cd42d864438c",
+  "baseline_cases": 1,
+  "selected_cases": 1,
+  "selected_422_actors": 1,
+  "selected_contacts": 1,
+  "selected_capture_seconds": 1.468,
+  "selected_restore_seconds": 38.235,
+  "latency_gain": false,
+  "Cemu_CLI_checks": 11,
+  "Cemu_headless_integrity_checks": 16,
+  "local_original_and_output_files_verified": 1020,
+  "Wii_U_tested": false,
+  "current_full_reproducible_builder_exported": false,
+  "code_binary_resource_capture_profile_or_key_files_included": false
+}

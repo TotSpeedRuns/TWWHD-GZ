@@ -1,0 +1,24 @@
+{
+  "schema": "portable-BRG3-caller-LR-fix/1",
+  "full_byte_inverse_exact": true,
+  "one_exact_edit": true,
+  "before_runtime_source_sha256": "ad222b385eed4eff044ad5a0282be0c1a021b4a5dd80b1e333e1fb7f8f5e2a42",
+  "after_runtime_source_sha256": "6c298e26ed6ba1932ea77bf6ddf5b3e0df068822623b4213e9b18953abeb8a2f",
+  "before_runtime_object_sha256": "9ec1a613bd0f696bb43f08f1fbf1911fbc23e3ec280f75260e408e07a3768bfe",
+  "after_runtime_object_sha256": "6ae6be87ad7042118e50d451f31e832ad52b3fbbf87367854139d9314978fa4d",
+  "initialized_or_BSS_delta_bytes": 0,
+  "TEXT_delta_bytes": 32,
+  "all_four_new_calls_audited": true,
+  "changed_call": "_gz_brg_plan_length",
+  "reason": "The original planner is a leaf with no LR-save frame. Preserve its incoming outer return address around the added BL.",
+  "saved_r0_offset": 8,
+  "saved_outer_LR_offset": 12,
+  "local_frame_bytes": 16,
+  "existing_adapter_frame_bytes": 128,
+  "adapter_source_unchanged": true,
+  "other_calls": {
+    "_gz_brg_plan_validate": "Existing installer0x140-byte LR-saving frame.",
+    "_gz_brg_install_note": "Existing installer0x140-byte LR-saving frame.",
+    "_gz_brg_consume": "Existing capture0x40-byte LR-saving frame plus48-byte call home."
+  }
+}

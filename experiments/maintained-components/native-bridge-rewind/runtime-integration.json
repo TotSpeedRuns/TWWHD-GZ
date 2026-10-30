@@ -1,0 +1,96 @@
+{
+  "schema": "portable-BRG3-runtime-integration-map/1",
+  "executable_patch": false,
+  "parent_runtime_object_sha256": "bc598cb1af868133178605a1f6479230582a6b198a279f1926b2755f29acea30",
+  "candidate_runtime_object_sha256": "6ae6be87ad7042118e50d451f31e832ad52b3fbbf87367854139d9314978fa4d",
+  "external_module": "source/bridges3.s",
+  "previous_modules": 15,
+  "candidate_modules": 16,
+  "bank_bytes_each": 98308,
+  "seams": [
+    {
+      "index": 0,
+      "purpose": "Consume only genuine staged BRG3; no native recopy after RKC",
+      "before_bytes": 34,
+      "before_sha256": "d76a64ebb76ab6ff2b3958fe0537e760f323820ccb317c2d0e0eee64114e7226",
+      "after": "_gz_world_bridge_buffer_selected:\nstwu 1,-48(1)\nmr 3,31\nbl _gz_brg_consume\naddi 1,1,48\nb _gz_world_capture_bridge_done\n",
+      "after_sha256": "185050aaf1bd0a20b65dd277eaa31e2e19f48058ab6c075e3aa5e78b2425e6b5",
+      "before": "_gz_world_bridge_buffer_selected:\n"
+    },
+    {
+      "index": 1,
+      "purpose": "Replace old count/8192 calculation with authenticated actual component length",
+      "before_bytes": 158,
+      "before_sha256": "71ae61df75ebd860675d9b85885b8791d8476db7f485a2dfe61086e50586e2cd",
+      "after": "stwu 1,-16(1)\nstw 0,8(1)\nmflr 0\nstw 0,12(1)\nbl _gz_brg_plan_length\nlwz 0,12(1)\nmtlr 0\nlwz 0,8(1)\naddi 1,1,16\ncmpwi 10,0\nbeq _gz_slots_plan_bad\n.global _gz_feature_lb157\n_gz_feature_lb157:\n",
+      "after_sha256": "4fc89676da49747d7e45e0b8b4e293ec284a783cfed9f5231328f733c2f06091",
+      "before": "mr 11, 9\nlwz 12, 0(11)\ncmplwi 12, 8\nble _gz_feature_lb157\nb _gz_slots_plan_bad\n.global _gz_feature_lb157\n_gz_feature_lb157:\nmulli 10, 12, 8192\naddi 10, 10, 4\n"
+    },
+    {
+      "index": 2,
+      "purpose": "Actual component16 output destination capacity98308",
+      "before_bytes": 117,
+      "before_sha256": "b2954f8e6398b17cf700b0f0507d24235caa68cd0aa3a6e90a16a67dbb34630a",
+      "after": "lis 11, _gz_world_bridges_a@ha\naddi 11, 11, _gz_world_bridges_a@l\nstw 11, 8(8)\nlis 11, 1\nori 11, 11, 0x8004\nstw 11, 12(8)\n",
+      "after_sha256": "f57a89efd6c5085962c9d869dc7e7aa98d0df6f4d0ee3b4f310259b851bba163",
+      "before": "lis 11, _gz_world_bridges_a@ha\naddi 11, 11, _gz_world_bridges_a@l\nstw 11, 8(8)\nlis 11, 1\nori 11, 11, 4\nstw 11, 12(8)\n"
+    },
+    {
+      "index": 3,
+      "purpose": "Installer capacity98308 before copy",
+      "before_bytes": 40,
+      "before_sha256": "e9bad2ab9fbaa163a61996e5c8a24a94b607944209710866efd3bae231b9e68b",
+      "after": "lwz 10, 148(27)\nlis 11, 1\nori 11, 11, 0x8004\n",
+      "after_sha256": "1673967784f0c6bd9ee610a41d29d8d8727f7cc569ba2fd670549d2ab81e45c3",
+      "before": "lwz 10, 148(27)\nlis 11, 1\nori 11, 11, 4\n"
+    },
+    {
+      "index": 4,
+      "purpose": "Installer exact BRG3/legacy parser; no magic interpreted as row count",
+      "before_bytes": 156,
+      "before_sha256": "87cdd2ffec964e31dd128b47a375e266fe5a96db21bac19413b69fe81b231394",
+      "after": "bl _gz_brg_plan_validate\ncmpwi 11,0\nbeq _gz_slots_install_bad\n",
+      "after_sha256": "836ee5a304dc5f460e0a615f9e80f09d31a61b37918292d8236d1c1e861d9511",
+      "before": "lwz 11, 144(27)\nadd 11, 11, 27\nlwz 11, 0(11)\ncmplwi 11, 8\nbgt _gz_slots_install_bad\nmulli 11, 11, 8192\naddi 11, 11, 4\ncmpw 11, 10\nbne _gz_slots_install_bad\n"
+    },
+    {
+      "index": 5,
+      "purpose": "Record only actually copied source length under original OSA pin",
+      "before_bytes": 101,
+      "before_sha256": "0b52a11518fa7373c1fccb11dbf7410dddaf68009736451811da065570213559",
+      "after": "lis 3, _gz_world_bridges_a@ha\naddi 3,3,_gz_world_bridges_a@l\nlwz 4,148(27)\nbl _gz_brg_install_note\ncmpwi 3,0\nbne _gz_slots_install_bad\nlis 8, _gz_world_bridges_a@ha\naddi 8, 8, _gz_world_bridges_a@l\nlis 9, _gz_world_committed_bridges@ha\n",
+      "after_sha256": "9827a3da9db1b167435375f6321ecb0329579e9c11d264ea228dcbf14412be66",
+      "before": "lis 8, _gz_world_bridges_a@ha\naddi 8, 8, _gz_world_bridges_a@l\nlis 9, _gz_world_committed_bridges@ha\n"
+    },
+    {
+      "index": 6,
+      "purpose": "Expand _gz_world_bridges_a from65540 to98308 bytes; exactzerooriginal",
+      "before_bytes": 57383,
+      "before_sha256": "5e3e78a4854ac5579a373da9439ba3c5ce4333c3fd49397ba0c2d6d8f22afca8",
+      "after": "_gz_world_bridges_a:\n.zero 98308\n.balign 4\n",
+      "after_sha256": "b54ee76cdcdf451c5aec484f3ae11f179c7abf9dc288ce6d0e69e65d066e91e8",
+      "before_summary": "Existing 65,540-byte all-zero bridge bank and its original alignment."
+    },
+    {
+      "index": 7,
+      "purpose": "Expand _gz_world_bridges_b from65540 to98308 bytes; exactzerooriginal",
+      "before_bytes": 57383,
+      "before_sha256": "9eee215b303c1c2154b559bb1f0c6ea9c36e4b5f68d173c32bc8a32eb5494bc5",
+      "after": "_gz_world_bridges_b:\n.zero 98308\n.balign 4\n",
+      "after_sha256": "0fc1fcd91a247ab05e9bf64d29b06c7e469aa89ff33035b05978a4d8fa1a6ab0",
+      "before_summary": "Existing 65,540-byte all-zero bridge bank and its original alignment."
+    },
+    {
+      "index": 8,
+      "purpose": "Legacy begin must never treat new magic as unbounded row count",
+      "before_bytes": 32,
+      "before_sha256": "0f67910b8e7dea2fb82cdcbf03f03f9b7f722dfb5760adbe410a440ed027f640",
+      "after": "_gz_world_begin_bridge_restore:\nlis 8,_gz_world_committed_bridges@ha\nlwz 8,_gz_world_committed_bridges@l(8)\nlwz 7,0(8)\ncmplwi 7,8\nble _gz_brg_legacy_begin_ok\nli 7,0\nlis 9,_gz_world_bridges_pending@ha\nstw 7,_gz_world_bridges_pending@l(9)\nblr\n_gz_brg_legacy_begin_ok:\n",
+      "after_sha256": "b76bf02cc7f43f3250509366cdfc474bd3c6b6b5e131710f52ea9aa3dceb2416",
+      "before": "_gz_world_begin_bridge_restore:\n"
+    }
+  ],
+  "caller_LR_fix_included": true,
+  "caller_LR_fix_patch": "caller-LR-fix.patch",
+  "candidate_runtime_definitions_sha256": "6c298e26ed6ba1932ea77bf6ddf5b3e0df068822623b4213e9b18953abeb8a2f"
+}

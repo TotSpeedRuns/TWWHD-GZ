@@ -1,0 +1,176 @@
+{
+  "schema": "portable-authored-BRG3-source-pins/1",
+  "sources": [
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridge_capture3.c",
+      "bytes": 38202,
+      "sha256": "3c24a2adece1c9e23eaf35b58eaff5ff065265deb089cb2eae9f87585dcaae9e"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridge_format3.h",
+      "bytes": 12036,
+      "sha256": "44b985a9158632ab3ad38581e7026372a6c48a10dd1c174d91aaad45fb6f5c1a"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridge_replay3.inc",
+      "bytes": 20150,
+      "sha256": "c3f15e7623ea5c053f50324426bb82f0d775b05c4d43049a25d6500c7a3a627b"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridge_replay3.h",
+      "bytes": 955,
+      "sha256": "d778b0b0b94f554ffc1526781da3427164e92204603dc21e5c9b426f921baa13"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridges3.s",
+      "bytes": 2012,
+      "sha256": "848c9ada3ac5a9cd97fcbda7604728ac20a597129676f7275ea18c19e48a3aea"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridge_capture.h",
+      "bytes": 516,
+      "sha256": "080f2a3fa6d7e449b51ed1a4511028f006200b41f8ab97dce343b5c0ce78318d"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/source/bridge_format.h",
+      "bytes": 10365,
+      "sha256": "f65ad5d29e9de9a19c740c7812632157b46128084e0aca560d52ad239378c60c"
+    }
+  ],
+  "compiled_objects": [
+    {
+      "object": "bomb_recreation.o",
+      "bytes": 1506388,
+      "sha256": "747f19d02decb84df271940bac74a51bfee20b801ec62aa501d7bc22705b7ee8"
+    },
+    {
+      "object": "owner9.o",
+      "bytes": 83372,
+      "sha256": "44919749377b5524057c1cb008cdcd92bf8e875a0bcdf315e076d0e3decd5ef9"
+    },
+    {
+      "object": "runtime.o",
+      "bytes": 10293312,
+      "sha256": "6ae6be87ad7042118e50d451f31e832ad52b3fbbf87367854139d9314978fa4d"
+    }
+  ],
+  "component_report_sha256": "fb69852e02bf9e0fb351ba775a49e3eb178c8e4c70a2862c149dda94eb39982d",
+  "component_emitted_review_sha256": "a22a8d7a96ba70fcba0add300e6959f287cd7c4b72888a590317c169550494a8",
+  "C_integration_inverses": [
+    {
+      "file": "bomb/archive_layout.h",
+      "before_sha256": "010292d788b8bd35111f1008dfc81d180977522fcde015d9c93792fb6f539adc",
+      "after_sha256": "aa94c8e1ebacaf37e6c3e346674026a940c474b8589ddb1d51afc45b71038673",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "owner/archive_layout.h",
+      "before_sha256": "010292d788b8bd35111f1008dfc81d180977522fcde015d9c93792fb6f539adc",
+      "after_sha256": "aa94c8e1ebacaf37e6c3e346674026a940c474b8589ddb1d51afc45b71038673",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "bomb/bomb_recreation.c",
+      "before_sha256": "9c5998c50a65dca3bfd1400e6e405956a5dde3add260e021390a553ac9211ff2",
+      "after_sha256": "da1ca4f5a9e1afbddb1856b9b14fe6c5d29d6816a8ad32c6af0d26de61faa438",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "bomb/keese_render_capture.c",
+      "before_sha256": "1e5d6b53d504e48818f0e9324f7e6519a6bc69f6493adb004d951be7c3ded5a0",
+      "after_sha256": "3102de167c88561e92e01a55a1ed763cda893bae828d03e864195446e9ecb4eb",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "bomb/world_group_publication.c",
+      "before_sha256": "64c838b5085e53465dc3476f1e6b4d77da5cddaf4affbf11cf5299effb9c6def",
+      "after_sha256": "afae2f67a220ccf711fa675a85f3a5bdbb113a11051f3b1d9e2a511d3af148bd",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "bomb/world_core_roundtrip.c",
+      "before_sha256": "741ad51beb3236e70b49abd483e004814a39637dc80607b42c783053de5abff4",
+      "after_sha256": "4eedea477e282d38396d7d0822498387405091b668f4dbb26b325365663ff535",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "bomb/world_core_target.inc",
+      "before_sha256": "4992b2ae4e04b1591e18227e9382b1880ae8e56a65aa02c98c35278a9913dfeb",
+      "after_sha256": "2530c0850673fb49db9e5cd9103783c04fae61565c97e1d17d18724cfe4d0123",
+      "exact_inverse_after_declared_newline_normalization": true
+    },
+    {
+      "file": "bomb/mapped_preflight.c",
+      "before_sha256": "8cf1ac8173ba6bb73282d3403a876b945ee1c56ba1f4f7cc0246abc20c382481",
+      "after_sha256": "bfcd2c4d21a01526463f453fab57765c0e8023838c48aa9f98602a01d6f7bb91",
+      "exact_inverse_after_declared_newline_normalization": true
+    }
+  ],
+  "native_aliases": {
+    "_gz_brg_native_resource_control_slot": "0x101F4F40",
+    "_gz_brg_native_vertex_view_vtable": "0x10169950"
+  },
+  "baseline_reproduced": true,
+  "raw_verbose_parity": true,
+  "private_native_test_eligible": true,
+  "native_acceptance_included": false,
+  "Wii_U_tested": false,
+  "release_qualified": false,
+  "public_copy_recompiled": false,
+  "source_handoffs": {
+    "initial": "67b0f3153e196a40266c375d33190232d92ed472f320145fea4735bb42a8bca0",
+    "descriptor_envelope_fix": "7a6ef8c3f0f99fb13dbca8aa46741db487173057ad8ebcefd826794a0175eda4",
+    "caller_LR_fix": "d47a08d940bd50ae06e22d75419f2425b65f9abf7a356ad6683a44ab05847af5"
+  },
+  "earlier_native_capture": {
+    "published": false,
+    "restore_attempted": false,
+    "error": 1802,
+    "defect": "Misaligned per-element OB query at a six-byte-stride interior value."
+  },
+  "corrected_native_test_pending": false,
+  "bridge_geometry_text_growth_bytes": 52,
+  "correction_nonexec_storage_delta_bytes": 0,
+  "previous_composed_main": {
+    "image": {
+      "bytes": 27447552,
+      "sha256": "c4de1ccc9fae5c8cf2996a27afda829f249179e3b52bd967a8149a4f21a3ec15"
+    },
+    "ELF": {
+      "bytes": 41662156,
+      "sha256": "1fa09bbe5554d0da42027dc4d0186583e8a70613d1995b35fde23dbcb11d53d5"
+    },
+    "review_sha256": "b524ae2c252011581d393b41b628ed06fd58b310aaa0833ce37169178ff1ade2"
+  },
+  "runtime_component_report_sha256": "fcebbae377c794dde582564e8c81df12f5d95b82ae1528af2fa18c72764cb5e5",
+  "runtime_emitted_review_sha256": "8561380ed8f6729fae0f322e2cf30e19a6462494083c9843923a95886f3d25ba",
+  "runtime_caller_LR_TEXT_growth_bytes": 32,
+  "second_native_attempt": {
+    "bridge_capture_and_mode2_validation_passed": true,
+    "staged_bridge_component_bytes": 67612,
+    "saved_slot_published": false,
+    "restore_attempted": false,
+    "crashed_in_serialization": true,
+    "cause": "Added BL overwrote original unframed leaf planner outer LR; corrected with call-local frame."
+  },
+  "current_main_independent_review_pending": false,
+  "current_main_build_image": {
+    "sha256": "b1996426200363d88a89571146eedc5a49f39c6ffe0859209f0df93eeb97d8e3",
+    "bytes": 27447552
+  },
+  "current_main_build_report_sha256": "5168750c9233dae0f9239dd69143a939853ada344a9abcafb66857915c48d6b9",
+  "current_main_independent_review_sha256": "919242477daa6c49412daa94311d3f61d61d54e60e6073d644fdbadaac020f0d",
+  "native_attempts_completed": true,
+  "native_results": {
+    "saved_slot_published": true,
+    "one_quiet_restore_accepted": true,
+    "repeated_retired_Keese_restore_accepted": false,
+    "broken_bridge_final_restore_accepted": false,
+    "broken_bridge_all15_targets_passed": true,
+    "broken_bridge_inverse_passed": true,
+    "final_commit_error": 40,
+    "broken_bridge_restore_exceeded_seconds": 30,
+    "visible_render_and_traversal_qualified": false,
+    "private_progress_report_sha256": "3cd52611ecfd8503d37c28ec76c19c96781357a072347cddf401e181cf7a71f4"
+  }
+}

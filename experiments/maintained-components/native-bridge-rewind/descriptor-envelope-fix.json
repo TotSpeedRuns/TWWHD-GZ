@@ -1,0 +1,10 @@
+{
+  "schema": "portable-BRG3-descriptor-envelope-fix/1",
+  "before_sha256": "221621977b1bf5ccd25ce5d68bc135ff3b12ece8cfaba584c263186285b10d1e",
+  "after_sha256": "3c24a2adece1c9e23eaf35b58eaff5ff065265deb089cb2eae9f87585dcaae9e",
+  "full_byte_inverse_exact": true,
+  "one_exact_edit": true,
+  "API_alignment_changed": false,
+  "other_source_leaves_changed": false,
+  "reason": "A native capture refused1802 because a six-byte-stride interior value is not4-byte aligned. Validate the complete aligned descriptor envelope around its byte-only loop."
+}

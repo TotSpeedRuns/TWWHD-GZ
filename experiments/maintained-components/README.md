@@ -864,3 +864,12 @@ The [identity component](saved-bomb-source-identity/README.md) separates the sav
 bomb PID from an unissued constructor recipe. Actual binary checks and a native
 attempt passed that preparation point; the source-smoke guard still refuses the
 restore. Full bomb restoration remains unfinished.
+
+## Native bridge capture and experimental rewind
+
+The [bridge source](native-bridge-rewind/README.md) captures all three Sickass
+bridges and implements coupled CPU replay and undo. Native tests found and
+corrected alignment and caller-return bugs. One quiet restore passed; a naturally
+broken bridge passed physical target checks but failed final commit and rolled
+back. Repeated restoration after a Keese retires and restore speed remain open.
+This is partial source, not reliable full-game coverage or a release recommendation.

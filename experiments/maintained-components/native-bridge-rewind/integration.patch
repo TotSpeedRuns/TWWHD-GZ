@@ -1,0 +1,210 @@
+--- a/bomb/archive_layout.h
++++ b/bomb/archive_layout.h
+@@ -3,12 +3,15 @@
+ /* Exact directories only. Legacy25 has no recorded rope state; it must not be
+  * interpreted as a new empty-rope capture. Actor permission is unrelated. */
+ typedef unsigned int u32;typedef unsigned char u8;
++#include "bridge_format.h"
++#include "bridge_format3.h"
+ static u32 gz_arc_shape(u32 p,u32 n){u32 c,h,i,end,o,b;
+  if((p&3)||p<0x10000000u||p>=0xbffe0000u||n<216||n>0x200000u||n>0xbffe0000u-p||(n&3))return 0;
+  if(*(volatile const u32*)p!=0x475a5331u||*(volatile const u32*)(p+4)!=n)return 0;
+  c=*(volatile const u32*)(p+8);if((c!=25&&c!=26&&c!=27&&c!=28&&c!=29&&c!=30)||*(volatile const u32*)(p+12)!=c)return 0;
+  h=16+c*8;if(n<h)return 0;end=h;
+  for(i=0;i<c;i++){o=*(volatile const u32*)(p+16+8*i);b=*(volatile const u32*)(p+20+8*i);if(o!=end||(b&3)||b>n-end)return 0;end+=b;}
+- return end==n?c:0;
++ if(end!=n||(!brg3_archive(p,n)&&!brg_f_archive(p,n)))return 0;
++ return c;
+ }
+ #endif
+--- a/owner/archive_layout.h
++++ b/owner/archive_layout.h
+@@ -3,12 +3,15 @@
+ /* Exact directories only. Legacy25 has no recorded rope state; it must not be
+  * interpreted as a new empty-rope capture. Actor permission is unrelated. */
+ typedef unsigned int u32;typedef unsigned char u8;
++#include "bridge_format.h"
++#include "bridge_format3.h"
+ static u32 gz_arc_shape(u32 p,u32 n){u32 c,h,i,end,o,b;
+  if((p&3)||p<0x10000000u||p>=0xbffe0000u||n<216||n>0x200000u||n>0xbffe0000u-p||(n&3))return 0;
+  if(*(volatile const u32*)p!=0x475a5331u||*(volatile const u32*)(p+4)!=n)return 0;
+  c=*(volatile const u32*)(p+8);if((c!=25&&c!=26&&c!=27&&c!=28&&c!=29&&c!=30)||*(volatile const u32*)(p+12)!=c)return 0;
+  h=16+c*8;if(n<h)return 0;end=h;
+  for(i=0;i<c;i++){o=*(volatile const u32*)(p+16+8*i);b=*(volatile const u32*)(p+20+8*i);if(o!=end||(b&3)||b>n-end)return 0;end+=b;}
+- return end==n?c:0;
++ if(end!=n||(!brg3_archive(p,n)&&!brg_f_archive(p,n)))return 0;
++ return c;
+ }
+ #endif
+--- a/bomb/bomb_recreation.c
++++ b/bomb/bomb_recreation.c
+@@ -34,6 +34,8 @@
+ #include "collision_state.h"
+ #include "contact_provider.h"
+ #include "contact_replay_api.h"
++#include "bridge_capture.h"
++#include "bridge_replay3.h"
+ /* Private expired-inventory-bomb participant. No ordinary restore admission.
+  * Archive and scene are derived inside the engine callback. Retired saved
+  * actors/models are comparison values; this code never dereferences them. */
+@@ -403,6 +405,7 @@
+ #include "npc_projection.c"
+ #include "keese_private_pool.c"
+ #include "keese_render_capture.c"
++#include "bridge_capture3.c"
+ #include "npc_physics_state.c"
+ #include "rito_physics_state.c"
+ #include "npc_source_bank.c"
+@@ -460,6 +463,7 @@
+ #include "held_item_lifetime.c"
+ 
+ #include "world_group_publication.c"
++#include "bridge_replay3.inc"
+ #include "wct_heap_lease.inc"
+ #include "wct_native_context.inc"
+ #include "wct_root_borrow.inc"
+--- a/bomb/keese_render_capture.c
++++ b/bomb/keese_render_capture.c
+@@ -37,7 +37,7 @@
+ static u32 krc_private_apart_view(u32 p,u32 n,u32 except){u32 i;u32 a[]={
+  (u32)&_gz_krc_ready,(u32)&_gz_krc_seal,(u32)&_gz_krc_entered,(u32)&_gz_krc_frame,
+  (u32)&_gz_krc_mode,(u32)&_gz_krc_world_hash,(u32)&_gz_krc_sequence};
+- if(!epj_ram(p,n)||!_gz_ipk_private_apart(p,n)||!_gz_ctp_private_apart(p,n)||!_gz_kec_private_apart(p,n)||!_gz_rkc_private_apart(p,n)||(except!=1&&!_gz_kmp_private_apart(p,n))||(except!=2&&!_gz_ncb_private_apart(p,n))||(except==3?!_gz_ptc_private_apart_except_cgp(p,n):!_gz_ptc_private_apart(p,n))||
++ if(!epj_ram(p,n)||!_gz_brg_private_apart(p,n)||!_gz_ipk_private_apart(p,n)||!_gz_ctp_private_apart(p,n)||!_gz_kec_private_apart(p,n)||!_gz_rkc_private_apart(p,n)||(except!=1&&!_gz_kmp_private_apart(p,n))||(except!=2&&!_gz_ncb_private_apart(p,n))||(except==3?!_gz_ptc_private_apart_except_cgp(p,n):!_gz_ptc_private_apart(p,n))||
+   !epj_apart(p,n,(u32)&wct_source,sizeof(wct_source))||
+   !epj_apart(p,n,(u32)&_gz_sbp_call,sizeof(_gz_sbp_call))||
+   !epj_apart(p,n,(u32)&_gz_krc_stage,sizeof(_gz_krc_stage))||
+@@ -211,6 +211,7 @@
+  else if(count!=p->count)return KRC_CHANGED;
+  z=ptc_root_finish(mode);if(z)return z;
+  z=_gz_ncb_root_read(mode,frame);if(z)return z;
++ z=_gz_brg_root_read(mode,frame);if(z)return z;
+  return _gz_rkc_read_scope(mode,frame)?0:KRC_CONTEXT;}
+ static u32 krc_read(u32 mode){const VrWorld*w=&_gz_vws_stage;u32 z;
+  if(_gz_krc_entered||!krc_quiet()||w->frame!=_gz_pbac_frame)return KRC_CONTEXT;
+@@ -307,4 +308,4 @@
+   seen[found/32]|=1u<<(found%32);count++;}
+  if(bk_count&&(bk_count!=lc||bk_seen!=((1u<<lc)-1)))return KRC_RECORD;
+  return count==p->count?0:KRC_RECORD;}
+-void _gz_krc_discard(void){if(!_gz_krc_entered&&!_gz_roh_user_guard())_gz_krc_ready=_gz_krc_stage.valid=_gz_krc_seal=0;}
++void _gz_krc_discard(void){if(!_gz_krc_entered&&!_gz_roh_user_guard()){_gz_brg_discard();_gz_krc_ready=_gz_krc_stage.valid=_gz_krc_seal=0;}}
+--- a/bomb/world_group_publication.c
++++ b/bomb/world_group_publication.c
+@@ -7,7 +7,7 @@
+ static void wgp_seal(u32*q){q[47]=wgp_hash(q);__asm__ volatile("sync":::"memory");q[2]=1;}
+ static u32 wgp_valid(const u32*q){return q&&q[0]==WGP_MAGIC&&q[1]==WGP_BYTES&&q[2]==1&&q[4]&&q[5]&&q[47]==wgp_hash(q);}
+ u32 _gz_wgp_has_token(u32 t){u32*q=wgp();return q&&wgp_valid(q)&&q[4]==t&&q[3]>=1&&q[3]<=6;}
+-u32 _gz_wgp_idle(void){u32*q=wgp();NsgPlan*p=bcf_group_plan();NsgRun*r=bcf_group_run();return _gz_ipk_idle()&&(!q||(!q[7]&&!q[9]&&(!q[2]||q[3]==7)))&&(!p||!p->magic)&&(!r||!r->magic);}
++u32 _gz_wgp_idle(void){u32*q=wgp();NsgPlan*p=bcf_group_plan();NsgRun*r=bcf_group_run();return _gz_brr_idle()&&_gz_ipk_idle()&&(!q||(!q[7]&&!q[9]&&(!q[2]||q[3]==7)))&&(!p||!p->magic)&&(!r||!r->magic);}
+ u32 _gz_wgp_observe_scope(u32 t){u32*q=wgp();return q&&wgp_valid(q)&&q[4]==t&&q[7]==1&&q[6]==_gz_pbac_frame&&q[8]==_gz_hg_platform_thread()&&_gz_wct_group_context(t,q[6],1);}
+ u32 _gz_wgp_context_owned(u32 t){u32*q=wgp();return q&&wgp_valid(q)&&q[4]==t&&q[7]>=1&&q[7]<=4&&q[6]==_gz_pbac_frame&&
+  q[8]&&q[8]==_gz_hg_platform_thread()&&!_gz_nsv_access_entered()&&!_gz_nrt_access_entered()&&!_gz_boh_has_owner()&&
+@@ -63,12 +63,13 @@
+  /* NSV uses its own genuine entered read gate while WGP supplies only the
+   * outer CLEAN callback evidence. Its original preparation API is unchanged. */
+  z=_gz_nsv_prepare(t,f);q[7]=q[8]=0;wgp_seal(q);if(z){q[24]=z;wgp_seal(q);return z;}
+- if(_gz_ctp_heap_needed(t,f)){z=_gz_wct_heap_begin(t,f);if(z)return z;}
++ z=_gz_brr_gpu_prepare(t,f);if(z)return z;
++ if(_gz_ctp_heap_needed(t,f)||_gz_brr_needs_heap(t,f)){z=_gz_wct_heap_begin(t,f);if(z)return z;}
+  z=wgp_enter(t,f,1);if(z)return z;
+  if(_gz_ctp_heap_needed(t,f)){z=_gz_ipk_prepare(t,f);if(z)return wgp_leave(z);}
+  z=_gz_roh_source_receipt_begin(t,f);
+  if(!z){
+-  z=_gz_cgr_prepare(t,f);if(!z)z=_gz_ppt_prepare(t,f);
++  z=_gz_brr_prepare(t,f);if(!z)z=_gz_cgr_prepare(t,f);if(!z)z=_gz_ppt_prepare(t,f);
+   if(!z)z=_gz_nsg_prepare(nsv_header(),rtv_header(),bcf_group_plan(),bcf_group_run());
+   if(!z)z=bcf_group_contract(t);if(!z)z=_gz_nsg_before_matches(bcf_group_plan(),bcf_group_run());
+  }
+@@ -79,7 +80,7 @@
+  q[24]=z;if(!z)q[3]=2;wgp_audit(q);end=wgp_leave(z);return end;}
+ u32 _gz_wgp_prepared_before(u32 t,u32 f){u32 z=wgp_enter(t,f,1);if(z)return z;
+  z=bcf_group_contract(t);if(!z)z=_gz_nsg_before_matches(bcf_group_plan(),bcf_group_run());if(!z)z=wgp_pots(t,f,0);
+- if(!z)z=_gz_cgr_prepared_before(t,f);return wgp_leave(z);}
++ if(!z)z=_gz_brr_prepared_before(t,f);if(!z)z=_gz_cgr_prepared_before(t,f);return wgp_leave(z);}
+ /* Private sequential fault command; zero is the ordinary default. It may
+  * request failure only after real entered writers, never supply outcomes. */
+ static u32 wgp_fault(u32*q){volatile u32*c=(volatile u32*)((u32)q-WGP_OFFSET+13360);u32 n=c[0];if(!n||n>4||n!=c[1]+1)return 0;
+@@ -87,34 +88,34 @@
+ u32 _gz_wgp_forward(u32 t,u32 f){u32*q=wgp(),z,fault;z=wgp_enter(t,f,2);if(z)return z;
+  if(_gz_ctp_queue_pending()){z=_gz_ipk_native_park(t,f);if(z)return wgp_leave(z);}
+  z=fgd_begin(t,f,2);if(z)return wgp_leave(z);fault=wgp_fault(q);q[3]=3;wgp_seal(q);
+- z=bcf_group_contract(t);if(!z)z=_gz_nsg_apply(bcf_group_plan(),bcf_group_run(),0);
++ z=_gz_brr_forward(t,f);if(!z)z=bcf_group_contract(t);if(!z)z=_gz_nsg_apply(bcf_group_plan(),bcf_group_run(),0);
+  if(!z&&fault==1)z=1571;if(!z)z=_gz_ppt_apply(t);if(!z&&fault==2)z=1572;
+  if(!z)z=fgp_apply(t,f,0);if(!z)z=pti_apply(t,f,0);if(!z)z=cjp_apply(t,f,0);if(!z)z=_gz_ccr_apply(t,f,0);if(!z)z=_gz_cgr_apply(t,f,fault==3);
+- if(!z)z=_gz_cgr_target_check(t,f);if(!z)z=_gz_nsg_target_matches(bcf_group_plan(),bcf_group_run());if(!z)z=wgp_pots(t,f,1);
++ if(!z)z=_gz_brr_target(t,f);if(!z)z=_gz_cgr_target_check(t,f);if(!z)z=_gz_nsg_target_matches(bcf_group_plan(),bcf_group_run());if(!z)z=wgp_pots(t,f,1);
+  if(!z&&wct.fault_group==12)z=pti_target_fault(t,f);
+  if(!z&&fault==4)z=1574;q[24]=z;wgp_audit(q);return wgp_leave(z);}
+ u32 _gz_wgp_target(u32 t,u32 f){u32*q=wgp(),z=wgp_enter(t,f,4);if(z)return z;
+  z=fgd_begin(t,f,4);if(z)return wgp_leave(z);
+  z=crd_begin(t,f);if(z)return wgp_leave(z);
+  z=bcf_group_contract(t);if(!z)z=_gz_nsg_target_matches(bcf_group_plan(),bcf_group_run());if(!z)z=wgp_pots(t,f,1);if(!z)z=_gz_cgr_target_check(t,f);
+- q[26]=z;q[35]=f;wgp_audit(q);return wgp_leave(z);}
++ if(!z)z=_gz_brr_target(t,f);q[26]=z;q[35]=f;wgp_audit(q);return wgp_leave(z);}
+ u32 _gz_wgp_recover(u32 t,u32 f){u32*q=wgp(),z=wgp_enter(t,f,3);if(z)return z;z=fgd_begin(t,f,3);if(z)return wgp_leave(z);q[3]=6;wgp_seal(q);
+  z=_gz_cgr_undo(t,f);if(!z)z=_gz_ccr_undo(t,f);if(!z)z=cjp_undo(t,f);if(!z)z=pti_undo(t,f);if(!z)z=fgp_undo(t,f);
+- if(!z)z=_gz_ppt_recovery_rollback(t);if(!z)z=_gz_nsg_undo(bcf_group_plan(),bcf_group_run());
++ if(!z)z=_gz_ppt_recovery_rollback(t);if(!z)z=_gz_nsg_undo(bcf_group_plan(),bcf_group_run());if(!z)z=_gz_brr_undo(t,f);
+  if(!z&&_gz_ctp_queue_pending())z=_gz_ipk_native_unpark(t,f);
+  if(!z)z=_gz_cgr_before(t,f);if(!z)z=_gz_nsg_before_matches(bcf_group_plan(),bcf_group_run());if(!z)z=wgp_pots(t,f,0);
+- q[25]=z;if(!z)q[3]=5;wgp_audit(q);return wgp_leave(z);}
++ if(!z)z=_gz_brr_before(t,f);q[25]=z;if(!z)q[3]=5;wgp_audit(q);return wgp_leave(z);}
+ u32 _gz_wgp_before(u32 t,u32 f){u32*q=wgp(),z=wgp_enter(t,f,3);if(z)return z;
+  z=fgd_begin(t,f,3);if(z)return wgp_leave(z);
+  if(bcf_group_run()->phase!=NSG_ROLLED)z=NSG_PHASE;else z=_gz_nsg_before_matches(bcf_group_plan(),bcf_group_run());
+- if(!z)z=wgp_pots(t,f,0);if(!z)z=_gz_cgr_before(t,f);q[27]=z;wgp_audit(q);return wgp_leave(z);}
++ if(!z)z=wgp_pots(t,f,0);if(!z)z=_gz_cgr_before(t,f);if(!z)z=_gz_brr_before(t,f);q[27]=z;wgp_audit(q);return wgp_leave(z);}
+ u32 _gz_wgp_forget_clean(u32 t){u32*q=wgp(),z;NsgPlan*p=bcf_group_plan();NsgRun*r=bcf_group_run();
+  if(_gz_wct_root_pending())return WHL_ROOT_RETAINED;
+  if(_gz_ipk_admission_outstanding())return WGP_BAD;
+  if(!q||!q[2]||q[3]==7)return 0;if(!wgp_valid(q)||q[4]!=t||q[7]||q[9]||_gz_roh_user_guard()||_gz_osa_pin_id())return WGP_BAD;
+- if(p&&p->magic){z=_gz_nsg_forget(p,r,t);if(z)return z;}q[3]=7;wgp_seal(q);return 0;}
+-void _gz_wgp_finish_leaf(u32 t){u32*q=wgp();if(_gz_wct_root_pending()||_gz_ipk_admission_outstanding()||!_gz_wgp_has_token(t))return;crd_retire();fgd_retire();bcf_group_finish_leaf();q[3]=7;q[7]=q[8]=q[9]=0;wgp_seal(q);}
++ z=_gz_brr_forget_clean(t);if(z)return z;if(p&&p->magic){z=_gz_nsg_forget(p,r,t);if(z)return z;}q[3]=7;wgp_seal(q);return 0;}
++void _gz_wgp_finish_leaf(u32 t){u32*q=wgp();if(_gz_wct_root_pending()||_gz_ipk_admission_outstanding()||!_gz_wgp_has_token(t))return;crd_retire();fgd_retire();bcf_group_finish_leaf();_gz_brr_finish_leaf(t);q[3]=7;q[7]=q[8]=q[9]=0;wgp_seal(q);}
+ u32 _gz_wgp_commit_scope(u32 t,u32 f){u32*q=wgp();NsgPlan*p=bcf_group_plan();NsgRun*r=bcf_group_run();
+  return q&&p&&r&&wgp_valid(q)&&q[4]==t&&q[6]==f&&q[35]==f&&f==_gz_pbac_frame&&!q[7]&&!q[9]&&!q[26]&&
+   q[3]==3&&q[19]==p->seal&&q[20]==r->seal&&q[21]==NSG_APPLIED&&r->phase==NSG_APPLIED&&!r->error&&
+-  r->done_npc==p->npcs&&r->done_nph==p->npcs&&r->done_rito==p->ritos;}
++  r->done_npc==p->npcs&&r->done_nph==p->npcs&&r->done_rito==p->ritos&&_gz_brr_commit_scope(t,f);}
+--- a/bomb/world_core_roundtrip.c
++++ b/bomb/world_core_roundtrip.c
+@@ -30,7 +30,7 @@
+ extern u32 _gz_roh_core_context(u32,u32,u32,u32),_gz_roh_core_roundtrip_finish(u32,u32);
+ static void wct_seal_now(void){wct_seal=btr_hash(&wct,sizeof(wct));}
+ static u32 wct_plans(u32 t){
+- return cct_sealed()&&ppt_sealed()&&lpc_sealed()&&lpf_sealed()&&lct_sealed()&&ckr_sealed()&&prk_sealed()&&rgr_sealed()&&fgp_sealed(t)&&pti_sealed(t)&&cjp_sealed(t)&&_gz_ccr_sealed(t)&&_gz_cgr_sealed(t)&&
++ return cct_sealed()&&ppt_sealed()&&lpc_sealed()&&lpf_sealed()&&lct_sealed()&&ckr_sealed()&&prk_sealed()&&rgr_sealed()&&fgp_sealed(t)&&pti_sealed(t)&&cjp_sealed(t)&&_gz_ccr_sealed(t)&&_gz_cgr_sealed(t)&&_gz_brr_sealed(t)&&
+   _gz_cct_journal.token==t&&_gz_ppt_plan.token==t&&_gz_lpc_plan.token==t&&_gz_lpf_plan.token==t&&
+   _gz_lct_plan.token==t&&_gz_ckr_plan.token==t&&_gz_prk_plan.token==t&&_gz_rgr_plan.token==t;
+ }
+--- a/bomb/world_core_target.inc
++++ b/bomb/world_core_target.inc
+@@ -59,6 +59,7 @@
+  z=cjp_target(t,f);if(z)goto done;
+  _gz_wct_report[91]|=4096;_gz_wct_report[93]=13;
+  z=_gz_wgp_target(t,f);if(z)goto done;_gz_wct_report[91]|=8192;_gz_wct_report[93]=14;
++ if(!_gz_brr_commit_scope(t,f)){z=1843;goto done;}_gz_wct_report[91]|=16384;_gz_wct_report[93]=15;
+  z=_gz_wct_target_scope(t,f)?0:42;
+ done:_gz_wct_report[92]=z;wct_target_entered=0;return z;
+ }
+@@ -67,7 +68,7 @@
+   * blocked publication branch. The marker is private, not a report grant. */
+  valid=wct_commit_arming==1&&wct_entered==1&&!wct_target_entered&&wct_sealed(t,f)&&
+   wct.phase==WCT_FORWARD&&!wct.returned&&!wct.error&&wct.services==WCT_FINAL_CALLS&&
+-  _gz_wct_report[91]==16383&&!_gz_wct_report[92]&&_gz_wct_report[93]==14&&cjp_complete(t)&&_gz_wgp_commit_scope(t,f)&&
++  _gz_wct_report[91]==32767&&!_gz_wct_report[92]&&_gz_wct_report[93]==15&&cjp_complete(t)&&_gz_wgp_commit_scope(t,f)&&
+   _gz_wct_closure_hash&&_gz_wct_closure_hash==wct_seal&&_gz_wct_target_scope(t,f);
+  if(!valid)return 0;
+  if(_gz_ctp_queue_pending()){
+--- a/bomb/mapped_preflight.c
++++ b/bomb/mapped_preflight.c
+@@ -20,6 +20,7 @@
+  if(_gz_bmc_entered)return 5;
+  p=_gz_bmv_read(token,frame,BMV_HEADER);if(!p)return 28;
+  v=(BmvViews*)p;
++ if(!_gz_brr_factory_source_allowed(v->source,v->source_bytes))return 1841;
+  _gz_bmc_entered=1;
+  for(i=2;i<32;i++)_gz_bmc_report[i]=0;
+  _gz_bmc_report[2]=token;_gz_bmc_report[4]=frame;_gz_bmc_report[13]=BAD;

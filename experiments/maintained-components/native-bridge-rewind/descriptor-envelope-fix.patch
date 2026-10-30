@@ -1,0 +1,26 @@
+--- a/bridge_capture3.c
++++ b/bridge_capture3.c
+@@ -413,15 +413,21 @@
+     owner->geometry_bytes = brg3_geometry_bytes(owner->type,owner->count);
+     for(i=0;i<count;i++) {
+         BrgDescriptor *d=brg_descriptors+i;
++        u32 envelope=(d->count-1)*d->stride+d->width;
+         d->packed=cursor;
++        /* OB qualifies aligned allocation extents, not each packed value.
++         * A six-byte block stride has unaligned interior elements. Its whole
++         * descriptor envelope was already bounded by brg_add; retain one
++         * fresh binding across this byte-only loop and validate it afterward.
++         * No unqualified byte is read and the OB API stays unchanged. */
++        z=brg_capture_binding(d->address,envelope,0);if(z)return z;
+         for(j=0;j<d->count;j++) {
+             u32 p=d->address+j*d->stride;
+-            z=brg_capture_binding(p,d->width,0);if(z)return z;
+             if(mode==1)brg_copy((void*)(output+cursor),(const void*)p,d->width);
+             else if(mode==2 && !brg_equal((const void*)(output+cursor),(const void*)p,d->width))return BRG_CHANGED;
+-            z=brg_validate_binding(&brg_binding_scratch);if(z)return z;
+             cursor+=d->width;
+         }
++        z=brg_validate_binding(&brg_binding_scratch);if(z)return z;
+     }
+     if(cursor!=owner->geometry_bytes)return BRG_LAYOUT;
+     if(mode!=3 && !brg3_geometry(output,cursor,owner->type,owner->count))return BRG_NUMERIC;

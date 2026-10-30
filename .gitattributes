@@ -57,3 +57,7 @@ experiments/maintained-components/partial-wall-overlap/** text eol=lf
 
 # Authored saved-bomb identity component.
 experiments/maintained-components/saved-bomb-source-identity/** text eol=lf
+
+# Authored experimental bridge capture/replay.
+experiments/maintained-components/native-bridge-rewind/** text eol=lf
+experiments/maintained-components/native-bridge-rewind/*.patch -whitespace

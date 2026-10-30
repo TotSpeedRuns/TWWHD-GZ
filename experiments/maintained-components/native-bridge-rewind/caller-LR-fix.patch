@@ -1,0 +1,15 @@
+--- a/runtime-plan-length-seam.s
++++ b/runtime-plan-length-seam.s
+@@ -1,4 +1,12 @@
++stwu 1,-16(1)
++stw 0,8(1)
++mflr 0
++stw 0,12(1)
+ bl _gz_brg_plan_length
++lwz 0,12(1)
++mtlr 0
++lwz 0,8(1)
++addi 1,1,16
+ cmpwi 10,0
+ beq _gz_slots_plan_bad
+ .global _gz_feature_lb157

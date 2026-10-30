@@ -1,0 +1,105 @@
+/* Integer-only adapters at existing native-serializer seams. The complete
+ * EABI outgoing argument/linkage area SP+0..39 is reserved for the C callee.
+ * ROOT must verify the actual emitted soft-float parser callgraph contains
+ * no FPR/GQR instructions; that emitted fact is required for omitting FPRs. */
+.section .text,"ax",@progbits
+.balign 4
+.global _gz_brg_plan_length
+.type _gz_brg_plan_length,@function
+_gz_brg_plan_length:
+    stwu 1,-128(1)
+    stw 0,40(1)
+    stw 3,44(1)
+    stw 4,48(1)
+    stw 5,52(1)
+    stw 6,56(1)
+    stw 7,60(1)
+    stw 8,64(1)
+    stw 9,68(1)
+    stw 10,72(1)
+    stw 11,76(1)
+    stw 12,80(1)
+    mflr 0
+    stw 0,84(1)
+    mfcr 0
+    stw 0,88(1)
+    mfctr 0
+    stw 0,92(1)
+    mfxer 0
+    stw 0,96(1)
+    mr 3,9
+    bl _gz_brg_component_bytes
+    stw 3,100(1)
+    lwz 0,96(1)
+    mtxer 0
+    lwz 0,92(1)
+    mtctr 0
+    lwz 0,88(1)
+    mtcr 0
+    lwz 0,84(1)
+    mtlr 0
+    lwz 3,44(1)
+    lwz 4,48(1)
+    lwz 5,52(1)
+    lwz 6,56(1)
+    lwz 7,60(1)
+    lwz 8,64(1)
+    lwz 9,68(1)
+    lwz 10,100(1)
+    lwz 11,76(1)
+    lwz 12,80(1)
+    lwz 0,40(1)
+    addi 1,1,128
+    blr
+.size _gz_brg_plan_length,.-_gz_brg_plan_length
+
+.balign 4
+.global _gz_brg_plan_validate
+.type _gz_brg_plan_validate,@function
+_gz_brg_plan_validate:
+    stwu 1,-128(1)
+    stw 0,40(1)
+    stw 3,44(1)
+    stw 4,48(1)
+    stw 5,52(1)
+    stw 6,56(1)
+    stw 7,60(1)
+    stw 8,64(1)
+    stw 9,68(1)
+    stw 10,72(1)
+    stw 11,76(1)
+    stw 12,80(1)
+    mflr 0
+    stw 0,84(1)
+    mfcr 0
+    stw 0,88(1)
+    mfctr 0
+    stw 0,92(1)
+    mfxer 0
+    stw 0,96(1)
+    mr 3,9
+    mr 4,10
+    bl _gz_brg_parse_component
+    stw 3,100(1)
+    lwz 0,96(1)
+    mtxer 0
+    lwz 0,92(1)
+    mtctr 0
+    lwz 0,88(1)
+    mtcr 0
+    lwz 0,84(1)
+    mtlr 0
+    lwz 3,44(1)
+    lwz 4,48(1)
+    lwz 5,52(1)
+    lwz 6,56(1)
+    lwz 7,60(1)
+    lwz 8,64(1)
+    lwz 9,68(1)
+    lwz 10,72(1)
+    lwz 11,100(1)
+    lwz 12,80(1)
+    lwz 0,40(1)
+    addi 1,1,128
+    blr
+.size _gz_brg_plan_validate,.-_gz_brg_plan_validate

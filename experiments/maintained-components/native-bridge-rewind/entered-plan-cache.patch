@@ -1,0 +1,281 @@
+--- a/bomb/world_core_roundtrip.c
++++ b/bomb/world_core_roundtrip.c
+@@ -34,10 +34,16 @@
+   _gz_cct_journal.token==t&&_gz_ppt_plan.token==t&&_gz_lpc_plan.token==t&&_gz_lpf_plan.token==t&&
+   _gz_lct_plan.token==t&&_gz_ckr_plan.token==t&&_gz_prk_plan.token==t&&_gz_rgr_plan.token==t;
+ }
+-static u32 wct_sealed(u32 t,u32 f){
++/* Only the bounded, nonyielding BRR entry may reuse its already checked
++ * full participant plans. All other callers keep the original full seal. */
++static u32 brr_wct_group_fast(u32,u32,u32);
++static u32 wct_metadata_sealed(u32 t,u32 f){
+  return t&&wct.magic==0x57435231u&&wct.bytes==sizeof(wct)&&wct.valid==1&&wct.token==t&&
+   wct.frame==f&&f==_gz_pbac_frame&&wct.phase>=1&&wct.phase<=4&&
+-  wct_seal==btr_hash(&wct,sizeof(wct))&&wct_plans(t);
++  wct_seal==btr_hash(&wct,sizeof(wct));
++}
++static u32 wct_sealed(u32 t,u32 f){
++ return wct_metadata_sealed(t,f)&&wct_plans(t);
+ }
+ /* Metadata only: the real frame-owned callback establishes entry before
+  * the independent native HG gate may be acquired. No actor/source body is
+@@ -46,7 +52,14 @@
+  if(!wct_entered||!t||f!=_gz_pbac_frame||o[0]!=ROH_MAGIC||o[1]!=240||o[2]!=2||o[4]!=1||o[5]!=t||o[10]!=f||!o[11]||_gz_boh_has_owner())return 0;
+  if(mode==1)return o[3]==ROH_CLEAN&&!o[6]&&!o[7]&&o[12]==1&&wsp_source.valid==1&&wsp_source.token==t&&
+   wsp_source.frame==f&&wsp_source_seal==btr_hash(&wsp_source,sizeof(wsp_source))&&wsp_source.pin==_gz_osa_pin_id();
+- if(!wct_sealed(t,f)||o[6]!=1)return 0;
++ if(brr_wct_group_fast(t,f,mode)){
++  /* Recheck the live issued source pin, not its contents or a cached
++   * capability. These accessors inspect only fixed ownership metadata. */
++  if(!wct_metadata_sealed(t,f)||_gz_osa_pin_id()!=wct.pin||_gz_osa_validate(wct.pin)||
++   _gz_osa_source(wct.pin)!=wct.source||_gz_osa_bytes(wct.pin)!=wct.used||
++   _gz_osa_pin_identity(wct.pin)!=wct.identity||_gz_osa_pin_generation(wct.pin)!=wct.generation)return 0;
++ }else if(!wct_sealed(t,f))return 0;
++ if(o[6]!=1)return 0;
+  if(mode==2)return wct.phase==WCT_FORWARD&&!wct.returned&&!wct.error&&o[3]==ROH_MUTATING&&!o[7]&&o[12]==8;
+  if(mode==3)return (wct.phase==WCT_UNDO||wct.phase==WCT_ROLLED)&&wct.returned==1&&
+   ((!wct.error&&o[3]==ROH_MUTATING&&!o[7]&&!o[12])||(wct.error&&o[3]==ROH_FAILED_DIRTY&&o[7]==wct.error));
+--- a/bomb/world_group_publication.c
++++ b/bomb/world_group_publication.c
+@@ -3,6 +3,9 @@
+  * gate; source/body pointers never provide authority. */
+ enum {WGP_OFFSET=13000,WGP_BYTES=192,WGP_MAGIC=0x57475031u,WGP_BAD=1560};
+ static u32*wgp(void){return (u32*)ncb_core(WGP_OFFSET,33600-(WGP_OFFSET));}
++/* Private BRR plan seal reuse is bounded by this exact real HG entry. */
++static u32 brr_wgp_begin(u32,u32,u32),brr_wgp_end(u32,u32,u32);
++static u32 wgp_leave(u32);
+ static u32 wgp_hash(const u32*q){u32 i,h=2166136261u;const u8*b=(const u8*)q;for(i=0;i<WGP_BYTES;i++)h=(h^((i>=8&&i<12)||i>=188?0:b[i]))*16777619u;return h;}
+ static void wgp_seal(u32*q){q[47]=wgp_hash(q);__asm__ volatile("sync":::"memory");q[2]=1;}
+ static u32 wgp_valid(const u32*q){return q&&q[0]==WGP_MAGIC&&q[1]==WGP_BYTES&&q[2]==1&&q[4]&&q[5]&&q[47]==wgp_hash(q);}
+@@ -15,15 +18,19 @@
+ static u32 wgp_held(u32 t,u32 mode){u32*q=wgp();return q&&q[7]==mode&&_gz_wgp_context_owned(t)&&q[9]&&!_gz_hg_capture_seal(q[9])&&(!q[45]||(q[45]==1&&_gz_wct_heap_held(t,q[6])));}
+ #include "foliage_digest_receipt.inc"
+ #include "contact_target_receipt.inc"
+-static u32 wgp_enter(u32 t,u32 f,u32 mode){u32*q=wgp();
++static u32 wgp_enter(u32 t,u32 f,u32 mode){u32*q=wgp(),z;
+  if(crd.ready||crd.entered){crd.poison=1;return WGP_BAD;}
+  if(fgd.state){fgd.state=FGD_POISON;return WGP_BAD;}
+  if(!q||!wgp_valid(q)||q[4]!=t||q[7]||q[9]||f!=_gz_pbac_frame)return WGP_BAD;
+  q[6]=f;q[7]=mode;q[8]=_gz_hg_platform_thread();q[45]=0;wgp_seal(q);
+  if(!_gz_wgp_context_owned(t)){q[7]=q[8]=0;wgp_seal(q);return WGP_BAD;}
+  if(_gz_wct_heap_pending()){q[9]=_gz_wct_heap_borrow(t,f,mode);if(q[9])q[45]=1;}
+- else q[9]=_gz_hg_capture_begin(t);wgp_seal(q);if(!q[9]){q[7]=q[8]=0;wgp_seal(q);return WGP_BAD;}return 0;}
++ else q[9]=_gz_hg_capture_begin(t);wgp_seal(q);if(!q[9]){q[7]=q[8]=0;wgp_seal(q);return WGP_BAD;}
++ z=brr_wgp_begin(t,f,mode);return z?wgp_leave(z):0;}
+ static u32 wgp_leave(u32 z){u32*q=wgp(),seal,end,digest;
++ /* End the private hash shortcut before ANY exit, including retained
++  * root/IPK holds. The physical gate remains governed by its old rules. */
++ digest=brr_wgp_end(q[4],q[6],q[7]);if(!z)z=digest;
+  if(_gz_wct_root_pending())return z?z:WHL_ROOT_RETAINED;
+  if(_gz_ipk_admission_outstanding())return z?z:WGP_BAD;
+  digest=crd_end();if(!z)z=digest;
+--- a/bomb/bridge_replay3.inc
++++ b/bomb/bridge_replay3.inc
+@@ -30,11 +30,27 @@
+ 
+ static BrrPlan brr_plan __attribute__((section(".bss.gz_brr")));
+ static u32 brr_entered,brr_mode,brr_entry_seal;
++/* Private optimization state, never an owner or replay capability. */
++static u32 brr_wct_entered;
++typedef struct {u32 entered,token,frame,mode,thread,hold,plan_seal;} BrrWgpSeal;
++static BrrWgpSeal brr_wgp;
+ volatile u32 _gz_brr_report[24] __attribute__((section(".data.gz_brr")))={0x42525233u,96,3};
+ extern u32 _gz_jpg_acquire(u32,u32),_gz_jpg_check(u32,u32);
+ extern u32 _gz_jpg_gpu_restore(u32,u32),_gz_jpg_gpu_restore_ready(u32,u32);
+ 
+-u32 _gz_brr_idle(void) { return !brr_entered && !brr_plan.magic; }
++u32 _gz_brr_idle(void) { return !brr_entered && !brr_wct_entered && !brr_wgp.entered && !brr_plan.magic; }
++
++/* WGP may check a BRR target inside its existing FORWARD entry (mode 2)
++ * or inside its final TARGET entry (mode 4). No other mode is borrowed.
++ * This checks only private metadata; the caller still checks the actual
++ * ROH/WGP/thread/HG/WHL/JPG/GPU and source-pin state for every body read. */
++static u32 brr_wct_group_fast(u32 token,u32 frame,u32 mode)
++{
++    return brr_wct_entered==1 && brr_entered==1 && token &&
++        token==brr_plan.token && frame==brr_plan.frame && frame==_gz_pbac_frame &&
++        brr_mode>=2 && brr_mode<=4 &&
++        (mode==brr_mode || (brr_mode==4 && mode==2));
++}
+ 
+ /* BMH has no bridge writer yet. Reject a nonempty new bridge cohort there
+  * before its world services; ordinary WCT below owns the complete bridge path.
+@@ -54,6 +70,8 @@
+     return n && brg_apart(p,n,(u32)&brr_plan,sizeof(brr_plan)) &&
+         brg_apart(p,n,(u32)&brr_entered,4) && brg_apart(p,n,(u32)&brr_mode,4) &&
+         brg_apart(p,n,(u32)&brr_entry_seal,4) &&
++        brg_apart(p,n,(u32)&brr_wct_entered,4) &&
++        brg_apart(p,n,(u32)&brr_wgp,sizeof(brr_wgp)) &&
+         brg_apart(p,n,(u32)_gz_brr_report,sizeof(_gz_brr_report));
+ }
+ 
+@@ -94,22 +112,93 @@
+ {
+     brr_plan.seal=brr_seal_value();
+     if(brr_entered && brr_plan.valid)brr_entry_seal=brr_plan.seal;
++    /* Only the existing checked BRR writers can refresh this value.
++     * No other WGP participant writes any BRR plan/shadow byte. */
++    if(brr_entered && brr_wgp.entered && brr_plan.valid)brr_wgp.plan_seal=brr_plan.seal;
+     __asm__ volatile("sync" ::: "memory");
+ }
+ 
+-u32 _gz_brr_sealed(u32 token)
++static u32 brr_metadata_sealed(u32 token)
+ {
+     return token && brr_plan.magic==0x42525233u && brr_plan.bytes==sizeof(brr_plan) &&
+         brr_plan.valid==1 && brr_plan.token==token && brr_plan.frame==_gz_pbac_frame &&
+         brr_plan.phase>=BRR_PREPARED && brr_plan.phase<=BRR_ROLLED &&
+         brr_plan.required==((1u<<brr_plan.rows)-1) && brr_plan.covered==brr_plan.required &&
+-        brr_plan.seal && (brr_entered && brr_entry_seal?
+-            brr_plan.seal==brr_entry_seal:brr_plan.seal==brr_seal_value());
++        brr_plan.seal;
++}
++
++/* No WGP/WCT scope API here: that would recurse through wct_plans back into
++ * _gz_brr_sealed. Read the real current publication/HG metadata and use the
++ * existing nonrecursive physical providers instead. None issues a hold. */
++static u32 brr_wgp_cached(u32 token)
++{
++    const u32 *q=wgp();
++    u32 thread=_gz_hg_platform_thread();
++    if(brr_wgp.entered!=1 || !token || token!=brr_wgp.token ||
++       brr_wgp.frame!=_gz_pbac_frame || brr_wgp.frame!=brr_plan.frame ||
++       brr_wgp.mode<1 || brr_wgp.mode>4 || !thread || thread!=brr_wgp.thread ||
++       !q || !wgp_valid(q) || q[4]!=token || q[6]!=brr_wgp.frame ||
++       q[7]!=brr_wgp.mode || q[8]!=thread || q[9]!=brr_wgp.hold ||
++       !fgd_physical(token,thread,brr_wgp.hold) ||
++       _gz_nsv_access_entered() || _gz_nrt_access_entered() || _gz_boh_has_owner())return 0;
++    /* Mode 1 stays the original source-only preparation scope. Other modes
++     * check the exact live WCT receipt and ROH phase, without plan recursion. */
++    if(brr_wgp.mode==1) {
++        if(!_gz_wct_group_context(token,brr_wgp.frame,1))return 0;
++    } else if(!fgd_metadata(token,brr_wgp.frame,brr_wgp.mode) ||
++       _gz_osa_pin_id()!=wct.pin || _gz_osa_validate(wct.pin) ||
++       _gz_osa_source(wct.pin)!=wct.source || _gz_osa_bytes(wct.pin)!=wct.used ||
++       _gz_osa_pin_identity(wct.pin)!=wct.identity || _gz_osa_pin_generation(wct.pin)!=wct.generation)return 0;
++    if(brr_plan.rows && (!_gz_wct_heap_held(token,brr_wgp.frame) ||
++       _gz_jpg_check(token,brr_wgp.frame) || _gz_jpg_gpu_restore_ready(token,brr_wgp.frame)))return 0;
++    return brr_wgp.entered==1 && brr_wgp.plan_seal && brr_plan.seal==brr_wgp.plan_seal;
++}
++
++static u32 brr_full_sealed(u32 token)
++{
++    return brr_metadata_sealed(token) && brr_plan.seal==brr_seal_value();
++}
++
++u32 _gz_brr_sealed(u32 token)
++{
++    return brr_metadata_sealed(token) &&
++        (brr_entered && brr_entry_seal?brr_plan.seal==brr_entry_seal:
++         brr_wgp_cached(token)?1u:brr_plan.seal==brr_seal_value());
++}
++
++/* Called only from genuine WGP enter, after its actual HG acquisition. Full
++ * validation precedes publication; a new preparation has no plan to reuse. */
++static u32 brr_wgp_begin(u32 token,u32 frame,u32 mode)
++{
++    const u32 *q=wgp();
++    if(brr_wgp.entered || brr_entered || brr_wct_entered || !token ||
++       frame!=_gz_pbac_frame || mode<1 || mode>4 || !q ||
++       !_gz_wgp_contact_scope(token,frame,mode))return BRR_CONTEXT;
++    if(brr_plan.magic && !brr_full_sealed(token))return BRR_CHANGED;
++    brr_wgp.token=token;brr_wgp.frame=frame;brr_wgp.mode=mode;
++    brr_wgp.thread=q[8];brr_wgp.hold=q[9];
++    brr_wgp.plan_seal=brr_plan.valid?brr_plan.seal:0;
++    __asm__ volatile("sync" ::: "memory");brr_wgp.entered=1;
++    return 0;
++}
++
++/* Clear the only enclosing shortcut BEFORE full checks, even on an error or
++ * a retained root/IPK return. No receipt crosses a WGP callback boundary. */
++static u32 brr_wgp_end(u32 token,u32 frame,u32 mode)
++{
++    u32 entered=brr_wgp.entered,identity,seal=1,context;
++    brr_wgp.entered=0;
++    identity=entered==1 && token==brr_wgp.token && frame==brr_wgp.frame && mode==brr_wgp.mode &&
++        !brr_entered && !brr_wct_entered && !brr_entry_seal;
++    if(brr_plan.magic)seal=brr_full_sealed(token);
++    context=_gz_wgp_contact_scope(token,frame,mode);
++    brg_zero(&brr_wgp,sizeof(brr_wgp));
++    return !identity || !context?BRR_CONTEXT:seal?0:BRR_CHANGED;
+ }
+ 
+ static u32 brr_enter(u32 token,u32 frame,u32 mode)
+ {
+-    if(brr_entered || !token || token!=brr_plan.token || frame!=brr_plan.frame ||
++    if(brr_entered || brr_wct_entered || !token || token!=brr_plan.token || frame!=brr_plan.frame ||
+        frame!=_gz_pbac_frame || mode<1 || mode>4)return BRR_CONTEXT;
+     /* Validate the full private plan once at entry. Recursive WGP/WCT owner
+      * queries during this nonyielding entry may reuse this exact seal. Every
+@@ -117,15 +206,26 @@
+      * local phase transitions below can update its metadata/seal. This avoids
+      * hashing ~160KiB for each of hundreds of fresh OB queries. It grants no
+      * native scope: real WGP/HG/JPG checks still run on every body access. */
+-    if(brr_plan.valid && !_gz_brr_sealed(token))return BRR_CHANGED;
++    if(brr_plan.valid && !brr_full_sealed(token))return BRR_CHANGED;
+     brr_entered=1;brr_mode=mode;brr_entry_seal=brr_plan.valid?brr_plan.seal:0;
++    /* The first context check still hashes every full WCT participant
++     * plan. Preparation mode 1 retains its original source-only scope:
++     * the complete WCT plans do not exist at that stage. */
+     if(!_gz_brr_native_context()) { brr_entered=brr_mode=brr_entry_seal=0;return BRR_CONTEXT; }
++    if(mode!=1)brr_wct_entered=1;
+     return 0;
+ }
+ 
+ static u32 brr_leave(u32 result)
+ {
+-    if(!result && !_gz_brr_native_context())result=BRR_CHANGED;
++    u32 sealed=1,context;
++    /* Always retire BOTH shortcuts before checking the complete plans,
++     * including an error return. No cache survives a BRR service/callback.
++     * Check the BRR full seal explicitly even in preparation mode 1. */
++    brr_wct_entered=0;brr_entry_seal=0;
++    if(brr_plan.valid)sealed=brr_full_sealed(brr_plan.token);
++    context=_gz_brr_native_context();
++    if(!result && (!sealed || !context))result=BRR_CHANGED;
+     _gz_brr_report[3]=brr_plan.token;_gz_brr_report[4]=_gz_pbac_frame;
+     _gz_brr_report[5]=result;_gz_brr_report[6]=brr_plan.phase;
+     _gz_brr_report[7]=brr_plan.rows;_gz_brr_report[8]=brr_plan.required;
+@@ -133,7 +233,7 @@
+     _gz_brr_report[11]=brr_plan.scalars;_gz_brr_report[12]=brr_plan.pod;
+     _gz_brr_report[13]=brr_plan.attempted;_gz_brr_report[14]=brr_plan.applied;
+     _gz_brr_report[15]=brr_plan.undone;_gz_brr_report[16]=brr_plan.target_frame;
+-    brr_entered=brr_mode=brr_entry_seal=0;return result;
++    brr_entered=brr_mode=brr_entry_seal=brr_wct_entered=0;return result;
+ }
+ 
+ /* Fresh PO cohort before any bridge body follow; the observer lock is shared
+@@ -283,7 +383,7 @@
+ {
+     const VrWorld *world;
+     u32 source,used,bank,count,i,j,z;
+-    if(brr_plan.magic || brr_entered)return BRR_CONTEXT;
++    if(brr_plan.magic || brr_entered || brr_wct_entered)return BRR_CONTEXT;
+     z=brr_source(token,frame,&source,&used,&bank);if(z)return z;
+     count=brr_source_count(bank);if(count>BRR_ROWS)return BRR_CAPACITY;
+     brg_zero(&brr_plan,sizeof(brr_plan));
+@@ -406,21 +506,21 @@
+ 
+ u32 _gz_brr_commit_scope(u32 token,u32 frame)
+ {
+-    return !brr_entered && _gz_brr_sealed(token) && brr_plan.phase==BRR_APPLIED &&
++    return !brr_entered && !brr_wct_entered && !brr_wgp.entered && _gz_brr_sealed(token) && brr_plan.phase==BRR_APPLIED &&
+         brr_plan.applied==1 && brr_plan.target_frame==frame && frame==_gz_pbac_frame;
+ }
+ 
+ u32 _gz_brr_forget_clean(u32 token)
+ {
+     if(!brr_plan.magic)return 0;
+-    if(brr_entered || brr_plan.token!=token || brr_plan.attempted ||
++    if(brr_entered || brr_wct_entered || brr_wgp.entered || brr_plan.token!=token || brr_plan.attempted ||
+        (brr_plan.valid && brr_plan.phase!=BRR_PREPARED))return BRR_CONTEXT;
+     brg_zero(&brr_plan,sizeof(brr_plan));return 0;
+ }
+ 
+ void _gz_brr_finish_leaf(u32 token)
+ {
+-    if(brr_entered || brr_plan.token!=token || !brr_plan.valid ||
++    if(brr_entered || brr_wct_entered || brr_wgp.entered || brr_plan.token!=token || !brr_plan.valid ||
+        (brr_plan.phase!=BRR_APPLIED && brr_plan.phase!=BRR_ROLLED))return;
+     brg_zero(&brr_plan,sizeof(brr_plan));
+ }

@@ -1,0 +1,81 @@
+{
+  "schema": "portable-entered-BRR-plan-cache-and-observation-patches/1",
+  "applied_to_integrated_v126": false,
+  "original_seven_bridge_source_leaves_retained": true,
+  "changes": [
+    {
+      "file": "bomb/world_core_roundtrip.c",
+      "before": {
+        "bytes": 17766,
+        "sha256": "4eedea477e282d38396d7d0822498387405091b668f4dbb26b325365663ff535"
+      },
+      "after": {
+        "bytes": 18508,
+        "sha256": "58d14c789c3eb9b9ea38dc14794a9cf7ead97bb80db2566d20d0b428323cdb32"
+      },
+      "comparison": "Exact frozen/compiled source bytes; patch uses LF text."
+    },
+    {
+      "file": "bomb/world_group_publication.c",
+      "before": {
+        "bytes": 10811,
+        "sha256": "afae2f67a220ccf711fa675a85f3a5bdbb113a11051f3b1d9e2a511d3af148bd"
+      },
+      "after": {
+        "bytes": 11219,
+        "sha256": "746af0769b8cd5b79227469653196d22df68a226794219518dd557719aaaa89f"
+      },
+      "comparison": "Exact frozen/compiled source bytes; patch uses LF text."
+    },
+    {
+      "file": "bomb/bridge_replay3.inc",
+      "before": {
+        "bytes": 20150,
+        "sha256": "c3f15e7623ea5c053f50324426bb82f0d775b05c4d43049a25d6500c7a3a627b"
+      },
+      "after": {
+        "bytes": 25417,
+        "sha256": "b23330a9a7ded38f67a1dbed12d37619eb03b0cfb18c7383afc6932d28d4b735"
+      },
+      "comparison": "Exact frozen/compiled source bytes; patch uses LF text."
+    }
+  ],
+  "owner_change": {
+    "file": "owner/owner.c",
+    "before": {
+      "bytes": 37050,
+      "sha256": "f5206b28ac9313531813ddc2ea4b8d0e7dd66200beeeb1f24277881a98bb3ae0"
+    },
+    "after": {
+      "bytes": 37730,
+      "sha256": "ebb0568b83e2e59ec4c8fed0c7b39416349f9f3d0ebb2aa7e52ffac1ace79ccb"
+    }
+  },
+  "parent_objects": {
+    "bomb_recreation_o": "747f19d02decb84df271940bac74a51bfee20b801ec62aa501d7bc22705b7ee8",
+    "owner9_o": "44919749377b5524057c1cb008cdcd92bf8e875a0bcdf315e076d0e3decd5ef9"
+  },
+  "new_private_BSS_bytes": 32,
+  "owner_storage_delta": 0,
+  "source_handoff_sha256": "7fb3b3af3d174cfb9688453b2119862d6cb28de48324b44af9f14f48b2580009",
+  "owner_source_handoff_sha256": "c64d1f6787d13178810f53cf4827ed53812c6ec7af8f35cfa45015b58dd36682",
+  "component_report_sha256": "66a045198e4ad6bf03273e838b741de7ade13bcf948348513cd30f6787ef2bc3",
+  "component_emitted_review_sha256": "f0936b79bf0251ae5fc7996c88cf2b593c71b88f3be222b283c73cb7928e36e7",
+  "native_result_qualification_sha256": "1a24d6f79f88475cf3b4be209b45e3f195aa20872694369c959a36f82e0cbdfe",
+  "native_result_assessment_sha256": "6abaa7193d8d6d97e789d9d9aca9b63afd759a660e56729a2b1826264fe499b2",
+  "portable_patch_forward_reconstruction_exact": true,
+  "source_export_recompiled": false,
+  "release_qualified": false,
+  "patches": [
+    {
+      "file": "entered-plan-cache.patch",
+      "bytes": 15107,
+      "sha256": "c281f32df6a6d2fb9e17366049746da5f529fd73fe4ae316282e83f6eec068f3"
+    },
+    {
+      "file": "owner-first-mismatch.patch",
+      "bytes": 1281,
+      "sha256": "b88cb68f79c9369ef4e093519f89d94ab730d4c8f672936420ba6717278ab9a1"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v150-single-action-pickup-continuation",
-  "status": "Partial authored sources. Separate Cemu one-confirmation restores after two new hearts or three green rupees passed. Mixed cohorts, active effects, general actors and Wii U remain unqualified. Complete integrated export remains v126.",
+  "revision": "post-v151-bounded-native-bridge-rewind",
+  "status": "Partial authored sources. Three same-allocation Sickass bridge restores passed in Cemu but took21.390\u201321.625seconds. Actor lifetime, bomb, general full-game and Wii U qualification remain incomplete. Complete integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 49644,
-      "sha256": "18a19af7ace22b3328bee182d2e8d67a144e469bd353a421cd848a5022cc50b5"
+      "sha256": "5eb1d3ef4c80893c74247725e533e35e0ab56d016d7c52da1ce5b0bf9dcc4c9b",
+      "bytes": 51501
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1647,6 +1647,96 @@
       "path": "tests/test_single_restore_source.py",
       "bytes": 4110,
       "sha256": "64c2c976b3238cd454aa738073f14d37616bd6cebb434dfeb7268da0996ce08e"
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/caller-LR-fix.json",
+      "sha256": "22f92eb981a951217d760b1829ee8d6969f50ca53253ec5c5ead304d3c47696d",
+      "bytes": 1218
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/caller-LR-fix.patch",
+      "sha256": "5949010e95e7f41b84f962c382829c5b17719a5a417841d02a7c78471d44360e",
+      "bytes": 264
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/descriptor-envelope-fix.json",
+      "sha256": "5e98085de361134db7a43e0dcc6caf9b0c57bb0c6d0dd206c89208cfcbe86664",
+      "bytes": 550
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/descriptor-envelope-fix.patch",
+      "sha256": "0d725311071dc30ecd0ab04a5bdcf6b4a1cf181247cfabe5cd3e2f1c5c4b354f",
+      "bytes": 1438
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/entered-plan-cache.json",
+      "sha256": "f8113c94753780dc8346cb6a2700cf0c9007221e3317a63fe869369c14a2fc13",
+      "bytes": 3053
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/entered-plan-cache.patch",
+      "sha256": "c281f32df6a6d2fb9e17366049746da5f529fd73fe4ae316282e83f6eec068f3",
+      "bytes": 15107
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/integration.patch",
+      "sha256": "90895608c57b5c0b59c3a9d45a6731e4a953f03d3e3f482e0fda8a68dabb65f1",
+      "bytes": 14460
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/owner-first-mismatch.patch",
+      "sha256": "b88cb68f79c9369ef4e093519f89d94ab730d4c8f672936420ba6717278ab9a1",
+      "bytes": 1281
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/README.md",
+      "sha256": "1dabbdc02e7fc377ea4f7ce305c21222ba94c9d552f305ead631258802187a7c",
+      "bytes": 10733
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/runtime-integration.json",
+      "sha256": "f4e443f3746950048f2e61b4e09572590cf01ae64203d268e56e9034fd2a6a1f",
+      "bytes": 5870
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source-pins.json",
+      "sha256": "f5dbac20d7aa75b2b09df66b42319bb3683b1a5577140e0c5810caef9aec74cf",
+      "bytes": 9622
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridges3.s",
+      "sha256": "848c9ada3ac5a9cd97fcbda7604728ac20a597129676f7275ea18c19e48a3aea",
+      "bytes": 2012
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_capture.h",
+      "sha256": "080f2a3fa6d7e449b51ed1a4511028f006200b41f8ab97dce343b5c0ce78318d",
+      "bytes": 516
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_capture3.c",
+      "sha256": "3c24a2adece1c9e23eaf35b58eaff5ff065265deb089cb2eae9f87585dcaae9e",
+      "bytes": 38202
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_format.h",
+      "sha256": "f65ad5d29e9de9a19c740c7812632157b46128084e0aca560d52ad239378c60c",
+      "bytes": 10365
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_format3.h",
+      "sha256": "44b985a9158632ab3ad38581e7026372a6c48a10dd1c174d91aaad45fb6f5c1a",
+      "bytes": 12036
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_replay3.h",
+      "sha256": "d778b0b0b94f554ffc1526781da3427164e92204603dc21e5c9b426f921baa13",
+      "bytes": 955
+    },
+    {
+      "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_replay3.inc",
+      "sha256": "c3f15e7623ea5c053f50324426bb82f0d775b05c4d43049a25d6500c7a3a627b",
+      "bytes": 20150
     }
   ],
   "excludes": [

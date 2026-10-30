@@ -869,7 +869,9 @@ restore. Full bomb restoration remains unfinished.
 
 The [bridge source](native-bridge-rewind/README.md) captures all three Sickass
 bridges and implements coupled CPU replay and undo. Native tests found and
-corrected alignment and caller-return bugs. One quiet restore passed; a naturally
-broken bridge passed physical target checks but failed final commit and rolled
-back. Repeated restoration after a Keese retires and restore speed remain open.
-This is partial source, not reliable full-game coverage or a release recommendation.
+corrected alignment and caller-return bugs. A later Cemu test completed three
+restores, including a naturally broken bridge, native Draw and nearby traversal.
+They still took 21.390–21.625 seconds. The retired-Keese lifetime gap and an earlier
+commit refusal remain unresolved; the source export includes bounded entered-plan
+reuse and a first-mismatch diagnostic. This is partial source, without full-game,
+fast-restore or Wii U qualification or a release recommendation.

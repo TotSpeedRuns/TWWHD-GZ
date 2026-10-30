@@ -42,7 +42,7 @@ The restore preserves current graphics resources and lets that ordinary render
 pass run; it does not call an entire Draw function during restore. This static
 relationship is not proof of visible rendering or collision acceptance. Those
 require actual engine tests, including a natural bridge break and repeated
-restores. No such native acceptance result is included in this source packet.
+restores. A later bounded Cemu result is described below; complete visual and collision acceptance remains unproved.
 
 The first private engine capture refused with code 1802 before publishing a
 snapshot; no Restore was attempted. The failure was an alignment bug in this new
@@ -89,19 +89,60 @@ rolled the change back. That attempt exceeded the 30-second controller-observati
 timeout. It is not an accepted bridge restore, a collision-traversal pass or a
 visible-rendering pass. Repeated plan validation is being investigated separately.
 
-The native attempts therefore expose useful defects and exercise capture,
-physical target verification and undo, but Sickass is not yet reliably working.
-No full-game, bomb, cross-room, cutscene, persistence or Wii U coverage is claimed.
-This is experimental source, not a release recommendation.
-The public copy was not separately recompiled. Full pins are in `source-pins.json`.
+A later private Cemu run captured a fresh three-bridge SOURCE in 2.156 seconds.
+Ordinary B input cut the 33-plank bridge, changing action 3 to 5. Three chooser
+Restore actions then completed with fresh request/acknowledgement, all fifteen
+target checks and commit success. They took 21.485, 21.625 and 21.390 seconds,
+including synchronous input acknowledgement and the first terminal observation.
+The second restore followed native Draw; the third followed ordinary traversal
+back toward the upper rope. All three retained the same bridge, heap and
+background identities, restored the saved action values and exact Link position,
+and left the first-mismatch diagnostic empty.
+
+Read-only checks after native frames covered 60 rope-renderer rows and both
+buffers per row. Their generated vertex-pair midpoints matched the current CPU
+centerlines within `1.526e-5`. Ordinary movement after rewind reached nearby
+native ground. These bounded observations do not establish every visual mode or
+collision interaction. The synchronous Restore call leaves an observation gap;
+loading was absent in the sampled states, not continuously observed.
+
+The old after-Keese-loss commit-40 failure and the retired-owner recreation gap
+remain unresolved. Later successes in a different lifetime context do not prove
+those failures fixed. Dirty recovery, bombs, other actor destruction, cross-room,
+cutscene, persistence, full-game and Wii U behavior are not qualified. Restores
+around 21.4 seconds remain too slow for the requested responsive practice tool.
+No speed improvement is claimed by this source export. Diagnostic format-wrapper
+counts are not measurements of physical hash bytes.
+
+`entered-plan-cache.patch` adds the three compiled BRR/WCT/WGP source changes
+against their exact pinned enclosing parents. The seven existing bridge source
+leaves remain unchanged in this export; the patch includes the update to
+`bridge_replay3.inc`. It reuses wide plan validation only inside the bounded,
+non-yielding, already authenticated native BRR entry. Full checks run before
+entry and after both receipts are cleared on success or error. Current source
+pin, owner, frame, thread, native HG/job/JPG/GPU, heap, object and target checks
+remain. The patch adds 32 private BSS bytes and no new native permission.
+
+`owner-first-mismatch.patch` records the first actual unequal word of the
+existing owner sample in its existing diagnostic buffer. It adds no new sample,
+query, callback, retry evidence, storage, or changed refusal result. In particular,
+it does not retry commit or waive the immutable-owner comparison. Patch labels
+are portable integration-relative paths; the surrounding private qualified
+parents and existing providers are still required. These are reviewed source
+patches, not a complete current runtime builder or a release recommendation.
+
+The public copy was not separately recompiled. Exact parent/candidate, emitted,
+main and finite native-result fingerprints are in `source-pins.json` and
+`entered-plan-cache.json`. No game binary, resource, capture, profile, private
+memory address, or console identifier is included.
 
 The measured object-level writable storage increase is 246,468 bytes: two banks
 grow by 65,536 bytes together; capture workspace adds 17,096 BSS bytes; the bounded
 replay plan adds 163,668 BSS bytes; and reports/state add 168 initialized bytes.
 Read-only data adds 353 bytes. These are actual component section deltas, not a
 claim about final compressed size or runtime speed. No large particle diagnostic
-output is part of this bridge component. The observed restore delays are unacceptable for a practice tool; performance
-and successful publication remain open work.
+output is part of this bridge component. The observed restore delays remain unacceptable for a practice tool; performance
+and general restore coverage remain open work.
 
 `integration.patch` records the unchanged eight changes to the enclosing C
 owners. The exported capture source already includes the separate descriptor

@@ -1,0 +1,23 @@
+--- a/owner/owner.c
++++ b/owner/owner.c
+@@ -207,7 +207,19 @@
+ static u32 same(const RohSample* a,const RohSample* b,u32 deep,u32 life){
+  u32 i;for(i=0;i<sizeof(*a)/4;i++){
+   if(i==6||i==12||i==32||i==41||i==43||(life&&i>=33&&i<=37))continue; /* full hashes and advancing native frame */
+-  if(((const u32*)a)[i]!=((const u32*)b)[i])return ROH_OWNER;
++  if(((const u32*)a)[i]!=((const u32*)b)[i]){
++   /* Observation only: retain the first actual failed sample term. No extra
++    * sampling, owner query, retry evidence or changed admission follows. */
++   if(!_gz_roh_link_probe[0]){
++    _gz_roh_link_probe[1]=i;_gz_roh_link_probe[2]=_gz_roh_live_frame;
++    _gz_roh_link_probe[3]=((const u32*)a)[i];_gz_roh_link_probe[4]=((const u32*)b)[i];
++    _gz_roh_link_probe[5]=deep;_gz_roh_link_probe[6]=life;
++    _gz_roh_link_probe[7]=_gz_roh_owner.token;_gz_roh_link_probe[8]=_gz_roh_owner.phase;
++    _gz_roh_link_probe[9]=_gz_roh_owner.inflight;_gz_roh_link_probe[10]=_gz_roh_owner.service_calls;
++    __asm__ volatile("sync":::"memory");_gz_roh_link_probe[0]=0x52444631u;
++   }
++   return ROH_OWNER;
++  }
+  }
+  if(deep&&(a->archive_hash!=b->archive_hash||a->registry_hash!=b->registry_hash||a->pot_hash!=b->pot_hash||a->light_hash!=b->light_hash))return ROH_ARCHIVE;
+  return 0;

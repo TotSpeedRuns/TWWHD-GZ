@@ -39,23 +39,23 @@
   ],
   "compiled_objects": [
     {
-      "object": "bomb_recreation.o",
-      "bytes": 1506388,
-      "sha256": "747f19d02decb84df271940bac74a51bfee20b801ec62aa501d7bc22705b7ee8"
-    },
-    {
-      "object": "owner9.o",
-      "bytes": 83372,
-      "sha256": "44919749377b5524057c1cb008cdcd92bf8e875a0bcdf315e076d0e3decd5ef9"
-    },
-    {
       "object": "runtime.o",
       "bytes": 10293312,
       "sha256": "6ae6be87ad7042118e50d451f31e832ad52b3fbbf87367854139d9314978fa4d"
+    },
+    {
+      "object": "owner9.o",
+      "bytes": 83548,
+      "sha256": "2835c1dfb14fb7e08e07cd23389559e22eadb19e36f449428100085bec15d81e"
+    },
+    {
+      "object": "bomb_recreation.o",
+      "bytes": 1510448,
+      "sha256": "f1cc2d0e10c79999861303fc535ad34b0927d1d4b15b4565ab88cd38c5f18db5"
     }
   ],
-  "component_report_sha256": "fb69852e02bf9e0fb351ba775a49e3eb178c8e4c70a2862c149dda94eb39982d",
-  "component_emitted_review_sha256": "a22a8d7a96ba70fcba0add300e6959f287cd7c4b72888a590317c169550494a8",
+  "component_report_sha256": "66a045198e4ad6bf03273e838b741de7ade13bcf948348513cd30f6787ef2bc3",
+  "component_emitted_review_sha256": "f0936b79bf0251ae5fc7996c88cf2b593c71b88f3be222b283c73cb7928e36e7",
   "C_integration_inverses": [
     {
       "file": "bomb/archive_layout.h",
@@ -113,14 +113,16 @@
   "baseline_reproduced": true,
   "raw_verbose_parity": true,
   "private_native_test_eligible": true,
-  "native_acceptance_included": false,
+  "native_acceptance_included": true,
   "Wii_U_tested": false,
   "release_qualified": false,
   "public_copy_recompiled": false,
   "source_handoffs": {
     "initial": "67b0f3153e196a40266c375d33190232d92ed472f320145fea4735bb42a8bca0",
     "descriptor_envelope_fix": "7a6ef8c3f0f99fb13dbca8aa46741db487173057ad8ebcefd826794a0175eda4",
-    "caller_LR_fix": "d47a08d940bd50ae06e22d75419f2425b65f9abf7a356ad6683a44ab05847af5"
+    "caller_LR_fix": "d47a08d940bd50ae06e22d75419f2425b65f9abf7a356ad6683a44ab05847af5",
+    "entered_plan_cache": "7fb3b3af3d174cfb9688453b2119862d6cb28de48324b44af9f14f48b2580009",
+    "owner_first_mismatch": "c64d1f6787d13178810f53cf4827ed53812c6ec7af8f35cfa45015b58dd36682"
   },
   "earlier_native_capture": {
     "published": false,
@@ -155,13 +157,13 @@
   },
   "current_main_independent_review_pending": false,
   "current_main_build_image": {
-    "sha256": "b1996426200363d88a89571146eedc5a49f39c6ffe0859209f0df93eeb97d8e3",
-    "bytes": 27447552
+    "bytes": 27451328,
+    "sha256": "f801c15284f392ffec613958ea0a628c3248edcda21ba8497a5ee689f4cdb0c7"
   },
-  "current_main_build_report_sha256": "5168750c9233dae0f9239dd69143a939853ada344a9abcafb66857915c48d6b9",
-  "current_main_independent_review_sha256": "919242477daa6c49412daa94311d3f61d61d54e60e6073d644fdbadaac020f0d",
+  "current_main_build_report_sha256": "e3690709b1bbdf12fe4a655b308f094986aa6cc0d56f47b384fd0fc046c0410d",
+  "current_main_independent_review_sha256": "8d4d7a03fa42d21eeed11b262e6ad084ba160c4c5276dcc4a2cb99f964b4769b",
   "native_attempts_completed": true,
-  "native_results": {
+  "previous_native_results": {
     "saved_slot_published": true,
     "one_quiet_restore_accepted": true,
     "repeated_retired_Keese_restore_accepted": false,
@@ -172,5 +174,46 @@
     "broken_bridge_restore_exceeded_seconds": 30,
     "visible_render_and_traversal_qualified": false,
     "private_progress_report_sha256": "3cd52611ecfd8503d37c28ec76c19c96781357a072347cddf401e181cf7a71f4"
+  },
+  "source_patches": [
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/entered-plan-cache.patch",
+      "bytes": 15107,
+      "sha256": "c281f32df6a6d2fb9e17366049746da5f529fd73fe4ae316282e83f6eec068f3"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/owner-first-mismatch.patch",
+      "bytes": 1281,
+      "sha256": "b88cb68f79c9369ef4e093519f89d94ab730d4c8f672936420ba6717278ab9a1"
+    },
+    {
+      "file": "experiments/maintained-components/native-bridge-rewind/entered-plan-cache.json",
+      "bytes": 3053,
+      "sha256": "f8113c94753780dc8346cb6a2700cf0c9007221e3317a63fe869369c14a2fc13"
+    }
+  ],
+  "native_results": {
+    "scope": "One Cemu same-allocation three-bridge cohort, source shapes0/33,0/26,4/9; three restores after natural break/Draw/traversal.",
+    "source_capture_seconds": 2.156,
+    "restore_seconds_including_input_and_first_observation": [
+      21.485,
+      21.625,
+      21.39
+    ],
+    "fresh_request_ack_all15targets_commit_each": true,
+    "same_allocation_identity_Link_and_actions_rewound": true,
+    "RDF1_empty": true,
+    "renderer_rows": 60,
+    "renderer_buffers": 120,
+    "max_midpoint_error": 1.52587890625e-05,
+    "continuous_loading_absence_proven": false,
+    "complete_render_collision_acceptance": false,
+    "dirty_recovery_qualified": false,
+    "retired_Keese_recreation_qualified": false,
+    "performance_improvement_claimed": false,
+    "Wii_U_tested": false,
+    "qualification_sha256": "1a24d6f79f88475cf3b4be209b45e3f195aa20872694369c959a36f82e0cbdfe",
+    "assessment_sha256": "6abaa7193d8d6d97e789d9d9aca9b63afd759a660e56729a2b1826264fe499b2",
+    "progress_report_sha256": "b7cf6b5d5f6f20a53fad688b3741a26afe55129a0ff1256324cad1acf16f9d83"
   }
 }

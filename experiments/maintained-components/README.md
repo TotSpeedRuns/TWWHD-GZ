@@ -875,3 +875,12 @@ They still took 21.390–21.625 seconds. The retired-Keese lifetime gap and an e
 commit refusal remain unresolved; the source export includes bounded entered-plan
 reuse and a first-mismatch diagnostic. This is partial source, without full-game,
 fast-restore or Wii U qualification or a release recommendation.
+
+## Shared object-binding private-range check cost
+
+The [ordinary binding patch](native-heap-v147/README.md#generic-object-binding-fixed-private-range-checks)
+factors repeated fixed exclusions while retaining every heap-dependent check.
+A private Cemu Sickass test completed three bridge restores in12.641–12.906seconds;
+the earlier separate baseline was21.390–21.625seconds. Fresh source/cohorts differ,
+so this is a bounded observation, with no exact percentage or Wii U claim.
+Restores remain too slow and full actor lifetime/resource coverage remains unfinished.

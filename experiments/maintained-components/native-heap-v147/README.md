@@ -165,3 +165,39 @@ device/lifetime closure, boss/cutscene replay or universal save-state coverage.
 The separate proposed raw-copy kernel remains default0 and is **not included**
 here or adopted by this release. The supplied sources do not reproduce the
 complete integrated v147 build; the reproducible integrated export stays v126.
+
+
+## Generic object-binding fixed private-range checks
+
+`object-binding-fixed-private.patch` is a later one-function development patch
+for the ordinary selected `ob_private` helper. It evaluates the heap-independent
+private-range predicates before and after the original heap loop. Every live,
+mutating or ending heap still receives both original allocation-span and heap-
+header disjointness checks under the same metadata lock. Source-age, ownership,
+health, native access and cleanup checks remain required. This caches no lookup
+or lifetime result across calls and adds no state, import or source format.
+
+The patch was compiled over the exact selected `2a525ddf` native-lifetime parent
+to `348e2fef`. It does not replace `object-binding-try.inc`, which is the separate
+bounded, unissued try-only design described above. The complete observer and
+native integration remain external; this partial patch is not a standalone or
+complete current runtime export. The source fingerprints and bounded evidence
+are recorded in `object-binding-fixed-private.json`.
+
+One private Cemu test with the fixed-private patch completed a fresh capture and
+three ordinary same-allocation bridge restores after a natural break, native
+Draw, and near-ground traversal. Capture took 3.031 seconds; the restores took
+12.906, 12.843 and 12.641 seconds including ordinary input and first observation.
+Each reported native success, all 15 targets and a fresh commit, with the same
+three bridge identities, rewound actions and exact Link state. All 120 checked
+renderer buffers matched their expected centers within 0.00000763 units. Six
+save files were unchanged, and the owned engine was closed.
+
+The earlier separate baseline case took 21.390–21.625 seconds. The later SOURCE
+was 12,800 bytes larger and the fresh cohort/context differed, so these are
+individual observations, not an exact percentage or a general speed guarantee.
+The observer still counted 118,587,315 node visits and 516,420 heap walks per
+restore. The separate later owner-list single-traversal proposal is not included
+in this patch or qualified by these timings. This does not qualify Wii U,
+full-game or smoke restoration, retired-owner recreation, dirty recovery,
+universal renderer/collision acceptance, or a release.

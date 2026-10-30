@@ -1,0 +1,53 @@
+{
+  "schema": "portable-generic-OB-fixed-private-factor/1",
+  "source_patch": {
+    "file": "experiments/maintained-components/native-heap-v147/object-binding-fixed-private.patch",
+    "bytes": 1047,
+    "sha256": "c4c2d6df59bfc9e01af48bc53c999fc095d03bc38489af86bdb886c4b41e3b0e"
+  },
+  "changed_file": "object-binding.inc",
+  "changed_function": "ob_private",
+  "source_handoff_sha256": "0201a6593ceb506631d1480a7abdb593aa2d679ad136f1f1f6dd54415405b832",
+  "baseline_include_sha256": "9824fbfff5c05b090d876ea9092cc14bc94e9cf31d062a7d228d7d17e3713aba",
+  "candidate_include_sha256": "44ea757acf8f0431465ff4a58962ebe1d5ce1a4ddb8847c2d7371085b858b7a4",
+  "baseline_object_sha256": "2a525ddf6eb3ce993d9a9c957932bc5de1017239ea610f4d0f9752159fa79a17",
+  "candidate_object_sha256": "348e2fef80fefc7fbcdfa3072b6c71eebdd9a4a8d6c0ecbfd5474ea728c2fdcd",
+  "component_report_sha256": "c32b9e20b47711cc873b8b1a55e2b8259a3315bcdd08cd24ec5cafc57f05f2a4",
+  "emitted_review_sha256": "e370f37f711a845ebbceed5e02665e6abb87a2c8817b72ba195d7d07f8109248",
+  "private_test_image_sha256": "4897119b5bf81c97731d2fae7669f761e00abba11d7b769d307d71d26fa2bf7d",
+  "main_review_sha256": "7b716fe0f5b4ff8478a3aa00a86bbdfaccc59a25e049d9e10265ccd2f28e7dcd",
+  "native_report_sha256": "b8b5df2ac448c81a032be5681b7bd5f4e5c13901cfcd24eb4a24a17dfe7886ed",
+  "native_assessment_sha256": "ecc2ba9300f646de4f5a60fb08510600f8438740e6b69289203ee2078ffa6221",
+  "retained_ordinary_private_checks": true,
+  "lookup_and_lifetime_caching": false,
+  "storage_growth_bytes": 0,
+  "new_imports": [],
+  "native_results": {
+    "scope": "One Cemu same-allocation three-bridge cohort after natural break/Draw/traversal",
+    "capture_seconds": 3.031,
+    "restore_seconds": [
+      12.906,
+      12.843,
+      12.641
+    ],
+    "fresh_request_ack_all15targets_commit_each": true,
+    "same_identity_pose_and_actions": true,
+    "renderer_buffers": 120,
+    "max_midpoint_error": 7.62939453125e-06,
+    "six_save_files_unchanged": true,
+    "owned_engine_closed": true,
+    "HI_node_visits_each": 118587315,
+    "HI_heap_walks_each": 516420,
+    "HI_full_audits_each": 0,
+    "comparison_is_matched_workload": false,
+    "later_SOURCE_bytes_larger": 12800,
+    "exact_percentage_improvement_claimed": false,
+    "Wii_U_tested": false,
+    "full_game_or_smoke_qualified": false,
+    "release_qualified": false
+  },
+  "external_integration_required": true,
+  "complete_selected_observer_published": false,
+  "object_binding_try_retained_unchanged": true,
+  "later_owner_single_traversal_included": false
+}

@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "post-v151-bounded-native-bridge-rewind",
-  "status": "Partial authored sources. Three same-allocation Sickass bridge restores passed in Cemu but took21.390\u201321.625seconds. Actor lifetime, bomb, general full-game and Wii U qualification remain incomplete. Complete integrated export remains v126.",
+  "revision": "post-v151-shared-binding-check-cost",
+  "status": "Partial authored sources. Shared object-binding fixed-check factoring passed finite Cemu bridge cases in12.641\u201312.906seconds. Still slow; general actor/resource/cutscene/persistence and Wii U scope remain incomplete. Complete integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "sha256": "5eb1d3ef4c80893c74247725e533e35e0ab56d016d7c52da1ce5b0bf9dcc4c9b",
-      "bytes": 51501
+      "bytes": 52072,
+      "sha256": "b1728eda5c06ba34999e94b16fb821902ee28bd9fd5af0723b5b71c30dbcd88b"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -975,8 +975,8 @@
     },
     {
       "path": "experiments/maintained-components/native-heap-v147/README.md",
-      "bytes": 10829,
-      "sha256": "e198b302bc18eb3d1620dc98dbecaa97aa4755bb889f489580ac2736afde7d69"
+      "bytes": 13104,
+      "sha256": "6893b482e4af7e5d30e5d868b38618a703d4986175806dde6def3dc762fc0167"
     },
     {
       "path": "experiments/maintained-components/native-heap-v147/scope.json",
@@ -1737,6 +1737,16 @@
       "path": "experiments/maintained-components/native-bridge-rewind/source/bridge_replay3.inc",
       "sha256": "c3f15e7623ea5c053f50324426bb82f0d775b05c4d43049a25d6500c7a3a627b",
       "bytes": 20150
+    },
+    {
+      "path": "experiments/maintained-components/native-heap-v147/object-binding-fixed-private.json",
+      "bytes": 2554,
+      "sha256": "9de2f02e7f1cf37dd4cd5d9d38185c45f82ffe09848c2fe5e8d4a25b6fc7a2ad"
+    },
+    {
+      "path": "experiments/maintained-components/native-heap-v147/object-binding-fixed-private.patch",
+      "bytes": 1047,
+      "sha256": "c4c2d6df59bfc9e01af48bc53c999fc095d03bc38489af86bdb886c4b41e3b0e"
     }
   ],
   "excludes": [

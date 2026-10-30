@@ -54,3 +54,6 @@ experiments/maintained-components/setup-title-upgrade-v151/** text eol=lf
 
 # Authored partial wall trainer unit.
 experiments/maintained-components/partial-wall-overlap/** text eol=lf
+
+# Authored saved-bomb identity component.
+experiments/maintained-components/saved-bomb-source-identity/** text eol=lf

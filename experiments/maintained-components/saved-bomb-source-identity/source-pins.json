@@ -1,0 +1,12 @@
+{
+  "schema": "saved-bomb-source-identity-portable/1",
+  "source_sha256": "0bdcf243950352c83ea993f690a047096c352f6393092d7e01b5ece52b2e353a",
+  "baseline_source_sha256": "e667509b77e5b939faec3865717cde0ea40897e56025094f3d7a50c3a2dad895",
+  "compiled_object_sha256": "b5398824a7ae5c500d3c7b5dbb2326f33be67b5cdbbbc369382e357366292704",
+  "private_key_bytes": 148,
+  "private_section_growth_bytes": 4,
+  "descriptor_ABI_bytes": 64,
+  "after_v151": true,
+  "full_bomb_restoration_verified": false,
+  "complete_integrated_export": false
+}

@@ -30,7 +30,10 @@
   "overlap_percent_before": 0.5,
   "overlap_percent_after": 0.25,
   "delivered_in_v151": false,
-  "new_threshold_main_linked": false,
-  "new_threshold_native_tested": false,
-  "complete_integrated_export": false
+  "new_threshold_main_linked": true,
+  "new_threshold_native_tested": true,
+  "complete_integrated_export": false,
+  "shallow_positive_pose_reproduced": false,
+  "native_test_scope": "ordinary ET2 ledge, corner, climb; no partial reported",
+  "Wii_U_behavior_verified": false
 }

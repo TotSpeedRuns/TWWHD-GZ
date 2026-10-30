@@ -10,13 +10,13 @@ positive latch, expiry and roll timing are unchanged.
 and comment change against its selected predecessor. Portable source/object
 pins and compiler flags are included. The predecessor object was reproduced
 byte for byte before compiling the change; raw and verbose-assembly reassembly
-matched. The new threshold still needs full main integration and native tests.
+matched. Actual linked and packed bodies were independently reviewed.
 
-The preceding 0.995 component passed a controller-only Cemu observation of an
-ordinary ET Roll Clip 2 ledge, corner and climb without reporting a partial clip.
-That observation does not validate this newer threshold. Repeat the ordinary
-ledge test and the runner's missed shallow setup before claiming sensitivity or
-false-positive results. Wii U behavior remains unverified.
+The new 0.9975 component passed a controller-only Cemu observation of an ordinary
+ET Roll Clip 2 ledge, corner and climb without reporting a partial clip. Native
+procedures 44 through 48 were observed. This is a limited negative test: the
+runner's missed shallow setup was not reproduced, so positive sensitivity and
+broader false-positive behavior still need playtesting. Wii U remains unverified.
 
 This component depends on the declared trainer symbols and genuine native
 collision-query adapters. It is not a standalone game patch or current full

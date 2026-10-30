@@ -853,6 +853,14 @@ partial source components; the complete integrated export remains v126.
 
 The [current trainer unit](partial-wall-overlap/README.md) lowers the required
 radial overlap from 0.5% to 0.25% while retaining finite collision and animation
-guards. The component compiles with the predecessor reproduced byte for byte.
-Main integration, ordinary-ledge and shallow-clip checks remain pending for this
-threshold. This is staged after v151, which contains the earlier 1% threshold.
+guards. It is linked and checked in a private main. One ordinary ET2 ledge,
+corner and climb remained negative; the missed shallow setup and Wii U behavior
+remain unverified. v151 contains the earlier 1% threshold.
+
+
+## Saved bomb source identity
+
+The [identity component](saved-bomb-source-identity/README.md) separates the saved
+bomb PID from an unissued constructor recipe. Actual binary checks and a native
+attempt passed that preparation point; the source-smoke guard still refuses the
+restore. Full bomb restoration remains unfinished.

@@ -1,0 +1,54 @@
+--- actual26ce/bundle_coordinator.inc
++++ sourcePID-fixed/bundle_coordinator.inc
+@@ -6,7 +6,7 @@
+ enum {LSB_MAGIC=0x4c534231u,LSB_CONTEXT=2951,LSB_RETAINED=2952,LSB_CHANGED=2953};
+ typedef struct {
+  u32 magic,bytes,version,valid,token,frame,pin,hbp_seal,boh_plan,source_hash;
+- u32 source,used,smoke_pid,smoke_generation,layer;
++ u32 source,used,smoke_pid,smoke_generation,layer,source_bomb_pid;
+  PbaKey bomb;
+  u32 seal;
+ } LsbKey;
+@@ -27,11 +27,13 @@
+ static void lsb_in_seal(void){lsb_in.seal=btr_hash(&lsb_in,sizeof(lsb_in)-4);__asm__ volatile("sync":::"memory");}
+ static u32 lsb_active(void){return lsb_key.valid!=0;}
+ static u32 lsb_key_sealed(void){return lsb_key.magic==LSB_MAGIC&&lsb_key.bytes==sizeof(lsb_key)&&
+- lsb_key.version==1&&lsb_key.valid==1&&lsb_key.token&&lsb_key.pin&&lsb_key.smoke_pid&&
+- lsb_key.smoke_pid!=BAD&&lsb_key.bomb.pid&&lsb_key.bomb.pid!=BAD&&lsb_key.smoke_pid!=lsb_key.bomb.pid&&
++ lsb_key.version==2&&lsb_key.valid==1&&lsb_key.token&&lsb_key.pin&&lsb_key.smoke_pid&&
++ lsb_key.smoke_pid<0xfffffffeu&&lsb_key.source_bomb_pid&&lsb_key.source_bomb_pid<0xfffffffeu&&
++ lsb_key.smoke_pid!=lsb_key.source_bomb_pid&&lsb_key.bomb.pid==BAD&&
+  lsb_key.seal==btr_hash(&lsb_key,sizeof(lsb_key)-4);}
+ static u32 lsb_sealed(void){return lsb_key_sealed()&&boh_sealed()&&lsr_sealed(lsb_key.token)&&
+  _gz_boh_plan.role==BOH_CREATED&&_gz_boh_plan.token==lsb_key.token&&_gz_boh_plan.pin==lsb_key.pin&&
++ _gz_boh_plan.source_pid==lsb_key.source_bomb_pid&&
+  _gz_boh_plan_seal==lsb_key.boh_plan&&_gz_boh_plan.hbp_seal==lsb_key.hbp_seal&&
+  btr_equal(&_gz_boh_plan.recipe,&lsb_key.bomb,sizeof(PbaKey))&&
+  lsr.pin==lsb_key.pin&&lsr.source==lsb_key.source&&lsr.used==lsb_key.used&&lsr.source_hash==lsb_key.source_hash&&
+@@ -171,7 +173,7 @@
+  else if(!lsb_phase(&s,&op,&mask))return LSB_CHANGED;
+  bcl_zero(d,sizeof(*d));d->bytes=sizeof(*d);d->version=1;d->token=lsb_key.token;d->frame=_gz_pbac_frame;
+  d->key=(u32)&lsb_key;d->key_bytes=sizeof(lsb_key);d->operation=op;d->issued_mask=mask;
+- d->target[0].source_pid=lsb_key.bomb.pid;d->target[1].source_pid=lsb_key.smoke_pid;
++ d->target[0].source_pid=lsb_key.source_bomb_pid;d->target[1].source_pid=lsb_key.smoke_pid;
+  if(mask&1){d->target[0].live_pid=_gz_boh_journal.pid;d->target[0].live_actor=bn?ba:0;d->target[0].actor_queue_node=bn;}
+  if(mask&2){d->target[1].live_pid=lsr.pid;d->target[1].live_actor=sn?sa:0;d->target[1].actor_queue_node=sn;}
+  return 0;
+@@ -223,12 +225,14 @@
+  if(!((R32(fx,8)==1&&R32(fx,72)==FXB_HEADER)||
+       (R32(fx,8)==2&&R32(fx,72)==FXB2_HEADER)))return LSB_CONTEXT;
+  r=(const FxbRow*)(fx+R32(fx,72));if(r->kind!=3||r->resource!=0x2027||r->group!=2)return 0;
+- if(_gz_boh_plan.role!=BOH_CREATED||_gz_boh_plan.source_pid!=_gz_boh_plan.recipe.pid)return LSB_CONTEXT;
++ if(_gz_boh_plan.role!=BOH_CREATED||!_gz_boh_plan.source_pid||_gz_boh_plan.source_pid>=0xfffffffeu||
++  _gz_boh_plan.source_pid!=_gz_hbp_recipe.saved.pid||_gz_boh_plan.recipe.pid!=BAD||
++  _gz_hbp_recipe.recipe.pid!=BAD||_gz_boh_plan.source_pid==r->pid)return LSB_CONTEXT;
+  _gz_boh_journal.phase=BOH_PREPARED;_gz_boh_journal.token=t;boh_seal_run();
+  _gz_boh_plan.valid=1;_gz_boh_plan_seal=btr_hash(&_gz_boh_plan,sizeof(_gz_boh_plan));
+  z=_gz_lsr_prepare(t,f);if(z)return z;
+- bcl_zero(&lsb_key,sizeof(lsb_key));lsb_key.magic=LSB_MAGIC;lsb_key.bytes=sizeof(lsb_key);lsb_key.version=1;
+- lsb_key.valid=1;lsb_key.token=t;lsb_key.frame=f;lsb_key.pin=lsr.pin;lsb_key.hbp_seal=_gz_hbp_seal;
++ bcl_zero(&lsb_key,sizeof(lsb_key));lsb_key.magic=LSB_MAGIC;lsb_key.bytes=sizeof(lsb_key);lsb_key.version=2;
++ lsb_key.valid=1;lsb_key.token=t;lsb_key.source_bomb_pid=_gz_boh_plan.source_pid;lsb_key.frame=f;lsb_key.pin=lsr.pin;lsb_key.hbp_seal=_gz_hbp_seal;
+  lsb_key.boh_plan=_gz_boh_plan_seal;lsb_key.source_hash=lsr.source_hash;lsb_key.source=lsr.source;lsb_key.used=lsr.used;
+  lsb_key.smoke_pid=lsr.source_pid;lsb_key.smoke_generation=lsr.source_generation;lsb_key.layer=lsr.layer;
+  btr_copy(&lsb_key.bomb,&_gz_boh_plan.recipe,sizeof(PbaKey));lsb_key.seal=btr_hash(&lsb_key,sizeof(lsb_key)-4);

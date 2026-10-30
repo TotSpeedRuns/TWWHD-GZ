@@ -51,3 +51,6 @@ tests/test_single_restore_source.py text eol=lf
 
 # Checked v151 title-upgrade sources and portable fingerprint inventory.
 experiments/maintained-components/setup-title-upgrade-v151/** text eol=lf
+
+# Authored partial wall trainer unit.
+experiments/maintained-components/partial-wall-overlap/** text eol=lf

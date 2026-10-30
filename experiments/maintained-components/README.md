@@ -848,3 +848,11 @@ file transaction and its Setup adapter, with 142 passing host cases. It retains 
 verified prior title and checks replacement, rollback and retry. Wii U filesystem
 behavior and the reported final-Repair freeze remain unqualified. These are
 partial source components; the complete integrated export remains v126.
+
+## Shallower partial wall overlap
+
+The [current trainer unit](partial-wall-overlap/README.md) lowers the required
+radial overlap from 1% to 0.5% while retaining the finite collision and animation
+guards. The actual component was compiled and linked; one ordinary ET2 ledge,
+corner and climb observation stayed clear. The missed shallow runner setup and
+Wii U sensitivity still need playtesting. This change is staged after v151.

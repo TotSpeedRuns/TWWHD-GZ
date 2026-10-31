@@ -5,6 +5,19 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## v154 native Save integration source
+
+The [native Save snapshot](native-save-v154/README.md) adds 186 reviewed source
+files and the CODE/DATA alias definitions for the maintained heap/save core.
+All 18 CODE aliases retained 46 real final relocations to original executable
+TEXT, with zero added permanent BSS. One controlled Cemu Save at Outset with a
+live bomb passed; zero Restores ran. The older v153 bomb-smoke Restore failure
+remains a limitation. Wii U operation, actual saved-image fit and full-game
+save states remain unverified. This is additive source alongside the existing
+v152 UI/Setup records; no standalone v154 build has been verified and the full
+reproducible integrated builder remains v126. See the
+[v154 publication record](../../docs/releases/v154-source-status.md).
+
 ## Common C callback-admission primitive
 
 The [common-admission component](common-admission/README.md) publishes the exact

@@ -70,3 +70,11 @@ experiments/maintained-components/setup-title-upgrade-v152/** text eol=lf
 experiments/maintained-components/setup-title-upgrade-v152/title_recipe_driver.cpp -text
 docs/releases/v152-source-status.md text eol=lf
 docs/releases/v152-source-pins.json text eol=lf
+
+# Exact reviewed v154 component bytes; the public manifest hashes raw files.
+experiments/maintained-components/native-save-v154/source/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-save-v154/native-code-aliases.ld -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-save-v154/native-data-aliases.ld -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-save-v154/README.md text eol=lf
+experiments/maintained-components/native-save-v154/export-manifest.json text eol=lf
+docs/releases/v154-source-status.md text eol=lf

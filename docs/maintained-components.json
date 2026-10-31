@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "v152-reviewed-partial-source",
-  "status": "Partial authored sources. v152 includes current-only falling-rock retirement and Setup title transactions. Selected one-rock Cemu restore took 38.235 seconds; no speedup or full-game/Wii U qualification. Complete integrated export remains v126.",
+  "revision": "v154-reviewed-partial-source",
+  "status": "Additive v154 native Save component with 186 source files and CODE/DATA aliases; one controlled Cemu Save at Outset passed and zero Restores ran. Wii U operation, saved-image fit and full-game restores remain unverified. Earlier v152 lifecycle/UI/Setup scopes remain historical. Complete reproducible integrated export remains v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 52664,
-      "sha256": "6b9fe58ea5f2ee3c55b3e427a786f5aab3c5dd4dab05659ba0726ca4b9f57f55"
+      "bytes": 53455,
+      "sha256": "293ed5d950ef1b96dc65fbf6c7e77a9e2bc7aa3a318b67ebd8519e9df5bae8bc"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1832,6 +1832,21 @@
       "path": "experiments/maintained-components/setup-title-upgrade-v152/test_title_upgrade.cpp",
       "bytes": 4646,
       "sha256": "67b236fab3f597ee094923023a7c35532fb00b0dbc7675d3cdee7c27838f2f5c"
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/README.md",
+      "bytes": 4904,
+      "sha256": "0c8df7a54b24f7077bee5b044f7714ed8b9c19397dd55f9f97f0ac4fb7d5fd32"
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/export-manifest.json",
+      "bytes": 28624,
+      "sha256": "199cda8ecb6815aed975725b8a073e1f77539975198c87a2a77a55a72985c888"
+    },
+    {
+      "path": "docs/releases/v154-source-status.md",
+      "bytes": 2380,
+      "sha256": "b8f5cfdacadbb58ca790e67414736baaf52b42298cdb4036b1d239b115fd12a2"
     }
   ],
   "excludes": [
@@ -1850,6 +1865,1134 @@
       "bytes": 1638,
       "sha256": "e2ebd11b8f35b6630f269a89b8ed4b71564f575bc8fc65e5140248bb0debc99a",
       "hash_normalization": "Exact authored bytes; Git -text retains the qualified CRLF source."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/native-code-aliases.ld",
+      "bytes": 792,
+      "sha256": "c88fc156b97f02090c82a207b9dc89e3efa3da8bb7b598ca28a4214e2e24363e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/native-data-aliases.ld",
+      "bytes": 1260,
+      "sha256": "93a21c3ab9da8c5b35a21ec74bde7b64d823a5ef0bcac6d04b6b81d52120a8b9",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/arena_snapshot.h",
+      "bytes": 1376,
+      "sha256": "3e12bd1a64e086447e0d88435ca658bb2cbd1e0404e0439ef2e0b9bf427d587c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/callback.s",
+      "bytes": 1373,
+      "sha256": "7f90b4a4469dcf5ab950b740a66c021341354e0177a43d1ac554f6b52e214c93",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/fpc_global_cut.h",
+      "bytes": 2482,
+      "sha256": "eb0d2793ba943bd9cdf3ce5016ff5eb77f990e80b4a99ede23180275a6724e6d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/fpc_global_layout.inc",
+      "bytes": 1302,
+      "sha256": "676f7f86a11ebc7d93b6788f061a67b69f4cb12cacea7c5ddf538ebccb158240",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/fpc_global_native_addresses.inc",
+      "bytes": 3261,
+      "sha256": "d20ec0fe9d314420d7be4a38890321b323d04499effb36e5fdf3f2dc3e57f593",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/fpc_global_templates.inc",
+      "bytes": 679,
+      "sha256": "514cfb00835f0e7b28403a719522e0ba8c86e45f263a1e914daef25662669865",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_capture.c",
+      "bytes": 17594,
+      "sha256": "430b14bd4307aab1ad2d273b9cf2a0781da7fcbc300434e8a097f915346b74ba",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_capture.h",
+      "bytes": 1623,
+      "sha256": "e2955d3601965af633c44145f9ee1c7def4dac7b9f15b71b7081bce3d81e0bb6",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_cut_native.c",
+      "bytes": 7914,
+      "sha256": "19f1887834114577f003c3d988ec6251bda8d5e36e55beaf461047fb21872831",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_cut_native.h",
+      "bytes": 3476,
+      "sha256": "ea6a554a9a723fd0a2cefbced541b9383e716582773260d15da05b4d2a3da54f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_native_compare.c",
+      "bytes": 11580,
+      "sha256": "4c270b5e3905dcb4e11e0db1c222e0204deab90b371b891fa295e14012f15cd4",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_native_compare.h",
+      "bytes": 900,
+      "sha256": "3b99380c592cb7273300aac41f28ad9926bd4331ec4fc31a57fefedc2792d25d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_reconcile.c",
+      "bytes": 20897,
+      "sha256": "cf09698e516325b65e80906c212942db4fa4f371299e498253da171f2202b93d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_reconcile.h",
+      "bytes": 4742,
+      "sha256": "8c69e2d7f2a18270267de0c57625b3e1b1a00ec35e58b61ce0ae03ea53f06dfd",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_reconcile_as6.c",
+      "bytes": 6708,
+      "sha256": "6e0de634b3a1eb0876d5e50ed840f21f71024838c4b497d32d215f10de533f46",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/generic_process_reconcile_as8.c",
+      "bytes": 7212,
+      "sha256": "cc43840aaa2fbf070945183dc33d935e27d0dd1a9150c2044950c400d06543f9",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/heap_domain_cut.h",
+      "bytes": 1781,
+      "sha256": "24e7b8a8f31f6000a52405d6ecb1307e13210116065fbdd0bd1840806e6f6c69",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/held_heap_roundtrip.c",
+      "bytes": 10572,
+      "sha256": "bac4f5727b384bbee9cc7750aa29367d3b19274ce8983a6f4b45ed36f74b9b5c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/held_heap_roundtrip.h",
+      "bytes": 1021,
+      "sha256": "912a7d76f0d6a3ce57dea77b2b4ec307fdaabb2a21008ed691b96c019e24a2ec",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/lifetime.h",
+      "bytes": 7036,
+      "sha256": "181cb7bcf0f009301b29b8cfa0dbe8d4ee77d6da18e5a0b1d461854b2c23183e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/metadata_hash_plan.h",
+      "bytes": 1347,
+      "sha256": "878ab32a48831d189a62f9ad98fbc963e80e94991f270d9b5817511356d49cef",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/metadata_slot_plan.h",
+      "bytes": 2338,
+      "sha256": "75a892b8f6b39052d8a71b0d52254cf41346e9071458eb4d443e38f2cca99844",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/native_context_cut.h",
+      "bytes": 1428,
+      "sha256": "399d6afd73db9d001d837f1a469df7f458f9a731a276b60a4f45c5c9dd8dfe01",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/object_binding.h",
+      "bytes": 1410,
+      "sha256": "2a94911068381ab3a98ffc03feaf9ab7ea37a73e0cd35f7528efc0f441809e0e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/object_binding_try.h",
+      "bytes": 1200,
+      "sha256": "bbbbd1fabbee7464e4dd3266af3dc3c597f2227491fba56cede58e62c23d7f0b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/opaque_chunks.h",
+      "bytes": 1912,
+      "sha256": "b11fc60f0a4bf0a4dd9e60eaace531c919ab7d586b847530750a75d0a77b1e89",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_capture.inc",
+      "bytes": 2039,
+      "sha256": "3d40adf3949df1463f87943d4154ff5629d20a8691f0efd3fed9bf58f01c4657",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_common_domain.h",
+      "bytes": 9006,
+      "sha256": "4a5d68172abe9b06a87fdf9c34514c8784308728f017704d54d51c0892a06c05",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_held_issuer.inc",
+      "bytes": 816,
+      "sha256": "7cf87dd05fefe38d497fee6b2f43b2b4196468d353320cce4a3c1db770a08af2",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_held_view.h",
+      "bytes": 2628,
+      "sha256": "f8cd74cf2cc4f891ffbd84918e75686b0e265c27779a9b51562d064375a111fe",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_image_version.h",
+      "bytes": 283,
+      "sha256": "fc874c10a7812e9d0f0b81917268db7e9dff6463629924f7dd71eba2df2f8e25",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_native.h",
+      "bytes": 5084,
+      "sha256": "0d9fb409435e2d6c6cec3a5dd18c2a51c128543705276ca522233535ec4442ba",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_process.h",
+      "bytes": 2524,
+      "sha256": "b98811022ec36f8b18d3f3324949ecdf5250990d834e82c6ff8dd0c56c08ea4e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_save.h",
+      "bytes": 2913,
+      "sha256": "3d5716ccb9daf2d68d71857f773c00a1b201c7319d3fbc388686775e1d6e5b18",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/owned_heap_save.inc",
+      "bytes": 13606,
+      "sha256": "eb6c789508b7b831b3e8bbcf3a38ff739fa888a6459c9b6163cbe1b2e509b56c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/player_global_cut.h",
+      "bytes": 1357,
+      "sha256": "ecf4a8436c1c983fb654e2311427eebc46df2faba68b73a2e36018690443b017",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/gac/world_global_cut.h",
+      "bytes": 2153,
+      "sha256": "2675c452cb826548a0c2ecfb2228293b850c22054ca6d889a245d61e6fe8ab3f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/allocated_run_policy.h",
+      "bytes": 2128,
+      "sha256": "5e6485f0edc5d7b5d8fbc01670c1f12ea94126d44637a7aa661e246566ea1eff",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/allocation-index.inc",
+      "bytes": 6081,
+      "sha256": "6d544eed0d268acd8912e4f78787ebd16df8719333a9af2a55fa39b53ddb3af9",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/arena_part.c",
+      "bytes": 15438,
+      "sha256": "e334f0bb60db53a1c7837f659741150ef9d84a434cea1c8aa3193366ad078df5",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/arena_snapshot.h",
+      "bytes": 1376,
+      "sha256": "3e12bd1a64e086447e0d88435ca658bb2cbd1e0404e0439ef2e0b9bf427d587c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/background_trampolines.s",
+      "bytes": 469,
+      "sha256": "43f4a7144ab381e81e46bdcef2f33c676ffbc86e16d610e7c88f4146115a2c4d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/capture-index.inc",
+      "bytes": 6002,
+      "sha256": "c1ba8f9bc3ab9f754a533f3d50531182d1eea0cbaec878f6d95c85318d648540",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/codec.c",
+      "bytes": 7268,
+      "sha256": "cead4014f45f6c27b0e9fb4528cfb92ef31ec15b27b7681f061e2f14e8883fc0",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/codec.h",
+      "bytes": 1941,
+      "sha256": "d2efefed4263cd02e7b5037d4def899cb4e772f324c24b5fba565a9e982beb7f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/collision_trampolines.s",
+      "bytes": 430,
+      "sha256": "3641d3ad61e7840de5a954f5c57c119c9bf197b509f6485e14524e25bb92849c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/custom-resize.inc",
+      "bytes": 2113,
+      "sha256": "e4d2e15670938b0f4f734dd410fd70d185c481297b0467be44d428006bdede51",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/forest_snapshot.c",
+      "bytes": 11022,
+      "sha256": "662642308481feb962fe59741f31e630a88745d7f76db7a931003f624afeaa99",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/forest_snapshot.h",
+      "bytes": 636,
+      "sha256": "8d86acf7676ef9dab4856a4460565344cbd93b0b7452eeeb0949eb054ae5c374",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/fpc_global_capture.c",
+      "bytes": 7432,
+      "sha256": "e09ca3ed8d8b3a520a022e29d56d3ef3602274aad500350977ad8cd903700506",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/fpc_global_codec.c",
+      "bytes": 2006,
+      "sha256": "71ba6f456ea4f813cde21cdd7d55d4fccc894d24c1e218fbccfbb3000cc84222",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/fpc_global_cut.h",
+      "bytes": 2482,
+      "sha256": "eb0d2793ba943bd9cdf3ce5016ff5eb77f990e80b4a99ede23180275a6724e6d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/fpc_global_layout.inc",
+      "bytes": 1302,
+      "sha256": "676f7f86a11ebc7d93b6788f061a67b69f4cb12cacea7c5ddf538ebccb158240",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/fpc_global_native_addresses.inc",
+      "bytes": 3261,
+      "sha256": "d20ec0fe9d314420d7be4a38890321b323d04499effb36e5fdf3f2dc3e57f593",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/fpc_global_templates.inc",
+      "bytes": 679,
+      "sha256": "514cfb00835f0e7b28403a719522e0ba8c86e45f263a1e914daef25662669865",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/gate.h",
+      "bytes": 2058,
+      "sha256": "bbe25daede27b08a13f2d254d77fc64f8602662098a121b5084959ef502eb7e3",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/heap_domain_cut.h",
+      "bytes": 1781,
+      "sha256": "24e7b8a8f31f6000a52405d6ecb1307e13210116065fbdd0bd1840806e6f6c69",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/heap_domain_cut.inc",
+      "bytes": 13640,
+      "sha256": "c1234890fa70fe6c095384ddda6e281351840d1d5593c91950566ca4eb3f5193",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/heap_graph.c",
+      "bytes": 9481,
+      "sha256": "bf11f0f7441250afd4443d66603f4bd33005b45ff9ae4357b4497a52141f44ca",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/heap_graph.h",
+      "bytes": 1578,
+      "sha256": "61be11830a3abf06c0e042bf637574cc5a21cab561f5443e0208bedb3dba7bf8",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/held_heap_roundtrip.h",
+      "bytes": 1021,
+      "sha256": "912a7d76f0d6a3ce57dea77b2b4ec307fdaabb2a21008ed691b96c019e24a2ec",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/hr_cost_diagnostic.inc",
+      "bytes": 2097,
+      "sha256": "d1ce14bf69bf544e8bb91ab05b84d21864b78b1b75d9fad7750a31f593a7a7fa",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/joint.c",
+      "bytes": 8576,
+      "sha256": "d9c8d1f0b96afcbe8205edfe7bfe61b4986dae54be53220058925fc09d79e42b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/joint.h",
+      "bytes": 576,
+      "sha256": "001648302d4290ce6a6deeb1f6d051f980deca791ffe70459ce492d532ef27a5",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/joint_restore.h",
+      "bytes": 1628,
+      "sha256": "b8a12345521d600a702dc517e11ffbf7a9e6bc42c3d1282c44763f31385c8999",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/joint_restore.inc",
+      "bytes": 9741,
+      "sha256": "49a4749617a131ffa0003e0eae2d5fd5d5425c80c1627be8cde07292fc33608f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/lifecycle.c",
+      "bytes": 7240,
+      "sha256": "1cd3b58bb2444d07d23d8997817b747193e12bd5a542d14b6a7bc231f347ab8a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/lifecycle.h",
+      "bytes": 1116,
+      "sha256": "32bcd5e14e3a7707fc0a906356045888a62d4e80082f977ccdf9086c3fb8de55",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/lifetime.c",
+      "bytes": 17286,
+      "sha256": "016bc0f12f3188824fff8f553ba0cfb674d8f9f3f4d93dc8299ecaad9d9c8232",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/lifetime.h",
+      "bytes": 7036,
+      "sha256": "181cb7bcf0f009301b29b8cfa0dbe8d4ee77d6da18e5a0b1d461854b2c23183e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/lifetime_storage.h",
+      "bytes": 2879,
+      "sha256": "62e72b07974c710c982f69a9a058b9e42fca976ac86e70401d5e0d27469a1dfa",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/metadata_hash_plan.c",
+      "bytes": 3334,
+      "sha256": "c8502f35b0abaf091e2564d24da1858c30507a9991772b311f0f06aeb5764a7f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/metadata_hash_plan.h",
+      "bytes": 1347,
+      "sha256": "878ab32a48831d189a62f9ad98fbc963e80e94991f270d9b5817511356d49cef",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/metadata_slot_plan.c",
+      "bytes": 4048,
+      "sha256": "721e6e063224d866455d0e230d87ecb2d20d0f499413caf815f00d999d6f3d7f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/metadata_slot_plan.h",
+      "bytes": 2338,
+      "sha256": "75a892b8f6b39052d8a71b0d52254cf41346e9071458eb4d443e38f2cca99844",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/mutators.inc",
+      "bytes": 13523,
+      "sha256": "f6ce0ff331b776de06bcb0fe4c8c576dfb00f3dbd7eace7bee433e6551aaf66c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/native_abi.c",
+      "bytes": 1409,
+      "sha256": "b8214dcacd6b89733b5063feae54c025b39671ff9908caf25a6e7051cabb6298",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/native_abi.h",
+      "bytes": 540,
+      "sha256": "46255415c67f6bb00e94409e437bf19ae077db3b573e67fa7b5c47f693f915dc",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/native_context_capture.c",
+      "bytes": 5785,
+      "sha256": "6642686674d3bd4bfce4f89d8b0959f93ab8ea8b2f2bd1aca17b0a5445e6db71",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/native_context_codec.c",
+      "bytes": 1534,
+      "sha256": "2aeee1915cd38771a5b4382ec4b44cd0393786903f182bf5301e851ab73d64de",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/native_context_cut.h",
+      "bytes": 1428,
+      "sha256": "399d6afd73db9d001d837f1a469df7f458f9a731a276b60a4f45c5c9dd8dfe01",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/native_dispatch.c",
+      "bytes": 1012,
+      "sha256": "0300d2512189381a24a00067816a02ecb4783e89266b74e86600ed2fa79ab54e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/object-binding-try.inc",
+      "bytes": 11352,
+      "sha256": "acc2e84628a7cb01848c1e76a7b5034e0c2af3e7272b0627bd6994b25cdd0255",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/object-binding.inc",
+      "bytes": 4006,
+      "sha256": "fb9dac6af4d3d5b95cedf03a5f37f834a2169ae851abce1381fbf30cd5f6002a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/object-directory.inc",
+      "bytes": 8850,
+      "sha256": "17b4b448678b4c813466dc62b559770f2d6995690e78f7256f3442623a77938d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/object_binding.h",
+      "bytes": 1410,
+      "sha256": "2a94911068381ab3a98ffc03feaf9ab7ea37a73e0cd35f7528efc0f441809e0e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/object_binding_try.h",
+      "bytes": 1200,
+      "sha256": "bbbbd1fabbee7464e4dd3266af3dc3c597f2227491fba56cede58e62c23d7f0b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/object_directory.h",
+      "bytes": 2210,
+      "sha256": "59a76a32ca6b9eefcf13f5510621c809828fca501c9bf0e10b121bbe339d6bc8",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/opaque_chunks.c",
+      "bytes": 7718,
+      "sha256": "ae4475f0d2d3b7cb11757f335e810bc995fcb9ed9f8812bee5afa46df4a48206",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/opaque_chunks.h",
+      "bytes": 1912,
+      "sha256": "b11fc60f0a4bf0a4dd9e60eaace531c919ab7d586b847530750a75d0a77b1e89",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_common_domain.h",
+      "bytes": 9006,
+      "sha256": "4a5d68172abe9b06a87fdf9c34514c8784308728f017704d54d51c0892a06c05",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_common_domain.inc",
+      "bytes": 8737,
+      "sha256": "6a9a345505a09fff0628ed7a5e0c468bbeafb36aa2d0247c231b8b75c24110ad",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_held_domain.inc",
+      "bytes": 2907,
+      "sha256": "8f7256ecd4d9b8ad37c5965b758970533c6598281bad5729648162e4338fe4f0",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_held_view.h",
+      "bytes": 2628,
+      "sha256": "f8cd74cf2cc4f891ffbd84918e75686b0e265c27779a9b51562d064375a111fe",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_image_version.h",
+      "bytes": 283,
+      "sha256": "fc874c10a7812e9d0f0b81917268db7e9dff6463629924f7dd71eba2df2f8e25",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_native.h",
+      "bytes": 5084,
+      "sha256": "0d9fb409435e2d6c6cec3a5dd18c2a51c128543705276ca522233535ec4442ba",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_native.inc",
+      "bytes": 28640,
+      "sha256": "ccd38925c0baf84e85df5edc1c86a0fbd994248e64bbc92ff45d4eea039d8834",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_process.h",
+      "bytes": 2524,
+      "sha256": "b98811022ec36f8b18d3f3324949ecdf5250990d834e82c6ff8dd0c56c08ea4e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_process.inc",
+      "bytes": 8486,
+      "sha256": "bc8ac66c7c27d0d194fa0db4fb802362524ff29f258ad0b3a63f24a014333281",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_process_batch.inc",
+      "bytes": 9741,
+      "sha256": "32e0e7408c6ad3075179921a227cde72acaa8944ccb5c3753f350c9164428264",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_process_batch_policy.h",
+      "bytes": 3411,
+      "sha256": "deb20a2883de5ca571d2155e8bebf7ac9716b4cfce1ebdb51b509098e3398081",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_heap_save.h",
+      "bytes": 2913,
+      "sha256": "3d5716ccb9daf2d68d71857f773c00a1b201c7319d3fbc388686775e1d6e5b18",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_images.c",
+      "bytes": 14474,
+      "sha256": "6cb01aa8bee6c2a5dc5723447d818011d38c964880503a4cb1c09fd1f1751780",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_images.h",
+      "bytes": 2607,
+      "sha256": "af94ab1eb3f8324c96e29ab3c04f3019ef1be2dbf21df586c4a72e19055745ba",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_metadata_hash_journal.inc",
+      "bytes": 8346,
+      "sha256": "922f004cac0e2ec1c797b2e049aa241165fe61d81eab09413203038f05733f51",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_metadata_journal.inc",
+      "bytes": 10448,
+      "sha256": "e4a7896518e2a9287a6cbf114fe9ee270431e3d85f605aa38c32f7005260c30b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owned_metadata_roundtrip.inc",
+      "bytes": 22673,
+      "sha256": "cfffcc7bb1e784b4b2705fe7c0ebce3f87163538b490dfccdd9cbd1481b09ade",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/owner-index.inc",
+      "bytes": 1323,
+      "sha256": "74949286cd61ceac8bfa08498005c158379925ec2c4973af2f5f22be72557760",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/player_global_capture.c",
+      "bytes": 6591,
+      "sha256": "dbb7c9d673ad49164710a971fdf3502b785a94e419954bdbef3832cbfaf806b1",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/player_global_codec.c",
+      "bytes": 1893,
+      "sha256": "6249d46bf30f2333c1358842d2a9e6e19b862a207977b55c487ed22ac1a7c6b0",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/player_global_cut.h",
+      "bytes": 1357,
+      "sha256": "ecf4a8436c1c983fb654e2311427eebc46df2faba68b73a2e36018690443b017",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/process_arena.c",
+      "bytes": 14735,
+      "sha256": "b1590d7b053f6435e850234f11186da121880f546a354c6871d8de54c3051ffc",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/process_arena.h",
+      "bytes": 1947,
+      "sha256": "4fd43ade9bfbe05b6b27d3552eb2bc56f006998479b2b714100a670bd3db9825",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/production_features.h",
+      "bytes": 480,
+      "sha256": "9ff83b04990d4ea4f32e7c47a803b61663d170bbc139c30c2a6f451310f1a7f3",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/rebind.h",
+      "bytes": 2216,
+      "sha256": "d2d7f24458e0fe5a4776c96581cd5a61d0c2cc3c3ae289c6df357a03fbafc7e7",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/rebind.inc",
+      "bytes": 19297,
+      "sha256": "1b6290ebb1a2e1b4e486eb176c72197cb1f64593b772b3b5c7bb898370921289",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/rebuild.c",
+      "bytes": 18017,
+      "sha256": "2b6951482a95c2ca1d6eb560352dc03f3803a903648a35d0d0d2fa6420a295df",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/rebuild.h",
+      "bytes": 1359,
+      "sha256": "b6d299d95a01d377bc49127ad000c67468918473c91edfd05c346d9063394e4e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resident_labels.inc",
+      "bytes": 825,
+      "sha256": "f99e5dd3be804520a73ae6bb03ca797f94a74107fd9168534799d8b0857d8e6c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resource-dependencies.inc",
+      "bytes": 4884,
+      "sha256": "fa691804eab144fdd9f1082b6c0c4c7d71084a10ced43fe78c596df45936d996",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resource-payload.inc",
+      "bytes": 7511,
+      "sha256": "3351a38f7488ba976522eabdcddeac770e096f8bc9be5d32adc3e7621ab85732",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resource-references.inc",
+      "bytes": 4316,
+      "sha256": "4957a06e979117742b5d171a3748b7b2966b49aff5125611d6eb103a0c36adff",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resource_dependencies.h",
+      "bytes": 1323,
+      "sha256": "bcf827e606d2bbc6734210df86dd85e6915dbfe02f1d00c1b629565db516cd94",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resource_payload.h",
+      "bytes": 1266,
+      "sha256": "c6d77a9a7330f9d98d993e2fc9822937db64ea04ee86d74c75364f5f6e1d595b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/resource_references.h",
+      "bytes": 1031,
+      "sha256": "fb670dc42565df909913f09c2956ea8d7559cb99ae1c9e0b8da19c9e60c3fa76",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/source-directory.inc",
+      "bytes": 23459,
+      "sha256": "90ae55d1f41e07248c7c5b5daf56b958f9e1e57f70acf6d32b65c3cd714efe9c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/source-resource-unavailable.inc",
+      "bytes": 2084,
+      "sha256": "deb12b52dc2a4a800994ad823587f5074c07f3b86c7309e1953ae792cb6147ed",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/source-storage.inc",
+      "bytes": 2712,
+      "sha256": "188463c9d095d6ef6372220078fc9fb0fa5146c4454d8a29cf93d9fb6df6a351",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/source_directory.h",
+      "bytes": 2976,
+      "sha256": "9d85efe04f3795a68e2ed872e3e643d6a995704f61fe6c6d6577d9f929ce0470",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/startup_clear.s",
+      "bytes": 1043,
+      "sha256": "5ccad046cbd20dedded7a30dc09ed33c78405e881e2b7234c3f6280bebc0a18f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/ui_allocator.c",
+      "bytes": 1006,
+      "sha256": "540ac39d1afb2caa1c1aa7762d0f27a7c40c59c5e404be305e9583f68c71f760",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/world_global_capture.c",
+      "bytes": 6898,
+      "sha256": "4c773f1c511e17ce22af765c722f8cd710bb0abf292e6eb0b8f177936a6e35a0",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/world_global_codec.c",
+      "bytes": 3059,
+      "sha256": "ec26e8d012bfa53fae18146185229adf821f3a62d5d714bc05cf1921ba37a544",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/native_lifetime/world_global_cut.h",
+      "bytes": 2153,
+      "sha256": "2675c452cb826548a0c2ecfb2228293b850c22054ca6d889a245d61e6fe8ab3f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/arena_snapshot.h",
+      "bytes": 1376,
+      "sha256": "3e12bd1a64e086447e0d88435ca658bb2cbd1e0404e0439ef2e0b9bf427d587c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/fpc_global_cut.h",
+      "bytes": 2482,
+      "sha256": "eb0d2793ba943bd9cdf3ce5016ff5eb77f990e80b4a99ede23180275a6724e6d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/fpc_global_layout.inc",
+      "bytes": 1302,
+      "sha256": "676f7f86a11ebc7d93b6788f061a67b69f4cb12cacea7c5ddf538ebccb158240",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/fpc_global_native_addresses.inc",
+      "bytes": 3261,
+      "sha256": "d20ec0fe9d314420d7be4a38890321b323d04499effb36e5fdf3f2dc3e57f593",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/fpc_global_templates.inc",
+      "bytes": 679,
+      "sha256": "514cfb00835f0e7b28403a719522e0ba8c86e45f263a1e914daef25662669865",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/held_heap_roundtrip.h",
+      "bytes": 1021,
+      "sha256": "912a7d76f0d6a3ce57dea77b2b4ec307fdaabb2a21008ed691b96c019e24a2ec",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/metadata_hash_plan.h",
+      "bytes": 1347,
+      "sha256": "878ab32a48831d189a62f9ad98fbc963e80e94991f270d9b5817511356d49cef",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/metadata_slot_plan.h",
+      "bytes": 2338,
+      "sha256": "75a892b8f6b39052d8a71b0d52254cf41346e9071458eb4d443e38f2cca99844",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/native_context_cut.h",
+      "bytes": 1428,
+      "sha256": "399d6afd73db9d001d837f1a469df7f458f9a731a276b60a4f45c5c9dd8dfe01",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/ois_cpu_diagnostic.inc",
+      "bytes": 2841,
+      "sha256": "def8d47c0762652c195e0bb75047898ce2bc9093254b07cff32e322c09ab9a58",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/opaque_chunks.h",
+      "bytes": 1912,
+      "sha256": "b11fc60f0a4bf0a4dd9e60eaace531c919ab7d586b847530750a75d0a77b1e89",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_common_domain.h",
+      "bytes": 9006,
+      "sha256": "4a5d68172abe9b06a87fdf9c34514c8784308728f017704d54d51c0892a06c05",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_cut_policy.h",
+      "bytes": 1327,
+      "sha256": "7ce299cf59eab806f9276bfffb5392eeed3272b5d9ffac480315a14fce707bf1",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_cut_work.inc",
+      "bytes": 2887,
+      "sha256": "f3491bf630f9856466f56e21423e2dfdfdf5f9589ecaaa93f76d591cba6638f7",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_dual_cut.h",
+      "bytes": 2570,
+      "sha256": "1ce4051570e4c249d108f8ed47fdf2d5ad4497ea23b0545c5de8656e4ca83840",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_dual_cut.inc",
+      "bytes": 13156,
+      "sha256": "c6e81e5d849368f454a79b3e667a059b6c0a7055df3d59fd8f7d5d607d86ab63",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_held_view.h",
+      "bytes": 2628,
+      "sha256": "f8cd74cf2cc4f891ffbd84918e75686b0e265c27779a9b51562d064375a111fe",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_held_view.inc",
+      "bytes": 14287,
+      "sha256": "856e86a673caf311c26a53f27aa0f9c5dee9785e5c7a3722b920f1b4604b2b68",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_image_version.h",
+      "bytes": 283,
+      "sha256": "fc874c10a7812e9d0f0b81917268db7e9dff6463629924f7dd71eba2df2f8e25",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_native.h",
+      "bytes": 5084,
+      "sha256": "0d9fb409435e2d6c6cec3a5dd18c2a51c128543705276ca522233535ec4442ba",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_packed_storage_policy.h",
+      "bytes": 951,
+      "sha256": "1e74a44460ae873ae69885041c2620bd94a8fb3e95a9c438c27ddf159cab70de",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_process.h",
+      "bytes": 2524,
+      "sha256": "b98811022ec36f8b18d3f3324949ecdf5250990d834e82c6ff8dd0c56c08ea4e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_save.h",
+      "bytes": 2913,
+      "sha256": "3d5716ccb9daf2d68d71857f773c00a1b201c7319d3fbc388686775e1d6e5b18",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_heap_storage.inc",
+      "bytes": 12174,
+      "sha256": "25ae30de4fd4c033ccfd5433b2b6269a74ea0d158571ee2faee6e26d1409b07a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_images.c",
+      "bytes": 18922,
+      "sha256": "16383829e6b5c5a8cf8833ebce157ed9e4078e90e9d8fbecbdd88562260abd26",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/owned_images.h",
+      "bytes": 2607,
+      "sha256": "af94ab1eb3f8324c96e29ab3c04f3019ef1be2dbf21df586c4a72e19055745ba",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/particle_guard.c",
+      "bytes": 17895,
+      "sha256": "d1ee6ce1e18f566761cf13ed6937d50c9f22e3bd2b9c175a62227ad44b1648e4",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/particle_guard.h",
+      "bytes": 1125,
+      "sha256": "09b344bceefde5fd6d0281d752343d97075d036eaa25b8e64f46d52b0f2c994a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/persistent_projection.h",
+      "bytes": 2187,
+      "sha256": "46340277aa90faa8a0cb94ed9194f68575f5a9d78696ece0469d7ed172c180c2",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/player_global_cut.h",
+      "bytes": 1357,
+      "sha256": "ecf4a8436c1c983fb654e2311427eebc46df2faba68b73a2e36018690443b017",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/abi_macros.inc",
+      "bytes": 782,
+      "sha256": "23d525bb756c3f8713767888d092abc91073afd89a6db592471f89bb53fd035a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/callbacks.c",
+      "bytes": 4872,
+      "sha256": "d8d1d0ad9de8a61b2c74e5f448cb88100cbc366e521edde27cff9eda86d0c983",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/death_persistent_access.inc",
+      "bytes": 9949,
+      "sha256": "ed80608d4066677b96e7333218d40f3550ec2d2a45ea13c94dfc68dfe4080bf0",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/death_read_access.inc",
+      "bytes": 1860,
+      "sha256": "1e5cd339fa10ea287b587c8a7e52dc8e9a32f52cc1f194b629a658c2e35d3eab",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/generic_root_access.inc",
+      "bytes": 4093,
+      "sha256": "9c927aae4281de3b97ac71d4f6b22c98b77bda9ef3f47fe2b45f08a68313f65c",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/hostile.c",
+      "bytes": 1061,
+      "sha256": "5e1f76f283bed53497997cdf9e07eb7fc0f9f5526f0a8d8a026d6586dbfb1930",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/native_addresses.h",
+      "bytes": 1099,
+      "sha256": "46c0962800eee42ce481ff4d0f5f1836518b71ce33ff437e27323b93c4698ed4",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/native_aliases.ld",
+      "bytes": 601,
+      "sha256": "26e363196393adb3203fee3254905ae697aac18eff60f32fec7e90d8a7b72616",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/observation.c",
+      "bytes": 3926,
+      "sha256": "a829c673dfe7aca4694bfbea10603f58992502c4b398b8ea55a121f67e67e33a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/observation.h",
+      "bytes": 2377,
+      "sha256": "06bf89a7baa01114ec47f3e26ed32ac18c134cc72d6ae35683385f6df4186d85",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/origin.h",
+      "bytes": 832,
+      "sha256": "f1f82482ece576e9b07ecc8d06eecee7ceeb6eebdc4936a1427e51453d939d46",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/origin_glue.c",
+      "bytes": 12336,
+      "sha256": "2740ac4abcd4a9328399b37e4d64b3815b4ff5df2616c9a0f5d382c998fce7ee",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/origin_wrappers.S",
+      "bytes": 2222,
+      "sha256": "3b089d3934992a2355324373719348fbedf5904be74e94e3b21b731043e3d0ff",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/parent_backing.c",
+      "bytes": 13825,
+      "sha256": "d9ab20e4410fd2f3a95e22ca7342af00d7cd1ac435bde5b537a490011fd8b2d5",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/parent_backing.h",
+      "bytes": 4472,
+      "sha256": "bc296fdc8e0cacad9e8e0ec4c047d0156a262b9e2d2137c3ecb7eaa8d9262f34",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/parent_bound.inc",
+      "bytes": 13975,
+      "sha256": "c7eca54ec56e463a44f18ce84c6a58a3d9d8764feeaf249fd89529d4d79d4432",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/persistent_access.inc",
+      "bytes": 4468,
+      "sha256": "19afbf34e47fe6d7680337fa40759f456767bd8e49c15f028238e947987961bf",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/render_capture_access.inc",
+      "bytes": 3969,
+      "sha256": "dda966715514fa2af6b2c65d2c14b3b1e4c13e51116dc9d57c08b77327a983f8",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/save_origin/root_access.c",
+      "bytes": 20715,
+      "sha256": "2388a28f5a640395c4872dbb55f05f2f6e11dce9427e689f6d4b74ef3c42aad2",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-save-v154/source/ois/world_global_cut.h",
+      "bytes": 2153,
+      "sha256": "2675c452cb826548a0c2ecfb2228293b850c22054ca6d889a245d61e6fe8ab3f",
+      "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
     }
   ],
   "exact_source_files_note": "These explicit raw-byte records are separate from the existing LF-normalized inventory; each corresponding Git blob must preserve these exact authored bytes."

@@ -1,5 +1,17 @@
 # Source and build status
 
+The [v154 native Save component](../experiments/maintained-components/native-save-v154/README.md)
+is an additive reviewed source snapshot: 186 source files plus native CODE/DATA
+alias definitions. Its integrated CODE correction retained 18 aliases and 46
+real final relocations without adding permanent BSS. One controlled Cemu Save
+with a live bomb at Outset passed; zero Restores ran. Wii U operation, actual
+saved-image fit and full-game restore coverage remain unverified. The older
+v153 bomb-smoke Restore failure remains a separate limitation. See the
+[v154 source record](releases/v154-source-status.md) for the exact boundary.
+The complete reproducible integrated builder remains v126; newer UI/Setup
+components through v152 retain their existing scopes. This does not export a
+complete or independently verified standalone v154 build.
+
 The [common C admission primitive](../experiments/maintained-components/common-admission/README.md)
 is now published as an exact reviewed standalone source component. One private
 Cemu test exercised four real OS threads on guest cores 0, 1 and 2, with nested

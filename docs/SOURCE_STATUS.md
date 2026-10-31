@@ -1,5 +1,15 @@
 # Source and build status
 
+The [R35 particle Save overlay](../experiments/maintained-components/native-particle-save-r35/README.md)
+now adds the tested whole-manager/all-three-pool capture and authored constructor
+receipts over the v154 source component. One paused-bomb Cemu Save in Tower of
+the Gods, room 2 passed complete 14,701,444-byte readback; zero Restores ran. The
+3.328-second timing is Cemu-only. JPCv2 preserves valid heap epoch 0 and inert
+child history as data; particle replay/adoption is not implemented. Wii U,
+console memory fit and resource/device/full-game closure remain unverified.
+This is a partial source overlay, with exact 190-file reconstruction hashes;
+the complete reproducible integrated builder remains v126.
+
 The [v154 native Save component](../experiments/maintained-components/native-save-v154/README.md)
 is an additive reviewed source snapshot: 186 source files plus native CODE/DATA
 alias definitions. Its integrated CODE correction retained 18 aliases and 46

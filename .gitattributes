@@ -78,3 +78,10 @@ experiments/maintained-components/native-save-v154/native-data-aliases.ld -text 
 experiments/maintained-components/native-save-v154/README.md text eol=lf
 experiments/maintained-components/native-save-v154/export-manifest.json text eol=lf
 docs/releases/v154-source-status.md text eol=lf
+
+# Exact reviewed R35 particle Save overlay and constructor producer bytes.
+experiments/maintained-components/native-particle-save-r35/overlay/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-particle-save-r35/producer/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-particle-save-r35/native-data-aliases-extra.ld -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-particle-save-r35/README.md text eol=lf
+experiments/maintained-components/native-particle-save-r35/export-manifest.json text eol=lf

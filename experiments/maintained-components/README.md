@@ -5,6 +5,19 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## R35 full-particle Save overlay
+
+The [particle Save overlay](native-particle-save-r35/README.md) reconstructs the
+reviewed 190-file source tree over v154 using nine replacements and four new
+files, plus the matching authored JEL/hooks producer. One paused-bomb Cemu Save
+in Tower of the Gods, room 2 passed complete 14,701,444-byte readback; zero
+Restores ran. The packet retains the whole manager, all three arrays and the
+main-covered control. Heap epoch 0 and inert retained child history follow the
+actual producer contract. The measured Save took 3.328 seconds in that Cemu
+case. Particle replay, Wii U operation, console memory fit and full-game closure
+remain unverified. No standalone build is claimed; the complete reproducible
+builder remains v126.
+
 ## v154 native Save integration source
 
 The [native Save snapshot](native-save-v154/README.md) adds 186 reviewed source

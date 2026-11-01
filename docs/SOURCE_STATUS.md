@@ -1,5 +1,20 @@
 # Source and build status
 
+## R39 bounded causal-window Save overlay
+
+The [R39 window overlay](../experiments/maintained-components/native-particle-save-r39/README.md) reconstructs 206
+sources with eight replacements and four additions over R38. Monotonic serials
+and pinned native-removal receipts permit ordinary event-slot recycling;
+wire4/capture2/report2 make the changed semantics explicit. Pure window tests
+passed 56 host and 56 PPC scenarios; wire tests passed 51 host and 27 PPC cases.
+One Cemu paused-bomb Save at DRC Sickass Skip passed paired 14,721,444-byte
+readback and real fence cleanup; zero Restores ran. Its JEX event/attribution
+counts were zero. Native attribution is explicitly BXP-request gated, so the
+source-derived512 defect is not a user-console diagnosis. Native churn beyond512,
+particle replay, full-game/WiiU/fit and durable slots remain unqualified.
+The matching quiet-consumer whole body is not supplied. Integrated builder: v126.
+
+
 ## R38 typed particle Save and CM validation overlay
 
 The [typed particle overlay](../experiments/maintained-components/native-particle-save-r38/README.md) reconstructs the

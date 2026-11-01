@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "r38-reviewed-typed-particle-save-overlay",
-  "status": "Partial R38/R36 source overlay reconstructs 202 files. One Cemu Save at DRC Sickass Skip (M_NewD2 room 2) passed paired 14,718,340-byte readback; zero Restores. R38 has a known 512-event diagnostic-log session limit; long sessions remain unqualified. CM private instruction reduction is not native lag proof. Particle replay, Wii U, full-game and durable slots remain incomplete; integrated builder stays v126.",
+  "revision": "r39-reviewed-bounded-causal-window-save-overlay",
+  "status": "Partial R39 source overlay reconstructs206 files; wire4/capture2/report2 uses a bounded recyclable causal window with monotonic serials and pinned native-return receipts. Pure56host/56PPC window and51host/27PPC wire cases pass. One Cemu Sickass Skip Save passed paired14,721,444-byte readback with real fence cleanup; zeroRestores/JEXevents0. Native attribution is BXP-request gated;512 source defect is not a user-console diagnosis. Native>512 churn, particle replay, WiiU/fit/fullgame/durable slots unqualified; matching quiet whole body not exported; builder v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 55081,
-      "sha256": "18cf63cf7460355d57ba9986011c7918e994a7c9562b3a1a329d9a6e37c56169"
+      "bytes": 55983,
+      "sha256": "31b573370ff1c3e9b51de7a90f5110a0ac504cdf14092a4b3b09f77661258fcd"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1872,6 +1872,21 @@
       "path": "experiments/maintained-components/native-particle-save-r38/README.md",
       "bytes": 4943,
       "sha256": "a1ccde204df44454ba7c3803ff6fdd13f69253001cddfd61689b53af5a1c6dc6"
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/export-manifest.json",
+      "bytes": 58530,
+      "sha256": "5929a092036cafafaefc02e9e168b1934efebda8a93db1be4c1e5928529cae6e"
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/integration-recipe.json",
+      "bytes": 3241,
+      "sha256": "56656a1f753c8692a74011d8cdcc2f7b7a64e881334ae08ccb9b41a1a25b32e0"
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/README.md",
+      "bytes": 4706,
+      "sha256": "d2cfa4757ba5210f12a8dfa3d4aee1ef80c2b823735c3db57d0748a2652592e3"
     }
   ],
   "excludes": [
@@ -3239,6 +3254,78 @@
       "path": "experiments/maintained-components/native-particle-save-r38/overlay/native_lifetime/particle_lifetime_layout.h",
       "bytes": 2200,
       "sha256": "ef3b52da684681ec9fd0f87f0271f23b69f3174117a170d88dd98b8d04b24784",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/bomb/jex_quiet.h",
+      "bytes": 1133,
+      "sha256": "96146a6d160742471e19cc06d3efd987043aa4f2bd2db4e245bd5b37f8eca97b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/bomb/jex_window.h",
+      "bytes": 10827,
+      "sha256": "ba678d7d913e67b34b363404bf052baa3942682ca35894135f3bb229d7bba250",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/jel/emitter_attribution.inc",
+      "bytes": 5966,
+      "sha256": "b836ee4318e444ae7aa0941474c8fb4eba05bd3f340fcd89485ee52216e90f43",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/jel/jel_jex_export.inc",
+      "bytes": 4744,
+      "sha256": "8737307280db74bd831dbd0dd45b1df0eb6827ecf9a5fe64c906dbb845c73640",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/jel/jel_jex_snapshot.h",
+      "bytes": 2793,
+      "sha256": "80f0296b5989492259d54e43f33e9ae1232c598ecb46f4c9ddd48af3dcb5167a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/jel/jex_quiet.h",
+      "bytes": 1133,
+      "sha256": "96146a6d160742471e19cc06d3efd987043aa4f2bd2db4e245bd5b37f8eca97b",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/jel/jex_quiet_query.inc",
+      "bytes": 1601,
+      "sha256": "ba468db043a1dd24a6515f2815d67d9fdb6d162c06ff3acc4c80cf6854649a79",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/jel/jex_window.h",
+      "bytes": 10827,
+      "sha256": "ba678d7d913e67b34b363404bf052baa3942682ca35894135f3bb229d7bba250",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/native_lifetime/jel_jex_snapshot.h",
+      "bytes": 2793,
+      "sha256": "80f0296b5989492259d54e43f33e9ae1232c598ecb46f4c9ddd48af3dcb5167a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/native_lifetime/jex_window.h",
+      "bytes": 10827,
+      "sha256": "ba678d7d913e67b34b363404bf052baa3942682ca35894135f3bb229d7bba250",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/native_lifetime/particle_domain_codec.c",
+      "bytes": 21188,
+      "sha256": "79666895bf21b5974d2e2b9b087e86d35dd6e8415ee0d592160d9ecab01309a8",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r39/overlay/native_lifetime/particle_domain_cut.h",
+      "bytes": 3499,
+      "sha256": "03a563891b59c5396bdc904742fb40a24845646a3441d689b055c539075beaa8",
       "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
     }
   ],

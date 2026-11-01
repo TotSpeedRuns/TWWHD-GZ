@@ -1,0 +1,91 @@
+{
+  "schema": "partial-R39-window-source-integration/1",
+  "complete_builder": "v126",
+  "standalone_current_builder": false,
+  "base_component": "native-particle-save-r38",
+  "base_manifest": "export-manifest.json",
+  "overlay": "overlay",
+  "reconstructed_sources": 206,
+  "JPC_wire_version": 4,
+  "JEX_capture_version": 2,
+  "JEX_report_version": 2,
+  "replaced_source_paths": [
+    "jel/emitter_attribution.inc",
+    "jel/jel_jex_export.inc",
+    "jel/jel_jex_snapshot.h",
+    "jel/jex_quiet.h",
+    "jel/jex_quiet_query.inc",
+    "native_lifetime/jel_jex_snapshot.h",
+    "native_lifetime/particle_domain_codec.c",
+    "native_lifetime/particle_domain_cut.h"
+  ],
+  "new_source_paths": [
+    "bomb/jex_quiet.h",
+    "bomb/jex_window.h",
+    "jel/jex_window.h",
+    "native_lifetime/jex_window.h"
+  ],
+  "unchanged_bindings": {
+    "CODE_targets": 18,
+    "DATA_targets": 34,
+    "component": "native-particle-save-r38"
+  },
+  "target_flags": [
+    "-mcpu=750",
+    "-O2",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-msdata=none",
+    "-fno-common",
+    "-fno-section-anchors",
+    "-fno-stack-protector",
+    "-fno-asynchronous-unwind-tables",
+    "-fno-tree-vectorize",
+    "-fno-tree-loop-distribute-patterns",
+    "-msoft-float",
+    "-mregnames",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-fstack-usage",
+    "-fno-jump-tables",
+    "-fno-tree-switch-conversion",
+    "-Wno-unused-function",
+    "-Wno-unused-variable",
+    "-Wno-misleading-indentation"
+  ],
+  "JEL": {
+    "primary": "jel/emitter_lifetime.c",
+    "hooks": "hooks/emitter_hooks.S",
+    "required_definition_rename": {
+      "_gz_jel_birth": "_gz_lsc_jel_birth_previous"
+    },
+    "pure_operations": "jex_window.h supplies the same private planner, commit and return operations used by the native producer."
+  },
+  "quiet_consumer": {
+    "overlay_headers": [
+      "bomb/jex_quiet.h",
+      "bomb/jex_window.h"
+    ],
+    "matching_current_whole_translation_unit_in_public_tree": false,
+    "standalone_current_rebuild_available": false,
+    "required_unexported_matching_inputs": [
+      "Matching current whole bomb-recreation translation unit and its existing include tree.",
+      "Matching audio-lifetime auxiliary member and parked-partition auxiliary member."
+    ],
+    "composition": "Rebuild only the matching raw member with these two header changes, then preserve both matching auxiliary members, existing symbol transforms, anchors and combined-object ABI. Do not substitute an older public monolith.",
+    "published_headers_are_not_the_missing_body": true
+  },
+  "required_integration": [
+    "Genuine native callback/world/heap/job/JPG ownership and current allocation providers.",
+    "Matching current source and real imports; no successful-return provider substitutes.",
+    "Existing object prefix/hiding/anchor rules, final CODE/DATA relocation and cold/startup/layout checks.",
+    "Lawful local game input and a compatible separately installed SDK, neither included here."
+  ],
+  "permanent_BSS_growth": 0,
+  "snapshot_or_event_array_growth": 0,
+  "temporary_full_window_validator_PPC_frame_bytes": 4144,
+  "platform_stack_fit_verified": false,
+  "no_native_Restore_or_lifetime_adoption": true
+}

@@ -1,7 +1,7 @@
 {
   "schema": "maintained-source-components/1",
-  "revision": "r35-reviewed-particle-save-overlay",
-  "status": "Reviewed R35 source overlay reconstructs 190 files over v154 with 9 replacements/4 new files and the matching JEL/hooks producer. One paused-bomb Cemu Save at Tower of the Gods room 2 passed full 14,701,444-byte readback; zero Restores. Timing 3.328s is Cemu-only. Particle replay, Wii U, console memory fit and full-game closure remain unverified. Complete reproducible integrated builder remains v126.",
+  "revision": "r38-reviewed-typed-particle-save-overlay",
+  "status": "Partial R38/R36 source overlay reconstructs 202 files. One Cemu Save at DRC Sickass Skip (M_NewD2 room 2) passed paired 14,718,340-byte readback; zero Restores. R38 has a known 512-event diagnostic-log session limit; long sessions remain unqualified. CM private instruction reduction is not native lag proof. Particle replay, Wii U, full-game and durable slots remain incomplete; integrated builder stays v126.",
   "files": [
     {
       "path": "experiments/maintained-components/input_float.c",
@@ -120,8 +120,8 @@
     },
     {
       "path": "experiments/maintained-components/README.md",
-      "bytes": 54217,
-      "sha256": "038ab98a98071b74a9203ffc2aadfd1f1f372500fdad284c848c605f0d9eb24f"
+      "bytes": 55081,
+      "sha256": "18cf63cf7460355d57ba9986011c7918e994a7c9562b3a1a329d9a6e37c56169"
     },
     {
       "path": "experiments/maintained-components/save_state/process.h",
@@ -1850,13 +1850,28 @@
     },
     {
       "path": "experiments/maintained-components/native-particle-save-r35/export-manifest.json",
-      "bytes": 41918,
-      "sha256": "801c916a5a3d625629f1cb68b9e363239267546ad4a4c1950cdc7b52122e6f31"
+      "bytes": 42142,
+      "sha256": "7344b65edb7abc51ee1bc73110a82b082f7a5cb9d7020810b9586598df58aea7"
     },
     {
       "path": "experiments/maintained-components/native-particle-save-r35/README.md",
-      "bytes": 5252,
-      "sha256": "f50f05c4c91f6a24288f9b497f3d4c3e0ab1d2c1e4bc86fdb74b977438865552"
+      "bytes": 5503,
+      "sha256": "a14d446cf446eb643e406364a88b5730f447af105654338616920e65ec2bf31a"
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/export-manifest.json",
+      "bytes": 58482,
+      "sha256": "b3a865ed9f2dcfa88314177660d820278b7dac76bf4e619c84e924a7510f648e"
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/integration-recipe.json",
+      "bytes": 3136,
+      "sha256": "b6dfeb00f9483b72097953287467bdd3d7253f8983ddc5eef9c090fa33ed0089"
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/README.md",
+      "bytes": 4943,
+      "sha256": "a1ccde204df44454ba7c3803ff6fdd13f69253001cddfd61689b53af5a1c6dc6"
     }
   ],
   "excludes": [
@@ -3129,6 +3144,102 @@
       "bytes": 1490,
       "sha256": "3cd2709793676dbb82a3a341e1245a31cf6d589fbc93c06963d978e247d4055f",
       "hash_normalization": "Exact authored bytes; Git -text preserves the reviewed source export."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/collider/cm_fast.c",
+      "bytes": 4789,
+      "sha256": "cdfebffbe9493e37a3a550c2e48a8b71e14a29182ea06311e769b85d7e777075",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/native-data-aliases-extra.ld",
+      "bytes": 132,
+      "sha256": "134921922eab41cbe3f9d76daaa70ac463902a82a1eee574d5479ad33aecbd6d",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/gac/owned_heap_save.h",
+      "bytes": 3397,
+      "sha256": "f0cfd5721a82b7d39b67e915cfab7fe388ad9d993be4dce8a67e9354e29e48b9",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/gac/owned_heap_save.inc",
+      "bytes": 17716,
+      "sha256": "990d53e7ce49e147d4b8afd019e0d5b58901d143c5021044e8c766cce60bb833",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jel/emitter_attribution.inc",
+      "bytes": 4974,
+      "sha256": "e1b8042dfdfff0f12ed30aa2d6935d0ee9ba91ddb484e517fde128e6c103aaa0",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jel/emitter_lifetime.c",
+      "bytes": 9443,
+      "sha256": "9fc8c52e86c00954be7647b274e68939c676bd0f1fe85fc04778f42db644468a",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jel/emitter_lifetime.h",
+      "bytes": 2641,
+      "sha256": "1c135c12c0456a41c1388c4808b1d8e22b0fecf82e2236b67168bf5924087faf",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jel/jel_jex_export.inc",
+      "bytes": 4844,
+      "sha256": "0e11ce68d6a305654cae79bde2130913a17255c27cb6a287a2c5d68818b4d408",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jel/jel_jex_snapshot.h",
+      "bytes": 2793,
+      "sha256": "b936b237d04bb67ab5e6874d498d5ad763199f81ac06d427cb97b4031e60ba7e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jpg/particle_guard.c",
+      "bytes": 23848,
+      "sha256": "98b73ab040c7760586c9565bed721c309d8f8b7374d8a6ca2a2e204d77c19fd6",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/jpg/particle_guard.h",
+      "bytes": 1703,
+      "sha256": "666e20d7526f423da49f1a67d1ad04ee350c60c0ca7fffd6050e073a6b3fd9ca",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/native_lifetime/jel_jex_snapshot.h",
+      "bytes": 2793,
+      "sha256": "b936b237d04bb67ab5e6874d498d5ad763199f81ac06d427cb97b4031e60ba7e",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/native_lifetime/particle_domain_capture.inc",
+      "bytes": 25313,
+      "sha256": "c10a3a020ef2c5f9a1653e7f8ce9bbedba30f64d6c89e75980f078191fdd51ff",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/native_lifetime/particle_domain_codec.c",
+      "bytes": 21873,
+      "sha256": "56925596166efa76fef7face0fa27889107249fe62142435f1d3cbddfc71d2ce",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/native_lifetime/particle_domain_cut.h",
+      "bytes": 3499,
+      "sha256": "bc2cb034332de2bd2c204c3eeae68ac1e16105c961f3ccb4a0a6081afcd52924",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
+    },
+    {
+      "path": "experiments/maintained-components/native-particle-save-r38/overlay/native_lifetime/particle_lifetime_layout.h",
+      "bytes": 2200,
+      "sha256": "ef3b52da684681ec9fd0f87f0271f23b69f3174117a170d88dd98b8d04b24784",
+      "hash_normalization": "Exact authored bytes; Git -text preserves reviewed source."
     }
   ],
   "exact_source_files_note": "These explicit raw-byte records are separate from the existing LF-normalized inventory; each corresponding Git blob must preserve these exact authored bytes."

@@ -5,12 +5,25 @@ older integrated runtime export. `docs/revision.json` still identifies the
 reproducible full v126 export. Updating this folder does not claim that v126
 contains these changes or that the entire newer runtime has been exported.
 
+## R38 typed particle Save and CM validation overlay
+
+The [typed particle overlay](native-particle-save-r38/README.md) reconstructs the
+202 maintained source files using 14 changed/new files over R35 and its producer.
+One Cemu Save at DRC Sickass Skip (`M_NewD2`, room 2) passed paired complete
+14,718,340-byte readback with actual GPU-fence cleanup; zero Restores ran.
+Typed owner history is retained as data; this native case had no nonzero owner
+attribution/history. The compiler-only collider change passed private PPC
+checks but has no native swim/lag claim. Particle replay, Wii U, full-game and
+durable-slot coverage remain unfinished; the integrated builder remains v126.
+
+R38 retains a known 512-event diagnostic-log session limit: a subsequent event can set sticky overflow and make further Saves refuse. Long sessions are unqualified.
+
 ## R35 full-particle Save overlay
 
 The [particle Save overlay](native-particle-save-r35/README.md) reconstructs the
 reviewed 190-file source tree over v154 using nine replacements and four new
 files, plus the matching authored JEL/hooks producer. One paused-bomb Cemu Save
-in Tower of the Gods, room 2 passed complete 14,701,444-byte readback; zero
+in Dragon Roost Cavern, Sickass Skip (room 2) passed complete 14,701,444-byte readback; zero
 Restores ran. The packet retains the whole manager, all three arrays and the
 main-covered control. Heap epoch 0 and inert retained child history follow the
 actual producer contract. The measured Save took 3.328 seconds in that Cemu

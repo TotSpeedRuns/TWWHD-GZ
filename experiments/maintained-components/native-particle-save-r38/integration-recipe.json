@@ -1,0 +1,98 @@
+{
+  "schema": "partial-R38-and-CM-authored-source-integration/1",
+  "complete_builder": "v126",
+  "standalone_current_builder": false,
+  "merged_source": {
+    "base_components": [
+      "native-save-v154",
+      "native-particle-save-r35"
+    ],
+    "overlay": "overlay",
+    "result_files": 202
+  },
+  "native_CODE_bindings": {
+    "component": "native-save-v154",
+    "path": "native-code-aliases.ld",
+    "unchanged_targets": 18
+  },
+  "native_DATA_bindings": {
+    "base_targets": 31,
+    "add_file": "native-data-aliases-extra.ld",
+    "result_targets": 34
+  },
+  "JEL": {
+    "primary": "jel/emitter_lifetime.c",
+    "hooks": "hooks/emitter_hooks.S",
+    "required_definition_rename": {
+      "_gz_jel_birth": "_gz_lsc_jel_birth_previous"
+    },
+    "new_providers": [
+      "_gz_jel_jpc_export",
+      "_gz_jel_jpc_recheck",
+      "_gz_jpc_export_receiver"
+    ]
+  },
+  "CM": {
+    "source": "collider/cm_fast.c",
+    "headers": [
+      {
+        "component": "streaming-bookkeeping-v148",
+        "path": "collider/members.h",
+        "bytes": 2345,
+        "sha256": "13378abd1a7554f26787a066c81232f4951eb188e61874c281398685601ca98c"
+      },
+      {
+        "component": "streaming-bookkeeping-v148",
+        "path": "collider/observer.h",
+        "bytes": 2028,
+        "sha256": "5c2f548a96cb5706bcdc36f8b0ec8e828d4a62c0b82d4273337edf82bb406b10"
+      },
+      {
+        "component": "streaming-bookkeeping-v148",
+        "path": "collider/process.h",
+        "bytes": 2597,
+        "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+      }
+    ],
+    "upstream_component": "streaming-bookkeeping-v148",
+    "upstream_source": "collider/cm_fast.c",
+    "compiler_flags": [
+      "-mcpu=750",
+      "-O2",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-msdata=none",
+      "-fno-common",
+      "-fno-section-anchors",
+      "-fno-stack-protector",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-tree-vectorize",
+      "-fno-tree-loop-distribute-patterns",
+      "-msoft-float",
+      "-mregnames",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-misleading-indentation",
+      "-fstack-usage",
+      "-fno-jump-tables",
+      "-fno-tree-switch-conversion",
+      "-Wno-unused-function",
+      "-Wno-unused-variable",
+      "-Wno-misleading-indentation"
+    ],
+    "change": "Two unroll4 pragmas; complete validation loops, active-count proof and existing scratch retained. Exact tested source included; the older public source contains editorial comment differences.",
+    "native_imports_added": 0,
+    "BSS_growth": 0,
+    "TEXT_growth": 1700,
+    "entry_stack_bytes": 56,
+    "helper_stack_bytes": 8
+  },
+  "required_external_integration": [
+    "Actual native lifetime and owner providers, frame/native callback context and matching imports.",
+    "Correct source/object prefixing, local symbol hiding, existing private range and BSS anchors.",
+    "Real CODE/DATA relocation records and exact final main link/layout/startup audits.",
+    "Lawful local game input and separately installed compatible SDK; neither supplied here."
+  ],
+  "no_stubbed_providers": true
+}

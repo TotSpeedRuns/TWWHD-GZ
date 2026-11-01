@@ -38,7 +38,7 @@ manufacture a constructor, heap generation, pointer lease or replay permission.
 ## Observed Save and limits
 
 One closed Cemu session completed **one Save and zero Restores**, with a paused
-placed bomb in Tower of the Gods, room 2. Two complete 14,701,444-byte private
+placed bomb in Dragon Roost Cavern, Sickass Skip (room 2). Two complete 14,701,444-byte private
 archive readbacks agreed. The 3,838,400-byte JPCv2 packet includes the complete
 5,770,168-byte manager allocation, emitter array 153,008 bytes, particle
 array 888,008 bytes and auxiliary array 31,208 bytes. The 16,804-byte control is
@@ -91,3 +91,5 @@ for row in manifest["reconstructed_source"]:
     assert hashlib.sha256(source.read_bytes()).hexdigest() == row["sha256"]
 assert len(manifest["reconstructed_source"]) == 190
 ```
+
+Scope correction: the original harness label said TotG. The recorded native stage was `M_NewD2`, room 2, route checkpoint Sickass Skip. This corrects the location label only; the tested source and archived proof bytes are unchanged.

@@ -39,7 +39,7 @@
   "tested_scope": {
     "platform": "Cemu",
     "paused_bomb": true,
-    "area": "Tower of the Gods",
+    "area": "Dragon Roost Cavern",
     "room": 2,
     "Save": 1,
     "Restore": 0,
@@ -52,7 +52,9 @@
     "native_WiiU_verified": false,
     "actual_console_memory_fit_verified": false,
     "particle_replay_implemented": false,
-    "missing": 255
+    "missing": 255,
+    "checkpoint": "Sickass Skip",
+    "native_stage": "M_NewD2"
   },
   "reconstructed_source": [
     {
@@ -1199,8 +1201,8 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 5252,
-      "sha256": "f50f05c4c91f6a24288f9b497f3d4c3e0ab1d2c1e4bc86fdb74b977438865552"
+      "bytes": 5503,
+      "sha256": "a14d446cf446eb643e406364a88b5730f447af105654338616920e65ec2bf31a"
     },
     {
       "path": "native-data-aliases-extra.ld",
@@ -1307,5 +1309,6 @@
       "bytes": 1490,
       "sha256": "3cd2709793676dbb82a3a341e1245a31cf6d589fbc93c06963d978e247d4055f"
     }
-  ]
+  ],
+  "scope_label_correction": "Original harness area label was TotG; recorded M_NewD2 room2 is DRC Sickass Skip. Tested source and archived proof unchanged."
 }

@@ -1,9 +1,23 @@
 # Source and build status
 
+## R38 typed particle Save and CM validation overlay
+
+The [typed particle overlay](../experiments/maintained-components/native-particle-save-r38/README.md) reconstructs the
+202 maintained source files using 14 changed/new files over R35 and its producer.
+One Cemu Save at DRC Sickass Skip (`M_NewD2`, room 2) passed paired complete
+14,718,340-byte readback with actual GPU-fence cleanup; zero Restores ran.
+Typed owner history is retained as data; this native case had no nonzero owner
+attribution/history. The compiler-only collider change passed private PPC
+checks but has no native swim/lag claim. Particle replay, Wii U, full-game and
+durable-slot coverage remain unfinished; the integrated builder remains v126.
+
+
+R38 retains a known 512-event diagnostic-log session limit: a subsequent event can set sticky overflow and make further Saves refuse. Long sessions are unqualified.
+
 The [R35 particle Save overlay](../experiments/maintained-components/native-particle-save-r35/README.md)
 now adds the tested whole-manager/all-three-pool capture and authored constructor
-receipts over the v154 source component. One paused-bomb Cemu Save in Tower of
-the Gods, room 2 passed complete 14,701,444-byte readback; zero Restores ran. The
+receipts over the v154 source component. One paused-bomb Cemu Save in Dragon Roost
+Cavern, Sickass Skip (room 2) passed complete 14,701,444-byte readback; zero Restores ran. The
 3.328-second timing is Cemu-only. JPCv2 preserves valid heap epoch 0 and inert
 child history as data; particle replay/adoption is not implemented. Wii U,
 console memory fit and resource/device/full-game closure remain unverified.

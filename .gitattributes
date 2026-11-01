@@ -85,3 +85,10 @@ experiments/maintained-components/native-particle-save-r35/producer/** -text whi
 experiments/maintained-components/native-particle-save-r35/native-data-aliases-extra.ld -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 experiments/maintained-components/native-particle-save-r35/README.md text eol=lf
 experiments/maintained-components/native-particle-save-r35/export-manifest.json text eol=lf
+
+# Exact reviewed R38/R36 overlay and compiler-only collider source.
+experiments/maintained-components/native-particle-save-r38/overlay/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-particle-save-r38/collider/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-particle-save-r38/native-data-aliases-extra.ld -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/maintained-components/native-particle-save-r38/README.md text eol=lf
+experiments/maintained-components/native-particle-save-r38/*.json text eol=lf

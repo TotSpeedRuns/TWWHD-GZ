@@ -1,0 +1,53 @@
+{
+  "schema": "authored-JWA-terminal-publication-build/1",
+  "translation_unit": "source/provider.c",
+  "object_name": "jwa-init-terminal-publication.o",
+  "C_flags": [
+    "-mcpu=750",
+    "-O2",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-msdata=none",
+    "-fno-common",
+    "-fno-section-anchors",
+    "-fno-stack-protector",
+    "-fno-asynchronous-unwind-tables",
+    "-fno-tree-vectorize",
+    "-fno-tree-loop-distribute-patterns",
+    "-msoft-float",
+    "-mregnames",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-fstack-usage",
+    "-fno-jump-tables",
+    "-fno-tree-switch-conversion",
+    "-Wno-unused-function",
+    "-Wno-unused-variable",
+    "-Wno-misleading-indentation",
+    "-ffunction-sections",
+    "-fdata-sections"
+  ],
+  "standard_headers": [
+    "stdint.h",
+    "stddef.h"
+  ],
+  "external_WUT_headers": [
+    "coreinit/interrupts.h",
+    "coreinit/thread.h",
+    "coreinit/condition.h",
+    "coreinit/mutex.h",
+    "their genuine transitive WUT headers"
+  ],
+  "reference_devkitPPC": "r49",
+  "reference_WUT": "1.3.0",
+  "reference_compiler_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "expected_object_sha256": "a62ef15a4f584b2ca216d91645c1ae420cd05dfdf3bee299c61e06fe7b1d6f8a",
+  "expected_initializer_bytes": 352,
+  "existing_provider_undefined_roles": 39,
+  "new_heap_storage_owners_or_imports": 0,
+  "selected": false,
+  "runtime_ready": false,
+  "no_game_profile_recovery_or_prebuilt_object_runtime_input": true
+}

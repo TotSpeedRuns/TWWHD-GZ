@@ -1,0 +1,151 @@
+{
+  "schema": "authored-JWA-terminal-publication-source-manifest/1",
+  "declared_paths": [
+    "experiments/maintained-components/jwa-terminal-publication/build-spec.json",
+    "experiments/maintained-components/jwa-terminal-publication/README.md",
+    "experiments/maintained-components/jwa-terminal-publication/source/adapter.c",
+    "experiments/maintained-components/jwa-terminal-publication/source/adapter.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/common_admission.c",
+    "experiments/maintained-components/jwa-terminal-publication/source/common_admission.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/counter.c",
+    "experiments/maintained-components/jwa-terminal-publication/source/coupled_hold.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/directory_metadata.c",
+    "experiments/maintained-components/jwa-terminal-publication/source/directory_metadata.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/exclusive_probe.inc",
+    "experiments/maintained-components/jwa-terminal-publication/source/gate.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/ghs_job_bridge.inc",
+    "experiments/maintained-components/jwa-terminal-publication/source/lifecycle_writer.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/lifecycle_writer.inc",
+    "experiments/maintained-components/jwa-terminal-publication/source/lifetime_bridge.inc",
+    "experiments/maintained-components/jwa-terminal-publication/source/provider.c",
+    "experiments/maintained-components/jwa-terminal-publication/source/wct_job_bridge.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/wct_job_bridge.inc",
+    "experiments/maintained-components/jwa-terminal-publication/source/worker_atomic.c",
+    "experiments/maintained-components/jwa-terminal-publication/source/worker_atomic.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/worker_family.h",
+    "experiments/maintained-components/jwa-terminal-publication/source/worker_family.inc",
+    "tools/build_jwa_terminal_publication_source.py"
+  ],
+  "files": [
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/build-spec.json",
+      "bytes": 1573,
+      "sha256": "7ffd72fafc5568bfcd6879f85cb0de081896cf023f8ff1c683a01942e544396f"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/README.md",
+      "bytes": 2236,
+      "sha256": "82172161daf0b8c3be70babb474d2a6f76b8bdabd081fe4f8b0b712184e6d121"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/adapter.c",
+      "bytes": 10770,
+      "sha256": "99224b94c5769f33b073674151ad069eaf6afdc42d181a5228729f62c410f0eb"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/adapter.h",
+      "bytes": 1317,
+      "sha256": "199b780572d42ece357cef9739f8d2990fe031cbdbdf8955e6af7d999107c10a"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/common_admission.c",
+      "bytes": 5873,
+      "sha256": "27881929ff69fb3a986747b739d7af2de742fb78eca251c5cb0670f5d9c288d0"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/common_admission.h",
+      "bytes": 1726,
+      "sha256": "2c46274ac1b2d6f05936a858f09872fda2a532e55d8715b36bc2d9ad55070a3e"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/counter.c",
+      "bytes": 274,
+      "sha256": "42806b11a8f549b10f0d9d6a53dad2d40f4f4f94bf1d4a44d275d4137d2d8780"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/coupled_hold.h",
+      "bytes": 1504,
+      "sha256": "1eaed6e990aee427266c8810b7927507aba0402b47e1e03ec1bf22560c5ac92f"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/directory_metadata.c",
+      "bytes": 2175,
+      "sha256": "b21bf15afc9c462f1978b22dbb92db136dffd25491efa5eec3e8039c2dd434f6"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/directory_metadata.h",
+      "bytes": 1709,
+      "sha256": "b373975a161b1c6e3f77bcd842f216a9f9d79efaf5df65b0036a91761c0c2bff"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/exclusive_probe.inc",
+      "bytes": 6854,
+      "sha256": "4320bf9568395ef0f567830ae2654b5a025aab3f752beb6f5cf48345338f8a44"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/gate.h",
+      "bytes": 2058,
+      "sha256": "bbe25daede27b08a13f2d254d77fc64f8602662098a121b5084959ef502eb7e3"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/ghs_job_bridge.inc",
+      "bytes": 5871,
+      "sha256": "a98b06f6b71ea7bffa58539d5439b0575f5f994c540efdfe1f2bfcc4368c16c1"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/lifecycle_writer.h",
+      "bytes": 1022,
+      "sha256": "6d98091886b3bac74961414fda3ce75eea4155f72ec75206403e32187526d1c6"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/lifecycle_writer.inc",
+      "bytes": 9999,
+      "sha256": "31b0a93180bcb72b4457b2e5578824dd263e625df9d186ce491e3b8dcfcae7f3"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/lifetime_bridge.inc",
+      "bytes": 2993,
+      "sha256": "29b97570a54e88e3959c9a6ecaf0f9567761b4a2fce6758f22a02c41729869c0"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/provider.c",
+      "bytes": 51,
+      "sha256": "23712ab331108fab97fef43ab10db92ada87b1ec67a87406713e40a92ec4b18d"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/wct_job_bridge.h",
+      "bytes": 456,
+      "sha256": "e1479717e5905616e170449c997f2bfe5933741baf7f70ae046f07bb4e97fc76"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/wct_job_bridge.inc",
+      "bytes": 1925,
+      "sha256": "fc0882e2199c1971cf8d57a92b6d7b517980699527bb81bbd9edaeaf47941f96"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/worker_atomic.c",
+      "bytes": 1190,
+      "sha256": "a66142b5a3354299f3f992e9d7897a23acdac6dc2d92d8c299ab205ae0e4cad2"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/worker_atomic.h",
+      "bytes": 589,
+      "sha256": "eef7a2e2c0d6c4710db9c8c9db5eb4ab71c17fb7cfd14c0163311e50cb57fd17"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/worker_family.h",
+      "bytes": 1751,
+      "sha256": "c1e65d28a5d194ea736e2128cc676b6ac283efea5f5b36aac47e12939566675e"
+    },
+    {
+      "path": "experiments/maintained-components/jwa-terminal-publication/source/worker_family.inc",
+      "bytes": 12334,
+      "sha256": "ef184f76506cde478d294e53c7b5dd52c699a1587030f7f600f3f94d05b7eebb"
+    },
+    {
+      "path": "tools/build_jwa_terminal_publication_source.py",
+      "bytes": 6634,
+      "sha256": "1696a287db4b48ad1a1a72501b3ef307066d0bdd0cf0b2a5f0a189f31872a57c"
+    }
+  ]
+}

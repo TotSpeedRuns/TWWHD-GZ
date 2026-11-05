@@ -1,0 +1,7 @@
+Setup174 is a separate experimental installer correction over Native Setup173, retaining Game173. This source snapshot adds only the selected device-aware practice lookup and exact historical-role recognition. It leaves the frozen source173 snapshot intact.
+
+The authored component is self-contained under `experiments/maintained-components/setup-usb-v174`; build it with `tools/build_setup174_components.py`. All C/assembly/catalog/linker inputs are included. No recovery object or absolute recovery path is needed. The exact merged ET_REL has 5242 immutable bytes, zero mutable bytes and no new imports. `bindings.json` describes the Native-only integration boundary.
+
+The selected test corrects storage selection when Setup runs from NAND and the practice channel is on USB. It refuses ambiguous/wrong-device/malformed practice registrations before file changes. The catalog extends skipped-version recognition while preserving strict final verification and existing transaction policy. This does not establish which check failed on an unexamined friend's console or claim successful USB repair on hardware.
+
+This component export cannot rebuild the complete original Setup/Game from scratch. It includes no game assets, original executable, recipes, WUHB resources, captured memory, compiled output or SDK. Full RPX packing, typed RPL integration, CRC/FileInfo generation and WUHB/profile composition require a separate reviewed integrator and exact owned Native173 parent. See the component README for exact hashes, reproduced object scope and portability gaps.

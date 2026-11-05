@@ -1,0 +1,32 @@
+{
+  "schema": "public-Setup174-component-evidence/1",
+  "selected_merged_object_sha256": "e8386e5f40584ff9b3ee8f6f8610fed70cce68f945c5ef835614c88559dfc2d8",
+  "selected_final_root_rpx_sha256": "9ec93695abe1848d7fb5ebeda0ac88d34744616f7a130499ff30f408b609280e",
+  "selected_final_WUHB_sha256": "543c1d1e7642a793f7ddb819c1404f10f9d731f418a4abe251c5a6c73ac95754",
+  "source_component_reproduction": {
+    "objects": 8,
+    "immutable_CODE_RO": 5242,
+    "mutable": 0,
+    "new_imports": 0,
+    "unresolved_native_interfaces": 13
+  },
+  "serialized_role_CPU": {
+    "predicate_pairs": 1500,
+    "state_pairs": 530,
+    "helper_guards": 60,
+    "full_register_context_pairs": 360,
+    "CODE_DATA_biases": 5,
+    "instructions": 31719410,
+    "object_or_instruction_overlays": 0,
+    "IO_or_callee_result_models": 0,
+    "qualification_sha256": "e152f9ea207078d3aedee3fd964d19b90dd0696dee7c3da3690f8b5531fd2b3a",
+    "predicate_report_sha256": "dec2053b04abc9d6fa18b401d030f2e1c80e7b9bcfa335435f967b9a0b7b987a",
+    "context_report_sha256": "9a5655de6fc61f529b530c0883fed92b4061f6b19eb512284e070c2d59ae2bf4"
+  },
+  "coverage_limits": [
+    "Component/source and bounded CPU evidence only; post-hash/caller premises are explicit.",
+    "Native execution fixtures and original executable are retained privately and are not included in this source export.",
+    "No full original Setup/game source reproduction, physical USB installation, full filesystem transaction or C++ unwind qualification."
+  ],
+  "hardware_tested": false
+}

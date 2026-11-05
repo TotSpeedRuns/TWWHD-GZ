@@ -1,0 +1,171 @@
+{
+  "schema": "Setup174-five-hook-Native173-binding/1",
+  "source_only": true,
+  "parent_root_rpx_sha256": "7ed4f0da50c8c3cfc5447918ef067e8dc19ec7de74690bc45e3e97ef954665a3",
+  "selected_final_root_rpx_sha256": "9ec93695abe1848d7fb5ebeda0ac88d34744616f7a130499ff30f408b609280e",
+  "selected_final_wuhb_sha256": "543c1d1e7642a793f7ddb819c1404f10f9d731f418a4abe251c5a6c73ac95754",
+  "selected_build_sha256": "5f933b0c0569c5499c2dcafc2a4937642c849ba4d5ee4dd0a25e7d260d468017",
+  "unchanged_game_rpx_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+  "unchanged_game_title_sha256": "d01d1879cc90ab8c52b118709bb60feafa3ac17227ce9cfe03e545af16ca9bf5",
+  "hooks": [
+    {
+      "preferred_address": 33570776,
+      "expected_word": "2c0a0000",
+      "entry": "gz_setup_usb_select_context",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24"
+    },
+    {
+      "preferred_address": 33570956,
+      "expected_word": "3c801000",
+      "entry": "gz_setup_usb_error_context",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24"
+    },
+    {
+      "preferred_address": 33626984,
+      "expected_word": "2c030000",
+      "entry": "_gz_mig_owned_cmp",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24"
+    },
+    {
+      "preferred_address": 33659580,
+      "expected_word": "2c030000",
+      "entry": "_gz_mig_prepare_cmp",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24"
+    },
+    {
+      "preferred_address": 33621732,
+      "expected_word": "39200003",
+      "entry": "_gz_mig_probe_unknown",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24"
+    }
+  ],
+  "unresolved_bindings": {
+    "gz_setup_native_lookup_cleanup_error": {
+      "preferred": 33570928,
+      "kind": "CODE"
+    },
+    "gz_setup_native_lookup_copy": {
+      "preferred": 33570888,
+      "kind": "CODE"
+    },
+    "gz_setup_native_lookup_absent": {
+      "preferred": 33570696,
+      "kind": "CODE"
+    },
+    "gz_setup_native_lookup_loop_continue": {
+      "preferred": 33570780,
+      "kind": "CODE"
+    },
+    "gz_setup_native_lookup_error_continue": {
+      "preferred": 33570960,
+      "kind": "CODE"
+    },
+    "gz_setup_prepare_initial_return": {
+      "preferred": 33651088,
+      "kind": "CODE"
+    },
+    "gz_setup_prepare_repair_return": {
+      "preferred": 33654328,
+      "kind": "CODE"
+    },
+    "gz_setup_prepare_copy_return": {
+      "preferred": 33662980,
+      "kind": "CODE"
+    },
+    "gz_setup_prepare_installed_return": {
+      "preferred": 33665124,
+      "kind": "CODE"
+    },
+    "gz_setup_native_lookup_default_message": {
+      "preferred": 268435556,
+      "kind": "DATA"
+    },
+    "_gz_mig_owned_resume": {
+      "preferred": 33626988,
+      "kind": "CODE"
+    },
+    "_gz_mig_prepare_resume": {
+      "preferred": 33659584,
+      "kind": "CODE"
+    },
+    "_gz_mig_probe_resume": {
+      "preferred": 33621736,
+      "kind": "CODE"
+    }
+  },
+  "remove_loader_row": {
+    "preferred_site": 33570958,
+    "kind": 6,
+    "kind_name": "R_PPC_ADDR16_HA",
+    "source_section": 1,
+    "target_section": 3,
+    "section_symbol_preferred": 268435456,
+    "addend": 100,
+    "preferred_target": 268435556
+  },
+  "retain_loader_row": {
+    "preferred_site": 33570962,
+    "kind": 4,
+    "kind_name": "R_PPC_ADDR16_LO",
+    "source_section": 1,
+    "target_section": 3,
+    "section_symbol_preferred": 268435456,
+    "addend": 100,
+    "preferred_target": 268435556
+  },
+  "catalog_pointer_role": "All34 merged catalog ADDR32 rows must target appended executable section CODE anchor, not original Native DATA.",
+  "context_frames": {
+    "usb": 160,
+    "roles": 112,
+    "original_lookup": 56
+  },
+  "actual_ownedIdentity_calls": [
+    {
+      "site": 33643712,
+      "allowKnownPrior": false
+    },
+    {
+      "site": 33651216,
+      "allowKnownPrior": true
+    },
+    {
+      "site": 33654200,
+      "allowKnownPrior": false
+    },
+    {
+      "site": 33654272,
+      "allowKnownPrior": false
+    },
+    {
+      "site": 33665304,
+      "allowKnownPrior": false
+    }
+  ],
+  "revision": {
+    "preferred": 268438712,
+    "before_ascii": "v173 Save-State Test Tool",
+    "after_ascii": "v174 USB Test / Game v173",
+    "printable_bytes": 25,
+    "keep_following_native_NUL": true
+  },
+  "integration_contract": [
+    "Require exact parent173 SHA256, expected sections, five displaced words and typed Native CODE/DATA section anchors. Refuse unknown parents.",
+    "Append only the single immutable merged .text,32-byte aligned; resolve every emitted relocation and every UND binding. Defined merged strings/table use CODE domain.",
+    "Remove only the exact oldHA row0200408e; retain oldLO02004092. Add genuine REL24 loader rows for all5 unlinked hooks. Preserve every other ordered original loader row.",
+    "Keep original Native allocator/MCP/copy/free/close/EH/constructor/throw and strict final verification bodies; pop helper frames before Native continuations.",
+    "Regenerate Native FileInfo/CRC and recompress logically changed sections; verify all old CODE outside5hooks and DATA outside revision exactly.",
+    "Rebuild WUHB metadata/resources coherently; preserve Game173 recipes and unchanged non-executable resources. This export does not perform this packaging."
+  ],
+  "portability_gaps": [
+    "Pinned Native173 ABI and entry PCs only; not a general source-level Setup port or arbitrary-version binary patch.",
+    "No original Setup/game image, recipes, assets, captured-memory dump, complete main.cpp or compiled binary is included.",
+    "Component builder reproduces ET_REL only; serializedRPX/CRC/FileInfo/WUHB/profile packaging must be supplied by a separate reviewed integrator with the exact owned parent.",
+    "Compiler/object identity is checked; another platform/toolchain may differ and needs its own explicit qualification.",
+    "No physical USB install/repair, complete filesystem transaction or C++ unwind result is claimed."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "authored-renderer171-source-provenance/1",
+  "authored_copy": {
+    "reference": "Private frozen v171 allocation-cluster authored variant; all44 compiler inputs copied byte-exact.",
+    "qualification_sha256": "2909e462fb1b702306226e544daa383e0df7f7d43c2fb694dcccd0f609155a95",
+    "main_object_sha256": "5f5357e97a794f2f5d456401d03779e02ed3cbecb1c4139622917c24e27ab378",
+    "private_object_sha256": "c38824087da5b5c768481d8b23bb6f304954fd165547002ad053387af8d530e5",
+    "independent_review_sha256": "85969346398f6e330a938944c4cfafb18a2857957f1f60388e1e10ad7ff8d61b"
+  },
+  "trace_decoder": {
+    "reference": "Unchanged v170 authored diagnostic header/decoder contract.",
+    "qualification_sha256": "afe5d4f18c386105bbeef43b655232ba00280d9339328ad001e8d0aeeda36e95",
+    "decoder_sha256": "8684ce49222212f1e1ceaf01d196a74c35f3118d95b370dabbc547c8ba194d20",
+    "enum_sha256": "5d65ab460b26c34894f5a9d501c61ce40ec014e9ffb2ec6cb07ef831367f6346"
+  },
+  "dependency_inventory_sha256": "24e5f7564bb4c8b7640fe2e45b40fdb5a99ae737bf74337747462432070bf6eb",
+  "public_builder_reads_private_recovery_or_game_binaries": false,
+  "limits": [
+    "Hashes are provenance/reference metadata only; private objects, native executables and captured memory are not public build inputs.",
+    "Existing GHS92/OIS/HL60 layouts and genuine SDK/native providers remain external; not newer SOURCE80 owners.",
+    "Finite modeled/offline source and packed tests do not establish hardware Save/Restore or a causal live-fix claim."
+  ],
+  "compiler_helper_resolution": {
+    "assembler": "@TOOLCHAIN@/powerpc-eabi/bin/as.exe",
+    "cc1": "@TOOLCHAIN@/libexec/gcc/powerpc-eabi/15.2.0/cc1.exe",
+    "specs_policy": "No external specs file; exact gcc helper paths verified before output.",
+    "initial_inventory_note": "Pre-review recorded the byte-identical bin/powerpc-eabi-as.exe alias; final public build pins the actual gcc-selected path instead."
+  }
+}

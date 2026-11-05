@@ -1,0 +1,602 @@
+/* Exact native171 contexts; not ordinary callable function aliases. */
+.section .text._gz_hx_legacy_hi_store,"ax",@progbits
+.global _gz_hx_legacy_hi_store
+.type _gz_hx_legacy_hi_store,@function
+.type _gz_hx_native_hi_store_resume,@function
+_gz_hx_legacy_hi_store:
+ .long 0x9421fff0
+ b _gz_hx_native_hi_store_resume
+.size _gz_hx_legacy_hi_store,.-_gz_hx_legacy_hi_store
+.section .text._gz_hx_legacy_hl_import,"ax",@progbits
+.global _gz_hx_legacy_hl_import
+.type _gz_hx_legacy_hl_import,@function
+.type _gz_hx_native_hl_import_resume,@function
+_gz_hx_legacy_hl_import:
+ .long 0x81240008
+ b _gz_hx_native_hl_import_resume
+.size _gz_hx_legacy_hl_import,.-_gz_hx_legacy_hl_import
+.section .text._gz_hx_policy_heap_retire,"ax",@progbits
+.global _gz_hx_policy_heap_retire
+.type _gz_hx_policy_heap_retire,@function
+.type _gz_hx_policy_heap_retire_resume,@function
+_gz_hx_policy_heap_retire:
+ .long 0x913e0038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,30
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_heap_retire_resume
+.size _gz_hx_policy_heap_retire,.-_gz_hx_policy_heap_retire
+.section .text._gz_hx_policy_mutator_retire,"ax",@progbits
+.global _gz_hx_policy_mutator_retire
+.type _gz_hx_policy_mutator_retire,@function
+.type _gz_hx_policy_mutator_retire_resume,@function
+_gz_hx_policy_mutator_retire:
+ .long 0xb13f0038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,31
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_mutator_retire_resume
+.size _gz_hx_policy_mutator_retire,.-_gz_hx_policy_mutator_retire
+.section .text._gz_hx_policy_accepted_free,"ax",@progbits
+.global _gz_hx_policy_accepted_free
+.type _gz_hx_policy_accepted_free,@function
+.type _gz_hx_policy_accepted_free_resume,@function
+_gz_hx_policy_accepted_free:
+ .long 0x91490038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,9
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_accepted_free_resume
+.size _gz_hx_policy_accepted_free,.-_gz_hx_policy_accepted_free
+.section .text._gz_hx_policy_accepted_begin,"ax",@progbits
+.global _gz_hx_policy_accepted_begin
+.type _gz_hx_policy_accepted_begin,@function
+.type _gz_hx_policy_accepted_begin_resume,@function
+_gz_hx_policy_accepted_begin:
+ .long 0x91490038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,9
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_accepted_begin_resume
+.size _gz_hx_policy_accepted_begin,.-_gz_hx_policy_accepted_begin
+.section .text._gz_hx_policy_mutator_begin,"ax",@progbits
+.global _gz_hx_policy_mutator_begin
+.type _gz_hx_policy_mutator_begin,@function
+.type _gz_hx_policy_mutator_begin_resume,@function
+_gz_hx_policy_mutator_begin:
+ .long 0x90e40038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,4
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_mutator_begin_resume
+.size _gz_hx_policy_mutator_begin,.-_gz_hx_policy_mutator_begin
+.section .text._gz_hx_bulk_forward,"ax",@progbits
+.global _gz_hx_bulk_forward
+.type _gz_hx_bulk_forward,@function
+_gz_hx_bulk_forward:
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ bl _gz_hx_after_bulk
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+.type _gz_hx_bulk_forward_tail,@function
+ b _gz_hx_bulk_forward_tail
+.size _gz_hx_bulk_forward,.-_gz_hx_bulk_forward
+.section .text._gz_hx_bulk_inverse,"ax",@progbits
+.global _gz_hx_bulk_inverse
+.type _gz_hx_bulk_inverse,@function
+_gz_hx_bulk_inverse:
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ bl _gz_hx_after_bulk
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ blr
+.size _gz_hx_bulk_inverse,.-_gz_hx_bulk_inverse
+.type _gz_hx_note_row,@function
+.type _gz_hx_after_bulk,@function
+/* allocated() Native120B local+44 is unaddressed before this successor.
+ * It lies beyond the outgoing parameter-save area and beyond its60B row8..43.
+ * Both original key comparison paths and regular/custom selectors converge
+ * here, before hi_detach/copy. No private global or native heap is followed. */
+.section .text._gz_hx_allocated_old_key,"ax",@progbits
+.global _gz_hx_allocated_old_key
+.type _gz_hx_allocated_old_key,@function
+.type _gz_hx_allocated_old_key_resume,@function
+_gz_hx_allocated_old_key:
+ .long 0x810a0000
+ stw 8,68(1)
+ b _gz_hx_allocated_old_key_resume
+.size _gz_hx_allocated_old_key,.-_gz_hx_allocated_old_key
+
+/* After real hi_attach returned, including failure, and before branch/unlock.
+ * Actual destination row remains in Native local+48; r3 is real attach result.
+ * No Native outcome or original scalar context is changed. */
+.section .text._gz_hx_allocated_post_copy,"ax",@progbits
+.global _gz_hx_allocated_post_copy
+.type _gz_hx_allocated_post_copy,@function
+.type _gz_hx_allocated_post_copy_resume,@function
+_gz_hx_allocated_post_copy:
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ lwz 3,232(1)
+ lwz 4,228(1)
+ bl _gz_hx_note_replaced
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ .long 0x2c030000
+ b _gz_hx_allocated_post_copy_resume
+.size _gz_hx_allocated_post_copy,.-_gz_hx_allocated_post_copy
+.type _gz_hx_note_replaced,@function
+
+
+.section .text._gz_hx_policy_mutator_heap_retire,"ax",@progbits
+.global _gz_hx_policy_mutator_heap_retire
+.type _gz_hx_policy_mutator_heap_retire,@function
+.type _gz_hx_policy_mutator_heap_retire_resume,@function
+_gz_hx_policy_mutator_heap_retire:
+ .long 0x913e0038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,30
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_mutator_heap_retire_resume
+.size _gz_hx_policy_mutator_heap_retire,.-_gz_hx_policy_mutator_heap_retire
+
+.section .text._gz_hx_policy_rebind_retire,"ax",@progbits
+.global _gz_hx_policy_rebind_retire
+.type _gz_hx_policy_rebind_retire,@function
+.type _gz_hx_policy_rebind_retire_resume,@function
+_gz_hx_policy_rebind_retire:
+ .long 0x911f0038
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ mr 3,31
+ bl _gz_hx_note_row
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ b _gz_hx_policy_rebind_retire_resume
+.size _gz_hx_policy_rebind_retire,.-_gz_hx_policy_rebind_retire
+
+/* hm_finish() Native152B local+44 is unaddressed before this successor.
+ * It lies beyond the outgoing parameter-save area and beyond its60B row8..43.
+ * Both original key comparison paths and regular/custom selectors converge
+ * here, before hi_detach/copy. No private global or native heap is followed. */
+.section .text._gz_hx_finish_old_key,"ax",@progbits
+.global _gz_hx_finish_old_key
+.type _gz_hx_finish_old_key,@function
+.type _gz_hx_finish_old_key_resume,@function
+_gz_hx_finish_old_key:
+ .long 0x80c40000
+ stw 6,68(1)
+ b _gz_hx_finish_old_key_resume
+.size _gz_hx_finish_old_key,.-_gz_hx_finish_old_key
+
+.section .text._gz_hx_finish_post_copy,"ax",@progbits
+.global _gz_hx_finish_post_copy
+.type _gz_hx_finish_post_copy,@function
+.type _gz_hx_finish_post_copy_resume,@function
+_gz_hx_finish_post_copy:
+ stwu 1,-160(1)
+ stw 0,64(1)
+ stw 3,68(1)
+ stw 4,72(1)
+ stw 5,76(1)
+ stw 6,80(1)
+ stw 7,84(1)
+ stw 8,88(1)
+ stw 9,92(1)
+ stw 10,96(1)
+ stw 11,100(1)
+ stw 12,104(1)
+ mfcr 0
+ stw 0,108(1)
+ mflr 0
+ stw 0,112(1)
+ mfctr 0
+ stw 0,116(1)
+ mfxer 0
+ stw 0,120(1)
+ lwz 3,240(1)
+ lwz 4,228(1)
+ bl _gz_hx_note_replaced
+ lwz 0,120(1)
+ mtxer 0
+ lwz 0,116(1)
+ mtctr 0
+ lwz 0,112(1)
+ mtlr 0
+ lwz 0,108(1)
+ mtcrf 255,0
+ lwz 3,68(1)
+ lwz 4,72(1)
+ lwz 5,76(1)
+ lwz 6,80(1)
+ lwz 7,84(1)
+ lwz 8,88(1)
+ lwz 9,92(1)
+ lwz 10,96(1)
+ lwz 11,100(1)
+ lwz 12,104(1)
+ lwz 0,64(1)
+ addi 1,1,160
+ .long 0x2c030000
+ b _gz_hx_finish_post_copy_resume
+.size _gz_hx_finish_post_copy,.-_gz_hx_finish_post_copy

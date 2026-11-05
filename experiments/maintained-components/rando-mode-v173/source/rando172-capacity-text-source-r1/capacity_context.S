@@ -1,0 +1,90 @@
+/* Native 2704c8c context: r3 is genuine LMS return; r12/r11/r4/r0/r10
+ * are its authenticated TXT2 success live-outs. Preserve all except r5. */
+.section .text.rando_capacity_context,"ax",@progbits
+.globl _gz_rando_capacity_context
+.type _gz_rando_capacity_context,@function
+_gz_rando_capacity_context:
+    stwu 1,-80(1)
+    stw 0,8(1)
+
+    stw 3,12(1)
+    stw 4,16(1)
+    stw 5,20(1)
+    stw 6,24(1)
+    stw 7,28(1)
+    stw 8,32(1)
+    stw 9,36(1)
+    stw 10,40(1)
+    stw 11,44(1)
+    stw 12,48(1)
+    mfcr 0
+    stw 0,52(1)
+    mflr 0
+    stw 0,56(1)
+    mfctr 0
+    stw 0,60(1)
+    stw 3,68(1)
+    lis 11,_gz_rando_tools_flags@ha
+    lwz 0,_gz_rando_tools_flags@l(11)
+    andi. 0,0,8192
+    beq .Lcapacity_finish
+    lwz 5,0x11c(31)
+    cmpwi 5,140
+    beq .Lcapacity_id
+    cmpwi 5,150
+    bne .Lcapacity_finish
+.Lcapacity_id:
+    cmpwi 3,0
+    beq .Lcapacity_finish
+    lwz 4,16(1)
+    lis 0,0x8000
+    cmplw 4,0
+    bge .Lcapacity_finish
+    lwz 11,44(1)
+    addi 0,4,1
+    cmplw 0,11
+    bge .Lcapacity_finish
+    lwz 12,48(1)
+    lwz 10,40(1)
+    addi 11,10,4
+    lwzx 11,11,12
+    lwz 0,8(1)
+    cmplw 11,0
+    ble .Lcapacity_finish
+    subf 4,0,11
+    andi. 11,4,1
+    bne .Lcapacity_finish
+    add 0,12,0
+    cmplw 0,3
+    bne .Lcapacity_finish
+    srwi 4,4,1
+    bl _gz_rando_capacity_select
+    cmpwi 3,0
+    beq .Lcapacity_finish
+    stw 3,68(1)
+.Lcapacity_finish:
+    lwz 0,60(1)
+    mtctr 0
+    lwz 0,56(1)
+    mtlr 0
+    lwz 0,52(1)
+    mtcrf 255,0
+
+    lwz 3,12(1)
+    lwz 4,16(1)
+    lwz 5,20(1)
+    lwz 6,24(1)
+    lwz 7,28(1)
+    lwz 8,32(1)
+    lwz 9,36(1)
+    lwz 10,40(1)
+    lwz 11,44(1)
+    lwz 12,48(1)
+    lwz 5,68(1)
+    lwz 0,8(1)
+    addi 1,1,80
+    b _gz_rando_capacity_resume
+.size _gz_rando_capacity_context,.-_gz_rando_capacity_context
+.type _gz_rando_tools_flags,@object
+.type _gz_rando_capacity_resume,@function
+

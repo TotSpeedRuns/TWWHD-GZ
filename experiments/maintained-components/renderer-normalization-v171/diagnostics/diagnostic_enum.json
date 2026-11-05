@@ -1,0 +1,98 @@
+{
+  "schema": "private-render-trace-reserved16/1",
+  "storage": "RnsPending.reserved[4], bytes48..63 of existing64B pending owner",
+  "fields": [
+    "word12: (RnsOrder.stage &255)<<24 | (stepID &0xffffff)",
+    "word13: raw_result",
+    "word14: bad address or step-specific detail",
+    "word15: frame copied after other three writes; sync follows"
+  ],
+  "attempt_binding": "Pending request/frame words1/2 must match helper incoming request/frame; reader must compare with actual GHS attempt before attribution.",
+  "phase": {
+    "0": "no order milestone",
+    "1": "claimed, before reset guard",
+    "2": "guarded, before reset returns",
+    "3": "authentic reset returned",
+    "4": "exported, capture path"
+  },
+  "steps": {
+    "0x101": "RT_CLAIMED",
+    "0x102": "RT_OWNER_FAIL",
+    "0x103": "RT_ORDER_FAIL",
+    "0x104": "RT_GUARD_ENTER",
+    "0x105": "RT_GUARD_OK",
+    "0x106": "RT_OWNER_BEFORE_RESET_OK",
+    "0x107": "RT_RESET_ENTER",
+    "0x108": "RT_RESET_RETURNED",
+    "0x109": "RT_EXPORT_ENTER",
+    "0x10a": "RT_EXPORT_OK",
+    "0x10b": "RT_CAPTURE_ENTER",
+    "0x10c": "RT_CAPTURE_RESULT",
+    "0x10d": "RT_CAPTURE_DONE",
+    "0x201": "RT_RCG_ARGUMENT",
+    "0x202": "RT_RCG_SCOPE",
+    "0x203": "RT_RCG_STAGE_APART",
+    "0x204": "RT_RCG_RAW_SPAN",
+    "0x205": "RT_RCG_RAW_APART",
+    "0x206": "RT_RCG_BUSY",
+    "0x207": "RT_RCG_POST_SCOPE",
+    "0x208": "RT_RCG_OK",
+    "0x2200": "RT_RCG_WALK",
+    "0x301": "RT_RCL_ARGUMENT",
+    "0x302": "RT_RCL_SCOPE",
+    "0x303": "RT_RCL_PENDING_APART",
+    "0x304": "RT_RCL_GUARD_ENTER",
+    "0x305": "RT_RCL_GUARD_OK",
+    "0x306": "RT_RCL_RAW_SPAN",
+    "0x307": "RT_RCL_RAW_PENDING_APART",
+    "0x308": "RT_RCL_RAW_APART",
+    "0x309": "RT_RCL_BUSY",
+    "0x30a": "RT_RCL_POST_SCOPE",
+    "0x30b": "RT_RCL_NO_WITNESS",
+    "0x30c": "RT_RCL_PUBLISHED",
+    "0x3200": "RT_RCL_WALK"
+  },
+  "dynamic_steps": {
+    "0x2200 | pass<<4 | substep": "RCG walk: substep1 controls,2 proposal,3 graph; pass0/1. raw_result and current Work.bad retained.",
+    "0x3200 | pass<<4 | substep": "RCL walk:1 controls,2 proposal,3 normalized-first,4 parent/header closure,5 normalized-second,6 final controls,7 final proposal; pass0/1."
+  },
+  "owner_fail_details": {
+    "1": "request/frame/hg/role argument",
+    "2": "GHS scope",
+    "3": "HG token identity",
+    "4": "OIS role identity",
+    "5": "staging containment",
+    "6": "graphics owner"
+  },
+  "scope_details": {
+    "RT_RCG_SCOPE/RT_RCG_POST_SCOPE": {
+      "1": "GHS scope",
+      "2": "HG absent or changed",
+      "3": "staging containment"
+    },
+    "RT_RCL_SCOPE/RT_RCL_POST_SCOPE": {
+      "1": "GHS scope",
+      "2": "HG absent or changed",
+      "4": "staging containment; normalized-scope failures preserve wrapper owner/order trace"
+    }
+  },
+  "raw_RCG_results": {
+    "0": "OK",
+    "1": "ARGUMENT",
+    "2": "SCOPE",
+    "3": "BUSY",
+    "4": "CHANGED",
+    "5": "UNSUPPORTED",
+    "6": "GRAPH",
+    "7": "LIMIT",
+    "8": "ALIAS"
+  },
+  "header_sha256": "cbb954176f730c056ba52e409687d203b23448a40450ef55bbc1e3c2aa1e0ee0",
+  "limits": [
+    "Diagnostic only; no admission, owner, snapshot, lease, GPU or exact lifetime authority.",
+    "Writes only16 existing pending bytes, never SlotSeal.reserved.",
+    "Sequential64B reader observations may be torn; matching frame is advisory, not atomic commit or freshness proof.",
+    "Failures before matching pending initialization/prefix claim can leave no new trace.",
+    "Wrapper generic abort intentionally does not erase deeper RCG/RCL failure evidence."
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "schema": "partial-authored-practice173-provenance/1",
+  "selected_private_plan_sha256": "9b8b59e2a476377e59d65fba4fd14eb681f8ee78422f08526d90dad6d940dbe3",
+  "selected_game_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+  "upstream_repository": "SuperDude88/TWWHD-Randomizer",
+  "upstream_revision": "cb7b1c979ac031c8eae91e23fb00fc5f4d042efa",
+  "upstream_license": "MIT",
+  "existing_upstream_provenance_sha256": "3ef29597ace526f46943efa8cf3d230ac5bbc0abc17522c9fc348d4374a92492",
+  "source_origins": [
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando173-trace-private-closure-r1/compound_private.c",
+      "origin": "work/recovery/rando173-trace-private-closure-r1/compound_private.c",
+      "sha256": "a6681d9d501a57e95237b2af65cead7cb20a2946639b3093e6f73f5fc3ccba3d",
+      "bytes": 795
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-tools-row-source-r2/rando_transport.S",
+      "origin": "work/recovery/rando172-tools-row-source-r2/rando_transport.S",
+      "sha256": "72be0ce39b461cd497540f8ad66bdd2a764555d0aaac692c07cc346a0f22d7cd",
+      "bytes": 2631
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-gameplay-source-r1/rando_movement.S",
+      "origin": "work/recovery/rando172-gameplay-source-r1/rando_movement.S",
+      "sha256": "57fd38f156e7d1465464ba81800f6483865c726d428d79c32f539e57016c2ca4",
+      "bytes": 7636
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-gameplay-source-r1/rando_text.S",
+      "origin": "work/recovery/rando172-gameplay-source-r1/rando_text.S",
+      "sha256": "b1d2afb649f72a084c9488ce9636af0b57f99985318d65062a1ce8e3a87ac86a",
+      "bytes": 7667
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-gameplay-source-r1/rando_block_animation.S",
+      "origin": "work/recovery/rando172-gameplay-source-r1/rando_block_animation.S",
+      "sha256": "184bb08a2f1571532bea60751d86020b72fb15d83b4dee2a0b04bd9b74438dbe",
+      "bytes": 3844
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-guard-contexts-source-r1/rando_guard_contexts.S",
+      "origin": "work/recovery/rando172-guard-contexts-source-r1/rando_guard_contexts.S",
+      "sha256": "e49f797f2044777af2b7e5fccdf356db2e2b6ace6be4f0988c67e0d79f349c4e",
+      "bytes": 3804
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-final-copy-hook-r1/held_config_hook.S",
+      "origin": "work/recovery/rando172-final-copy-hook-r1/held_config_hook.S",
+      "sha256": "8a19aeebd622f031704642e86dc3ba1a84d625cbb1617f94385851675518575e",
+      "bytes": 1253
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-menu-data-source-r1/rando_menu_data.S",
+      "origin": "work/recovery/rando172-menu-data-source-r1/rando_menu_data.S",
+      "sha256": "4ee5e39df3263b0e05580d56590028931999a47143d32f96a94564f992bea706",
+      "bytes": 458
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/superswim171-tracker-index-r2/hash_index.c",
+      "origin": "work/recovery/superswim171-tracker-index-r2/hash_index.c",
+      "sha256": "21e8834f378d052426d1f0a987eb5c145bde9d4554d98281a1a830d9766c1bec",
+      "bytes": 6721
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/superswim171-tracker-index-r2/hash_index.h",
+      "origin": "work/recovery/superswim171-tracker-index-r2/hash_index.h",
+      "sha256": "a68e7da18a86556041f02dc8028e96c15efa64dd29e3576c84e4a34449ee6998",
+      "bytes": 2478
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/superswim171-tracker-runtime-r3/runtime.c",
+      "origin": "work/recovery/superswim171-tracker-runtime-r3/runtime.c",
+      "sha256": "c444320b31e88f37714a8d3262a1cb60ddd6fad6e00eb18e7436ac71d24b8cbb",
+      "bytes": 4313
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/superswim171-tracker-runtime-r3/contexts.S",
+      "origin": "work/recovery/superswim171-tracker-runtime-r3/contexts.S",
+      "sha256": "fac5179cf2b1dcefd12a4b9ce7cfe73f82546a2f5d7832bdee9cde4be05804fa",
+      "bytes": 12318
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-gameplay-more-r2/rando_more.S",
+      "origin": "work/recovery/rando172-gameplay-more-r2/rando_more.S",
+      "sha256": "2968bdc288b3ad19ddd4e1055f409a1889d2ce8a68e8947b6803eeab5a29fbd9",
+      "bytes": 2734
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-companion-source-r2/rando_companions.S",
+      "origin": "work/recovery/rando172-companion-source-r2/rando_companions.S",
+      "sha256": "f7cafc929bb52917412352e9ebbd89abf3b15402ff242a696b6e3eae740f9967",
+      "bytes": 9356
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-events-source-r1/siren_policy.c",
+      "origin": "work/recovery/rando172-events-source-r1/siren_policy.c",
+      "sha256": "ca7eed0e695b7e47d6ffff647fdad17949f977601902ab5d2398e2057727aad6",
+      "bytes": 1784
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-events-source-r1/siren_substance.S",
+      "origin": "work/recovery/rando172-events-source-r1/siren_substance.S",
+      "sha256": "8b2aa7583b8253d4864fb2734371c85fe2bb9cc7ee6561fcc7bd05bfc6fb4875",
+      "bytes": 2911
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-cutscene-source-r1/rando_cutscenes.S",
+      "origin": "work/recovery/rando172-cutscene-source-r1/rando_cutscenes.S",
+      "sha256": "04886d7d13ddacd4cdb7485963b625a85e5aa2bb20ddefe13bfb8aef5d87c87b",
+      "bytes": 6713
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-cutscene-more-source-r1/rando_cutscenes_more.S",
+      "origin": "work/recovery/rando172-cutscene-more-source-r1/rando_cutscenes_more.S",
+      "sha256": "0af5f750d6d17fb68fd8eddd824c203ebb9335509897f9a3ae185b5163c4a4ea",
+      "bytes": 4070
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-movement-more-source-r1/rando_movement_more.S",
+      "origin": "work/recovery/rando172-movement-more-source-r1/rando_movement_more.S",
+      "sha256": "5a25476b36727a6b9542c765d57efffccd308886d6938889f9b66bb98fb6833f",
+      "bytes": 6257
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-text-waits-source-r1/rando_waits.S",
+      "origin": "work/recovery/rando172-text-waits-source-r1/rando_waits.S",
+      "sha256": "364e35da7ea5a0135a8fc7b044289245402b381a7f3977037b1677973f832030",
+      "bytes": 1908
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-capacity-text-source-r1/capacity_context.S",
+      "origin": "work/recovery/rando172-capacity-text-source-r1/capacity_context.S",
+      "sha256": "554b1758a855bd15bc91854c3134f404c15c2de466ba19de5507ca855d9b060c",
+      "bytes": 1943
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-type3-text-source-r1/rando_type3.S",
+      "origin": "work/recovery/rando172-type3-text-source-r1/rando_type3.S",
+      "sha256": "2dd9181921b2354a6b387bd65fa7099c9164d330a06d2ea35f6e88ae4532a2d4",
+      "bytes": 1389
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-rematch-create-source-r1/rando_rematch_create.S",
+      "origin": "work/recovery/rando172-rematch-create-source-r1/rando_rematch_create.S",
+      "sha256": "5830b41f73e2329e466dc3fa6cdfce9e9189e09bf1dd2fe75ae87503a5d8c622",
+      "bytes": 875
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-drc-water-speed-source-r1/rando_water.S",
+      "origin": "work/recovery/rando172-drc-water-speed-source-r1/rando_water.S",
+      "sha256": "1d759ec29c803de429edba722e313e2b9691b3b2fd2770244796bf4e41da6813",
+      "bytes": 5737
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-open-drc-source-r1/rando_open_drc.S",
+      "origin": "work/recovery/rando172-open-drc-source-r1/rando_open_drc.S",
+      "sha256": "255c22551c80ec6dace37ae47c08385f5f174c697eea47d802eca688e1a12750",
+      "bytes": 2557
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-water-consumer-source-r1/rando_water_consumers.S",
+      "origin": "work/recovery/rando172-water-consumer-source-r1/rando_water_consumers.S",
+      "sha256": "ebbe62b6668a13d04d73ea95827f7cbd5fcb3ac5c41c523a9a2573c9cfdbd95e",
+      "bytes": 6610
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/rando172-sdk-reserve-source-r1/srd_reserve.S",
+      "origin": "work/recovery/rando172-sdk-reserve-source-r1/srd_reserve.S",
+      "sha256": "659cb7a47ba2247a3a0db7e7403ebc212d62e8c1ecdd401bb89de5f1411958b7",
+      "bytes": 681
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/v173-menu-input-trace-source-r1/menu_input_trace.S",
+      "origin": "work/recovery/v173-menu-input-trace-source-r1/menu_input_trace.S",
+      "sha256": "6d1094c0723979d1ab5f92b138561ab0cb7cedff7268d05293afad698b34a304",
+      "bytes": 1757
+    },
+    {
+      "path": "experiments/maintained-components/rando-mode-v173/source/v173-menu-input-private-source-r1/menu_input_private.c",
+      "origin": "work/recovery/v173-menu-input-private-source-r1/menu_input_private.c",
+      "sha256": "f419f43777440d229ea529e26f8661069b75fce922e185890d6fba72b8a39b1b",
+      "bytes": 440
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v173/source/render-current-graph-preflight-r2/hx_index_layout.h",
+      "origin": "work/recovery/rando172-renderer-indexed-source-r1/variant/source/render-current-graph-preflight-r2/hx_index_layout.h",
+      "sha256": "a68e7da18a86556041f02dc8028e96c15efa64dd29e3576c84e4a34449ee6998",
+      "bytes": 2478
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v173/source/render-current-graph-preflight-r2/render_graph.c",
+      "origin": "work/recovery/rando172-renderer-indexed-source-r1/variant/source/render-current-graph-preflight-r2/render_graph.c",
+      "sha256": "7e6baeebe4d35c3954d1225623aad58ecc602fce5ce7891d0de6501e5496021c",
+      "bytes": 19074
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v173/source/render-current-graph-preflight-r2/render_lifetime.c",
+      "origin": "work/recovery/rando172-renderer-indexed-source-r1/variant/source/render-current-graph-preflight-r2/render_lifetime.c",
+      "sha256": "4dcd1a49267384a792a9b1789488e92e3d05f129a7fef9a560191e1b5e0d8207",
+      "bytes": 10391
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v173/source/render-normalized-slots-r1/normalized_slot_registry.c",
+      "origin": "work/recovery/rando172-renderer-indexed-source-r1/variant/source/render-normalized-slots-r1/normalized_slot_registry.c",
+      "sha256": "1ae366b3dc7eba5f24d716e2e35ba50e70f376b2e06ef02608047fc60449356c",
+      "bytes": 13923
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v173/source/render-normalized-slots-r1/normalized_slot_registry.h",
+      "origin": "work/recovery/rando172-renderer-indexed-source-r1/variant/source/render-normalized-slots-r1/normalized_slot_registry.h",
+      "sha256": "3e88f7b0435bf74cdf3ff22f4bd9f8f1066b21e92d18f3a13168cdb03c2d810d",
+      "bytes": 1606
+    }
+  ],
+  "full_native_integration_reproduced": false,
+  "hardware_success_claimed": false
+}

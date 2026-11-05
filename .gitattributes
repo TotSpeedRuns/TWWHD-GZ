@@ -97,3 +97,10 @@ experiments/maintained-components/native-particle-save-r38/*.json text eol=lf
 experiments/maintained-components/native-particle-save-r39/overlay/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 experiments/maintained-components/native-particle-save-r39/README.md text eol=lf
 experiments/maintained-components/native-particle-save-r39/*.json text eol=lf
+
+# Exact source-only renderer171/practice173 dependency bytes.
+patcher/native_rpx.py -text
+patcher/title_engine.py -text
+tools/build_renderer_normalization171_source.py -text
+tools/build_practice173_components.py -text
+tools/generate_practice173_capacity.py -text

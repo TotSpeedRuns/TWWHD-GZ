@@ -1,0 +1,270 @@
+{
+  "schema": "authored-renderer171-public-source-manifest/1",
+  "files": [
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/build-spec.json",
+      "bytes": 126319,
+      "sha256": "777df807218804ff116c9d6200a2127b89471c6d3ee599a4c94cd1ab897502b8"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/diagnostics/decode_trace.py",
+      "bytes": 1541,
+      "sha256": "8684ce49222212f1e1ceaf01d196a74c35f3118d95b370dabbc547c8ba194d20"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/diagnostics/diagnostic_enum.json",
+      "bytes": 3638,
+      "sha256": "5d65ab460b26c34894f5a9d501c61ce40ec014e9ffb2ec6cb07ef831367f6346"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/mapped-api/mapped_api.h",
+      "bytes": 1881,
+      "sha256": "6455d16675d3bcc2912a593ed7623604eeb50bcfff7ac2d36f133b9b87eed6ba"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/mapped-policy/mapped_storage_policy.h",
+      "bytes": 2153,
+      "sha256": "f4be4dcb345ea99e2363701452263ed1d5af06ebe5fd6cac46d81e178970859d"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/forest_snapshot.h",
+      "bytes": 636,
+      "sha256": "8d86acf7676ef9dab4856a4460565344cbd93b0b7452eeeb0949eb054ae5c374"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/heap_domain_cut.h",
+      "bytes": 1781,
+      "sha256": "24e7b8a8f31f6000a52405d6ecb1307e13210116065fbdd0bd1840806e6f6c69"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/heap_graph.h",
+      "bytes": 1578,
+      "sha256": "61be11830a3abf06c0e042bf637574cc5a21cab561f5443e0208bedb3dba7bf8"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/joint_restore.h",
+      "bytes": 1628,
+      "sha256": "b8a12345521d600a702dc517e11ffbf7a9e6bc42c3d1282c44763f31385c8999"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/lifetime.h",
+      "bytes": 7036,
+      "sha256": "181cb7bcf0f009301b29b8cfa0dbe8d4ee77d6da18e5a0b1d461854b2c23183e"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/object_binding.h",
+      "bytes": 1410,
+      "sha256": "2a94911068381ab3a98ffc03feaf9ab7ea37a73e0cd35f7528efc0f441809e0e"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/object_binding_try.h",
+      "bytes": 1200,
+      "sha256": "bbbbd1fabbee7464e4dd3266af3dc3c597f2227491fba56cede58e62c23d7f0b"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/process.h",
+      "bytes": 2597,
+      "sha256": "67640c448cd6e8cb72ded173064144d4aaf7200255109b8c07ad73104645aadc"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/native_lifetime/rebuild.h",
+      "bytes": 1359,
+      "sha256": "b6d299d95a01d377bc49127ad000c67468918473c91edfd05c346d9063394e4e"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/arena_snapshot.h",
+      "bytes": 1376,
+      "sha256": "3e12bd1a64e086447e0d88435ca658bb2cbd1e0404e0439ef2e0b9bf427d587c"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/fpc_global_cut.h",
+      "bytes": 2482,
+      "sha256": "eb0d2793ba943bd9cdf3ce5016ff5eb77f990e80b4a99ede23180275a6724e6d"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/native_context_cut.h",
+      "bytes": 1428,
+      "sha256": "399d6afd73db9d001d837f1a469df7f458f9a731a276b60a4f45c5c9dd8dfe01"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_common_domain.h",
+      "bytes": 9006,
+      "sha256": "4a5d68172abe9b06a87fdf9c34514c8784308728f017704d54d51c0892a06c05"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_cut_policy.h",
+      "bytes": 1327,
+      "sha256": "7ce299cf59eab806f9276bfffb5392eeed3272b5d9ffac480315a14fce707bf1"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_dual_cut.h",
+      "bytes": 2570,
+      "sha256": "1ce4051570e4c249d108f8ed47fdf2d5ad4497ea23b0545c5de8656e4ca83840"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_held_view.h",
+      "bytes": 2628,
+      "sha256": "f8cd74cf2cc4f891ffbd84918e75686b0e265c27779a9b51562d064375a111fe"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_image_version.h",
+      "bytes": 283,
+      "sha256": "fc874c10a7812e9d0f0b81917268db7e9dff6463629924f7dd71eba2df2f8e25"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_native.h",
+      "bytes": 5084,
+      "sha256": "0d9fb409435e2d6c6cec3a5dd18c2a51c128543705276ca522233535ec4442ba"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_process.h",
+      "bytes": 2524,
+      "sha256": "b98811022ec36f8b18d3f3324949ecdf5250990d834e82c6ff8dd0c56c08ea4e"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_heap_save.h",
+      "bytes": 2913,
+      "sha256": "3d5716ccb9daf2d68d71857f773c00a1b201c7319d3fbc388686775e1d6e5b18"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/owned_images.h",
+      "bytes": 2607,
+      "sha256": "af94ab1eb3f8324c96e29ab3c04f3019ef1be2dbf21df586c4a72e19055745ba"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/player_global_cut.h",
+      "bytes": 1357,
+      "sha256": "ecf4a8436c1c983fb654e2311427eebc46df2faba68b73a2e36018690443b017"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/native-v154/ois/world_global_cut.h",
+      "bytes": 2153,
+      "sha256": "2675c452cb826548a0c2ecfb2228293b850c22054ca6d889a245d61e6fe8ab3f"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/recovery/restore_workspace.h",
+      "bytes": 6856,
+      "sha256": "1eb5ab3015cb1cca84dac84d9198460805114c21bc1e9862b45795feaa5beefa"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/recovery/workspace_overlay_private.h",
+      "bytes": 3855,
+      "sha256": "955ba4a1bc3207a57eee448778a43ac4c08ddf0a266fde0f09072681e9305e26"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/workspace/mapped_ois_backend.h",
+      "bytes": 1293,
+      "sha256": "c45b75a2349fac275b2545d13e62d9a77a1d206a269c9e5745b74aa68dcdce0e"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/interfaces/workspace/split_workspace.h",
+      "bytes": 473,
+      "sha256": "094cdf16ee9b47baf9ed6ac8389b4274dd6081dd73f2f03b5a6190d26e911a4a"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/provenance.json",
+      "bytes": 1949,
+      "sha256": "ddffa94f205eb5cf7893efb271a9cc800cf801a67eba01e19e0212a5b84ad439"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/README.md",
+      "bytes": 4661,
+      "sha256": "56dfcaaab2194bd925d36ab99303f925bd6a5b548c456218fb57769edcd693b8"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/scope.json",
+      "bytes": 819,
+      "sha256": "95fa6aba234670ebf0e3bb345bb72375dd18f7614ee647c77f923bdc86e1f2a5"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/ghs-pre-hg-gpu-order-r2/ghs_pre_hg_tick.c",
+      "bytes": 7893,
+      "sha256": "1673f9fa9aa02596d556ca45333a02134498b6158f74b007fdb4e2b5df6902e6"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-capture-normalize-wrapper-r1/capture_normalize.c",
+      "bytes": 5526,
+      "sha256": "9266d5ec6497a9bdf467e2e28c9708fccc9abd06c9e82abc74106a08fd0170af"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-capture-normalize-wrapper-r1/capture_normalize.h",
+      "bytes": 256,
+      "sha256": "96c96c2e254217931e420e7957a84173491057a48997016e445c643aaf36befc"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-current-graph-preflight-r1/render_graph.h",
+      "bytes": 936,
+      "sha256": "a16c5592c68faf0f1692a482e8a6a562a77333c06af7d6ac7e6a602f0f4a1907"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-current-graph-preflight-r2/lifetime_witness.h",
+      "bytes": 1891,
+      "sha256": "72ebe953c19c8a5d4fd7697b550b40deeda56657cef3f5aae7013eab3f4a4131"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-current-graph-preflight-r2/render_graph.c",
+      "bytes": 14329,
+      "sha256": "8ab13c71306ceea1f401fe590c3ee8e0dde3aa3e0d8456352d8eb426ae1ea59b"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-current-graph-preflight-r2/render_graph.h",
+      "bytes": 975,
+      "sha256": "f293bbc949602901e4b8920c8f5ea393e63597c9ac4f1eeeb205a02dd17dd79b"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-current-graph-preflight-r2/render_lifetime.c",
+      "bytes": 10301,
+      "sha256": "21ae98e85ad07247a3c7baeaaaa3b19e4f9888f6a22bd9bd5a873553415a26ca"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-normalization-source-join-r1/graphics_alias.S",
+      "bytes": 224,
+      "sha256": "2981705d83e8bb55863cae483d9739ca6fd863c0e7e88bb6dd14b8feaafa9dd1"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-normalized-private-closure-r1/compound_private.c",
+      "bytes": 641,
+      "sha256": "2efb80db4d50fe1ede559347c4e72844b5e0e184e148eec0387d9bb9f43dda01"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-normalized-slots-r1/normalized_finish.c",
+      "bytes": 15873,
+      "sha256": "b31e71d9c5732ea12bb30ac5391cd47041d998682e49c083ebfbe6a910136674"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-normalized-slots-r1/normalized_slot_registry.c",
+      "bytes": 12028,
+      "sha256": "092a762772d6127dfe0b7d90df6874d7225585b663a5fdef1737e8fb2d18267f"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-normalized-slots-r1/normalized_slot_registry.h",
+      "bytes": 1466,
+      "sha256": "c4764e5294b8c86fa7550f7230bfa3db381691bff6157f0dacd321709a66a83f"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/render-normalized-slots-r1/render_trace.h",
+      "bytes": 1090,
+      "sha256": "cbb954176f730c056ba52e409687d203b23448a40450ef55bbc1e3c2aa1e0ee0"
+    },
+    {
+      "path": "experiments/maintained-components/renderer-normalization-v171/source/v168-gpu-framework-serialization-r1/gfx_owner_query.c",
+      "bytes": 2438,
+      "sha256": "2892e75b6ee7635aa518c5d2295440b1ec1b786333bbfa204f93d2f44ac84cb3"
+    },
+    {
+      "path": "patcher/native_rpx.py",
+      "bytes": 9612,
+      "sha256": "52c566d12e8bb4b2182c2a1de93883e0eb40fa9db7ff2fba49c83cfe9b635cb5"
+    },
+    {
+      "path": "tools/build_renderer_normalization171_source.py",
+      "bytes": 16398,
+      "sha256": "d1e9a9156a5237b9f3261281c64f1ec43f0bc1406d6039aabf3e5689870d19a8"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "authored-Setup178-component-build/1",
+  "component": "experiments/maintained-components/setup-usb-v178",
+  "compiler_reference_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "linker_reference_sha256": "a0dc38a0dbfb15326bba69ce31462617f210750e220919fae23170e654563bc8",
+  "C_flags_O2": [
+    "-std=c17",
+    "-O2",
+    "-mcpu=750",
+    "-m32",
+    "-mbig-endian",
+    "-meabi",
+    "-msdata=none",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-common",
+    "-fno-pic",
+    "-fno-stack-protector",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "C_flags_Os": [
+    "-std=c17",
+    "-Os",
+    "-mcpu=750",
+    "-m32",
+    "-mbig-endian",
+    "-meabi",
+    "-msdata=none",
+    "-fno-pic",
+    "-fno-builtin",
+    "-ffreestanding",
+    "-fno-common",
+    "-fno-stack-protector",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "assembler_flags": [
+    "-mcpu=750",
+    "-m32",
+    "-meabi"
+  ],
+  "expected_objects": {
+    "practice_selection.o": "346e1e3cdbbdbba0daddbccf3ebb4f4ad3c775cf26ccdff4fce8d194f41a9e85",
+    "volume_choice.o": "72be508bd10504a2804778be37438ce0c1be867f119db25313ba50ec45dd832a",
+    "usb-contexts.o": "7365be1dae5e672b400c779a07ee5b0231716e4e7b0af0860637e448a92b6b22",
+    "usb-adapter.o": "8b63926de44078f5ba005b2412de6a52f12d5b8c5cc649bfbffcb3722b3192b5",
+    "role_match.o": "632b515f6eaf35d7a8ddf87b773520a3b0c0c9cd730f927f606850153381afb4",
+    "role-contexts.o": "5025ac0514c340e1c7238dfce61a476ccc560fd7a4517c864e8ed09dfc7ef288",
+    "role-adapter.o": "59f29c05e98fd0251edc8fc40ad32ba12a83a690a221674dc04f343d9fbf8db2",
+    "usb-upgrade-linked.o": "1533769352d7d640d3c7687ce0a242d2d33f90f2e7e1e8f22fd23ec4aa8b8280"
+  },
+  "expected_merged": {
+    "immutable_CODE_RO_bytes": 5656,
+    "mutable_bytes": 0,
+    "imports": 0,
+    "undefined_symbols": [
+      "_gz_mig_owned_resume",
+      "_gz_mig_prepare_resume",
+      "_gz_mig_probe_resume",
+      "gz_setup_native_lookup_absent",
+      "gz_setup_native_lookup_cleanup_error",
+      "gz_setup_native_lookup_copy",
+      "gz_setup_native_lookup_default_message",
+      "gz_setup_native_lookup_error_continue",
+      "gz_setup_native_lookup_loop_continue",
+      "gz_setup_prepare_copy_return",
+      "gz_setup_prepare_initial_return",
+      "gz_setup_prepare_installed_return",
+      "gz_setup_prepare_repair_return"
+    ],
+    "relocation_counts": {
+      "1": 40,
+      "4": 18,
+      "6": 19,
+      "10": 14
+    },
+    "catalog_table_offset": 2896,
+    "catalog_rows": 20
+  },
+  "qualified_final_setup": {
+    "revision": "v178 USB Test / Game v178",
+    "root_rpx_sha256": "3a982636f95faa811abd258f8e9fb1915e7b112e147f977941998b48377f15b1",
+    "wuhb_sha256": "2f12c85cff774693daab6ee5a8c12ac0dc2a99e78156ad00c954367956e9f547",
+    "component_builder_emits_image": false
+  },
+  "component_only": true,
+  "standard_headers": [
+    "stdint.h"
+  ]
+}

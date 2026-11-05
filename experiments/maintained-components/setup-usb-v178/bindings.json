@@ -1,0 +1,149 @@
+{
+  "schema": "Setup178-component-Native177-binding/1",
+  "source_only": true,
+  "parent_root_rpx_sha256": "5c3cd4c1fd2755f6d73bb05b284eaaab419bef77d1405bd661be55a485c1baa8",
+  "selected_final_root_rpx_sha256": "3a982636f95faa811abd258f8e9fb1915e7b112e147f977941998b48377f15b1",
+  "selected_final_wuhb_sha256": "2f12c85cff774693daab6ee5a8c12ac0dc2a99e78156ad00c954367956e9f547",
+  "selected_build_sha256": "1738d4685ac505fcdc63fea86adfbc5378454068afc959093fbc2d5fb4037d49",
+  "current_game": {
+    "version": 178,
+    "rpx_sha256": "37ea3c790f607b95814ece1d5f176c2b5cb8981344ca5fb2747a0e2c426623ac",
+    "title_sha256": "37e09cfde01e0020e819d7b4a6f1f7f47c2296701e7e274f0e660ac78d1ce333"
+  },
+  "Native_prior": {
+    "version": 177,
+    "rpx_sha256": "c623dffe50426b421069a5642002ea1e22b46dc8000711e01fbc2490c3ecc802",
+    "title_sha256": "d5c8376afe483787731c5efcb4ec4676599d402641f77a137e48c7a1d643a136"
+  },
+  "parent_component": {
+    "immutable_bytes": 5518,
+    "sha256": "0328bbe46e86b48345466af2e2a4d29b635e7f93bfa36838c333c8534f4a2a27"
+  },
+  "replacement_component": {
+    "immutable_bytes": 5656,
+    "sha256": "1533769352d7d640d3c7687ce0a242d2d33f90f2e7e1e8f22fd23ec4aa8b8280",
+    "append_preferred": 34643104,
+    "typed_rows": 91
+  },
+  "unresolved_bindings": {
+    "gz_setup_prepare_initial_return": {
+      "preferred": 33651088,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_prepare_repair_return": {
+      "preferred": 33654328,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_prepare_copy_return": {
+      "preferred": 33662980,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_prepare_installed_return": {
+      "preferred": 33665124,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_native_lookup_cleanup_error": {
+      "preferred": 33570928,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_native_lookup_copy": {
+      "preferred": 33570888,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_native_lookup_absent": {
+      "preferred": 33570696,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_native_lookup_loop_continue": {
+      "preferred": 33570780,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_native_lookup_default_message": {
+      "preferred": 268435556,
+      "kind": "DATA",
+      "borrowed_Native_interface": true
+    },
+    "gz_setup_native_lookup_error_continue": {
+      "preferred": 33570960,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "_gz_mig_owned_resume": {
+      "preferred": 33626988,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "_gz_mig_prepare_resume": {
+      "preferred": 33659584,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    },
+    "_gz_mig_probe_resume": {
+      "preferred": 33621736,
+      "kind": "CODE",
+      "borrowed_Native_interface": true
+    }
+  },
+  "hooks": [
+    {
+      "preferred_address": 33570776,
+      "expected_parent177_word": "48105cc8",
+      "entry": "gz_setup_usb_select_context",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24",
+      "retained_target": 34643104,
+      "target_offset_unchanged": true
+    },
+    {
+      "preferred_address": 33570956,
+      "expected_parent177_word": "48105e64",
+      "entry": "gz_setup_usb_error_context",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24",
+      "retained_target": 34643696,
+      "target_offset_unchanged": true
+    },
+    {
+      "preferred_address": 33626984,
+      "expected_parent177_word": "480f8a30",
+      "entry": "_gz_mig_owned_cmp",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24",
+      "retained_target": 34645400,
+      "target_offset_unchanged": true
+    },
+    {
+      "preferred_address": 33659580,
+      "expected_parent177_word": "480f0ba8",
+      "entry": "_gz_mig_prepare_cmp",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24",
+      "retained_target": 34645604,
+      "target_offset_unchanged": true
+    },
+    {
+      "preferred_address": 33621732,
+      "expected_parent177_word": "480fa044",
+      "entry": "_gz_mig_probe_unknown",
+      "linked": false,
+      "loader_kind": "R_PPC_REL24",
+      "retained_target": 34645800,
+      "target_offset_unchanged": true
+    }
+  ],
+  "integration_limits": [
+    "Documentary exact-parent expressions only; the portable builder never reads an RPX, SDK, profile, recipe or these Native addresses.",
+    "The full old5518B component/tail/catalogue and actual parent symbol/loader witnesses require independent authentication by a separate owned-input integrator.",
+    "Replace the complete component and typed CODE pointer rows, preserve all other Native code/exception/USB/transaction/cleanup165 behavior, apply exact current178/prior177 profile and samewidth labels separately.",
+    "Recompute proper RPX FileInfo/TEXT/DATA/TEMP/CRC/compression/WUHB and recipe resources; no image materializer or owned game resource is included.",
+    "Numeric interfaces do not acquire a caller lifetime or authorize arbitrary-version patching."
+  ]
+}

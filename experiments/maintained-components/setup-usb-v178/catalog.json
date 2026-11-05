@@ -1,0 +1,122 @@
+{
+  "schema": "Setup178-proposed20-exact-role-catalog/1",
+  "records": [
+    {
+      "game_version": 154,
+      "edition": "Public",
+      "rpx_sha256": "f6059b8de84a7024ca0a8be6f04792c0e139b3094f004c3eaaf59bd7aafb0218",
+      "title_sha256": "a576433fb6cf153a81d42072b8d5719c2a849c00744f2c0a8a45cc10257dd70c"
+    },
+    {
+      "game_version": 155,
+      "edition": "Personal/private test",
+      "rpx_sha256": "4f74cc45690ff2b456fd103beb3cd272056c6481012a0ce59711d5ced55ea32e",
+      "title_sha256": "5d0678f599d787a79b9bad070e22d1174444648e13b6532220ea6d0b13a8b358"
+    },
+    {
+      "game_version": 156,
+      "edition": "Personal/private test",
+      "rpx_sha256": "156f48c026ae41d1eb688ce810ed5f9e84663ccc0fca7b5727678639c3f6a956",
+      "title_sha256": "743dc601a719d5ba948854a075605228e6403130e08a77150d1d11874fa5003c"
+    },
+    {
+      "game_version": 157,
+      "edition": "Personal/private test",
+      "rpx_sha256": "5ba71421e77e277878ab1536405e606f514879cb709f390a09965cb8f2aaf526",
+      "title_sha256": "33f9862b4c08f5d208a08c13010093401743cd7fdeb10930d48e9662c7addb86"
+    },
+    {
+      "game_version": 158,
+      "edition": "Personal/private test",
+      "rpx_sha256": "b1ea8312c42e4cbbf46374def9f914f07b0b3843812ed143fbc76c5fdf7f82b5",
+      "title_sha256": "fb9e8f905900c29d31b42127fa97fce0a83a6115cf9b2f429994d5fb69c1b1da"
+    },
+    {
+      "game_version": 159,
+      "edition": "Personal/private test",
+      "rpx_sha256": "5982540de44b99ac21aa9061d26850f52178bd57790b71f7830156c9d9bb7e6e",
+      "title_sha256": "0c7ffb20fd9f560297f067b60c09366f4b1ad4c0d187af479e916453b42e8963"
+    },
+    {
+      "game_version": 160,
+      "edition": "Personal/private test",
+      "rpx_sha256": "f56e7c355d3e28c7d241dd4195adcf4c680f353d2b8aaa7335eaaa463b8863f5",
+      "title_sha256": "68c1abc1b53a0734fb0d31d2e96989ca4d48ecb53f53a1a3b526a4bf90538b5a"
+    },
+    {
+      "game_version": 161,
+      "edition": "Personal/private test",
+      "rpx_sha256": "df9cbc35cb4dbc08cded5757f75a35d28f4d4fecf2c344510fa32548c784dfa0",
+      "title_sha256": "6de983b83dba2ca8313179533f982a43945d038212bf73a76fc5e2b39c29f971"
+    },
+    {
+      "game_version": 162,
+      "edition": "Personal/private test",
+      "rpx_sha256": "46e39b0c83f960129c6d8a85cde70479c6cef472c2596c236fb438d56d928cb5",
+      "title_sha256": "54fd026f53b4019e69bd343cf1735cba57c65e435fac0d88c0e15cca6ebdfaef"
+    },
+    {
+      "game_version": 163,
+      "edition": "Personal/private test",
+      "rpx_sha256": "9263b06b652f428ff7b0b1a905ab7047440d889048279ade5b7aef38c24ebaea",
+      "title_sha256": "861aa6d209acca61f81e287e53dce5449fdc30ee9fd910d014abe2442eb24554"
+    },
+    {
+      "game_version": 164,
+      "edition": "Personal/private test",
+      "rpx_sha256": "1097db9aaa78a86a6779bda064ebd750bc3574aea4e47ab2781a8c79ba4e4f4b",
+      "title_sha256": "f7ac0c5a7fc0ae39a9b62bd0766b77611bf47fb8fd7595089f984b467359d192"
+    },
+    {
+      "game_version": 167,
+      "edition": "Personal/private test",
+      "rpx_sha256": "73f07a4b6b8fe5bbf8559878c67bdbb591ba71b2dbc99a6333851722e115786a",
+      "title_sha256": "534e5f5de3ec4cc2aa87a581b71792921d138d09414da2fccabf949c41b8acce"
+    },
+    {
+      "game_version": 168,
+      "edition": "Personal/private test",
+      "rpx_sha256": "02f66085956b951343d65863cc1a5adc8b3a7277be0abe00b2bc3165fd8d3b60",
+      "title_sha256": "9fc69aec8fa1c9559c9cc945c23985ecb47b906f2aa7da8dbe0cab1579c55842"
+    },
+    {
+      "game_version": 169,
+      "edition": "Personal/private test",
+      "rpx_sha256": "7815f9a3e50b6c6f95af84dc46a8287d210ce1a0bc80ad61fd4082ca61d65a45",
+      "title_sha256": "8399a9e386a50bcada693658069cb26484be29d38e6b2817119c150187804a4c"
+    },
+    {
+      "game_version": 170,
+      "edition": "Personal/private test",
+      "rpx_sha256": "537395b2645a3dad12d25d108a3bbfaa51e05817bac6a121e6f5432101235980",
+      "title_sha256": "773507c7e2f06d237c5c5ab7000eb17876e346026731cfb7d9fa7c4c54b1189c"
+    },
+    {
+      "game_version": 171,
+      "edition": "Personal/private test",
+      "rpx_sha256": "773b017385c25bf9ffe7a9555d5b078d4d949001ed5fd271cef6328e2f1df4ef",
+      "title_sha256": "cf12f3a004f15bdb8b53b37c7fe55272bd02394cc3b727202c0c0739ad089a19"
+    },
+    {
+      "game_version": 172,
+      "edition": "Personal/private test",
+      "rpx_sha256": "f69ed34ef90d5a20d067f8b0c3303afb21218f5e2a7662af9969f26eaa207a6a",
+      "title_sha256": "a51df84be19f4aba4f9f4fd6fede3b41d257a7adeb495d3f11f90e4ffdc6d630"
+    },
+    {
+      "game_version": 173,
+      "rpx_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+      "title_sha256": "d01d1879cc90ab8c52b118709bb60feafa3ac17227ce9cfe03e545af16ca9bf5"
+    },
+    {
+      "game_version": 175,
+      "rpx_sha256": "5915c5d4b7a37d2e80d49272000747c3003c0bd88ae453f64583f1e86f780a90",
+      "title_sha256": "650a5825b9196d941d909539bf10b540cecb78887d0ee49d4d7cc6f111e8991a"
+    },
+    {
+      "game_version": 176,
+      "rpx_sha256": "90db43aa6d01ee14ff517ba76daa99d1c9ed13dd8ad548ff7a8fd596c9a113a5",
+      "title_sha256": "52cde74779f4c45448147508f48917d03d0d3a5b87f2f67afcfe901ccc59115e"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "authored-Setup178-source-manifest/1",
+  "source_only": true,
+  "declared_paths": [
+    "docs/releases/v178-setup-components-status.md",
+    "experiments/maintained-components/setup-usb-v178/LICENSE",
+    "experiments/maintained-components/setup-usb-v178/README.md",
+    "experiments/maintained-components/setup-usb-v178/VALIDATION.json",
+    "experiments/maintained-components/setup-usb-v178/bindings.json",
+    "experiments/maintained-components/setup-usb-v178/build-spec.json",
+    "experiments/maintained-components/setup-usb-v178/catalog.json",
+    "experiments/maintained-components/setup-usb-v178/merge.ld",
+    "experiments/maintained-components/setup-usb-v178/roles/contexts.S",
+    "experiments/maintained-components/setup-usb-v178/roles/role_match.c",
+    "experiments/maintained-components/setup-usb-v178/roles/verified_roles.h",
+    "experiments/maintained-components/setup-usb-v178/usb/bundle.ld",
+    "experiments/maintained-components/setup-usb-v178/usb/contexts.S",
+    "experiments/maintained-components/setup-usb-v178/usb/practice_selection.c",
+    "experiments/maintained-components/setup-usb-v178/usb/practice_selection.h",
+    "experiments/maintained-components/setup-usb-v178/usb/volume_choice.c",
+    "tools/build_setup178_components.py"
+  ],
+  "files": [
+    {
+      "path": "docs/releases/v178-setup-components-status.md",
+      "bytes": 1067,
+      "sha256": "87c9e59da323988c9834479e680559438987a858c32cd78352d48ca384512bbb"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/LICENSE",
+      "bytes": 1078,
+      "sha256": "fca874a5a5f6eb87870721bd0033e3937e48712772853612cc4a0dbb1c98c998"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/README.md",
+      "bytes": 3708,
+      "sha256": "221830f2d32ebb18534612fb43ff45a6cdc496415caef05d34ade155002b07b8"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/VALIDATION.json",
+      "bytes": 1517,
+      "sha256": "572ae6d3314c6e4a94eaf67d105127b6f73801cd0201dcb4f4fff793cb0fc7f3"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/bindings.json",
+      "bytes": 5235,
+      "sha256": "31cd9769d785c1299a318356cee8757bcf8369a3ffb6f8e9933119d0d990e04d"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/build-spec.json",
+      "bytes": 3014,
+      "sha256": "72ceef0f52070add72002ae97a51f9a73415b89b317ec9ed248fa11c89e9da06"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/catalog.json",
+      "bytes": 5239,
+      "sha256": "3b0981151a93315134633e734be713403109a5ba513949c3e9907b223b158054"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/merge.ld",
+      "bytes": 96,
+      "sha256": "75758b74a94f4957a9c8b356ce0182a9184e4df41509c60850addda7f7517ab0"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/roles/contexts.S",
+      "bytes": 2090,
+      "sha256": "5b56c9a4047eafd5d7531f6ccd17a8f62036403d86c029b17969c852da2d5137"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/roles/role_match.c",
+      "bytes": 478,
+      "sha256": "7e41fe18595bfc72637f26d7fc3214ced083071fbb99b9954c64be37ff08f302"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/roles/verified_roles.h",
+      "bytes": 2829,
+      "sha256": "3d33696c1cef57318fea24d459f455946c5a21fa82688edc93fe30672bf3486c"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/usb/bundle.ld",
+      "bytes": 102,
+      "sha256": "163c7fcbe56f9739b87758ed555b255cf59a7922a7f57969b3486f99bc1fb701"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/usb/contexts.S",
+      "bytes": 4623,
+      "sha256": "b2974290e20779481407dfb5ca1d1a8af3619b88e6f1af202ab464501b6d7192"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/usb/practice_selection.c",
+      "bytes": 1515,
+      "sha256": "99e83b24365aa73428d63ff1c06516025ba2c724e0de952f5a090a7f54be2aa7"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/usb/practice_selection.h",
+      "bytes": 932,
+      "sha256": "a3efd7c7e77124a562aff5bebebca6e8521f0eb5b734b2e808a02898319e7cd9"
+    },
+    {
+      "path": "experiments/maintained-components/setup-usb-v178/usb/volume_choice.c",
+      "bytes": 666,
+      "sha256": "533412025070afa316b72bdd6e51de4e67932eb60206552c6abc05419d50ea92"
+    },
+    {
+      "path": "tools/build_setup178_components.py",
+      "bytes": 8942,
+      "sha256": "424183c95342ab6d0e2c499a74709006e010e528bd7544389cf7f8c5d53835b4"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "authored-JWA-after-frame-components-build/1",
+  "C_flags": [
+    "-mcpu=750",
+    "-O2",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-msdata=none",
+    "-fno-common",
+    "-fno-section-anchors",
+    "-fno-stack-protector",
+    "-fno-asynchronous-unwind-tables",
+    "-fno-tree-vectorize",
+    "-fno-tree-loop-distribute-patterns",
+    "-msoft-float",
+    "-mregnames",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-fstack-usage",
+    "-fno-jump-tables",
+    "-fno-tree-switch-conversion",
+    "-Wno-unused-function",
+    "-Wno-unused-variable",
+    "-Wno-misleading-indentation",
+    "-ffunction-sections",
+    "-fdata-sections"
+  ],
+  "standard_headers": [
+    "stdint.h",
+    "stddef.h"
+  ],
+  "external_WUT_headers": [
+    "coreinit/interrupts.h",
+    "coreinit/thread.h",
+    "coreinit/condition.h",
+    "coreinit/mutex.h",
+    "their genuine transitive WUT headers"
+  ],
+  "reference_devkitPPC": "r49",
+  "reference_WUT": "1.3.0",
+  "reference_compiler_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "reference_linker_sha256": "a0dc38a0dbfb15326bba69ce31462617f210750e220919fae23170e654563bc8",
+  "translation_units": [
+    {
+      "source": "provider-source/provider.c",
+      "object": "frame-init-provider.o",
+      "sha256": "2da93f1d55de327ae4f171381aacd8a92dc013cec76c7bf4ee4530d90a2d5905"
+    },
+    {
+      "source": "jol-source/jol_context.c",
+      "object": "frame-init-jol.o",
+      "sha256": "ebc57ccfc879e5e4d9859d714c2c1f948a2243c7540b691395aaa349d93ba725"
+    }
+  ],
+  "linker_flags": [
+    "-r",
+    "--emit-relocs"
+  ],
+  "combined_object": "frame-init-components.o",
+  "combined_sha256": "92c2858ab198b568171b52293c7399d501ed0eccb397e1bb175b4da11cfab9fe",
+  "selected": false,
+  "runtime_ready": false,
+  "no_Native_caller_activation_or_hardware_claim": true
+}

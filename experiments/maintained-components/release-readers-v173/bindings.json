@@ -1,0 +1,133 @@
+{
+  "schema": "current173-release-readers-typed-bindings/1",
+  "parent_rpx_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+  "address_semantics": "Preferred addresses only. Separate loader CODE and DATA domains; these numbers are not relocated runtime pointers.",
+  "interfaces": {
+    "_gz_hx_index": {
+      "preferred_address": "0x127ccad0",
+      "domain": "DATA",
+      "relocation_types": [
+        4,
+        6
+      ],
+      "bytes": 2164840,
+      "contract": "Existing indexR2/runtimeR3 cache; all genuine writers must maintain it under the same lock."
+    },
+    "_gz_hx_select_allocation": {
+      "preferred_address": "0x2cd5524",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Existing ordinary C (pointer,heap,create=0)->HxRow*; first pointer+heap before EMPTY, before downstream state checks."
+    },
+    "_gz_hx_cursor_begin": {
+      "preferred_address": "0x2cd4e58",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Existing ordinary C (index,pointer,owned32Bcursor)->status; no native allocation lease."
+    },
+    "_gz_hx_cursor_next": {
+      "preferred_address": "0x2cd506c",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Existing ordinary C (index,rows,owned32Bcursor,owned4BrowID)->status; index and primary rows stable under retained common lock."
+    },
+    "_gz_hl_control": {
+      "preferred_address": "0x10bff36c",
+      "domain": "DATA",
+      "relocation_types": [
+        4,
+        6
+      ],
+      "bytes": 64,
+      "contract": "Existing HL control; original common lock already owned, busy==1."
+    },
+    "_gz_hl_allocations": {
+      "preferred_address": "0x1183fe2c",
+      "domain": "DATA",
+      "relocation_types": [
+        4,
+        6
+      ],
+      "bytes": 15728640,
+      "contract": "Existing primary metadata rows only; no pointed-to payload is read."
+    },
+    "_gz_hx_release_begin_found": {
+      "preferred_address": "0x2a9ee90",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Unlinked continuation in original Begin frame; r7 HL control and nonvolatile state retained; found also r9 row."
+    },
+    "_gz_hx_release_begin_missing": {
+      "preferred_address": "0x2a9ee48",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Unlinked continuation in original Begin frame; r7 HL control and nonvolatile state retained; found also r9 row."
+    },
+    "_gz_hx_release_return_found": {
+      "preferred_address": "0x2a9f0dc",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Unlinked continuation in original Return frame; r4/r5/r6 and r31 token retained; found also r9 row and r3 ENDING."
+    },
+    "_gz_hx_release_return_missing": {
+      "preferred_address": "0x2a9f06c",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Unlinked continuation in original Return frame; r4/r5/r6 and r31 token retained; found also r9 row and r3 ENDING."
+    },
+    "_gz_hx_existing_ready": {
+      "preferred_address": "0x2cd5214",
+      "domain": "CODE",
+      "relocation_types": [
+        10
+      ],
+      "contract": "Static ordinary C ready(void)->u32; exact entry derived from the existing selector call, not a public SDK interface."
+    }
+  },
+  "hooks": [
+    {
+      "site": "0x2a9edfc",
+      "domain": "CODE",
+      "replacement": "_gz_hx_release_begin_context",
+      "relocation_type": 10,
+      "linked": false,
+      "old_loader_rows_at_site": 0
+    },
+    {
+      "site": "0x2a9f01c",
+      "domain": "CODE",
+      "replacement": "_gz_hx_release_return_context",
+      "relocation_type": 10,
+      "linked": false,
+      "old_loader_rows_at_site": 0
+    }
+  ],
+  "entry_contracts": {
+    "begin": "Original function entry 0x02a9ecf0,32B frame; hook after original lock and EXP/UNIT admission. Inputs r28 pointer,r31 heap,r7 HL control.",
+    "return_": "Original function entry 0x02a9efc8,24B frame; token0 exits before hook; otherwise hook after original lock/counter. Inputs r4 pointer,r5 HL control,r6 heap,r31 token."
+  },
+  "integration_requirements": [
+    "Authenticate actual parent RPX hash, original hook owners and complete Native continuation live-ins before installing any branch.",
+    "Resolve all 11 interfaces from genuine typed parent rows/exports and provider bodies. Do not infer CODE/DATA placement from numeric addresses.",
+    "PPC REL24 kind10 uses CODE bias; ADDR16_HA kind6 plus ADDR16_LO kind4 use target DATA bias including signed-low carry. Keep source relocation addends.",
+    "Install unlinked hook branches only after component placement/range and loader-row proof; no full RPX builder is included.",
+    "Full-kit/AD composition moves existing provider CODE by +4 relative to this parent. This catalogue MUST NOT be used there without separate actual-parent byte/typed binding proof; do not add4 blindly."
+  ],
+  "new_mutable": 0,
+  "new_imports": 0,
+  "new_SDK_calls": 0
+}

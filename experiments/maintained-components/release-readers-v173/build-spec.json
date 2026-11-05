@@ -1,0 +1,46 @@
+{
+  "schema": "authored-release-reader-build/1",
+  "compiler_reference": "Standalone devkitPPC r49 powerpc-eabi-gcc.exe",
+  "compiler_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "linker_sha256": "a0dc38a0dbfb15326bba69ce31462617f210750e220919fae23170e654563bc8",
+  "compiler_flags": [
+    "-Os",
+    "-mcpu=750",
+    "-m32",
+    "-meabi",
+    "-msdata=none",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-common",
+    "-fno-pic",
+    "-fno-stack-protector",
+    "-fno-unwind-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Werror"
+  ],
+  "compile_order": [
+    "release_readers.c",
+    "release_contexts.S"
+  ],
+  "linker_flags": [
+    "-r"
+  ],
+  "output": "release_component.o",
+  "component_sha256": "fea3e775f9126876afb6687e5b4c01ec344b3c160091ad87dd97d5ec02e4e4b2",
+  "CODE": 684,
+  "readonly": 0,
+  "mutable": 0,
+  "source_paths": [
+    "experiments/maintained-components/release-readers-v173/LICENSE",
+    "experiments/maintained-components/release-readers-v173/README.md",
+    "experiments/maintained-components/release-readers-v173/VALIDATION.json",
+    "experiments/maintained-components/release-readers-v173/bindings.json",
+    "experiments/maintained-components/release-readers-v173/build-spec.json",
+    "experiments/maintained-components/release-readers-v173/source/hash_index.h",
+    "experiments/maintained-components/release-readers-v173/source/release_contexts.S",
+    "experiments/maintained-components/release-readers-v173/source/release_readers.c",
+    "tools/build_release_reader_component.py"
+  ]
+}

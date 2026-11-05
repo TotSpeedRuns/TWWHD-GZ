@@ -1,0 +1,50 @@
+{
+  "schema": "public-authored-release-reader-files/1",
+  "files": [
+    {
+      "path": "experiments/maintained-components/release-readers-v173/LICENSE",
+      "bytes": 1078,
+      "sha256": "fca874a5a5f6eb87870721bd0033e3937e48712772853612cc4a0dbb1c98c998"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/README.md",
+      "bytes": 4998,
+      "sha256": "b2bba47172ab5b4b66080fcafd08eb54fee3879d39cf60009d7f204b4abcf8bf"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/VALIDATION.json",
+      "bytes": 1467,
+      "sha256": "bba902ca116f5c189eed896fe98d7ecae63ab9336e0d6724e86a7dc107587a32"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/bindings.json",
+      "bytes": 5093,
+      "sha256": "e30639a269a03683b901475e6402d5d2f530739fa7cc5a67a26c1013986efb15"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/build-spec.json",
+      "bytes": 1597,
+      "sha256": "ef1759d9542adcc3fc25f4b2f764b7ea2e8ea84ff495e60e81bc897f3562e5e2"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/source/hash_index.h",
+      "bytes": 2478,
+      "sha256": "a68e7da18a86556041f02dc8028e96c15efa64dd29e3576c84e4a34449ee6998"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/source/release_contexts.S",
+      "bytes": 1965,
+      "sha256": "cd75d371db6ec856de8d5ef59c70f6d89f7cd05895c988ef3455029ddbb0bde8"
+    },
+    {
+      "path": "experiments/maintained-components/release-readers-v173/source/release_readers.c",
+      "bytes": 2807,
+      "sha256": "cbff756e9661cc993f4ecc11c046cd9eeb5ac2d5e3f21d8f8295a3c8ec9b5247"
+    },
+    {
+      "path": "tools/build_release_reader_component.py",
+      "bytes": 7511,
+      "sha256": "8b03356cc74e3954c7abbf409db4fedb8b5e7f73bbc8bf7de767cbbe97bd7ef8"
+    }
+  ]
+}

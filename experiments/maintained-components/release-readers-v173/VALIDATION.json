@@ -1,0 +1,17 @@
+{
+  "schema": "authored-release-reader-source-validation/1",
+  "component_sha256": "fea3e775f9126876afb6687e5b4c01ec344b3c160091ad87dd97d5ec02e4e4b2",
+  "CODE": 684,
+  "mutable": 0,
+  "qualified_parent_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+  "producer_qualification_sha256": "d16be3177ddd77ceb1aa30ba3f47cce77ecc31323702c417d54aeb10da0d17ff",
+  "producer_manifest_sha256": "5958fbb444f7e8995bba5fe4b98fb7b86405c5ca6b90195fbc6525eb6369b5c0",
+  "independent_qualification_sha256": "d60736d8c30bfde17619b4770b855b541cef3ed2de61ef4f7c2f00c3e93e1750",
+  "independent_manifest_sha256": "1e0f66d344eef46d7c4bbfddf270a10c082dfe273afb04c538debe14b79fd2e5",
+  "ABI_peer_qualification_sha256": "a5e5ed76046486908ca7ec150827d5d71620a78bb45e4c17e8517253ec6b1d84",
+  "producer_scope": "Actual serialized Native Begin/Return paths, dense/sparse/cold fixtures,36 paired Native matrix cases across2biases plus11faults; original interrupt SDK endpoints explicitly modeled.",
+  "independent_scope": "132 component/context cases across3biases,24 cycle/invalid-successor refusals before cursor_next,20 actual provider CODE sections authenticated; static continuation live-ins separately reviewed.",
+  "hardware_tested": false,
+  "public_build_scope": "Exact ET_REL reproduction only; private Native fixtures, compiled binaries, SDK/game bytes and physical captures are omitted.",
+  "physical_lifetime_or_concurrent_writer_exclusion_proven": false
+}

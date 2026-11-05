@@ -1,0 +1,15 @@
+{
+  "schema": "owned-followup-source-file-manifest/1",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "build-spec.json": "b4d528a2d558322d028904ed6d17ad56bcafa21d3e1f5a5008d38a5a018004b3",
+    "build.py": "25ebc84d58f6e23935c846f100e77bb5bc3b71b29e35bb7646cb37827fa97a0f",
+    "README.md": "ba7207ef2ddc4f42965acece892dcbaf6d31c90a80b07d9a85b17fd75d29c402",
+    "source/rando_totg_hub_doors.S": "4125447ea698aad6ec6dbdf8c72e328ccd6e76014fd60589552a103abf8ca145",
+    "source/render-current-graph-preflight-r2/hx_index_layout.h": "a68e7da18a86556041f02dc8028e96c15efa64dd29e3576c84e4a34449ee6998",
+    "source/render-current-graph-preflight-r2/render_graph.c": "b1d24c1d473588ab45fd9d0b4b7100e6d55a60d586d9038974618f94a7f809b0",
+    "source/render-current-graph-preflight-r2/render_graph.h": "f293bbc949602901e4b8920c8f5ea393e63597c9ac4f1eeeb205a02dd17dd79b",
+    "source/render-current-graph-preflight-r2/render_refusal_trace.h": "cf3cfe38ec94d35a820f0e15fd852e212a26cb37ff0fde3ee74f311f0225d9bc",
+    "source/render-normalized-slots-r1/render_trace.h": "cbb954176f730c056ba52e409687d203b23448a40450ef55bbc1e3c2aa1e0ee0"
+  }
+}

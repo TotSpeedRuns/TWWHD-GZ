@@ -1,0 +1,191 @@
+{
+  "schema": "owned-static-receiver-and-ToTG-source/1",
+  "source_only": true,
+  "compiler_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "linker_sha256": "a0dc38a0dbfb15326bba69ce31462617f210750e220919fae23170e654563bc8",
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-mcpu=750",
+    "-msoft-float",
+    "-msdata=none",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-common",
+    "-fno-stack-protector",
+    "-fno-tree-loop-distribute-patterns",
+    "-fno-tree-vectorize",
+    "-fno-jump-tables",
+    "-fno-asynchronous-unwind-tables",
+    "-Wall",
+    "-Wextra",
+    "-Wno-misleading-indentation",
+    "-fstack-usage"
+  ],
+  "expected_preflight_object": "b068782e50fee5e915d05e5d0a06fe632a8f998a0450bfb71b0977094bfeb8e3",
+  "expected_ToTG_object": "82e2b9d24b91439fb1dd4749bdd85f4ae08296aabf911495d40a8ab4e7596f25",
+  "proposed_original_EUR_v0_preflight_bindings": {
+    "_gz_ghs_hg": {
+      "domain": "CODE",
+      "preferred": 45094432
+    },
+    "_gz_ghs_scope": {
+      "domain": "CODE",
+      "preferred": 45094048
+    },
+    "_gz_hl_allocations": {
+      "domain": "DATA",
+      "preferred": 293862956
+    },
+    "_gz_hl_control": {
+      "domain": "DATA",
+      "preferred": 281015148
+    },
+    "_gz_hl_exp_table": {
+      "domain": "DATA",
+      "preferred": 269769200
+    },
+    "_gz_hl_heaps": {
+      "domain": "DATA",
+      "preferred": 309591596
+    },
+    "_gz_hl_meta_try_lock": {
+      "domain": "CODE",
+      "preferred": 44688932
+    },
+    "_gz_hl_meta_unlock": {
+      "domain": "CODE",
+      "preferred": 44689040
+    },
+    "_gz_hl_solid_table": {
+      "domain": "DATA",
+      "preferred": 269769544
+    },
+    "_gz_hl_unit_table": {
+      "domain": "DATA",
+      "preferred": 269770424
+    },
+    "_gz_hm_scopes": {
+      "domain": "DATA",
+      "preferred": 290438376
+    },
+    "_gz_hx_index": {
+      "domain": "DATA",
+      "preferred": 310168272
+    },
+    "_gz_ois_heap_apart": {
+      "domain": "CODE",
+      "preferred": 44915116
+    },
+    "_gz_ois_heap_stage_match": {
+      "domain": "CODE",
+      "preferred": 44914684
+    },
+    "_gz_rcg_fixed_packet_initialized": {
+      "domain": "DATA",
+      "preferred": 273076360
+    },
+    "_gz_rcg_fixed_packet_vtable": {
+      "domain": "DATA",
+      "preferred": 268799240
+    },
+    "_gz_rcg_fixed_packets": {
+      "domain": "DATA",
+      "preferred": 273075744
+    },
+    "_gz_rcg_game_initialized": {
+      "domain": "DATA",
+      "preferred": 273109928
+    },
+    "_gz_rcg_game_owner": {
+      "domain": "DATA",
+      "preferred": 273108448
+    },
+    "_gz_rcg_j3d": {
+      "domain": "DATA",
+      "preferred": 273368536
+    },
+    "_gz_rcg_native_ghc_proposal": {
+      "domain": "DATA",
+      "preferred": 309853740
+    },
+    "_gz_rns_trace": {
+      "domain": "CODE",
+      "preferred": 46997944
+    },
+    "_gz_rcg_static_receiver": {
+      "domain": "DATA",
+      "preferred": 273078480
+    },
+    "_gz_rcg_static_receiver_published": {
+      "domain": "DATA",
+      "preferred": 273078448
+    },
+    "_gz_rcg_static_receiver_initialized": {
+      "domain": "DATA",
+      "preferred": 273079416
+    },
+    "_gz_rcg_static_receiver_vtable": {
+      "domain": "DATA",
+      "preferred": 268672824
+    }
+  },
+  "proposed_ToTG_bindings": {
+    "_gz_rando_tools_flags": {
+      "preferred": 273885768,
+      "info": 17
+    },
+    "_gz_rando_current_stage": {
+      "preferred": 273105380,
+      "info": 17
+    },
+    "_gz_rando_totg_switch_resume": {
+      "preferred": 38971932,
+      "info": 18
+    },
+    "_gz_rando_totg_glow_west_skip": {
+      "preferred": 38979296,
+      "info": 18
+    },
+    "_gz_rando_totg_glow_west_resume": {
+      "preferred": 38979192,
+      "info": 18
+    },
+    "_gz_rando_totg_glow_north_skip": {
+      "preferred": 38979296,
+      "info": 18
+    },
+    "_gz_rando_totg_glow_north_resume": {
+      "preferred": 38979244,
+      "info": 18
+    }
+  },
+  "proposed_ToTG_hooks": [
+    {
+      "name": "_gz_rando_totg_switch",
+      "site": 38971928,
+      "word": 2281898163,
+      "resume": 38971932,
+      "role": "Original low-byte getter; scalar FF selects upstream unlocked condition without actor or switch writes."
+    },
+    {
+      "name": "_gz_rando_totg_glow_west",
+      "site": 38979188,
+      "word": 1099038828,
+      "resume": 38979192,
+      "skip": 38979296,
+      "role": "Skip only the west/north initial lock-dependent glow branch while exact mode/stage/door match; servant-returned check remains genuine."
+    },
+    {
+      "name": "_gz_rando_totg_glow_north",
+      "site": 38979240,
+      "word": 1099038776,
+      "resume": 38979244,
+      "skip": 38979296,
+      "role": "Skip only the west/north initial lock-dependent glow branch while exact mode/stage/door match; servant-returned check remains genuine."
+    }
+  ],
+  "runtime_selected": false,
+  "full_current_build_reconstructed": false,
+  "hardware_SaveRestore_verified": false
+}

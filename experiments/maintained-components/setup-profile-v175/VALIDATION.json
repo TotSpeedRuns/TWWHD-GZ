@@ -1,0 +1,20 @@
+{
+  "schema": "authored-Setup175-profile-evidence/1",
+  "private_profile_build_sha256": "6509200307699612ea515df85d029e5ddf1e72d4bffcceb9de4c572c241eb0b1",
+  "game175_build_sha256": "3f1a94e0c1a0b09f8065f463f86365754fd628244a721bd17b70f1488d87789a",
+  "qualified_parent_root_sha256": "9ec93695abe1848d7fb5ebeda0ac88d34744616f7a130499ff30f408b609280e",
+  "qualified_parent_WUHB_sha256": "543c1d1e7642a793f7ddb819c1404f10f9d731f418a4abe251c5a6c73ac95754",
+  "expected_outputs": {
+    "game_rpx_sha256": "5915c5d4b7a37d2e80d49272000747c3003c0bd88ae453f64583f1e86f780a90",
+    "game_title_sha256": "650a5825b9196d941d909539bf10b540cecb78887d0ee49d4d7cc6f111e8991a",
+    "root_rpx_sha256": "910b33287300ffbc70aa0daf0cc451df22df9a4cdf956c080c00598e5eaadb0d",
+    "WUHB_sha256": "4725bbfcec642ad8eb9ccd988b93d7707472a83a4eee79752120f90c467551f7",
+    "recipe_sha256": "f44d8ede25e19b2a56b5c12a04b16c36bec0e0719da25a7788df5063715acb57",
+    "title_recipe_sha256": "b79cac906202d329ca8a0c358228e2cfefac7015d71b738d397cca82ca4fbda9"
+  },
+  "source_only_export": true,
+  "full_Setup_or_game_source_recovered": false,
+  "physical_console_or_USB_tested": false,
+  "public_source_rebuild_verified": true,
+  "source_verification_scope": "Portable source copy with only two published parser dependencies, six exact owned-input outputs and eight refusal guards; final export qualification binds the receipt."
+}

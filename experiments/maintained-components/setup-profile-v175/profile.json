@@ -1,0 +1,94 @@
+{
+  "schema": "authored-Setup175-profile/1",
+  "setup_version": 175,
+  "game_version": 175,
+  "revision": "v175 USB Test / Game v175",
+  "revision_printable_bytes": 25,
+  "parent": {
+    "root_rpx_sha256": "9ec93695abe1848d7fb5ebeda0ac88d34744616f7a130499ff30f408b609280e",
+    "WUHB_sha256": "543c1d1e7642a793f7ddb819c1404f10f9d731f418a4abe251c5a6c73ac95754",
+    "metadata": {
+      "passed_structural_checks": true,
+      "setup_version": 174,
+      "game_version": 173,
+      "hook_count": 5,
+      "hooks": [
+        {
+          "site": 33570776
+        },
+        {
+          "site": 33570956
+        },
+        {
+          "site": 33626984
+        },
+        {
+          "site": 33659580
+        },
+        {
+          "site": 33621732
+        }
+      ],
+      "payloads": [
+        {
+          "name": "app-identity.json",
+          "bytes": 1274,
+          "sha256": "297e61697a5e44c833174470ce80411d646832ffa9167c3f3748ab858b463b8a"
+        },
+        {
+          "name": "practice.gzd",
+          "bytes": 12629579,
+          "sha256": "e4e8072dc5b007f8c16676e8a6218990003d7c1a4437d9a33229fabc95fe05ff"
+        },
+        {
+          "name": "title.gzt",
+          "bytes": 763723,
+          "sha256": "a489f4237216daecf42122eef0e448a665a23887b6c8f03c5975fdddf856d9ce"
+        }
+      ],
+      "target_game_rpx_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+      "target_game_title_sha256": "d01d1879cc90ab8c52b118709bb60feafa3ac17227ce9cfe03e545af16ca9bf5"
+    }
+  },
+  "target": {
+    "game_rpx_sha256": "5915c5d4b7a37d2e80d49272000747c3003c0bd88ae453f64583f1e86f780a90",
+    "game_title_sha256": "650a5825b9196d941d909539bf10b540cecb78887d0ee49d4d7cc6f111e8991a",
+    "root_rpx_sha256": "910b33287300ffbc70aa0daf0cc451df22df9a4cdf956c080c00598e5eaadb0d",
+    "WUHB_sha256": "4725bbfcec642ad8eb9ccd988b93d7707472a83a4eee79752120f90c467551f7",
+    "recipe_sha256": "f44d8ede25e19b2a56b5c12a04b16c36bec0e0719da25a7788df5063715acb57",
+    "title_recipe_sha256": "b79cac906202d329ca8a0c358228e2cfefac7015d71b738d397cca82ca4fbda9"
+  },
+  "published_dependencies": {
+    "commit": "db12c90fed8f0141c6625b4a162a27581c212a22",
+    "files": {
+      "patcher/native_rpx.py": {
+        "bytes": 9612,
+        "sha256": "52c566d12e8bb4b2182c2a1de93883e0eb40fa9db7ff2fba49c83cfe9b635cb5",
+        "git_blob_sha1": "10d21fb5cb57fd2d759239003ac5f22a3f3309a9"
+      },
+      "patcher/title_engine.py": {
+        "bytes": 3715,
+        "sha256": "9d5168d3c0362f0e4585f5b8e1fc00f2f0289bcb019d2014d03f59d533c8297f",
+        "git_blob_sha1": "5a23d4bdca0cd31c1347fcd8b43d709d0f1fba1f"
+      }
+    }
+  },
+  "cleanup_seam": 34620768,
+  "cleanup_current_objects": {
+    "gz_cleanup_current_rpx_sha": {
+      "address": 34628976,
+      "bytes": 32,
+      "domain": "CODE",
+      "storage": "immutable current-digest metadata"
+    },
+    "gz_cleanup_current_title_sha": {
+      "address": 34628944,
+      "bytes": 32,
+      "domain": "CODE",
+      "storage": "immutable current-digest metadata"
+    }
+  },
+  "scope": "Same-width selected profile and current-cleanup identities/log labels only; all5 hooks/typed rows/17 roles/cleanup165 policy retained.",
+  "full_Setup_source_recovered": false,
+  "hardware_tested": false
+}

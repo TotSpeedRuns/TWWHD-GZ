@@ -1,0 +1,48 @@
+{
+  "schema": "reviewed-save-validation-source-provenance/1",
+  "gates": {
+    "ncb-nps-consumer-source-r1": {
+      "path": "work/recovery/ncb-nps-consumer-source-r1/qualification.json",
+      "bytes": 5157,
+      "sha256": "258ebb12176d3ce92b023688fe526a9a4660f28210825fd11e495d935acb2b43"
+    },
+    "ncb-source-nps-independent-r1": {
+      "path": "work/recovery/ncb-source-nps-independent-r1/qualification.json",
+      "bytes": 1402,
+      "sha256": "e131088af4af5cd916f623deabc50057b891e01f43ca07b7cf29f372b1e2d4cd"
+    },
+    "ncb-slot-label-source-r1": {
+      "path": "work/recovery/ncb-slot-label-source-r1/qualification.json",
+      "bytes": 2650,
+      "sha256": "91b682bf472f709d8d98f9fd1d1ae31d11a858a51467945fb844851a686c309f"
+    },
+    "ncb-slot-label-binding-correction-r1": {
+      "path": "work/recovery/ncb-slot-label-binding-correction-r1/qualification.json",
+      "bytes": 811,
+      "sha256": "58818f764a75c97e0e32ae3b958e8365e7c0e0684a1ec9143ae9936b87a1de66"
+    },
+    "ncb-slot-label-corrected-independent-r1": {
+      "path": "work/recovery/ncb-slot-label-corrected-independent-r1/qualification.json",
+      "bytes": 1906,
+      "sha256": "50f0c85202da3f3e421eb90afc222877f2f972c23d9d851d59430933955f7f77"
+    },
+    "fixed175-explanation-r1": {
+      "path": "work/recovery/fixed175-explanation-r1/qualification.json",
+      "bytes": 2980,
+      "sha256": "293a694ed8bc823a419256e1d1ceea613a49f47cab1164e05f53ae96649fbd9e"
+    },
+    "fixed175-explanation-independent-r1": {
+      "path": "work/recovery/fixed175-explanation-independent-r1/qualification.json",
+      "bytes": 563,
+      "sha256": "65ac1f83bbce4653418aa2781cd6de80d33c930043abc6d534b6c827a29c3e34"
+    }
+  },
+  "historical_evidence_only": true,
+  "native_or_game_bytes_distributed": false,
+  "NPS_native_C_pairs": 800,
+  "NPS_independent_pairs": 140,
+  "slot_label_pairs": 279,
+  "corrected_Unknown_location_bytes": 17,
+  "offline_explainer_tests": 29,
+  "full_game_source_runtime_owner_loader_or_hardware_proof": false
+}

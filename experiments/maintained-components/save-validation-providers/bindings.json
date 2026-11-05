@@ -1,0 +1,132 @@
+{
+  "schema": "source-only-slot-location-actual-Native-bindings/1",
+  "Native_CODE_entry": 43111072,
+  "Native_CODE_bytes": 244,
+  "actual_current175_sha256": "5915c5d4b7a37d2e80d49272000747c3003c0bd88ae453f64583f1e86f780a90",
+  "objects": {
+    "_gz_slot_stage_buffer": {
+      "preferred": 277251148,
+      "domain": "DATA",
+      "bytes": 12,
+      "meaning": "existing mutable presentation scratch",
+      "Native_operand_sites": [
+        {
+          "site": 43111086,
+          "kind": 6,
+          "symbol_table": 28,
+          "symbol_index": 948,
+          "symbol_info": 16
+        },
+        {
+          "site": 43111090,
+          "kind": 4,
+          "symbol_table": 28,
+          "symbol_index": 948,
+          "symbol_info": 16
+        },
+        {
+          "site": 43111274,
+          "kind": 6,
+          "symbol_table": 28,
+          "symbol_index": 948,
+          "symbol_info": 16
+        },
+        {
+          "site": 43111278,
+          "kind": 4,
+          "symbol_table": 28,
+          "symbol_index": 948,
+          "symbol_info": 16
+        }
+      ],
+      "typed_extent_source": "Authored owned template plus actual Native table/sentinel walk; Native anonymous loader symbols are NOTYPE16, not fabricated Source OBJECT owners.",
+      "Source715_owner_defined": false
+    },
+    "_gz_map_quadrants": {
+      "preferred": 275114820,
+      "domain": "DATA",
+      "bytes": 588,
+      "meaning": "49 immutable12-byte quadrant records",
+      "Native_operand_sites": [
+        {
+          "site": 43111202,
+          "kind": 6,
+          "symbol_table": 28,
+          "symbol_index": 699,
+          "symbol_info": 16
+        },
+        {
+          "site": 43111206,
+          "kind": 4,
+          "symbol_table": 28,
+          "symbol_index": 699,
+          "symbol_info": 16
+        }
+      ],
+      "typed_extent_source": "Authored owned template plus actual Native table/sentinel walk; Native anonymous loader symbols are NOTYPE16, not fabricated Source OBJECT owners.",
+      "Source715_owner_defined": false
+    },
+    "_gz_slot_location_table": {
+      "preferred": 277251160,
+      "domain": "DATA",
+      "bytes": 144,
+      "meaning": "11 immutable names plus sentinel12-byte record",
+      "Native_operand_sites": [
+        {
+          "site": 43111218,
+          "kind": 6,
+          "symbol_table": 28,
+          "symbol_index": 949,
+          "symbol_info": 16
+        },
+        {
+          "site": 43111222,
+          "kind": 4,
+          "symbol_table": 28,
+          "symbol_index": 949,
+          "symbol_info": 16
+        }
+      ],
+      "typed_extent_source": "Authored owned template plus actual Native table/sentinel walk; Native anonymous loader symbols are NOTYPE16, not fabricated Source OBJECT owners.",
+      "Source715_owner_defined": false
+    },
+    "_gz_slot_text_unknown": {
+      "preferred": 277251448,
+      "domain": "DATA",
+      "bytes": 17,
+      "meaning": "immutable NUL-terminated Unknown location string",
+      "Native_operand_sites": [
+        {
+          "site": 43111306,
+          "kind": 6,
+          "symbol_table": 28,
+          "symbol_index": 950,
+          "symbol_info": 16
+        },
+        {
+          "site": 43111310,
+          "kind": 4,
+          "symbol_table": 28,
+          "symbol_index": 950,
+          "symbol_info": 16
+        }
+      ],
+      "typed_extent_source": "Authored owned template plus actual Native table/sentinel walk; Native anonymous loader symbols are NOTYPE16, not fabricated Source OBJECT owners.",
+      "Source715_owner_defined": false
+    }
+  },
+  "descriptor_ABI": {
+    "bytes": 20,
+    "alignment": 4,
+    "stage_offset": 4,
+    "stage_bytes": 8,
+    "room_word_offset": 12,
+    "room_shift": 8,
+    "room_mask": 255,
+    "argument": "r3 borrowed pointer",
+    "result": "r3 borrowed string pointer,r4 room; C unsigned64 high/low EABI"
+  },
+  "required_lifetime": "Caller retains real descriptor and module objects for synchronous call; scratch and cache have no concurrent writer. Existing wrapper releases its lock before cached-descriptor return.",
+  "Source715_interface_or_alias_added": false,
+  "Source715_Mode0_return_bound": false
+}

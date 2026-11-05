@@ -1,0 +1,275 @@
+{
+  "schema": "offline-fixed175-explanation-data/1",
+  "target_sha256": "5915c5d4b7a37d2e80d49272000747c3003c0bd88ae453f64583f1e86f780a90",
+  "collector_schema": "fixed175-diagnostic-collector-plan/1",
+  "runtime_identity": "Exact source beacon/labels, originalTEXT bounds, two typed backend anchors and selected175 trace hook; not a full executable hash.",
+  "records": [
+    {
+      "name": "frame",
+      "preferred": 270529880,
+      "bytes": 4
+    },
+    {
+      "name": "GHS report",
+      "preferred": 281044100,
+      "bytes": 128
+    },
+    {
+      "name": "GHC report",
+      "preferred": 281015212,
+      "bytes": 128
+    },
+    {
+      "name": "HL control",
+      "preferred": 281015148,
+      "bytes": 64
+    },
+    {
+      "name": "HX index header",
+      "preferred": 310168272,
+      "bytes": 32
+    },
+    {
+      "name": "OIS heap",
+      "preferred": 309946388,
+      "bytes": 40
+    },
+    {
+      "name": "OIS header and ten fixed slot records",
+      "preferred": 281038044,
+      "bytes": 832
+    },
+    {
+      "name": "RNS pending and retained trace",
+      "preferred": 310077064,
+      "bytes": 72
+    },
+    {
+      "name": "Current witness fixed header",
+      "preferred": 310160048,
+      "bytes": 64
+    },
+    {
+      "name": "Native_GZ_state",
+      "preferred": 273689344,
+      "bytes": 36
+    },
+    {
+      "name": "vertex_program_pointer",
+      "preferred": 273689824,
+      "bytes": 4
+    },
+    {
+      "name": "pixel_program_pointer",
+      "preferred": 273690088,
+      "bytes": 4
+    },
+    {
+      "name": "fetch_pointer",
+      "preferred": 273691392,
+      "bytes": 4
+    },
+    {
+      "name": "copied_context_pointer",
+      "preferred": 273691396,
+      "bytes": 4
+    },
+    {
+      "name": "UIA96",
+      "preferred": 281040464,
+      "bytes": 96
+    },
+    {
+      "name": "RSAR128",
+      "preferred": 281042332,
+      "bytes": 128
+    },
+    {
+      "name": "RSA128",
+      "preferred": 281042460,
+      "bytes": 128
+    },
+    {
+      "name": "UIA_busy",
+      "preferred": 309946744,
+      "bytes": 4
+    },
+    {
+      "name": "RSA_busy",
+      "preferred": 309966108,
+      "bytes": 4
+    },
+    {
+      "name": "SRD64",
+      "preferred": 309965256,
+      "bytes": 64
+    },
+    {
+      "name": "mapped_backend",
+      "preferred": 310076596,
+      "bytes": 68
+    },
+    {
+      "name": "menu_input_trace",
+      "preferred": 312333112,
+      "bytes": 24
+    },
+    {
+      "name": "_gz_gpa_report",
+      "preferred": 281015340,
+      "bytes": 128
+    },
+    {
+      "name": "_gz_hg_control",
+      "preferred": 280288900,
+      "bytes": 64
+    }
+  ],
+  "snapshot_metadata_bytes": 2124,
+  "source_pins": [
+    {
+      "path": "work/recovery/game175-fixed-diagnostics-validation-r1/record175_fixed_diagnostics.py",
+      "sha256": "463cd63339a71ac301a9bd1c628cd93d5952e832a756a4894dea6c316ed0a898"
+    },
+    {
+      "path": "work/recovery/rando173-save-chain-tests-r1/next-physical-read-plan.json",
+      "sha256": "6a5ecb2d50ea223a4c3f5a9c0ee668192d451d5ec7807d13db55266701d7dede"
+    },
+    {
+      "path": "work/recovery/v172-overlay-init-regression-r1/fixed-readset.json",
+      "sha256": "a7e4abd5ebe52ae4466a5eca2b4ee179caf2f20d9018f6f592ace35c8c0953ce"
+    },
+    {
+      "path": "work/recovery/game175-fixed-diagnostics-validation-r1/fixed175-owner-bindings.json",
+      "sha256": "eebfaf22ad0161ccaecdb83f192aadc12fc3cdc53b9fc11d85bc7c9f0c60cd30"
+    },
+    {
+      "path": "work/recovery/v168-native-r1/build.json",
+      "sha256": "84a3ce665f3c097dce615b76cda05bc93905c90cfe56771dbde0e0c142027915"
+    },
+    {
+      "path": "work/recovery/v175-current-features-test-r1/build.json",
+      "sha256": "3f1a94e0c1a0b09f8065f463f86365754fd628244a721bd17b70f1488d87789a"
+    },
+    {
+      "path": "work/recovery/game175-diagnostic-presentation-audit-r1/rns72-layout.json",
+      "sha256": "3a8c356a15c9f85df4b82ac5c366bb2bd6afab6f6c64f80edf3ccd5f521805e5"
+    },
+    {
+      "path": "work/TWWHD-GZ/tools/diagnose_save_restore.py",
+      "sha256": "fe8d5fe5f95bf4b0bd07ce98d42d5717599d605ce821e766556a6993c95cac11"
+    },
+    {
+      "path": "work/TWWHD-GZ/experiments/maintained-components/renderer-normalization-v171/diagnostics/diagnostic_enum.json",
+      "sha256": "5d65ab460b26c34894f5a9d501c61ce40ec014e9ffb2ec6cb07ef831367f6346"
+    },
+    {
+      "path": "work/TWWHD-GZ/experiments/maintained-components/renderer-normalization-v171/diagnostics/decode_trace.py",
+      "sha256": "8684ce49222212f1e1ceaf01d196a74c35f3118d95b370dabbc547c8ba194d20"
+    },
+    {
+      "path": "work/TWWHD-GZ/experiments/maintained-components/generic-cpu-observation/lifetime.h",
+      "sha256": "f1c05a88e6384e2517dc03f380025e0dccfb4b0821557a43ed482668a9271b43"
+    },
+    {
+      "path": "work/recovery/superswim171-tracker-index-r2/hash_index.h",
+      "sha256": "a68e7da18a86556041f02dc8028e96c15efa64dd29e3576c84e4a34449ee6998"
+    }
+  ],
+  "result_descriptions": {
+    "8": "Owned-image storage is busy.",
+    "70": "Owned-image storage rejected an argument.",
+    "71": "Owned-image storage identity changed.",
+    "72": "The requested owned image is incomplete or missing.",
+    "73": "Owned-image storage could not reserve the required space.",
+    "74": "Owned-image storage identity counters are exhausted.",
+    "75": "Owned-image storage consistency checks failed.",
+    "76": "The owned image has an unsupported type.",
+    "77": "The requested owned-image path is unavailable.",
+    "2881": "The current capture/restore context was refused.",
+    "2882": "Required observation or ownership was unavailable.",
+    "2883": "Capture or restore workspace could not be reserved.",
+    "2884": "State changed during validation.",
+    "2885": "A required memory range overlaps protected storage.",
+    "2886": "Recovery is uncertain; the transaction retained its ownership state.",
+    "2887": "Snapshot or metadata format validation failed.",
+    "2890": "The non-reused request counter is exhausted.",
+    "2891": "The comparison path is incomplete; it did not commit a restore.",
+    "2892": "The comparison path refused the current/saved pair.",
+    "2894": "Heap replacement was refused before application.",
+    "2895": "The heap trial completed and was reversed; no restore was retained.",
+    "2896": "Heap application failed and the before-image was recovered.",
+    "2897": "The coordinator reports a completed CPU restore."
+  },
+  "trace_steps": {
+    "0x101": "RT_CLAIMED",
+    "0x102": "RT_OWNER_FAIL",
+    "0x103": "RT_ORDER_FAIL",
+    "0x104": "RT_GUARD_ENTER",
+    "0x105": "RT_GUARD_OK",
+    "0x106": "RT_OWNER_BEFORE_RESET_OK",
+    "0x107": "RT_RESET_ENTER",
+    "0x108": "RT_RESET_RETURNED",
+    "0x109": "RT_EXPORT_ENTER",
+    "0x10a": "RT_EXPORT_OK",
+    "0x10b": "RT_CAPTURE_ENTER",
+    "0x10c": "RT_CAPTURE_RESULT",
+    "0x10d": "RT_CAPTURE_DONE",
+    "0x201": "RT_RCG_ARGUMENT",
+    "0x202": "RT_RCG_SCOPE",
+    "0x203": "RT_RCG_STAGE_APART",
+    "0x204": "RT_RCG_RAW_SPAN",
+    "0x205": "RT_RCG_RAW_APART",
+    "0x206": "RT_RCG_BUSY",
+    "0x207": "RT_RCG_POST_SCOPE",
+    "0x208": "RT_RCG_OK",
+    "0x2200": "RT_RCG_WALK",
+    "0x301": "RT_RCL_ARGUMENT",
+    "0x302": "RT_RCL_SCOPE",
+    "0x303": "RT_RCL_PENDING_APART",
+    "0x304": "RT_RCL_GUARD_ENTER",
+    "0x305": "RT_RCL_GUARD_OK",
+    "0x306": "RT_RCL_RAW_SPAN",
+    "0x307": "RT_RCL_RAW_PENDING_APART",
+    "0x308": "RT_RCL_RAW_APART",
+    "0x309": "RT_RCL_BUSY",
+    "0x30a": "RT_RCL_POST_SCOPE",
+    "0x30b": "RT_RCL_NO_WITNESS",
+    "0x30c": "RT_RCL_PUBLISHED",
+    "0x3200": "RT_RCL_WALK"
+  },
+  "trace_phases": {
+    "0": "no order milestone",
+    "1": "claimed, before reset guard",
+    "2": "guarded, before reset returns",
+    "3": "authentic reset returned",
+    "4": "exported, capture path"
+  },
+  "hl_flags": {
+    "1": "BAD_HEADER",
+    "2": "REENTRY",
+    "4": "BAD_ARGUMENT",
+    "8": "OVERFLOW",
+    "16": "EXHAUSTED",
+    "32": "REPLACED",
+    "64": "UNKNOWN_HEAP",
+    "128": "UNKNOWN_ALLOCATION",
+    "256": "BAD_BLOCK",
+    "512": "STALE_COMPLETION",
+    "1024": "COUNTER",
+    "2048": "ORIGIN"
+  },
+  "rns_prefix_words": 16,
+  "rns_total_words": 18,
+  "rns_trace_words": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "rns_config_words": [
+    16,
+    17
+  ],
+  "rns_static_confirmation_sha256": "3a8c356a15c9f85df4b82ac5c366bb2bd6afab6f6c64f80edf3ccd5f521805e5"
+}

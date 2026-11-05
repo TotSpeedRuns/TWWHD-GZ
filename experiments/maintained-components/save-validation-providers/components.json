@@ -1,0 +1,94 @@
+{
+  "schema": "authored-save-validation-source-objects/1",
+  "compiler_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "source_sha256": {
+    "api_witness.c": "f04e4fe75f0e1cc7c0c519a2f94656671a1457a9c1d232e6d340eef88d15dccb",
+    "bindings.json": "1cb4549dacaf98b2c5c13d00ec40393784800caf40ce9fee67a7110c0ff4b67e",
+    "nps_consumer.c": "b86b8e6182398052ee8800842b33b7197ef49328d46838716414efac7714c679",
+    "nps_consumer.h": "d6b06af8023d33893b10f159471d2de86a010e684b6a5d238a9698b7872f3ede",
+    "slot_location.c": "c03f5a50399ef9082e07ad6d880572f61938fb02fc9f6ff2a61c5e27edcc0809",
+    "slot_location.h": "f66b4da4b8a291087a20fa8d6455e887b5552fd2d2ed4bea95b0b1d45478adf4"
+  },
+  "objects": [
+    {
+      "source": "nps_consumer.c",
+      "output": "nps_consumer.o",
+      "flags": [
+        "-std=c17",
+        "-O2",
+        "-mcpu=750",
+        "-m32",
+        "-mbig-endian",
+        "-meabi",
+        "-msdata=none",
+        "-msoft-float",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-pic",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "CODE": 1232,
+      "sha256": "680260f352ceee2098d5a31d7a76f85253db364d3b7bb41afd14a1dea699fc62"
+    },
+    {
+      "source": "api_witness.c",
+      "output": "api_witness.o",
+      "flags": [
+        "-std=c17",
+        "-O2",
+        "-mcpu=750",
+        "-m32",
+        "-mbig-endian",
+        "-meabi",
+        "-msdata=none",
+        "-msoft-float",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-pic",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "CODE": 4,
+      "sha256": "e0647bfb2340476f68cabd710d09e3a5d3c4c60b938a7285e0a712ad8bcfb95e"
+    },
+    {
+      "source": "slot_location.c",
+      "output": "slot_location.o",
+      "flags": [
+        "-std=c11",
+        "-Os",
+        "-mcpu=750",
+        "-m32",
+        "-meabi",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-common",
+        "-fno-pic",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "CODE": 228,
+      "sha256": "5e649ec7f7bb66e1479e7ccfa6a9877710aab94f8f2b71e5b0807977f61df1a6"
+    }
+  ],
+  "no_game_SDK_or_private_layout_required": true,
+  "no_runtime_image_or_new_owner": true
+}

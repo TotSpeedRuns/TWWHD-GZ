@@ -1,0 +1,79 @@
+{
+  "schema": "authored-rando-fullkit-source-manifest/1",
+  "declared_paths": [
+    "experiments/maintained-components/rando-fullkit/bindings.json",
+    "experiments/maintained-components/rando-fullkit/build-spec.json",
+    "experiments/maintained-components/rando-fullkit/LICENSE",
+    "experiments/maintained-components/rando-fullkit/README.md",
+    "experiments/maintained-components/rando-fullkit/source/bag_counts.S",
+    "experiments/maintained-components/rando-fullkit/source/charts.S",
+    "experiments/maintained-components/rando-fullkit/source/dungeon_grants.S",
+    "experiments/maintained-components/rando-fullkit/source/grant_all.S",
+    "experiments/maintained-components/rando-fullkit/source/grant_kit.S",
+    "experiments/maintained-components/rando-fullkit/source/hurricane.S",
+    "experiments/maintained-components/rando-fullkit/source/rando_transport_all.S",
+    "tools/build_rando_fullkit_components.py"
+  ],
+  "files": [
+    {
+      "path": "experiments/maintained-components/rando-fullkit/bindings.json",
+      "bytes": 7415,
+      "sha256": "164d7cc0ede8d900c680b29fbbf703464580dc1434c1d0a0f2a6db8156985a6e"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/build-spec.json",
+      "bytes": 1556,
+      "sha256": "afb7ce2aac559088145539754e96477cf53141d7abacfc456f72fc70b533d531"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/LICENSE",
+      "bytes": 1078,
+      "sha256": "fca874a5a5f6eb87870721bd0033e3937e48712772853612cc4a0dbb1c98c998"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/README.md",
+      "bytes": 3946,
+      "sha256": "52fa2e0dda2bd99f0b2c2f0304b71ee28007b8ed4acfc0a1c1a38cafff13634d"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/bag_counts.S",
+      "bytes": 2185,
+      "sha256": "729e20511c42916a5c41fb745a0d621dd2df2538f0066bed965d035f223937b7"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/charts.S",
+      "bytes": 1174,
+      "sha256": "c93e785fb3ca23fbffe37043a96ebf6c42ea07f081f3fb020fc4184e0a7f0fbd"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/dungeon_grants.S",
+      "bytes": 1522,
+      "sha256": "1716fb284172f512c94f1df1de1fd5fbefeef2a4681191da63d8023b94839cf1"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/grant_all.S",
+      "bytes": 1848,
+      "sha256": "0a15a1584f787033ccf48b1d5bc06a5bd9ccbd58c6eb3508fb84a64c7a023ec0"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/grant_kit.S",
+      "bytes": 4548,
+      "sha256": "641958678c2b26d0e979f81e42c41e27ee7446c72bb5b1055b63471a6faecaf7"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/hurricane.S",
+      "bytes": 831,
+      "sha256": "98b696d4497cd03ce6645db578fb043c3dc2da0f8aa08d85c9ec8affd8203695"
+    },
+    {
+      "path": "experiments/maintained-components/rando-fullkit/source/rando_transport_all.S",
+      "bytes": 2637,
+      "sha256": "754c5c7a57b8956467b9ebbb4ab22b8f850e4075f3db244e7b513ebc39fe2f44"
+    },
+    {
+      "path": "tools/build_rando_fullkit_components.py",
+      "bytes": 6584,
+      "sha256": "013b6b7ce08b81da6e9a8b885e71ea135b1652cdb1285b54f73833f381211385"
+    }
+  ]
+}

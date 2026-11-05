@@ -1,0 +1,56 @@
+{
+  "schema": "selected-rando-fullkit-object-spec/1",
+  "compiler_reference_sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5",
+  "assembler_flags": [
+    "-mcpu=750",
+    "-meabi",
+    "-m32"
+  ],
+  "objects": [
+    {
+      "source": "rando_transport_all.S",
+      "output": "rando_transport_all.o",
+      "sha256": "3e8de69801f4d7019e3c72762289712e2ff03baa10370eaa43ca4c54fd8c057d",
+      "CODE": 208
+    },
+    {
+      "source": "grant_kit.S",
+      "output": "grant_kit.o",
+      "sha256": "e8ba0c0ccd78bf9f271cdc7f54cbbd8f59792f7a0c72d69d9286ad6cb1e4f73f",
+      "CODE": 588
+    },
+    {
+      "source": "bag_counts.S",
+      "output": "bag_counts.o",
+      "sha256": "20d42037c4a5b3fec6c0b41217b8ae4e2690061b9010347193d7a6199239abcf",
+      "CODE": 256
+    },
+    {
+      "source": "charts.S",
+      "output": "charts.o",
+      "sha256": "982f155bdab8e6bdde20f221aa6b2fd5dd972605e943dc950be2e33f7bbb0bdb",
+      "CODE": 132
+    },
+    {
+      "source": "hurricane.S",
+      "output": "hurricane.o",
+      "sha256": "72bcbc085bef108c2453495011b1d2b7102c65c5eec152b49585c4b40d89be4c",
+      "CODE": 64
+    },
+    {
+      "source": "dungeon_grants.S",
+      "output": "dungeon_grants.o",
+      "sha256": "5c07b696ab8bbbe26b788612718d4380c82a5863fdd9188a647cab35faea4d1e",
+      "CODE": 184
+    },
+    {
+      "source": "grant_all.S",
+      "output": "grant_all.o",
+      "sha256": "c8ff42538a2cd60e57851242dcc35879c4fd2c4c8f45af4624ab5291c66267b5",
+      "CODE": 236
+    }
+  ],
+  "CODE": 1668,
+  "mutable": 0,
+  "readonly": 0
+}

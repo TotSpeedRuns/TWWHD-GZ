@@ -1,0 +1,297 @@
+{
+  "schema": "original-Native-inventory-fullkit-bindings/1",
+  "selected_private_fullkit_game_sha256": "bb2d48f8e5d7f32d80e05e235d3136150db366d415e54c72da650a9d080a6921",
+  "native_bindings": {
+    "_gz_rando_all_game_info": {
+      "preferred_address": 270501108,
+      "native_symbol": {
+        "index": 525,
+        "table": 28,
+        "name": "",
+        "value": 270501108,
+        "size": 0,
+        "info": 16,
+        "section": 4
+      },
+      "addend": 0
+    },
+    "_gz_rando_bag_descriptors": {
+      "preferred_address": 274049184,
+      "native_symbol": {
+        "index": 646,
+        "table": 28,
+        "name": "",
+        "value": 274049184,
+        "size": 0,
+        "info": 16,
+        "section": 32
+      },
+      "addend": 0
+    },
+    "_gz_rando_bag_full": {
+      "preferred_address": 274050036,
+      "native_symbol": {
+        "index": 649,
+        "table": 28,
+        "name": "",
+        "value": 274050036,
+        "size": 0,
+        "info": 16,
+        "section": 32
+      },
+      "addend": 0
+    },
+    "_gz_rando_bag_request_page": {
+      "preferred_address": 274050032,
+      "native_symbol": {
+        "index": 647,
+        "table": 28,
+        "name": "",
+        "value": 274050032,
+        "size": 0,
+        "info": 16,
+        "section": 32
+      },
+      "addend": 0
+    },
+    "_gz_rando_event_set": {
+      "preferred_address": 39553832,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 5999400
+    },
+    "_gz_rando_inv_pending": {
+      "preferred_address": 274048864,
+      "native_symbol": {
+        "index": 644,
+        "table": 28,
+        "name": "",
+        "value": 274048864,
+        "size": 0,
+        "info": 16,
+        "section": 32
+      },
+      "addend": 0
+    },
+    "_gz_rando_inventory_done": {
+      "preferred_address": 43031064,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 9476632
+    },
+    "_gz_rando_kit_game_info": {
+      "preferred_address": 270501108,
+      "native_symbol": {
+        "index": 525,
+        "table": 28,
+        "name": "",
+        "value": 270501108,
+        "size": 0,
+        "info": 16,
+        "section": 4
+      },
+      "addend": 0
+    },
+    "_gz_rando_kit_native_dispatch": {
+      "preferred_address": 43029740,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 9475308
+    },
+    "_gz_rando_kit_native_item_get": {
+      "preferred_address": 39115324,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 5560892
+    },
+    "_gz_rando_kit_native_level": {
+      "preferred_address": 43031084,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 9476652
+    },
+    "_gz_rando_kit_native_records": {
+      "preferred_address": 274051928,
+      "native_symbol": {
+        "index": 648,
+        "table": 28,
+        "name": "",
+        "value": 274051928,
+        "size": 0,
+        "info": 16,
+        "section": 32
+      },
+      "addend": 0
+    },
+    "_gz_rando_native_on_dungeon_item": {
+      "preferred_address": 39555160,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 6000728
+    },
+    "_gz_rando_original_inventory_extension": {
+      "preferred_address": 43327572,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 9773140
+    },
+    "_gz_rando_tools_flags": {
+      "preferred_address": 273885768,
+      "native_symbol": {
+        "index": 479,
+        "table": 28,
+        "name": "",
+        "value": 273885768,
+        "size": 0,
+        "info": 16,
+        "section": 32
+      },
+      "addend": 0
+    },
+    "_gz_rando_tools_xor_resume": {
+      "preferred_address": 43014452,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 9460020
+    },
+    "_gz_rando_ui_done": {
+      "preferred_address": 43006684,
+      "native_symbol": {
+        "index": 1,
+        "table": 28,
+        "name": "$TEXT",
+        "value": 33554432,
+        "size": 0,
+        "info": 3,
+        "section": 1
+      },
+      "addend": 9452252
+    }
+  },
+  "replace_old_transport": true,
+  "old_transport_CODE": 204,
+  "add_duplicate_hooks": false,
+  "retain_original_entry": 43029560,
+  "original_prefix": [
+    43029560,
+    43399876,
+    43009292,
+    43011708,
+    43029732,
+    43029736
+  ],
+  "callback_lifetime_and_threading_are_original_premises": true,
+  "physical_hold_provided": false,
+  "complete_image_builder_included": false,
+  "native_callback_reference_game_sha256": "6f6b32298de696e52ff7bed16c38d0f40463f0b675a0a15d8fc06beb11b52bfc",
+  "whole_provider_plan_parent_sha256": "968b7acc10f3fa37538f200f4e22b9e953938eae75dd67ebb895aedec077df87",
+  "hooks_from_whole_provider_plan_parent": [
+    {
+      "address": 43014448,
+      "original_word": 1430982714,
+      "new_export": "_gz_rando_tools_select",
+      "linked": false,
+      "context": true,
+      "old_loader_expressions": []
+    },
+    {
+      "address": 43029736,
+      "original_word": 1208257388,
+      "new_export": "_gz_rando_inventory_dispatch",
+      "linked": false,
+      "context": true,
+      "old_loader_expressions": []
+    }
+  ],
+  "current173_already_hooked_sites": [
+    {
+      "address": 43014448,
+      "current173_word": 1211948056,
+      "current173_export": "_gz_rando_tools_select",
+      "current173_target": 47002952,
+      "remove_current173_loader_expression": {
+        "site": 43014448,
+        "kind": 10,
+        "source_section": 31,
+        "symbol_table": 28,
+        "symbol_index": 5011,
+        "target_section": 46,
+        "target_preferred": 47002952,
+        "addend": 85832
+      }
+    },
+    {
+      "address": 43029736,
+      "current173_word": 1211932832,
+      "current173_export": "_gz_rando_inventory_dispatch",
+      "current173_target": 47003016,
+      "remove_current173_loader_expression": {
+        "site": 43029736,
+        "kind": 10,
+        "source_section": 31,
+        "symbol_table": 28,
+        "symbol_index": 5011,
+        "target_section": 46,
+        "target_preferred": 47003016,
+        "addend": 85896
+      }
+    }
+  ],
+  "integration_rule": "The two whole-plan original words belong only to the exact owned pre-transport parent. Current173 already has the Song transport branches and loader rows listed separately. Rebuild the complete provider layout while replacing its204B object; do not append another transport or apply parent words to current173."
+}

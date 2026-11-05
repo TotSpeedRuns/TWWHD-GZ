@@ -1,0 +1,19 @@
+This is the authored source for the complete once-on-enable Rando inventory kit selected into an unreleased private successor. It does not change the user-facing Setup174/Game173 download or claim a Wii U result.
+
+The seven included assembly sources reproduce their selected ET_REL objects:1668 CODE bytes, zero readonly/mutable storage and no SDK/header/game/private-object input. Replacing the original204-byte Song-only transport adds1464 net CODE bytes. No per-frame regrant, extra startup reservation or new import is introduced.
+
+Enable grants the reviewed gear tiers, bottle/bag ownership, six songs including Command Melody, pearls/Triforce, wallet/bomb/arrow/magic/health upgrades, Spoils/Bait counts,61 chart ownership bits, Hurricane ownership and named dungeon maps/compasses/keys. Existing bottle contents and eight Delivery slots are preserved; nineteen possible delivery objects cannot simultaneously fit eight slots. Already-on enable preserves real Native inventory edits. Disable clears the mode bit without deleting inventory; off-to-on grants again. A late malformed-kit refusal may keep earlier item additions while refusing Mode13 publication; no rollback or atomic inventory transaction is claimed.
+
+Build from the source root with Python3.10+ and the reviewed devkitPPC r49 compiler:
+
+    python -B tools/build_rando_fullkit_components.py --compiler /path/to/powerpc-eabi-gcc --output /fresh/path/fullkit-objects
+
+Use powerpc-eabi-gcc.exe on Windows. The output's parent must exist, and the output must be fresh and outside this source tree. The builder verifies the source manifest, exact selected object hashes,1668-byte CODE total and named Native interface closure. Changed output is refused. It invokes the compiler without a shell and uses no SDK or game input. A different compiler is accepted only when every object remains byte-exact; the report records whether the compiler itself is the reference tool.
+
+bindings.json separates the original hook words in the owned whole-provider-plan parent from the already-hooked branch words and typed rows in current173. The callback reference hash authenticates Native interface windows, not the original unpatched words. Replace the old204-byte provider in the complete layout; do not append a duplicate or apply parent-word checks to the current173 image. The file also lists the Native preferred bindings. Integration must retain the real inventory entry at02909438, its guard80/live/route checks, genuine Save-pointer load and ordinary inventory extension. These entries are context fragments, not ordinary C functions or physical pointer-ownership providers. The original synchronous callback must already own the same current Save member and module during the call. Checks are not new locks, and absence of SDK calls does not prove that other threads cannot write. No Link actor body is read.
+
+The original Save constructor initializes the0x12a0-byte member at root+0x20; named fields extend through stage+0x79c. Original equipment-cache updates remain Native. No process-root equality or initialized extent is represented as a new physical lease. Leading historical comments were clarified without changing executable bytes.
+
+This exports complete component source, not a full game or Setup image builder. Original-game routines, earlier GZ integration, exact typed RPL placement, image CRC/FileInfo and other Rando components remain outside this component. Full Source715 integration, complete randomizer gameplay parity and hardware menu/Save/Restore/performance remain unresolved.
+
+The selected private image passed38 genuine Native-prefix and12 UI-context cases from serialized RPX bytes with no instruction overlays or SDK/callee result models, plus independent reconstruction of all34 components,803 routes and574 payloads. Those are bounded code/data-layout checks under explicit callback premises, not an actual console or full Save-to-Restore certificate.

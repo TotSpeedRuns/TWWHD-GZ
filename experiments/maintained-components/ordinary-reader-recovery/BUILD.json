@@ -1,0 +1,43 @@
+{
+  "schema": "portable-ordinary-reader-assembly-build/1",
+  "source": {
+    "path": "experiments/maintained-components/ordinary-reader-recovery/source/ordinary_reader.S",
+    "bytes": 23197,
+    "sha256": "a56048f7a9b901177bd562c80f29ce247a95e6ebe258aa7631b58e805bef8320"
+  },
+  "header": {
+    "path": "experiments/maintained-components/ordinary-reader-recovery/source/ordinary_reader.h",
+    "bytes": 4651,
+    "sha256": "ff03c1f62a04c96099b0bf762f38719523172e6644674bddcd80673ce0c766b5"
+  },
+  "compiler": {
+    "name": "devkitPPC r49 Windows powerpc-eabi-gcc.exe",
+    "bytes": 3088896,
+    "sha256": "518fadfdd99f8882980a2564fa385597dffcfe33b589b2844c5ce3eeaab7dda5"
+  },
+  "flags": [
+    "-m32",
+    "-meabi",
+    "-mcpu=750",
+    "-mhard-float",
+    "-mregnames",
+    "-fno-pic",
+    "-x",
+    "assembler-with-cpp"
+  ],
+  "expected_object": {
+    "bytes": 3216,
+    "sha256": "f31b2cce32243d76a187cad114e7afaad740369e7e33fb5ef1e008da5031b07b"
+  },
+  "CODE_bytes": 1116,
+  "function_sizes": [344, 260, 512],
+  "logical_NOBITS_owner_bytes": 44,
+  "external_UND_roles": 11,
+  "typed_relocations": 56,
+  "raw_local_branches": 47,
+  "source_recovery_qualification_sha256": "cf4c1a41b179f9867273416ec28c971713f505c0c3ce92b4c8501e7f66b2f5f6",
+  "independent_static_peer_sha256": "0a2c0f7f8663c85b205d8ba56ce8094e439076accf0297a652e0f6369180336b",
+  "standalone_assembly_build_only": true,
+  "game_or_SDK_inputs_required": false,
+  "runtime_or_physical_integration_qualified": false
+}

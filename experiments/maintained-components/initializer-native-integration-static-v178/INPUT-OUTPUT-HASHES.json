@@ -1,0 +1,258 @@
+{
+  "schema": "authored-static-initializer-source-backup-hashes/1",
+  "scope": "Exact source backup; external private binaries and audit receipts are not uploaded.",
+  "input_restoration_paths_and_hashes": [
+    {
+      "path": "work/recovery/v178-current-features-test-r1/cking.rpx",
+      "bytes": 30170688,
+      "sha256": "37ea3c790f607b95814ece1d5f176c2b5cb8981344ca5fb2747a0e2c426623ac"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-metadata-r1/Native178-OSInitCond-metadata-only.NOT-FOR-INSTALL.bin",
+      "bytes": 30170688,
+      "sha256": "c883ed0d4c4a0ccc1e5a394fda0e928ec44bbc1a3937f65fb3d238389f2fc3d5"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-role-r1/contract.json",
+      "bytes": 91888,
+      "sha256": "e67ee3612693717cbba6080fa3107e2b75efad339507f6334c682a59cb2b5731"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-role-r1/qualification.json",
+      "bytes": 1407,
+      "sha256": "a834111e5b8d44e1418b73cac6fc149c154a7de7751c77577a732ed0f3caf758"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-metadata-independent-r2/qualification.json",
+      "bytes": 571,
+      "sha256": "5a4e33130781144e579867c4222e72c780877e393e68d11e961c52e24ffbc071"
+    },
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-r1/minimal-init-source.o",
+      "bytes": 15189,
+      "sha256": "425a49616e2c63ccdd5b436b168205fb3d0a294cadb34d850a5f6c1ec7d71023"
+    },
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-r1/qualification.json",
+      "bytes": 2594,
+      "sha256": "2c8743a4ce66e91abdee34ac6b43468d36f80ebe80375b8d1cfe217fd2777fcb"
+    },
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-r1/extraction.json",
+      "bytes": 60350,
+      "sha256": "05607e0085ca0d195a6b50385f17ade6f031e6672769bc8a4c8146c9e99ddcc4"
+    },
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-independent-r1/qualification.json",
+      "bytes": 1561,
+      "sha256": "9166685dffa474080a7269b2c71883dbd3f6451ebdc8c2b1f9ecc772573e40a0"
+    },
+    {
+      "path": "work/recovery/source714-cold-integration-preconditions-r1/report.json",
+      "bytes": 23065,
+      "sha256": "f5b4b4887c6668e9b9c54202261d015d70e97fdc7cc3023f9873ece74ae80613"
+    },
+    {
+      "path": "work/recovery/source714-cold-integration-preconditions-r1/qualification.json",
+      "bytes": 842,
+      "sha256": "25c57d273bce7ad19fc6c78fe72ab7154cc86469bef44e7935af6e43c995b067"
+    },
+    {
+      "path": "work/recovery/source714-native-jwa-owner-closure-r1/binder-contract.json",
+      "bytes": 16315,
+      "sha256": "9f5ae96193c2e25c93d5a97e3c0adac718c6a5a4d33303160a086cbe571c2bc9"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-metadata-r1/elf_static.py",
+      "bytes": 2563,
+      "sha256": "fdb9b76b6150bc161bdb9815f4abdfa07238ae070d91e31edda21ec3d5a65ceb"
+    },
+    {
+      "path": "work/TWWHD-GZ/patcher/native_rpx.py",
+      "bytes": 9612,
+      "sha256": "52c566d12e8bb4b2182c2a1de93883e0eb40fa9db7ff2fba49c83cfe9b635cb5"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-join-r1/source-native-cold-entry-bound.o",
+      "bytes": 2022708,
+      "sha256": "ea1be3dfad78db219c6fb577012ff9931fc7bb4840d371422f822d1144ef8f57"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-join-r1/qualification.json",
+      "bytes": 1455,
+      "sha256": "993ee2267d21718c06be844e6ada0350d236b0728f269dfd9746fa72c1b97ab9"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-join-independent-r1/qualification.json",
+      "bytes": 826,
+      "sha256": "ecccd68e30f7c13ef2e00799b8ba1b1d988bced63b09db6345ef240693468dfe"
+    },
+    {
+      "path": "work/recovery/ncb-kernel-scope-independent-r1/review.py",
+      "bytes": 20914,
+      "sha256": "515f9ba06da06d0136928f8e7a1e6e432ed91cc71cc9d83a9ce82e8fc6023bd1"
+    },
+    {
+      "path": "work/recovery/source714-init-integration-slice-r1/inspect.py",
+      "bytes": 6433,
+      "sha256": "c2973c8ac697981281999db1d3077853a23d2252cfa5e17ee0b181c290d5b380"
+    },
+    {
+      "path": "work/recovery/source714-init-integration-slice-r1/qualification.json",
+      "bytes": 2357,
+      "sha256": "983c968b2c9f7f680b963fc1c049e4d5b24c57c3677f4d8dca5b230156f2c89f"
+    },
+    {
+      "path": "work/recovery/source712-native-cond-dispatch-r1/qualification.json",
+      "bytes": 1221,
+      "sha256": "6233adcbbeb7af287863a80537dde4bd7d434e8568b238c93d10ce8e9affe48f"
+    }
+  ],
+  "known_output_hashes_only": [
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-r1/minimal-init-source.o",
+      "bytes": 15189,
+      "sha256": "425a49616e2c63ccdd5b436b168205fb3d0a294cadb34d850a5f6c1ec7d71023",
+      "git_blob": "84f998bf78436e2530586ea609ea476e044ede00"
+    },
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-r1/qualification.json",
+      "bytes": 2594,
+      "sha256": "2c8743a4ce66e91abdee34ac6b43468d36f80ebe80375b8d1cfe217fd2777fcb",
+      "git_blob": "4672286d9eb1e61c57e5b40755c68c93aabbe06d"
+    },
+    {
+      "path": "work/recovery/source714-ea1-init-integration-slice-independent-r1/qualification.json",
+      "bytes": 1561,
+      "sha256": "9166685dffa474080a7269b2c71883dbd3f6451ebdc8c2b1f9ecc772573e40a0",
+      "git_blob": "afc2428c5afa83aadfb20f6d63cc5ca0e431a0cb"
+    },
+    {
+      "path": "work/recovery/source714-minimal-native-init-candidate-r1/Native178-minimal-init-integration.NOT-FOR-INSTALL.bin",
+      "bytes": 30174912,
+      "sha256": "2eadd54fc5f311266952da3ec8096f9c0fad9a6715d7c7dbe13b36581be9faeb",
+      "git_blob": "8d0d8612af2604763b8a9fe5d31a008416517dbe"
+    },
+    {
+      "path": "work/recovery/source714-minimal-native-init-candidate-r1/qualification.json",
+      "bytes": 2492,
+      "sha256": "1a50f1222190e0f50c2838f8aebe1f7dd1789acab2ce7bd7d63d51c01db63805",
+      "git_blob": "920e1012481955b6c1bf1f2a182b0129a8902a8a"
+    },
+    {
+      "path": "work/recovery/source714-minimal-native-init-candidate-r1/integration.json",
+      "bytes": 98772,
+      "sha256": "117f3a9e2a7db485508d756616f207137b452b9d8346c3d6d5ada23fd742600f",
+      "git_blob": "b397f98f63d6bd421658f4c557a73a91960c16ed"
+    },
+    {
+      "path": "work/recovery/source714-minimal-native-init-candidate-r1/byte-diff.json",
+      "bytes": 215262,
+      "sha256": "b99af6fa135da864618c8edae561e9ffaa9a9b7bf9c1d78ead551da130b47a2f",
+      "git_blob": "35f068b9a7f2b072c607df8abccd1d93e47a6d83"
+    }
+  ],
+  "source_restoration": [
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/source/candidate/materialize.py",
+      "original": {
+        "path": "work/recovery/source714-minimal-native-init-candidate-r1/materialize.py",
+        "bytes": 20163,
+        "sha256": "bf3e7a5e02d38abc4401e3047cacc1ff1c7a7b9eaec1ef7479936dd9d4767357",
+        "git_blob": "05321a173a1bd5bf94c57cc0cfe89c6456aefbfe"
+      },
+      "restoration_path": "work/recovery/source714-minimal-native-init-candidate-r1/materialize.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/source/candidate/freeze.py",
+      "original": {
+        "path": "work/recovery/source714-minimal-native-init-candidate-r1/freeze.py",
+        "bytes": 6520,
+        "sha256": "8fb4c6dea74b0350e9ec36d34ca0eb2c81398aa12dbe1c49a94bbbc565016684",
+        "git_blob": "19c31d27eae7135274d125ae81b5d8d6f66d5238"
+      },
+      "restoration_path": "work/recovery/source714-minimal-native-init-candidate-r1/freeze.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/source/capsule/inspect.py",
+      "original": {
+        "path": "work/recovery/source714-ea1-init-integration-slice-r1/inspect.py",
+        "bytes": 6474,
+        "sha256": "2311a8607b5330256ffbd60e2d63731a4a110739fe6ad0570954977ebb575cb1",
+        "git_blob": "764267e2dab0d446d37c4ed519d53ffe3ac3b066"
+      },
+      "restoration_path": "work/recovery/source714-ea1-init-integration-slice-r1/inspect.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/source/capsule/extract.py",
+      "original": {
+        "path": "work/recovery/source714-ea1-init-integration-slice-r1/extract.py",
+        "bytes": 9347,
+        "sha256": "aee1b2221f26211699b2b23a5581ed0c065f0d3a79e7e51ae049c8177fda3303",
+        "git_blob": "22c6578117973e497a3d5dd68ace26a25f3ea52d"
+      },
+      "restoration_path": "work/recovery/source714-ea1-init-integration-slice-r1/extract.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/source/capsule/derive_inventory.py",
+      "original": {
+        "path": "work/recovery/source714-ea1-init-integration-slice-r1/derive_inventory.py",
+        "bytes": 1448,
+        "sha256": "ff4377894c8e40d4fa64c1b52eeefb149b0941ffe4a72faafb95b2303e9c80bf",
+        "git_blob": "17728279e4eb8657113149e2fb32c50ab6e9aed2"
+      },
+      "restoration_path": "work/recovery/source714-ea1-init-integration-slice-r1/derive_inventory.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/source/capsule/freeze.py",
+      "original": {
+        "path": "work/recovery/source714-ea1-init-integration-slice-r1/freeze.py",
+        "bytes": 4634,
+        "sha256": "b5816d3424d3ec3d6302d4a3e696d9e7d69eb1b29fc67b166c808b8120d29b3d",
+        "git_blob": "d319a64e963b6eb738cf7480dee4681ebd4fde11"
+      },
+      "restoration_path": "work/recovery/source714-ea1-init-integration-slice-r1/freeze.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/helpers/elf_static.py",
+      "original": {
+        "path": "work/recovery/source714-init-sdk-metadata-r1/elf_static.py",
+        "bytes": 2563,
+        "sha256": "fdb9b76b6150bc161bdb9815f4abdfa07238ae070d91e31edda21ec3d5a65ceb",
+        "git_blob": "254b6ebc9b7065286e8395c22408ed5bd0a89ede"
+      },
+      "restoration_path": "work/recovery/source714-init-sdk-metadata-r1/elf_static.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/helpers/raw_elf_class.py",
+      "original_enclosing_source": {
+        "path": "work/recovery/ncb-kernel-scope-independent-r1/review.py",
+        "bytes": 20914,
+        "sha256": "515f9ba06da06d0136928f8e7a1e6e432ed91cc71cc9d83a9ce82e8fc6023bd1",
+        "git_blob": "9fbc0e7d5eb5df01b1f7aabfd67bcea4e8b8715d"
+      },
+      "verbatim_class_source": true,
+      "class_source_sha256": "254c18a09bea2d529ce105dea7af65a29f67f4a0ae5ef7c9200b2f9acfd55b74",
+      "restoration": "Pure class snapshot for source recovery. The historical verbatim discovery/extraction scripts still pin the full old reader file; do not silently substitute this snapshot or run the excluded enclosing review. Rebinding that dependency requires a separately reviewed source edit."
+    }
+  ],
+  "existing_repository_dependency": {
+    "repo_path": "patcher/native_rpx.py",
+    "original": {
+      "path": "work/TWWHD-GZ/patcher/native_rpx.py",
+      "bytes": 9612,
+      "sha256": "52c566d12e8bb4b2182c2a1de93883e0eb40fa9db7ff2fba49c83cfe9b635cb5",
+      "git_blob": "10d21fb5cb57fd2d759239003ac5f22a3f3309a9"
+    },
+    "already_in_parent_tree": true
+  },
+  "no_Game_SDK_binary_metadata_dump_credentials_or_runtime_composition_payloads": true,
+  "no_complete_portable_Game_build_claim": true
+}

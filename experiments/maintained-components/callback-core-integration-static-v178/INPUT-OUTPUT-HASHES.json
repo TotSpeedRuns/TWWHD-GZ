@@ -1,0 +1,390 @@
+{
+  "schema": "callback-core-authored-source-backup-input-output-hashes/1",
+  "source_restoration": [
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/callback-module/inspect.py",
+      "original": {
+        "path": "work/recovery/source714-context-family-slice-r1/inspect.py",
+        "bytes": 6826,
+        "sha256": "d0b673dbcd40a563c18714f3a93a582647332d77cb35da805c245d1a1b2682ed",
+        "git_blob": "e74316c4e00c86d3b7e064773a64b2695a034980"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-family-slice-r1/inspect.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/callback-module/extract.py",
+      "original": {
+        "path": "work/recovery/source714-context-family-slice-r1/extract.py",
+        "bytes": 9080,
+        "sha256": "d431cac46aa80d5de82ad229e78fcab18f8c41e17c9465df74c49792d7299367",
+        "git_blob": "8a4338e32adaef0a44a2031668a2d1bf15d20feb"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-family-slice-r1/extract.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/callback-module/check_source_uses.py",
+      "original": {
+        "path": "work/recovery/source714-context-family-slice-r1/check_source_uses.py",
+        "bytes": 7200,
+        "sha256": "0678993d9e72c6128e604710597e7d350af90c2da545cf95951d18d20bcfb8ff",
+        "git_blob": "00abf1104a59aebb06e70646188de7ede8fc2297"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-family-slice-r1/check_source_uses.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/callback-module/freeze.py",
+      "original": {
+        "path": "work/recovery/source714-context-family-slice-r1/freeze.py",
+        "bytes": 5138,
+        "sha256": "d985f7526009b96a42a8bfb0f62fe486e4f3a73c44f0b7fdb962c098d2dadcf3",
+        "git_blob": "938c039059c17274c7e0d66b2875deb8d2fab25d"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-family-slice-r1/freeze.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/callback-module/README.md",
+      "original": {
+        "path": "work/recovery/source714-context-family-slice-r1/README.md",
+        "bytes": 6796,
+        "sha256": "ffe9c01745becf652a6f33b4eba8d65e4a0dacb3733e0de11f4967ca5c6ac9a2",
+        "git_blob": "5413bb28d274dda0380b897e83b249d744132a66"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-family-slice-r1/README.md",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/native-candidate/materialize.py",
+      "original": {
+        "path": "work/recovery/source714-context-native-candidate-r1/materialize.py",
+        "bytes": 21084,
+        "sha256": "faa54aa6187510bac6314f6fa56cdc15cf26cb9e30d9c5a3d3c9039fbe9767ad",
+        "git_blob": "7c0bc8588930a8cfb40b705d7065b39660bf64a3"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-native-candidate-r1/materialize.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/native-candidate/freeze.py",
+      "original": {
+        "path": "work/recovery/source714-context-native-candidate-r1/freeze.py",
+        "bytes": 6837,
+        "sha256": "2741168c0301da843ad3eba46f1456a336572cd882acbad74a79ec4891e862c0",
+        "git_blob": "34996a043462b75416df6dcc4ce1b5404008cc9a"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-native-candidate-r1/freeze.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/native-candidate/README.md",
+      "original": {
+        "path": "work/recovery/source714-context-native-candidate-r1/README.md",
+        "bytes": 5610,
+        "sha256": "3563569ec81aee39c0f8f340c7aab7fa24e2376a1165c8fb6e983c0ac0cc7ec8",
+        "git_blob": "4bd964e9d3fc2e125abb35f555778209774a14cd"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-context-native-candidate-r1/README.md",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/wait-metadata/materialize.py",
+      "original": {
+        "path": "work/recovery/source714-wait-sdk-metadata-r1/materialize.py",
+        "bytes": 13216,
+        "sha256": "aa424e8843d884cef77ca089a329d02c5263730a1effbccaf778b741f85774a9",
+        "git_blob": "1159a545454e08b248cf2f8ce5084feaaf5c917e"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-wait-sdk-metadata-r1/materialize.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/wait-metadata/freeze.py",
+      "original": {
+        "path": "work/recovery/source714-wait-sdk-metadata-r1/freeze.py",
+        "bytes": 2738,
+        "sha256": "45fcb6bbca5770bfe4907c432cb37c6a4deeecb3b1a2abc5ce934204be2a208f",
+        "git_blob": "1f715df7d2005d3d2c46130afef092148fd204cd"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-wait-sdk-metadata-r1/freeze.py",
+      "verbatim": true
+    },
+    {
+      "repo_path": "experiments/maintained-components/callback-core-integration-static-v178/source/wait-metadata/README.md",
+      "original": {
+        "path": "work/recovery/source714-wait-sdk-metadata-r1/README.md",
+        "bytes": 2846,
+        "sha256": "ae8475aa15fa84a8e1a34ba454bc1f9befd8a8a208962ae6dea1fddd08fd97e2",
+        "git_blob": "3252cdf4740eca44be44a21c6b445344a03f2dee"
+      },
+      "restore_exact_workspace_path": "work/recovery/source714-wait-sdk-metadata-r1/README.md",
+      "verbatim": true
+    }
+  ],
+  "already_backed_helper_dependencies": [
+    {
+      "existing_repo_path": "experiments/maintained-components/initializer-native-integration-static-v178/helpers/elf_static.py",
+      "exact_source": {
+        "path": "work/recovery/source714-init-sdk-metadata-r1/elf_static.py",
+        "bytes": 2563,
+        "sha256": "fdb9b76b6150bc161bdb9815f4abdfa07238ae070d91e31edda21ec3d5a65ceb",
+        "git_blob": "254b6ebc9b7065286e8395c22408ed5bd0a89ede"
+      },
+      "restore_paths": [
+        "work/recovery/source714-init-sdk-metadata-r1/elf_static.py",
+        "work/recovery/source714-wait-sdk-metadata-r1/elf_static.py"
+      ],
+      "already_backed_no_duplicate_copy": true
+    },
+    {
+      "existing_repo_path": "patcher/native_rpx.py",
+      "exact_source": {
+        "path": "work/TWWHD-GZ/patcher/native_rpx.py",
+        "bytes": 9612,
+        "sha256": "52c566d12e8bb4b2182c2a1de93883e0eb40fa9db7ff2fba49c83cfe9b635cb5",
+        "git_blob": "10d21fb5cb57fd2d759239003ac5f22a3f3309a9"
+      },
+      "restore_paths": [
+        "work/TWWHD-GZ/patcher/native_rpx.py"
+      ],
+      "already_backed_no_duplicate_copy": true
+    }
+  ],
+  "already_backed_pure_Raw_class_snapshot": "experiments/maintained-components/initializer-native-integration-static-v178/helpers/raw_elf_class.py",
+  "historical_full_reader_is_external": "The verbatim module scripts still pin full ncb-kernel-scope-independent-r1/review.py but AST-extract only Raw. The enclosing runtime review is excluded; the pure class snapshot does not silently satisfy its different full-file hash.",
+  "external_exact_input_paths_sizes_SHA256": [
+    {
+      "path": "work/recovery/source714-native-cold-entry-join-r1/source-native-cold-entry-bound.o",
+      "bytes": 2022708,
+      "sha256": "ea1be3dfad78db219c6fb577012ff9931fc7bb4840d371422f822d1144ef8f57"
+    },
+    {
+      "path": "work/recovery/v178-current-features-test-r1/cking.rpx",
+      "bytes": 30170688,
+      "sha256": "37ea3c790f607b95814ece1d5f176c2b5cb8981344ca5fb2747a0e2c426623ac"
+    },
+    {
+      "path": "work/recovery/source714-minimal-native-init-candidate-r1/Native178-minimal-init-integration.NOT-FOR-INSTALL.bin",
+      "bytes": 30174912,
+      "sha256": "2eadd54fc5f311266952da3ec8096f9c0fad9a6715d7c7dbe13b36581be9faeb"
+    },
+    {
+      "path": "work/recovery/ncb-kernel-scope-independent-r1/review.py",
+      "bytes": 20914,
+      "sha256": "515f9ba06da06d0136928f8e7a1e6e432ed91cc71cc9d83a9ce82e8fc6023bd1"
+    },
+    {
+      "path": "work/recovery/source714-native-invocation-cold-family-r2/qualification.json",
+      "bytes": 1281,
+      "sha256": "c92a443726a51350b849786390e2531f882af196c3e73979edd152030f3939cb"
+    },
+    {
+      "path": "work/recovery/source714-native-invocation-cold-family-r2/report.json",
+      "bytes": 17257,
+      "sha256": "7c52bdb66f7b2868638f42cfb2e1c934aaca1a9c904444d6a9e0008a266f2462"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-independent-r1/qualification.json",
+      "bytes": 619,
+      "sha256": "2001ff5b4df282e8328827848fa701b8f83e84e3333c35cfa9b24c7289b52dee"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/qualification.json",
+      "bytes": 1626,
+      "sha256": "3393f307fdd7af631f7a64638e6c90e88885d425707e5e6438b55800fae0810d"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-join-r1/qualification.json",
+      "bytes": 1455,
+      "sha256": "993ee2267d21718c06be844e6ada0350d236b0728f269dfd9746fa72c1b97ab9"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/adapter.c",
+      "bytes": 10797,
+      "sha256": "a1606a86e253af26828455806c2c9b7482682ec03471efcc5bc12ad8b3d426fd"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/adapter.h",
+      "bytes": 1317,
+      "sha256": "199b780572d42ece357cef9739f8d2990fe031cbdbdf8955e6af7d999107c10a"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/worker_family.inc",
+      "bytes": 12334,
+      "sha256": "ef184f76506cde478d294e53c7b5dd52c699a1587030f7f600f3f94d05b7eebb"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/worker_family.h",
+      "bytes": 1751,
+      "sha256": "c1e65d28a5d194ea736e2128cc676b6ac283efea5f5b36aac47e12939566675e"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/directory_metadata.c",
+      "bytes": 2175,
+      "sha256": "b21bf15afc9c462f1978b22dbb92db136dffd25491efa5eec3e8039c2dd434f6"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/directory_metadata.h",
+      "bytes": 1709,
+      "sha256": "b373975a161b1c6e3f77bcd842f216a9f9d79efaf5df65b0036a91761c0c2bff"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/common_admission.c",
+      "bytes": 5873,
+      "sha256": "27881929ff69fb3a986747b739d7af2de742fb78eca251c5cb0670f5d9c288d0"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/common_admission.h",
+      "bytes": 1726,
+      "sha256": "2c46274ac1b2d6f05936a858f09872fda2a532e55d8715b36bc2d9ad55070a3e"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/ghs_job_bridge.inc",
+      "bytes": 5871,
+      "sha256": "a98b06f6b71ea7bffa58539d5439b0575f5f994c540efdfe1f2bfcc4368c16c1"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/worker_atomic.c",
+      "bytes": 1190,
+      "sha256": "a66142b5a3354299f3f992e9d7897a23acdac6dc2d92d8c299ab205ae0e4cad2"
+    },
+    {
+      "path": "work/recovery/source714-native-cold-entry-source-r1/source/worker_atomic.h",
+      "bytes": 589,
+      "sha256": "eef7a2e2c0d6c4710db9c8c9db5eb4ab71c17fb7cfd14c0163311e50cb57fd17"
+    },
+    {
+      "path": "work/recovery/source714-wait-sdk-metadata-r1/Native178-minimal-init-OSWaitCond-metadata.NOT-FOR-INSTALL.bin",
+      "bytes": 30184960,
+      "sha256": "4039d880c4f0f6fa83f1bef3aa54e64e3fb27bd93c15a3ba135fada3a9917fee"
+    },
+    {
+      "path": "work/recovery/source714-wait-sdk-metadata-r1/qualification.json",
+      "bytes": 1664,
+      "sha256": "7b74d0d590c7a57f47481160d1d2f9b2aa6d0fcf8987ebc0e1c7863412bbd994"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/context-callback-family.o",
+      "bytes": 22428,
+      "sha256": "b5ee5b828e5b9997cf8add9501529fc72af1a52617b5040da09301b8dce1508d"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/qualification.json",
+      "bytes": 3330,
+      "sha256": "1947ad675261e706664c4aa05aba06ddbb98c5c615c0dda7707b9bf687642537"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/extraction.json",
+      "bytes": 137346,
+      "sha256": "faa82775d71b3ed78d40a1660b828f9aefa8c77356b1033b5bf039e6189d6d41"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/source-use-proof.json",
+      "bytes": 16695,
+      "sha256": "f7d10971b047ab7744a4236794fecf4c80e4a90ab48bea7e545a2a8bb41a0436"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-metadata-r1/elf_static.py",
+      "bytes": 2563,
+      "sha256": "fdb9b76b6150bc161bdb9815f4abdfa07238ae070d91e31edda21ec3d5a65ceb"
+    },
+    {
+      "path": "work/TWWHD-GZ/patcher/native_rpx.py",
+      "bytes": 9612,
+      "sha256": "52c566d12e8bb4b2182c2a1de93883e0eb40fa9db7ff2fba49c83cfe9b635cb5"
+    },
+    {
+      "path": "work/recovery/source714-minimal-native-init-candidate-r1/qualification.json",
+      "bytes": 2492,
+      "sha256": "1a50f1222190e0f50c2838f8aebe1f7dd1789acab2ce7bd7d63d51c01db63805"
+    },
+    {
+      "path": "work/recovery/source711-sdk-binding-r1/report.json",
+      "bytes": 176182,
+      "sha256": "cd688533b23c49bd0d6754a66bd0a6f1e198564c3e165466c4276e7cc1b224cf"
+    },
+    {
+      "path": "work/recovery/source714-init-sdk-role-r1/official-rplimportgen.json",
+      "bytes": 6413,
+      "sha256": "cc25fcad459266043147310d720ec9c3df55c21b7a57ba1e52ac982533bfb1bf"
+    }
+  ],
+  "known_output_hashes_only": [
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/context-callback-family.o",
+      "bytes": 22428,
+      "sha256": "b5ee5b828e5b9997cf8add9501529fc72af1a52617b5040da09301b8dce1508d",
+      "git_blob": "4abedb74d8caec43bd97aaf1287a6a26feab3739"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/qualification.json",
+      "bytes": 3330,
+      "sha256": "1947ad675261e706664c4aa05aba06ddbb98c5c615c0dda7707b9bf687642537",
+      "git_blob": "ad11735b2279d40dcb35b53d6398f48a46f977c2"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-r1/source-use-proof.json",
+      "bytes": 16695,
+      "sha256": "f7d10971b047ab7744a4236794fecf4c80e4a90ab48bea7e545a2a8bb41a0436",
+      "git_blob": "2088a11cb0c7820d28cce2bc5f7f789a992739aa"
+    },
+    {
+      "path": "work/recovery/source714-context-family-slice-independent-r1/qualification.json",
+      "bytes": 619,
+      "sha256": "2001ff5b4df282e8328827848fa701b8f83e84e3333c35cfa9b24c7289b52dee",
+      "git_blob": "60ea771e0ee28c4cdb8e7e578639ec91a44517e7"
+    },
+    {
+      "path": "work/recovery/source714-native-invocation-cold-family-r2/qualification.json",
+      "bytes": 1281,
+      "sha256": "c92a443726a51350b849786390e2531f882af196c3e73979edd152030f3939cb",
+      "git_blob": "8ef46877bf192884b2bbd2e0919c031e35020883"
+    },
+    {
+      "path": "work/recovery/source714-wait-sdk-metadata-r1/Native178-minimal-init-OSWaitCond-metadata.NOT-FOR-INSTALL.bin",
+      "bytes": 30184960,
+      "sha256": "4039d880c4f0f6fa83f1bef3aa54e64e3fb27bd93c15a3ba135fada3a9917fee",
+      "git_blob": "d3fd388887b2d4f62c2b6e459f107a8fb2e61b23"
+    },
+    {
+      "path": "work/recovery/source714-wait-sdk-metadata-r1/qualification.json",
+      "bytes": 1664,
+      "sha256": "7b74d0d590c7a57f47481160d1d2f9b2aa6d0fcf8987ebc0e1c7863412bbd994",
+      "git_blob": "1c2ecea747db675c4193e7990f9136bf14c259c4"
+    },
+    {
+      "path": "work/recovery/source714-context-native-candidate-r1/Native178-initializer-and-callback-core.NOT-FOR-INSTALL.bin",
+      "bytes": 30185280,
+      "sha256": "6c090554eccce09ba1d2e7068010bf1791de2b6c224b721c1ff017c9975b6b22",
+      "git_blob": "735675528da7a705389ce4f5c624d92e1b39b71e"
+    },
+    {
+      "path": "work/recovery/source714-context-native-candidate-r1/qualification.json",
+      "bytes": 2911,
+      "sha256": "c984ac9b906a4f211fbc1daf0d577f0da35d7f45230634bbbdf4290edb99d40f",
+      "git_blob": "c2c5c516eccb9a2d9c5345827e80784a2878b6fb"
+    },
+    {
+      "path": "work/recovery/source714-context-native-candidate-r1/integration.json",
+      "bytes": 218791,
+      "sha256": "00764db48682300efcb8eace418578976db8c6e1b9b5ec702b74ae060d847516",
+      "git_blob": "b00323b8e45c6612f6ad3db3d5e3261db9375e7d"
+    },
+    {
+      "path": "work/recovery/source714-context-native-candidate-independent-r1/qualification.json",
+      "bytes": 1129,
+      "sha256": "ff989e3e088427ae1eeb7dc6cc2d6d634c0830ba382f1ea008408e1b347254c5",
+      "git_blob": "53f21bbdd5e048e2d0ffbbf1a7d66439f1588c89"
+    },
+    {
+      "path": "work/recovery/source714-context-native-bindings-independent-r1/qualification.json",
+      "bytes": 937,
+      "sha256": "5b1c1718a2c09303c452d14f00296575d9d15286330db402e45fb59d2864cac1",
+      "git_blob": "5270950f2b5629a5d5d902ae805a4a096e88bd9f"
+    }
+  ],
+  "no_binary_Game_SDK_disassembly_symbol_relocation_dump_or_credentials_uploaded": true,
+  "no_complete_portable_Game_build_claim": true
+}
